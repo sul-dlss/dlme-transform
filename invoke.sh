@@ -5,14 +5,9 @@ if [ $USE_GITHUB = "true" ]; then
   echo "Getting github.com/sul-dlss/dlme-traject"
   curl -L https://github.com/sul-dlss/dlme-traject/archive/master.zip > master.zip
   unzip master.zip *.rb
-  mv dlme-traject-master lib
-  rm -fr dlme-master
+  mv dlme-traject-master config
   rm master.zip
-
-  # Necessary until DLME extracted from rails.
-  sed -i 's/delegate/# delegate/g' lib/traject/dlme_json_resource_writer.rb
-
-
+  
   echo "Getting github.com/sul-dlss/dlme-metadata"
   curl -L https://github.com/sul-dlss/dlme-metadata/archive/master.zip > master.zip
   unzip master.zip
