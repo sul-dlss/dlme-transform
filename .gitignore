@@ -1,0 +1,6 @@
+/output/*
+!/output/.keep
+/data/*
+!/data/.keep
+/config/*
+!/config/.keep
