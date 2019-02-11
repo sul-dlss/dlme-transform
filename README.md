@@ -10,9 +10,9 @@ docker build . -t "suldlss/dlme-transform:latest"
 ### Run
 Linking in local Traject configs and DLME data:
 ```
-docker run --rm -v config:/opt/traject/config \
-               -v data:/opt/traject/dlme-metadata \
-               -v output:/opt/traject/output \
+docker run --rm -v $(pwd)/config:/opt/traject/config \
+               -v $(pwd)/data:/opt/traject/dlme-metadata \
+               -v $(pwd)/output:/opt/traject/output \
                suldlss/dlme-transform:latest \
                -c config/bnf_cealex_config.rb \
                -s agg_provider=Stanford \
@@ -26,7 +26,7 @@ To process a directory of files, use a wildcard in the input filepath. For examp
 Getting Traject configs and DLME data from Github:
 ```
 docker run --rm -e USE_GITHUB=true \
-                -v output:/opt/traject/output \
+                -v $(pwd)/output:/opt/traject/output \
                 suldlss/dlme-transform:latest \
                 -c config/bnf_cealex_config.rb \
                 -s agg_provider=Stanford \
@@ -39,9 +39,9 @@ Sending output to S3 bucket:
 docker run --rm -e S3_BUCKET=s3://dlme-metadata-development \
                 -e AWS_ACCESS_KEY_ID=AKIAIJIZROPT5GQ \
                 -e AWS_SECRET_ACCESS_KEY=oLNK4CF/5L/M6DXbM2JNmFrpGgbxcE5 \
-                -v config:/opt/traject/config \
-                -v data:/opt/traject/dlme-metadata \
-                -v output:/opt/traject/output \
+                -v $(pwd)/config:/opt/traject/config \
+                -v $(pwd)/data:/opt/traject/dlme-metadata \
+                -v $(pwd)/output:/opt/traject/output \
                 suldlss/dlme-transform:latest \
                 -c config/bnf_cealex_config.rb \
                 -s agg_provider=Stanford \
