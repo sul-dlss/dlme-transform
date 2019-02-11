@@ -21,6 +21,8 @@ docker run --rm -v config:/opt/traject/lib \
 ```
 Note that output will appear in STDOUT inside the container and be written to `/opt/traject/output`. (In this example, `/opt/traject/output` inside the container is mounted from `./output` outside the container.)
 
+To process a directory of files, use a wildcard in the input filepath. For example, `dlme-metadata/bnf/cealex/data/cealex-*.xml` instead of `dlme-metadata/bnf/cealex/data/cealex-1.xml`.
+
 Getting Traject configs and DLME data from Github:
 ```
 docker run --rm -e USE_GITHUB=true \
