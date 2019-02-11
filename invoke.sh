@@ -2,10 +2,10 @@
 set -e
 
 if [ $USE_GITHUB = "true" ]; then
-  echo "Getting github.com/sul-dlss/dlme"
-  curl -L https://github.com/sul-dlss/dlme/archive/master.zip > master.zip
-  unzip master.zip dlme-master/lib/*
-  mv dlme-master/lib .
+  echo "Getting github.com/sul-dlss/dlme-traject"
+  curl -L https://github.com/sul-dlss/dlme-traject/archive/master.zip > master.zip
+  unzip master.zip *.rb
+  mv dlme-traject-master lib
   rm -fr dlme-master
   rm master.zip
 
