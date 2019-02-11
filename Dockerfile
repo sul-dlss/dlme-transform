@@ -4,7 +4,9 @@ FROM ruby:2.5-alpine3.8
 RUN mkdir -p /opt/traject/output
 WORKDIR /opt/traject
 
-RUN apk add --update build-base curl zip
+RUN apk add --update build-base curl zip python3-dev
+RUN pip3 install --upgrade pip
+RUN pip3 install awscli
 
 # Copy the Gemfile and Gemfile.lock, and run bundle install prior to copying all source files
 # This is an optimization that will prevent the need to re-run bundle install when only source
