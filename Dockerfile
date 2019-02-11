@@ -4,7 +4,7 @@ FROM ruby:2.5-alpine3.8
 RUN mkdir -p /opt/traject/output
 WORKDIR /opt/traject
 
-RUN apk add --update build-base
+RUN apk add --update build-base curl zip
 
 # Copy the Gemfile and Gemfile.lock, and run bundle install prior to copying all source files
 # This is an optimization that will prevent the need to re-run bundle install when only source
@@ -18,5 +18,7 @@ RUN bundle install
 
 COPY invoke.sh /opt/traject/
 RUN chmod +x /opt/traject/invoke.sh
+
+ENV USE_GITHUB false
 
 ENTRYPOINT ["/opt/traject/invoke.sh"]
