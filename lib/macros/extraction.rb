@@ -1,5 +1,6 @@
 # frozen_string_literal: true
-
+#require 'activesupport'
+require 'active_support/core_ext/object/blank'
 module Macros
   # DLME helpers for traject mappings
   module Extraction

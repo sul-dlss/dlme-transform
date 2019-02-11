@@ -16,7 +16,7 @@ COPY Gemfile.lock /opt/traject/
 
 ENV BUNDLER_VERSION 2.0.1
 RUN gem install bundler
-RUN bundle install
+RUN bundle install --without test
 
 COPY invoke.sh /opt/traject/
 RUN chmod +x /opt/traject/invoke.sh

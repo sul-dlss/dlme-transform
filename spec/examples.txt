@@ -1,0 +1,10 @@
+example_id                                              | status | run_time        |
+------------------------------------------------------- | ------ | --------------- |
+./spec/lib/traject/macros/extraction_spec.rb[1:1:1:1:1] | passed | 0.00007 seconds |
+./spec/lib/traject/macros/extraction_spec.rb[1:1:2:1:1] | passed | 0.00008 seconds |
+./spec/lib/traject/macros/extraction_spec.rb[1:1:3:1]   | passed | 0.00049 seconds |
+./spec/lib/traject/macros/extraction_spec.rb[1:1:3:2]   | passed | 0.00006 seconds |
+./spec/lib/traject/macros/extraction_spec.rb[1:1:4:1]   | passed | 0.00082 seconds |
+./spec/lib/traject/macros/met_csv_spec.rb[1:1:1:1]      | passed | 0.0004 seconds  |
+./spec/lib/traject/macros/met_csv_spec.rb[1:1:2:1]      | passed | 0.01194 seconds |
+./spec/lib/traject/macros/met_csv_spec.rb[1:2:1:1]      | passed | 0.00129 seconds |
