@@ -20,4 +20,11 @@ if [ $USE_GITHUB = "true" ]; then
   rm master.zip
 fi
 
-traject -Ilib -w Traject::JsonWriter $@ | tee output/output.json
+OUTPUT_FILEPATH="output/output-$(date +%Y%m%d%H%M%S)"
+
+traject -Ilib -w Traject::JsonWriter $@ | tee $OUTPUT_FILEPATH
+
+if [ -n "$S3_BUCKET" ]; then
+  echo "Sending to S3"
+  aws s3 cp $OUTPUT_FILEPATH $S3_BUCKET
+fi

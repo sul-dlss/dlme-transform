@@ -31,3 +31,19 @@ docker run --rm -e USE_GITHUB=true \
                 -s agg_data_provider=Stanford \
                 dlme-metadata/bnf/cealex/data/cealex-1.xml
 ```
+
+Sending output to S3 bucket:
+```
+docker run --rm -e S3_BUCKET=s3://dlme-metadata-development \
+                -e AWS_ACCESS_KEY_ID=AKIAIJIZROPT5GQ \
+                -e AWS_SECRET_ACCESS_KEY=oLNK4CF/5L/M6DXbM2JNmFrpGgbxcE5 \
+                -v config:/opt/traject/lib \
+                -v data:/opt/traject/dlme-metadata \
+                -v output:/opt/traject/output \
+                suldlss/dlme-transform:latest \
+                -c lib/traject/bnf_cealex_config.rb \
+                -s agg_provider=Stanford \
+                -s agg_data_provider=Stanford \
+                dlme-metadata/bnf/cealex/data/cealex-1.xml
+```
+Note that actual S3 credentials are available from shared_configs.
