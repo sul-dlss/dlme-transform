@@ -22,4 +22,16 @@ COPY . /opt/traject/
 
 ENV USE_GITHUB false
 
+# Metadata params
+ARG BUILD_DATE
+ARG VCS_REF
+ARG VCS_URL
+
+LABEL org.label-schema.vcs-ref=$VCS_REF \
+      org.label-schema.vcs-url=$VCS_URL \
+      org.label-schema.build-date=$BUILD_DATE \
+      org.label-schema.name="DLME Traject transformer" \
+      org.label-schema.description="Transforms various source metadata into the DLME intermediate representation schema" \
+      org.label-schema.schema-version="1.0"
+
 ENTRYPOINT ["/opt/traject/invoke.sh"]
