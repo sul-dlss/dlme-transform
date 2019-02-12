@@ -1,10 +1,20 @@
 # dlme-transform
+[![](https://images.microbadger.com/badges/image/suldlss/dlme-transform.svg)](https://microbadger.com/images/suldlss/dlme-transform "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/commit/suldlss/dlme-transform.svg)](http://microbadger.com/images/suldlss/dlme-transform "Get your own commit badge on microbadger.com") 
 Transforms raw DLME metadata to DLME intermediate representation
 
 ## Docker
-### Build Docker image
+### Build image
 ```
-docker build . -t "suldlss/dlme-transform:latest"
+docker build --build-arg VCS_REF=`git rev-parse --short HEAD` \
+             --build-arg VCS_URL=`git config --get remote.origin.url` \
+             --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` \
+             . -t suldlss/dlme-transform:latest
+```
+
+### Deploy
+```
+docker push suldlss/dlme-transform:latest
 ```
 
 ### Run
