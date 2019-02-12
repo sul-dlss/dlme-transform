@@ -8,27 +8,10 @@ docker build . -t "suldlss/dlme-transform:latest"
 ```
 
 ### Run
-Linking in local Traject configs and DLME data:
-```
-docker run --rm -v $(pwd)/config:/opt/traject/config \
-               -v $(pwd)/data:/opt/traject/dlme-metadata \
-               -v $(pwd)/output:/opt/traject/output \
-               suldlss/dlme-transform:latest \
-               -c config/mods_config.rb \
-               -s agg_provider=Stanford \
-               -s agg_data_provider=Stanford \
-               dlme-metadata/stanford/maps/data/kj751hs0595.mods
-```
-Note that output will appear in STDOUT inside the container and be written to `/opt/traject/output`. (In this example, `/opt/traject/output` inside the container is mounted from `./output` outside the container.)
-
-To process a directory of files, use a wildcard in the input filepath. For example, `dlme-metadata/bnf/cealex/data/cealex-*.xml` instead of `dlme-metadata/stanford/maps/data/kj751hs0595.mods`.
 
 Getting Traject configs and DLME data from Github:
 ```
-docker run --rm -e USE_GITHUB=true \
--v $(pwd)/config:/opt/traject/config \
--v $(pwd)/data:/opt/traject/dlme-metadata \
-                -v $(pwd)/output:/opt/traject/output \
+docker run --rm -v $(pwd)/output:/opt/traject/output \
                 suldlss/dlme-transform:latest \
                 -c config/mods_config.rb \
                 -s agg_provider=Stanford \
@@ -36,11 +19,18 @@ docker run --rm -e USE_GITHUB=true \
                 dlme-metadata/stanford/maps/data/kj751hs0595.mods
 ```
 
-Sending output to S3 bucket:
+The output will appear in STDOUT inside the container and be written to
+`/opt/traject/output`. (In this example, `/opt/traject/output` inside the
+container is mounted from `./output` outside the container.)
+
+
+For developing the mapping, you may want to link in local Traject configs and
+metadata. You can add a volume for the configs and for the metadata, and skip
+fetching them from Github.
+
 ```
-docker run --rm -e S3_BUCKET=s3://dlme-metadata-development \
-                -e AWS_ACCESS_KEY_ID=AKIAIJIZROPT5GQ \
-                -e AWS_SECRET_ACCESS_KEY=oLNK4CF/5L/M6DXbM2JNmFrpGgbxcE5 \
+docker run --rm -e SKIP_FETCH_CONFIG=true \
+                -e SKIP_FETCH_DATA=true \
                 -v $(pwd)/config:/opt/traject/config \
                 -v $(pwd)/data:/opt/traject/dlme-metadata \
                 -v $(pwd)/output:/opt/traject/output \
@@ -50,4 +40,21 @@ docker run --rm -e S3_BUCKET=s3://dlme-metadata-development \
                 -s agg_data_provider=Stanford \
                 dlme-metadata/stanford/maps/data/kj751hs0595.mods
 ```
-Note that actual S3 credentials are available from shared_configs.
+
+To process a directory of files, use a wildcard in the input filepath. For
+example, `dlme-metadata/stanford/maps/data/*.mods` instead of
+`dlme-metadata/stanford/maps/data/kj751hs0595.mods`.
+
+
+Sending output to S3 bucket:
+```
+docker run --rm -e S3_BUCKET=s3://dlme-metadata-development \
+                -e AWS_ACCESS_KEY_ID=AKIAIJIZROPT5GQ \
+                -e AWS_SECRET_ACCESS_KEY=oLNK4CF/5L/M6DXbM2JNmFrpGgbxcE5 \
+                suldlss/dlme-transform:latest \
+                -c config/mods_config.rb \
+                -s agg_provider=Stanford \
+                -s agg_data_provider=Stanford \
+                dlme-metadata/stanford/maps/data/kj751hs0595.mods
+```
+Note that actual S3 credentials are available from `shared_configs`.
