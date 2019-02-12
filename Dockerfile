@@ -18,7 +18,7 @@ ENV BUNDLER_VERSION 2.0.1
 RUN gem install bundler
 RUN bundle install --without test
 
-COPY invoke.sh /opt/traject/
+COPY . /opt/traject/
 
 ENV USE_GITHUB false
 
