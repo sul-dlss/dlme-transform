@@ -15,7 +15,7 @@ if [ $USE_GITHUB = "true" ]; then
   rm master.zip
 fi
 
-OUTPUT_FILEPATH="output/output-$(date +%Y%m%d%H%M%S)"
+OUTPUT_FILEPATH="output/output-$(date +%Y%m%d%H%M%S).ndjson"
 
 traject -Ilib -w Traject::JsonWriter $@ | tee $OUTPUT_FILEPATH
 
