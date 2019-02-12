@@ -1,13 +1,15 @@
 #!/bin/sh
 set -e
 
-if [ $USE_GITHUB = "true" ]; then
+if [ $SKIP_FETCH_CONFIG != "true" ]; then
   echo "Getting github.com/sul-dlss/dlme-traject"
   curl -L https://github.com/sul-dlss/dlme-traject/archive/master.zip > master.zip
   unzip master.zip *.rb
   mv dlme-traject-master/* /opt/traject/config/
   rm master.zip
+fi
 
+if [ $SKIP_FETCH_DATA != "true" ]; then
   echo "Getting github.com/sul-dlss/dlme-metadata"
   curl -L https://github.com/sul-dlss/dlme-metadata/archive/master.zip > master.zip
   unzip master.zip
