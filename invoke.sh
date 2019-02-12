@@ -11,7 +11,7 @@ if [ $USE_GITHUB = "true" ]; then
   echo "Getting github.com/sul-dlss/dlme-metadata"
   curl -L https://github.com/sul-dlss/dlme-metadata/archive/master.zip > master.zip
   unzip master.zip
-  mv dlme-metadata-master dlme-metadata
+  mv dlme-metadata-master/* dlme-metadata
   rm master.zip
 fi
 
