@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+require 'active_support/core_ext/hash/except'
 
 # Given a data structure from traject, transform it into a valid IR by changing
 # some values from arrays to scalars
