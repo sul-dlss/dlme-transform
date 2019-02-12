@@ -14,24 +14,26 @@ docker run --rm -v $(pwd)/config:/opt/traject/config \
                -v $(pwd)/data:/opt/traject/dlme-metadata \
                -v $(pwd)/output:/opt/traject/output \
                suldlss/dlme-transform:latest \
-               -c config/bnf_cealex_config.rb \
+               -c config/mods_config.rb \
                -s agg_provider=Stanford \
                -s agg_data_provider=Stanford \
-               dlme-metadata/bnf/cealex/data/cealex-1.xml
+               dlme-metadata/stanford/maps/data/kj751hs0595.mods
 ```
 Note that output will appear in STDOUT inside the container and be written to `/opt/traject/output`. (In this example, `/opt/traject/output` inside the container is mounted from `./output` outside the container.)
 
-To process a directory of files, use a wildcard in the input filepath. For example, `dlme-metadata/bnf/cealex/data/cealex-*.xml` instead of `dlme-metadata/bnf/cealex/data/cealex-1.xml`.
+To process a directory of files, use a wildcard in the input filepath. For example, `dlme-metadata/bnf/cealex/data/cealex-*.xml` instead of `dlme-metadata/stanford/maps/data/kj751hs0595.mods`.
 
 Getting Traject configs and DLME data from Github:
 ```
 docker run --rm -e USE_GITHUB=true \
+-v $(pwd)/config:/opt/traject/config \
+-v $(pwd)/data:/opt/traject/dlme-metadata \
                 -v $(pwd)/output:/opt/traject/output \
                 suldlss/dlme-transform:latest \
-                -c config/bnf_cealex_config.rb \
+                -c config/mods_config.rb \
                 -s agg_provider=Stanford \
                 -s agg_data_provider=Stanford \
-                dlme-metadata/bnf/cealex/data/cealex-1.xml
+                dlme-metadata/stanford/maps/data/kj751hs0595.mods
 ```
 
 Sending output to S3 bucket:
@@ -43,9 +45,9 @@ docker run --rm -e S3_BUCKET=s3://dlme-metadata-development \
                 -v $(pwd)/data:/opt/traject/dlme-metadata \
                 -v $(pwd)/output:/opt/traject/output \
                 suldlss/dlme-transform:latest \
-                -c config/bnf_cealex_config.rb \
+                -c config/mods_config.rb \
                 -s agg_provider=Stanford \
                 -s agg_data_provider=Stanford \
-                dlme-metadata/bnf/cealex/data/cealex-1.xml
+                dlme-metadata/stanford/maps/data/kj751hs0595.mods
 ```
 Note that actual S3 credentials are available from shared_configs.
