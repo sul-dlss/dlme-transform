@@ -19,7 +19,6 @@ RUN gem install bundler
 RUN bundle install --without test
 
 COPY invoke.sh /opt/traject/
-RUN chmod +x /opt/traject/invoke.sh
 
 ENV USE_GITHUB false
 
