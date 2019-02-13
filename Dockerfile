@@ -20,7 +20,8 @@ RUN bundle install --without test
 
 COPY . /opt/traject/
 
-ENV USE_GITHUB false
+ENV SKIP_FETCH_CONFIG false
+ENV SKIP_FETCH_DATA false
 
 # Metadata params
 ARG BUILD_DATE
