@@ -55,7 +55,7 @@ module Macros
 
       prefix = context.settings.fetch('inst_id') + '_'
 
-      if identifier.starts_with? prefix
+      if identifier.start_with? prefix
         identifier
       else
         prefix + identifier

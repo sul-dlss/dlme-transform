@@ -4,7 +4,8 @@ source 'https://rubygems.org'
 
 gem 'activesupport', '~> 5.2'
 gem 'dry-validation'
-gem 'traject', '~> 3.0.0'
+gem 'thor', '~> 0.20'
+gem 'traject_plus', '~> 0.1.0'
 
 group :test do
   gem 'rspec'
