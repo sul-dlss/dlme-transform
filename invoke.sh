@@ -21,7 +21,7 @@ fi
 
 OUTPUT_FILEPATH="output/output-$(date +%Y%m%d%H%M%S).ndjson"
 
-traject -Ilib -w Traject::JsonWriter $@ | tee $OUTPUT_FILEPATH
+traject -Ilib -w DlmeJsonResourceWriter $@ | tee $OUTPUT_FILEPATH
 
 if [ -n "$S3_BUCKET" ]; then
   echo "Sending to S3"
