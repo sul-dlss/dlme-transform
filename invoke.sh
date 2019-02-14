@@ -25,5 +25,5 @@ traject -Ilib -w Traject::JsonWriter $@ | tee $OUTPUT_FILEPATH
 
 if [ -n "$S3_BUCKET" ]; then
   echo "Sending to S3"
-  aws s3 cp $OUTPUT_FILEPATH $S3_BUCKET
+  aws s3 cp $OUTPUT_FILEPATH $S3_BUCKET --acl public-read
 fi
