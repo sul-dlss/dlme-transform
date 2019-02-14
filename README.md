@@ -18,9 +18,11 @@ docker build --build-arg VCS_REF=`git rev-parse --short HEAD` \
 docker push suldlss/dlme-transform:latest
 ```
 
-### Run
+### Running Transforms
 
-Getting Traject configs and DLME data from Github:
+You can run transforms locally by getting the Traject configs and DLME data from Github (assuming
+everything is update to date on the master branches):
+
 ```
 docker run --rm -v $(pwd)/output:/opt/traject/output \
                 suldlss/dlme-transform:latest \
@@ -32,18 +34,32 @@ docker run --rm -v $(pwd)/output:/opt/traject/output \
 
 The output will appear in STDOUT inside the container and be written to
 `/opt/traject/output`. (In this example, `/opt/traject/output` inside the
-container is mounted from `./output` outside the container.)
+container is mounted from `./output` outside the container, which will correspond
+to the 'output' subfolder in your locally cloned dlme-transform repo.)
 
+For development purposes, instead of pulling configs and harvested data to transform from Github,
+you can pull them in locally. This may be useful as you test new traject configs before
+pushing them to GitHub.  To do this, map in local directories using the -v switch.
 
-For developing the mapping, you may want to link in local Traject configs and
-metadata. You can add a volume for the configs and for the metadata, and skip
-fetching them from Github.
+Note: you should use your actual local directories in place of three example directories below
+specified with the -v switch for configs, data, and output.  In the example below,
+the `dlme-traject` and `dlme-metadata` repositories are cloned one directory up from the
+`dlme-transform` repository we are running from.  Output will be written to the output
+subfolder of the `dlme-transform` repo (your current directory) as in the Github example above.
+
+Instead of specifying a directory relative to the current directory (as in the example below),
+you could also specify an absolute path on your machine, like
+`/Users/YourName/development/dlme-metadata`.  Be sure to specify the root of the
+checked out repositories in each case.
+
+Specify the Traject config file to use with the -c switch as shown below (e.g. `-c config/traject_config_file.rb`)
+
 
 ```
 docker run --rm -e SKIP_FETCH_CONFIG=true \
                 -e SKIP_FETCH_DATA=true \
-                -v $(pwd)/config:/opt/traject/config \
-                -v $(pwd)/data:/opt/traject/dlme-metadata \
+                -v $(pwd)/../dlme-traject:/opt/traject/config \
+                -v $(pwd)/../dlme-metadata:/opt/traject/dlme-metadata \
                 -v $(pwd)/output:/opt/traject/output \
                 suldlss/dlme-transform:latest \
                 -c config/mods_config.rb \
