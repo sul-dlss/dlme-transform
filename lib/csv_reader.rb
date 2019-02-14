@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'csv'
+require 'active_support/core_ext/module/delegation' # needed for delegation
 
 # Reads in CSV records for traject
 class CsvReader
