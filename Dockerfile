@@ -4,9 +4,22 @@ FROM ruby:2.5-alpine3.8
 RUN mkdir -p /opt/traject/output
 WORKDIR /opt/traject
 
-RUN apk add --update build-base curl zip python3-dev
-RUN pip3 install --upgrade pip
-RUN pip3 install awscli
+ENV BUNDLER_VERSION 2.0.1
+
+RUN apk add --no-cache \
+    curl \
+    zip \
+    python \
+    libxml2-dev \
+    libxslt-dev \
+    && apk add --no-cache --virtual build-dependencies \
+      build-base \
+    && apk add --no-cache --virtual python-dependencies \
+    py-pip \
+    python-dev \
+    && pip install awscli \
+    && apk del python-dependencies \
+    && gem install bundler
 
 # Copy the Gemfile and Gemfile.lock, and run bundle install prior to copying all source files
 # This is an optimization that will prevent the need to re-run bundle install when only source
@@ -14,9 +27,9 @@ RUN pip3 install awscli
 COPY Gemfile /opt/traject/
 COPY Gemfile.lock /opt/traject/
 
-ENV BUNDLER_VERSION 2.0.1
-RUN gem install bundler
-RUN bundle install --without test
+RUN bundle config build.nokogiri --use-system-libraries && \
+    bundle install --without test && \
+    apk del build-dependencies
 
 COPY . /opt/traject/
 
