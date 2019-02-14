@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'active_support/inflector' # parameterize method is part of active support
+
 module Macros
   # Macros for extracting values from CSV rows
   module Csv
