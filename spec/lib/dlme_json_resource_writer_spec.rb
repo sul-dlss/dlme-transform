@@ -26,8 +26,9 @@ RSpec.describe DlmeJsonResourceWriter do
         { 'id' => ['one'], 'two' => %w[two1 two2], 'three' => 'three', 'four' => 'four' }
       end
       it 'logs an error' do
-        expect { put }.to raise_error("Transform produced invalid data:\n\t" \
-          '{"two"=>["two1", "two2"], "three"=>"three", "four"=>"four", "id"=>"one"}')
+        expect { put }.to raise_error(
+          /Transform produced invalid data.\n\nThe errors are: {"cho_title"=>\["is missing"\]/
+        )
       end
     end
   end

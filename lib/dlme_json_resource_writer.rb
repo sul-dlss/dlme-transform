@@ -13,9 +13,12 @@ class DlmeJsonResourceWriter < Traject::LineWriter
     attributes = context.output_hash.dup
     adjusted = AdjustCardinality.call(attributes)
     errors = validate(adjusted)
-    raise "Transform produced invalid data:\n\t#{adjusted}" unless errors.empty?
+    return JSON.generate(adjusted).unicode_normalize if errors.empty?
 
-    JSON.generate(adjusted).unicode_normalize
+    raise "Transform produced invalid data.\n\n" \
+      "The errors are: #{errors}\n\n" \
+      "The data looked like this:\n" \
+      "#{JSON.pretty_generate(adjusted)}"
   end
 
   private
