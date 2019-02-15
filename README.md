@@ -85,3 +85,5 @@ docker run --rm -e S3_BUCKET=s3://dlme-metadata-development \
                 dlme-metadata/stanford/maps/data/kj751hs0595.mods
 ```
 Note that actual S3 credentials are available from `shared_configs`.
+
+For more information on traject, [read the documentation](https://github.com/traject/traject#Traject)
