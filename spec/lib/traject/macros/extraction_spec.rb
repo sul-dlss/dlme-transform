@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require 'rails_helper'
 require 'macros/extraction'
 
 RSpec.describe Macros::Extraction do

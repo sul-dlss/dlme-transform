@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require 'rails_helper'
 require 'macros/met_csv'
 require 'macros/dlme'
 require 'csv'
