@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'active_support/core_ext/hash/except'
 
 # Given a data structure from traject, transform it into a valid IR by changing
@@ -24,6 +25,7 @@ class AdjustCardinality
     attributes.except(*flatten).tap do |output|
       flatten.each do |field|
         next unless attributes.key?(field)
+
         value = attributes.fetch(field).first
         output[field] = value
       end
@@ -35,13 +37,14 @@ class AdjustCardinality
     attributes.except(*flatten).tap do |output|
       flatten.each do |field|
         next unless attributes.key?(field)
+
         output[field] = process_web_resource(attributes.fetch(field))
       end
     end
   end
 
-  def process_web_resource(wr)
-    res = process_node(wr, %w[wr_id])
+  def process_web_resource(web_resource)
+    res = process_node(web_resource, %w[wr_id])
     res.except('wr_has_service').tap do |resource|
       resource['wr_has_service'] = flatten_services(res.fetch('wr_has_service')) if res.key?('wr_has_service')
     end

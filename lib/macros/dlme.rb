@@ -4,9 +4,9 @@ module Macros
   # DLME helpers for traject mappings
   module DLME
     LOC_NS = {
-      srw:    'http://www.loc.gov/zing/srw/',
+      srw: 'http://www.loc.gov/zing/srw/',
       oai_dc: 'http://www.openarchives.org/OAI/2.0/oai_dc/',
-      dc:     'http://purl.org/dc/elements/1.1/'
+      dc: 'http://purl.org/dc/elements/1.1/'
     }.freeze
 
     # construct a structured hash using values extracted using traject
@@ -32,9 +32,7 @@ module Macros
     # only accumulate values if a condition is met
     def conditional(condition, lambda)
       lambda do |record, accumulator, context|
-        if condition.call(record, context)
-          lambda.call(record, accumulator, context)
-        end
+        lambda.call(record, accumulator, context) if condition.call(record, context)
       end
     end
 

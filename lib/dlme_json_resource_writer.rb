@@ -8,7 +8,6 @@ require_relative 'adjust_cardinality'
 class DlmeJsonResourceWriter < Traject::LineWriter
   def serialize(context)
     attributes = context.output_hash.dup
-    id = attributes.fetch('id').first
     JSON.generate(AdjustCardinality.call(attributes)).unicode_normalize
   end
 end

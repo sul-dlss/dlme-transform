@@ -31,7 +31,8 @@ module Macros
     end
 
     def other_languages
-      tei_other_langs_xp = '/*/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc/tei:msContents/tei:textLang/@otherLangs'
+      tei_other_langs_xp = '/*/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc/tei:msContents/' \
+                           'tei:textLang/@otherLangs'
       new_pipeline = Macros::Extraction::TransformPipeline.new(translation_map: 'marc_languages')
       lambda do |record, accumulator|
         node = record.xpath(tei_other_langs_xp, NS).first
