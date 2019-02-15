@@ -5,26 +5,24 @@ module Macros
   module MetCsv
     # @param header_or_index [String] the field header or index to accumulate
 
-    DISPLAY_NAME = 'Artist Display Name'
-    SUFFIX = 'Artist Suffix'
-    BEGIN_DATE = 'Artist Begin Date'
-    END_DATE = 'Artist End Date'
-    OBJECT_BEGIN_DATE = 'Object Begin Date'
-    OBJECT_END_DATE = 'Object End Date'
-    ROLE = 'Artist Role'
-    BIO = 'Artist Display Bio'
-    CLASSIFICATION = 'Classification'
-    PUBLIC_DOMAIN = 'Is Public Domain'
-    DEPARTMENT = 'Department'
-    REPOSITORY = 'Repository'
+    DISPLAY_NAME = 'Artist Display Name'.freeze
+    SUFFIX = 'Artist Suffix'.freeze
+    BEGIN_DATE = 'Artist Begin Date'.freeze
+    END_DATE = 'Artist End Date'.freeze
+    OBJECT_BEGIN_DATE = 'Object Begin Date'.freeze
+    OBJECT_END_DATE = 'Object End Date'.freeze
+    ROLE = 'Artist Role'.freeze
+    BIO = 'Artist Display Bio'.freeze
+    CLASSIFICATION = 'Classification'.freeze
+    PUBLIC_DOMAIN = 'Is Public Domain'.freeze
+    DEPARTMENT = 'Department'.freeze
+    REPOSITORY = 'Repository'.freeze
 
     def met_thumbnail
       lambda do |_record, accumulator, context|
         ident = context.output_hash['id'].first.sub(/^met_/, '')
         thumbnail = MetThumbnailFetcher.fetch(ident)
-        if thumbnail
-          accumulator << transform_values(context, 'wr_id' => literal(thumbnail))
-        end
+        accumulator << transform_values(context, 'wr_id' => literal(thumbnail)) if thumbnail
       end
     end
 

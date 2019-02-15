@@ -1,5 +1,6 @@
 # frozen_string_literal: true
-#require 'activesupport'
+
+# require 'activesupport'
 require 'active_support/core_ext/object/blank'
 module Macros
   # DLME helpers for traject mappings
@@ -26,9 +27,11 @@ module Macros
         end
       end
 
+      # rubocop:disable Naming/UncommunicativeMethodParamName
       def trim(values, _)
         values.map(&:strip)
       end
+      # rubocop:enable Naming/UncommunicativeMethodParamName
 
       def append(values, append_string)
         values.flat_map do |v|

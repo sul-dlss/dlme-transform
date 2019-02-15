@@ -31,9 +31,9 @@ jobs:
           key: rails-demo-bundle-v2-{{ checksum "Gemfile.lock" }}
           paths:
             - vendor/bundle
-      # - run:
-      #     name: Check styles using rubocop
-      #     command: bundle exec rubocop
+      - run:
+         name: Check styles using rubocop
+         command: bundle exec rubocop
 
       # Run rspec in parallel
       - run:
