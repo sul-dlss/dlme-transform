@@ -26,10 +26,7 @@ everything is update to date on the master branches):
 ```
 docker run --rm -v $(pwd)/output:/opt/traject/output \
                 suldlss/dlme-transform:latest \
-                -c config/mods_config.rb \
-                -s agg_provider=Stanford \
-                -s agg_data_provider=Stanford \
-                dlme-metadata/stanford/maps/data/kj751hs0595.mods
+                stanford/maps/data/kj751hs0595.mods
 ```
 
 The output will appear in STDOUT inside the container and be written to
@@ -59,18 +56,19 @@ Specify the Traject config file to use with the -c switch as shown below (e.g. `
 docker run --rm -e SKIP_FETCH_CONFIG=true \
                 -e SKIP_FETCH_DATA=true \
                 -v $(pwd)/../dlme-traject:/opt/traject/config \
-                -v $(pwd)/../dlme-metadata:/opt/traject/dlme-metadata \
+                -v $(pwd)/../dlme-metadata:/opt/traject/data \
                 -v $(pwd)/output:/opt/traject/output \
                 suldlss/dlme-transform:latest \
-                -c config/mods_config.rb \
-                -s agg_provider=Stanford \
-                -s agg_data_provider=Stanford \
-                dlme-metadata/stanford/maps/data/kj751hs0595.mods
+                stanford/maps/data/kj751hs0595.mods
 ```
 
-To process a directory of files, use a wildcard in the input filepath. For
-example, `dlme-metadata/stanford/maps/data/*.mods` instead of
-`dlme-metadata/stanford/maps/data/kj751hs0595.mods`.
+To process multiple files, specify a directory instead of a single file. For
+example, `stanford/maps` instead of `stanford/maps/data/kj751hs0595.mods`. To transform everything, specify nothing.
+
+```
+docker run --rm -v $(pwd)/output:/opt/traject/output \
+                suldlss/dlme-transform:latest
+```
 
 
 Sending output to S3 bucket:
@@ -79,11 +77,38 @@ docker run --rm -e S3_BUCKET=s3://dlme-metadata-development \
                 -e AWS_ACCESS_KEY_ID=AKIAIJIZROPT5GQ \
                 -e AWS_SECRET_ACCESS_KEY=oLNK4CF/5L/M6DXbM2JNmFrpGgbxcE5 \
                 suldlss/dlme-transform:latest \
-                -c config/mods_config.rb \
-                -s agg_provider=Stanford \
-                -s agg_data_provider=Stanford \
-                dlme-metadata/stanford/maps/data/kj751hs0595.mods
+                stanford/maps
 ```
 Note that actual S3 credentials are available from `shared_configs`.
 
 For more information on traject, [read the documentation](https://github.com/traject/traject#Traject)
+
+### Configuring transforms
+Configuration for transforms is specified in `metadata_mappings.json`. For example:
+
+```
+[
+  {
+    "trajects": [
+        "mods_config.rb"
+    ],
+    "paths": [
+      "stanford/maps"
+    ],
+    "extension": ".mods",
+    "settings": {
+      "agg_provider": "Stanford Libraries",
+      "agg_data_provider": "Stanford Libraries",
+      "inst_id": "stanford"
+    }
+  }
+]
+```
+
+This specifies that `mods_configs.rb` is to be used for any files ending in `.mods` found in `stanford/maps`. `settings`
+are provide to the Traject indexer as additional settings.
+
+`extension` is optional; the default is `.xml`.
+
+Additional metadata mappings can be added to this file. In case a metadata file matches more than one configuration, the
+first one wins.

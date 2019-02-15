@@ -1,0 +1,16 @@
+[
+   {
+    "trajects": [
+      "mods_config.rb"
+    ],
+    "paths": [
+      "stanford/maps"
+    ],
+    "extension": ".mods",
+    "settings": {
+      "agg_provider": "Stanford Libraries",
+      "agg_data_provider": "Stanford Libraries",
+      "inst_id": "stanford"
+    }
+  }
+]

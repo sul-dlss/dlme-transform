@@ -14,14 +14,14 @@ if [ $SKIP_FETCH_DATA != "true" ]; then
   echo "Getting github.com/sul-dlss/dlme-metadata"
   curl -L https://github.com/sul-dlss/dlme-metadata/archive/master.zip > master.zip
   unzip master.zip
-  mkdir -p /opt/traject/dlme-metadata
-  mv dlme-metadata-master/* /opt/traject/dlme-metadata/
+  mkdir -p /opt/traject/data
+  mv dlme-metadata-master/* /opt/traject/data
   rm master.zip
 fi
 
 OUTPUT_FILEPATH="output/output-$(date +%Y%m%d%H%M%S).ndjson"
 
-traject -Ilib -w DlmeJsonResourceWriter $@ | tee $OUTPUT_FILEPATH
+exe/transform --data-dir $@ | tee $OUTPUT_FILEPATH
 
 if [ -n "$S3_BUCKET" ]; then
   echo "Sending to S3"
