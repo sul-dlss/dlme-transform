@@ -85,6 +85,31 @@ Note that actual S3 credentials are available from `shared_configs`.
 
 For more information on traject, [read the documentation](https://github.com/traject/traject#Traject)
 
+### Local Development Without Docker
+
+For development purposes, if you have the `dlme-traject`, the `dlme-transform`, and the
+`dlme-metadata` repos all checked out locally, you can run the traject transforms locally
+without using docker (so that you can make changes to both the macros and the traject
+configs for testing).
+
+To do this, you need to manually set the Ruby path with the -I switch to include the
+`lib` directory in the `dlme-transform` repo you are running the `traject` command from so
+the Traject config files can find them with their require statements.
+
+For example, to display to screen with DebugWriter:
+
+```
+bundle exec traject -I lib -w DebugWriter -c ../dlme-traject/bnf_cealex_config.rb -s agg_provider='Stanford' -s agg_data_provider='Stanford' ../dlme-metadata/bnf/cealex/data/cealex-99.xml
+```
+
+You can also use the json writer which is what happens for the real transforms.  It will write to JSON,
+cast fields that should be singular (like `id`) from lists, and it runs the DLME IR schema validator
+on each output to ensure the config is writing a compliant message.
+
+```
+bundle exec traject -I lib -w DlmeJsonResourceWriter -c ../dlme-traject/bnf_cealex_config.rb -s agg_provider='Stanford' -s agg_data_provider='Stanford' ../dlme-metadata/bnf/cealex/data/cealex-99.xml
+```
+
 ### Configuring transforms
 Configuration for transforms is specified in `metadata_mappings.json`. For example:
 
