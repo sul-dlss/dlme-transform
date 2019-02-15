@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require 'rails_helper'
 require 'met_thumbnail_fetcher'
 
 RSpec.describe MetThumbnailFetcher do
