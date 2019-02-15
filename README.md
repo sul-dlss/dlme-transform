@@ -70,19 +70,4 @@ docker run --rm -e S3_BUCKET=s3://dlme-metadata-development \
 ```
 Note that actual S3 credentials are available from `shared_configs`.
 
-### Readers and Writers
-
-Traject uses modular 'Writer' classes to take the output hashes from transformation and send them somewhere or do something useful with them.
-
-By default traject uses the Traject::SolrJsonWriter (rdoc) to send to Solr for indexing. Several other writers are also built-in:
-
-* Traject::DebugWriter (rdoc)
-* Traject::JsonWriter (rdoc)
-* Traject::YamlWriter (rdoc)
-* Traject::DelimitedWriter (rdoc)
-* Traject::CSVWriter (rdoc)
-
-You set which writer is being used in settings (provide "writer_class_name", "Traject::DebugWriter"), or with the shortcut command line argument -w Traject::DebugWriter.
-
-The SolrJWriter is packaged separately, and will be useful if you need to index to Solr's older than version 3.2. It requires Jruby.
-
+For more information on traject, [read the documentation](https://github.com/traject/traject#Traject)
