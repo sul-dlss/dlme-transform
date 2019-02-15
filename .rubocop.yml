@@ -1,5 +1,10 @@
 inherit_from: .rubocop_todo.yml
 
+AllCops:
+  Exclude:
+    - data/**/*
+    - config/**/*
+
 # Configuration parameters: AllowHeredoc, AllowURI, URISchemes, IgnoreCopDirectives, IgnoredPatterns.
 # URISchemes: http, https
 Metrics/LineLength:
