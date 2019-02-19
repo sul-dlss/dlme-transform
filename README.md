@@ -36,7 +36,8 @@ to the 'output' subfolder in your locally cloned dlme-transform repo.)
 
 For development purposes, instead of pulling configs and harvested data to transform from Github,
 you can pull them in locally. This may be useful as you test new traject configs before
-pushing them to GitHub.  To do this, map in local directories using the -v switch.
+pushing them to GitHub.  To do this, map in local directories using the -v switch. Similarly, you
+can pull in local macros and translation maps.
 
 Note: you should use your actual local directories in place of three example directories below
 specified with the -v switch for configs, data, and output.  In the example below,
@@ -55,6 +56,7 @@ Specify the Traject config file to use with the -c switch as shown below (e.g. `
 ```
 docker run --rm -e SKIP_FETCH_CONFIG=true \
                 -e SKIP_FETCH_DATA=true \
+                -v $(pwd)/.:/opt/traject \
                 -v $(pwd)/../dlme-traject:/opt/traject/config \
                 -v $(pwd)/../dlme-metadata:/opt/traject/data \
                 -v $(pwd)/output:/opt/traject/output \
