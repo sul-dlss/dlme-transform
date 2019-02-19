@@ -3,20 +3,22 @@
 3d: 3d
 artifact: image
 audio: sound
-cartographic: cartographic
-collection: collection
-dataset: dataset
-digital data: dataset
+# cartographic: cartographic
+cartographic: image
+# collection: collection
+# dataset: dataset
+# digital data: dataset
 image: image
-interactive resource: interactive resource
+# interactive resource: interactive resource
 manuscript: text
-map: cartographic
-mixed material: text
+# map: cartographic
+map: image
+# mixed material: text
 moving image: video
-multimedia: [sound, video]
+# multimedia: [sound, video]
 notated music: text
-software: software
-software, multimedia: software
+# software: software
+# software, multimedia: software
 sound: sound
 sound recording: sound
 sound recording-musical: sound
@@ -26,19 +28,21 @@ stillimage: image
 tactile: image
 text: text
 three dimensional object: image
-vector digital data: dataset
+# vector digital data: dataset
 video: video
 # MARC types
 a: text
 c: text
 d: text
-e: cartographic
-f: cartographic
+# e: cartographic
+# f: cartographic
+e: image
+f: image
 g: image
 i: sound
 j: sound
 k: image
-m: software
+# m: software
 p: text
 r: image
 t: text
