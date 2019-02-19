@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'traject'
-
 module Dlme
   # Determines mapping of data filepaths to config files.
   class TransformMapper
@@ -78,6 +77,9 @@ module Dlme
     # Transform a stream into a new representation, using Traject
     def transform
       transformer.process(File.open(input_filepath, 'r'))
+    rescue RuntimeError => e
+      warn "[ERROR] #{e.message}"
+      exit(1)
     end
 
     private

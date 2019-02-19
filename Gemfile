@@ -8,6 +8,7 @@ gem 'thor', '~> 0.20'
 gem 'traject_plus', '~> 0.1.0'
 
 group :test do
+  gem 'byebug'
   gem 'rspec'
   gem 'rspec_junit_formatter'
   gem 'rubocop', '~> 0.64.0'
