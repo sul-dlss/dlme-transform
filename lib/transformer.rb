@@ -89,6 +89,7 @@ module Dlme
       @transformer ||= Traject::Indexer.new.tap do |indexer|
         config_filepaths.each { |config_filepath| indexer.load_config_file(config_filepath) }
         indexer.settings do
+          provide 'command_line.filename', this.input_filepath
           this.addl_settings.each { |key, value| provide key, value }
         end
       end

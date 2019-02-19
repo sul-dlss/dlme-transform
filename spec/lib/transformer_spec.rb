@@ -101,3 +101,26 @@ RSpec.describe Dlme::TransformMapper do
     end
   end
 end
+
+RSpec.describe Dlme::Transformer do
+  subject(:transformer) do
+    described_class.new(input_filepath: input_filepath,
+                        config_filepaths: config_filepaths,
+                        settings: settings)
+  end
+
+  let(:settings) { { 'agg_provider': 'Stanford' } }
+
+  let(:config_filepaths) { [] }
+
+  let(:input_filepath) { 'data/test.mods' }
+
+  describe '#transformer' do
+    let(:indexer) { transformer.send(:transformer) }
+
+    it 'receives the correct configuration' do
+      expect(indexer.settings).to include('agg_provider' => 'Stanford')
+      expect(indexer.settings).to include('command_line.filename' => input_filepath)
+    end
+  end
+end
