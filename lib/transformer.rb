@@ -74,12 +74,9 @@ module Dlme
       @addl_settings = settings
     end
 
-    # Transform a stream into a new representation, using Traject
+    # Transform a stream into a new representation, using Traject, and returns the number of transformed records.
     def transform
       transformer.process(File.open(input_filepath, 'r'))
-    rescue RuntimeError => e
-      warn "[ERROR] #{e.message}"
-      exit(1)
     end
 
     private
@@ -88,6 +85,7 @@ module Dlme
       this = self
       @transformer ||= Traject::Indexer.new.tap do |indexer|
         config_filepaths.each { |config_filepath| indexer.load_config_file(config_filepath) }
+        indexer.load_config_file('lib/record_counter_config.rb')
         indexer.settings do
           provide 'command_line.filename', this.input_filepath
           this.addl_settings.each { |key, value| provide key, value }
