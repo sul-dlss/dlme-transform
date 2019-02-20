@@ -12,5 +12,110 @@
       "agg_data_provider": "Stanford Libraries",
       "inst_id": "stanford"
     }
+  },
+  {
+    "trajects": [
+      "bnf_common_config.rb",
+      "bnf_bo_config.rb"
+    ],
+    "paths": [
+      "bnf/bo"
+    ],
+    "extension": ".xml",
+    "settings": {
+      "agg_provider": "Bibliothèque nationale de France",
+      "agg_data_provider": "Bibliothèque Orientale",
+      "inst_id": "bo"
+    }
+  },
+  {
+    "trajects": [
+      "bnf_common_config.rb",
+      "bnf_cealex_config.rb"
+    ],
+    "paths": [
+      "bnf/cealex"
+    ],
+    "extension": ".xml",
+    "settings": {
+      "agg_provider": "Bibliothèque nationale de France",
+      "agg_data_provider": "Centre de Études Alexandrines",
+      "inst_id": "cealex"
+    }
+  },
+  {
+    "trajects": [
+      "bnf_common_config.rb",
+      "bnf_ebaf_config.rb"
+    ],
+    "paths": [
+      "bnf/ebaf"
+    ],
+    "extension": ".xml",
+    "settings": {
+      "agg_provider": "Bibliothèque nationale de France",
+      "agg_data_provider": "École biblique et archéologique français de Jérusalem",
+      "inst_id": "ebaf"
+    }
+  },
+  {
+    "trajects": [
+      "bnf_common_config.rb",
+      "bnf_ideo_config.rb"
+    ],
+    "paths": [
+      "bnf/ideo"
+    ],
+    "extension": ".xml",
+    "settings": {
+      "agg_provider": "Bibliothèque nationale de France",
+      "agg_data_provider": "Institut dominicain d’etudes orientales",
+      "inst_id": "ideo"
+    }
+  },
+  {
+    "trajects": [
+      "bnf_common_config.rb",
+      "bnf_ifao_config.rb"
+    ],
+    "paths": [
+      "bnf/ifao"
+    ],
+    "extension": ".xml",
+    "settings": {
+      "agg_provider": "Bibliothèque nationale de France",
+      "agg_data_provider": "Institut français d’archéologie orientale",
+      "inst_id": "ifao"
+    }
+  },
+  {
+    "trajects": [
+      "bnf_common_config.rb",
+      "bnf_ifea_config.rb"
+    ],
+    "paths": [
+      "bnf/ifea"
+    ],
+    "extension": ".xml",
+    "settings": {
+      "agg_provider": "Bibliothèque nationale de France",
+      "agg_data_provider": "Institut Français d’Études Anatoliennes",
+      "inst_id": "ifea"
+    }
+  },
+  {
+    "trajects": [
+      "bnf_common_config.rb",
+      "bnf_salt_config.rb"
+    ],
+    "paths": [
+      "bnf/salt"
+    ],
+    "extension": ".xml",
+    "settings": {
+      "agg_provider": "Bibliothèque nationale de France",
+      "agg_data_provider": "SALT Galata",
+      "inst_id": "salt"
+    }
   }
 ]
