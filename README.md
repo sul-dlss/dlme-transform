@@ -50,8 +50,8 @@ you could also specify an absolute path on your machine, like
 `/Users/YourName/development/dlme-metadata`.  Be sure to specify the root of the
 checked out repositories in each case.
 
-Specify the Traject config file to use with the -c switch as shown below (e.g. `-c config/traject_config_file.rb`)
-
+The traject configuration file used for a particular transform is triggered by the specified data directory.
+See "Configuring transforms" below.
 
 ```
 docker run --rm -e SKIP_FETCH_CONFIG=true \
