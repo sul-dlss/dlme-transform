@@ -21,6 +21,13 @@ class DlmeJsonResourceWriter < Traject::LineWriter
       "#{JSON.pretty_generate(adjusted)}"
   end
 
+  # Necessary until https://github.com/traject/traject/pull/202 is resolved.
+  def close
+    return if @output_file == $stdout
+
+    super
+  end
+
   private
 
   def validate(json)
