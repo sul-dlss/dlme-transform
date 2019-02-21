@@ -109,18 +109,40 @@ RSpec.describe Dlme::Transformer do
                         settings: settings)
   end
 
-  let(:settings) { { 'agg_provider': 'Stanford' } }
-
-  let(:config_filepaths) { [] }
-
   let(:input_filepath) { 'data/test.mods' }
 
   describe '#transformer' do
-    let(:indexer) { transformer.send(:transformer) }
+    context 'when provided with settings' do
+      let(:indexer) { transformer.send(:transformer) }
 
-    it 'receives the correct configuration' do
-      expect(indexer.settings).to include('agg_provider' => 'Stanford')
-      expect(indexer.settings).to include('command_line.filename' => input_filepath)
+      let(:config_filepaths) { [] }
+
+      let(:settings) { { 'agg_provider': 'Stanford' } }
+
+      it 'correctly configures indexer' do
+        expect(indexer.settings).to include('agg_provider' => 'Stanford')
+        expect(indexer.settings).to include('command_line.filename' => input_filepath)
+      end
+    end
+
+    context 'when provided with configurations' do
+      let(:mock_indexer) { instance_double(Traject::Indexer) }
+
+      let(:config_filepaths) { ['test_config.rb'] }
+
+      let(:settings) { {} }
+
+      before do
+        allow(Traject::Indexer).to receive(:new).and_return(mock_indexer)
+        allow(mock_indexer).to receive(:load_config_file)
+        allow(mock_indexer).to receive(:settings)
+      end
+
+      it 'correctly loads indexer' do
+        transformer.send(:transformer)
+        expect(mock_indexer).to have_received(:load_config_file).with('test_config.rb')
+        expect(mock_indexer).to have_received(:load_config_file).with('lib/record_counter_config.rb')
+      end
     end
   end
 end

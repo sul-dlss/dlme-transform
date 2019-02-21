@@ -3,6 +3,8 @@
 require 'json'
 require 'thor'
 require 'transformer'
+require 'record_counter'
+require 'date'
 
 module Dlme
   module CLI
@@ -33,6 +35,11 @@ module Dlme
              desc: 'Directory containing the Traject configs.',
              aliases: '-t'
 
+      option :summary_filepath,
+             banner: 'SUMMARY_FILEPATH',
+             desc: 'Filepath containing summary of transformation.',
+             aliases: '-s'
+
       desc 'transform', 'Perform a transform'
       # rubocop:disable Metrics/MethodLength
       # rubocop:disable Metrics/AbcSize
@@ -49,6 +56,11 @@ module Dlme
             settings: config.fetch('settings', {})
           ).transform
         end
+        write_summary
+      rescue RuntimeError => e
+        warn "[ERROR] #{e.message}"
+        write_summary(error: e)
+        exit(1)
       end
       # rubocop:enable Metrics/MethodLength
       # rubocop:enable Metrics/AbcSize
@@ -58,6 +70,20 @@ module Dlme
 
       def mapping
         @mapping ||= JSON.parse(File.read(options.fetch(:mapping_file)))
+      end
+
+      def write_summary(error: nil)
+        return unless options.key?(:summary_filepath)
+
+        result = {
+          'success' => error.nil?,
+          'records' => RecordCounter.instance.count,
+          'timestamp' => DateTime.now.iso8601
+        }
+        result['error'] = error.message unless error.nil?
+        File.open(options.fetch(:summary_filepath), 'w') do |f|
+          f.puts(JSON.generate(result))
+        end
       end
     end
   end

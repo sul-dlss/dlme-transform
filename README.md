@@ -73,11 +73,12 @@ docker run --rm -v $(pwd)/output:/opt/traject/output \
 ```
 
 
-Sending output to S3 bucket:
+Sending output to S3 bucket and publishing an SNS notification:
 ```
-docker run --rm -e S3_BUCKET=s3://dlme-metadata-development \
+docker run --rm -e S3_BUCKET=dlme-metadata-development \
                 -e AWS_ACCESS_KEY_ID=AKIAIJIZROPT5GQ \
                 -e AWS_SECRET_ACCESS_KEY=oLNK4CF/5L/M6DXbM2JNmFrpGgbxcE5 \
+                -e SNS_TOPIC_ARN=arn:aws:sns:us-west-2:418214828013:dlme-development \
                 suldlss/dlme-transform:latest \
                 stanford/maps
 ```
