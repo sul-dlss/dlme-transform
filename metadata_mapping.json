@@ -117,5 +117,33 @@
       "agg_data_provider": "SALT Galata",
       "inst_id": "salt"
     }
+  },
+  {
+    "trajects": [
+      "sakip_sabanci_config.rb"
+    ],
+    "paths": [
+      "sakip-sabanci"
+    ],
+    "extension": ".xml",
+    "settings": {
+      "agg_provider": "Sakip Sabanci Museum",
+      "agg_data_provider": "Sakip Sabanci Museum",
+      "inst_id": "sakip-sabanci"
+    }
+  },
+  {
+    "trajects": [
+      "qnl_config.rb"
+    ],
+    "paths": [
+      "qnl"
+    ],
+    "extension": ".xml",
+    "settings": {
+      "agg_provider": "Qatar National Library",
+      "agg_data_provider": "Qatar National Library",
+      "inst_id": "qnl"
+    }
   }
 ]
