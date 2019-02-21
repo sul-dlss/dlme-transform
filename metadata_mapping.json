@@ -222,5 +222,19 @@
       "agg_data_provider": "University of Pennsylvania Libraries",
       "inst_id": "penn_marc"
     }
+  },
+  {
+    "trajects": [
+      "sakip_sabanci_config.rb"
+    ],
+    "paths": [
+      "sakip-sabanci"
+    ],
+    "extension": ".xml",
+    "settings": {
+      "agg_provider": "Sakip Sabanci Museum",
+      "agg_data_provider": "Sakip Sabanci Museum",
+      "inst_id": "sakip-sabanci"
+    }
   }
 ]
