@@ -45,7 +45,8 @@ RSpec.describe Dlme::CLI::Transform do
                                                    base_data_dir: base_data_dir,
                                                    data_dir: data_dir,
                                                    traject_dir: traject_dir,
-                                                   summary_filepath: summary_filepath)
+                                                   summary_filepath: summary_filepath,
+                                                   debug_writer: nil)
         allow(mock_file).to receive(:puts)
         Dlme::RecordCounter.instance.increment
         Dlme::RecordCounter.instance.increment
@@ -63,11 +64,13 @@ RSpec.describe Dlme::CLI::Transform do
         expect(Dlme::Transformer).to have_received(:new)
           .with(input_filepath: file1,
                 config_filepaths: [traject_config_filepath],
-                settings: config['settings'])
+                settings: config['settings'],
+                debug_writer: nil)
         expect(Dlme::Transformer).to have_received(:new)
           .with(input_filepath: file2,
                 config_filepaths: [traject_config_filepath],
-                settings: config['settings'])
+                settings: config['settings'],
+                debug_writer: nil)
         expect(mock_transformer).to have_received(:transform).twice
         expect(mock_file).to have_received(:puts)
           .with(start_with "{\"success\":true,\"records\":2,\"data_path\":\"#{data_dir}\"")

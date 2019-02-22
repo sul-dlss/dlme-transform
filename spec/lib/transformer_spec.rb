@@ -106,16 +106,21 @@ RSpec.describe Dlme::Transformer do
   subject(:transformer) do
     described_class.new(input_filepath: input_filepath,
                         config_filepaths: config_filepaths,
-                        settings: settings)
+                        settings: settings,
+                        debug_writer: debug_writer)
   end
 
   let(:input_filepath) { 'data/test.mods' }
 
+  let(:debug_writer) { false }
+
+  let(:settings) { {} }
+
+  let(:config_filepaths) { [] }
+
   describe '#transformer' do
     context 'when provided with settings' do
       let(:indexer) { transformer.send(:transformer) }
-
-      let(:config_filepaths) { [] }
 
       let(:settings) { { 'agg_provider': 'Stanford' } }
 
@@ -125,12 +130,20 @@ RSpec.describe Dlme::Transformer do
       end
     end
 
+    context 'when debug_writer' do
+      let(:indexer) { transformer.send(:transformer) }
+
+      let(:debug_writer) { true }
+
+      it 'correctly configures indexer' do
+        expect(indexer.settings).to include('writer_class_name' => 'DlmeDebugWriter')
+      end
+    end
+
     context 'when provided with configurations' do
       let(:mock_indexer) { instance_double(Traject::Indexer) }
 
       let(:config_filepaths) { ['test_config.rb'] }
-
-      let(:settings) { {} }
 
       before do
         allow(Traject::Indexer).to receive(:new).and_return(mock_indexer)
