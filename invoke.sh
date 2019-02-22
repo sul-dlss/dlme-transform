@@ -28,8 +28,12 @@ set +e
 exe/transform --summary-filepath $SUMMARY_FILEPATH --data-dir $@ | tee $OUTPUT_FILEPATH
 
 if [ -n "$S3_BUCKET" ]; then
+  if [ -n "$S3_ENDPOINT_URL" ]; then
+    S3_ENDPOINT_URL_ARG="--endpoint-url=$S3_ENDPOINT_URL"
+  fi
+
   echo "Sending to S3"
-  aws s3 cp $OUTPUT_FILEPATH s3://$S3_BUCKET --acl public-read
+  aws s3 cp $OUTPUT_FILEPATH s3://$S3_BUCKET --acl public-read $S3_ENDPOINT_URL_ARG
 
   # Add url to summary
   mv $SUMMARY_FILEPATH $SUMMARY_FILEPATH.tmp
@@ -38,6 +42,9 @@ if [ -n "$S3_BUCKET" ]; then
 fi
 
 if [ -n "$SNS_TOPIC_ARN" ]; then
+  if [ -n "$SNS_ENDPOINT_URL" ]; then
+    SNS_ENDPOINT_URL_ARG="--endpoint-url=$SNS_ENDPOINT_URL"
+  fi
   echo "Sending notification to SNS"
-  aws sns publish --topic-arn $SNS_TOPIC_ARN --message file://$SUMMARY_FILEPATH
+  aws sns publish --topic-arn $SNS_TOPIC_ARN --message file://$SUMMARY_FILEPATH $SNS_ENDPOINT_URL_ARG
 fi
