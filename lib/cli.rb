@@ -44,6 +44,7 @@ module Dlme
       # rubocop:disable Metrics/MethodLength
       # rubocop:disable Metrics/AbcSize
       def transform
+        @start = Time.now
         data_filepath_mapping = TransformMapper.new(
           mapping_config: mapping,
           base_data_dir: options.fetch(:base_data_dir),
@@ -75,15 +76,22 @@ module Dlme
       def write_summary(error: nil)
         return unless options.key?(:summary_filepath)
 
+        summary = build_summary(error: error)
+        File.open(options.fetch(:summary_filepath), 'w') do |f|
+          f.puts(JSON.generate(summary))
+        end
+      end
+
+      def build_summary(error: nil)
         result = {
           'success' => error.nil?,
           'records' => RecordCounter.instance.count,
-          'timestamp' => DateTime.now.iso8601
+          'data_path' => options.fetch(:data_dir),
+          'timestamp' => DateTime.now.iso8601,
+          'duration' => (Time.now - @start).to_i
         }
         result['error'] = error.message unless error.nil?
-        File.open(options.fetch(:summary_filepath), 'w') do |f|
-          f.puts(JSON.generate(result))
-        end
+        result
       end
     end
   end
