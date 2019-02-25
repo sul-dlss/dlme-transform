@@ -40,6 +40,12 @@ module Dlme
              desc: 'Filepath containing summary of transformation.',
              aliases: '-s'
 
+      option :debug_writer,
+             type: :boolean,
+             banner: 'DEBUG_WRITER',
+             desc: 'Use the debug writer.',
+             aliases: '-w'
+
       desc 'transform', 'Perform a transform'
       # rubocop:disable Metrics/MethodLength
       # rubocop:disable Metrics/AbcSize
@@ -54,7 +60,8 @@ module Dlme
           Transformer.new(
             input_filepath: data_filepath,
             config_filepaths: config['trajects'].map { |traject| "#{options.fetch(:traject_dir)}/#{traject}" },
-            settings: config.fetch('settings', {})
+            settings: config.fetch('settings', {}),
+            debug_writer: options[:debug_writer]
           ).transform
         end
         write_summary
