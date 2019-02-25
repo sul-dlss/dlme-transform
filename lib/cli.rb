@@ -5,6 +5,7 @@ require 'thor'
 require 'transformer'
 require 'record_counter'
 require 'date'
+require 'config_finder'
 
 module Dlme
   module CLI
@@ -47,16 +48,23 @@ module Dlme
              aliases: '-w'
 
       desc 'transform', 'Perform a transform'
-      # rubocop:disable Metrics/MethodLength
-      # rubocop:disable Metrics/AbcSize
       def transform
         @start = Time.now
-        data_filepath_mapping = TransformMapper.new(
-          mapping_config: mapping,
-          base_data_dir: options.fetch(:base_data_dir),
-          data_dir: options.fetch(:data_dir)
-        ).map
-        data_filepath_mapping.each do |data_filepath, config|
+        transform_all
+        write_summary
+      rescue RuntimeError => e
+        warn "[ERROR] #{e.message}"
+        write_summary(error: e.message)
+        exit(1)
+      end
+
+      default_task :transform
+
+      private
+
+      # @raise RuntimeError if no files are found
+      def transform_all
+        configs.each do |data_filepath, config|
           Transformer.new(
             input_filepath: data_filepath,
             config_filepaths: config['trajects'].map { |traject| "#{options.fetch(:traject_dir)}/#{traject}" },
@@ -64,20 +72,13 @@ module Dlme
             debug_writer: options[:debug_writer]
           ).transform
         end
-        write_summary
-      rescue RuntimeError => e
-        warn "[ERROR] #{e.message}"
-        write_summary(error: e)
-        exit(1)
       end
-      # rubocop:enable Metrics/MethodLength
-      # rubocop:enable Metrics/AbcSize
-      default_task :transform
 
-      private
-
-      def mapping
-        @mapping ||= JSON.parse(File.read(options.fetch(:mapping_file)))
+      # @raise RuntimeError if no files are found
+      def configs
+        ConfigFinder.for(base_data_dir: options.fetch(:base_data_dir),
+                         data_dir: options.fetch(:data_dir),
+                         mapping_file: options.fetch(:mapping_file))
       end
 
       def write_summary(error: nil)
@@ -97,7 +98,7 @@ module Dlme
           'timestamp' => DateTime.now.iso8601,
           'duration' => (Time.now - @start).to_i
         }
-        result['error'] = error.message unless error.nil?
+        result['error'] = error unless error.nil?
         result
       end
     end
