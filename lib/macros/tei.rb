@@ -5,17 +5,10 @@ require_relative 'extraction'
 module Macros
   # Macros for extracting TEI values from Nokogiri documents
   module Tei
-    NS = { tei: 'http://www.tei-c.org/ns/1.0' }.freeze
-
-    # @param xpath [String] the xpath query expression
-    def extract_tei(xpath, options = {})
-      extract_xml(xpath, NS, options)
-    end
-
     def generate_data_provider(xpath)
       lambda do |record, accumulator|
-        repository = record.xpath("#{xpath}/tei:repository", NS).map(&:text)
-        institution = record.xpath("#{xpath}/tei:institution", NS).map(&:text)
+        repository = record.xpath("#{xpath}/tei:repository", TrajectPlus::Macros::Tei::NS).map(&:text)
+        institution = record.xpath("#{xpath}/tei:institution", TrajectPlus::Macros::Tei::NS).map(&:text)
         accumulator << [repository, institution].join(', ')
       end
     end
@@ -35,7 +28,7 @@ module Macros
                            'tei:textLang/@otherLangs'
       new_pipeline = Macros::Extraction::TransformPipeline.new(translation_map: 'marc_languages')
       lambda do |record, accumulator|
-        node = record.xpath(tei_other_langs_xp, NS).first
+        node = record.xpath(tei_other_langs_xp, TrajectPlus::Macros::Tei::NS).first
         accumulator.concat(new_pipeline.transform(node.value.split(' '))) if node
       end
     end

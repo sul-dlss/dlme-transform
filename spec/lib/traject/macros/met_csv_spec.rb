@@ -3,13 +3,14 @@
 require 'macros/met_csv'
 require 'macros/dlme'
 require 'csv'
+require 'traject_plus'
 require 'met_thumbnail_fetcher'
 
 RSpec.describe Macros::MetCsv do
   let(:klass) do
     Class.new do
       include Macros::MetCsv
-      include Macros::DLME # for transform_values()
+      include TrajectPlus::Macros
       include Traject::Macros::Basic # for literal()
     end
   end

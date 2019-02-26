@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'dlme_utils'
+require 'active_support/core_ext/object/blank'
 
 # Grab a thumbnail URL from the Met web service
 module MetThumbnailFetcher

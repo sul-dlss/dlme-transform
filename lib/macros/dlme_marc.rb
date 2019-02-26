@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'traject_plus'
+
 module Macros
   # Macros that change some of Traject's MARC behaviors for the sake of DLME.
   module DlmeMarc
@@ -18,7 +20,7 @@ module Macros
     def marc_type_to_edm
       lambda { |record, accumulator, _context|
         leader06 = record.leader.byteslice(6)
-        edm_types = Macros::Extraction.apply_extraction_options(leader06, translation_map: 'types')
+        edm_types = TrajectPlus::Extraction.apply_extraction_options(leader06, translation_map: 'types')
         accumulator.concat(edm_types)
       }
     end
