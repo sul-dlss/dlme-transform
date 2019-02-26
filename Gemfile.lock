@@ -1,7 +1,6 @@
 GIT
   remote: https://github.com/sul-dlss/traject_plus.git
-  revision: ba8a83fe20c05d57037cfd7ac0727b967777fb5a
-  branch: more-functions
+  revision: 57ae7523b37dbf498c13368e04049f3a6ea46730
   specs:
     traject_plus (0.1.0)
       activesupport

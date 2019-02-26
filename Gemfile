@@ -6,7 +6,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 gem 'activesupport', '~> 5.2'
 gem 'dry-validation'
 gem 'thor', '~> 0.20'
-gem 'traject_plus', github: 'sul-dlss/traject_plus', branch: 'more-functions'
+gem 'traject_plus', github: 'sul-dlss/traject_plus'
 
 group :test do
   gem 'byebug'
