@@ -4,9 +4,9 @@ module Macros
   # DLME helpers for traject mappings
   module DLME
     LOC_NS = {
-      srw: 'http://www.loc.gov/zing/srw/',
+      dc: 'http://purl.org/dc/elements/1.1/',
       oai_dc: 'http://www.openarchives.org/OAI/2.0/oai_dc/',
-      dc: 'http://purl.org/dc/elements/1.1/'
+      srw: 'http://www.loc.gov/zing/srw/'
     }.freeze
 
     def provider
