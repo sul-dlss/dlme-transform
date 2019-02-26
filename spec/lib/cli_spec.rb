@@ -6,7 +6,6 @@ RSpec.describe Dlme::CLI::Transform do
   subject(:cli) { described_class.new }
 
   describe '#transform' do
-    let(:mock_transformer_mapper) { instance_double(Dlme::TransformMapper) }
     let(:config) do
       {
         'trajects' => ['mods_config.rb'],
@@ -35,8 +34,7 @@ RSpec.describe Dlme::CLI::Transform do
 
     context 'with defaults' do
       before do
-        allow(Dlme::TransformMapper).to receive(:new).and_return(mock_transformer_mapper)
-        allow(mock_transformer_mapper).to receive(:map).and_return(transform_map)
+        allow(Dlme::ConfigFinder).to receive(:for).and_return(transform_map)
         allow(Dlme::Transformer).to receive(:new).and_return(mock_transformer)
         allow(mock_transformer).to receive(:transform)
         allow(File).to receive(:read).and_return(metadata_mapping)
@@ -54,13 +52,7 @@ RSpec.describe Dlme::CLI::Transform do
 
       it 'calls transformer mapper and transformer' do
         cli.transform
-        expect(File).to have_received(:read).with(metadata_mapping_filepath)
         expect(File).to have_received(:open).with(summary_filepath, 'w')
-        expect(Dlme::TransformMapper).to have_received(:new)
-          .with(mapping_config: JSON.parse(metadata_mapping),
-                base_data_dir: base_data_dir,
-                data_dir: data_dir)
-        expect(mock_transformer_mapper).to have_received(:map).once
         expect(Dlme::Transformer).to have_received(:new)
           .with(input_filepath: file1,
                 config_filepaths: [traject_config_filepath],
