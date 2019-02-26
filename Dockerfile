@@ -22,9 +22,6 @@ RUN apk add --no-cache \
     && apk del python-dependencies \
     && gem install bundler
 
-# This is here temporarily until we have a released version of traject_plus
-RUN apk add --no-cache git
-
 # Copy the Gemfile and Gemfile.lock, and run bundle install prior to copying all source files
 # This is an optimization that will prevent the need to re-run bundle install when only source
 # code is changed and not dependencies.
