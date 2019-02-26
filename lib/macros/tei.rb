@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require_relative 'extraction'
-
 module Macros
   # Macros for extracting TEI values from Nokogiri documents
   module Tei
@@ -26,7 +24,7 @@ module Macros
     def other_languages
       tei_other_langs_xp = '/*/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc/tei:msContents/' \
                            'tei:textLang/@otherLangs'
-      new_pipeline = Macros::Extraction::TransformPipeline.new(translation_map: 'marc_languages')
+      new_pipeline = TrajectPlus::Extraction::TransformPipeline.new(translation_map: 'marc_languages')
       lambda do |record, accumulator|
         node = record.xpath(tei_other_langs_xp, TrajectPlus::Macros::Tei::NS).first
         accumulator.concat(new_pipeline.transform(node.value.split(' '))) if node
