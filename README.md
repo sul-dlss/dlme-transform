@@ -115,3 +115,6 @@ are provide to the Traject indexer as additional settings.
 
 Additional metadata mappings can be added to this file. In case a metadata file matches more than one configuration, the
 first one wins.
+
+## API Documentation
+https://www.rubydoc.info/github/sul-dlss/dlme-transform
