@@ -3,12 +3,6 @@
 module Macros
   # DLME helpers for traject mappings
   module DLME
-    LOC_NS = {
-      dc: 'http://purl.org/dc/elements/1.1/',
-      oai_dc: 'http://www.openarchives.org/OAI/2.0/oai_dc/',
-      srw: 'http://www.loc.gov/zing/srw/'
-    }.freeze
-
     def provider
       from_settings('agg_provider')
     end
