@@ -10,21 +10,13 @@ RSpec.describe MetThumbnailFetcher do
 
     before do
       allow(DLME::Utils).to receive(:fetch_json)
-        .with('http://www.metmuseum.org/api/Collection/additionalImages?crdId=12312')
+        .with('https://collectionapi.metmuseum.org/public/collection/v1/objects/12312')
         .and_return(JSON.parse(json))
     end
 
     context 'when the results are empty' do
       let(:json) do
-        '{"results":[]}'
-      end
-
-      it { is_expected.to be nil }
-    end
-
-    context 'when the results are null' do
-      let(:json) do
-        '{"results":null}'
+        '{}'
       end
 
       it { is_expected.to be nil }
@@ -32,7 +24,7 @@ RSpec.describe MetThumbnailFetcher do
 
     context 'when there is a thumbnail' do
       let(:json) do
-        '{"results":[{"webImageUrl":"http://images.metmuseum.org/images/3"}]}'
+        '{"primaryImage":"http://images.metmuseum.org/images/3"}'
       end
 
       it { is_expected.to eq 'http://images.metmuseum.org/images/3' }

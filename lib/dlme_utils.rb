@@ -21,9 +21,9 @@ module DLME
         client.get uri
       end
       resp_content_type = resp.headers['content-type']
-      raise "Unexpected response type '#{resp_content_type}' for #{uri}" unless resp_content_type == 'application/json'
+      return ::JSON.parse(resp.body) if resp_content_type.start_with?('application/json')
 
-      ::JSON.parse(resp.body)
+      raise "Unexpected response type '#{resp_content_type}' for #{uri}"
     end
 
     def self.logger
