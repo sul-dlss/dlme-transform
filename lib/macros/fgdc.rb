@@ -8,7 +8,7 @@ module Macros
     end
 
     def harvard_uuid(record)
-      urls = record.xpath('/*/idinfo/citation/citeinfo/onlink', TrajectPlus::Macros::FGCD::NS).map(&:text)
+      urls = record.xpath('/*/idinfo/citation/citeinfo/onlink', TrajectPlus::Macros::FGDC::NS).map(&:text)
       urls.first.split('CollName=')[1]
     end
 
