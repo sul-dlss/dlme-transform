@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'met_thumbnail_fetcher'
+
 module Macros
   # Macros for extracting values from CSV rows
   module MetCsv
