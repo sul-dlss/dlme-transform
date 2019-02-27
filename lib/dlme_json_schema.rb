@@ -12,14 +12,14 @@ DlmeJsonSchema = Dry::Validation.Schema do
   optional('cho_date') { array? { each(:str?) } }
   optional('cho_dc_rights') { array? { each(:str?) } }
   optional('cho_description') { array? { each(:str?) } }
-  optional('cho_edm_type') { array? { each(:str?) } }
+  optional('cho_edm_type') { array? { each(:str?, excluded_from?: ['NOT FOUND']) } }
   optional('cho_extent') { array? { each(:str?) } }
   optional('cho_format') { array? { each(:str?) } }
   optional('cho_has_part') { array? { each(:str?) } }
   optional('cho_has_type') { array? { each(:str?) } }
   optional('cho_identifier') { array? { each(:str?) } }
   optional('cho_is_part_of') { array? { each(:str?) } }
-  optional('cho_language') { array? { each(:str?) } }
+  optional('cho_language') { array? { each(:str?, excluded_from?: ['NOT FOUND']) } }
   optional('cho_medium') { array? { each(:str?) } }
   optional('cho_provenance') { array? { each(:str?) } }
   optional('cho_publisher') { array? { each(:str?) } }

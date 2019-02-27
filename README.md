@@ -118,3 +118,14 @@ first one wins.
 
 ## API Documentation
 https://www.rubydoc.info/github/sul-dlss/dlme-transform
+
+## Transformation notes
+### Unmapped languages
+For the `cho_language` and `cho_edm_type` fields, setting a default of `NOT FOUND` will cause validation to fail when an 
+unmapped language is encountered. For example:
+
+```
+to_field 'cho_language', extract_xml("#{record}/dc:language", NS), first_only,
+         strip, translation_map('marc_languages'),
+         default('NOT FOUND')
+```
