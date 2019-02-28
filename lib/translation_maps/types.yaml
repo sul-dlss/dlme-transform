@@ -4,7 +4,6 @@
 artifact: image
 audio: sound
 cartographic: cartographic
-collection: collection
 dataset: dataset
 digital data: dataset
 image: image
@@ -15,8 +14,6 @@ mixed material: text
 moving image: video
 multimedia: [sound, video]
 notated music: text
-software: software
-software, multimedia: software
 sound: sound
 sound recording: sound
 sound recording-musical: sound
