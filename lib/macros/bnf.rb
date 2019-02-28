@@ -2,6 +2,7 @@
 
 module Macros
   # Helpers for working with data from Bibliothèque nationale de France
+  # @deprecated use SRW instead
   module BNF
     NS = {
       dc: 'http://purl.org/dc/elements/1.1/',
