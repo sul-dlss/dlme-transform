@@ -126,6 +126,5 @@ unmapped language is encountered. For example:
 
 ```
 to_field 'cho_language', extract_xml("#{record}/dc:language", NS), first_only,
-         strip, translation_map('marc_languages'),
-         default('NOT FOUND')
+         strip, translation_map('not_found', 'marc_languages')
 ```
