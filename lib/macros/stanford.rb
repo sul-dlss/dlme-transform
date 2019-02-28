@@ -6,11 +6,15 @@ require_relative 'mods'
 module Macros
   # Macros for extracting Stanford Specific MODS values from Nokogiri documents
   module Stanford
+    # Namespaces and prefixes for XML documents from Stanford
     NS = { mods: 'http://www.loc.gov/mods/v3',
            rdf: 'http://www.w3.org/1999/02/22-rdf-syntax-ns#',
            dc: 'http://purl.org/dc/elements/1.1/' }.freeze
 
     # This is a URL for the Digital Object in its information context
+    # @param [Nokogiri::Document] record
+    # @param [String] druid the Stanford digital object identifier
+    # @return [String] the uri
     def generate_sul_shown_at(record, druid)
       mods_url = record.xpath('/*/mods:location/mods:url', NS).map(&:text)
       if druid.present?

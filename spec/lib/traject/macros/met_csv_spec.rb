@@ -52,7 +52,7 @@ RSpec.describe Macros::MetCsv do
   end
 
   describe 'artist_role_bio' do
-    subject { instance.artist_role_bio(row) }
+    subject { instance.send(:artist_role_bio, row) }
 
     let(:row) { { 'Artist Begin Date' => '', 'Artist End Date' => '' } }
 
