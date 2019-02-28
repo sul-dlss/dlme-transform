@@ -9,11 +9,16 @@ module Macros
       srw: 'http://www.loc.gov/zing/srw/'
     }.freeze
 
-    # Extracts values for the given xpath
+    PREFIX = 'srw:record/srw:recordData/oai_dc:dc/'
+    private_constant :PREFIX
+
+    # Extracts values for the given xpath which is prefixed with srw and oai wrappers
     # @param [String] xpath the xpath query expression
     # @return [Proc] a proc that traject can call for each record
+    # @example
+    #   extract_oai('dc:language') => lambda { ... }
     def extract_srw(xpath, options = {})
-      extract_xml(xpath, NS, options)
+      extract_xml("#{PREFIX}#{xpath}", NS, options)
     end
   end
 end
