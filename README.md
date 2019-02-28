@@ -4,6 +4,8 @@
 
 Transforms raw DLME metadata from https://github.com/sul-dlss/dlme-metadata and uses transformations in https://github.com/sul-dlss/dlme-traject to create [DLME intermediate representation](https://github.com/sul-dlss/dlme/blob/master/docs/application_profile.md) documents in S3.
 
+You can read more about our data and related documentation in our [data documentation](./docs/README.md).
+
 ## Docker
 ### Build image
 ```
@@ -121,7 +123,7 @@ https://www.rubydoc.info/github/sul-dlss/dlme-transform
 
 ## Transformation notes
 ### Unmapped languages
-For the `cho_language` and `cho_edm_type` fields, setting a default of `NOT FOUND` will cause validation to fail when an 
+For the `cho_language` and `cho_edm_type` fields, setting a default of `NOT FOUND` will cause validation to fail when an
 unmapped language is encountered. For example:
 
 ```
