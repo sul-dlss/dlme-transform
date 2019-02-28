@@ -87,7 +87,7 @@ Note that actual S3 credentials are available from `shared_configs`.
 For more information on traject, [read the documentation](https://github.com/traject/traject#Traject)
 
 ### Configuring transforms
-Configuration for transforms is specified in `metadata_mappings.json`. For example:
+Configuration for transforms is specified in `config/metadata_mappings.json`. For example:
 
 ```
 [

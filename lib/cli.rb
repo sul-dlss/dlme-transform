@@ -12,7 +12,7 @@ module Dlme
     # Transform subcommand
     class Transform < Thor
       option :mapping_file,
-             default: 'metadata_mapping.json',
+             default: 'config/metadata_mapping.json',
              banner: 'MAPPING_FILEPATH',
              desc: 'Filepath of JSON file that maps directories to config files.',
              aliases: '-m'
