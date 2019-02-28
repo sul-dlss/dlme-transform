@@ -4,7 +4,6 @@
 artifact: image
 audio: sound
 cartographic: cartographic
-collection: collection
 dataset: dataset
 digital data: dataset
 image: image
@@ -15,8 +14,6 @@ mixed material: text
 moving image: video
 multimedia: [sound, video]
 notated music: text
-software: software
-software, multimedia: software
 sound: sound
 sound recording: sound
 sound recording-musical: sound
@@ -38,7 +35,27 @@ g: image
 i: sound
 j: sound
 k: image
-m: software
 p: text
 r: image
 t: text
+# Turkish language types
+Baskı: text
+Belge: text
+Broşür: text
+Davetiye: image
+Dijital fotoğraf: image
+elyazma kitap: text
+Fotoğraf: image
+Gazete küpürü: text
+Gravür: image
+Hat: text
+Kartpostal: image
+Kitap bölümü: text
+Kumaş: image
+Köşe yazısı: text
+Makale: text
+Mektup: text
+Resim: image
+Yazı: text
+Yazı malzemeleri: text
+Yazışma: text
