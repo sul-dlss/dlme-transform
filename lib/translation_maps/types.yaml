@@ -1,9 +1,10 @@
 # Basic mapping from common regex patterns to MODS, MARC, EDM, DCMI type terms.
-
 3d: 3d
 artifact: image
 audio: sound
+brochure: image
 cartographic: cartographic
+collection: collection
 dataset: dataset
 digital data: dataset
 image: image
@@ -14,6 +15,10 @@ mixed material: text
 moving image: video
 multimedia: [sound, video]
 notated music: text
+software: software
+software, multimedia: software
+poster: image
+Poster: image
 sound: sound
 sound recording: sound
 sound recording-musical: sound
@@ -35,6 +40,7 @@ g: image
 i: sound
 j: sound
 k: image
+m: software
 p: text
 r: image
 t: text
@@ -43,18 +49,21 @@ Baskı: text
 Belge: text
 Broşür: text
 Davetiye: image
+Desen: image
 Dijital fotoğraf: image
 elyazma kitap: text
 Fotoğraf: image
 Gazete küpürü: text
 Gravür: image
 Hat: text
+Karikatür: image
 Kartpostal: image
 Kitap bölümü: text
 Kumaş: image
 Köşe yazısı: text
-Makale: text
+Makale: 
 Mektup: text
+Metin: text
 Resim: image
 Yazı: text
 Yazı malzemeleri: text
