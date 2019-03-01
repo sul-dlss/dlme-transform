@@ -2,7 +2,7 @@
 [![](https://images.microbadger.com/badges/image/suldlss/dlme-transform.svg)](https://microbadger.com/images/suldlss/dlme-transform "Get your own image badge on microbadger.com")
 [![](https://images.microbadger.com/badges/commit/suldlss/dlme-transform.svg)](http://microbadger.com/images/suldlss/dlme-transform "Get your own commit badge on microbadger.com")
 
-Transforms raw DLME metadata to DLME intermediate representation
+Transforms raw DLME metadata from https://github.com/sul-dlss/dlme-metadata and uses transformations in https://github.com/sul-dlss/dlme-traject to create [https://github.com/sul-dlss/dlme/blob/master/docs/application_profile.md](DLME intermediate representation) documents in S3.
 
 ## Docker
 ### Build image
