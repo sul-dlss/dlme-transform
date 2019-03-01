@@ -3,22 +3,21 @@
 artifact: image
 audio: sound
 brochure: image
-cartographic: cartographic
+cartographic: image
 collection: collection
 dataset: dataset
 digital data: dataset
 image: image
 interactive resource: interactive resource
 manuscript: text
-map: cartographic
+map: image
 mixed material: text
 moving image: video
 multimedia: [sound, video]
 notated music: text
 software: software
-software, multimedia: software
+software, multimedia: interactive resource
 poster: image
-Poster: image
 sound: sound
 sound recording: sound
 sound recording-musical: sound
@@ -34,13 +33,13 @@ video: video
 a: text
 c: text
 d: text
-e: cartographic
-f: cartographic
+e: image
+f: image
 g: image
 i: sound
 j: sound
 k: image
-m: software
+m: interactive resource
 p: text
 r: image
 t: text
