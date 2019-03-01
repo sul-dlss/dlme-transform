@@ -52,9 +52,11 @@ module Dlme
         @start = Time.now
         transform_all
         write_summary
-      rescue RuntimeError => e
+      rescue StandardError => e
         warn "[ERROR] #{e.message}"
         write_summary(error: e.message)
+        raise e unless e < RuntimeError
+
         exit(1)
       end
 
