@@ -55,7 +55,7 @@ module Dlme
       rescue StandardError => e
         warn "[ERROR] #{e.message}"
         write_summary(error: e.message)
-        raise e unless e < RuntimeError
+        raise e unless e.is_a?(RuntimeError)
 
         exit(1)
       end
