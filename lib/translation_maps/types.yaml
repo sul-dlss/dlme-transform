@@ -44,26 +44,27 @@ p: text
 r: image
 t: text
 # Turkish language types
-Baskı: text
-Belge: text
-Broşür: text
-Davetiye: image
-Desen: image
-Dijital fotoğraf: image
+baskı: text
+belge: text
+broşür: text
+davetiye: image
+desen: image
+dijital fotoğraf: image
 elyazma kitap: text
-Fotoğraf: image
-Gazete küpürü: text
-Gravür: image
-Hat: text
-Karikatür: image
-Kartpostal: image
-Kitap bölümü: text
-Kumaş: image
-Köşe yazısı: text
-Makale: text
-Mektup: text
-Metin: text
-Resim: image
-Yazı: text
-Yazı malzemeleri: text
-Yazışma: text
+fotoğraf: image
+gotoğraf: image
+gazete küpürü: text
+gravür: image
+hat: text
+karikatür: image
+kartpostal: image
+kitap bölümü: text
+kumaş: image
+köşe yazısı: text
+makale: text
+mektup: text
+metin: text
+resim: image
+yazı: text
+yazı malzemeleri: text
+yazışma: text
