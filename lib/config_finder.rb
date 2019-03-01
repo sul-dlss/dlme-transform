@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Dlme
   # Compiles a list of configs to use for the given filepaths
   class ConfigFinder
