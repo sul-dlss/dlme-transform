@@ -15,7 +15,7 @@ mixed material: text
 moving image: video
 multimedia: [sound, video]
 notated music: text
-software: software
+software: interactive resource
 software, multimedia: interactive resource
 poster: image
 sound: sound
@@ -60,7 +60,7 @@ Kartpostal: image
 Kitap bölümü: text
 Kumaş: image
 Köşe yazısı: text
-Makale: 
+Makale: text
 Mektup: text
 Metin: text
 Resim: image
