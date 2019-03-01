@@ -5,6 +5,10 @@ require 'traject_plus'
 module Macros
   # Macros that change some of Traject's MARC behaviors for the sake of DLME.
   module DlmeMarc
+    # Looks up the role from the MARC record
+    # @param [String] marc_field the MARC field identifier
+    # @param [String] role  either "creator" or "contributor"
+    # @return [Proc] a proc that traject can call for each record
     def extract_role(marc_field, role)
       lambda do |record, accumulator|
         record.each_by_tag(marc_field) do |field|
@@ -17,6 +21,8 @@ module Macros
       end
     end
 
+    # Looks up the type from the MARC document and normalizes it using the ++lib/translation_maps/types.yaml++ table
+    # @return [Proc] a proc that traject can call for each record
     def marc_type_to_edm
       lambda { |record, accumulator, _context|
         leader06 = record.leader.byteslice(6)

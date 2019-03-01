@@ -3,6 +3,8 @@
 module Macros
   # Macros for extracting TEI values from Nokogiri documents
   module Tei
+    # Returns the data provider value from the repository and institution values in the TEI XML.
+    # @return [Proc] a proc that traject can call for each record
     def generate_data_provider(xpath)
       lambda do |record, accumulator|
         repository = record.xpath("#{xpath}/tei:repository", TrajectPlus::Macros::Tei::NS).map(&:text)
@@ -11,6 +13,9 @@ module Macros
       end
     end
 
+    # Looks up the main language from the TEI document and normalizes it using
+    # the ++lib/translation_maps/marc_languages.yaml++ table
+    # @return [Proc] a proc that traject can call for each record
     def main_language
       tei_main_lang_xp = '/*/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc/tei:msContents/tei:textLang/@mainLang'
       tei_lang_text_xp = '/*/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc/tei:msContents/tei:textLang'
@@ -21,6 +26,9 @@ module Macros
       )
     end
 
+    # Looks up the other languages from the TEI document and normalizes them
+    # using the ++lib/translation_maps/marc_languages.yaml++ table
+    # @return [Proc] a proc that traject can call for each record
     def other_languages
       tei_other_langs_xp = '/*/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc/tei:msContents/' \
                            'tei:textLang/@otherLangs'
@@ -31,24 +39,27 @@ module Macros
       end
     end
 
+    # Sets a literal URL for public domain
+    # @return [Proc] a proc that traject can call for each record
     def public_domain
       lambda do |_, accumulator|
         accumulator << 'http://creativecommons.org/publicdomain/mark/1.0/'
       end
     end
 
-    def penn_image_query(idx)
-      "/*/tei:facsimile/tei:surface[1]/tei:graphic[#{idx}]/@url"
-    end
-
+    # @return [String] an xpath for a web image
     def penn_web_image_query
       penn_image_query(3)
     end
 
+    # @return [String] an xpath for a thumbnail image
     def penn_thumbnail_image_query
       penn_image_query(2)
     end
 
+    # Sets a url for the given query
+    # @param [String] query an xpath expression
+    # @return [Proc] a proc that traject can call for each record
     def penn_image_uri(query)
       lambda do |record, accumulator, context|
         # Identifier without the prefix
@@ -58,8 +69,14 @@ module Macros
       end
     end
 
+    private
+
     def penn_uri(id, path)
       "http://openn.library.upenn.edu/Data/0001/#{id}/data/#{path}"
+    end
+
+    def penn_image_query(idx)
+      "/*/tei:facsimile/tei:surface[1]/tei:graphic[#{idx}]/@url"
     end
   end
 end
