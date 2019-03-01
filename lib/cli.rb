@@ -52,11 +52,13 @@ module Dlme
         @start = Time.now
         transform_all
         write_summary
-      rescue RuntimeError => e
+      # rubocop:disable Style/RescueStandardError
+      rescue => e
         warn "[ERROR] #{e.message}"
         write_summary(error: e.message)
         exit(1)
       end
+      # rubocop:enable Style/RescueStandardError
 
       default_task :transform
 
