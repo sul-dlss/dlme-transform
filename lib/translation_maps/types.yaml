@@ -1,19 +1,23 @@
 # Basic mapping from common regex patterns to MODS, MARC, EDM, DCMI type terms.
-
 3d: 3d
 artifact: image
 audio: sound
-cartographic: cartographic
+brochure: image
+cartographic: image
+collection: collection
 dataset: dataset
 digital data: dataset
 image: image
 interactive resource: interactive resource
 manuscript: text
-map: cartographic
+map: image
 mixed material: text
 moving image: video
 multimedia: [sound, video]
 notated music: text
+software: interactive resource
+software, multimedia: interactive resource
+poster: image
 sound: sound
 sound recording: sound
 sound recording-musical: sound
@@ -29,33 +33,38 @@ video: video
 a: text
 c: text
 d: text
-e: cartographic
-f: cartographic
+e: image
+f: image
 g: image
 i: sound
 j: sound
 k: image
+m: interactive resource
 p: text
 r: image
 t: text
 # Turkish language types
-Baskı: text
-Belge: text
-Broşür: text
-Davetiye: image
-Dijital fotoğraf: image
+baskı: text
+belge: text
+broşür: text
+davetiye: image
+desen: image
+dijital fotoğraf: image
 elyazma kitap: text
-Fotoğraf: image
-Gazete küpürü: text
-Gravür: image
-Hat: text
-Kartpostal: image
-Kitap bölümü: text
-Kumaş: image
-Köşe yazısı: text
-Makale: text
-Mektup: text
-Resim: image
-Yazı: text
-Yazı malzemeleri: text
-Yazışma: text
+fotoğraf: image
+gotoğraf: image
+gazete küpürü: text
+gravür: image
+hat: text
+karikatür: image
+kartpostal: image
+kitap bölümü: text
+kumaş: image
+köşe yazısı: text
+makale: text
+mektup: text
+metin: text
+resim: image
+yazı: text
+yazı malzemeleri: text
+yazışma: text
