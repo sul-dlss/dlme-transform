@@ -58,7 +58,7 @@ GEM
     http-form_data (2.1.1)
     http_parser.rb (0.6.0)
     httpclient (2.8.3)
-    i18n (1.5.3)
+    i18n (1.6.0)
       concurrent-ruby (~> 1.0)
     jaro_winkler (1.5.2)
     jsonpath (1.0.1)
@@ -123,7 +123,7 @@ GEM
       nokogiri (~> 1.0)
       slop (>= 3.4.5, < 4.0)
       yell
-    traject_plus (1.0.0)
+    traject_plus (1.1.0)
       activesupport
       deprecation
       jsonpath
