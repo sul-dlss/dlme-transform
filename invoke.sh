@@ -4,7 +4,7 @@ set -e
 if [ $SKIP_FETCH_CONFIG != "true" ]; then
   echo "Getting github.com/sul-dlss/dlme-traject"
   curl -L https://github.com/sul-dlss/dlme-traject/archive/master.zip > master.zip
-  unzip -q master.zip *.rb
+  unzip -q master.zip
   mkdir -p /opt/traject/config/
   mv dlme-traject-master/* /opt/traject/config/
   rm master.zip
