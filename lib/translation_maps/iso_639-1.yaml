@@ -1,5 +1,5 @@
 aa: Afar
-ab: Abkhazian
+ab: Abkhaz
 ae: Avestan
 af: Afrikaans
 ak: Akan
@@ -13,7 +13,7 @@ az: Azerbaijani
 ba: Bashkir
 be: Belarusian
 bg: Bulgarian
-bh: Bihari languages
+bh: Bihari
 bi: Bislama
 bm: Bambara
 bn: Bengali
@@ -26,7 +26,7 @@ ch: Chamorro
 co: Corsican
 cr: Cree
 cs: Czech
-cu: Old Church Slavonic
+cu: Church Slavic
 cv: Chuvash
 cy: Welsh
 da: Danish
@@ -41,12 +41,12 @@ es: Spanish
 et: Estonian
 eu: Basque
 fa: Persian
-ff: Fulah
+ff: Fula
 fi: Finnish
 fj: Fijian
 fo: Faroese
 fr: French
-fy: Western Frisian
+fy: Frisian
 ga: Irish
 gd: Scottish Gaelic
 gl: Galician
@@ -58,15 +58,15 @@ he: Hebrew
 hi: Hindi
 ho: Hiri Motu
 hr: Croatian
-ht: Haitian Creole
+ht: Haitian French Creole
 hu: Hungarian
 hy: Armenian
 hz: Herero
-ia: Interlingua
+ia: Interlingua (International Auxiliary Language Association)
 id: Indonesian
 ie: Interlingue
 ig: Igbo
-ii: Nuosu
+ii: Sichuan Yi
 ik: Inupiaq
 io: Ido
 is: Icelandic
@@ -90,9 +90,9 @@ kv: Komi
 kw: Cornish
 ky: Kyrgyz
 la: Latin
-lb: Luxembourgish
+lb: Letzeburgesch
 lg: Ganda
-li: imburgish
+li: Limburgish
 ln: Lingala
 lo: Lao
 lt: Lithuanian
@@ -109,17 +109,17 @@ ms: Malay
 mt: Maltese
 my: Burmese
 na: Nauru
-nb: Norwegian Bokmål
-nd: North Ndebele
+nb: Norwegian (Bokmål)
+nd: Ndebele (Zimbabwe)
 ne: Nepali
 ng: Ndonga
 nl: Dutch
-nn: Norwegian Nynorsk
+nn: Norwegian (Nynorsk)
 no: Norwegian
-nr: South Ndebele
+nr: Ndebele (South Africa)
 nv: Navajo
 ny: Chichewa
-oc: Occitan
+oc: Occitan (post-1500)
 oj: Ojibwa
 om: Oromo
 or: Oriya
@@ -149,7 +149,7 @@ so: Somali
 sq: Albanian
 sr: Serbian
 ss: Swati
-st: Southern Sotho
+st: Sotho
 su: Sundanese
 sv: Swedish
 sw: Swahili
@@ -173,7 +173,7 @@ ur: Urdu
 uz: Uzbek
 ve: Venda
 vi: Vietnamese
-vo: Volapük
+vo: Volapuk
 wa: Walloon
 wo: Wolof
 xh: Xhosa
