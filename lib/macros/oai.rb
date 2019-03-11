@@ -18,8 +18,8 @@ module Macros
     #   extract_oai('dc:language') => lambda { ... }
     # @param [String] xpath the xpath query expression
     # @return [Proc] a proc that traject can call for each record
-    def extract_oai(xpath, options = {})
-      extract_xml("#{PREFIX}#{xpath}", NS, options)
+    def extract_oai(xpath)
+      extract_xpath("#{PREFIX}#{xpath}", ns: NS)
     end
 
     # Extracts values for the OAI identifier

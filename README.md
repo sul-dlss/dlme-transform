@@ -127,6 +127,6 @@ For the `cho_language` and `cho_edm_type` fields, setting a default of `NOT FOUN
 unmapped language is encountered. For example:
 
 ```
-to_field 'cho_language', extract_xml("#{record}/dc:language", NS), first_only,
+to_field 'cho_language', extract_xpath("#{record}/dc:language", ns: NS), first_only,
          strip, translation_map('not_found', 'marc_languages')
 ```
