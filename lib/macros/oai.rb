@@ -21,5 +21,13 @@ module Macros
     def extract_oai(xpath, options = {})
       extract_xml("#{PREFIX}#{xpath}", NS, options)
     end
+
+    # Extracts values for the OAI identifier
+    # @example
+    #   extract_oai_identifier => lambda { ... }
+    # @return [Proc] a proc that traject can call for each record
+    def extract_oai_identifier
+      extract_xpath('/oai:record/oai:header/oai:identifier', ns: NS)
+    end
   end
 end
