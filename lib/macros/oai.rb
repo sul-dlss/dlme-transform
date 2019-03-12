@@ -13,13 +13,17 @@ module Macros
     PREFIX = '/oai:record/oai:metadata/oai_dc:dc/'
     private_constant :PREFIX
 
+    def self.extended(mod)
+      mod.extend Traject::Macros::NokogiriMacros
+    end
+
     # Extracts values for the given xpath which is prefixed with oai and oai_dc wrappers
     # @example
     #   extract_oai('dc:language') => lambda { ... }
     # @param [String] xpath the xpath query expression
     # @return [Proc] a proc that traject can call for each record
-    def extract_oai(xpath, options = {})
-      extract_xml("#{PREFIX}#{xpath}", NS, options)
+    def extract_oai(xpath)
+      extract_xpath("#{PREFIX}#{xpath}", ns: NS)
     end
 
     # Extracts values for the OAI identifier
