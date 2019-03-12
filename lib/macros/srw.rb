@@ -12,13 +12,43 @@ module Macros
     PREFIX = 'srw:record/srw:recordData/oai_dc:dc/'
     private_constant :PREFIX
 
+    EXTRA_PREFIX = 'srw:record/srw:extraRecordData/'
+    private_constant :EXTRA_PREFIX
+
     # Extracts values for the given xpath which is prefixed with srw and oai wrappers
     # @param [String] xpath the xpath query expression
     # @return [Proc] a proc that traject can call for each record
     # @example
-    #   extract_oai('dc:language') => lambda { ... }
+    #   extract_srw('dc:language') => lambda { ... }
     def extract_srw(xpath, options = {})
       extract_xml("#{PREFIX}#{xpath}", NS, options)
+    end
+
+    # Extracts thumnail from the srw:extraRecordData
+    # @return [Proc] a proc that traject can call for each record
+    # @example
+    #   extract_thumbnail() => lambda { ... }
+    def extract_thumbnail
+      extract_extra('thumbnail')
+    end
+
+    # Extracts a link from the srw:extraRecordData
+    # @return [Proc] a proc that traject can call for each record
+    # @example
+    #   extract_link() => lambda { ... }
+    def extract_link
+      extract_extra('link')
+    end
+
+    private
+
+    # Extracts values from the srw:extraRecordData
+    # @param [String] xpath the xpath query expression
+    # @return [Proc] a proc that traject can call for each record
+    # @example
+    #   extract_extra('thumbnail') => lambda { ... }
+    def extract_extra(field)
+      extract_xml("#{EXTRA_PREFIX}#{field}", NS)
     end
   end
 end
