@@ -7,7 +7,7 @@ gem 'activesupport', '~> 5.2'
 gem 'dry-validation'
 gem 'faraday'
 gem 'thor', '~> 0.20'
-gem 'traject_plus', '~> 1.0'
+gem 'traject_plus', '~> 1.1'
 
 group :test do
   gem 'byebug'
