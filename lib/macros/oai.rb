@@ -33,5 +33,9 @@ module Macros
     def extract_oai_identifier
       extract_xpath('/oai:record/oai:header/oai:identifier', ns: NS)
     end
+
+    def extract_link
+      extract_xpath('/oai:record/oai:metadata/oai_dc:dc/dc:identifier[2]')
+    end
   end
 end
