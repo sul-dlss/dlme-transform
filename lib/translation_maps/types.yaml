@@ -13,6 +13,7 @@ manuscript: text
 map: image
 mixed material: text
 moving image: video
+moving images: video
 multimedia: [sound, video]
 notated music: text
 software: interactive resource
