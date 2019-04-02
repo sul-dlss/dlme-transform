@@ -1,88 +1,38 @@
 # frozen_string_literal: true
 
 module Macros
-  # Macros for extracting MODS values from Nokogiri documents
-  module Mods
-    # Looks up the name from the MODS record
-    # @param [String] role (nil) if provided, find the name for the corresponding role
-    # @param [String] exclude (nil) if provided, exclude these from the results
-    # @return [Proc] a proc that traject can call for each record
-    def extract_name(role: nil, exclude: nil)
-      clause = if role
-                 Array(role).map { |r| "text() = '#{r}'" }.join(' or ')
-               elsif exclude
-                 Array(exclude).map { |r| "text() != '#{r}'" }.join(' and ')
-               else
-                 raise ArgumentError, 'You must provide either role or exclude parameters'
-               end
-      extract_mods("/*/mods:name[mods:role/mods:roleTerm/#{clause}]/mods:namePart")
+  # Macros for extracting OAI values from Nokogiri documents
+  module MODS
+    NS = {
+      oai: 'http://www.openarchives.org/OAI/2.0/',
+      mods: 'http://www.loc.gov/mods/v3'
+    }.freeze
+    private_constant :NS
+
+    PREFIX = '/oai:record/oai:metadata/mods:mods/'
+    # PREFIX = '/oai:record/oai:metadata/oai_dc:dc/'
+    private_constant :PREFIX
+
+    def self.extended(mod)
+      mod.extend Traject::Macros::NokogiriMacros
     end
 
-    # Gets the identifier from the MODS xml or a default value
-    # @return [Proc] a proc that traject can call for each record
-    def generate_mods_id
-      lambda { |record, accumulator, context|
-        identifier = select_identifier(record, context)
-
-        accumulator << identifier_with_prefix(context, identifier) if identifier.present?
-      }
-    end
-
-    # Grab the identifier from the MODS XML, or if one cannot be found, from the default.
-    # @param [Nokogiri::Document] record the MODS xml
-    # @param [Traject::Indexer::Context] context
-    # @return [String] the identifier
-    def select_identifier(record, context)
-      if record.xpath('/*/mods:identifier', TrajectPlus::Macros::Mods::NS).map(&:text).reject(&:blank?).any?
-        record.xpath('/*/mods:identifier', TrajectPlus::Macros::Mods::NS).map(&:text).reject(&:blank?).first
-      else
-        default_identifier(context)
-      end
-    end
-
-    # Grabs the relation URL and title for the given xpath
-    # @param [String] xpath an xpath expression for the relation
-    # @return [Proc] a proc that traject can call for each record
+    # Extracts values for the given xpath which is prefixed with oai and oai_dc wrappers
     # @example
-    #    generate_relation('/*/mods:relatedItem[@type="constituent"]')
-    def generate_relation(xpath)
-      lambda do |record, accumulator|
-        url = record.xpath("#{xpath}/mods:location/mods:url", TrajectPlus::Macros::Mods::NS).map(&:text)
-        title = record.xpath("#{xpath}/mods:titleInfo/mods:title", TrajectPlus::Macros::Mods::NS).map(&:text)
-
-        if url.present?
-          accumulator.concat(url)
-        elsif title.present?
-          accumulator.concat(title)
-        end
-      end
+    #   extract_oai('dc:language') => lambda { ... }
+    # @param [String] xpath the xpath query expression
+    # @return [Proc] a proc that traject can call for each record
+    def extract_mods(xpath)
+      extract_xpath("#{PREFIX}#{xpath}", ns: NS)
     end
 
-    # Looks up the type from the MODS document and normalizes it using the ++lib/translation_maps/types.yaml++ table
+    # Extracts values for the OAI identifier
+    # @example
+    #   extract_oai_identifier => lambda { ... }
     # @return [Proc] a proc that traject can call for each record
-    def normalize_type
-      extract_mods('/*/mods:typeOfResource', translation_map: 'types')
-    end
-
-    # Looks up the language from the MODS document and normalizes it using the
-    # ++lib/translation_maps/marc_languages.yaml++ table
-    # @return [Proc] a proc that traject can call for each record
-    def normalize_language
-      mods_lang_label_xp = '/*/mods:language/mods:languageTerm[@authority="iso639-2b"][@type="text"]'
-      mods_lang_code_xp = '/*/mods:language/mods:languageTerm[@authority="iso639-2b"][@type="code"]'
-      mods_lang_xp = '/*/mods:language/mods:languageTerm'
-      first(
-        extract_mods(mods_lang_label_xp),
-        extract_mods(mods_lang_code_xp, translation_map: ['marc_languages']),
-        # the last one is separate to eventually pass fuzzy matching parameters
-        extract_mods(mods_lang_xp, translation_map: ['marc_languages', default: '__passthrough__'])
-      )
-    end
-
-    # Looks up the script from the MODS document and normalizes it using the ++lib/translation_maps/scripts.yaml++ table
-    # @return [Proc] a proc that traject can call for each record
-    def normalize_script
-      extract_mods('/*/mods:language/mods:scriptTerm', translation_map: ['scripts', default: '__passthrough__'])
+    def extract_mods_identifier
+      extract_xpath('/oai:record/oai:header/oai:identifier', ns: NS)
+      # extract_xpath('/oai:record/oai:header/oai:identifier', ns: NS)
     end
   end
 end
