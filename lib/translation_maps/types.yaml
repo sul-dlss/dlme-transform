@@ -1,71 +1,32 @@
 # Basic mapping from common regex patterns to MODS, MARC, EDM, DCMI type terms.
 3d: 3d
-artifact: image
-audio: sound
-brochure: image
-cartographic: image
-collection: collection
-dataset: dataset
-digital data: dataset
-image: image
-interactive resource: interactive resource
-manuscript: text
-map: image
-mixed material: text
-moving image: video
-moving images: video
-multimedia: [sound, video]
-notated music: text
-software: interactive resource
-software, multimedia: interactive resource
-poster: image
-sound: sound
-sound recording: sound
-sound recording-musical: sound
-sound recording-nonmusical: sound
-still image: image
-stillimage: image
-tactile: image
-text: text
-three dimensional object: image
-vector digital data: dataset
-video: video
-# MARC types
-a: text
-c: text
-d: text
-e: image
-f: image
-g: image
-i: sound
-j: sound
-k: image
-m: interactive resource
-p: text
-r: image
-t: text
-# Turkish language types
-baskı: text
-belge: text
-broşür: text
-davetiye: image
-desen: image
-dijital fotoğraf: image
-elyazma kitap: text
-fotoğraf: image
-gotoğraf: image
-gazete küpürü: text
-gravür: image
-hat: text
-karikatür: image
-kartpostal: image
-kitap bölümü: text
-kumaş: image
-köşe yazısı: text
-makale: text
-mektup: text
-metin: text
-resim: image
-yazı: text
-yazı malzemeleri: text
-yazışma: text
+artifact: Image
+audio: Sound
+brochure: Image
+cartographic: Image
+collection: Collection
+dataset: Dataset
+digital data: Dataset
+image: Image
+interactive Resource: Interactive Resource
+manuscript: Text
+map: Image
+mixed material: Text
+moving Image: Video
+moving Images: Video
+multimedia: [Sound, Video]
+notated music: Text
+software: Interactive Resource
+software, multimedia: Interactive Resource
+poster: Image
+sound: Sound
+sound recording: Sound
+sound recording-musical: Sound
+sound recording-nonmusical: Sound
+still Image: Image
+stillImage: Image
+tactile: Image
+text: Text
+three dimensional object: Image
+vector digital data: Dataset
+video: Video

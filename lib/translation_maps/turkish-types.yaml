@@ -1,0 +1,25 @@
+# Turkish language types
+baskı: Text
+belge: Text
+broşür: Text
+davetiye: Image
+desen: Image
+dijital fotoğraf: Image
+elyazma kitap: Text
+fotoğraf: Image
+gotoğraf: Image
+gazete küpürü: Text
+gravür: Image
+hat: Text
+karikatür: Image
+kartpostal: Image
+kitap bölümü: Text
+kumaş: Image
+köşe yazısı: Text
+makale: Text
+mektup: Text
+metin: Text
+resim: Image
+yazı: Text
+yazı malzemeleri: Text
+yazışma: Text
