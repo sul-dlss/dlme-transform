@@ -1,0 +1,14 @@
+# MARC types
+a: Text
+c: Text
+d: Text
+e: Image
+f: Image
+g: Image
+i: Sound
+j: Sound
+k: Image
+m: Interactive Resource
+p: Text
+r: Image
+t: Text
