@@ -4,11 +4,11 @@ artifact: Image
 audio: Sound
 brochure: Image
 cartographic: Image
-Collection: Collection
-Dataset: Dataset
+collection: Collection
+dataset: Dataset
 digital data: Dataset
-Image: Image
-Interactive Resource: Interactive Resource
+image: Image
+interactive Resource: Interactive Resource
 manuscript: Text
 map: Image
 mixed material: Text
@@ -19,53 +19,14 @@ notated music: Text
 software: Interactive Resource
 software, multimedia: Interactive Resource
 poster: Image
-Sound: Sound
-Sound recording: Sound
-Sound recording-musical: Sound
-Sound recording-nonmusical: Sound
+sound: Sound
+sound recording: Sound
+sound recording-musical: Sound
+sound recording-nonmusical: Sound
 still Image: Image
 stillImage: Image
 tactile: Image
-Text: Text
+text: Text
 three dimensional object: Image
 vector digital data: Dataset
-Video: Video
-# MARC types
-a: Text
-c: Text
-d: Text
-e: Image
-f: Image
-g: Image
-i: Sound
-j: Sound
-k: Image
-m: Interactive Resource
-p: Text
-r: Image
-t: Text
-# Turkish language types
-baskı: Text
-belge: Text
-broşür: Text
-davetiye: Image
-desen: Image
-dijital fotoğraf: Image
-elyazma kitap: Text
-fotoğraf: Image
-gotoğraf: Image
-gazete küpürü: Text
-gravür: Image
-hat: Text
-karikatür: Image
-kartpostal: Image
-kitap bölümü: Text
-kumaş: Image
-köşe yazısı: Text
-makale: Text
-mektup: Text
-metin: Text
-resim: Image
-yazı: Text
-yazı malzemeleri: Text
-yazışma: Text
+video: Video
