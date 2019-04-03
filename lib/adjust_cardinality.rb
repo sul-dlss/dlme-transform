@@ -33,13 +33,23 @@ class AdjustCardinality
   end
 
   def flatten_web_resources(attributes)
-    flatten = %w[agg_is_shown_at agg_is_shown_by agg_preview]
+    flatten = %w[agg_is_shown_at agg_is_shown_by agg_preview agg_has_view]
     attributes.except(*flatten).tap do |output|
       flatten.each do |field|
-        next unless attributes.key?(field)
+        value = attributes[field]
+        next unless value
 
-        output[field] = process_web_resource(attributes.fetch(field))
+        output[field] = flatten_web_resource(value)
       end
+    end
+  end
+
+  def flatten_web_resource(web_resource)
+    # For handling agg_has_view, which is an array.
+    if web_resource.is_a?(Array)
+      web_resource.map { |wr| process_web_resource(wr) }
+    else
+      process_web_resource(web_resource)
     end
   end
 
