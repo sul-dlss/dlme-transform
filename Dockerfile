@@ -13,6 +13,7 @@ RUN apk add --no-cache \
     libxml2-dev \
     libxslt-dev \
     jq \
+    util-linux \
     && apk add --no-cache --virtual build-dependencies \
       build-base \
     && apk add --no-cache --virtual python-dependencies \
