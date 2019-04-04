@@ -19,10 +19,10 @@ if [ $SKIP_FETCH_DATA != "true" ]; then
   rm master.zip
 fi
 
-TIMESTAMP=$(date +%Y%m%d%H%M%S)
-OUTPUT_FILENAME="output-$TIMESTAMP.ndjson"
+UUID=$(uuidgen)
+OUTPUT_FILENAME="output-$UUID.ndjson"
 OUTPUT_FILEPATH="output/$OUTPUT_FILENAME"
-SUMMARY_FILEPATH="output/summary-$TIMESTAMP.json"
+SUMMARY_FILEPATH="output/summary-$UUID.json"
 
 set +e
 exe/transform --summary-filepath $SUMMARY_FILEPATH --data-dir $@ | tee $OUTPUT_FILEPATH
