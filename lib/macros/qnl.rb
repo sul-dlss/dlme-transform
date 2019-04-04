@@ -10,7 +10,6 @@ module Macros
     private_constant :NS
 
     PREFIX = '/oai:record/oai:metadata/mods:mods/'
-    # PREFIX = '/oai:record/oai:metadata/oai_dc:dc/'
     private_constant :PREFIX
 
     def self.extended(mod)
