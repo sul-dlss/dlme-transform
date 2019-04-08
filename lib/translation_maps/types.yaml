@@ -12,8 +12,8 @@ interactive Resource: Interactive Resource
 manuscript: Text
 map: Image
 mixed material: Text
-moving Image: Video
-moving Images: Video
+moving image: Video
+moving images: Video
 multimedia: [Sound, Video]
 notated music: Text
 software: Interactive Resource
@@ -23,8 +23,8 @@ sound: Sound
 sound recording: Sound
 sound recording-musical: Sound
 sound recording-nonmusical: Sound
-still Image: Image
-stillImage: Image
+still image: Image
+stillimage: Image
 tactile: Image
 text: Text
 three dimensional object: Image
