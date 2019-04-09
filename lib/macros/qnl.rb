@@ -18,18 +18,18 @@ module Macros
 
     # Extracts values for the given xpath which is prefixed with oai and mods wrappers
     # @example
-    #   extract_mods('mods:language') => lambda { ... }
+    #   extract_qnl('mods:language') => lambda { ... }
     # @param [String] xpath the xpath query expression
     # @return [Proc] a proc that traject can call for each record
-    def extract_mods(xpath)
+    def extract_qnl(xpath)
       extract_xpath("#{PREFIX}#{xpath}", ns: NS)
     end
 
     # Extracts values for the MODS identifier
     # @example
-    #   extract_mods_identifier => lambda { ... }
+    #   extract_qnl_identifier => lambda { ... }
     # @return [Proc] a proc that traject can call for each record
-    def extract_mods_identifier
+    def extract_qnl_identifier
       extract_xpath('/oai:record/oai:header/oai:identifier', ns: NS)
     end
   end
