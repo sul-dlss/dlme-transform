@@ -92,11 +92,11 @@ cop: Coptic
 cor: Cornish
 cos: Corsican
 cpe: Creoles and pidgins, English based
-cpf: Creoles and pidgins, French-based 
-cpp: Creoles and pidgins, Portuguese-based 
+cpf: Creoles and pidgins, French-based
+cpp: Creoles and pidgins, Portuguese-based
 cre: Cree
 crh: Crimean Tatar; Crimean Turkish
-crp: Creoles and pidgins 
+crp: Creoles and pidgins
 csb: Kashubian
 cus: Cushitic languages
 cze: Czech
@@ -129,6 +129,7 @@ ewe: Ewe
 ewo: Ewondo
 fan: Fang
 fao: Faroese
+fas: Persian
 fat: Fanti
 fij: Fijian
 fil: Filipino; Pilipino
