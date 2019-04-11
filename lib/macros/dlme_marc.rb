@@ -27,7 +27,7 @@ module Macros
     def marc_type_to_edm
       lambda { |record, accumulator, _context|
         leader06 = record.leader.byteslice(6)
-        edm_types = TrajectPlus::Extraction.apply_extraction_options(leader06, translation_map: 'types')
+        edm_types = TrajectPlus::Extraction.apply_extraction_options(leader06, translation_map: 'marc-types')
         accumulator.concat(edm_types)
       }
     end
