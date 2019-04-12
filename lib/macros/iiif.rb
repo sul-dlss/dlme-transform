@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'dlme_utils'
 
 module Macros
@@ -8,11 +9,9 @@ module Macros
     # @param [String] manifest the url to a IIIF manifest
     # @return [Hash] the data from the remote IIIF manifest
     def grab_iiif_manifest(manifest)
-      begin
-        ::DLME::Utils.fetch_json(manifest)
-      rescue StandardError => e
-        puts "IIIF Manifest not found: #{e}"
-      end
+      ::DLME::Utils.fetch_json(manifest)
+    rescue StandardError => e
+      puts "IIIF Manifest not found: #{e}"
     end
 
     # Retrieve the thumbnail from the IIIF manifest document
