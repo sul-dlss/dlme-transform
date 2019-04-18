@@ -10,8 +10,9 @@ module Macros
     # @return [Hash] the data from the remote IIIF manifest
     def grab_iiif_manifest(manifest)
       ::DLME::Utils.fetch_json(manifest)
-    rescue StandardError => e
-      puts "IIIF Manifest not found: #{e}"
+    rescue StandardError
+      # ::DLME::Utils.logger.error "IIIF Manifest not found: #{e}"
+      []
     end
 
     # Retrieve the thumbnail from the IIIF manifest document
