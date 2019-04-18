@@ -10,7 +10,7 @@ module Macros
     # @return [Hash] the data from the remote IIIF manifest
     def grab_iiif_manifest(manifest)
       ::DLME::Utils.fetch_json(manifest)
-    rescue StandardError
+    rescue StandardError => e
       ::DLME::Utils.logger.error "IIIF Manifest not found: #{e}"
       []
     end
