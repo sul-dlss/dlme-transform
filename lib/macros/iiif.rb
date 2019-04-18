@@ -11,7 +11,8 @@ module Macros
     def grab_iiif_manifest(manifest)
       ::DLME::Utils.fetch_json(manifest)
     rescue StandardError => e
-      puts "IIIF Manifest not found: #{e}"
+      ::DLME::Utils.logger.error "IIIF Manifest not found: #{e}"
+      []
     end
 
     # Retrieve the thumbnail from the IIIF manifest document
