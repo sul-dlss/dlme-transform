@@ -47,14 +47,18 @@ module Macros
       end
     end
 
-    # @return [String] an xpath for a web image
-    def penn_web_image_query
-      penn_image_query(3)
-    end
-
     # @return [String] an xpath for a thumbnail image
-    def penn_thumbnail_image_query
-      penn_image_query(2)
+    def penn_thumbnail
+      lambda do |record, accumulator|
+        id = record.xpath('/*/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc'\
+                          "/tei:msIdentifier/tei:idno[@type='call-number']", TrajectPlus::Macros::Tei::NS)
+                   .map(&:text)
+                   .first
+                   .gsub('LJS ', '')
+        accumulator << 'https://repo.library.upenn.edu/djatoka/resolver?url_ver=Z39.88-2004&svc_id=info:lanl'\
+                       '-repo/svc/getRegion&svc_val_fmt=info:ofi/fmt:kev:mtx:jpeg2000&svc.format=image/jpeg&rft_id='\
+                       "medren_ljs#{id}_wk1_front0001&svc.level=2&svc.rotate=0"
+      end
     end
 
     # Sets a url for the given query
@@ -73,10 +77,6 @@ module Macros
 
     def penn_uri(id, path)
       "http://openn.library.upenn.edu/Data/0001/#{id}/data/#{path}"
-    end
-
-    def penn_image_query(idx)
-      "/*/tei:facsimile/tei:surface[1]/tei:graphic[#{idx}]/@url"
     end
   end
 end
