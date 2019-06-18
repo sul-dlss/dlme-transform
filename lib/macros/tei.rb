@@ -57,7 +57,7 @@ module Macros
                    .gsub('LJS ', '')
         accumulator << 'https://repo.library.upenn.edu/djatoka/resolver?url_ver=Z39.88-2004&svc_id=info:lanl'\
                        '-repo/svc/getRegion&svc_val_fmt=info:ofi/fmt:kev:mtx:jpeg2000&svc.format=image/jpeg&rft_id='\
-                       "medren_ljs#{id}_wk1_front0001&svc.level=2&svc.rotate=0"
+                       "medren_ljs#{id}_wk1_body0001&svc.level=2&svc.rotate=0"
       end
     end
 
