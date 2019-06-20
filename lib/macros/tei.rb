@@ -60,13 +60,11 @@ module Macros
     # @return [String] an xpath for a thumbnail image
     def penn_thumbnail
       lambda do |record, accumulator|
-        thumb_xpath = record.xpath("/*/tei:facsimile/tei:surface[@n='2r']/tei:graphic[2]/@url", NS).map(&:text).first
+        thumb_xpath = record.xpath("/*/tei:facsimile/tei:surface[@n='2r']/tei:graphic[2]/@url", NS).map(&:text)
+                            .first
         ending = "/data/#{thumb_xpath}"
         accumulator << record.xpath('/*/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc'\
-                          "/tei:msIdentifier/tei:altIdentifier[@type='openn-url']/tei:idno", NS)
-                             .map(&:text)
-                             .first
-                             .gsub('/html', '')
+          "/tei:msIdentifier/tei:altIdentifier[@type='openn-url']/tei:idno", NS).map(&:text).first.gsub('/html', '')
                              .gsub('.html', ending)
       end
     end
