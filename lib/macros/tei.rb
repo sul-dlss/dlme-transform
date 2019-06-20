@@ -3,6 +3,16 @@
 module Macros
   # Macros for extracting TEI values from Nokogiri documents
   module Tei
+    NS = {
+      tei: 'http://www.tei-c.org/ns/1.0',
+      py: 'http://codespeak.net/lxml/objectify/pytype'
+    }.freeze
+    private_constant :NS
+
+    def self.extended(mod)
+      mod.extend Traject::Macros::NokogiriMacros
+    end
+
     # Returns the data provider value from the repository and institution values in the TEI XML.
     # @return [Proc] a proc that traject can call for each record
     def generate_data_provider(xpath)
@@ -50,14 +60,14 @@ module Macros
     # @return [String] an xpath for a thumbnail image
     def penn_thumbnail
       lambda do |record, accumulator|
-        id = record.xpath('/*/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc'\
-                          "/tei:msIdentifier/tei:idno[@type='call-number']", TrajectPlus::Macros::Tei::NS)
-                   .map(&:text)
-                   .first
-                   .gsub('LJS ', '')
-        accumulator << 'https://repo.library.upenn.edu/djatoka/resolver?url_ver=Z39.88-2004&svc_id=info:lanl'\
-                       '-repo/svc/getRegion&svc_val_fmt=info:ofi/fmt:kev:mtx:jpeg2000&svc.format=image/jpeg&rft_id='\
-                       "medren_ljs#{id}_wk1_body0001&svc.level=2&svc.rotate=0"
+        thumb_xpath = record.xpath("/*/tei:facsimile/tei:surface[@n='2r']/tei:graphic[2]/@url", NS).map(&:text).first
+        ending = "/data/#{thumb_xpath}"
+        accumulator << record.xpath('/*/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc'\
+                          "/tei:msIdentifier/tei:altIdentifier[@type='openn-url']/tei:idno", NS)
+                             .map(&:text)
+                             .first
+                             .gsub('/html', '')
+                             .gsub('.html', ending)
       end
     end
 
