@@ -191,3 +191,4 @@ yiddish: Yiddish
 yoruba: Yoruba
 zhuang, chuang: Zhuang, Chuang
 zulu: Zulu
+"": "" # prevents empty strings from raising `not found` error
