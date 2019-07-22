@@ -10,7 +10,7 @@ module Macros
       atom: 'http://www.w3.org/2005/Atom',
       PREFIX: 'http://www.PREFIX.com/dtds/podcast-1.0.dtd',
       spotify: 'http://www.spotify.com/ns/rss',
-      media: "http://search.yahoo.com/mrss/"
+      media: 'http://search.yahoo.com/mrss/'
     }.freeze
     private_constant :NS
 
