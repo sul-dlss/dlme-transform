@@ -8,13 +8,14 @@ module Macros
       wfw: 'http://wellformedweb.org/CommentAPI/',
       dc: 'http://purl.org/dc/elements/1.1/',
       atom: 'http://www.w3.org/2005/Atom',
-      itunes: 'http://www.itunes.com/dtds/podcast-1.0.dtd',
-      spotify: 'http://www.spotify.com/ns/rss'
+      PREFIX: 'http://www.PREFIX.com/dtds/podcast-1.0.dtd',
+      spotify: 'http://www.spotify.com/ns/rss',
+      media: "http://search.yahoo.com/mrss/"
     }.freeze
     private_constant :NS
 
-    ITUNES = 'item/itunes:'
-    private_constant :ITUNES
+    # ITUNES = 'item/PREFIX:'
+    # private_constant :PREFIX
 
     PREFIX = 'item/'
     private_constant :PREFIX
@@ -32,21 +33,12 @@ module Macros
       extract_xpath("#{PREFIX}#{xpath}", ns: NS)
     end
 
-    # Extracts values for the given xpath which and prefixes them with itunes namespace
-    # @example
-    #   extract_itunes('author') => lambda { ... }
-    # @param [String] xpath the xpath query expression
-    # @return [Proc] a proc that traject can call for each record
-    def extract_itunes(xpath)
-      extract_xpath("#{ITUNES}#{xpath}", ns: NS)
-    end
-
     # Extracts thumbnail values
     # @example
     #   extract_thumbnail => lambda { ... }
     # @return [Proc] a proc that traject can call for each record
     def extract_thumbnail
-      extract_xpath("#{ITUNES}image/@href", to_text: false, ns: NS)
+      extract_xpath("#{PREFIX}media:content/@url", to_text: false, ns: NS)
     end
   end
 end
