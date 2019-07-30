@@ -14,9 +14,6 @@ module Macros
     }.freeze
     private_constant :NS
 
-    # ITUNES = 'item/PREFIX:'
-    # private_constant :PREFIX
-
     PREFIX = 'item/'
     private_constant :PREFIX
 
