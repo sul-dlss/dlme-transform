@@ -7,6 +7,7 @@ albanian: Albanian
 amharic: Amharic
 arabic: Arabic
 aragonese: Aragonese
+aramaic: Aramaic
 armenian: Armenian
 assamese: Assamese
 avaric: Avaric
@@ -32,6 +33,7 @@ chewa: Chewa
 chichewa: Chichewa
 chinese: Chinese
 chuvash: Chuvash
+classical armenian: Armenian
 coptic: Coptic
 cornish: Cornish
 corsican: Corsican
@@ -79,9 +81,13 @@ italian: Italian
 inuktitut: Inuktitut
 japanese: Japanese
 javanese: Javanese
-judeo arabic: Judeo-Arabic
+judaeo arabic: Judeo-Arabic
 judaeo-arabic: Judeo-Arabic
 judeo-arabic: Judeo-Arabic
+judaeo-italian: Judeo-Italian
+judaeo-persian: Judeo-Persian
+judaeo-portuguese: Judeo-Portuguese
+judaeo-spanish: Judeo-Spanish
 kannada: Kannada
 kanuri: Kanuri
 kashmiri: Kashmiri
