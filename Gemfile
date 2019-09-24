@@ -11,6 +11,7 @@ gem 'traject_plus', '~> 1.1'
 
 group :test do
   gem 'byebug'
+  gem 'pry-byebug'
   gem 'rspec'
   gem 'rspec_junit_formatter'
   gem 'rubocop', '~> 0.64.0'
