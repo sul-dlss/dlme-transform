@@ -1,6 +1,7 @@
 # dlme-transform
-[![](https://images.microbadger.com/badges/image/suldlss/dlme-transform.svg)](https://microbadger.com/images/suldlss/dlme-transform "Get your own image badge on microbadger.com")
-[![](https://images.microbadger.com/badges/commit/suldlss/dlme-transform.svg)](http://microbadger.com/images/suldlss/dlme-transform "Get your own commit badge on microbadger.com")
+[![CircleCI](https://circleci.com/gh/sul-dlss/dlme-transform.svg?style=svg)](https://circleci.com/gh/sul-dlss/dlme-transform "continuous integration status")
+[![Docker Container](https://images.microbadger.com/badges/image/suldlss/dlme-transform.svg)](https://microbadger.com/images/suldlss/dlme-transform "docker container image")
+[![Latest Commit](https://images.microbadger.com/badges/commit/suldlss/dlme-transform.svg)](http://microbadger.com/images/suldlss/dlme-transform "latest commit")
 
 Transforms raw DLME metadata from https://github.com/sul-dlss/dlme-metadata and uses transformations in https://github.com/sul-dlss/dlme-traject to create [DLME intermediate representation](https://github.com/sul-dlss/dlme/blob/master/docs/application_profile.md) documents in S3.
 
