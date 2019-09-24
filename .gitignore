@@ -8,5 +8,4 @@
 # Rspec files:
 spec/examples.txt
 
-# YARD docs
-.yardoc
+coverage
