@@ -8,4 +8,5 @@
 # Rspec files:
 spec/examples.txt
 
+.pry_history
 coverage
