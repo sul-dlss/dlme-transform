@@ -140,7 +140,7 @@ GEM
       nokogiri (~> 1.9)
       slop (>= 3.4.5, < 4.0)
       yell
-    traject_plus (1.2.0)
+    traject_plus (1.1.1)
       activesupport
       deprecation
       jsonpath
@@ -168,7 +168,7 @@ DEPENDENCIES
   rubocop-rspec (~> 1.21.0)
   simplecov
   thor (~> 0.20)
-  traject_plus (~> 1.1)
+  traject_plus (~> 1.1.0)
 
 BUNDLED WITH
    2.0.2
