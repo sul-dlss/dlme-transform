@@ -15,4 +15,5 @@ group :test do
   gem 'rspec_junit_formatter'
   gem 'rubocop', '~> 0.64.0'
   gem 'rubocop-rspec', '~> 1.21.0'
+  gem 'simplecov'
 end

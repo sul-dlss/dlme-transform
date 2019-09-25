@@ -17,7 +17,6 @@ jobs:
         name: Install Bundler
         command: gem install bundler
 
-    # Which version of bundler?
     - run:
         name: Which bundler?
         command: bundle -v
@@ -42,19 +41,21 @@ jobs:
         name: Check styles using rubocop
         command: bundle exec rubocop
 
-    # Run rspec in parallel
     - run:
-        name: Run rspec in parallel
+        name: Setup Code Climate test-reporter
         command: |
-          bundle exec rspec --profile 10 \
-                            --format RspecJunitFormatter \
-                            --out test_results/rspec.xml \
-                            --format progress \
-                            $(circleci tests glob "spec/**/*_spec.rb" | circleci tests split --split-by=timings)
+          curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+          chmod +x ./cc-test-reporter
+          ./cc-test-reporter before-build
 
-    # Save test results for timing analysis
-    - store_test_results:
-        path: test_results
+    - run:
+        name: Run rspec tests
+        command: bundle exec rspec
+
+    - run:
+        name: Send coverage report to Code Climate
+        command: |
+          ./cc-test-reporter after-build --coverage-input-type simplecov --exit-code $?
 
   build-image:
     executor: docker-publisher

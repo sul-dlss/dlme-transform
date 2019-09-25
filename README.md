@@ -1,5 +1,7 @@
 # dlme-transform
 [![CircleCI](https://circleci.com/gh/sul-dlss/dlme-transform.svg?style=svg)](https://circleci.com/gh/sul-dlss/dlme-transform "continuous integration status")
+[![Maintainability](https://api.codeclimate.com/v1/badges/5c6bcb444addcfdcba8b/maintainability)](https://codeclimate.com/github/sul-dlss/dlme-transform/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/5c6bcb444addcfdcba8b/test_coverage)](https://codeclimate.com/github/sul-dlss/dlme-transform/test_coverage)
 [![Docker Container](https://images.microbadger.com/badges/image/suldlss/dlme-transform.svg)](https://microbadger.com/images/suldlss/dlme-transform "docker container image")
 [![Latest Commit](https://images.microbadger.com/badges/commit/suldlss/dlme-transform.svg)](http://microbadger.com/images/suldlss/dlme-transform "latest commit")
 
