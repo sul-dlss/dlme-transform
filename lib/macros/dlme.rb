@@ -19,6 +19,22 @@ module Macros
       from_settings('agg_data_provider')
     end
 
+    # Returns the provider country as specified in the ++agg_provider_country++ field of ++metadata_mapping.json++
+    # @return [Proc] a proc that traject can call for each record
+    # @example
+    #  provider_country => "France"
+    def provider_country
+      from_settings('agg_provider_country')
+    end
+
+    # Returns data provider country specified in ++agg_data_provider_country++ field of ++metadata_mapping.json++
+    # @return [Proc] a proc that traject can call for each record
+    # @example
+    #  data_provider_country => "France"
+    def data_provider_country
+      from_settings('agg_data_provider_country')
+    end
+
     # Returns the given identifier prefixed with the ++inst_id++  as specified in ++metadata_mapping.json++
     # @param [Traject::Indexer::Context] context
     # @param [String] identifier
