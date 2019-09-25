@@ -29,7 +29,7 @@ RSpec.describe DlmeJsonResourceWriter do
       end
       it 'logs an error' do
         expect { put }.to raise_error(
-          /Transform produced invalid data.\n\nThe errors are: {"cho_title"=>\["is missing"\]/
+          /Transform produced invalid data.\n\nThe errors are: .*"is missing".*/
         )
       end
     end
