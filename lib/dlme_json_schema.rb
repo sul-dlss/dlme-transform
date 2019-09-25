@@ -5,23 +5,22 @@ require 'dry-schema'
 # rubocop:disable Metrics/BlockLength
 
 # See https://github.com/sul-dlss/dlme/blob/master/docs/application_profile.md#svcsservice
-ServicesSchema = Dry::Schema.define do
-  # See https://github.com/sul-dlss/dlme/blob/master/docs/application_profile.md#svcsservice
-  required(:service_id).filled(:str?)
+ServicesSchema = Dry::Schema.JSON do
+  required(:service_id).filled(:string)
   required(:service_conforms_to) { array? { each(:str?) } }
-  optional(:service_implements).filled(:str?)
+  optional(:service_implements).filled(:string)
 end
 
 # See https://github.com/sul-dlss/dlme/blob/master/docs/application_profile.md#edmwebresource
-EDMWebResourceSchema = Dry::Schema.define do
-  required(:wr_id).filled(:str?)
+EDMWebResourceSchema = Dry::Schema.JSON do
+  required(:wr_id).filled(:string)
   optional(:wr_format) { array? { each(:str?) } }
   optional(:wr_has_service).each do
     schema(ServicesSchema)
   end
 end
 
-DlmeJsonSchema = Dry::Schema.define do
+DlmeJsonSchema = Dry::Schema.JSON do
   # See https://github.com/sul-dlss/dlme/blob/master/docs/application_profile.md#edmprovidedcho
   optional(:cho_alternative) { array? { each(:str?) } }
   optional(:cho_contributor) { array? { each(:str?) } }
@@ -51,10 +50,10 @@ DlmeJsonSchema = Dry::Schema.define do
   optional(:cho_type) { array? { each(:str?) } }
 
   # See https://github.com/sul-dlss/dlme/blob/master/docs/application_profile.md#oreaggregation
-  required(:id).filled(:str?)
-  optional('__source'.to_sym).filled(:str?)
+  required(:id).filled(:string)
+  optional('__source'.to_sym).filled(:string)
   # Since the IR is a flattened projection of the MAP, 'agg_aggregated_cho' is not used.
-  required(:agg_data_provider).filled(:str?)
+  required(:agg_data_provider).filled(:string)
   optional(:agg_dc_rights) { array? { each(:str?) } }
   optional(:agg_edm_rights) { array? { each(:str?) } } # At least one is required
 
@@ -66,7 +65,7 @@ DlmeJsonSchema = Dry::Schema.define do
   optional(:agg_is_shown_by).schema(EDMWebResourceSchema) # 0 or 1
   optional(:agg_preview).schema(EDMWebResourceSchema) # 0 or 1
 
-  required(:agg_provider).filled(:str?)
+  required(:agg_provider).filled(:string)
   optional(:agg_same_as) { array? { each(:str?) } } # reference
 end
 # rubocop:enable Metrics/BlockLength
