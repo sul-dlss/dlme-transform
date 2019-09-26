@@ -15,9 +15,7 @@ module Macros
     EXTRA_PREFIX = 'srw:record/srw:extraRecordData/'
     private_constant :EXTRA_PREFIX
 
-    def self.extended(mod)
-      mod.extend Traject::Macros::NokogiriMacros
-    end
+    include Traject::Macros::NokogiriMacros
 
     # Extracts values for the given xpath which is prefixed with srw and oai wrappers
     # @param [String] xpath the xpath query expression

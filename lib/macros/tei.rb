@@ -9,9 +9,7 @@ module Macros
     }.freeze
     private_constant :NS
 
-    def self.extended(mod)
-      mod.extend Traject::Macros::NokogiriMacros
-    end
+    include Traject::Macros::NokogiriMacros
 
     # Returns the data provider value from the repository and institution values in the TEI XML.
     # @return [Proc] a proc that traject can call for each record
