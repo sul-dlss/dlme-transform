@@ -4,7 +4,7 @@ FROM ruby:2.5-alpine3.8
 RUN mkdir -p /opt/traject/output
 WORKDIR /opt/traject
 
-ENV BUNDLER_VERSION 2.0.1
+ENV BUNDLER_VERSION 2.0.2
 
 RUN apk add --no-cache \
     curl \
