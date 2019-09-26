@@ -17,9 +17,7 @@ module Macros
     PREFIX = 'item/'
     private_constant :PREFIX
 
-    def self.extended(mod)
-      mod.extend Traject::Macros::NokogiriMacros
-    end
+    include Traject::Macros::NokogiriMacros
 
     # Extracts values for the given xpath
     # @example

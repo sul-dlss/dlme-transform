@@ -8,9 +8,7 @@ module Macros
     }.freeze
     private_constant :NS
 
-    def self.extended(mod)
-      mod.extend Traject::Macros::NokogiriMacros
-    end
+    include Traject::Macros::NokogiriMacros
 
     # Extracts values for the given xpath which is prefixed with dc wrappers
     # @example

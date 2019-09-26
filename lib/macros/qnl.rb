@@ -12,9 +12,7 @@ module Macros
     PREFIX = '/oai:record/oai:metadata/mods:mods/'
     private_constant :PREFIX
 
-    def self.extended(mod)
-      mod.extend Traject::Macros::NokogiriMacros
-    end
+    include Traject::Macros::NokogiriMacros
 
     # Extracts values for the given xpath which is prefixed with oai and mods wrappers
     # @example
