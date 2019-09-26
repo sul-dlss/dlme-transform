@@ -63,9 +63,9 @@ module Macros
         thumb_xpath = record.xpath("/*/tei:facsimile/tei:surface[@n='2r']/tei:graphic[2]/@url", NS).map(&:text)
                             .first
         ending = "/data/#{thumb_xpath}"
-        accumulator << record.xpath('/*/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc'\
-          "/tei:msIdentifier/tei:altIdentifier[@type='openn-url']/tei:idno", NS).map(&:text).first.gsub('/html', '')
-                             .gsub('.html', ending)
+        url_node_set = record.xpath('/*/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc'\
+                           "/tei:msIdentifier/tei:altIdentifier[@type='openn-url']/tei:idno", NS)
+        accumulator << url_node_set.map(&:text).first.gsub('/html', '').gsub('.html', ending) if url_node_set.present?
       end
     end
 
