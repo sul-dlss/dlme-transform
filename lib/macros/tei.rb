@@ -58,7 +58,7 @@ module Macros
     end
 
     # @return [String] an xpath for a thumbnail image
-    def penn_thumbnail
+    def openn_thumbnail
       lambda do |record, accumulator|
         thumb_xpath = record.xpath("/*/tei:facsimile/tei:surface[@n='2r']/tei:graphic[2]/@url", NS).map(&:text)
                             .first
