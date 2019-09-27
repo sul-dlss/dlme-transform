@@ -28,7 +28,7 @@ DlmeJsonSchema = Dry::Schema.JSON do
   optional(:cho_creator).array(:str?)
   optional(:cho_date).array(:str?)
   optional(:cho_date_hijri).array(:str?)
-  optional(:cho_date_norm).array(:integer) # this is an array of integers specificaly to capture the int representaiton of all years in a range
+  optional(:cho_date_norm).array(:integer) # this is an array of integers to capture the years in a range
   optional(:cho_dc_rights).array(:str?)
   optional(:cho_description).array(:str?)
   optional(:cho_edm_type) { array? { each(:str?, excluded_from?: ['NOT FOUND']) } }
