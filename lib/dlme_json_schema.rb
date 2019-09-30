@@ -54,6 +54,7 @@ DlmeJsonSchema = Dry::Schema.JSON do
   optional('__source'.to_sym).filled(:string)
   # Since the IR is a flattened projection of the MAP, 'agg_aggregated_cho' is not used.
   required(:agg_data_provider).filled(:string)
+  required(:agg_data_provider_country).filled(:string)
   optional(:agg_dc_rights).array(:str?)
   optional(:agg_edm_rights).array(:str?) # At least one is required
 
@@ -66,6 +67,7 @@ DlmeJsonSchema = Dry::Schema.JSON do
   optional(:agg_preview).schema(EDMWebResourceSchema) # 0 or 1
 
   required(:agg_provider).filled(:string)
+  required(:agg_provider_country).filled(:string)
   optional(:agg_same_as).array(:str?) # reference
 end
 # rubocop:enable Metrics/BlockLength
