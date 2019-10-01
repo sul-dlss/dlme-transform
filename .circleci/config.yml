@@ -7,6 +7,8 @@ executors:
     - image: circleci/buildpack-deps:stretch
 jobs:
   test:
+    environment:
+      CC_TEST_REPORTER_ID: 25f90cb6d13d2dabb943971472fab94fe7eeb7595b7b4000296f1959b7ad13c5
     docker:
       - image: circleci/ruby:2.5.3
     steps:
