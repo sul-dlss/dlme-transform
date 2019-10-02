@@ -6,12 +6,17 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 gem 'activesupport', '~> 5.2'
 gem 'dry-schema'
 gem 'faraday'
-gem 'thor', '~> 0.20'
+gem 'stanford-mods' # for date parsing
+gem 'thor', '~> 0.20' # for CLI
+gem 'timetwister' # for date parsing
 gem 'traject_plus', '~> 1.3'
 
-group :test do
+group :development, :test do
   gem 'byebug'
   gem 'pry-byebug'
+end
+
+group :test do
   gem 'rspec'
   gem 'rspec_junit_formatter'
   gem 'rubocop', '~> 0.64.0'

@@ -7,147 +7,150 @@ executors:
     - image: circleci/buildpack-deps:stretch
 jobs:
   test:
+    environment:
+      CC_TEST_REPORTER_ID: 25f90cb6d13d2dabb943971472fab94fe7eeb7595b7b4000296f1959b7ad13c5
     docker:
-    - image: circleci/ruby:2.5.3
+      - image: circleci/ruby:2.5.3
     steps:
-    - checkout
+      - checkout
 
-    # Upgrade bundler
-    - run:
-        name: Install Bundler
-        command: gem install bundler
+      # Upgrade bundler
+      - run:
+          name: Install Bundler
+          command: gem install bundler
 
-    - run:
-        name: Which bundler?
-        command: bundle -v
+      - run:
+          name: Which bundler?
+          command: bundle -v
 
-    # Restore bundle cache
-    - restore_cache:
-        keys:
-        - app-bundle-v2-{{ checksum "Gemfile.lock" }}
-        - app-bundle-v2-
+      # Restore bundle cache
+      - restore_cache:
+          keys:
+          - app-bundle-v2-{{ checksum "Gemfile.lock" }}
+          - app-bundle-v2-
 
-    - run:
-        name: Bundle Install
-        command: bundle check || bundle install
+      - run:
+          name: Bundle Install
+          command: bundle check || bundle install
 
-    # Store bundle cache
-    - save_cache:
-        key: app-bundle-v2-{{ checksum "Gemfile.lock" }}
-        paths:
-        - vendor/bundle
+      # Store bundle cache
+      - save_cache:
+          key: app-bundle-v2-{{ checksum "Gemfile.lock" }}
+          paths:
+          - vendor/bundle
 
-    - run:
-        name: Check styles using rubocop
-        command: bundle exec rubocop
+      - run:
+          name: Check styles using rubocop
+          command: bundle exec rubocop
 
-    - run:
-        name: Setup Code Climate test-reporter
-        command: |
-          curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-          chmod +x ./cc-test-reporter
-          ./cc-test-reporter before-build
+      - run:
+          name: Setup Code Climate test-reporter
+          command: |
+            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+            chmod +x ./cc-test-reporter
+            ./cc-test-reporter before-build
 
-    - run:
-        name: Run rspec tests
-        command: bundle exec rspec
+      - run:
+          name: Run rspec tests
+          command: bundle exec rspec
 
-    - run:
-        name: Send coverage report to Code Climate
-        command: |
-          ./cc-test-reporter after-build --coverage-input-type simplecov --exit-code $?
+      - run:
+          name: Send coverage report to Code Climate
+          command: |
+            ./cc-test-reporter after-build --coverage-input-type simplecov --exit-code $?
 
   build-image:
     executor: docker-publisher
     steps:
-    - checkout
-    - setup_remote_docker
-    - run:
-        name: Build Docker image
-        command: |
-          docker build --build-arg VCS_REF=`git rev-parse --short HEAD` \
-                    --build-arg VCS_URL=`git config --get remote.origin.url` \
-                    --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` \
-                    . -t $IMAGE_NAME:latest
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Build Docker image
+          command: |
+            docker build --build-arg VCS_REF=`git rev-parse --short HEAD` \
+                      --build-arg VCS_URL=`git config --get remote.origin.url` \
+                      --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` \
+                      . -t $IMAGE_NAME:latest
 
-    - run:
-        name: Archive Docker image
-        command: |
-          docker save -o image.tar $IMAGE_NAME
+      - run:
+          name: Archive Docker image
+          command: |
+            docker save -o image.tar $IMAGE_NAME
 
-    - persist_to_workspace:
-        root: .
-        paths:
-        - ./image.tar
+      - persist_to_workspace:
+          root: .
+          paths:
+          - ./image.tar
+
   publish-latest:
     executor: docker-publisher
     steps:
-    - attach_workspace:
-        at: /tmp/workspace
-    - setup_remote_docker
-    - run:
-        name: Load archived Docker image
-        command: |
-          docker load -i /tmp/workspace/image.tar
+      - attach_workspace:
+          at: /tmp/workspace
+      - setup_remote_docker
+      - run:
+          name: Load archived Docker image
+          command: |
+            docker load -i /tmp/workspace/image.tar
 
-    - run:
-        name: Publish Docker Image to Docker Hub
-        command: |
-          echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
-          docker push $IMAGE_NAME:latest
+      - run:
+          name: Publish Docker Image to Docker Hub
+          command: |
+            echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
+            docker push $IMAGE_NAME:latest
 
   publish-tag:
     executor: docker-publisher
     steps:
-    - attach_workspace:
-        at: /tmp/workspace
-    - setup_remote_docker
-    - run:
-        name: Load archived Docker image
-        command: |
-          docker load -i /tmp/workspace/image.tar
+      - attach_workspace:
+          at: /tmp/workspace
+      - setup_remote_docker
+      - run:
+          name: Load archived Docker image
+          command: |
+            docker load -i /tmp/workspace/image.tar
 
-    - run:
-        name: Publish Docker Image to Docker Hub
-        command: |
-          echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
-          docker tag $IMAGE_NAME:latest $IMAGE_NAME:$CIRCLE_TAG
-          docker push $IMAGE_NAME:$CIRCLE_TAG
+      - run:
+          name: Publish Docker Image to Docker Hub
+          command: |
+            echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
+            docker tag $IMAGE_NAME:latest $IMAGE_NAME:$CIRCLE_TAG
+            docker push $IMAGE_NAME:$CIRCLE_TAG
 
 workflows:
   version: 2
 
   test:
     jobs:
-    - test:
-        filters:
-          branches:
-            ignore: master
+      - test:
+          filters:
+            branches:
+              ignore: master
   build:
     jobs:
-    - build-image:
-        filters:
-          branches:
-            only: master
-    - publish-latest:
-        requires:
-        - build-image
-        filters:
-          branches:
-            only: master
+      - build-image:
+          filters:
+            branches:
+              only: master
+      - publish-latest:
+          requires:
+          - build-image
+          filters:
+            branches:
+              only: master
   build-tags:
     jobs:
-    - build-image:
-        filters:
-          tags:
-            only: /^[0-9]+\.[0-9]+\.[0-9]+/
-          branches:
-            ignore: /.*/
-    - publish-tag:
-        requires:
-        - build-image
-        filters:
-          tags:
-            only: /^[0-9]+\.[0-9]+\.[0-9]+/
-          branches:
-            ignore: /.*/
+      - build-image:
+          filters:
+            tags:
+              only: /^[0-9]+\.[0-9]+\.[0-9]+/
+            branches:
+              ignore: /.*/
+      - publish-tag:
+          requires:
+          - build-image
+          filters:
+            tags:
+              only: /^[0-9]+\.[0-9]+\.[0-9]+/
+            branches:
+              ignore: /.*/
