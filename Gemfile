@@ -6,6 +6,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 gem 'activesupport', '~> 5.2'
 gem 'dry-schema'
 gem 'faraday'
+gem 'hijri'
 gem 'stanford-mods' # for date parsing
 gem 'thor', '~> 0.20' # for CLI
 gem 'timetwister' # for date parsing
