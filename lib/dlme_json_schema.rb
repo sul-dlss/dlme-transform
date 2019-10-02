@@ -31,14 +31,14 @@ DlmeJsonSchema = Dry::Schema.JSON do
   optional(:cho_date_range_norm).array(:integer) # this is an array of integers to capture the years in a range
   optional(:cho_dc_rights).array(:str?)
   optional(:cho_description).array(:str?)
-  optional(:cho_edm_type) { array? { each(:str?, excluded_from?: ['NOT FOUND']) } }
+  optional(:cho_edm_type).array(:str?, excluded_from?: ['NOT FOUND'])
   optional(:cho_extent).array(:str?)
   optional(:cho_format).array(:str?)
   optional(:cho_has_part).array(:str?)
   optional(:cho_has_type).array(:str?)
   optional(:cho_identifier).array(:str?)
   optional(:cho_is_part_of).array(:str?)
-  optional(:cho_language) { array? { each(:str?, excluded_from?: ['NOT FOUND']) } }
+  optional(:cho_language).array(:str?, excluded_from?: ['NOT FOUND'])
   optional(:cho_medium).array(:str?)
   optional(:cho_provenance).array(:str?)
   optional(:cho_publisher).array(:str?)
