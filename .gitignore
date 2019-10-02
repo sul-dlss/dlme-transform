@@ -10,3 +10,4 @@ spec/examples.txt
 
 .pry_history
 coverage
+**/.DS_Store
