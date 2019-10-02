@@ -123,8 +123,6 @@ workflows:
   build:
     jobs:
       - build-image:
-          requires:
-          - test
           filters:
             branches:
               only: master
