@@ -117,13 +117,9 @@ jobs:
 
 workflows:
   version: 2
-
   test:
     jobs:
-      - test:
-          filters:
-            branches:
-              ignore: master
+      - test
   build:
     jobs:
       - build-image:
