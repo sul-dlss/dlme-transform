@@ -117,10 +117,9 @@ jobs:
 
 workflows:
   version: 2
-
   test:
     jobs:
-      - test:
+      - test
   build:
     jobs:
       - build-image:
