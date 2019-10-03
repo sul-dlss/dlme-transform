@@ -36,5 +36,13 @@ RSpec.describe Macros::DateParsing do
       expect(indexer.map_record(value: '2017 - 2019')).to include 'int_array' => [2017, 2018, 2019]
       expect(indexer.map_record(value: '2017- 2019')).to include 'int_array' => [2017, 2018, 2019]
     end
+
+    it 'when missing date' do
+      indexer.instance_eval do
+        to_field 'int_array', accumulate { |record, *_| record[:value] }, range_array_from_positive_4digits_hyphen
+      end
+
+      expect(indexer.map_record({})).to eq({})
+    end
   end
 end
