@@ -3,12 +3,6 @@
 module Macros
   # Macros for extracting FGDC values from Nokogiri documents
   module FGDC
-    # Looks up the type from the FGDC document and normalizes it using the ++lib/translation_maps/types.yaml++ table
-    # @return [Proc] a proc that traject can call for each record
-    def normalize_type
-      extract_fgdc('/*/idinfo/citation/citeinfo/geoform', translation_map: 'types')
-    end
-
     # Grab the value from the given column and if prefixed is true, prefix it with the `inst_id` value
     # that is set in metadata_mapping.json
     # @param [Boolean] prefixed (false) use a prefixed identifier if true
