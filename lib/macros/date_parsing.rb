@@ -18,7 +18,7 @@ module Macros
         accumulator.each do |val|
           range_years << Timetwister.parse(val).first[:index_dates]
         end
-        range_years.flatten!.uniq!
+        range_years.flatten!.uniq! if range_years.any?
         accumulator.replace(range_years)
       end
     end
