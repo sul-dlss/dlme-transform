@@ -2,7 +2,7 @@
 
 require 'traject'
 require 'adjust_cardinality'
-require 'dlme_json_schema'
+require 'contracts'
 require 'line_writer_fix_mixin'
 
 # Write the traject output to newline delmitited json
@@ -28,6 +28,6 @@ class DlmeJsonResourceWriter < Traject::LineWriter
   private
 
   def validate(json)
-    DlmeJsonSchema.call(json).errors
+    Contracts::CHO.new.call(json).errors
   end
 end

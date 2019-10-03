@@ -3,6 +3,8 @@
 module Macros
   # DLME helpers for traject mappings
   module DLME
+    ACCEPTABLE_BCP47_CODES_FILE = 'acceptable_bcp47_codes.yml'
+
     # Returns the provider as specified in the ++agg_provider++ field of ++metadata_mapping.json++
     # @return [Proc] a proc that traject can call for each record
     # @example
@@ -91,6 +93,15 @@ module Macros
       end
     end
 
+    def lang(bcp47_string)
+      raise "#{bcp47_string} is not an acceptable BCP47 language code" unless
+        acceptable_bcp47_codes.include?(bcp47_string)
+
+      lambda do |_record, accumulator, _context|
+        accumulator.replace([{ language: bcp47_string, values: accumulator.dup }])
+      end
+    end
+
     # Create an identifier that can be used in case none is encoded in the record.
     # It will first try to take it from the ++command_line.filename++ setting and
     # if that is not available, from the `identifier` setting.
@@ -107,6 +118,13 @@ module Macros
                    end
       File.basename(identifier, File.extname(identifier)) if identifier.present?
     end
+
+    # rubocop:disable Style/AccessModifierDeclarations
+    def acceptable_bcp47_codes
+      YAML.safe_load(File.read(ACCEPTABLE_BCP47_CODES_FILE))
+    end
+    module_function :acceptable_bcp47_codes
+    # rubocop:enable Style/AccessModifierDeclarations
 
     private
 
