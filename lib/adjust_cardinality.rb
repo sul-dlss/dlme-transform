@@ -21,8 +21,9 @@ class AdjustCardinality
   end
 
   def flatten_top_level(attributes)
-    flatten = %w[id agg_data_provider agg_data_provider_country agg_provider agg_provider_country
-                 agg_is_shown_at agg_is_shown_by agg_preview]
+    flatten = %w[id agg_data_provider agg_data_provider_ar agg_data_provider_country
+                 agg_data_provider_country_ar agg_provider agg_provider_ar agg_provider_country
+                 agg_provider_country_ar agg_is_shown_at agg_is_shown_by agg_preview]
     attributes.except(*flatten).tap do |output|
       flatten.each do |field|
         next unless attributes.key?(field)

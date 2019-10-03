@@ -11,12 +11,30 @@ module Macros
       from_settings('agg_provider')
     end
 
+    # Returns the Ara lang provider as specified in the ++agg_provider_ar++
+    # field of ++metadata_mapping.json++
+    # @return [Proc] a proc that traject can call for each record
+    # @example
+    #  provider => "أرشيف ملصق فلسطين"
+    def provider_ar
+      from_settings('agg_provider_ar')
+    end
+
     # Returns the data provider as specified in the ++agg_data_provider++ field of ++metadata_mapping.json++
     # @return [Proc] a proc that traject can call for each record
     # @example
     #  data_provider => "SALT Galata"
     def data_provider
       from_settings('agg_data_provider')
+    end
+
+    # Returns the Ara lang data provider as specified in the ++agg_data_provider_ar++
+    # field of ++metadata_mapping.json++
+    # @return [Proc] a proc that traject can call for each record
+    # @example
+    #  data_provider => "مكتبات ستانفورد"
+    def data_provider_ar
+      from_settings('agg_data_provider_ar')
     end
 
     # Returns the provider country as specified in the ++agg_provider_country++ field of ++metadata_mapping.json++
@@ -27,12 +45,30 @@ module Macros
       from_settings('agg_provider_country')
     end
 
-    # Returns data provider country specified in ++agg_data_provider_country++ field of ++metadata_mapping.json++
+    # Returns the Ara lang provider country as specified in the ++agg_provider_country_ar++
+    # field of ++metadata_mapping.json++
+    # @return [Proc] a proc that traject can call for each record
+    # @example
+    #  provider_country => "الولايات المتحدة الامريكيه"
+    def provider_country_ar
+      from_settings('agg_provider_country_ar')
+    end
+
+    # Returns the data provider country specified in ++agg_data_provider_country++ field of ++metadata_mapping.json++
     # @return [Proc] a proc that traject can call for each record
     # @example
     #  data_provider_country => "France"
     def data_provider_country
       from_settings('agg_data_provider_country')
+    end
+
+    # Returns the Ara lang data provider country specified in ++agg_data_provider_country_ar++
+    # field of ++metadata_mapping.json++
+    # @return [Proc] a proc that traject can call for each record
+    # @example
+    #  data_provider_country => "فرنسا"
+    def data_provider_country_ar
+      from_settings('agg_data_provider_country_ar')
     end
 
     # Returns the given identifier prefixed with the ++inst_id++  as specified in ++metadata_mapping.json++
