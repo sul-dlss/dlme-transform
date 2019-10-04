@@ -10,6 +10,8 @@ AllCops:
 # URISchemes: http, https
 Metrics/LineLength:
   Max: 120
+  Exclude:
+    - spec/lib/traject/macros/date_parsing_spec.rb
 
 # Configuration parameters: CountComments, ExcludedMethods.
 # ExcludedMethods: refine
@@ -18,4 +20,7 @@ Metrics/BlockLength:
   - 'spec/**/*_spec.rb'
 
 Style/AsciiComments:
+  Enabled: false
+
+Style/WordArray:
   Enabled: false
