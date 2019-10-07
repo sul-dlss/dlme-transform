@@ -7,7 +7,7 @@ gem 'activesupport', '~> 5.2'
 gem 'dry-validation'
 gem 'faraday'
 gem 'hijri'
-gem 'stanford-mods' # for date parsing
+gem 'parse_date'
 gem 'thor', '~> 0.20' # for CLI
 gem 'timetwister' # for date parsing
 gem 'traject_plus', '~> 1.3'

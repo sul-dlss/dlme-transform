@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'timetwister'
-require 'stanford-mods'
+require 'parse_date'
 
 # Macros for Traject transformations.
 module Macros
@@ -27,7 +27,7 @@ module Macros
     def single_year_from_string
       lambda do |_record, accumulator, _context|
         accumulator.map! do |val|
-          Stanford::Mods::DateParsing.year_int_from_date_str(val)
+          ParseDate.year_int_from_date_str(val)
         end
       end
     end
