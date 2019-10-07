@@ -60,14 +60,14 @@ module Macros
 
     # Looks up the type from the MODS document and normalizes it using the ++lib/translation_maps/types.yaml++ table
     # @return [Proc] a proc that traject can call for each record
-    def normalize_type
+    def normalize_mods_type
       extract_mods('/*/mods:typeOfResource', translation_map: 'types')
     end
 
     # Looks up the language from the MODS document and normalizes it using the
     # ++lib/translation_maps/marc_languages.yaml++ table
     # @return [Proc] a proc that traject can call for each record
-    def normalize_language
+    def normalize_mods_language
       mods_lang_label_xp = '/*/mods:language/mods:languageTerm[@authority="iso639-2b"][@type="text"]'
       mods_lang_code_xp = '/*/mods:language/mods:languageTerm[@authority="iso639-2b"][@type="code"]'
       mods_lang_xp = '/*/mods:language/mods:languageTerm'
@@ -81,7 +81,7 @@ module Macros
 
     # Looks up the script from the MODS document and normalizes it using the ++lib/translation_maps/scripts.yaml++ table
     # @return [Proc] a proc that traject can call for each record
-    def normalize_script
+    def normalize_mods_script
       extract_mods('/*/mods:language/mods:scriptTerm', translation_map: ['scripts', default: '__passthrough__'])
     end
   end
