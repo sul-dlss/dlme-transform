@@ -38,8 +38,8 @@ module Contracts
       required(:id).filled(:string)
       optional('__source'.to_sym).filled(:string)
       # Since the IR is a flattened projection of the MAP, 'agg_aggregated_cho' is not used.
-      required(:agg_data_provider).filled(:string)
-      required(:agg_data_provider_country).filled(:string)
+      required(:agg_data_provider).value(:hash?)
+      required(:agg_data_provider_country).value(:hash?)
       optional(:agg_dc_rights).array(:str?)
       optional(:agg_edm_rights).array(:str?) # At least one is required
 
@@ -48,38 +48,51 @@ module Contracts
       optional(:agg_is_shown_by) # 0 or 1
       optional(:agg_preview) # 0 or 1
 
-      required(:agg_provider).filled(:string)
-      required(:agg_provider_country).filled(:string)
+      required(:agg_provider).value(:hash?)
+      required(:agg_provider_country).value(:hash?)
       optional(:agg_same_as).array(:str?) # reference
     end
 
-    rule(:cho_title) do
-      key.failure('no values provided') if value.keys.empty?
-      unexpected_keys = value.keys - Macros::DLME.acceptable_bcp47_codes.push('none')
-      key.failure("unexpected language code(s) found in #{key.path.keys.first}: #{unexpected_keys.join(', ')}") if
-        unexpected_keys.any?
-    end
-
-    rule(:agg_is_shown_at) do
-      error_message = key? ? validate_web_resource(value) : ''
-      key.failure(error_message) unless error_message.empty?
-    end
-
-    rule(:agg_is_shown_by) do
-      error_message = key? ? validate_web_resource(value) : ''
-      key.failure(error_message) unless error_message.empty?
-    end
-
-    rule(:agg_preview) do
-      error_message = key? ? validate_web_resource(value) : ''
-      key.failure(error_message) unless error_message.empty?
-    end
-
-    rule(:agg_has_view) do
-      Array(value).each do |resource|
-        error_message = key? ? validate_web_resource(resource) : ''
+    # Because we use theses rule for multiple fields, express the validation
+    # logic as a Proc so we have a single implementation of each rule with many
+    # uses, rather than repeating this code as a block passed to each
+    # field-specific rule below
+    #
+    # Note that these class method *must* be defined *above* the `rule()` calls
+    # below
+    def self.web_resource_validation_rule
+      proc do
+        error_message = key? ? validate_web_resource(value) : ''
         key.failure(error_message) unless error_message.empty?
       end
+    end
+
+    # rubocop:disable Metrics/AbcSize
+    def self.required_language_specific_rule
+      proc do
+        key.failure('no values provided') if value.keys.empty?
+        unexpected_keys = value.keys - expected_language_values
+        key.failure("unexpected language code(s) found in #{key.path.keys.first}: #{unexpected_keys.join(', ')}") if
+          unexpected_keys.any?
+      end
+    end
+    # rubocop:enable Metrics/AbcSize
+
+    rule(:cho_title, &required_language_specific_rule)
+    rule(:agg_data_provider, &required_language_specific_rule)
+    rule(:agg_data_provider_country, &required_language_specific_rule)
+    rule(:agg_provider, &required_language_specific_rule)
+    rule(:agg_provider_country, &required_language_specific_rule)
+
+    rule(:agg_is_shown_at, &web_resource_validation_rule)
+    rule(:agg_is_shown_by, &web_resource_validation_rule)
+    rule(:agg_preview, &web_resource_validation_rule)
+    rule(:agg_has_view).each(&web_resource_validation_rule)
+
+    private
+
+    def expected_language_values
+      Macros::DLME.acceptable_bcp47_codes.push('none')
     end
 
     def validate_web_resource(resource)
