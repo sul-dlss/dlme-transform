@@ -45,7 +45,7 @@ module Macros
     def american_numismatic_date_range
       lambda do |record, accumulator|
         if record['Year']
-          dates = record['Year'].split('|') #if record['Year']
+          dates = record['Year'].split('|')
           first_year = dates[0].to_i if dates[0]&.match(/\d+/)
           last_year = dates[1].to_i if dates[1]&.match(/\d+/)
         end
