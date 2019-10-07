@@ -31,5 +31,37 @@ module Macros
         end
       end
     end
+
+    # Extracts earliest & latest dates from Penn museum record and merges into singe date range value
+    def penn_museum_date_range
+      lambda do |record, accumulator, _context|
+        first_year = record['date_made_early'].to_i if record['date_made_early']&.match(/\d+/)
+        last_year = record['date_made_late'].to_i if record['date_made_late']&.match(/\d+/)
+        accumulator.replace(Macros::DateParsing.year_array(first_year, last_year))
+      end
+    end
+
+    # @param [String] first_year, expecting parseable string for .to_i
+    # @param [String] last_year year, expecting parseable string for .to_i
+    # @return [Array] array of Integer year values from first to last, inclusive
+    def self.year_array(first_year, last_year)
+      first_year = first_year.to_i if first_year.is_a? String
+      last_year = last_year.to_i if last_year.is_a? String
+
+      return [] unless last_year || first_year
+      return [first_year] if last_year.nil? && first_year
+      return [last_year] if first_year.nil? && last_year
+      raise(StandardError, "unable to create year array from #{first_year}, #{last_year}") unless
+        year_range_valid?(first_year, last_year)
+
+      Range.new(first_year, last_year).to_a
+    end
+
+    def self.year_range_valid?(first_year, last_year)
+      return false if first_year > Date.today.year + 2 || last_year > Date.today.year + 2
+      return false if first_year > last_year
+
+      true
+    end
   end
 end
