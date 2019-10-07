@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'activesupport', '~> 5.2'
-gem 'dry-schema'
+gem 'dry-validation'
 gem 'faraday'
 gem 'hijri'
 gem 'stanford-mods' # for date parsing
