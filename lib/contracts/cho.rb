@@ -53,7 +53,7 @@ module Contracts
       optional(:agg_same_as).array(:str?) # reference
     end
 
-    # Because we use theses rule for multiple fields, express the validation
+    # Because we use these rules for multiple fields, express the validation
     # logic as a Proc so we have a single implementation of each rule with many
     # uses, rather than repeating this code as a block passed to each
     # field-specific rule below
