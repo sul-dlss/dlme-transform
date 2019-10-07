@@ -5,167 +5,113 @@ require 'contracts'
 RSpec.describe Contracts::CHO do
   subject(:contract) { Contracts::CHO.new.call(cho) }
 
-  describe 'cho_title' do
-    context 'when missing' do
-      let(:cho) { {} }
+  describe 'language-specific fields' do
+    %i[
+      agg_data_provider
+      agg_data_provider_country
+      agg_provider
+      agg_provider_country
+      cho_title
+    ].each do |field_name|
+      describe field_name do
+        context 'when missing' do
+          let(:cho) { {} }
 
-      it 'states the field is missing' do
-        expect(contract.errors[:cho_title]).to include('is missing')
-      end
-    end
+          it 'states the field is missing' do
+            expect(contract.errors[field_name]).to include('is missing')
+          end
+        end
 
-    context 'when not a hash' do
-      let(:cho) { { cho_title: 'foo' } }
+        context 'when not a hash' do
+          let(:cho) { { field_name => 'foo' } }
 
-      it 'states the field is not a hash' do
-        expect(contract.errors[:cho_title]).to include('must be a hash')
-      end
-    end
+          it 'states the field is not a hash' do
+            expect(contract.errors[field_name]).to include('must be a hash')
+          end
+        end
 
-    context 'when an empty hash' do
-      let(:cho) { { cho_title: {} } }
+        context 'when an empty hash' do
+          let(:cho) { { field_name => {} } }
 
-      it 'states the field contained no values' do
-        expect(contract.errors[:cho_title]).to include('no values provided')
-      end
-    end
+          it 'states the field contained no values' do
+            expect(contract.errors[field_name]).to include('no values provided')
+          end
+        end
 
-    context 'when hash contains unexpected keys' do
-      let(:cho) { { cho_title: { unknown_language_key: ['title1'] } } }
+        context 'when hash contains unexpected keys' do
+          let(:cho) { { field_name => { unknown_language_key: ['value1'] } } }
 
-      it 'states the field had unexpected keys' do
-        expect(contract.errors[:cho_title]).to include(
-          'unexpected language code(s) found in cho_title: unknown_language_key'
-        )
-      end
-    end
+          it 'states the field had unexpected keys' do
+            expect(contract.errors[field_name]).to include(
+              "unexpected language code(s) found in #{field_name}: unknown_language_key"
+            )
+          end
+        end
 
-    context 'when hash looks as expected' do
-      let(:cho) do
-        {
-          cho_title: {
-            'none' => ['title1'],
-            'en' => %w[title2 title3],
-            'tr-Latn' => ['title4']
-          }
-        }
-      end
+        context 'when hash looks as expected' do
+          let(:cho) do
+            {
+              field_name => {
+                'none' => ['value1'],
+                'en' => %w[value2 value3],
+                'tr-Latn' => ['value4']
+              }
+            }
+          end
 
-      it 'has no errors' do
-        expect(contract.errors[:cho_title]).to be_nil
-      end
-    end
-  end
-
-  describe 'agg_is_shown_at' do
-    context 'when not provided' do
-      let(:cho) { {} }
-
-      it 'has no errors' do
-        expect(contract.errors[:agg_is_shown_at]).to be_nil
-      end
-    end
-
-    context 'when provided value abides by EDMWebResource contract' do
-      let(:cho) do
-        {
-          agg_is_shown_at: {
-            wr_id: 'web_resource_id'
-          }
-        }
-      end
-
-      it 'has no errors' do
-        expect(contract.errors[:agg_is_shown_at]).to be_nil
-      end
-    end
-
-    context 'when provided value breaks EDMWebResource contract' do
-      let(:cho) do
-        {
-          agg_is_shown_at: {}
-        }
-      end
-
-      it 'has errors' do
-        expect(contract.errors[:agg_is_shown_at]).to include('is missing')
+          it 'has no errors' do
+            expect(contract.errors[field_name]).to be_nil
+          end
+        end
       end
     end
   end
 
-  describe 'agg_is_shown_by' do
-    context 'when not provided' do
-      let(:cho) { {} }
+  describe 'singular web resource fields' do
+    %i[
+      agg_is_shown_at
+      agg_is_shown_by
+      agg_preview
+    ].each do |field_name|
+      describe field_name do
+        context 'when not provided' do
+          let(:cho) { {} }
 
-      it 'has no errors' do
-        expect(contract.errors[:agg_is_shown_by]).to be_nil
-      end
-    end
+          it 'has no errors' do
+            expect(contract.errors[field_name]).to be_nil
+          end
+        end
 
-    context 'when provided value abides by EDMWebResource contract' do
-      let(:cho) do
-        {
-          agg_is_shown_by: {
-            wr_id: 'web_resource_id'
-          }
-        }
-      end
+        context 'when provided value abides by EDMWebResource contract' do
+          let(:cho) do
+            {
+              field_name => {
+                wr_id: 'web_resource_id'
+              }
+            }
+          end
 
-      it 'has no errors' do
-        expect(contract.errors[:agg_is_shown_by]).to be_nil
-      end
-    end
+          it 'has no errors' do
+            expect(contract.errors[field_name]).to be_nil
+          end
+        end
 
-    context 'when provided value breaks EDMWebResource contract' do
-      let(:cho) do
-        {
-          agg_is_shown_by: {}
-        }
-      end
+        context 'when provided value breaks EDMWebResource contract' do
+          let(:cho) do
+            {
+              field_name => {}
+            }
+          end
 
-      it 'has errors' do
-        expect(contract.errors[:agg_is_shown_by]).to include('is missing')
-      end
-    end
-  end
-
-  describe 'agg_preview' do
-    context 'when not provided' do
-      let(:cho) { {} }
-
-      it 'has no errors' do
-        expect(contract.errors[:agg_preview]).to be_nil
-      end
-    end
-
-    context 'when provided value abides by EDMWebResource contract' do
-      let(:cho) do
-        {
-          agg_preview: {
-            wr_id: 'web_resource_id'
-          }
-        }
-      end
-
-      it 'has no errors' do
-        expect(contract.errors[:agg_preview]).to be_nil
-      end
-    end
-
-    context 'when provided value breaks EDMWebResource contract' do
-      let(:cho) do
-        {
-          agg_preview: {}
-        }
-      end
-
-      it 'has errors' do
-        expect(contract.errors[:agg_preview]).to include('is missing')
+          it 'has errors' do
+            expect(contract.errors[field_name]).to include('is missing')
+          end
+        end
       end
     end
   end
 
-  describe 'agg_has_view' do
+  describe 'agg_has_view (a plural web resource field)' do
     context 'when not provided' do
       let(:cho) { {} }
 
@@ -212,7 +158,7 @@ RSpec.describe Contracts::CHO do
       end
 
       it 'has errors' do
-        expect(contract.errors[:agg_has_view]).to include('is missing')
+        expect(contract.errors[:agg_has_view].values.flatten).to include('is missing')
       end
     end
   end
