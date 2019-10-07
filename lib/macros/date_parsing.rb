@@ -41,6 +41,18 @@ module Macros
       end
     end
 
+    # Extracts earliest & latest dates from American Numismatic Society record and merges into singe date range value
+    def american_numismatic_date_range
+      lambda do |record, accumulator|
+        if record['Year']
+          dates = record['Year'].split('|') #if record['Year']
+          first_year = dates[0].to_i if dates[0]&.match(/\d+/)
+          last_year = dates[1].to_i if dates[1]&.match(/\d+/)
+        end
+        accumulator.replace(Macros::DateParsing.year_array(first_year, last_year))
+      end
+    end
+
     # @param [String] first_year, expecting parseable string for .to_i
     # @param [String] last_year year, expecting parseable string for .to_i
     # @return [Array] array of Integer year values from first to last, inclusive
