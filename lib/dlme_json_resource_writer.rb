@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require 'traject'
 require 'adjust_cardinality'
 require 'contracts'
 

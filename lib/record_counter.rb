@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'concurrent'
+require 'singleton'
 
 module Dlme
   # A singleton counter for records.

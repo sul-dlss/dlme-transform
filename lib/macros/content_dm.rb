@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'traject_plus'
-
 module Macros
   # Macros for working with CONTENTdm data
   module ContentDm

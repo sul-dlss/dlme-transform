@@ -6,6 +6,8 @@ require 'date'
 require 'json'
 require 'record_counter'
 require 'thor'
+require 'traject'
+require 'traject_plus'
 require 'transformer'
 
 module Dlme
