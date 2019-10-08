@@ -92,7 +92,7 @@ module Contracts
     private
 
     def expected_language_values
-      Macros::DLME.acceptable_bcp47_codes.push('none')
+      Settings.acceptable_bcp47_codes.push('none')
     end
 
     def validate_web_resource(resource)

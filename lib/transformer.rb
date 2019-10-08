@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'traject'
-require 'dlme_debug_writer'
 
 module Dlme
   # Generic Traject transformer
@@ -34,7 +33,7 @@ module Dlme
         indexer.load_config_file('lib/record_counter_config.rb')
         indexer.settings do
           provide 'command_line.filename', this.input_filepath
-          store 'writer_class_name', 'DlmeDebugWriter' if this.debug_writer
+          store 'writer_class_name', 'Traject::DebugWriter' if this.debug_writer
           this.addl_settings.each { |key, value| provide key, value }
         end
       end

@@ -1,0 +1,21 @@
+fields:
+  to_flatten:
+    top_level:
+      - id
+      - agg_is_shown_at
+      - agg_is_shown_by
+      - agg_preview
+    web_resources:
+      - agg_is_shown_at
+      - agg_is_shown_by
+      - agg_preview
+      - agg_has_view
+acceptable_bcp47_codes:
+  - ar-Arab
+  - ar-Latn
+  - en
+  - fa-Arab
+  - fa-Latn
+  - fr
+  - tr-Arab
+  - tr-Latn

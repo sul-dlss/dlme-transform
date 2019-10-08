@@ -12,12 +12,6 @@ RSpec.describe Macros::DLME do
   end
   let(:instance) { klass.new }
 
-  describe '.acceptable_bcp47_codes' do
-    it 'returns an array of strings' do
-      expect(described_class.acceptable_bcp47_codes).to include('en', 'fr')
-    end
-  end
-
   describe '#lang' do
     context 'with bogus language string' do
       let(:language_string) { 'foobar' }
