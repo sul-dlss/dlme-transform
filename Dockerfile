@@ -35,7 +35,6 @@ RUN bundle config build.nokogiri --use-system-libraries && \
 
 COPY . /opt/traject/
 
-ENV SKIP_FETCH_CONFIG false
 ENV SKIP_FETCH_DATA false
 ENV S3_BASE_URL https://s3-us-west-2.amazonaws.com
 ENV AWS_DEFAULT_REGION us-west-2

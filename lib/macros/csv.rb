@@ -6,7 +6,7 @@ module Macros
   # Macros for extracting values from CSV rows
   module Csv
     # Grab the value from the given column and prefix it with the `inst_id` value
-    # that is set in metadata_mapping.json
+    # that is set in `config/metadata_mapping.json`
     # @param header_or_index [String,Integer] the value of the header or index that identifies the column
     def normalize_prefixed_id(header_or_index)
       lambda do |row, accumulator, context|

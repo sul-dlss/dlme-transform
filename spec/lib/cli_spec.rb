@@ -24,8 +24,8 @@ RSpec.describe Dlme::CLI::Transform do
     let(:mock_transformer) { instance_double(Dlme::Transformer) }
     let(:metadata_mapping_filepath) { 'metadata_mapping.json' }
     let(:base_data_dir) { 'data' }
-    let(:traject_dir) { 'config' }
-    let(:traject_config_filepath) { 'config/mods_config.rb' }
+    let(:traject_dir) { 'traject_configs' }
+    let(:traject_config_filepath) { 'traject_configs/mods_config.rb' }
     let(:mock_file) { instance_double(File, 'summary') }
     let(:data_dir) { 'stanford/record.mods' }
     let(:summary_filepath) { 'summary.json' }

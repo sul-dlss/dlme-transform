@@ -34,7 +34,7 @@ module Dlme
              aliases: '-d'
 
       option :traject_dir,
-             default: 'config',
+             default: 'traject_configs',
              banner: 'TRAJECT_DIR',
              desc: 'Directory containing the Traject configs.',
              aliases: '-t'

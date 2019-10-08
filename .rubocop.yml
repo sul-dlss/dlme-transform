@@ -4,14 +4,14 @@ AllCops:
   TargetRubyVersion: 2.5
   Exclude:
     - data/**/*
-    - config/**/*
 
 # Configuration parameters: AllowHeredoc, AllowURI, URISchemes, IgnoreCopDirectives, IgnoredPatterns.
 # URISchemes: http, https
 Metrics/LineLength:
-  Max: 120
+  Max: 125
   Exclude:
-    - spec/lib/traject/macros/date_parsing_spec.rb
+    - 'spec/lib/traject/macros/date_parsing_spec.rb'
+    - 'traject_configs/**/*'
 
 # Configuration parameters: CountComments, ExcludedMethods.
 # ExcludedMethods: refine
@@ -19,8 +19,16 @@ Metrics/BlockLength:
   Exclude:
   - 'spec/**/*_spec.rb'
 
+Performance/StringReplacement:
+  Exclude:
+    - 'traject_configs/**/*'
+
 Style/AsciiComments:
   Enabled: false
+
+Style/MixinUsage:
+  Exclude:
+    - 'traject_configs/**/*'
 
 Style/WordArray:
   Enabled: false

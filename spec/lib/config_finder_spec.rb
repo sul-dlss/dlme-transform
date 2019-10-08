@@ -27,7 +27,7 @@ RSpec.describe Dlme::ConfigFinder do
     ]
   end
 
-  let(:mapping_file) { 'spec/fixtures/metadata_mapping.json' }
+  let(:mapping_file) { 'config/metadata_mapping.json' }
   let(:base_data_dir) { 'data' }
   let(:file1) { 'data/stanford/maps/dir1/file1.mods' }
   let(:file2) { 'data/stanford/maps/dir2/file2.mods' }
