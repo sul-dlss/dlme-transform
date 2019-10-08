@@ -67,7 +67,6 @@ module Contracts
       end
     end
 
-    # rubocop:disable Metrics/AbcSize
     def self.required_language_specific_rule
       proc do
         key.failure('no values provided') if value.keys.empty?
@@ -76,7 +75,6 @@ module Contracts
           unexpected_keys.any?
       end
     end
-    # rubocop:enable Metrics/AbcSize
 
     rule(:cho_title, &required_language_specific_rule)
     rule(:agg_data_provider, &required_language_specific_rule)

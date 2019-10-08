@@ -24,10 +24,36 @@ module Macros
     end
 
     # Parse strings like 'Sun, 12 Nov 2017 14:08:12 +0000' for a single year
+    # nil if the year is NOT between -999 and (current year + 2), per parse_date gem
     def single_year_from_string
       lambda do |_record, accumulator, _context|
         accumulator.map! do |val|
           ParseDate.year_int_from_date_str(val)
+        end
+      end
+    end
+
+    FGDC_NS = { fgdc: 'http://www.fgdc.gov/metadata/fgdc-std-001-1998.dtd' }.freeze
+    FGDC_TIMEINFO_XPATH = '/metadata/idinfo/timeperd/timeinfo'
+    FGDC_SINGLE_DATE_XPATH = "#{FGDC_TIMEINFO_XPATH}/sngdate/caldate"
+    FGDC_DATE_RANGE_XPATH = "#{FGDC_TIMEINFO_XPATH}/rngdates"
+    # Note:  saw no "#{FGDC_TIMEINFO_XPATH}/mdattim" multiple dates path data
+
+    # Extracts dates from FGDC idinfo/timeperd to create a singe date range value
+    # a year will be nil if it is NOT between -999 and (current year + 2), per parse_date gem
+    # see https://www.fgdc.gov/metadata/csdgm/09.html, https://www.fgdc.gov/metadata/documents/MetadataQuickGuide.pdf
+    def fgdc_date_range
+      lambda do |record, accumulator, _context|
+        date_range_nodeset = record.xpath(FGDC_DATE_RANGE_XPATH, FGDC_NS)
+        if date_range_nodeset.present?
+          first_year = ParseDate.year_int_from_date_str(date_range_nodeset.xpath('begdate', FGDC_NS)&.text&.strip)
+          last_year = ParseDate.year_int_from_date_str(date_range_nodeset.xpath('enddate', FGDC_NS)&.text&.strip)
+          accumulator.replace(Macros::DateParsing.year_array(first_year, last_year))
+        else
+          single_date_nodeset = record.xpath(FGDC_SINGLE_DATE_XPATH, FGDC_NS)
+          if single_date_nodeset.present?
+            accumulator.replace([ParseDate.year_int_from_date_str(single_date_nodeset.text&.strip)])
+          end
         end
       end
     end
