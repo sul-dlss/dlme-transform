@@ -1,11 +1,12 @@
 # frozen_string_literal: true
 
+require 'config_finder'
+require 'configuration'
+require 'date'
 require 'json'
+require 'record_counter'
 require 'thor'
 require 'transformer'
-require 'record_counter'
-require 'date'
-require 'config_finder'
 
 module Dlme
   module CLI

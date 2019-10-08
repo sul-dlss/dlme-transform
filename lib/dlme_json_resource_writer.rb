@@ -3,16 +3,12 @@
 require 'traject'
 require 'adjust_cardinality'
 require 'contracts'
-require 'line_writer_fix_mixin'
 
 # Write the traject output to newline delmitited json
 # This writer also casts fields that should be singular (like `id`) from lists.
 # Finally, it runs the DLME IR schema validator on each output to ensure the config
 # is writing a compliant message.
 class DlmeJsonResourceWriter < Traject::LineWriter
-  # Temporary fix until https://github.com/traject/traject/pull/202 is merged.
-  include LineWriterFixMixin
-
   def serialize(context)
     attributes = context.output_hash.dup
     adjusted = AdjustCardinality.call(attributes)

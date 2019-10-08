@@ -36,7 +36,7 @@ RSpec.describe Dlme::Transformer do
       let(:debug_writer) { true }
 
       it 'correctly configures indexer' do
-        expect(indexer.settings).to include('writer_class_name' => 'DlmeDebugWriter')
+        expect(indexer.settings).to include('writer_class_name' => 'Traject::DebugWriter')
       end
     end
 

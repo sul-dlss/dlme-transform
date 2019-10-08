@@ -10,7 +10,6 @@ class AdjustCardinality
   end
 
   def initialize(attributes)
-    # %w(id agg_data_provider agg_provider agg_is_shown_at agg_is_shown_by agg_preview)
     @source = attributes
   end
 
@@ -21,9 +20,9 @@ class AdjustCardinality
   end
 
   def flatten_top_level(attributes)
-    flatten = %w[id agg_is_shown_at agg_is_shown_by agg_preview]
-    attributes.except(*flatten).tap do |output|
-      flatten.each do |field|
+    fields_to_flatten = Settings.fields.to_flatten.top_level
+    attributes.except(*fields_to_flatten).tap do |output|
+      fields_to_flatten.each do |field|
         next unless attributes.key?(field)
 
         value = attributes.fetch(field).first
@@ -33,9 +32,9 @@ class AdjustCardinality
   end
 
   def flatten_web_resources(attributes)
-    flatten = %w[agg_is_shown_at agg_is_shown_by agg_preview agg_has_view]
-    attributes.except(*flatten).tap do |output|
-      flatten.each do |field|
+    fields_to_flatten = Settings.fields.to_flatten.web_resources
+    attributes.except(*fields_to_flatten).tap do |output|
+      fields_to_flatten.each do |field|
         value = attributes[field]
         next unless value
 
