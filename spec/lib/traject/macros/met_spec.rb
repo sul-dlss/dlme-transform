@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'macros/met'
-require 'traject_plus'
 
 RSpec.describe Macros::Met do
   let(:klass) do

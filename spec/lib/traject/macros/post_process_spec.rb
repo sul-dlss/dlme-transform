@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'macros/post_process'
-require 'traject_plus'
 
 RSpec.describe Macros::PostProcess do
   let(:klass) do

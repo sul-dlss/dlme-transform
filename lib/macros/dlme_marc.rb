@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'traject_plus'
-
 # Macros for Traject transformations.
 module Macros
   # Macros that change some of Traject's MARC behaviors for the sake of DLME.

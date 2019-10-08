@@ -7,7 +7,7 @@ SimpleCov.start do
   add_filter 'spec'
 end
 
-require 'traject'
+require 'cli'
 require 'byebug'
 require 'pry-byebug'
 

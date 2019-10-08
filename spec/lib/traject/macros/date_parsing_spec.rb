@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'macros/date_parsing'
-require 'traject_plus'
 
 RSpec.describe Macros::DateParsing do
   subject(:indexer) do

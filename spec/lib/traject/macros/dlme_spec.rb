@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'macros/dlme'
-require 'traject_plus'
 
 RSpec.describe Macros::DLME do
   let(:klass) do

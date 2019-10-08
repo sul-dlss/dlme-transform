@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'traject'
-
 module Dlme
   # Generic Traject transformer
   class Transformer
