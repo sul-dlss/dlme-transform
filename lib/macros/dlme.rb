@@ -125,13 +125,5 @@ module Macros
     end
     module_function :acceptable_bcp47_codes
     # rubocop:enable Style/AccessModifierDeclarations
-
-    private
-
-    def from_settings(field)
-      lambda { |_record, accumulator, context|
-        accumulator << context.settings.fetch(field)
-      }
-    end
   end
 end
