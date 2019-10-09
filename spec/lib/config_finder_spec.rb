@@ -6,7 +6,8 @@ RSpec.describe Dlme::ConfigFinder do
   subject(:configs) do
     described_class.for(mapping_file: mapping_file,
                         base_data_dir: base_data_dir,
-                        data_dir: data_dir)
+                        data_dir: data_dir,
+                        sample: sample)
   end
 
   let(:mapping_config) do
@@ -26,12 +27,12 @@ RSpec.describe Dlme::ConfigFinder do
       }
     ]
   end
-
-  let(:mapping_file) { 'spec/fixtures/metadata_mapping.json' }
+  let(:mapping_file) { 'config/metadata_mapping.json' }
   let(:base_data_dir) { 'data' }
   let(:file1) { 'data/stanford/maps/dir1/file1.mods' }
   let(:file2) { 'data/stanford/maps/dir2/file2.mods' }
   let(:file3) { 'data/other/maps/file3.xml' }
+  let(:sample) { false }
 
   before do
     allow(JSON).to receive(:parse).and_return(mapping_config)
@@ -77,7 +78,7 @@ RSpec.describe Dlme::ConfigFinder do
     end
   end
 
-  context 'data dir is parent of multiple path' do
+  context 'data dir is parent of multiple paths' do
     let(:data_dir) { '' }
 
     before do
@@ -92,6 +93,14 @@ RSpec.describe Dlme::ConfigFinder do
       expect(File).to have_received(:file?).with("#{base_data_dir}/#{data_dir}").twice
       expect(Dir).to have_received(:glob).with("#{base_data_dir}/stanford/maps/**/*.mods")
       expect(Dir).to have_received(:glob).with("#{base_data_dir}/other/maps/**/*.xml")
+    end
+
+    context 'when sample attr is true' do
+      let(:sample) { true }
+
+      it 'returns the correct mapping size' do
+        expect(configs.size).to eq(2)
+      end
     end
   end
 

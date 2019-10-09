@@ -2,8 +2,6 @@
 !/output/.keep
 /data/*
 !/data/.keep
-/config/*
-!/config/.keep
 
 # Rspec files:
 spec/examples.txt

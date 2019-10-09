@@ -9,7 +9,7 @@ module Dlme
     include Singleton
 
     def initialize
-      @counter = Concurrent::AtomicFixnum.new(0)
+      reset!
     end
 
     def increment
@@ -18,6 +18,12 @@ module Dlme
 
     def count
       @counter.value
+    end
+
+    private
+
+    def reset!
+      @counter = Concurrent::AtomicFixnum.new(0)
     end
   end
 end

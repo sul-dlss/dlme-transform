@@ -4,7 +4,7 @@ module Macros
   # Macros for extracting FGDC values from Nokogiri documents
   module FGDC
     # Grab the value from the given column and if prefixed is true, prefix it with the `inst_id` value
-    # that is set in metadata_mapping.json
+    # that is set in config/metadata_mapping.json
     # @param [Boolean] prefixed (false) use a prefixed identifier if true
     # @return [Proc] a proc that traject can call for each record
     def generate_fgdc_id(prefixed: false)

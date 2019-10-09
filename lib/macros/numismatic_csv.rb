@@ -4,7 +4,7 @@ module Macros
   # Macros for extracting values from CSV rows
   module NumismaticCsv
     # Returns the data provider value from the department columns and ++agg_provider++
-    # field of ++metadata_mapping.json++
+    # field of ++config/metadata_mapping.json++
     # @return [Proc] a proc that traject can call for each record
     def provider_department
       lambda do |row, accumulator, context|

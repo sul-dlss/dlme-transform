@@ -4,16 +4,18 @@ module Dlme
   # Compiles a list of configs to use for the given filepaths
   class ConfigFinder
     # @raise RuntimeError if no files are found
-    def self.for(base_data_dir:, data_dir:, mapping_file:)
+    def self.for(base_data_dir:, data_dir:, mapping_file:, sample: false)
       new(base_data_dir: base_data_dir,
           data_dir: data_dir,
-          mapping_file: mapping_file).find
+          mapping_file: mapping_file,
+          sample: sample).find
     end
 
-    def initialize(base_data_dir:, data_dir:, mapping_file:)
+    def initialize(base_data_dir:, data_dir:, mapping_file:, sample:)
       @base_data_dir = base_data_dir
       @data_dir = data_dir
       @mapping_file = mapping_file
+      @sample = sample
     end
 
     # @raise RuntimeError if no files are found
@@ -47,7 +49,10 @@ module Dlme
 
       # Glob on whichever is longer
       glob_path = path.length > data_dir.length ? path : data_dir
-      Dir.glob("#{abs_dir(glob_path)}/**/*#{config.fetch('extension', '.xml')}")
+      files = Dir.glob("#{abs_dir(glob_path)}/**/*#{config.fetch('extension', '.xml')}").sort
+      return files.take(Settings.number_of_configs_to_test) if sample
+
+      files
     end
 
     def abs_data_dir
@@ -62,6 +67,6 @@ module Dlme
       JSON.parse(File.read(mapping_file))
     end
 
-    attr_reader :base_data_dir, :data_dir, :mapping_file
+    attr_reader :base_data_dir, :data_dir, :mapping_file, :sample
   end
 end
