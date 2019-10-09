@@ -62,13 +62,13 @@ module Macros
     # Takes an existing array of year integers and returns an array converted to hijri
     # with an additional year added to the end to account for the non-365 day calendar
     def hijri_range
-      hijri_year = 0
       lambda do |_record, accumulator, _context|
-        accumulator.map! do |val|
-          hijri_year = Date.new(val).to_hijri.year
-          hijri_year
+        if accumulator.any? { |val| val < 623 } # 623 is the first valid year to convert
+          accumulator.replace([])
+          return
         end
-        accumulator << hijri_year + 1 if hijri_year.positive?
+        accumulator.map! { |val| Date.new(val).to_hijri.year }
+        accumulator << accumulator.last + 1 if accumulator.any?
       end
     end
 
