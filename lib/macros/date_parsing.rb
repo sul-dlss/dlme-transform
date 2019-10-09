@@ -28,7 +28,7 @@ module Macros
     def single_year_from_string
       lambda do |_record, accumulator, _context|
         accumulator.map! do |val|
-          ParseDate.year_int_from_date_str(val)
+          ParseDate.earliest_year(val)
         end
       end
     end
@@ -46,14 +46,12 @@ module Macros
       lambda do |record, accumulator, _context|
         date_range_nodeset = record.xpath(FGDC_DATE_RANGE_XPATH, FGDC_NS)
         if date_range_nodeset.present?
-          first_year = ParseDate.year_int_from_date_str(date_range_nodeset.xpath('begdate', FGDC_NS)&.text&.strip)
-          last_year = ParseDate.year_int_from_date_str(date_range_nodeset.xpath('enddate', FGDC_NS)&.text&.strip)
+          first_year = ParseDate.earliest_year(date_range_nodeset.xpath('begdate', FGDC_NS)&.text&.strip)
+          last_year = ParseDate.earliest_year(date_range_nodeset.xpath('enddate', FGDC_NS)&.text&.strip)
           accumulator.replace(Macros::DateParsing.year_array(first_year, last_year))
         else
           single_date_nodeset = record.xpath(FGDC_SINGLE_DATE_XPATH, FGDC_NS)
-          if single_date_nodeset.present?
-            accumulator.replace([ParseDate.year_int_from_date_str(single_date_nodeset.text&.strip)])
-          end
+          accumulator.replace([ParseDate.earliest_year(single_date_nodeset.text&.strip)]) if single_date_nodeset.present?
         end
       end
     end
