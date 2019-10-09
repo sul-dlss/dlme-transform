@@ -120,7 +120,7 @@ RSpec.describe Macros::DateParsing do
   end
 
   describe '#hijri_range' do
-    before(:each) do
+    before do
       indexer.instance_eval do
         to_field 'int_array', accumulate { |record, *_| record[:value] }, hijri_range
       end
