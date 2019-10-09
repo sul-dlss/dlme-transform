@@ -120,37 +120,27 @@ RSpec.describe Macros::DateParsing do
   end
 
   describe '#hijri_range' do
-    it 'receives a range of integers' do
+    before(:each) do
       indexer.instance_eval do
         to_field 'int_array', accumulate { |record, *_| record[:value] }, hijri_range
       end
+    end
 
+    it 'receives a range of integers' do
       expect(indexer.map_record(value: [2010, 2011, 2012])).to include 'int_array' => [1431, 1432, 1433, 1434]
     end
 
     it 'receives a single value' do
-      indexer.instance_eval do
-        to_field 'int_array', accumulate { |record, *_| record[:value] }, hijri_range
-      end
-
       # note this is the first valid date that can be converted
       expect(indexer.map_record(value: [623])).to include 'int_array' => [1, 2]
     end
 
     it 'is not provided a value' do
-      indexer.instance_eval do
-        to_field 'int_array', accumulate { |record, *_| record[:value] }, hijri_range
-      end
-
-      expect(indexer.map_record(value: [])).not_to include 'range'
+      expect(indexer.map_record(value: [])).to be_empty
     end
 
     it 'receives an invalid value' do
-      indexer.instance_eval do
-        to_field 'int_array', accumulate { |record, *_| record[:value] }, hijri_range
-      end
-
-      expect(indexer.map_record(value: [622])).not_to include 'int_array' => [1, 2]
+      expect(indexer.map_record(value: [622])).to be_empty
     end
   end
 
