@@ -2,6 +2,7 @@
 
 require 'timetwister'
 require 'parse_date'
+require 'hijri'
 
 # Macros for Traject transformations.
 module Macros
@@ -33,17 +34,6 @@ module Macros
       end
     end
 
-    def hijri_range
-      hijri_year = 0
-      lambda do |_record, accumulator, _context|
-        accumulator.map! do |val|
-          hijri_year = Date.new(val).to_hijri.year
-          hijri_year
-        end
-        accumulator << hijri_year + 1 if hijri_year.positive?
-      end
-    end
-
     FGDC_NS = { fgdc: 'http://www.fgdc.gov/metadata/fgdc-std-001-1998.dtd' }.freeze
     FGDC_TIMEINFO_XPATH = '/metadata/idinfo/timeperd/timeinfo'
     FGDC_SINGLE_DATE_XPATH = "#{FGDC_TIMEINFO_XPATH}/sngdate/caldate"
@@ -66,6 +56,19 @@ module Macros
             accumulator.replace([ParseDate.year_int_from_date_str(single_date_nodeset.text&.strip)])
           end
         end
+      end
+    end
+
+    # Takes an existing array of year integers and returns an array converted to hijri
+    # with an additional year added to the end to account for the non-365 day calendar
+    def hijri_range
+      hijri_year = 0
+      lambda do |_record, accumulator, _context|
+        accumulator.map! do |val|
+          hijri_year = Date.new(val).to_hijri.year
+          hijri_year
+        end
+        accumulator << hijri_year + 1 if hijri_year.positive?
       end
     end
 

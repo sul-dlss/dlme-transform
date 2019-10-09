@@ -119,6 +119,32 @@ RSpec.describe Macros::DateParsing do
     end
   end
 
+  describe '#hijri_range' do
+    it 'receives a range of integers' do
+      indexer.instance_eval do
+        to_field 'int_array', accumulate { |record, *_| record[:value] }, hijri_range
+      end
+
+      expect(indexer.map_record(value: [2010, 2011, 2012])).to include 'int_array' => [1431, 1432, 1433, 1434]
+    end
+
+    it 'receives a single value' do
+      indexer.instance_eval do
+        to_field 'int_array', accumulate { |record, *_| record[:value] }, hijri_range
+      end
+
+      expect(indexer.map_record(value: [2010])).to include 'int_array' => [1431, 1432]
+    end
+
+    it 'is not provided a value' do
+      indexer.instance_eval do
+        to_field 'int_array', accumulate { |record, *_| record[:value] }, hijri_range
+      end
+
+      expect(indexer.map_record(value: [])).not_to include 'range'
+    end
+  end
+
   describe '#penn_museum_date_range' do
     context 'when date_made_early and date_made_late populated' do
       it 'both dates and range are valid' do
