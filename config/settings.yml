@@ -19,3 +19,9 @@ acceptable_bcp47_codes:
   - fr
   - tr-Arab
   - tr-Latn
+defaults:
+  base_data_dir: 'data'
+  data_dir: ''
+  mapping_file: 'config/metadata_mapping.json'
+  traject_dir: 'traject_configs'
+number_of_configs_to_test: 1

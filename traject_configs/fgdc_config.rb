@@ -2,16 +2,18 @@
 
 require 'traject_plus'
 require 'dlme_json_resource_writer'
+require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/fgdc'
 require 'macros/post_process'
 
-extend Macros::PostProcess
+extend Macros::DateParsing
 extend Macros::DLME
-extend TrajectPlus::Macros::Xml
 extend Macros::FGDC
+extend Macros::PostProcess
 extend TrajectPlus::Macros
 extend TrajectPlus::Macros::FGDC
+extend TrajectPlus::Macros::Xml
 
 settings do
   provide 'writer_class_name', 'DlmeJsonResourceWriter'
@@ -32,7 +34,7 @@ to_field 'cho_coverage', extract_fgdc('/*/dataqual/lineage/srcinfo/srctime/timei
 to_field 'cho_coverage', extract_fgdc('/*/dataqual/lineage/srcinfo/srctime/timeinfo/sngdate/caldate')
 # to_field 'cho_date', extract_fgdc('/*/dataqual/lineage/srcinfo/srccite/citeinfo/pubdate')
 to_field 'cho_date', extract_fgdc('/*/idinfo/citation/citeinfo/pubdate')
-to_field 'cho_date_range_norm', extract_fgdc('/*/idinfo/citation/citeinfo/pubdate')
+to_field 'cho_date_range_norm', fgdc_date_range
 # to_field 'cho_dc_rights', extract_fgdc('/*/idinfo/accconst')
 to_field 'cho_dc_rights', extract_fgdc('/*/idinfo/useconst')
 to_field 'cho_description', extract_fgdc('/*/idinfo/descript/abstract')

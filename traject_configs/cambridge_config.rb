@@ -40,7 +40,7 @@ to_field 'cho_title', extract_tei("#{ms_desc}/#{ms_contents}/#{ms_item}/tei:titl
 # Cho other
 to_field 'cho_creator', extract_tei("#{ms_desc}/#{ms_contents}/#{ms_item}/tei:author")
 to_field 'cho_date', extract_tei("#{ms_desc}/#{ms_origin}/tei:origDate"), strip
-to_field 'cho_date_range_norm', extract_tei("#{ms_desc}/#{ms_origin}/tei:origDate"), strip
+# to_field 'cho_date_range_norm', extract_tei("#{ms_desc}/#{ms_origin}/tei:origDate"), strip
 to_field 'cho_dc_rights', extract_tei("#{pub_stmt}/tei:availability/tei:licence"), strip
 to_field 'cho_description', extract_tei("#{ms_desc}/#{ms_contents}/tei:summary")
 to_field 'cho_edm_type', literal('Text')

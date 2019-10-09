@@ -31,6 +31,7 @@ module Dlme
         indexer.load_config_file('lib/record_counter_config.rb')
         indexer.settings do
           provide 'command_line.filename', this.input_filepath
+          provide 'close_output_on_close', false
           store 'writer_class_name', 'Traject::DebugWriter' if this.debug_writer
           this.addl_settings.each { |key, value| provide key, value }
         end

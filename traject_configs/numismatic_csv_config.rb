@@ -35,7 +35,7 @@ to_field 'agg_data_provider', data_provider, lang('en')
 to_field 'agg_data_provider', data_provider_ar, lang('ar-Arab')
 to_field 'cho_date', column('Era')
 to_field 'cho_date', column('Year'), gsub('|', ' - ')
-to_field 'cho_date_range_norm', american_numismatic_date_range
+# to_field 'cho_date_range_norm', american_numismatic_date_range
 to_field 'cho_description', column('Denomination')
 to_field 'cho_description', column('Manufacture')
 to_field 'cho_description', column('Obverse Legend')

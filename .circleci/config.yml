@@ -49,6 +49,13 @@ jobs:
             ./cc-test-reporter before-build
 
       - run:
+          name: Copy data files over for integration tests
+          command: |
+            curl -L https://github.com/sul-dlss/dlme-metadata/archive/master.zip > master.zip
+            unzip -q master.zip
+            cp -r dlme-metadata-master/[a-z]* data/
+
+      - run:
           name: Run rspec tests
           command: bundle exec rspec
 

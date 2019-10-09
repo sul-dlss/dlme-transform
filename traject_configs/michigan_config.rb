@@ -29,7 +29,7 @@ to_field 'cho_title', extract_xpath("//datafield[@tag='880']/subfield[contains(t
 to_field 'cho_creator', extract_xpath("//datafield[@tag='100']/subfield[@code='a']")
 to_field 'cho_creator', extract_xpath("//datafield[@tag='880']/subfield[contains(text(),'100-01/')]/../subfield[@code='a']"), strip
 to_field 'cho_date', extract_xpath("//datafield[@tag='260']"), strip
-to_field 'cho_date_range_norm', extract_xpath("//datafield[@tag='260']"), strip
+# to_field 'cho_date_range_norm', extract_xpath("//datafield[@tag='260']"), strip
 to_field 'cho_description', extract_xpath("//datafield[@tag='300']"), strip
 to_field 'cho_description', extract_xpath("//datafield[@tag='520']"), strip
 to_field 'cho_description', extract_xpath("//datafield[@tag='500']"),

@@ -15,26 +15,26 @@ module Dlme
     # Transform subcommand
     class Transform < Thor
       option :mapping_file,
-             default: 'config/metadata_mapping.json',
+             default: Settings.defaults.mapping_file,
              banner: 'MAPPING_FILEPATH',
              desc: 'Filepath of JSON file that maps directories to config files.',
              aliases: '-m'
 
       option :base_data_dir,
-             default: 'data',
+             default: Settings.defaults.base_data_dir,
              banner: 'BASE_DATA_DIR',
              desc: 'Parent directory containing the data to be transformed.',
              aliases: '-b'
 
       option :data_dir,
-             default: '',
+             default: Settings.defaults.data_dir,
              banner: 'DATA_DIR',
              desc: 'Directory containing the data to be transformed, relative to the BASE_DATA_DIR. Descendent ' \
                    'directories will be recursively transformed. If a file, only that file will be transformed.',
              aliases: '-d'
 
       option :traject_dir,
-             default: 'traject_configs',
+             default: Settings.defaults.traject_dir,
              banner: 'TRAJECT_DIR',
              desc: 'Directory containing the Traject configs.',
              aliases: '-t'

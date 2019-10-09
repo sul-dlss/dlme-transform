@@ -19,7 +19,7 @@ end
 
 # Cho Required
 to_field 'id', extract_harvard_identifier, strip
-to_field 'cho_title', extract_harvard('/*/dc:title'), strip, first_only, lang('ar-Latn')
+to_field 'cho_title', extract_harvard('/*/dc:title'), strip, first_only
 
 # Cho Other
 to_field 'cho_alternative', extract_harvard('/*/dc:title[last()]'), strip
@@ -27,7 +27,7 @@ to_field 'cho_contributor', extract_harvard('/*/dc:contributor'), strip
 to_field 'cho_coverage', extract_harvard('/*/dc:coverage'), strip
 to_field 'cho_creator', extract_harvard('/*/dc:creator'), strip
 to_field 'cho_date', extract_harvard('/*/dc:date'), strip
-to_field 'cho_date_range_norm', extract_harvard('/*/dc:date'), strip
+# to_field 'cho_date_range_norm', extract_harvard('/*/dc:date'), strip
 to_field 'cho_description', extract_harvard('/*/dc:description'), strip
 to_field 'cho_dc_rights', extract_harvard('/*/dc:rights'), strip
 to_field 'cho_edm_type', extract_harvard('/*/dc:type[1]'),
