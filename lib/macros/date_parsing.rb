@@ -33,6 +33,17 @@ module Macros
       end
     end
 
+    def hijri_range
+      hijri_year = 0
+      lambda do |_record, accumulator, _context|
+        accumulator.map! do |val|
+          hijri_year = Date.new(val).to_hijri.year
+          hijri_year
+        end
+        accumulator << hijri_year + 1 if hijri_year.positive?
+      end
+    end
+
     FGDC_NS = { fgdc: 'http://www.fgdc.gov/metadata/fgdc-std-001-1998.dtd' }.freeze
     FGDC_TIMEINFO_XPATH = '/metadata/idinfo/timeperd/timeinfo'
     FGDC_SINGLE_DATE_XPATH = "#{FGDC_TIMEINFO_XPATH}/sngdate/caldate"
