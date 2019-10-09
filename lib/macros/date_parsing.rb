@@ -59,11 +59,13 @@ module Macros
       end
     end
 
+    FIRST_VALID_GREGORIAN_TO_HIJRI_YEAR = 623
+
     # Takes an existing array of year integers and returns an array converted to hijri
     # with an additional year added to the end to account for the non-365 day calendar
     def hijri_range
       lambda do |_record, accumulator, _context|
-        if accumulator.any? { |val| val < 623 } # 623 is the first valid year to convert
+        if accumulator.any? { |val| val < FIRST_VALID_GREGORIAN_TO_HIJRI_YEAR } # 623 is the first valid year to convert
           accumulator.replace([])
           return
         end
