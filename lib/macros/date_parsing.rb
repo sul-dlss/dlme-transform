@@ -56,6 +56,29 @@ module Macros
       end
     end
 
+    # Extracts dates from slice of MARC 008 field
+    #  to_field "date_range", extract_marc("008[06-14]"), marc_date_range
+    #  or, if you have marcxml, get the correct bytes from 008 into the accumulator then call this
+    # see https://www.loc.gov/marc/bibliographic/bd008a.html
+    # does NOT work for BC dates (or negative dates) - because MARC 008 isn't set up for that
+    def marc_date_range
+      lambda do |_record, accumulator, _context|
+        val = accumulator.first
+        date_type = val[0]
+        if date_type == 's'
+          first_year = ParseDate.earliest_year(val[1..4])
+          last_year = ParseDate.latest_year(val[1..4])
+          accumulator.replace(Macros::DateParsing.year_array(first_year, last_year))
+        elsif date_type.match?(/[cdikmq]/)
+          first_year = ParseDate.earliest_year(val[1..4])
+          last_year = ParseDate.latest_year(val[5..8])
+          accumulator.replace(Macros::DateParsing.year_array(first_year, last_year))
+        else
+          accumulator.replace([])
+        end
+      end
+    end
+
     # Extracts earliest & latest dates from Penn museum record and merges into singe date range value
     def penn_museum_date_range
       lambda do |record, accumulator, _context|
@@ -65,8 +88,8 @@ module Macros
       end
     end
 
-    # @param [String] first_year, expecting parseable string for .to_i
-    # @param [String] last_year year, expecting parseable string for .to_i
+    # @param [String] first_year - parseable string for .to_i
+    # @param [String] last_year - expecting parseable string for .to_i
     # @return [Array] array of Integer year values from first to last, inclusive
     def self.year_array(first_year, last_year)
       first_year = first_year.to_i if first_year.is_a? String

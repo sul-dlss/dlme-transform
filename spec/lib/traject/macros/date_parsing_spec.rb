@@ -114,6 +114,39 @@ RSpec.describe Macros::DateParsing do
     end
   end
 
+  describe '#marc_date_range' do
+    let(:raw_val_lambda) do
+      lambda do |record, accumulator|
+        accumulator << record[:raw]
+      end
+    end
+    {
+      # 008[06-14] => expected result
+      'i17811799' => (1781..1799).to_a,
+      'k08uu09uu' => (800..999).to_a,
+      'q159u159u' => (1590..1599).to_a,
+      's1554    ' => [1554],
+      's15uu    ' => (1500..1599).to_a,
+      's193u    ' => (1930..1939).to_a,
+      's08uu    ' => (800..899).to_a
+    }.each_pair do |raw_val, expected|
+      it "#{raw_val} from 008[06-14] gets correct result" do
+        indexer.to_field('range', raw_val_lambda, indexer.marc_date_range)
+        expect(indexer.map_record(raw: raw_val)).to include 'range' => expected
+      end
+    end
+
+    [
+      't19821949', # date range not valid
+      'a19992000' # unrecognized date_type 'a'
+    ].each do |raw_val|
+      it "#{raw_val} from 008[06-14] has no value as expected" do
+        indexer.to_field('range', raw_val_lambda, indexer.marc_date_range)
+        expect(indexer.map_record(raw: raw_val)).to eq({})
+      end
+    end
+  end
+
   describe '#penn_museum_date_range' do
     before do
       indexer.instance_eval do
