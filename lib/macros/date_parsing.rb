@@ -51,9 +51,7 @@ module Macros
           accumulator.replace(Macros::DateParsing.year_array(first_year, last_year))
         else
           single_date_nodeset = record.xpath(FGDC_SINGLE_DATE_XPATH, FGDC_NS)
-          if single_date_nodeset.present?
-            accumulator.replace([ParseDate.earliest_year(single_date_nodeset.text&.strip)])
-          end
+          accumulator.replace([ParseDate.earliest_year(single_date_nodeset.text&.strip)]) if single_date_nodeset.present?
         end
       end
     end
