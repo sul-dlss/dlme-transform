@@ -79,6 +79,17 @@ module Macros
       end
     end
 
+    # Takes an existing array of year integers and returns an array converted to hijri
+    # with an additional year added to the end to account for the non-365 day calendar
+    def hijri_range
+      lambda do |_record, accumulator, _context|
+        return if accumulator.empty?
+
+        accumulator.replace((
+          Macros::DateParsing.to_hijri(accumulator.first)..Macros::DateParsing.to_hijri(accumulator.last) + 1).to_a)
+      end
+    end
+
     # Extracts earliest & latest dates from Penn museum record and merges into singe date range value
     def penn_museum_date_range
       lambda do |record, accumulator, _context|
@@ -88,8 +99,20 @@ module Macros
       end
     end
 
-    # @param [String] first_year - parseable string for .to_i
-    # @param [String] last_year - expecting parseable string for .to_i
+    HIJRI_MODIFIER = 1.030684
+    HIJRI_OFFSET = 621.5643
+
+    # @param [Integer] a single year to be converted
+    # @return [Integer] a converted integer year
+    # This method uses the first formula provided here: https://en.wikipedia.org/wiki/Hijri_year#Formula
+    def self.to_hijri(year)
+      return unless year.is_a? Integer
+
+      (HIJRI_MODIFIER * (year - HIJRI_OFFSET)).floor
+    end
+
+    # @param [String] first_year, expecting parseable string for .to_i
+    # @param [String] last_year year, expecting parseable string for .to_i
     # @return [Array] array of Integer year values from first to last, inclusive
     def self.year_array(first_year, last_year)
       first_year = first_year.to_i if first_year.is_a? String

@@ -114,6 +114,30 @@ RSpec.describe Macros::DateParsing do
     end
   end
 
+  describe '#hijri_range' do
+    before do
+      indexer.instance_eval do
+        to_field 'int_array', accumulate { |record, *_| record[:value] }, hijri_range
+      end
+    end
+
+    it 'receives a range of integers' do
+      expect(indexer.map_record(value: [2010, 2011, 2012])).to include 'int_array' => [1431, 1432, 1433, 1434]
+    end
+
+    it 'receives a single value' do
+      expect(indexer.map_record(value: [623])).to include 'int_array' => [1, 2]
+    end
+
+    it 'is not provided a value' do
+      expect(indexer.map_record(value: [])).to be_empty
+    end
+
+    it 'receives a bc value' do
+      expect(indexer.map_record(value: [-10, -9, -8])).to include 'int_array' => [-651, -650, -649, -648]
+    end
+  end
+
   describe '#marc_date_range' do
     let(:raw_val_lambda) do
       lambda do |record, accumulator|

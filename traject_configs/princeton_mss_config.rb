@@ -27,6 +27,7 @@ to_field 'cho_creator', extract_json('.author'), strip
 to_field 'cho_contributor', extract_json('.contributor'), strip
 to_field 'cho_date', extract_json('.date'), strip
 to_field 'cho_date_range_norm', extract_json('.date'), strip, range_array_from_positive_4digits_hyphen
+to_field 'cho_date_range_hijri', extract_json('.date'), strip, range_array_from_positive_4digits_hyphen, hijri_range
 to_field 'cho_dc_rights', literal('https://rbsc.princeton.edu/services/imaging-publication-services')
 to_field 'cho_description', extract_json('.description'), strip
 to_field 'cho_description', extract_json('.contents'), strip

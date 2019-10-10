@@ -65,7 +65,6 @@ GEM
     faraday (0.17.0)
       multipart-post (>= 1.2, < 3)
     hashie (3.6.0)
-    hijri (0.6.0)
     http (3.3.0)
       addressable (~> 2.3)
       http-cookie (~> 1.0)
@@ -181,7 +180,6 @@ DEPENDENCIES
   config
   dry-validation
   faraday
-  hijri
   parse_date
   pry-byebug
   rspec
