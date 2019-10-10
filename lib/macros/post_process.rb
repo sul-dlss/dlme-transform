@@ -3,7 +3,6 @@
 module Macros
   # Macros for post-processing data
   module PostProcess
-    # rubocop:disable Metrics/MethodLength
     # Converts one or more fields from arrays or strings into hashes with language codes
     # @example
     #   convert_to_language_hash => lambda { ... }
@@ -26,6 +25,5 @@ module Macros
         end
       end
     end
-    # rubocop:enable Metrics/MethodLength
   end
 end
