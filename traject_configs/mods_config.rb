@@ -2,12 +2,14 @@
 
 require 'traject_plus'
 require 'dlme_json_resource_writer'
+require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/mods'
 require 'macros/normalize_type'
 require 'macros/stanford'
 require 'macros/post_process'
 
+extend Macros::DateParsing
 extend Macros::PostProcess
 extend Macros::DLME
 extend TrajectPlus::Macros
