@@ -126,7 +126,6 @@ RSpec.describe Macros::DateParsing do
     end
 
     it 'receives a single value' do
-      # note this is the first valid date that can be converted
       expect(indexer.map_record(value: [623])).to include 'int_array' => [1, 2]
     end
 

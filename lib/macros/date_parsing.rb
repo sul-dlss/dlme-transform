@@ -79,8 +79,6 @@ module Macros
       end
     end
 
-    FIRST_VALID_GREGORIAN_TO_HIJRI_YEAR = 623
-
     # Takes an existing array of year integers and returns an array converted to hijri
     # with an additional year added to the end to account for the non-365 day calendar
     def hijri_range
@@ -114,8 +112,7 @@ module Macros
 
     # @param [Integer] a single year to be converted
     # @return [Integer] a converted integer year
-    # This method uses the first formulat provided here: https://en.wikipedia.org/wiki/Hijri_year#Formula
-    # This assumes rounding down, not up
+    # This method uses the first formula provided here: https://en.wikipedia.org/wiki/Hijri_year#Formula
     def self.to_hijri(year)
       return unless year.is_a? Integer
 
