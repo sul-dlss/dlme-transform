@@ -16,7 +16,7 @@ module Macros
 
         range_years = accumulator.first.delete(' ')
 
-        unless range_years.=~(/^[0-9-;]+$/)
+        unless range_years.match?(/^[0-9-;]+$/)
           accumulator.replace([])
           return
         end
