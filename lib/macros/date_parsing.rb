@@ -83,15 +83,7 @@ module Macros
     # with an additional year added to the end to account for the non-365 day calendar
     def hijri_range
       lambda do |_record, accumulator, _context|
-        unless accumulator.is_a? Array
-          accumulator.replace([])
-          return
-        end
-
-        if accumulator.empty?
-          accumulator.replace([])
-          return
-        end
+        return if accumulator.empty?
 
         accumulator.replace((
           Macros::DateParsing.to_hijri(accumulator.first)..Macros::DateParsing.to_hijri(accumulator.last) + 1).to_a)
