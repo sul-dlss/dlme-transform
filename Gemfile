@@ -7,7 +7,6 @@ gem 'activesupport', '~> 5.2'
 gem 'config'
 gem 'dry-validation'
 gem 'faraday'
-gem 'hijri'
 gem 'parse_date'
 gem 'thor', '~> 0.20' # for CLI
 gem 'timetwister' # for date parsing

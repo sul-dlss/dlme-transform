@@ -2,7 +2,6 @@
 
 require 'timetwister'
 require 'parse_date'
-require 'hijri'
 
 # Macros for Traject transformations.
 module Macros
@@ -69,11 +68,14 @@ module Macros
           accumulator.replace([])
           return
         end
+
         if accumulator.empty?
           accumulator.replace([])
           return
         end
-        accumulator.replace((Macros::DateParsing.to_hijri(accumulator.first)..Macros::DateParsing.to_hijri(accumulator.last)+1).to_a)
+
+        accumulator.replace((
+          Macros::DateParsing.to_hijri(accumulator.first)..Macros::DateParsing.to_hijri(accumulator.last) + 1).to_a)
       end
     end
 
@@ -95,7 +97,8 @@ module Macros
     # This assumes rounding down, not up
     def self.to_hijri(year)
       return unless year.is_a? Integer
-      return (HIJRI_MODIFIER*(year-HIJRI_OFFSET)).floor
+
+      (HIJRI_MODIFIER * (year - HIJRI_OFFSET)).floor
     end
 
     # @param [String] first_year, expecting parseable string for .to_i
