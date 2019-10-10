@@ -25,11 +25,13 @@ RSpec.describe Macros::DateParsing do
   end
 
   describe '#range_array_from_positive_4digits_hyphen' do
-    it 'parseable values' do
+    before do
       indexer.instance_eval do
         to_field 'int_array', accumulate { |record, *_| record[:value] }, range_array_from_positive_4digits_hyphen
       end
+    end
 
+    it 'parseable values' do
       expect(indexer.map_record(value: '2019')).to include 'int_array' => [2019]
       expect(indexer.map_record(value: '2017-2019')).to include 'int_array' => [2017, 2018, 2019]
       expect(indexer.map_record(value: '2017 - 2019')).to include 'int_array' => [2017, 2018, 2019]
@@ -37,20 +39,19 @@ RSpec.describe Macros::DateParsing do
     end
 
     it 'when missing date' do
-      indexer.instance_eval do
-        to_field 'int_array', accumulate { |record, *_| record[:value] }, range_array_from_positive_4digits_hyphen
-      end
-
       expect(indexer.map_record({})).to eq({})
     end
   end
 
   describe '#fgdc_date_range' do
+    before do
+      indexer.instance_eval do
+        to_field 'range', fgdc_date_range
+      end
+    end
+
     context 'when rngdates element provided' do
       it 'range is from begdate to enddate' do
-        indexer.instance_eval do
-          to_field 'range', fgdc_date_range
-        end
         rec_str = <<-XML
           <?xml version="1.0" encoding="utf-8" ?>
           <!DOCTYPE metadata SYSTEM "http://www.fgdc.gov/metadata/fgdc-std-001-1998.dtd">
@@ -73,9 +74,6 @@ RSpec.describe Macros::DateParsing do
     end
     context 'when single date provided' do
       it 'range is a single value Array' do
-        indexer.instance_eval do
-          to_field 'range', fgdc_date_range
-        end
         rec_str = <<-XML
         <?xml version="1.0" encoding="utf-8" ?>
         <!DOCTYPE metadata SYSTEM "http://www.fgdc.gov/metadata/fgdc-std-001-1998.dtd">
@@ -95,9 +93,6 @@ RSpec.describe Macros::DateParsing do
         expect(indexer.map_record(ng_rec)).to include 'range' => [1725]
       end
       it 'year in future results in no value' do
-        indexer.instance_eval do
-          to_field 'range', fgdc_date_range
-        end
         rec_str = <<-XML
         <?xml version="1.0" encoding="utf-8" ?>
         <!DOCTYPE metadata SYSTEM "http://www.fgdc.gov/metadata/fgdc-std-001-1998.dtd">
@@ -145,11 +140,14 @@ RSpec.describe Macros::DateParsing do
   end
 
   describe '#penn_museum_date_range' do
+    before do
+      indexer.instance_eval do
+        to_field 'range', penn_museum_date_range
+      end
+    end
+
     context 'when date_made_early and date_made_late populated' do
       it 'both dates and range are valid' do
-        indexer.instance_eval do
-          to_field 'range', penn_museum_date_range
-        end
         expect(indexer.map_record('date_made_early' => '-2', 'date_made_late' => '1')).to include 'range' => [-2, -1, 0, 1]
         expect(indexer.map_record('date_made_early' => '-11', 'date_made_late' => '1')).to include 'range' => (-11..1).to_a
         expect(indexer.map_record('date_made_early' => '-100', 'date_made_late' => '-99')).to include 'range' => [-100, -99]
@@ -159,42 +157,30 @@ RSpec.describe Macros::DateParsing do
         expect(indexer.map_record('date_made_early' => '300', 'date_made_late' => '319')).to include 'range' => (300..319).to_a
         expect(indexer.map_record('date_made_early' => '666', 'date_made_late' => '666')).to include 'range' => [666]
       end
+
       it 'invalid range raises exception' do
-        indexer.instance_eval do
-          to_field 'range', penn_museum_date_range
-        end
         expect { indexer.map_record('date_made_early' => '1539', 'date_made_late' => '1292') }.to raise_error(StandardError, 'unable to create year array from 1539, 1292')
       end
+
       it 'future date year raises exception' do
-        indexer.instance_eval do
-          to_field 'range', penn_museum_date_range
-        end
         expect { indexer.map_record('date_made_early' => '1539', 'date_made_late' => '2050') }.to raise_error(StandardError, 'unable to create year array from 1539, 2050')
       end
     end
+
     it 'when one date is empty, range is a single year' do
-      indexer.instance_eval do
-        to_field 'range', penn_museum_date_range
-      end
       expect(indexer.map_record('date_made_early' => '300')).to include 'range' => [300]
       expect(indexer.map_record('date_made_late' => '666')).to include 'range' => [666]
     end
+
     it 'when both dates are empty, no error is raised' do
-      indexer.instance_eval do
-        to_field 'range', penn_museum_date_range
-      end
       expect(indexer.map_record({})).to eq({})
     end
+
     it 'date strings with no numbers are interpreted as missing' do
-      indexer.instance_eval do
-        to_field 'range', penn_museum_date_range
-      end
       expect(indexer.map_record('date_made_early' => 'not_a_number', 'date_made_late' => 'me_too')).to eq({})
     end
+
     it 'date strings with text and numbers are interpreted as 0' do
-      indexer.instance_eval do
-        to_field 'range', penn_museum_date_range
-      end
       expect(indexer.map_record('date_made_early' => 'not999', 'date_made_late' => 'year of 1939')).to include 'range' => [0]
     end
   end

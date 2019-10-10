@@ -28,7 +28,7 @@ module Macros
     def single_year_from_string
       lambda do |_record, accumulator, _context|
         accumulator.map! do |val|
-          ParseDate.year_int_from_date_str(val)
+          ParseDate.earliest_year(val)
         end
       end
     end
@@ -46,14 +46,35 @@ module Macros
       lambda do |record, accumulator, _context|
         date_range_nodeset = record.xpath(FGDC_DATE_RANGE_XPATH, FGDC_NS)
         if date_range_nodeset.present?
-          first_year = ParseDate.year_int_from_date_str(date_range_nodeset.xpath('begdate', FGDC_NS)&.text&.strip)
-          last_year = ParseDate.year_int_from_date_str(date_range_nodeset.xpath('enddate', FGDC_NS)&.text&.strip)
+          first_year = ParseDate.earliest_year(date_range_nodeset.xpath('begdate', FGDC_NS)&.text&.strip)
+          last_year = ParseDate.earliest_year(date_range_nodeset.xpath('enddate', FGDC_NS)&.text&.strip)
           accumulator.replace(Macros::DateParsing.year_array(first_year, last_year))
         else
           single_date_nodeset = record.xpath(FGDC_SINGLE_DATE_XPATH, FGDC_NS)
-          if single_date_nodeset.present?
-            accumulator.replace([ParseDate.year_int_from_date_str(single_date_nodeset.text&.strip)])
-          end
+          accumulator.replace([ParseDate.earliest_year(single_date_nodeset.text&.strip)]) if single_date_nodeset.present?
+        end
+      end
+    end
+
+    # Extracts dates from slice of MARC 008 field
+    #  to_field "date_range", extract_marc("008[06-14]"), marc_date_range
+    #  or, if you have marcxml, get the correct bytes from 008 into the accumulator then call this
+    # see https://www.loc.gov/marc/bibliographic/bd008a.html
+    # does NOT work for BC dates (or negative dates) - because MARC 008 isn't set up for that
+    def marc_date_range
+      lambda do |_record, accumulator, _context|
+        val = accumulator.first
+        date_type = val[0]
+        if date_type == 's'
+          first_year = ParseDate.earliest_year(val[1..4])
+          last_year = ParseDate.latest_year(val[1..4])
+          accumulator.replace(Macros::DateParsing.year_array(first_year, last_year))
+        elsif date_type.match?(/[cdikmq]/)
+          first_year = ParseDate.earliest_year(val[1..4])
+          last_year = ParseDate.latest_year(val[5..8])
+          accumulator.replace(Macros::DateParsing.year_array(first_year, last_year))
+        else
+          accumulator.replace([])
         end
       end
     end
