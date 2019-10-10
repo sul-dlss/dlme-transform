@@ -65,12 +65,15 @@ module Macros
     # with an additional year added to the end to account for the non-365 day calendar
     def hijri_range
       lambda do |_record, accumulator, _context|
-        if accumulator.any? { |val| val < FIRST_VALID_GREGORIAN_TO_HIJRI_YEAR } # 623 is the first valid year to convert
+        unless accumulator.is_a? Array
           accumulator.replace([])
           return
         end
-        accumulator.map! { |val| Date.new(val).to_hijri.year }
-        accumulator << accumulator.last + 1 if accumulator.any?
+        if accumulator.empty?
+          accumulator.replace([])
+          return
+        end
+        accumulator.replace((Macros::DateParsing.to_hijri(accumulator.first)..Macros::DateParsing.to_hijri(accumulator.last)+1).to_a)
       end
     end
 
@@ -81,6 +84,18 @@ module Macros
         last_year = record['date_made_late'].to_i if record['date_made_late']&.match(/\d+/)
         accumulator.replace(Macros::DateParsing.year_array(first_year, last_year))
       end
+    end
+
+    HIJRI_MODIFIER = 1.030684
+    HIJRI_OFFSET = 621.5643
+
+    # @param [Integer] a single year to be converted
+    # @return [Integer] a converted integer year
+    # This method uses the first formulat provided here: https://en.wikipedia.org/wiki/Hijri_year#Formula
+    # This assumes rounding down, not up
+    def self.to_hijri(year)
+      return unless year.is_a? Integer
+      return (HIJRI_MODIFIER*(year-HIJRI_OFFSET)).floor
     end
 
     # @param [String] first_year, expecting parseable string for .to_i

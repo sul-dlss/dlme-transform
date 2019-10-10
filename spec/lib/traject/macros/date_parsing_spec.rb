@@ -139,8 +139,8 @@ RSpec.describe Macros::DateParsing do
       expect(indexer.map_record(value: [])).to be_empty
     end
 
-    it 'receives an invalid value' do
-      expect(indexer.map_record(value: [622])).to be_empty
+    it 'receives a bc value' do
+      expect(indexer.map_record(value: [-10, -9, -8])).to include 'int_array' => [-651, -650, -649, -648]
     end
   end
 
