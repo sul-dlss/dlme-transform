@@ -3,18 +3,16 @@
 require 'traject/macros/marc21_semantics'
 require 'traject/macros/marc_format_classifier'
 require 'dlme_json_resource_writer'
-require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/dlme_marc'
 require 'macros/post_process'
 
-extend Macros::DateParsing
-extend Macros::DLME
-extend Macros::DlmeMarc
 extend Macros::PostProcess
+extend Macros::DLME
 extend Traject::Macros::Marc21
 extend Traject::Macros::Marc21Semantics
 extend Traject::Macros::MarcFormats
+extend Macros::DlmeMarc
 extend TrajectPlus::Macros
 
 settings do
@@ -44,7 +42,7 @@ to_field 'cho_creator', extract_role('700', 'creator')
 to_field 'cho_creator', extract_role('710', 'creator')
 to_field 'cho_creator', extract_role('711', 'creator')
 to_field 'cho_date', marc_publication_date, transform(&:to_s)
-to_field 'cho_date_range_norm', extract_marc('008[06-14]'), marc_date_range
+# to_field 'cho_date_range_norm', marc_publication_date, transform(&:to_s)
 # to_field 'cho_dc_rights', ?
 to_field 'cho_description', extract_marc('500:505:520')
 to_field 'cho_edm_type', marc_type_to_edm
