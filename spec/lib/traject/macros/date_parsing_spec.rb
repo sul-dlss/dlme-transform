@@ -74,17 +74,14 @@ RSpec.describe Macros::DateParsing do
   end
 
   describe '#american_numismatic_date_range' do
-
-    context 'when start date and end date populated' do
-      it 'both dates and range are valid' do
-        indexer.to_field('range', raw_val_lambda, indexer.american_numismatic_date_range)
-        expect(indexer.map_record(raw: '999|1001')).to include 'range' => [999, 1000, 1001]
-        expect(indexer.map_record(raw: '-1001|-999')).to include 'range' => [-1001, -1000, -999]
-        expect(indexer.map_record(raw: '999')).to include 'range' => [999]
-        expect(indexer.map_record(raw: '999| 1001')).to include 'range' => [999, 1000, 1001]
-        expect(indexer.map_record(raw: '999 |1001')).to include 'range' => [999, 1000, 1001]
-        expect(indexer.map_record(raw: '-99|1')).to include 'range' => (-99..1).to_a
-      end
+    it 'both dates and range are valid' do
+      indexer.to_field('range', raw_val_lambda, indexer.american_numismatic_date_range)
+      expect(indexer.map_record(raw: '999|1001')).to include 'range' => [999, 1000, 1001]
+      expect(indexer.map_record(raw: '-1001|-999')).to include 'range' => [-1001, -1000, -999]
+      expect(indexer.map_record(raw: '999')).to include 'range' => [999]
+      expect(indexer.map_record(raw: '999| 1001')).to include 'range' => [999, 1000, 1001]
+      expect(indexer.map_record(raw: '999 |1001')).to include 'range' => [999, 1000, 1001]
+      expect(indexer.map_record(raw: '-99|1')).to include 'range' => (-99..1).to_a
     end
   end
 

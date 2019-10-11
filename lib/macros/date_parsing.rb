@@ -55,6 +55,7 @@ module Macros
     def american_numismatic_date_range
       lambda do |_record, accumulator|
         return if accumulator.empty?
+
         val = accumulator.first
         dates = val.split('|')
         first_year = dates[0].to_i if dates[0]&.match(/\d+/)
