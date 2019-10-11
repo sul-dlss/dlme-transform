@@ -118,7 +118,7 @@ module Macros
         accumulator.replace(Macros::DateParsing.year_array(first_year, last_year))
        end
      end
-     
+
     # Takes an existing array of year integers and returns an array converted to hijri
     # with an additional year added to the end to account for the non-365 day calendar
     def hijri_range
