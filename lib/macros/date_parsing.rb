@@ -113,6 +113,15 @@ module Macros
       end
     end
 
+    # Extracts earliest & latest dates from Met record and merges into singe date range value
+    def met_date_range
+      lambda do |record, accumulator, _context|
+        first_year = record['objectBeginDate']
+        last_year = record['objectEndDate']
+        accumulator.replace(Macros::DateParsing.year_array(first_year, last_year))
+      end
+    end
+
     # Takes an existing array of year integers and returns an array converted to hijri
     # with an additional year added to the end to account for the non-365 day calendar
     def hijri_range

@@ -212,6 +212,44 @@ RSpec.describe Macros::DateParsing do
     end
   end
 
+  describe '#met_date_range' do
+    before do
+      indexer.instance_eval do
+        to_field 'range', met_date_range
+      end
+    end
+
+    context 'when objectBeginDate and objectEndDate populated' do
+      it 'both dates and range are valid' do
+        expect(indexer.map_record('objectBeginDate' => '-2', 'objectEndDate' => '1')).to include 'range' => [-2, -1, 0, 1]
+        expect(indexer.map_record('objectBeginDate' => '-11', 'objectEndDate' => '1')).to include 'range' => (-11..1).to_a
+        expect(indexer.map_record('objectBeginDate' => '-100', 'objectEndDate' => '-99')).to include 'range' => [-100, -99]
+        expect(indexer.map_record('objectBeginDate' => '-1540', 'objectEndDate' => '-1538')).to include 'range' => (-1540..-1538).to_a
+        expect(indexer.map_record('objectBeginDate' => '0', 'objectEndDate' => '99')).to include 'range' => (0..99).to_a
+        expect(indexer.map_record('objectBeginDate' => '1', 'objectEndDate' => '10')).to include 'range' => (1..10).to_a
+        expect(indexer.map_record('objectBeginDate' => '300', 'objectEndDate' => '319')).to include 'range' => (300..319).to_a
+        expect(indexer.map_record('objectBeginDate' => '666', 'objectEndDate' => '666')).to include 'range' => [666]
+      end
+
+      it 'invalid range raises exception' do
+        expect { indexer.map_record('objectBeginDate' => '1539', 'objectEndDate' => '1292') }.to raise_error(StandardError, 'unable to create year array from 1539, 1292')
+      end
+    end
+
+    it 'when one date is empty, range is a single year' do
+      expect(indexer.map_record('objectBeginDate' => '300')).to include 'range' => [300]
+      expect(indexer.map_record('objectEndDate' => '666')).to include 'range' => [666]
+    end
+
+    it 'when both dates are empty, no error is raised' do
+      expect(indexer.map_record({})).to eq({})
+    end
+
+    it 'date strings with text and numbers are interpreted as 0' do
+      expect(indexer.map_record('date_made_early' => 'not999', 'date_made_late' => 'year of 1939')).to eq({})
+    end
+  end
+
   describe '#penn_museum_date_range' do
     before do
       indexer.instance_eval do
