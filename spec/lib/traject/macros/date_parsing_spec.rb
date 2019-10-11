@@ -36,6 +36,12 @@ RSpec.describe Macros::DateParsing do
     end
   end
 
+  let(:raw_val_lambda) do
+    lambda do |record, accumulator|
+      accumulator << record[:raw]
+    end
+  end
+
   describe '#single_year_from_string' do
     context 'Sun, 12 Nov 2017 14:08:12 +0000' do
       it 'gets 2017' do
@@ -64,6 +70,21 @@ RSpec.describe Macros::DateParsing do
 
     it 'when missing date' do
       expect(indexer.map_record({})).to eq({})
+    end
+  end
+
+  describe '#american_numismatic_date_range' do
+
+    context 'when start date and end date populated' do
+      it 'both dates and range are valid' do
+        indexer.to_field('range', raw_val_lambda, indexer.american_numismatic_date_range)
+        expect(indexer.map_record(raw: '999|1001')).to include 'range' => [999, 1000, 1001]
+        expect(indexer.map_record(raw: '-1001|-999')).to include 'range' => [-1001, -1000, -999]
+        expect(indexer.map_record(raw: '999')).to include 'range' => [999]
+        expect(indexer.map_record(raw: '999| 1001')).to include 'range' => [999, 1000, 1001]
+        expect(indexer.map_record(raw: '999 |1001')).to include 'range' => [999, 1000, 1001]
+        expect(indexer.map_record(raw: '-99|1')).to include 'range' => (-99..1).to_a
+      end
     end
   end
 
@@ -163,11 +184,6 @@ RSpec.describe Macros::DateParsing do
   end
 
   describe '#marc_date_range' do
-    let(:raw_val_lambda) do
-      lambda do |record, accumulator|
-        accumulator << record[:raw]
-      end
-    end
     {
       # 008[06-14] => expected result
       'i17811799' => (1781..1799).to_a,
