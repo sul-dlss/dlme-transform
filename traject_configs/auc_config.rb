@@ -33,6 +33,7 @@ to_field 'cho_coverage', extract_oai('dc:coverage'), strip
 to_field 'cho_creator', extract_oai('dc:creator'),
          strip, split('.')
 to_field 'cho_date', extract_oai('dc:date'), strip
+to_field 'cho_date_range_norm', extract_oai('dc:date'), strip, range_array_from_positive_4digits_hyphen
 to_field 'cho_date_range_norm', extract_oai('dc:date'), strip, array_from_range
 to_field 'cho_date_range_hijri', extract_oai('dc:date'), strip, array_from_range, hijri_range
 to_field 'cho_description', extract_oai('dc:description'), strip
