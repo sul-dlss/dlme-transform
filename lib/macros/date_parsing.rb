@@ -96,17 +96,20 @@ module Macros
       lambda do |_record, accumulator, _context|
         val = accumulator.first
         date_type = val[0]
-        if date_type == 's'
-          first_year = ParseDate.earliest_year(val[1..4])
-          last_year = ParseDate.latest_year(val[1..4])
-          accumulator.replace(Macros::DateParsing.year_array(first_year, last_year))
-        elsif date_type.match?(/[cdikmq]/)
-          first_year = ParseDate.earliest_year(val[1..4])
-          last_year = ParseDate.latest_year(val[5..8])
-          accumulator.replace(Macros::DateParsing.year_array(first_year, last_year))
-        else
+        unless date_type.match?(/[cdeikmqrs]/)
           accumulator.replace([])
+          return
         end
+
+        # these work for date_type.match?([cdikmq])
+        first_year = ParseDate.earliest_year(val[1..4])
+        last_year = ParseDate.latest_year(val[5..8])
+        if date_type.match?(/[se]/)
+          last_year = ParseDate.latest_year(val[1..4])
+        elsif date_type == 'r'
+          first_year = ParseDate.earliest_year(val[5..8])
+        end
+        accumulator.replace(Macros::DateParsing.year_array(first_year, last_year))
       end
     end
 
