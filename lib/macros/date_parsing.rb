@@ -103,6 +103,8 @@ module Macros
         first_year = record['objectBeginDate'].to_i if record['objectBeginDate'].to_s =~ /\d+/
         last_year = record['objectEndDate'].to_i if record['objectEndDate'].to_s =~ /\d+/
         accumulator.replace(Macros::DateParsing.year_array(first_year, last_year))
+       end
+     end
 
     # Takes an existing array of year integers and returns an array converted to hijri
     # with an additional year added to the end to account for the non-365 day calendar
