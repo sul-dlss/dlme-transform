@@ -12,6 +12,12 @@ RSpec.describe Macros::DateParsing do
     end
   end
 
+  let(:raw_val_lambda) do
+    lambda do |record, accumulator|
+      accumulator << record[:raw]
+    end
+  end
+
   describe '#array_from_range' do
     before do
       indexer.instance_eval do
@@ -33,12 +39,6 @@ RSpec.describe Macros::DateParsing do
 
     it 'gets a nil value' do
       expect(indexer.map_record(value: nil)).to be_empty
-    end
-  end
-
-  let(:raw_val_lambda) do
-    lambda do |record, accumulator|
-      accumulator << record[:raw]
     end
   end
 
