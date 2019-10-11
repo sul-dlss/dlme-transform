@@ -2,15 +2,17 @@
 
 require 'traject_plus'
 require 'dlme_json_resource_writer'
+require 'macros/date_parsing'
 require 'macros/dlme'
-require 'macros/oai'
 require 'macros/michigan'
+require 'macros/oai'
 require 'macros/post_process'
 
-extend Macros::PostProcess
+extend Macros::DateParsing
 extend Macros::DLME
 extend Macros::Michigan
 extend Macros::OAI
+extend Macros::PostProcess
 extend TrajectPlus::Macros
 extend TrajectPlus::Macros::Xml
 
@@ -29,7 +31,9 @@ to_field 'cho_title', extract_xpath("//datafield[@tag='880']/subfield[contains(t
 to_field 'cho_creator', extract_xpath("//datafield[@tag='100']/subfield[@code='a']")
 to_field 'cho_creator', extract_xpath("//datafield[@tag='880']/subfield[contains(text(),'100-01/')]/../subfield[@code='a']"), strip
 to_field 'cho_date', extract_xpath("//datafield[@tag='260']"), strip
-# to_field 'cho_date_range_norm', extract_xpath("//datafield[@tag='260']"), strip
+to_field 'cho_date_range_norm', extract_xpath("//controlfield[@tag='008']"),
+         ->(_rec, acc) { acc.map! { |raw| raw[6..14] } },
+         marc_date_range
 to_field 'cho_description', extract_xpath("//datafield[@tag='300']"), strip
 to_field 'cho_description', extract_xpath("//datafield[@tag='520']"), strip
 to_field 'cho_description', extract_xpath("//datafield[@tag='500']"),
