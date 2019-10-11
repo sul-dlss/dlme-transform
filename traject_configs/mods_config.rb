@@ -2,12 +2,14 @@
 
 require 'traject_plus'
 require 'dlme_json_resource_writer'
+require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/mods'
 require 'macros/normalize_type'
 require 'macros/stanford'
 require 'macros/post_process'
 
+extend Macros::DateParsing
 extend Macros::PostProcess
 extend Macros::DLME
 extend TrajectPlus::Macros
@@ -47,6 +49,7 @@ to_field 'cho_date', extract_mods('/*/mods:originInfo/mods:dateCreated')
 to_field 'cho_date', extract_mods('/*/mods:originInfo/mods:copyrightDate')
 to_field 'cho_date', extract_mods('/*/mods:originInfo/mods:dateIssued')
 to_field 'cho_date_range_norm', extract_mods('/*/mods:originInfo/mods:dateCreated')
+to_field 'cho_date_range_hijri', extract_mods('/*/mods:originInfo/mods:dateCreated'), hijri_range
 to_field 'cho_dc_rights', first(
   extract_mods('/*/mods:accessCondition[@type="restrictionOnAccess"]/@xlink:href'),
   extract_mods('/*/mods:accessCondition[@type="restriction on access"]')

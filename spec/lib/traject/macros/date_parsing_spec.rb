@@ -12,6 +12,30 @@ RSpec.describe Macros::DateParsing do
     end
   end
 
+  describe '#array_from_range' do
+    before do
+      indexer.instance_eval do
+        to_field 'int_array', accumulate { |record, *_| record[:value] }, array_from_range
+      end
+    end
+
+    it 'gets a range of years' do
+      expect(indexer.map_record(value: '1880; 1881; 1882; 1883; 1884')).to include 'int_array' => [1880, 1881, 1882, 1883, 1884]
+    end
+
+    it 'gets a range of negative years' do
+      expect(indexer.map_record(value: '-881; -880; -879; -878; -877')).to include 'int_array' => [-881, -880, -879, -878, -877]
+    end
+
+    it 'gets a string' do
+      expect(indexer.map_record(value: 'ca. late 19th century')).to be_empty
+    end
+
+    it 'gets a nil value' do
+      expect(indexer.map_record(value: nil)).to be_empty
+    end
+  end
+
   describe '#single_year_from_string' do
     context 'Sun, 12 Nov 2017 14:08:12 +0000' do
       it 'gets 2017' do
@@ -111,6 +135,30 @@ RSpec.describe Macros::DateParsing do
         ng_rec = Nokogiri::XML.parse(rec_str)
         expect(indexer.map_record(ng_rec)).not_to include 'range'
       end
+    end
+  end
+
+  describe '#hijri_range' do
+    before do
+      indexer.instance_eval do
+        to_field 'int_array', accumulate { |record, *_| record[:value] }, hijri_range
+      end
+    end
+
+    it 'receives a range of integers' do
+      expect(indexer.map_record(value: [2010, 2011, 2012])).to include 'int_array' => [1431, 1432, 1433, 1434]
+    end
+
+    it 'receives a single value' do
+      expect(indexer.map_record(value: [623])).to include 'int_array' => [1, 2]
+    end
+
+    it 'is not provided a value' do
+      expect(indexer.map_record(value: [])).to be_empty
+    end
+
+    it 'receives a bc value' do
+      expect(indexer.map_record(value: [-10, -9, -8])).to include 'int_array' => [-651, -650, -649, -648]
     end
   end
 
