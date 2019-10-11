@@ -230,27 +230,19 @@ RSpec.describe Macros::DateParsing do
       it 'invalid range raises exception' do
         expect { indexer.map_record('objectBeginDate' => '1539', 'objectEndDate' => '1292') }.to raise_error(StandardError, 'unable to create year array from 1539, 1292')
       end
-
-      it 'future date year raises exception' do
-        expect { indexer.map_record('objectBeginDate' => '1539', 'objectEndDate' => '2050') }.to raise_error(StandardError, 'unable to create year array from 1539, 2050')
-      end
     end
 
     it 'when one date is empty, range is a single year' do
       expect(indexer.map_record('objectBeginDate' => '300')).to include 'range' => [300]
-      expect(indexer.map_record('objectBeginDate' => '666')).to include 'range' => [666]
+      expect(indexer.map_record('objectEndDate' => '666')).to include 'range' => [666]
     end
 
     it 'when both dates are empty, no error is raised' do
       expect(indexer.map_record({})).to eq({})
     end
 
-    it 'date strings with no numbers are interpreted as missing' do
-      expect(indexer.map_record('objectBeginDate' => 'not_a_number', 'objectEndDate' => 'me_too')).to eq({})
-    end
-
     it 'date strings with text and numbers are interpreted as 0' do
-      expect(indexer.map_record('objectBeginDate' => 'not999', 'objectEndDate' => 'year of 1939')).to include 'range' => [0]
+      expect(indexer.map_record('date_made_early' => 'not999', 'date_made_late' => 'year of 1939')).to eq({})
     end
   end
 
