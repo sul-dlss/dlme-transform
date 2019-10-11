@@ -121,6 +121,15 @@ module Macros
       end
     end
 
+    # Extracts earliest & latest dates from Met record and merges into singe date range value
+    def met_date_range
+      lambda do |record, accumulator, _context|
+        first_year = record['objectBeginDate'].to_i if record['objectBeginDate'].to_s =~ /\d+/
+        last_year = record['objectEndDate'].to_i if record['objectEndDate'].to_s =~ /\d+/
+        accumulator.replace(Macros::DateParsing.year_array(first_year, last_year))
+      end
+    end
+
     # Extracts earliest & latest dates from Penn museum record and merges into singe date range value
     def penn_museum_date_range
       lambda do |record, accumulator, _context|
