@@ -1,43 +1,103 @@
 [
   {
     "trajects": [
-      "pppa_config.rb"
+      "aims_config.rb"
     ],
     "paths": [
-      "palestine-posters"
+      "aims"
     ],
-    "extension": ".csv",
+    "extension": ".xml",
     "settings": {
-      "agg_provider": "Palestine Poster Project Archive",
-      "agg_provider_country": "United States of America",
-      "agg_data_provider": "Palestine Poster Project Archive",
-      "agg_data_provider_country": "United States of America",
-      "agg_provider_ar": "أرشيف ملصق فلسطين",
-      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "agg_data_provider_ar": "أرشيف ملصق فلسطين",
-      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "inst_id": "pppa"
+      "agg_provider": "The American Institute for Maghrib Studies",
+      "agg_provider_country": "Morocco",
+      "agg_data_provider": "The American Institute for Maghrib Studies",
+      "agg_data_provider_country": "Morocco",
+      "agg_provider_ar": "المعهد الأمريكي لدراسات المغرب",
+      "agg_provider_country_ar": "المغرب",
+      "agg_data_provider_ar": "المعهد الأمريكي لدراسات المغرب",
+      "agg_data_provider_country_ar": "المغرب",
+      "inst_id": "aims"
     }
   },
   {
     "trajects": [
-      "mods_config.rb",
-      "stanford_mods_config.rb"
+      "numismatic_csv_config.rb"
     ],
     "paths": [
-      "stanford/maps"
+      "american-numismatic-society/islamic-department"
     ],
-    "extension": ".mods",
+    "extension": ".csv",
     "settings": {
-      "agg_provider": "Stanford Libraries",
+      "agg_provider": "American Numismatic Society",
       "agg_provider_country": "United States of America",
-      "agg_data_provider": "Stanford Libraries",
+      "agg_data_provider": "American Numismatic Society",
       "agg_data_provider_country": "United States of America",
-      "agg_provider_ar": "مكتبات ستانفورد",
+      "agg_provider_ar": "الجمعية الأمريكية لهواة جمع العملات",
       "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "agg_data_provider_ar": "مكتبات ستانفورد",
+      "agg_data_provider_ar": "الجمعية الأمريكية لهواة جمع العملات",
       "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "inst_id": "stanford"
+      "inst_id": "ans"
+    }
+  },
+  {
+    "trajects": [
+      "aub_common_config.rb"
+    ],
+    "paths": [
+      "aub"
+    ],
+    "extension": ".xml",
+    "settings": {
+      "agg_provider": "American University of Beirut",
+      "agg_provider_country": "Lebanon",
+      "agg_data_provider": "American University of Beirut",
+      "agg_data_provider_country": "Lebanon",
+      "agg_provider_ar": "الجامعة الأمريكية في بيروت",
+      "agg_provider_country_ar": "لبنان",
+      "agg_data_provider_ar": "الجامعة الأمريكية في بيروت",
+      "agg_data_provider_country_ar": "لبنان",
+      "inst_id": "aub"
+    }
+  },
+  {
+    "trajects": [
+      "aub_common_config.rb",
+      "aub_aladab_config.rb"
+    ],
+    "paths": [
+      "aub/aladab"
+    ],
+    "extension": ".xml",
+    "settings": {
+      "agg_provider": "American University of Beirut",
+      "agg_provider_country": "Lebanon",
+      "agg_data_provider": "American University of Beirut",
+      "agg_data_provider_country": "Lebanon",
+      "agg_provider_ar": "الجامعة الأمريكية في بيروت",
+      "agg_provider_country_ar": "لبنان",
+      "agg_data_provider_ar": "الجامعة الأمريكية في بيروت",
+      "agg_data_provider_country_ar": "لبنان",
+      "inst_id": "aub/aladab"
+    }
+  },
+  {
+    "trajects": [
+      "auc_config.rb"
+    ],
+    "paths": [
+      "auc"
+    ],
+    "extension": ".xml",
+    "settings": {
+      "agg_provider": "American University in Cairo",
+      "agg_provider_country": "Egypt",
+      "agg_data_provider": "American University in Cairo",
+      "agg_data_provider_country": "Egypt",
+      "agg_provider_ar": "الجامعة الأمريكية في القاهرة",
+      "agg_provider_country_ar": "مصر",
+      "agg_data_provider_ar": "الجامعة الأمريكية في القاهرة",
+      "agg_data_provider_country_ar": "مصر",
+      "inst_id": "auc"
     }
   },
   {
@@ -84,6 +144,106 @@
   },
   {
     "trajects": [
+      "bodleian_config.rb"
+    ],
+    "paths": [
+      "bodleian"
+    ],
+    "extension": ".json",
+    "settings": {
+      "agg_provider": "Bodleian Libraries",
+      "agg_provider_country": "United Kingdom",
+      "agg_data_provider": "Bodleian Libraries",
+      "agg_data_provider_country": "United Kingdom",
+      "agg_provider_ar": "مكتبات بودليان",
+      "agg_provider_country_ar": "المملكة المتحدة",
+      "agg_data_provider_ar": "مكتبات بودليان",
+      "agg_data_provider_country_ar": "المملكة المتحدة",
+      "inst_id": "bodleian"
+    }
+  },
+  {
+    "trajects": [
+      "cambridge_config.rb"
+    ],
+    "paths": [
+      "cambridge"
+    ],
+    "extension": ".xml",
+    "settings": {
+      "agg_provider": "Cambridge University Library",
+      "agg_provider_country": "United Kingdom",
+      "agg_data_provider": "Cambridge University Library",
+      "agg_data_provider_country": "United Kingdom",
+      "agg_provider_ar": "مكتبة جامعة كامبريدج",
+      "agg_provider_country_ar": "المملكة المتحدة",
+      "agg_data_provider_ar": "مكتبة جامعة كامبريدج",
+      "agg_data_provider_country_ar": "المملكة المتحدة",
+      "inst_id": "cambridge"
+    }
+  },
+  {
+    "trajects": [
+      "cluster_config.rb"
+    ],
+    "paths": [
+      "cluster"
+    ],
+    "extension": ".json",
+    "settings": {
+      "agg_provider": "CLUSTER",
+      "agg_provider_country": "Egypt",
+      "agg_data_provider": "CLUSTER",
+      "agg_data_provider_country": "Egypt",
+      "agg_provider_ar": "مختبر عمران القاهرة للتصميم والدراسات",
+      "agg_provider_country_ar": "مصر",
+      "agg_data_provider_ar": "مختبر عمران القاهرة للتصميم والدراسات",
+      "agg_data_provider_country_ar": "مصر",
+      "inst_id": "cluster"
+    }
+  },
+  {
+    "trajects": [
+      "harvard_ihp_config.rb"
+    ],
+    "paths": [
+      "harvard/islamic-heritage-project"
+    ],
+    "extension": ".xml",
+    "settings": {
+      "agg_provider": "Harvard University Library",
+      "agg_provider_country": "United States of America",
+      "agg_data_provider": "Harvard University's Libraries and Museums",
+      "agg_data_provider_country": "United States of America",
+      "agg_provider_ar": "مكتبة جامعة هارفارد",
+      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "agg_data_provider_ar": "مكتبات ومتاحف جامعة هارفارد",
+      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "inst_id": "harvard"
+    }
+  },
+  {
+    "trajects": [
+      "fgdc_config.rb"
+    ],
+    "paths": [
+      "harvard/maps"
+    ],
+    "extension": ".xml",
+    "settings": {
+      "agg_provider": "Harvard University Library",
+      "agg_provider_country": "United States of America",
+      "agg_data_provider": "Harvard University. Center for Geographic Analysis",
+      "agg_data_provider_country": "United States of America",
+      "agg_provider_ar": "مكتبة جامعة هارفارد",
+      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "agg_data_provider_ar": "جامعة هارفارد، مركز التحليل الجغرافي",
+      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "inst_id": "harvard"
+    }
+  },
+  {
+    "trajects": [
       "met_config.rb"
     ],
     "paths": [
@@ -104,63 +264,42 @@
   },
   {
     "trajects": [
-      "princeton_mss_config.rb"
+      "michigan_config.rb"
     ],
     "paths": [
-      "princeton/princeton_mss",
-      "princeton/princeton_ymdi"
+      "michigan"
     ],
-    "extension": ".json",
+    "extension": ".xml",
     "settings": {
-      "agg_provider": "Princeton University Library",
+      "agg_provider": "University of Michigan",
       "agg_provider_country": "United States of America",
-      "agg_data_provider": "Princeton University Library",
+      "agg_data_provider": "University of Michigan",
       "agg_data_provider_country": "United States of America",
-      "agg_provider_ar": "مكتبة جامعة برينستون",
+      "agg_provider_ar": "جامعة ميشيغان",
       "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "agg_data_provider_ar": "مكتبة جامعة برينستون",
+      "agg_data_provider_ar": "جامعة ميشيغان",
       "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "inst_id": "princeton"
+      "inst_id": "michigan"
     }
   },
   {
     "trajects": [
-      "princeton_movie_config.rb"
+      "pppa_config.rb"
     ],
     "paths": [
-      "princeton/princeton-movie-posters"
-    ],
-    "extension": ".json",
-    "settings": {
-      "agg_provider": "Princeton University Library",
-      "agg_provider_country": "United States of America",
-      "agg_data_provider": "Princeton University Library",
-      "agg_data_provider_country": "United States of America",
-      "agg_provider_ar": "مكتبة جامعة برينستون",
-      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "agg_data_provider_ar": "مكتبة جامعة برينستون",
-      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "inst_id": "princeton"
-    }
-  },
-  {
-    "trajects": [
-      "numismatic_csv_config.rb"
-    ],
-    "paths": [
-      "american-numismatic-society/islamic-department"
+      "palestine-posters"
     ],
     "extension": ".csv",
     "settings": {
-      "agg_provider": "American Numismatic Society",
+      "agg_provider": "Palestine Poster Project Archive",
       "agg_provider_country": "United States of America",
-      "agg_data_provider": "American Numismatic Society",
+      "agg_data_provider": "Palestine Poster Project Archive",
       "agg_data_provider_country": "United States of America",
-      "agg_provider_ar": "الجمعية الأمريكية لهواة جمع العملات",
+      "agg_provider_ar": "أرشيف ملصق فلسطين",
       "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "agg_data_provider_ar": "الجمعية الأمريكية لهواة جمع العملات",
+      "agg_data_provider_ar": "أرشيف ملصق فلسطين",
       "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "inst_id": "ans"
+      "inst_id": "pppa"
     }
   },
   {
@@ -186,26 +325,6 @@
   },
   {
     "trajects": [
-      "fgdc_config.rb"
-    ],
-    "paths": [
-      "harvard/maps"
-    ],
-    "extension": ".xml",
-    "settings": {
-      "agg_provider": "Harvard University Library",
-      "agg_provider_country": "United States of America",
-      "agg_data_provider": "Harvard University. Center for Geographic Analysis",
-      "agg_data_provider_country": "United States of America",
-      "agg_provider_ar": "مكتبة جامعة هارفارد",
-      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "agg_data_provider_ar": "جامعة هارفارد، مركز التحليل الجغرافي",
-      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "inst_id": "harvard"
-    }
-  },
-  {
-    "trajects": [
       "marc_config.rb"
     ],
     "paths": [
@@ -222,168 +341,6 @@
       "agg_data_provider_ar": "مكتبات جامعة بنسلفانيا",
       "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
       "inst_id": "penn_marc"
-    }
-  },
-  {
-    "trajects": [
-      "sakip_sabanci_config.rb"
-    ],
-    "paths": [
-      "sakip-sabanci"
-    ],
-    "extension": ".xml",
-    "settings": {
-      "agg_provider": "Sakip Sabanci Museum",
-      "agg_provider_country": "Turkey",
-      "agg_data_provider": "Sakip Sabanci Museum",
-      "agg_data_provider_country": "Turkey",
-      "agg_provider_ar": "متحف صاقب صابونجي",
-      "agg_provider_country_ar": "تركيا",
-      "agg_data_provider_ar": "متحف صاقب صابونجي",
-      "agg_data_provider_country_ar": "تركيا",
-      "inst_id": "sakip-sabanci"
-    }
-  },
-  {
-    "trajects": [
-      "auc_config.rb"
-    ],
-    "paths": [
-      "auc"
-    ],
-    "extension": ".xml",
-    "settings": {
-      "agg_provider": "American University in Cairo",
-      "agg_provider_country": "Egypt",
-      "agg_data_provider": "American University in Cairo",
-      "agg_data_provider_country": "Egypt",
-      "agg_provider_ar": "الجامعة الأمريكية في القاهرة",
-      "agg_provider_country_ar": "مصر",
-      "agg_data_provider_ar": "الجامعة الأمريكية في القاهرة",
-      "agg_data_provider_country_ar": "مصر",
-      "inst_id": "auc"
-    }
-  },
-  {
-    "trajects": [
-      "qnl_config.rb"
-    ],
-    "paths": [
-      "qnl"
-    ],
-    "extension": ".xml",
-    "settings": {
-      "agg_provider": "Qatar National Library",
-      "agg_provider_country": "Qatar",
-      "agg_data_provider": "British Library. India Office Records and Private Papers",
-      "agg_data_provider_country": "United Kingdom",
-      "agg_provider_ar": "مكتبة قطر الوطنية",
-      "agg_provider_country_ar": "قطر",
-      "agg_data_provider_ar": "المكتبة البريطانية، سجلات مكتب الهند والأوراق الخاصة",
-      "agg_data_provider_country_ar": "المملكة المتحدة",
-      "inst_id": "qnl"
-    }
-  },
-  {
-    "trajects": [
-      "harvard_ihp_config.rb"
-    ],
-    "paths": [
-      "harvard/islamic-heritage-project"
-    ],
-    "extension": ".xml",
-    "settings": {
-      "agg_provider": "Harvard University Library",
-      "agg_provider_country": "United States of America",
-      "agg_data_provider": "Harvard University's Libraries and Museums",
-      "agg_data_provider_country": "United States of America",
-      "agg_provider_ar": "مكتبة جامعة هارفارد",
-      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "agg_data_provider_ar": "مكتبات ومتاحف جامعة هارفارد",
-      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "inst_id": "harvard"
-    }
-  },
-  {
-    "trajects": [
-      "aub_common_config.rb",
-      "aub_aladab_config.rb"
-    ],
-    "paths": [
-      "aub/aladab"
-    ],
-    "extension": ".xml",
-    "settings": {
-      "agg_provider": "American University of Beirut",
-      "agg_provider_country": "Lebanon",
-      "agg_data_provider": "American University of Beirut",
-      "agg_data_provider_country": "Lebanon",
-      "agg_provider_ar": "الجامعة الأمريكية في بيروت",
-      "agg_provider_country_ar": "لبنان",
-      "agg_data_provider_ar": "الجامعة الأمريكية في بيروت",
-      "agg_data_provider_country_ar": "لبنان",
-      "inst_id": "aub/aladab"
-    }
-  },
-  {
-    "trajects": [
-      "aub_common_config.rb"
-    ],
-    "paths": [
-      "aub"
-    ],
-    "extension": ".xml",
-    "settings": {
-      "agg_provider": "American University of Beirut",
-      "agg_provider_country": "Lebanon",
-      "agg_data_provider": "American University of Beirut",
-      "agg_data_provider_country": "Lebanon",
-      "agg_provider_ar": "الجامعة الأمريكية في بيروت",
-      "agg_provider_country_ar": "لبنان",
-      "agg_data_provider_ar": "الجامعة الأمريكية في بيروت",
-      "agg_data_provider_country_ar": "لبنان",
-      "inst_id": "aub"
-    }
-  },
-  {
-    "trajects":[
-      "aims_config.rb"
-    ],
-    "paths": [
-      "aims"
-    ],
-    "extension": ".xml",
-    "settings": {
-      "agg_provider": "The American Institute for Maghrib Studies",
-      "agg_provider_country": "Morocco",
-      "agg_data_provider": "The American Institute for Maghrib Studies",
-      "agg_data_provider_country": "Morocco",
-      "agg_provider_ar": "المعهد الأمريكي لدراسات المغرب",
-      "agg_provider_country_ar": "المغرب",
-      "agg_data_provider_ar": "المعهد الأمريكي لدراسات المغرب",
-      "agg_data_provider_country_ar": "المغرب",
-      "inst_id": "aims"
-    }
-  },
-  {
-    "trajects": [
-      "openn_config.rb"
-    ],
-    "paths": [
-      "penn/openn/penn-0001",
-      "penn/openn/penn-0002"
-    ],
-    "extension": ".xml",
-    "settings": {
-      "agg_provider": "University of Pennsylvania Libraries",
-      "agg_provider_country": "United States of America",
-      "agg_data_provider": "University of Pennsylvania Libraries",
-      "agg_data_provider_country": "United States of America",
-      "agg_provider_ar": "مكتبات جامعة بنسلفانيا",
-      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "agg_data_provider_ar": "مكتبات جامعة بنسلفانيا",
-      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "inst_id": "penn"
     }
   },
   {
@@ -431,6 +388,27 @@
       "openn_config.rb"
     ],
     "paths": [
+      "penn/openn/penn-0001",
+      "penn/openn/penn-0002"
+    ],
+    "extension": ".xml",
+    "settings": {
+      "agg_provider": "University of Pennsylvania Libraries",
+      "agg_provider_country": "United States of America",
+      "agg_data_provider": "University of Pennsylvania Libraries",
+      "agg_data_provider_country": "United States of America",
+      "agg_provider_ar": "مكتبات جامعة بنسلفانيا",
+      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "agg_data_provider_ar": "مكتبات جامعة بنسلفانيا",
+      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "inst_id": "penn"
+    }
+  },
+  {
+    "trajects": [
+      "openn_config.rb"
+    ],
+    "paths": [
       "penn/openn/philadelphia-museum-art-0031"
     ],
     "extension": ".xml",
@@ -448,82 +426,104 @@
   },
   {
     "trajects": [
-      "cambridge_config.rb"
+      "princeton_movie_config.rb"
     ],
     "paths": [
-      "cambridge"
+      "princeton/princeton-movie-posters"
     ],
-    "extension": ".xml",
+    "extension": ".json",
     "settings": {
-      "agg_provider": "Cambridge University Library",
-      "agg_provider_country": "United Kingdom",
-      "agg_data_provider": "Cambridge University Library",
-      "agg_data_provider_country": "United Kingdom",
-      "agg_provider_ar": "مكتبة جامعة كامبريدج",
-      "agg_provider_country_ar": "المملكة المتحدة",
-      "agg_data_provider_ar": "مكتبة جامعة كامبريدج",
-      "agg_data_provider_country_ar": "المملكة المتحدة",
-      "inst_id": "cambridge"
-    }
-  },
-  {
-    "trajects": [
-      "michigan_config.rb"
-    ],
-    "paths": [
-      "michigan"
-    ],
-    "extension": ".xml",
-    "settings": {
-      "agg_provider": "University of Michigan",
+      "agg_provider": "Princeton University Library",
       "agg_provider_country": "United States of America",
-      "agg_data_provider": "University of Michigan",
+      "agg_data_provider": "Princeton University Library",
       "agg_data_provider_country": "United States of America",
-      "agg_provider_ar": "جامعة ميشيغان",
+      "agg_provider_ar": "مكتبة جامعة برينستون",
       "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "agg_data_provider_ar": "جامعة ميشيغان",
+      "agg_data_provider_ar": "مكتبة جامعة برينستون",
       "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "inst_id": "michigan"
+      "inst_id": "princeton"
     }
   },
   {
     "trajects": [
-      "bodleian_config.rb"
+      "princeton_mss_config.rb"
     ],
     "paths": [
-      "bodleian"
+      "princeton/princeton_mss",
+      "princeton/princeton_ymdi"
     ],
     "extension": ".json",
     "settings": {
-      "agg_provider": "Bodleian Libraries",
-      "agg_provider_country": "United Kingdom",
-      "agg_data_provider": "Bodleian Libraries",
+      "agg_provider": "Princeton University Library",
+      "agg_provider_country": "United States of America",
+      "agg_data_provider": "Princeton University Library",
+      "agg_data_provider_country": "United States of America",
+      "agg_provider_ar": "مكتبة جامعة برينستون",
+      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "agg_data_provider_ar": "مكتبة جامعة برينستون",
+      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "inst_id": "princeton"
+    }
+  },
+  {
+    "trajects": [
+      "qnl_config.rb"
+    ],
+    "paths": [
+      "qnl"
+    ],
+    "extension": ".xml",
+    "settings": {
+      "agg_provider": "Qatar National Library",
+      "agg_provider_country": "Qatar",
+      "agg_data_provider": "British Library. India Office Records and Private Papers",
       "agg_data_provider_country": "United Kingdom",
-      "agg_provider_ar": "مكتبات بودليان",
-      "agg_provider_country_ar": "المملكة المتحدة",
-      "agg_data_provider_ar": "مكتبات بودليان",
+      "agg_provider_ar": "مكتبة قطر الوطنية",
+      "agg_provider_country_ar": "قطر",
+      "agg_data_provider_ar": "المكتبة البريطانية، سجلات مكتب الهند والأوراق الخاصة",
       "agg_data_provider_country_ar": "المملكة المتحدة",
-      "inst_id": "bodleian"
+      "inst_id": "qnl"
     }
   },
   {
     "trajects": [
-      "cluster_config.rb"
+      "sakip_sabanci_config.rb"
     ],
     "paths": [
-      "cluster"
+      "sakip-sabanci"
     ],
-    "extension": ".json",
+    "extension": ".xml",
     "settings": {
-      "agg_provider": "CLUSTER",
-      "agg_provider_country": "Egypt",
-      "agg_data_provider": "CLUSTER",
-      "agg_data_provider_country": "Egypt",
-      "agg_provider_ar": "مختبر عمران القاهرة للتصميم والدراسات",
-      "agg_provider_country_ar": "مصر",
-      "agg_data_provider_ar": "مختبر عمران القاهرة للتصميم والدراسات",
-      "agg_data_provider_country_ar": "مصر",
-      "inst_id": "cluster"
+      "agg_provider": "Sakip Sabanci Museum",
+      "agg_provider_country": "Turkey",
+      "agg_data_provider": "Sakip Sabanci Museum",
+      "agg_data_provider_country": "Turkey",
+      "agg_provider_ar": "متحف صاقب صابونجي",
+      "agg_provider_country_ar": "تركيا",
+      "agg_data_provider_ar": "متحف صاقب صابونجي",
+      "agg_data_provider_country_ar": "تركيا",
+      "inst_id": "sakip-sabanci"
+    }
+  },
+  {
+    "trajects": [
+      "mods_config.rb",
+      "stanford_mods_config.rb"
+    ],
+    "paths": [
+      "stanford/maps"
+    ],
+    "extension": ".mods",
+    "settings": {
+      "agg_provider": "Stanford Libraries",
+      "agg_provider_country": "United States of America",
+      "agg_data_provider": "Stanford Libraries",
+      "agg_data_provider_country": "United States of America",
+      "agg_provider_ar": "مكتبات ستانفورد",
+      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "agg_data_provider_ar": "مكتبات ستانفورد",
+      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "inst_id": "stanford"
     }
   }
 ]

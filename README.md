@@ -131,6 +131,18 @@ Traject indexer as additional settings.
 Additional metadata mappings can be added to this file. In case a metadata file
 matches more than one configuration, the first one wins.
 
+#### Sorting transform configs
+
+To enhance readability of the transform configuration (`config/metadata_mapping.json`), a Rake task has been added. The task loads the contents of `config/metadata_mapping.json` into memory, sorts the array alphabetically (ascending, *i.e.*, A-Z) by the first value in the mapping's `paths` array. This way, the mappings for AIMS and AUC will appear before those for Stanford and Princeton and it ought to be easier to locate mappings within the file.
+
+Invoke it like so:
+
+```shell
+$ rake mappings:sort
+```
+
+Note that this task modifies `config/metadata_mapping.json`, and you will need to commit and push this via version control to persist the changes.
+
 ## API Documentation
 https://www.rubydoc.info/github/sul-dlss/dlme-transform
 
