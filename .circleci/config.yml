@@ -38,10 +38,6 @@ jobs:
           - vendor/bundle
 
       - run:
-          name: Check styles using rubocop
-          command: bundle exec rubocop
-
-      - run:
           name: Setup Code Climate test-reporter
           command: |
             curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
@@ -53,11 +49,11 @@ jobs:
           command: |
             curl -L https://github.com/sul-dlss/dlme-metadata/archive/master.zip > master.zip
             unzip -q master.zip
-            cp -r dlme-metadata-master/[a-z]* data/
+            mv dlme-metadata-master/* data/
 
       - run:
-          name: Run rspec tests
-          command: bundle exec rspec
+          name: Run Rubocop and RSpec tests
+          command: bundle exec rake
 
       - run:
           name: Send coverage report to Code Climate
