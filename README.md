@@ -97,7 +97,7 @@ Note that actual S3 credentials are available from `shared_configs`.
 
 For more information on traject, [read the documentation](https://github.com/traject/traject#Traject)
 
-### Configuring transforms
+## Configuring transforms
 
 Configuration for transforms is specified in `config/metadata_mapping.json`. For example:
 
@@ -131,7 +131,7 @@ Traject indexer as additional settings.
 Additional metadata mappings can be added to this file. In case a metadata file
 matches more than one configuration, the first one wins.
 
-#### Sorting transform configs
+### Sorting transform configs
 
 To enhance readability of the transform configuration (`config/metadata_mapping.json`), a Rake task has been added. The task loads the contents of `config/metadata_mapping.json` into memory, sorts the array alphabetically (ascending, *i.e.*, A-Z) by the first value in the mapping's `paths` array. This way, the mappings for AIMS and AUC will appear before those for Stanford and Princeton and it ought to be easier to locate mappings within the file.
 
@@ -154,4 +154,12 @@ unmapped language is encountered. For example:
 ```ruby
 to_field 'cho_language', extract_xpath("#{record}/dc:language", ns: NS), first_only,
          strip, translation_map('not_found', 'marc_languages')
+```
+
+## Testing
+
+To run the code linter (Rubocop) and the test suite, including unit and integration tests, run:
+
+```shell
+$ bundle exec rake
 ```

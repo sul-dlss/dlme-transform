@@ -4,6 +4,14 @@
 $LOAD_PATH.unshift(File.join(File.expand_path(__dir__), 'lib'))
 
 require 'cli' # loads dependency tree needed for tasks below
+require 'rspec/core/rake_task'
+require 'rubocop/rake_task'
+
+RuboCop::RakeTask.new
+RSpec::Core::RakeTask.new(:spec)
+
+desc 'Run linter and tests'
+task default: %i[rubocop spec]
 
 desc 'Mapping-related tasks'
 namespace :mappings do
