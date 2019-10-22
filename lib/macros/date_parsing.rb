@@ -46,7 +46,7 @@ module Macros
         dates = val.split('|')
         first_year = dates[0].to_i if dates[0]&.match(/\d+/)
         last_year = dates[1].to_i if dates[1]&.match(/\d+/)
-        accumulator.replace(Macros::DateParsing.year_array(first_year, last_year))
+        accumulator.replace(ParseDate.range_array(first_year, last_year))
       end
     end
 
@@ -65,7 +65,7 @@ module Macros
         if date_range_nodeset.present?
           first_year = ParseDate.earliest_year(date_range_nodeset.xpath('begdate', FGDC_NS)&.text&.strip)
           last_year = ParseDate.earliest_year(date_range_nodeset.xpath('enddate', FGDC_NS)&.text&.strip)
-          accumulator.replace(Macros::DateParsing.year_array(first_year, last_year))
+          accumulator.replace(ParseDate.range_array(first_year, last_year))
         else
           single_date_nodeset = record.xpath(FGDC_SINGLE_DATE_XPATH, FGDC_NS)
           accumulator.replace([ParseDate.earliest_year(single_date_nodeset.text&.strip)]) if single_date_nodeset.present?
@@ -95,7 +95,7 @@ module Macros
         elsif date_type == 'r'
           first_year = ParseDate.earliest_year(val[5..8])
         end
-        accumulator.replace(Macros::DateParsing.year_array(first_year, last_year))
+        accumulator.replace(ParseDate.range_array(first_year, last_year))
       end
     end
 
@@ -104,7 +104,7 @@ module Macros
       lambda do |record, accumulator, _context|
         first_year = record['objectBeginDate']
         last_year = record['objectEndDate']
-        accumulator.replace(Macros::DateParsing.year_array(first_year, last_year))
+        accumulator.replace(ParseDate.range_array(first_year, last_year))
       end
     end
 
@@ -124,7 +124,7 @@ module Macros
       lambda do |record, accumulator, _context|
         first_year = record['date_made_early'].to_i if record['date_made_early']&.match(/\d+/)
         last_year = record['date_made_late'].to_i if record['date_made_late']&.match(/\d+/)
-        accumulator.replace(Macros::DateParsing.year_array(first_year, last_year))
+        accumulator.replace(ParseDate.range_array(first_year, last_year))
       end
     end
 
@@ -138,29 +138,6 @@ module Macros
       return unless year.is_a? Integer
 
       (HIJRI_MODIFIER * (year - HIJRI_OFFSET)).floor
-    end
-
-    # @param [String] first_year, expecting parseable string for .to_i
-    # @param [String] last_year year, expecting parseable string for .to_i
-    # @return [Array] array of Integer year values from first to last, inclusive
-    def self.year_array(first_year, last_year)
-      first_year = first_year.to_i if first_year.is_a? String
-      last_year = last_year.to_i if last_year.is_a? String
-
-      return [] unless last_year || first_year
-      return [first_year] if last_year.nil? && first_year
-      return [last_year] if first_year.nil? && last_year
-      raise(StandardError, "unable to create year array from #{first_year}, #{last_year}") unless
-        year_range_valid?(first_year, last_year)
-
-      Range.new(first_year, last_year).to_a
-    end
-
-    def self.year_range_valid?(first_year, last_year)
-      return false if first_year > Date.today.year + 2 || last_year > Date.today.year + 2
-      return false if first_year > last_year
-
-      true
     end
   end
 end
