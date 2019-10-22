@@ -37,7 +37,9 @@ module Macros
       end
     end
 
-    # Extracts earliest & latest dates from American Numismatic Society record and merges into singe date range value
+    # Extracts earliest & latest dates from American Numismatic Society record and merges into single date range value
+    # parse_range balks because there are values '-2100 - -2000' and it doesn't go that "low" for parse_range method
+    # See https://github.com/sul-dlss/parse_date/issues/31 and https://github.com/sul-dlss/dlme-transform/issues/295
     def american_numismatic_date_range
       lambda do |_record, accumulator|
         return if accumulator.empty?
