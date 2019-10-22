@@ -34,7 +34,8 @@ to_field 'agg_data_provider', data_provider_ar, lang('ar-Arab')
 to_field 'cho_date', column('date_made')
 to_field 'cho_date', column('date_made_early')
 to_field 'cho_date', column('date_made_late')
-# to_field 'cho_date_range_norm', penn_museum_date_range
+to_field 'cho_date_range_norm', penn_museum_date_range
+to_field 'cho_date_range_hijri', penn_museum_date_range, hijri_range
 to_field 'cho_description', column('description')
 to_field 'cho_description', column('technique'), split('|')
 to_field 'cho_edm_type', literal('Image')
