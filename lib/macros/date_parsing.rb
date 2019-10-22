@@ -37,16 +37,6 @@ module Macros
       end
     end
 
-    # Parse strings like 'Sun, 12 Nov 2017 14:08:12 +0000' for a single year
-    # nil if the year is NOT between -999 and (current year + 2), per parse_date gem
-    def single_year_from_string
-      lambda do |_record, accumulator, _context|
-        accumulator.map! do |val|
-          ParseDate.earliest_year(val)
-        end
-      end
-    end
-
     # Extracts earliest & latest dates from American Numismatic Society record and merges into singe date range value
     def american_numismatic_date_range
       lambda do |_record, accumulator|

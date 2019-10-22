@@ -42,18 +42,6 @@ RSpec.describe Macros::DateParsing do
     end
   end
 
-  describe '#single_year_from_string' do
-    context 'Sun, 12 Nov 2017 14:08:12 +0000' do
-      it 'gets 2017' do
-        indexer.instance_eval do
-          to_field 'int_array', accumulate { |record, *_| record[:value] }, single_year_from_string
-        end
-
-        expect(indexer.map_record(value: 'Sun, 12 Nov 2017 14:08:12 +0000')).to include 'int_array' => [2017]
-      end
-    end
-  end
-
   describe '#parse_range' do
     before do
       indexer.instance_eval do
@@ -75,6 +63,7 @@ RSpec.describe Macros::DateParsing do
       expect(indexer.map_record(value: 'between 300 and 150 B.C')).to include 'int_array' => (-300..-150).to_a
       expect(indexer.map_record(value: '18th century CE')).to include 'int_array' => (1700..1799).to_a
       expect(indexer.map_record(value: 'ca. 10th–9th century B.C.')).to include 'int_array' => (-1099..-900).to_a
+      expect(indexer.map_record(value: 'Sun, 12 Nov 2017 14:08:12 +0000')).to include 'int_array' => [2017] # aims
     end
 
     it 'when missing date' do
