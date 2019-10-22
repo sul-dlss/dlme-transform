@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require 'timetwister'
 require 'parse_date'
 
 # Macros for Traject transformations.
@@ -25,16 +24,13 @@ module Macros
       end
     end
 
-    # get array of year values in range, when string is:
-    # yyyy-yyyy
-    # yyyy - yyyy (can be one or more spaces by hyphen, but not other types of whitespace)
-    # yyyy  (one element in result)
-    #  will not work for negative numbers, or fewer than 4 digit years
-    def range_array_from_positive_4digits_hyphen
+    # given a string with date info, use parse_date gem to get an array of indicated years as integers
+    #  See https://github.com/sul-dlss/parse_date for info on what it can parse
+    def parse_range
       lambda do |_record, accumulator|
         range_years = []
         accumulator.each do |val|
-          range_years << Timetwister.parse(val).first[:index_dates]
+          range_years << ParseDate.parse_range(val)
         end
         range_years.flatten!.uniq! if range_years.any?
         accumulator.replace(range_years)
