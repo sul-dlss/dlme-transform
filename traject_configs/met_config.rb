@@ -57,6 +57,7 @@ to_field 'cho_medium', extract_json('.medium')
 to_field 'cho_date', generate_object_date, transform(&:presence)
 to_field 'cho_date', extract_json('.objectDate'), transform(&:presence)
 to_field 'cho_date_range_norm', met_date_range
+to_field 'cho_date_range_hijri', met_date_range, hijri_range
 to_field 'cho_identifier', extract_json('.accessionNumber')
 to_field 'cho_source', extract_json('.accessionNumber')
 to_field 'cho_temporal', extract_json('.period'), transform(&:presence)

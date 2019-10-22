@@ -34,6 +34,10 @@ to_field 'cho_date', extract_xpath("//datafield[@tag='260']"), strip
 to_field 'cho_date_range_norm', extract_xpath("//controlfield[@tag='008']"),
          ->(_rec, acc) { acc.map! { |raw| raw[6..14] } },
          marc_date_range
+to_field 'cho_date_range_hijri', extract_xpath("//controlfield[@tag='008']"),
+         ->(_rec, acc) { acc.map! { |raw| raw[6..14] } },
+         marc_date_range,
+         hijri_range
 to_field 'cho_description', extract_xpath("//datafield[@tag='300']"), strip
 to_field 'cho_description', extract_xpath("//datafield[@tag='520']"), strip
 to_field 'cho_description', extract_xpath("//datafield[@tag='500']"),

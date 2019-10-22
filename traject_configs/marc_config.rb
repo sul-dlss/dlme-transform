@@ -45,6 +45,7 @@ to_field 'cho_creator', extract_role('710', 'creator')
 to_field 'cho_creator', extract_role('711', 'creator')
 to_field 'cho_date', marc_publication_date, transform(&:to_s)
 to_field 'cho_date_range_norm', extract_marc('008[06-14]'), marc_date_range
+to_field 'cho_date_range_hijri', extract_marc('008[06-14]'), marc_date_range, hijri_range
 # to_field 'cho_dc_rights', ?
 to_field 'cho_description', extract_marc('500:505:520')
 to_field 'cho_edm_type', marc_type_to_edm
