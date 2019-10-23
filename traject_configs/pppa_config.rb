@@ -26,7 +26,8 @@ to_field 'cho_title', column('Title')
 # CHO Other
 to_field 'cho_creator', column('Creator')
 to_field 'cho_date', column('Date')
-# to_field 'cho_date_range_norm', column('Date'), range_array_from_positive_4digits_hyphen
+to_field 'cho_date_range_norm', column('Date'), parse_range
+to_field 'cho_date_range_hijri', column('Date'), parse_range, hijri_range
 to_field 'cho_description', column('Description')
 to_field 'cho_edm_type', literal('Image')
 to_field 'cho_identifier', column('Resource-URL')

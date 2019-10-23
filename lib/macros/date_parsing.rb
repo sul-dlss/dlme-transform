@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require 'timetwister'
 require 'parse_date'
 
 # Macros for Traject transformations.
@@ -25,33 +24,22 @@ module Macros
       end
     end
 
-    # get array of year values in range, when string is:
-    # yyyy-yyyy
-    # yyyy - yyyy (can be one or more spaces by hyphen, but not other types of whitespace)
-    # yyyy  (one element in result)
-    #  will not work for negative numbers, or fewer than 4 digit years
-    def range_array_from_positive_4digits_hyphen
+    # given a string with date info, use parse_date gem to get an array of indicated years as integers
+    #  See https://github.com/sul-dlss/parse_date for info on what it can parse
+    def parse_range
       lambda do |_record, accumulator|
         range_years = []
         accumulator.each do |val|
-          range_years << Timetwister.parse(val).first[:index_dates]
+          range_years << ParseDate.parse_range(val)
         end
         range_years.flatten!.uniq! if range_years.any?
         accumulator.replace(range_years)
       end
     end
 
-    # Parse strings like 'Sun, 12 Nov 2017 14:08:12 +0000' for a single year
-    # nil if the year is NOT between -999 and (current year + 2), per parse_date gem
-    def single_year_from_string
-      lambda do |_record, accumulator, _context|
-        accumulator.map! do |val|
-          ParseDate.earliest_year(val)
-        end
-      end
-    end
-
-    # Extracts earliest & latest dates from American Numismatic Society record and merges into singe date range value
+    # Extracts earliest & latest dates from American Numismatic Society record and merges into single date range value
+    # parse_range balks because there are values '-2100 - -2000' and it doesn't go that "low" for parse_range method
+    # See https://github.com/sul-dlss/parse_date/issues/31 and https://github.com/sul-dlss/dlme-transform/issues/295
     def american_numismatic_date_range
       lambda do |_record, accumulator|
         return if accumulator.empty?
@@ -60,7 +48,7 @@ module Macros
         dates = val.split('|')
         first_year = dates[0].to_i if dates[0]&.match(/\d+/)
         last_year = dates[1].to_i if dates[1]&.match(/\d+/)
-        accumulator.replace(Macros::DateParsing.year_array(first_year, last_year))
+        accumulator.replace(ParseDate.range_array(first_year, last_year))
       end
     end
 
@@ -79,7 +67,7 @@ module Macros
         if date_range_nodeset.present?
           first_year = ParseDate.earliest_year(date_range_nodeset.xpath('begdate', FGDC_NS)&.text&.strip)
           last_year = ParseDate.earliest_year(date_range_nodeset.xpath('enddate', FGDC_NS)&.text&.strip)
-          accumulator.replace(Macros::DateParsing.year_array(first_year, last_year))
+          accumulator.replace(ParseDate.range_array(first_year, last_year))
         else
           single_date_nodeset = record.xpath(FGDC_SINGLE_DATE_XPATH, FGDC_NS)
           accumulator.replace([ParseDate.earliest_year(single_date_nodeset.text&.strip)]) if single_date_nodeset.present?
@@ -109,7 +97,7 @@ module Macros
         elsif date_type == 'r'
           first_year = ParseDate.earliest_year(val[5..8])
         end
-        accumulator.replace(Macros::DateParsing.year_array(first_year, last_year))
+        accumulator.replace(ParseDate.range_array(first_year, last_year))
       end
     end
 
@@ -118,7 +106,7 @@ module Macros
       lambda do |record, accumulator, _context|
         first_year = record['objectBeginDate']
         last_year = record['objectEndDate']
-        accumulator.replace(Macros::DateParsing.year_array(first_year, last_year))
+        accumulator.replace(ParseDate.range_array(first_year, last_year))
       end
     end
 
@@ -138,7 +126,7 @@ module Macros
       lambda do |record, accumulator, _context|
         first_year = record['date_made_early'].to_i if record['date_made_early']&.match(/\d+/)
         last_year = record['date_made_late'].to_i if record['date_made_late']&.match(/\d+/)
-        accumulator.replace(Macros::DateParsing.year_array(first_year, last_year))
+        accumulator.replace(ParseDate.range_array(first_year, last_year))
       end
     end
 
@@ -152,29 +140,6 @@ module Macros
       return unless year.is_a? Integer
 
       (HIJRI_MODIFIER * (year - HIJRI_OFFSET)).floor
-    end
-
-    # @param [String] first_year, expecting parseable string for .to_i
-    # @param [String] last_year year, expecting parseable string for .to_i
-    # @return [Array] array of Integer year values from first to last, inclusive
-    def self.year_array(first_year, last_year)
-      first_year = first_year.to_i if first_year.is_a? String
-      last_year = last_year.to_i if last_year.is_a? String
-
-      return [] unless last_year || first_year
-      return [first_year] if last_year.nil? && first_year
-      return [last_year] if first_year.nil? && last_year
-      raise(StandardError, "unable to create year array from #{first_year}, #{last_year}") unless
-        year_range_valid?(first_year, last_year)
-
-      Range.new(first_year, last_year).to_a
-    end
-
-    def self.year_range_valid?(first_year, last_year)
-      return false if first_year > Date.today.year + 2 || last_year > Date.today.year + 2
-      return false if first_year > last_year
-
-      true
     end
   end
 end

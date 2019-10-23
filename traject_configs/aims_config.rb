@@ -25,8 +25,8 @@ to_field 'cho_title', extract_aims('title'), strip
 # CHO Other
 to_field 'cho_creator', extract_aims('author'), strip
 to_field 'cho_date', extract_aims('pubDate'), strip
-to_field 'cho_date_range_norm', extract_aims('pubDate'), strip, single_year_from_string
-to_field 'cho_date_range_hijri', extract_aims('pubDate'), strip, single_year_from_string, hijri_range
+to_field 'cho_date_range_norm', extract_aims('pubDate'), strip, parse_range
+to_field 'cho_date_range_hijri', extract_aims('pubDate'), strip, parse_range, hijri_range
 to_field 'cho_dc_rights', literal('Use of content for classroom purposes
                                   and on other non-profit educational websites is granted (and encouraged) with proper citation.')
 to_field 'cho_description', extract_aims('summary'), strip

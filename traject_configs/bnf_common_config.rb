@@ -27,8 +27,8 @@ to_field 'cho_provenance', literal('This document is part of BnF website \'Bibli
 
 # Cho Other
 to_field 'cho_date', extract_srw('dc:date'), strip
-to_field 'cho_date_range_norm', extract_srw('dc:date'), strip, range_array_from_positive_4digits_hyphen
-to_field 'cho_date_range_hijri', extract_srw('dc:date'), strip, range_array_from_positive_4digits_hyphen, hijri_range
+to_field 'cho_date_range_norm', extract_srw('dc:date'), strip, parse_range
+to_field 'cho_date_range_hijri', extract_srw('dc:date'), strip, parse_range, hijri_range
 to_field 'cho_description', extract_srw('dc:description'), strip
 to_field 'cho_dc_rights', extract_srw('dc:rights'), strip
 to_field 'cho_format', extract_srw('dc:format'), strip

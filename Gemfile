@@ -10,7 +10,6 @@ gem 'faraday'
 gem 'parse_date'
 gem 'rake'
 gem 'thor', '~> 0.20' # for CLI
-gem 'timetwister' # for date parsing
 gem 'traject_plus', '~> 1.3'
 
 group :development, :test do
