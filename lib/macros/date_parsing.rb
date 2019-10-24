@@ -77,21 +77,6 @@ module Macros
       end
     end
 
-    # Extracts earliest & latest dates from American Numismatic Society record and merges into single date range value
-    # parse_range balks because there are values '-2100 - -2000' and it doesn't go that "low" for parse_range method
-    # See https://github.com/sul-dlss/parse_date/issues/31 and https://github.com/sul-dlss/dlme-transform/issues/295
-    def american_numismatic_date_range
-      lambda do |_record, accumulator|
-        return if accumulator.empty?
-
-        val = accumulator.first
-        dates = val.split('|')
-        first_year = dates[0].to_i if dates[0]&.match(/\d+/)
-        last_year = dates[1].to_i if dates[1]&.match(/\d+/)
-        accumulator.replace(ParseDate.range_array(first_year, last_year))
-      end
-    end
-
     FGDC_NS = { fgdc: 'http://www.fgdc.gov/metadata/fgdc-std-001-1998.dtd' }.freeze
     FGDC_TIMEINFO_XPATH = '/metadata/idinfo/timeperd/timeinfo'
     FGDC_SINGLE_DATE_XPATH = "#{FGDC_TIMEINFO_XPATH}/sngdate/caldate"
