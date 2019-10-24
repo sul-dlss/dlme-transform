@@ -37,6 +37,45 @@ module Macros
       end
     end
 
+    REGEX_OPTS = Regexp::IGNORECASE | Regexp::MULTILINE
+    HIJRI_TAG = '(A.H.|AH|H)'
+    HIJRI_TAG_B4_REGEX = Regexp.new("#{HIJRI_TAG}\s+(?<hijri>[^\(\)\/]*)", REGEX_OPTS)
+    HIJRI_TAG_AFTER_REGEX = Regexp.new("(?<hijri>[^\(\)\/]*)\s+#{HIJRI_TAG}", REGEX_OPTS)
+
+    # given a string with both hijri and gregorian date info (e.g. 'A.H. 986 (1578)'),
+    #   return only the hijri date info
+    def hijri_from_mixed(date_str)
+      hijri_val = Regexp.last_match(:hijri) if date_str.match(HIJRI_TAG_B4_REGEX)
+      hijri_val = nil unless hijri_val&.match(/\d+/)
+      hijri_val ||= Regexp.last_match(:hijri) if date_str.match(HIJRI_TAG_AFTER_REGEX)
+      hijri_val&.strip
+    end
+
+    # given an accumulator containing a string with both hijri and gregorian date info,
+    #   change the accumulator contents to become only the hijri date info
+    def parse_hijri
+      lambda do |_record, accumulator|
+        accumulator.map! do |val|
+          hijri_from_mixed(val)
+        end
+      end
+    end
+
+    # given an accumulator containing a string with both hijri and gregorian date info,
+    #   change the accumulator contents to become only the gregorian date info
+    def parse_gregorian
+      lambda do |_record, accumulator|
+        accumulator.map! do |val|
+          hijri_val = hijri_from_mixed(val)
+          if hijri_val
+            val.split(hijri_val).join(' ')
+          else
+            val
+          end
+        end
+      end
+    end
+
     # Extracts earliest & latest dates from American Numismatic Society record and merges into single date range value
     # parse_range balks because there are values '-2100 - -2000' and it doesn't go that "low" for parse_range method
     # See https://github.com/sul-dlss/parse_date/issues/31 and https://github.com/sul-dlss/dlme-transform/issues/295

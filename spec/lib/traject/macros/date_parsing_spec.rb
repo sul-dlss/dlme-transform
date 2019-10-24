@@ -71,6 +71,96 @@ RSpec.describe Macros::DateParsing do
     end
   end
 
+  mixed_hijri_gregorian =
+    [ # raw, hijri part, gregorian part
+      # openn
+      ['A.H. 986 (1578)', '986', '1578'],
+      ['A.H. 899 (1493-1494)', '899', '1493-1494'],
+      ['A.H. 901-904 (1496-1499)', '901-904', '1496-1499'],
+      ['A.H. 1240 (1824)', '1240', '1824'],
+      ['A.H. 1258? (1842)', '1258?', '1842'],
+      ['A.H. 1224, 1259 (1809, 1843)', '1224, 1259', '1809, 1843'],
+      ['A.H. 1123?-1225 (1711?-1810)', '1123?-1225', '1711?-1810'],
+      ['ca. 1670 (A.H. 1081)', '1081', 'ca. 1670'],
+      ['1269 A.H. (1852)', '1269', '1852'],
+      # cambridge islamic
+      ['628 A.H. / 1231 C.E.', '628', '1231 C.E.'],
+      ['974 AH / 1566 CE', '974', '1566 CE'],
+      # sakip-sabanci Kitapvehat
+      ['887 H (1482 M)', '887', '1482 M'],
+      ['1269, 1272, 1273 H (1853, 1855, 1856 M)', '1269, 1272, 1273', '1853, 1855, 1856 M'],
+      ['1194 H (1780 M)', '1194', '1780 M'],
+      ['1101 H (1689-1690 M)', '1101', '1689-1690 M'],
+      ['1240, 1248 H (1825, 1832 M)', '1240, 1248', '1825, 1832 M'],
+      ['1080 H (1669-1670 M)', '1080', '1669-1670 M'],
+      ['1076 H (1665-1666)', '1076', '1665-1666'],
+    ]
+
+  describe '#parse_gregorian' do
+    before do
+      indexer.instance_eval do
+        to_field 'gregorian', accumulate { |record, *_| record[:value] }, parse_gregorian
+      end
+    end
+    mixed_hijri_gregorian.each do |raw, exp_hijri, exp_gregorian|
+      it "#{raw} results in string containing '#{exp_gregorian}' and not '#{exp_hijri}'" do
+        result = indexer.map_record(value: raw)['gregorian'].first
+        expect(result).to match(Regexp.escape(exp_gregorian))
+        expect(result).not_to match(Regexp.escape(exp_hijri))
+      end
+    end
+
+    it 'no hijri present - assumes gregorian' do
+      expect(indexer.map_record(value: '1894.')).to include 'gregorian' => ['1894.']
+      expect(indexer.map_record(value: '1890-')).to include 'gregorian' => ['1890-']
+      expect(indexer.map_record(value: '1886-1887')).to include 'gregorian' => ['1886-1887']
+      # harvard ihp -  Gregorian is within square brackets - handled in diff macro
+      expect(indexer.map_record(value: '1322 [1904]')).to include 'gregorian' => ['1322 [1904]']
+      expect(indexer.map_record(value: '1317 [1899 or 1900]')).to include 'gregorian' => ['1317 [1899 or 1900]']
+      expect(indexer.map_record(value: '1288 [1871-72]')).to include 'gregorian' => ['1288 [1871-72]']
+      expect(indexer.map_record(value: '1254 [1838 or 39]')).to include 'gregorian' => ['1254 [1838 or 39]']
+    end
+
+    it 'only hijri present - no parseable valid gregorian' do
+      result = indexer.map_record(value: '1225 H')['gregorian'].first
+      expect(result).not_to match(Regexp.escape('1225'))
+    end
+
+    it 'missing value' do
+      expect(indexer.map_record({})).to eq({})
+    end
+  end
+
+  describe '#parse_hijri' do
+    before do
+      indexer.instance_eval do
+        to_field 'hijri', accumulate { |record, *_| record[:value] }, parse_hijri
+      end
+    end
+
+    mixed_hijri_gregorian.each do |raw, exp_hijri, _exp_gregorian|
+      it "#{raw} results in string matching '#{exp_hijri}'" do
+        expect(indexer.map_record(value: raw)).to include 'hijri' => [exp_hijri]
+      end
+    end
+
+    it 'unparseable values' do
+      # values like these are assumed to be gregorian
+      expect(indexer.map_record(value: '1894.')).to eq({})
+      expect(indexer.map_record(value: '1890-')).to eq({})
+      expect(indexer.map_record(value: '1886-1887')).to eq({})
+      # harvard ihp -  hijri is outside/before square brackets - handled in diff macro
+      expect(indexer.map_record(value: '1322 [1904]')).to eq({})
+      expect(indexer.map_record(value: '1317 [1899 or 1900]')).to eq({})
+      expect(indexer.map_record(value: '1288 [1871-72]')).to eq({})
+      expect(indexer.map_record(value: '1254 [1838 or 39]')).to eq({})
+    end
+
+    it 'missing value' do
+      expect(indexer.map_record({})).to eq({})
+    end
+  end
+
   describe '#american_numismatic_date_range' do
     it 'both dates and range are valid' do
       indexer.to_field('range', raw_val_lambda, indexer.american_numismatic_date_range)
