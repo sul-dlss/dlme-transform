@@ -31,7 +31,7 @@ module Macros
       lambda do |_record, accumulator|
         range_years = []
         accumulator.each do |val|
-          range_years << ParseDate.parse_range(val)
+          range_years << ParseDate.parse_range(val) if val&.strip.present?
         end
         range_years.flatten!.uniq! if range_years.any?
         accumulator.replace(range_years)
