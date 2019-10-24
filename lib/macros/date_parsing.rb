@@ -44,7 +44,7 @@ module Macros
     HIJRI_TAG_AFTER_REGEX = Regexp.new("(?<hijri>[^\(\)\/]*)\s+#{HIJRI_TAG}", REGEX_OPTS)
 
     # given a string with both hijri and gregorian date info (e.g. 'A.H. 986 (1578)'),
-    #   return only the hijri date info
+    #   change the string to only contain hijri date info
     def hijri_from_mixed(date_str)
       hijri_val = Regexp.last_match(:hijri) if date_str.match(HIJRI_TAG_B4_REGEX)
       hijri_val = nil unless hijri_val&.match(/\d+/)
@@ -53,7 +53,7 @@ module Macros
     end
 
     # given an accumulator containing a string with both hijri and gregorian date info,
-    #   change the accumulator contents to become only the hijri date info
+    #   change the string to only contain hijri date info
     def parse_hijri
       lambda do |_record, accumulator|
         accumulator.map! do |val|
