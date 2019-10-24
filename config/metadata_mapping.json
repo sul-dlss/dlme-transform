@@ -345,7 +345,8 @@
   },
   {
     "trajects": [
-      "openn_config.rb"
+      "openn_common_config.rb",
+      "openn_no_orig_date_attribs.rb"
     ],
     "paths": [
       "penn/openn/columbia-0032"
@@ -365,7 +366,8 @@
   },
   {
     "trajects": [
-      "openn_config.rb"
+      "openn_common_config.rb",
+      "openn_no_orig_date_attribs.rb"
     ],
     "paths": [
       "penn/openn/free-library-philadelphia-0023"
@@ -385,7 +387,8 @@
   },
   {
     "trajects": [
-      "openn_config.rb"
+      "openn_common_config.rb",
+      "openn_no_orig_date_attribs.rb"
     ],
     "paths": [
       "penn/openn/penn-0001",
@@ -406,7 +409,7 @@
   },
   {
     "trajects": [
-      "openn_config.rb"
+      "openn_common_config.rb"
     ],
     "paths": [
       "penn/openn/philadelphia-museum-art-0031"
