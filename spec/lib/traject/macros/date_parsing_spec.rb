@@ -96,6 +96,41 @@ RSpec.describe Macros::DateParsing do
       ['1076 H (1665-1666)', '1076', '1665-1666'],
     ]
 
+  describe '#parse_gregorian' do
+    before do
+      indexer.instance_eval do
+        to_field 'gregorian', accumulate { |record, *_| record[:value] }, parse_gregorian
+      end
+    end
+    mixed_hijri_gregorian.each do |raw, exp_hijri, exp_gregorian|
+      it "#{raw} results in string containing '#{exp_gregorian}' and not '#{exp_hijri}'" do
+        result = indexer.map_record(value: raw)['gregorian'].first
+        expect(result).to match(Regexp.escape(exp_gregorian))
+        expect(result).not_to match(Regexp.escape(exp_hijri))
+      end
+    end
+
+    it 'no hijri present - assumes gregorian' do
+      expect(indexer.map_record(value: '1894.')).to include 'gregorian' => ['1894.']
+      expect(indexer.map_record(value: '1890-')).to include 'gregorian' => ['1890-']
+      expect(indexer.map_record(value: '1886-1887')).to include 'gregorian' => ['1886-1887']
+      # harvard ihp -  Gregorian is within square brackets - handled in diff macro
+      expect(indexer.map_record(value: '1322 [1904]')).to include 'gregorian' => ['1322 [1904]']
+      expect(indexer.map_record(value: '1317 [1899 or 1900]')).to include 'gregorian' => ['1317 [1899 or 1900]']
+      expect(indexer.map_record(value: '1288 [1871-72]')).to include 'gregorian' => ['1288 [1871-72]']
+      expect(indexer.map_record(value: '1254 [1838 or 39]')).to include 'gregorian' => ['1254 [1838 or 39]']
+    end
+
+    it 'only hijri present - no parseable valid gregorian' do
+      result = indexer.map_record(value: '1225 H')['gregorian'].first
+      expect(result).not_to match(Regexp.escape('1225'))
+    end
+
+    it 'missing value' do
+      expect(indexer.map_record({})).to eq({})
+    end
+  end
+
   describe '#parse_hijri' do
     before do
       indexer.instance_eval do

@@ -55,6 +55,21 @@ module Macros
       end
     end
 
+    # given an accumulator containing a string with both hijri and gregorian date info,
+    #   change the accumulator contents to become only the gregorian date info
+    def parse_gregorian
+      lambda do |_record, accumulator|
+        accumulator.map! do |val|
+          hijri_val = Regexp.last_match(:hijri) if val.match(HIJRI_TAG_B4_REGEX)
+          hijri_val = nil unless hijri_val&.match(/\d+/)
+          hijri_val ||= Regexp.last_match(:hijri) if val.match(HIJRI_TAG_AFTER_REGEX)
+          return val unless hijri_val&.strip
+
+          val.split(hijri_val).join
+        end
+      end
+    end
+
     # Extracts earliest & latest dates from American Numismatic Society record and merges into single date range value
     # parse_range balks because there are values '-2100 - -2000' and it doesn't go that "low" for parse_range method
     # See https://github.com/sul-dlss/parse_date/issues/31 and https://github.com/sul-dlss/dlme-transform/issues/295
