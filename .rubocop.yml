@@ -34,5 +34,9 @@ Style/MixinUsage:
   Exclude:
     - 'traject_configs/**/*'
 
+Style/TrailingCommaInArrayLiteral:
+  Exclude:
+    - 'spec/lib/traject/macros/date_parsing_spec.rb'
+
 Style/WordArray:
   Enabled: false
