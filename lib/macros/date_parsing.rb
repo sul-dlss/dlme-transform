@@ -63,8 +63,8 @@ module Macros
     end
 
     # given an accumulator containing a string with both hijri and gregorian date info,
-    #   change the accumulator contents to become only the gregorian date info
-    def parse_gregorian
+    #   change the string to only contain gregorian date info
+    def extract_gregorian
       lambda do |_record, accumulator|
         accumulator.map! do |val|
           hijri_val = hijri_from_mixed(val)

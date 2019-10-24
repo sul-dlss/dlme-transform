@@ -96,10 +96,10 @@ RSpec.describe Macros::DateParsing do
       ['1076 H (1665-1666)', '1076', '1665-1666'],
     ]
 
-  describe '#parse_gregorian' do
+  describe '#extract_gregorian' do
     before do
       indexer.instance_eval do
-        to_field 'gregorian', accumulate { |record, *_| record[:value] }, parse_gregorian
+        to_field 'gregorian', accumulate { |record, *_| record[:value] }, extract_gregorian
       end
     end
     mixed_hijri_gregorian.each do |raw, exp_hijri, exp_gregorian|
