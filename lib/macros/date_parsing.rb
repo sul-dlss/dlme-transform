@@ -15,7 +15,7 @@ module Macros
 
         range_years = accumulator.first.delete(' ')
 
-        unless range_years.match?(/^[0-9-;]+$/)
+        unless range_years.match?(/^[0-9\-;]+$/)
           accumulator.replace([])
           return
         end
@@ -24,8 +24,9 @@ module Macros
       end
     end
 
-    # given a string with date info, use parse_date gem to get an array of indicated years as integers
-    #  See https://github.com/sul-dlss/parse_date for info on what it can parse
+    # given an accumulator containing a string with date info,
+    #   use parse_date gem to get an array of indicated years as integers
+    #   See https://github.com/sul-dlss/parse_date for info on what it can parse
     def parse_range
       lambda do |_record, accumulator|
         range_years = []
@@ -97,7 +98,7 @@ module Macros
     FGDC_DATE_RANGE_XPATH = "#{FGDC_TIMEINFO_XPATH}/rngdates"
     # Note:  saw no "#{FGDC_TIMEINFO_XPATH}/mdattim" multiple dates path data
 
-    # Extracts dates from FGDC idinfo/timeperd to create a singe date range value
+    # Extracts dates from FGDC idinfo/timeperd to create a single date range value
     # a year will be nil if it is NOT between -999 and (current year + 2), per parse_date gem
     # see https://www.fgdc.gov/metadata/csdgm/09.html, https://www.fgdc.gov/metadata/documents/MetadataQuickGuide.pdf
     def fgdc_date_range
