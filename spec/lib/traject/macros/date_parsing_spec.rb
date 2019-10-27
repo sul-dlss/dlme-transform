@@ -159,6 +159,108 @@ RSpec.describe Macros::DateParsing do
     end
   end
 
+  describe '#cambridge_gregorian_range' do
+    let(:record) do
+      <<-XML
+        <tei:teiHeader xmlns:tei='http://www.tei-c.org/ns/1.0'>
+          <tei:fileDesc>
+            <tei:sourceDesc>
+              <tei:msDesc>
+                <tei:history>
+                  <tei:origin>
+                    #{orig_date_el}
+                  </tei:origin>
+                </tei:history>
+              </tei:msDesc>
+            </tei:sourceDesc>
+          </tei:fileDesc>
+        </tei:teiHeader>
+      XML
+    end
+    let(:ng_rec) { Nokogiri::XML.parse(record) }
+
+    before do
+      indexer.instance_eval do
+        to_field 'range', cambridge_gregorian_range
+      end
+    end
+
+    context "when 'notBefore' and 'notAfter' attributes provided" do
+      let(:orig_date_el) { '<tei:origDate calendar="Gregorian" notBefore="1700" notAfter="1750">First half of eighteenth century</tei:origDate>' }
+
+      it 'gets range from attribute values' do
+        expect(indexer.map_record(ng_rec)).to include 'range' => (1700..1750).to_a
+      end
+
+      context 'when attrib values are negative' do
+        let(:orig_date_el) { '<tei:origDate calendar="Gregorian" notBefore="-0200" notAfter="-0100">Middle of second century BCE</tei:origDate>' }
+        it 'gets range from attribute values' do
+          expect(indexer.map_record(ng_rec)).to include 'range' => (-200..-100).to_a
+        end
+      end
+
+      context 'when attrib values are yyyy-mm-dd' do
+        let(:orig_date_el) { '<tei:origDate calendar="Hijri-qamari" from="1000-01-01" to="1610-12-31">Not after 1019/1610 C.E.</tei:origDate>' }
+
+        it 'gets range from attribute values' do
+          expect(indexer.map_record(ng_rec)).to include 'range' => (1000..1610).to_a
+        end
+      end
+
+      context 'when attrib values are empty' do
+        let(:orig_date_el) { '<tei:origDate calendar="Gregorian" notBefore="" notAfter="">1230—1239 CE</tei:origDate>' }
+
+        it 'gets range from parsing element value' do
+          expect(indexer.map_record(ng_rec)).to include 'range' => (1230..1239).to_a
+        end
+      end
+    end
+
+    context "when 'from' and 'to' attributes provided (Islamic collection)" do
+      let(:orig_date_el) { '<tei:origDate calendar="Gregorian" from="0800" to="0877" instant="false">Before 264 AH</tei:origDate>' }
+      it 'gets range from atttribute values' do
+        expect(indexer.map_record(ng_rec)).to include 'range' => (800..877).to_a
+      end
+
+      context 'when attrib values are yyyy-mm-dd' do
+        let(:orig_date_el) { '<tei:origDate calendar="Hijri-qamari" from="1000-01-01" to="1610-12-31">Not after 1019/1610 C.E.</tei:origDate>' }
+
+        it 'gets range from attribute values' do
+          expect(indexer.map_record(ng_rec)).to include 'range' => (1000..1610).to_a
+        end
+      end
+    end
+
+    context "when 'when' attribute provided" do
+      let(:orig_date_el) { '<tei:origDate calendar="Gregorian" when="1592" unit="mm">1000 A.H. / 1592 C.E.</tei:origDate>' }
+      it 'gets single year range from attribute value' do
+        expect(indexer.map_record(ng_rec)).to include 'range' => [1592]
+      end
+
+      context 'when attrib values are yyyy-mm-dd' do
+        let(:orig_date_el) { '<tei:origDate calendar="Hijri-qamari" when="1231-01-01" instant="false">628 A.H. / 1231 C.E.</tei:origDate>' }
+        it 'gets single year range from attribute value' do
+          expect(indexer.map_record(ng_rec)).to include 'range' => [1231]
+        end
+      end
+    end
+
+    context 'when no helpful attributes provided' do
+      let(:orig_date_el) { '<tei:origDate calendar="Gregorian">4th century A.H / 10th century C.E.</tei:origDate>' }
+
+      it 'gets range from parsing element value' do
+        expect(indexer.map_record(ng_rec)).to include 'range' => (900..999).to_a
+      end
+
+      context 'when no value available' do
+        let(:orig_date_el) { '<tei:origDate calendar="Hijri-qamari">undated</tei:origDate>' }
+        it 'the field is absent' do
+          expect(indexer.map_record(ng_rec)).not_to include 'range'
+        end
+      end
+    end
+  end
+
   describe '#fgdc_date_range' do
     before do
       indexer.instance_eval do
