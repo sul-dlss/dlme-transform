@@ -47,9 +47,9 @@ module Macros
     #   change the string to only contain hijri date info
     # NOTE: this is not a macro, but a helper method for macros
     def hijri_from_mixed(date_str)
-      hijri_val = Regexp.last_match(:hijri) if date_str.match(HIJRI_TAG_B4_REGEX)
+      hijri_val = Regexp.last_match(:hijri) if date_str&.match(HIJRI_TAG_B4_REGEX)
       hijri_val = nil unless hijri_val&.match(/\d+/)
-      hijri_val ||= Regexp.last_match(:hijri) if date_str.match(HIJRI_TAG_AFTER_REGEX)
+      hijri_val ||= Regexp.last_match(:hijri) if date_str&.match(HIJRI_TAG_AFTER_REGEX)
       hijri_val&.strip
     end
 
@@ -87,6 +87,41 @@ module Macros
         end
         hijri_range.flatten!.uniq! if hijri_range.any?
         accumulator.replace(hijri_range)
+      end
+    end
+
+    TEI_NS = { tei: 'http://www.tei-c.org/ns/1.0' }.freeze
+    TEI_MS_DESC = '//tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc'
+    TEI_MS_ORIGIN = 'tei:history/tei:origin'
+    TEI_ORIG_DATE_PATH = "#{TEI_MS_DESC}/#{TEI_MS_ORIGIN}/tei:origDate"
+
+    # extracts dates from TEI origDate element for Cambridge data
+    # Best dates will be in notBefore/notAfter attributes, or from/to attributes
+    # 'when' attribute is usually a single date;
+    #  attributes may be empty or missing, in which case the element's value needs to be parsed
+    # See specs for examples of all these flavors
+    def cambridge_gregorian_range
+      lambda do |record, accumulator, _context|
+        orig_date_node = record.xpath(TEI_ORIG_DATE_PATH, TEI_NS)&.first
+        first = orig_date_node&.attribute('notBefore') ||
+                orig_date_node&.attribute('from') ||
+                orig_date_node&.attribute('when')
+        last = orig_date_node&.attribute('notAfter') ||
+               orig_date_node&.attribute('to') ||
+               orig_date_node&.attribute('when')
+        first = first&.value&.strip
+        last = last&.value&.strip
+        if first.present? && last.present?
+          first = ParseDate.earliest_year(first)
+          last = ParseDate.latest_year(last)
+        else
+          date_str = orig_date_node&.text
+          hijri_val = hijri_from_mixed(date_str)
+          date_str = date_str.split(hijri_val).join(' ') if hijri_val
+          first = ParseDate.earliest_year(date_str)
+          last = ParseDate.latest_year(date_str)
+        end
+        accumulator.replace(ParseDate.range_array(first, last))
       end
     end
 
