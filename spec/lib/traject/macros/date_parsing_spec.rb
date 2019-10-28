@@ -262,6 +262,22 @@ RSpec.describe Macros::DateParsing do
   end
 
   describe '#fgdc_date_range' do
+    let(:record) do
+      <<-XML
+        <!DOCTYPE metadata SYSTEM "http://www.fgdc.gov/metadata/fgdc-std-001-1998.dtd">
+        <metadata>
+          <idinfo>
+            <timeperd>
+              <timeinfo>
+                #{time_info_els}
+              </timeinfo>
+            </timeperd>
+          </idinfo>
+        </metadata>
+      XML
+    end
+    let(:ng_rec) { Nokogiri::XML.parse(record) }
+
     before do
       indexer.instance_eval do
         to_field 'range', fgdc_date_range
@@ -269,64 +285,37 @@ RSpec.describe Macros::DateParsing do
     end
 
     context 'when rngdates element provided' do
+      let(:time_info_els) do
+        '<rngdates>
+          <begdate>19990211</begdate>
+          <enddate>20000222</enddate>
+        </rngdates>'
+      end
+
       it 'range is from begdate to enddate' do
-        rec_str = <<-XML
-          <?xml version="1.0" encoding="utf-8" ?>
-          <!DOCTYPE metadata SYSTEM "http://www.fgdc.gov/metadata/fgdc-std-001-1998.dtd">
-          <metadata>
-            <idinfo>
-              <timeperd>
-                <timeinfo>
-                  <rngdates>
-                    <begdate>19990211</begdate>
-                    <enddate>20000222</enddate>
-                  </rngdates>
-                </timeinfo>
-              </timeperd>
-            </idinfo>
-          </metadata>
-        XML
-        ng_rec = Nokogiri::XML.parse(rec_str)
         expect(indexer.map_record(ng_rec)).to include 'range' => [1999, 2000]
       end
     end
+
     context 'when single date provided' do
+      let(:time_info_els) do
+        '<sngdate>
+          <caldate>1725</caldate>
+        </sngdate>'
+      end
       it 'range is a single value Array' do
-        rec_str = <<-XML
-        <?xml version="1.0" encoding="utf-8" ?>
-        <!DOCTYPE metadata SYSTEM "http://www.fgdc.gov/metadata/fgdc-std-001-1998.dtd">
-        <metadata>
-          <idinfo>
-            <timeperd>
-              <timeinfo>
-                <sngdate>
-                  <caldate>1725</caldate>
-                </sngdate>
-              </timeinfo>
-            </timeperd>
-          </idinfo>
-        </metadata>
-        XML
-        ng_rec = Nokogiri::XML.parse(rec_str)
         expect(indexer.map_record(ng_rec)).to include 'range' => [1725]
       end
-      it 'year in future results in no value' do
-        rec_str = <<-XML
-        <?xml version="1.0" encoding="utf-8" ?>
-        <!DOCTYPE metadata SYSTEM "http://www.fgdc.gov/metadata/fgdc-std-001-1998.dtd">
-        <metadata>
-          <idinfo>
-            <timeperd>
-              <timeinfo>
-                <sngdate>
-                  <caldate>2725</caldate>
-                </sngdate>
-              </timeinfo>
-            </timeperd>
-          </idinfo>
-        </metadata>
-        XML
-        ng_rec = Nokogiri::XML.parse(rec_str)
+    end
+
+    context 'year in future' do
+      let(:time_info_els) do
+        '<sngdate>
+          <caldate>2725</caldate>
+        </sngdate>'
+      end
+
+      it 'results in no value' do
         expect(indexer.map_record(ng_rec)).not_to include 'range'
       end
     end
