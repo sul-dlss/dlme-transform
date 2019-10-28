@@ -31,7 +31,7 @@ module Macros
       lambda do |_record, accumulator|
         range_years = []
         accumulator.each do |val|
-          range_years << ParseDate.parse_range(val)
+          range_years << ParseDate.parse_range(val) if val&.strip.present?
         end
         range_years.flatten!.uniq! if range_years.any?
         accumulator.replace(range_years)
@@ -44,7 +44,8 @@ module Macros
     HIJRI_TAG_AFTER_REGEX = Regexp.new("(?<hijri>[^\(\)\/]*)\s+#{HIJRI_TAG}", REGEX_OPTS)
 
     # given a string with both hijri and gregorian date info (e.g. 'A.H. 986 (1578)'),
-    #   return only the hijri date info
+    #   change the string to only contain hijri date info
+    # NOTE: this is not a macro, but a helper method for macros
     def hijri_from_mixed(date_str)
       hijri_val = Regexp.last_match(:hijri) if date_str.match(HIJRI_TAG_B4_REGEX)
       hijri_val = nil unless hijri_val&.match(/\d+/)
@@ -53,18 +54,8 @@ module Macros
     end
 
     # given an accumulator containing a string with both hijri and gregorian date info,
-    #   change the accumulator contents to become only the hijri date info
-    def parse_hijri
-      lambda do |_record, accumulator|
-        accumulator.map! do |val|
-          hijri_from_mixed(val)
-        end
-      end
-    end
-
-    # given an accumulator containing a string with both hijri and gregorian date info,
-    #   change the accumulator contents to become only the gregorian date info
-    def parse_gregorian
+    #   change the string to only contain gregorian date info
+    def extract_gregorian
       lambda do |_record, accumulator|
         accumulator.map! do |val|
           hijri_val = hijri_from_mixed(val)
@@ -74,6 +65,28 @@ module Macros
             val
           end
         end
+      end
+    end
+
+    # given an accumulator containing a string that may (or may not) have both hijri and gregorian date info,
+    #   get a hijri range, either directly from the provided hijri dates or converted from the gregorian if no
+    #   hijri dates are provided.
+    def extract_or_compute_hijri_range
+      lambda do |_record, accumulator|
+        hijri_range = []
+        accumulator.each do |val|
+          hijri_val = hijri_from_mixed(val)
+          if hijri_val&.strip.present?
+            hijri_range << ParseDate.parse_range(hijri_val)
+          else
+            gregorian_range = ParseDate.parse_range(val)
+            hijri_range << (
+              Macros::DateParsing.to_hijri(gregorian_range.first)..Macros::DateParsing.to_hijri(gregorian_range.last) + 1
+            ).to_a
+          end
+        end
+        hijri_range.flatten!.uniq! if hijri_range.any?
+        accumulator.replace(hijri_range)
       end
     end
 

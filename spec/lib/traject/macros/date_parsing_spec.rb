@@ -96,10 +96,10 @@ RSpec.describe Macros::DateParsing do
       ['1076 H (1665-1666)', '1076', '1665-1666'],
     ]
 
-  describe '#parse_gregorian' do
+  describe '#extract_gregorian' do
     before do
       indexer.instance_eval do
-        to_field 'gregorian', accumulate { |record, *_| record[:value] }, parse_gregorian
+        to_field 'gregorian', accumulate { |record, *_| record[:value] }, extract_gregorian
       end
     end
     mixed_hijri_gregorian.each do |raw, exp_hijri, exp_gregorian|
@@ -131,29 +131,27 @@ RSpec.describe Macros::DateParsing do
     end
   end
 
-  describe '#parse_hijri' do
+  describe '#extract_or_compute_hijri_range' do
     before do
       indexer.instance_eval do
-        to_field 'hijri', accumulate { |record, *_| record[:value] }, parse_hijri
+        to_field 'hijri_range', accumulate { |record, *_| record[:value] }, extract_or_compute_hijri_range
       end
     end
 
-    mixed_hijri_gregorian.each do |raw, exp_hijri, _exp_gregorian|
-      it "#{raw} results in string matching '#{exp_hijri}'" do
-        expect(indexer.map_record(value: raw)).to include 'hijri' => [exp_hijri]
+    context 'when hijri dates range provided' do
+      mixed_hijri_gregorian.each do |raw, exp_hijri, _exp_gregorian|
+        it "#{raw} results in parse_range for '#{exp_hijri}'" do
+          expect(ParseDate).to receive(:parse_range).with(exp_hijri).and_call_original
+          expect(indexer.map_record(value: raw)).to include 'hijri_range'
+        end
       end
     end
-
-    it 'unparseable values' do
-      # values like these are assumed to be gregorian
-      expect(indexer.map_record(value: '1894.')).to eq({})
-      expect(indexer.map_record(value: '1890-')).to eq({})
-      expect(indexer.map_record(value: '1886-1887')).to eq({})
-      # harvard ihp -  hijri is outside/before square brackets - handled in diff macro
-      expect(indexer.map_record(value: '1322 [1904]')).to eq({})
-      expect(indexer.map_record(value: '1317 [1899 or 1900]')).to eq({})
-      expect(indexer.map_record(value: '1288 [1871-72]')).to eq({})
-      expect(indexer.map_record(value: '1254 [1838 or 39]')).to eq({})
+    context 'when no hijri provided' do
+      it 'hijri range is computed from gregorian range' do
+        expect(Macros::DateParsing).to receive(:to_hijri).exactly(4).times.and_call_original
+        expect(indexer.map_record(value: '1894')).to include 'hijri_range' => [1311, 1312]
+        expect(indexer.map_record(value: '1886-1887')).to include 'hijri_range' => [1303, 1304, 1305]
+      end
     end
 
     it 'missing value' do
