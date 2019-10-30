@@ -19,6 +19,6 @@ RSpec.describe 'integration with Traject configs' do
           settings: config.fetch('settings', {})
         ).transform
       end
-    end.not_to raise_error(RuntimeError)
+    end.not_to raise_error
   end
 end
