@@ -48,8 +48,8 @@ to_field 'cho_contributor', extract_name(exclude: %w[author creator])
 to_field 'cho_date', extract_mods('/*/mods:originInfo/mods:dateCreated')
 to_field 'cho_date', extract_mods('/*/mods:originInfo/mods:copyrightDate')
 to_field 'cho_date', extract_mods('/*/mods:originInfo/mods:dateIssued')
-to_field 'cho_date_range_norm', extract_mods('/*/mods:originInfo/mods:dateCreated')
-to_field 'cho_date_range_hijri', extract_mods('/*/mods:originInfo/mods:dateCreated'), hijri_range
+to_field 'cho_date_range_norm', mods_date_range
+to_field 'cho_date_range_hijri', mods_date_range, hijri_range
 to_field 'cho_dc_rights', first(
   extract_mods('/*/mods:accessCondition[@type="restrictionOnAccess"]/@xlink:href'),
   extract_mods('/*/mods:accessCondition[@type="restriction on access"]')
