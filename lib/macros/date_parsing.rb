@@ -183,6 +183,46 @@ module Macros
       end
     end
 
+    # Extracts date range from MODS dateCreated, dateValid or dateIssued elements
+    #   looks in each element flavor for specific attribs to get best representation of date range
+    def mods_date_range
+      lambda do |record, accumulator|
+        range = range_from_mods_date_element('mods:dateCreated', record) ||
+                range_from_mods_date_element('mods:dateValid', record) ||
+                range_from_mods_date_element('mods:dateIssued', record)
+        accumulator.replace(range) if range
+      end
+    end
+
+    MODS_NS = { mods: 'http://www.loc.gov/mods/v3' }.freeze
+    ORIGIN_INFO_PATH = '//mods:mods/mods:originInfo'
+
+    # NOTE: this is not a macro, but a helper method for macros
+    # given the namespace prefixed name for a MODS date element in mods:originInfo,
+    # extract date range if available
+    #   - look for attribute 'point' on element for "start" and "end" and use those values for range
+    #   - if no "start" and "end", look for 'keyDate' attribute and parse element value for range
+    #   - if no keyDate, take the first value and parse it for range
+    # @return [Array, nil] Array of Integers for date range, or nil if unable to find a date range
+    def range_from_mods_date_element(xpath_el_name, record)
+      return unless record.xpath("#{ORIGIN_INFO_PATH}/#{xpath_el_name}", MODS_NS)
+
+      start_node = record.xpath("#{ORIGIN_INFO_PATH}/#{xpath_el_name}[@point='start']", MODS_NS)&.first
+      if start_node
+        first = start_node&.content&.strip
+        end_node = record.xpath("#{ORIGIN_INFO_PATH}/#{xpath_el_name}[@point='end']", MODS_NS)&.first
+        last = end_node&.content&.strip
+        return ParseDate.range_array(first, last) if first && last
+      end
+      key_date_node = record.xpath("#{ORIGIN_INFO_PATH}/#{xpath_el_name}[@keyDate='yes']", MODS_NS)&.first
+      if key_date_node
+        year_str = key_date_node&.content&.strip
+        return ParseDate.parse_range(year_str) if year_str
+      end
+      plain_node_value = record.xpath("#{ORIGIN_INFO_PATH}/#{xpath_el_name}", MODS_NS)&.first&.content
+      return ParseDate.parse_range(plain_node_value) if plain_node_value
+    end
+
     # Takes an existing array of year integers and returns an array converted to hijri
     # with an additional year added to the end to account for the non-365 day calendar
     def hijri_range

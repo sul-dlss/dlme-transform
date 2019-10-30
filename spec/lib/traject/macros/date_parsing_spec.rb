@@ -416,6 +416,83 @@ RSpec.describe Macros::DateParsing do
     end
   end
 
+  describe '#mods_date_range' do
+    let(:record) do
+      <<-XML
+        <mods:mods xmlns:mods="http://www.loc.gov/mods/v3" version="3.4">
+          <mods:originInfo>
+            #{date_els}
+          </mods:originInfo>
+        </mods:mods>
+      XML
+    end
+    let(:ng_rec) { Nokogiri::XML.parse(record) }
+
+    before do
+      indexer.instance_eval do
+        to_field 'range', mods_date_range
+      end
+    end
+
+    context 'when dateCreated element exists' do
+      context 'when point attributes available' do
+        let(:date_els) do
+          '<mods:dateCreated encoding="w3cdtf" keyDate="yes" point="start" qualifier="approximate">1825</mods:dateCreated>
+          <mods:dateCreated encoding="w3cdtf" point="end" qualifier="approximate">1875</mods:dateCreated>'
+        end
+
+        it 'uses end point values for range' do
+          expect(indexer.map_record(ng_rec)).to include 'range' => (1825..1875).to_a
+        end
+      end
+      context 'when keyDate attribute but no point attributes' do
+        let(:date_els) { '<mods:dateCreated encoding="w3cdtf" keyDate="yes" qualifier="inferred">1725</mods:dateCreated>' }
+        it 'uses value for range' do
+          expect(indexer.map_record(ng_rec)).to include 'range' => [1725]
+        end
+      end
+      # we have no dateCreated elements without point or keyDate attributes
+    end
+
+    context 'when dateValid but no dateCreated elements exists' do
+      # we have no dateValid elements with point or keyDate attributes
+      context 'when no attributes of interest' do
+        let(:date_els) { '<mods:dateValid>19th century</mods:dateValid>' }
+        it 'uses value for range' do
+          expect(indexer.map_record(ng_rec)).to include 'range' => (1800..1899).to_a
+        end
+      end
+      context 'when dateIssued also present' do
+        let(:date_els) do
+          '<mods:dateIssued encoding="w3cdtf" keyDate="yes">2012</mods:dateIssued>
+          <mods:dateValid encoding="w3cdtf">1990</mods:dateValid>'
+        end
+        it 'uses value from dateValid' do
+          expect(indexer.map_record(ng_rec)).to include 'range' => [1990]
+        end
+      end
+    end
+
+    context 'when dateIssued but no dateCreated or dateValid elements' do
+      # we have no dateIssued elements with point attributes
+      context 'when keyDate attribute but no point attributes' do
+        let(:date_els) { '<mods:dateIssued encoding="w3cdtf" keyDate="yes">2013</mods:dateIssued>' }
+        it 'uses value for range' do
+          expect(indexer.map_record(ng_rec)).to include 'range' => [2013]
+        end
+      end
+      context 'when no attributes of interest' do
+        let(:date_els) do
+          '<mods:dateIssued>ca. 1720]</mods:dateIssued>
+          <mods:dateIssued encoding="marc">1720</mods:dateIssued>'
+        end
+        it 'uses first value for range' do
+          expect(indexer.map_record(ng_rec)).to include 'range' => [1720]
+        end
+      end
+    end
+  end
+
   describe '#penn_museum_date_range' do
     before do
       indexer.instance_eval do
