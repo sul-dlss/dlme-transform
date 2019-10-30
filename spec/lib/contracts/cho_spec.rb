@@ -48,6 +48,16 @@ RSpec.describe Contracts::CHO do
           end
         end
 
+        context 'when hash contains unexpected values' do
+          let(:cho) { { field_name => { 'none' => ['none', ['The Real Value']] } } }
+
+          it 'states the field had unexpected keys' do
+            expect(contract.errors[field_name]).to include(
+              "unexpected non-string value(s) found in #{field_name}: [[\"The Real Value\"]]"
+            )
+          end
+        end
+
         context 'when hash looks as expected' do
           let(:cho) do
             {
