@@ -491,7 +491,8 @@
   },
   {
     "trajects": [
-      "sakip_sabanci_common_config.rb"
+      "sakip_sabanci_common_config.rb",
+      "sakip_single_date_config.rb"
     ],
     "paths": [
       "sakip-sabanci/abidindino",
