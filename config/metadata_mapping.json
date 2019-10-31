@@ -409,7 +409,8 @@
   },
   {
     "trajects": [
-      "openn_common_config.rb"
+      "openn_common_config.rb",
+      "openn_orig_date_attribs.rb"
     ],
     "paths": [
       "penn/openn/philadelphia-museum-art-0031"
