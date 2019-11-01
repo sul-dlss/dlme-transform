@@ -513,7 +513,8 @@
   },
   {
     "trajects": [
-      "sakip_sabanci_common_config.rb"
+      "sakip_sabanci_common_config.rb",
+      "sakip_mult_dates_config.rb"
     ],
     "paths": [
       "sakip-sabanci/Kitapvehat",

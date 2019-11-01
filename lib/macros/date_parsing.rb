@@ -232,6 +232,21 @@ module Macros
       end
     end
 
+    # sakip records with multiple dates tend to have earliest year as the 2nd occurence
+    # of dc:date and latest year as the 3rd occurrence of dc:date.  This algorithm covers
+    # the vast majority of reliable date information provided for Kitapvehat and ResimKlksyn colls.
+    def sakip_mult_dates_range
+      lambda do |_record, accumulator|
+        return if accumulator.empty?
+
+        if accumulator[1]&.strip&.match?(/^\d{4}$/) && accumulator[2]&.strip&.match?(/^\d{4}$/)
+          accumulator.replace(ParseDate.range_array(accumulator[1], accumulator[2]))
+        else
+          accumulator.clear
+        end
+      end
+    end
+
     # Takes an existing array of year integers and returns an array converted to hijri
     # with an additional year added to the end to account for the non-365 day calendar
     def hijri_range

@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'macros/date_parsing'
+require 'macros/oai'
 
 RSpec.describe Macros::DateParsing do
   subject(:indexer) do
@@ -8,6 +9,7 @@ RSpec.describe Macros::DateParsing do
       indexer.instance_eval do
         extend TrajectPlus::Macros
         extend Macros::DateParsing
+        extend Macros::OAI
       end
     end
   end
@@ -538,6 +540,63 @@ RSpec.describe Macros::DateParsing do
 
     it 'date strings with text and numbers are interpreted as 0' do
       expect(indexer.map_record('date_made_early' => 'not999', 'date_made_late' => 'year of 1939')).to include 'range' => [0]
+    end
+  end
+
+  describe '#sakip_mult_dates_range' do
+    let(:record) do
+      <<-XML
+        <oai:record xmlns:oai="http://www.openarchives.org/OAI/2.0/">
+          <oai:metadata>
+            <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc='http://www.openarchives.org/OAI/2.0/oai_dc/'>
+              #{date_els}
+            </oai_dc:dc>
+          </oai:metadata>
+        </oai:record>
+      XML
+    end
+    let(:ng_rec) { Nokogiri::XML.parse(record) }
+
+    before do
+      indexer.instance_eval do
+        to_field 'range', extract_oai('dc:date'), sakip_mult_dates_range
+      end
+    end
+
+    context 'when 3 dc:dates exist' do
+      context 'when dc:date 2 and 3 are four digits' do
+        let(:date_els) do
+          '<dc:date>15. yüzyıl sonu veya 16. yüzyıl başı</dc:date>
+          <dc:date>1426</dc:date>
+          <dc:date>1520</dc:date>'
+        end
+        it 'uses them as endpoints for range' do
+          expect(indexer.map_record(ng_rec)).to include 'range' => (1426..1520).to_a
+        end
+      end
+
+      context 'when dates do not match 4 digit pattern' do
+        let(:date_els) do
+          '<dc:date>18. yüzyıl</dc:date>
+          <dc:date>1057 H (1647 M)</dc:date>
+          <dc:date>1700</dc:date>
+          <dc:date>1799</dc:date>
+          <dc:date>2002</dc:date>'
+        end
+        it 'the field is not populated' do
+          expect(indexer.map_record(ng_rec)).not_to include 'range'
+        end
+      end
+    end
+
+    context 'when there are not 3 dc:dates' do
+      let(:date_els) do
+        '<dc:date>17. yüzyıl</dc:date>
+        <dc:date>2002</dc:date>'
+      end
+      it 'the field is not populated' do
+        expect(indexer.map_record(ng_rec)).not_to include 'range'
+      end
     end
   end
 end
