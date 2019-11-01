@@ -2,9 +2,11 @@
 
 require 'traject_plus'
 require 'dlme_json_resource_writer'
+require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/post_process'
 
+extend Macros::DateParsing
 extend Macros::DLME
 extend Macros::PostProcess
 extend TrajectPlus::Macros
