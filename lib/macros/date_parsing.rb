@@ -243,6 +243,18 @@ module Macros
       end
     end
 
+    def auc_date_range
+      lambda do |_record, accumulator, _context|
+        range_years = []
+        accumulator.each do |val|
+          range_years << ParseDate.range_array(ParseDate.earliest_year(val), ParseDate.latest_year(val))
+        end
+
+        range_years.flatten!.uniq! if range_years.any?
+        accumulator.replace(range_years)
+      end
+    end
+
     HIJRI_MODIFIER = 1.030684
     HIJRI_OFFSET = 621.5643
 
