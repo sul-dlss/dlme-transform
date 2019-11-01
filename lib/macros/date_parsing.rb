@@ -243,10 +243,16 @@ module Macros
       end
     end
 
+    AUC_REGEX = Regexp.new('\d{4};') # captures the `YYYY; YYYY; YYYY; YYYY;` pattern
+    AUC_DELIM = ';'
+
     def auc_date_range
       lambda do |_record, accumulator, _context|
         range_years = []
         accumulator.each do |val|
+          range_years << val.scan(AUC_REGEX).map { |year| year.sub(AUC_DELIM, '').to_i }
+          next unless range_years.flatten!.uniq!.nil?
+
           range_years << ParseDate.range_array(ParseDate.earliest_year(val), ParseDate.latest_year(val))
         end
 

@@ -377,6 +377,25 @@ RSpec.describe Macros::DateParsing do
     end
   end
 
+  describe '#auc_date_range' do
+    before do
+      indexer.instance_eval do
+        to_field 'range', accumulate { |record, *_| record[:value] }, auc_date_range
+      end
+    end
+
+    context 'when the dc:date field is populated' do
+      it 'includes a valid date or range' do
+        expect(indexer.map_record(value: '1990-10-01')).to include 'range' => [1990]
+        expect(indexer.map_record(value: '1990')).to include 'range' => [1990]
+        expect(indexer.map_record(value: '990')).to include 'range' => [990]
+        expect(indexer.map_record(value: '1990-1995')).to include 'range' => [1990, 1991, 1992, 1993, 1994, 1995]
+        expect(indexer.map_record(value: '990-995')).to include 'range' => [990, 991, 992, 993, 994, 995]
+        expect(indexer.map_record(value: '1990; 1991; 1992;')).to include 'range' => [1990, 1991, 1992]
+      end
+    end
+  end
+
   describe '#met_date_range' do
     before do
       indexer.instance_eval do
