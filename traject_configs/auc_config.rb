@@ -3,11 +3,13 @@
 require 'active_support/core_ext/string/inflections'
 require 'traject_plus'
 require 'dlme_json_resource_writer'
+require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/oai'
 require 'macros/content_dm'
 require 'macros/post_process'
 
+extend Macros::DateParsing
 extend Macros::PostProcess
 extend Macros::DLME
 extend Macros::OAI
@@ -31,7 +33,8 @@ to_field 'cho_coverage', extract_oai('dc:coverage'), strip
 to_field 'cho_creator', extract_oai('dc:creator'),
          strip, split('.')
 to_field 'cho_date', extract_oai('dc:date'), strip
-# to_field 'cho_date_range_norm', extract_oai('dc:date'), strip
+to_field 'cho_date_range_norm', extract_oai('dc:date'), strip, auc_date_range
+to_field 'cho_date_range_hijri', extract_oai('dc:date'), strip, auc_date_range, hijri_range
 to_field 'cho_description', extract_oai('dc:description'), strip
 to_field 'cho_dc_rights', extract_oai('dc:rights'), strip
 to_field 'cho_edm_type', extract_oai('dc:type'),
