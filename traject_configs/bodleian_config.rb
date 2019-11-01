@@ -26,7 +26,8 @@ to_field 'cho_title', extract_json('.title'), strip, default('Untitled Item')
 to_field 'cho_creator', extract_json('.author'), strip
 to_field 'cho_contributor', extract_json('.printer'), strip, append(' [printer]')
 to_field 'cho_date', extract_json('.date_statement'), strip
-# to_field 'cho_date_range_norm', extract_json('.date_statement'), strip
+to_field 'cho_date_range_norm', extract_json('.date_statement'), strip, parse_range
+to_field 'cho_date_range_hijri', extract_json('.date_statement'), strip, parse_range, hijri_range
 to_field 'cho_dc_rights', literal('Photo: © Bodleian Libraries, University of Oxford, Terms of use: http://digital.bodleian.ox.ac.uk/terms.html')
 to_field 'cho_description', extract_json('.description'), strip
 to_field 'cho_edm_type', literal('Text')
