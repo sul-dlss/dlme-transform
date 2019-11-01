@@ -223,6 +223,15 @@ module Macros
       return ParseDate.parse_range(plain_node_value) if plain_node_value
     end
 
+    # Extracts earliest & latest dates from Penn museum record and merges into singe date range value
+    def penn_museum_date_range
+      lambda do |record, accumulator, _context|
+        first_year = record['date_made_early'].to_i if record['date_made_early']&.match(/\d+/)
+        last_year = record['date_made_late'].to_i if record['date_made_late']&.match(/\d+/)
+        accumulator.replace(ParseDate.range_array(first_year, last_year))
+      end
+    end
+
     # Takes an existing array of year integers and returns an array converted to hijri
     # with an additional year added to the end to account for the non-365 day calendar
     def hijri_range
@@ -231,15 +240,6 @@ module Macros
 
         accumulator.replace((
           Macros::DateParsing.to_hijri(accumulator.first)..Macros::DateParsing.to_hijri(accumulator.last) + 1).to_a)
-      end
-    end
-
-    # Extracts earliest & latest dates from Penn museum record and merges into singe date range value
-    def penn_museum_date_range
-      lambda do |record, accumulator, _context|
-        first_year = record['date_made_early'].to_i if record['date_made_early']&.match(/\d+/)
-        last_year = record['date_made_late'].to_i if record['date_made_late']&.match(/\d+/)
-        accumulator.replace(ParseDate.range_array(first_year, last_year))
       end
     end
 
