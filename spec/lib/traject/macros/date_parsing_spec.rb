@@ -180,6 +180,7 @@ RSpec.describe Macros::DateParsing do
         expect(indexer.map_record(value: '1990-1995')).to include 'range' => [1990, 1991, 1992, 1993, 1994, 1995]
         expect(indexer.map_record(value: '990-995')).to include 'range' => [990, 991, 992, 993, 994, 995]
         expect(indexer.map_record(value: '1990; 1991; 1992;')).to include 'range' => [1990, 1991, 1992]
+        expect(indexer.map_record(value: '1990; 1991; 1992')).to include 'range' => [1990, 1991, 1992]
       end
     end
   end
