@@ -5,6 +5,12 @@ AllCops:
   Exclude:
     - data/**/*
 
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: empty_lines, empty_lines_except_namespace, empty_lines_special, no_empty_lines
+Layout/EmptyLinesAroundModuleBody:
+  Exclude:
+    - 'lib/macros/date_parsing.rb' # long file;  some additional spaces and comments to keep it organized
+
 # Configuration parameters: AllowHeredoc, AllowURI, URISchemes, IgnoreCopDirectives, IgnoredPatterns.
 # URISchemes: http, https
 Metrics/LineLength:
