@@ -72,6 +72,24 @@ module Macros
       end
     end
 
+    AUC_REGEX = Regexp.new('\d{4};') # captures the `YYYY; YYYY; YYYY; YYYY;` pattern
+    AUC_DELIM = ';'
+
+    def auc_date_range
+      lambda do |_record, accumulator, _context|
+        range_years = []
+        accumulator.each do |val|
+          range_years << val.scan(AUC_REGEX).map { |year| year.sub(AUC_DELIM, '').to_i }
+          next unless range_years.flatten!.uniq!.nil?
+
+          range_years << ParseDate.range_array(ParseDate.earliest_year(val), ParseDate.latest_year(val))
+        end
+
+        range_years.flatten!.uniq! if range_years.any?
+        accumulator.replace(range_years)
+      end
+    end
+
     TEI_NS = { tei: 'http://www.tei-c.org/ns/1.0' }.freeze
     TEI_MS_DESC = '//tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc'
     TEI_MS_ORIGIN = 'tei:history/tei:origin'
@@ -237,24 +255,6 @@ module Macros
 
         accumulator.replace((
           Macros::DateParsing.to_hijri(accumulator.first)..Macros::DateParsing.to_hijri(accumulator.last) + 1).to_a)
-      end
-    end
-
-    AUC_REGEX = Regexp.new('\d{4};') # captures the `YYYY; YYYY; YYYY; YYYY;` pattern
-    AUC_DELIM = ';'
-
-    def auc_date_range
-      lambda do |_record, accumulator, _context|
-        range_years = []
-        accumulator.each do |val|
-          range_years << val.scan(AUC_REGEX).map { |year| year.sub(AUC_DELIM, '').to_i }
-          next unless range_years.flatten!.uniq!.nil?
-
-          range_years << ParseDate.range_array(ParseDate.earliest_year(val), ParseDate.latest_year(val))
-        end
-
-        range_years.flatten!.uniq! if range_years.any?
-        accumulator.replace(range_years)
       end
     end
 
