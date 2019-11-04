@@ -9,18 +9,6 @@ module Macros
 
     # ---------- General macros follow, alphabetical except for additional helper methods
 
-    HIJRI_MODIFIER = 1.030684
-    HIJRI_OFFSET = 621.5643
-
-    # @param [Integer] a single year to be converted
-    # @return [Integer] a converted integer year
-    # This method uses the first formula provided here: https://en.wikipedia.org/wiki/Hijri_year#Formula
-    def self.to_hijri(year)
-      return unless year.is_a? Integer
-
-      (HIJRI_MODIFIER * (year - HIJRI_OFFSET)).floor
-    end
-
     # given an accumulator containing a string with both hijri and gregorian date info,
     #   change the string to only contain gregorian date info
     def extract_gregorian
@@ -48,9 +36,7 @@ module Macros
             hijri_range << ParseDate.parse_range(hijri_val)
           else
             gregorian_range = ParseDate.parse_range(val)
-            hijri_range << (
-              Macros::DateParsing.to_hijri(gregorian_range.first)..Macros::DateParsing.to_hijri(gregorian_range.last) + 1
-            ).to_a
+            hijri_range << (to_hijri(gregorian_range.first)..to_hijri(gregorian_range.last) + 1).to_a
           end
         end
         hijri_range.flatten!.uniq! if hijri_range.any?
@@ -64,9 +50,21 @@ module Macros
       lambda do |_record, accumulator, _context|
         return if accumulator.empty?
 
-        accumulator.replace((
-          Macros::DateParsing.to_hijri(accumulator.first)..Macros::DateParsing.to_hijri(accumulator.last) + 1).to_a)
+        accumulator.replace((to_hijri(accumulator.first)..to_hijri(accumulator.last) + 1).to_a)
       end
+    end
+
+    HIJRI_MODIFIER = 1.030684
+    HIJRI_OFFSET = 621.5643
+
+    # NOTE: this is not a macro, but a helper method for macros
+    # @param [Integer] a single year to be converted
+    # @return [Integer] a converted integer year
+    # This method uses the first formula provided here: https://en.wikipedia.org/wiki/Hijri_year#Formula
+    def to_hijri(year)
+      return unless year.is_a? Integer
+
+      (HIJRI_MODIFIER * (year - HIJRI_OFFSET)).floor
     end
 
     REGEX_OPTS = Regexp::IGNORECASE | Regexp::MULTILINE
@@ -98,7 +96,7 @@ module Macros
       end
     end
 
-    # ---------- Collection specific macros below, alphabetical except for additional helper methods
+    # ---------- Collection or Metadata format specific macros below, alphabetical except for additional helper methods
 
     AUC_REGEX = Regexp.new('\d{4};') # captures the `YYYY; YYYY; YYYY; YYYY;` pattern
     AUC_DELIM = ';'

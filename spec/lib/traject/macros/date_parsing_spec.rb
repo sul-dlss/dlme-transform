@@ -126,7 +126,7 @@ RSpec.describe Macros::DateParsing do
     end
     context 'when no hijri provided' do
       it 'hijri range is computed from gregorian range' do
-        expect(Macros::DateParsing).to receive(:to_hijri).exactly(4).times.and_call_original
+        expect(indexer).to receive(:to_hijri).exactly(4).times.and_call_original
         expect(indexer.map_record(value: '1894')).to include 'hijri_range' => [1311, 1312]
         expect(indexer.map_record(value: '1886-1887')).to include 'hijri_range' => [1303, 1304, 1305]
       end
