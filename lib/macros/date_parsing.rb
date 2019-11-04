@@ -98,8 +98,8 @@ module Macros
 
     # ---------- Collection or Metadata format specific macros below, alphabetical except for additional helper methods
 
-    AUC_REGEX = Regexp.new('\d{4};') # captures the `YYYY; YYYY; YYYY; YYYY;` pattern
     AUC_DELIM = ';'
+    AUC_REGEX = Regexp.new("\\d{4}#{AUC_DELIM}") # captures the `YYYY; YYYY; YYYY; YYYY;` pattern
 
     # extracts dates from American University of Cairo data
     def auc_date_range
@@ -107,7 +107,7 @@ module Macros
         range_years = []
         accumulator.each do |val|
           range_years << val.scan(AUC_REGEX).map { |year| year.sub(AUC_DELIM, '').to_i }
-          next unless range_years.flatten!.uniq!.nil?
+          next unless range_years.flatten!&.uniq!.nil?
 
           range_years << ParseDate.range_array(ParseDate.earliest_year(val), ParseDate.latest_year(val))
         end
