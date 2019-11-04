@@ -6,24 +6,6 @@ require 'parse_date'
 module Macros
   # Macros for parsing dates from Strings
   module DateParsing
-    # get array of year values in range, when string is:
-    # yyyy; yyyy; yyyy; yyyy; yyyy
-    # works with negative years, but will return an emtpy set of a string is detected
-    def array_from_range
-      lambda do |_record, accumulator|
-        return if accumulator.empty?
-
-        range_years = accumulator.first.delete(' ')
-
-        unless range_years.match?(/^[0-9\-;]+$/)
-          accumulator.replace([])
-          return
-        end
-
-        accumulator.replace(range_years.split(';').map!(&:to_i))
-      end
-    end
-
     # given an accumulator containing a string with date info,
     #   use parse_date gem to get an array of indicated years as integers
     #   See https://github.com/sul-dlss/parse_date for info on what it can parse

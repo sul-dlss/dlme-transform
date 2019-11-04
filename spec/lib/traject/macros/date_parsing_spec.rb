@@ -20,30 +20,6 @@ RSpec.describe Macros::DateParsing do
     end
   end
 
-  describe '#array_from_range' do
-    before do
-      indexer.instance_eval do
-        to_field 'int_array', accumulate { |record, *_| record[:value] }, array_from_range
-      end
-    end
-
-    it 'gets a range of years' do
-      expect(indexer.map_record(value: '1880; 1881; 1882; 1883; 1884')).to include 'int_array' => [1880, 1881, 1882, 1883, 1884]
-    end
-
-    it 'gets a range of negative years' do
-      expect(indexer.map_record(value: '-881; -880; -879; -878; -877')).to include 'int_array' => [-881, -880, -879, -878, -877]
-    end
-
-    it 'gets a string' do
-      expect(indexer.map_record(value: 'ca. late 19th century')).to be_empty
-    end
-
-    it 'gets a nil value' do
-      expect(indexer.map_record(value: nil)).to be_empty
-    end
-  end
-
   describe '#parse_range' do
     before do
       indexer.instance_eval do
