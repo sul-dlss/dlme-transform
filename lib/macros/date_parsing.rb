@@ -6,34 +6,8 @@ require 'parse_date'
 module Macros
   # Macros for parsing dates from Strings
   module DateParsing
-    # given an accumulator containing a string with date info,
-    #   use parse_date gem to get an array of indicated years as integers
-    #   See https://github.com/sul-dlss/parse_date for info on what it can parse
-    def parse_range
-      lambda do |_record, accumulator|
-        range_years = []
-        accumulator.each do |val|
-          range_years << ParseDate.parse_range(val) if val&.strip.present?
-        end
-        range_years.flatten!.uniq! if range_years.any?
-        accumulator.replace(range_years)
-      end
-    end
 
-    REGEX_OPTS = Regexp::IGNORECASE | Regexp::MULTILINE
-    HIJRI_TAG = '(A.H.|AH|H)'
-    HIJRI_TAG_B4_REGEX = Regexp.new("#{HIJRI_TAG}\s+(?<hijri>[^\(\)\/]*)", REGEX_OPTS)
-    HIJRI_TAG_AFTER_REGEX = Regexp.new("(?<hijri>[^\(\)\/]*)\s+#{HIJRI_TAG}", REGEX_OPTS)
-
-    # given a string with both hijri and gregorian date info (e.g. 'A.H. 986 (1578)'),
-    #   change the string to only contain hijri date info
-    # NOTE: this is not a macro, but a helper method for macros
-    def hijri_from_mixed(date_str)
-      hijri_val = Regexp.last_match(:hijri) if date_str&.match(HIJRI_TAG_B4_REGEX)
-      hijri_val = nil unless hijri_val&.match(/\d+/)
-      hijri_val ||= Regexp.last_match(:hijri) if date_str&.match(HIJRI_TAG_AFTER_REGEX)
-      hijri_val&.strip
-    end
+    # ---------- General macros follow, alphabetical except for additional helper methods
 
     # given an accumulator containing a string with both hijri and gregorian date info,
     #   change the string to only contain gregorian date info
@@ -62,13 +36,84 @@ module Macros
             hijri_range << ParseDate.parse_range(hijri_val)
           else
             gregorian_range = ParseDate.parse_range(val)
-            hijri_range << (
-              Macros::DateParsing.to_hijri(gregorian_range.first)..Macros::DateParsing.to_hijri(gregorian_range.last) + 1
-            ).to_a
+            hijri_range << (to_hijri(gregorian_range.first)..to_hijri(gregorian_range.last) + 1).to_a
           end
         end
         hijri_range.flatten!.uniq! if hijri_range.any?
         accumulator.replace(hijri_range)
+      end
+    end
+
+    # Takes an existing array of year integers and returns an array converted to hijri
+    # with an additional year added to the end to account for the non-365 day calendar
+    def hijri_range
+      lambda do |_record, accumulator, _context|
+        return if accumulator.empty?
+
+        accumulator.replace((to_hijri(accumulator.first)..to_hijri(accumulator.last) + 1).to_a)
+      end
+    end
+
+    HIJRI_MODIFIER = 1.030684
+    HIJRI_OFFSET = 621.5643
+
+    # NOTE: this is not a macro, but a helper method for macros
+    # @param [Integer] a single year to be converted
+    # @return [Integer] a converted integer year
+    # This method uses the first formula provided here: https://en.wikipedia.org/wiki/Hijri_year#Formula
+    def to_hijri(year)
+      return unless year.is_a? Integer
+
+      (HIJRI_MODIFIER * (year - HIJRI_OFFSET)).floor
+    end
+
+    REGEX_OPTS = Regexp::IGNORECASE | Regexp::MULTILINE
+    HIJRI_TAG = '(A.H.|AH|H)'
+    HIJRI_TAG_B4_REGEX = Regexp.new("#{HIJRI_TAG}\s+(?<hijri>[^\(\)\/]*)", REGEX_OPTS)
+    HIJRI_TAG_AFTER_REGEX = Regexp.new("(?<hijri>[^\(\)\/]*)\s+#{HIJRI_TAG}", REGEX_OPTS)
+
+    # NOTE: this is not a macro, but a helper method for macros
+    # given a string with both hijri and gregorian date info (e.g. 'A.H. 986 (1578)'),
+    #   change the string to only contain hijri date info
+    def hijri_from_mixed(date_str)
+      hijri_val = Regexp.last_match(:hijri) if date_str&.match(HIJRI_TAG_B4_REGEX)
+      hijri_val = nil unless hijri_val&.match(/\d+/)
+      hijri_val ||= Regexp.last_match(:hijri) if date_str&.match(HIJRI_TAG_AFTER_REGEX)
+      hijri_val&.strip
+    end
+
+    # given an accumulator containing a string with date info,
+    #   use parse_date gem to get an array of indicated years as integers
+    #   See https://github.com/sul-dlss/parse_date for info on what it can parse
+    def parse_range
+      lambda do |_record, accumulator|
+        range_years = []
+        accumulator.each do |val|
+          range_years << ParseDate.parse_range(val) if val&.strip.present?
+        end
+        range_years.flatten!.uniq! if range_years.any?
+        accumulator.replace(range_years)
+      end
+    end
+
+    # ---------- Collection or Metadata format specific macros below, alphabetical except for additional helper methods
+
+    AUC_REGEX = Regexp.new('\d{4};') # captures the `YYYY; YYYY; YYYY; YYYY;` pattern
+    AUC_DELIM = ';'
+
+    # extracts dates from American University of Cairo data
+    def auc_date_range
+      lambda do |_record, accumulator, _context|
+        range_years = []
+        accumulator.each do |val|
+          range_years << val.scan(AUC_REGEX).map { |year| year.sub(AUC_DELIM, '').to_i }
+          next unless range_years.flatten!.uniq!.nil?
+
+          range_years << ParseDate.range_array(ParseDate.earliest_year(val), ParseDate.latest_year(val))
+        end
+
+        range_years.flatten!.uniq! if range_years.any?
+        accumulator.replace(range_years)
       end
     end
 
@@ -179,7 +224,7 @@ module Macros
     MODS_NS = { mods: 'http://www.loc.gov/mods/v3' }.freeze
     ORIGIN_INFO_PATH = '//mods:mods/mods:originInfo'
 
-    # NOTE: this is not a macro, but a helper method for macros
+    # NOTE: this is not a macro, but a helper method for mods_date_range macro
     # given the namespace prefixed name for a MODS date element in mods:originInfo,
     # extract date range if available
     #   - look for attribute 'point' on element for "start" and "end" and use those values for range
@@ -227,47 +272,6 @@ module Macros
           accumulator.clear
         end
       end
-    end
-
-    # Takes an existing array of year integers and returns an array converted to hijri
-    # with an additional year added to the end to account for the non-365 day calendar
-    def hijri_range
-      lambda do |_record, accumulator, _context|
-        return if accumulator.empty?
-
-        accumulator.replace((
-          Macros::DateParsing.to_hijri(accumulator.first)..Macros::DateParsing.to_hijri(accumulator.last) + 1).to_a)
-      end
-    end
-
-    AUC_REGEX = Regexp.new('\d{4};') # captures the `YYYY; YYYY; YYYY; YYYY;` pattern
-    AUC_DELIM = ';'
-
-    def auc_date_range
-      lambda do |_record, accumulator, _context|
-        range_years = []
-        accumulator.each do |val|
-          range_years << val.scan(AUC_REGEX).map { |year| year.sub(AUC_DELIM, '').to_i }
-          next unless range_years.flatten!.uniq!.nil?
-
-          range_years << ParseDate.range_array(ParseDate.earliest_year(val), ParseDate.latest_year(val))
-        end
-
-        range_years.flatten!.uniq! if range_years.any?
-        accumulator.replace(range_years)
-      end
-    end
-
-    HIJRI_MODIFIER = 1.030684
-    HIJRI_OFFSET = 621.5643
-
-    # @param [Integer] a single year to be converted
-    # @return [Integer] a converted integer year
-    # This method uses the first formula provided here: https://en.wikipedia.org/wiki/Hijri_year#Formula
-    def self.to_hijri(year)
-      return unless year.is_a? Integer
-
-      (HIJRI_MODIFIER * (year - HIJRI_OFFSET)).floor
     end
   end
 end
