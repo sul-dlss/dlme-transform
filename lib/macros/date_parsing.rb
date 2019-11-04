@@ -101,6 +101,7 @@ module Macros
     AUC_REGEX = Regexp.new('\d{4};') # captures the `YYYY; YYYY; YYYY; YYYY;` pattern
     AUC_DELIM = ';'
 
+    # extracts dates from American University of Cairo data
     def auc_date_range
       lambda do |_record, accumulator, _context|
         range_years = []
