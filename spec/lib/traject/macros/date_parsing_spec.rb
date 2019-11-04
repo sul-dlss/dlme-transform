@@ -20,34 +20,7 @@ RSpec.describe Macros::DateParsing do
     end
   end
 
-  describe '#parse_range' do
-    before do
-      indexer.instance_eval do
-        to_field 'int_array', accumulate { |record, *_| record[:value] }, parse_range
-      end
-    end
-
-    it 'parseable values' do
-      expect(indexer.map_record(value: '2019')).to include 'int_array' => [2019]
-      expect(indexer.map_record(value: '12/25/00')).to include 'int_array' => [2000]
-      expect(indexer.map_record(value: '5-1-25')).to include 'int_array' => [1925]
-      expect(indexer.map_record(value: '-914')).to include 'int_array' => [-914]
-      expect(indexer.map_record(value: '1666 B.C.')).to include 'int_array' => [-1666]
-      expect(indexer.map_record(value: '2017-2019')).to include 'int_array' => [2017, 2018, 2019]
-      expect(indexer.map_record(value: 'between 1830 and 1899?')).to include 'int_array' => (1830..1899).to_a
-      expect(indexer.map_record(value: '196u')).to include 'int_array' => (1960..1969).to_a
-      expect(indexer.map_record(value: '17--')).to include 'int_array' => (1700..1799).to_a
-      expect(indexer.map_record(value: '1602 or 1603')).to include 'int_array' => [1602, 1603]
-      expect(indexer.map_record(value: 'between 300 and 150 B.C')).to include 'int_array' => (-300..-150).to_a
-      expect(indexer.map_record(value: '18th century CE')).to include 'int_array' => (1700..1799).to_a
-      expect(indexer.map_record(value: 'ca. 10th–9th century B.C.')).to include 'int_array' => (-1099..-900).to_a
-      expect(indexer.map_record(value: 'Sun, 12 Nov 2017 14:08:12 +0000')).to include 'int_array' => [2017] # aims
-    end
-
-    it 'when missing date' do
-      expect(indexer.map_record({})).to eq({})
-    end
-  end
+  # -- Specs for general macros follow, alphabetical
 
   mixed_hijri_gregorian =
     [ # raw, hijri part, gregorian part
@@ -134,6 +107,80 @@ RSpec.describe Macros::DateParsing do
 
     it 'missing value' do
       expect(indexer.map_record({})).to eq({})
+    end
+  end
+
+  describe '#hijri_range' do
+    before do
+      indexer.instance_eval do
+        to_field 'int_array', accumulate { |record, *_| record[:value] }, hijri_range
+      end
+    end
+
+    it 'receives a range of integers' do
+      expect(indexer.map_record(value: [2010, 2011, 2012])).to include 'int_array' => [1431, 1432, 1433, 1434]
+    end
+
+    it 'receives a single value' do
+      expect(indexer.map_record(value: [623])).to include 'int_array' => [1, 2]
+    end
+
+    it 'is not provided a value' do
+      expect(indexer.map_record(value: [])).to be_empty
+    end
+
+    it 'receives a bc value' do
+      expect(indexer.map_record(value: [-10, -9, -8])).to include 'int_array' => [-651, -650, -649, -648]
+    end
+  end
+
+  describe '#parse_range' do
+    before do
+      indexer.instance_eval do
+        to_field 'int_array', accumulate { |record, *_| record[:value] }, parse_range
+      end
+    end
+
+    it 'parseable values' do
+      expect(indexer.map_record(value: '2019')).to include 'int_array' => [2019]
+      expect(indexer.map_record(value: '12/25/00')).to include 'int_array' => [2000]
+      expect(indexer.map_record(value: '5-1-25')).to include 'int_array' => [1925]
+      expect(indexer.map_record(value: '-914')).to include 'int_array' => [-914]
+      expect(indexer.map_record(value: '1666 B.C.')).to include 'int_array' => [-1666]
+      expect(indexer.map_record(value: '2017-2019')).to include 'int_array' => [2017, 2018, 2019]
+      expect(indexer.map_record(value: 'between 1830 and 1899?')).to include 'int_array' => (1830..1899).to_a
+      expect(indexer.map_record(value: '196u')).to include 'int_array' => (1960..1969).to_a
+      expect(indexer.map_record(value: '17--')).to include 'int_array' => (1700..1799).to_a
+      expect(indexer.map_record(value: '1602 or 1603')).to include 'int_array' => [1602, 1603]
+      expect(indexer.map_record(value: 'between 300 and 150 B.C')).to include 'int_array' => (-300..-150).to_a
+      expect(indexer.map_record(value: '18th century CE')).to include 'int_array' => (1700..1799).to_a
+      expect(indexer.map_record(value: 'ca. 10th–9th century B.C.')).to include 'int_array' => (-1099..-900).to_a
+      expect(indexer.map_record(value: 'Sun, 12 Nov 2017 14:08:12 +0000')).to include 'int_array' => [2017] # aims
+    end
+
+    it 'when missing date' do
+      expect(indexer.map_record({})).to eq({})
+    end
+  end
+
+  # -- Specs for collection or metadata format specific macros follow, alphabetical
+
+  describe '#auc_date_range' do
+    before do
+      indexer.instance_eval do
+        to_field 'range', accumulate { |record, *_| record[:value] }, auc_date_range
+      end
+    end
+
+    context 'when the dc:date field is populated' do
+      it 'includes a valid date or range' do
+        expect(indexer.map_record(value: '1990-10-01')).to include 'range' => [1990]
+        expect(indexer.map_record(value: '1990')).to include 'range' => [1990]
+        expect(indexer.map_record(value: '990')).to include 'range' => [990]
+        expect(indexer.map_record(value: '1990-1995')).to include 'range' => [1990, 1991, 1992, 1993, 1994, 1995]
+        expect(indexer.map_record(value: '990-995')).to include 'range' => [990, 991, 992, 993, 994, 995]
+        expect(indexer.map_record(value: '1990; 1991; 1992;')).to include 'range' => [1990, 1991, 1992]
+      end
     end
   end
 
@@ -299,30 +346,6 @@ RSpec.describe Macros::DateParsing do
     end
   end
 
-  describe '#hijri_range' do
-    before do
-      indexer.instance_eval do
-        to_field 'int_array', accumulate { |record, *_| record[:value] }, hijri_range
-      end
-    end
-
-    it 'receives a range of integers' do
-      expect(indexer.map_record(value: [2010, 2011, 2012])).to include 'int_array' => [1431, 1432, 1433, 1434]
-    end
-
-    it 'receives a single value' do
-      expect(indexer.map_record(value: [623])).to include 'int_array' => [1, 2]
-    end
-
-    it 'is not provided a value' do
-      expect(indexer.map_record(value: [])).to be_empty
-    end
-
-    it 'receives a bc value' do
-      expect(indexer.map_record(value: [-10, -9, -8])).to include 'int_array' => [-651, -650, -649, -648]
-    end
-  end
-
   describe '#marc_date_range' do
     {
       # 008[06-14] => expected result
@@ -351,25 +374,6 @@ RSpec.describe Macros::DateParsing do
       it "#{raw_val} from 008[06-14] has no value as expected" do
         indexer.to_field('range', raw_val_lambda, indexer.marc_date_range)
         expect(indexer.map_record(raw: raw_val)).to eq({})
-      end
-    end
-  end
-
-  describe '#auc_date_range' do
-    before do
-      indexer.instance_eval do
-        to_field 'range', accumulate { |record, *_| record[:value] }, auc_date_range
-      end
-    end
-
-    context 'when the dc:date field is populated' do
-      it 'includes a valid date or range' do
-        expect(indexer.map_record(value: '1990-10-01')).to include 'range' => [1990]
-        expect(indexer.map_record(value: '1990')).to include 'range' => [1990]
-        expect(indexer.map_record(value: '990')).to include 'range' => [990]
-        expect(indexer.map_record(value: '1990-1995')).to include 'range' => [1990, 1991, 1992, 1993, 1994, 1995]
-        expect(indexer.map_record(value: '990-995')).to include 'range' => [990, 991, 992, 993, 994, 995]
-        expect(indexer.map_record(value: '1990; 1991; 1992;')).to include 'range' => [1990, 1991, 1992]
       end
     end
   end
