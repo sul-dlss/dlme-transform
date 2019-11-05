@@ -44,5 +44,9 @@ Style/TrailingCommaInArrayLiteral:
   Exclude:
     - 'spec/lib/traject/macros/date_parsing_spec.rb'
 
+Style/TrailingCommaInHashLiteral:
+  Exclude:
+    - 'spec/lib/traject/macros/date_parsing_spec.rb'
+
 Style/WordArray:
   Enabled: false
