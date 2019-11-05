@@ -189,6 +189,7 @@ module Macros
     def harvard_ihp_date_range
       lambda do |_record, accumulator|
         return nil if accumulator.empty?
+
         first_val = accumulator.first
         if !first_val.match(GREGORIAN_IN_BRACKET_REGEX).nil?
           result = ParseDate.parse_range(Regexp.last_match(:gregorian).sub('or', '-'))
