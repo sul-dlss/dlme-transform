@@ -32,7 +32,7 @@ to_field 'cho_contributor', extract_oai('dc:contributor'),
 to_field 'cho_coverage', extract_oai('dc:coverage'), strip
 to_field 'cho_creator', extract_oai('dc:creator'),
          strip, split('.')
-to_field 'cho_date', extract_oai('dc:date[1]'), strip
+to_field 'cho_date', extract_oai('dc:date'), strip
 to_field 'cho_description', extract_oai('dc:description'), strip
 to_field 'cho_dc_rights', extract_oai('dc:rights'), strip
 to_field 'cho_edm_type', extract_oai('dc:type'),
