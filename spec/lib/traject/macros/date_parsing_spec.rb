@@ -113,7 +113,7 @@ RSpec.describe Macros::DateParsing do
   describe '#hijri_range' do
     before do
       indexer.instance_eval do
-        to_field 'int_array', accumulate { |record, *_| record[:value] }, hijri_range
+        to_field 'int_array', ->(record, accumulator) { accumulator.replace(Array(record[:value])) }, hijri_range
       end
     end
 
@@ -137,11 +137,11 @@ RSpec.describe Macros::DateParsing do
   describe '#parse_range' do
     before do
       indexer.instance_eval do
-        to_field 'int_array', accumulate { |record, *_| record[:value] }, parse_range
+        to_field 'int_array', ->(record, accumulator) { accumulator.replace(Array(record[:value])) }, parse_range
       end
     end
 
-    it 'parseable values' do
+    it 'parses values as expected' do
       expect(indexer.map_record(value: '2019')).to include 'int_array' => [2019]
       expect(indexer.map_record(value: '12/25/00')).to include 'int_array' => [2000]
       expect(indexer.map_record(value: '5-1-25')).to include 'int_array' => [1925]
@@ -158,8 +158,16 @@ RSpec.describe Macros::DateParsing do
       expect(indexer.map_record(value: 'Sun, 12 Nov 2017 14:08:12 +0000')).to include 'int_array' => [2017] # aims
     end
 
-    it 'when missing date' do
+    it 'returns an empty hash when there are no values' do
       expect(indexer.map_record({})).to eq({})
+    end
+
+    # This is a specific error condition from Sakip data. Returning an array of
+    # nils will cause `hijri_range` to raise `NoMethodError`. This test calls
+    # the macro directly instead of via the Traject indexer because the indexer
+    # has side effects that make testing this specific behavior difficult.
+    it 'does not return an array of nils' do
+      expect(indexer.parse_range.call(nil, ['[n.d.]'])).to eq([])
     end
   end
 
@@ -168,7 +176,7 @@ RSpec.describe Macros::DateParsing do
   describe '#auc_date_range' do
     before do
       indexer.instance_eval do
-        to_field 'range', accumulate { |record, *_| record[:value] }, auc_date_range
+        to_field 'range', ->(record, accumulator) { accumulator.replace(Array(record[:value])) }, auc_date_range
       end
     end
 
