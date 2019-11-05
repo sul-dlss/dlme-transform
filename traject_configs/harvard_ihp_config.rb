@@ -2,10 +2,12 @@
 
 require 'traject_plus'
 require 'dlme_json_resource_writer'
+require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/harvard'
 require 'macros/post_process'
 
+extend Macros::DateParsing
 extend Macros::DLME
 extend Macros::PostProcess
 extend Macros::Harvard
@@ -27,7 +29,8 @@ to_field 'cho_contributor', extract_harvard('/*/dc:contributor'), strip
 to_field 'cho_coverage', extract_harvard('/*/dc:coverage'), strip
 to_field 'cho_creator', extract_harvard('/*/dc:creator'), strip
 to_field 'cho_date', extract_harvard('/*/dc:date'), strip
-# to_field 'cho_date_range_norm', extract_harvard('/*/dc:date'), strip
+to_field 'cho_date_range_norm', extract_harvard('/*/dc:date'), strip, harvard_ihp_date_range
+to_field 'cho_date_range_hijri', extract_harvard('/*/dc:date'), strip, harvard_ihp_date_range, hijri_range
 to_field 'cho_description', extract_harvard('/*/dc:description'), strip
 to_field 'cho_dc_rights', extract_harvard('/*/dc:rights'), strip
 to_field 'cho_edm_type', extract_harvard('/*/dc:type[1]'),

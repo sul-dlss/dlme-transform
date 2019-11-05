@@ -107,7 +107,7 @@ module Macros
     AUC_DELIM = ';'
     AUC_REGEX = Regexp.new("\\d{4}#{AUC_DELIM}?") # captures the `YYYY; YYYY; YYYY; YYYY;` pattern
 
-    # extracts dates from American University of Cairo data
+    # Extracts date range from American University of Cairo data
     def auc_date_range
       lambda do |_record, accumulator, _context|
         range_years = []
@@ -161,7 +161,7 @@ module Macros
     # Note:  saw no "#{FGDC_TIMEINFO_XPATH}/mdattim" multiple dates path data
 
     # Extracts dates from FGDC idinfo/timeperd to create a single date range value
-    # a year will be nil if it is NOT between -999 and (current year + 2), per parse_date gem
+    # a year will be nil if it is NOT between -9999 and (current year + 1), per parse_date gem
     # see https://www.fgdc.gov/metadata/csdgm/09.html, https://www.fgdc.gov/metadata/documents/MetadataQuickGuide.pdf
     def fgdc_date_range
       lambda do |record, accumulator, _context|
@@ -173,6 +173,45 @@ module Macros
         else
           single_date_nodeset = record.xpath(FGDC_SINGLE_DATE_XPATH, FGDC_NS)
           accumulator.replace([ParseDate.earliest_year(single_date_nodeset.text&.strip)]) if single_date_nodeset.present?
+        end
+      end
+    end
+
+    GREGORIAN_IN_BRACKET_REGEX = /\[(?<gregorian>.*\d{3,4}.*)\]/.freeze
+    HIJRI_IE_GREGORIAN_REGEX = /\d.*i\.?e\.?(?<gregorian>.*\d{3,4}.*)/.freeze
+    UU_TRAILING_HYPHEN_REGEX = /\d+uu\-$/.freeze
+
+    # Extracts date range from Harvard IHP data
+    # if the first value has [] chars, take the value inside the brackets and use parse_date
+    # if the first value has i.e., take the value after i.e. and use parse_date
+    # if the first value has no [ and no i.e., take the value and use parse_date
+    # if no result, take the second value and use parse_date
+    def harvard_ihp_date_range
+      lambda do |_record, accumulator|
+        return nil if accumulator.empty?
+
+        first_val = accumulator.first
+        if !first_val.match(GREGORIAN_IN_BRACKET_REGEX).nil?
+          result = ParseDate.parse_range(Regexp.last_match(:gregorian).sub('or', '-'))
+        elsif !first_val.match(HIJRI_IE_GREGORIAN_REGEX).nil?
+          result = ParseDate.parse_range(Regexp.last_match(:gregorian).sub('or', '-'))
+        elsif !first_val.match?(/\[/)
+          result = if first_val.match?(UU_TRAILING_HYPHEN_REGEX)
+                     ParseDate.parse_range(first_val.chop)
+                   else
+                     ParseDate.parse_range(first_val)
+                   end
+        end
+
+        unless result
+          second_val = accumulator[1]
+          result = ParseDate.parse_range(second_val)
+        end
+
+        if result
+          accumulator.replace(result)
+        else
+          accumulator.clear
         end
       end
     end
