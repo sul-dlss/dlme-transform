@@ -39,13 +39,13 @@ module Macros
             hijri_range << (to_hijri(gregorian_range.first)..to_hijri(gregorian_range.last) + 1).to_a
           end
         end
-        accumulator.replace(normalize_year_range(hijri_range))
+        accumulator.replace(normalize_year_array(hijri_range))
       end
     end
 
     # HELPER METHOD for other macros - NOT A MACRO
     # Given an array of year values, return a flat, sorted array of unique values with `nil`s filtered out
-    def normalize_year_range(range)
+    def normalize_year_array(range)
       return range if range.empty?
 
       range.flatten.compact.uniq.sort
@@ -98,7 +98,7 @@ module Macros
         accumulator.each do |val|
           range_years << ParseDate.parse_range(val) if val&.strip.present?
         end
-        accumulator.replace(normalize_year_range(range_years))
+        accumulator.replace(normalize_year_array(range_years))
       end
     end
 
@@ -115,7 +115,7 @@ module Macros
           range_years << val.scan(AUC_REGEX).map { |year| year.sub(AUC_DELIM, '').to_i }
           range_years << ParseDate.range_array(ParseDate.earliest_year(val), ParseDate.latest_year(val))
         end
-        accumulator.replace(normalize_year_range(range_years))
+        accumulator.replace(normalize_year_array(range_years))
       end
     end
 
