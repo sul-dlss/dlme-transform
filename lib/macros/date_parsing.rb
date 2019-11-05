@@ -45,10 +45,10 @@ module Macros
 
     # HELPER METHOD for other macros - NOT A MACRO
     # Given an array of year values, return a flat, sorted array of unique values with `nil`s filtered out
-    def normalize_year_array(range)
-      return range if range.empty?
+    def normalize_year_array(years)
+      return years if years.empty?
 
-      range.flatten.compact.uniq.sort
+      years.flatten.compact.uniq.sort
     end
 
     # Takes an existing array of year integers and returns an array converted to hijri
