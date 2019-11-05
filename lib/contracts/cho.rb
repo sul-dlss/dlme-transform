@@ -13,7 +13,7 @@ module Contracts
       optional(:cho_date_range_hijri).array(:integer)
       optional(:cho_date_range_norm).array(:integer)
       optional(:cho_dc_rights).array(:str?)
-      optional(:cho_description).array(:str?)
+      optional(:cho_description).value(:hash?)
       optional(:cho_edm_type) { array? { each(:str?, excluded_from?: ['NOT FOUND']) } }
       optional(:cho_extent).array(:str?)
       optional(:cho_format).array(:str?)
@@ -80,6 +80,22 @@ module Contracts
       end
     end
     # rubocop:enable Metrics/AbcSize
+
+    def self.optional_language_specific_rule
+      proc do
+        # Short-circuit if value is empty: `next` in a Proc functions like a return
+        next unless value.respond_to?(:keys)
+
+        unexpected_keys = value.keys - expected_language_values
+        key.failure("unexpected language code(s) found in #{key.path.keys.first}: #{unexpected_keys.join(', ')}") if
+          unexpected_keys.any?
+        unexpected_values = value.values&.first&.reject { |value| value.is_a?(String) }
+        key.failure("unexpected non-string value(s) found in #{key.path.keys.first}: #{unexpected_values}") if
+          unexpected_values&.any?
+      end
+    end
+
+    rule(:cho_description, &optional_language_specific_rule)
 
     rule(:cho_title, &required_language_specific_rule)
     rule(:agg_data_provider, &required_language_specific_rule)

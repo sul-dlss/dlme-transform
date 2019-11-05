@@ -5,7 +5,7 @@ require 'contracts'
 RSpec.describe Contracts::CHO do
   subject(:contract) { Contracts::CHO.new.call(cho) }
 
-  describe 'language-specific fields' do
+  describe 'required language-specific fields' do
     %i[
       agg_data_provider
       agg_data_provider_country
@@ -35,6 +35,74 @@ RSpec.describe Contracts::CHO do
 
           it 'states the field contained no values' do
             expect(contract.errors[field_name]).to include('no values provided')
+          end
+        end
+
+        context 'when hash contains unexpected keys' do
+          let(:cho) { { field_name => { unknown_language_key: ['value1'] } } }
+
+          it 'states the field had unexpected keys' do
+            expect(contract.errors[field_name]).to include(
+              "unexpected language code(s) found in #{field_name}: unknown_language_key"
+            )
+          end
+        end
+
+        context 'when hash contains unexpected values' do
+          let(:cho) { { field_name => { 'none' => ['none', ['The Real Value']] } } }
+
+          it 'states the field had unexpected keys' do
+            expect(contract.errors[field_name]).to include(
+              "unexpected non-string value(s) found in #{field_name}: [[\"The Real Value\"]]"
+            )
+          end
+        end
+
+        context 'when hash looks as expected' do
+          let(:cho) do
+            {
+              field_name => {
+                'none' => ['value1'],
+                'en' => %w[value2 value3],
+                'tr-Latn' => ['value4']
+              }
+            }
+          end
+
+          it 'has no errors' do
+            expect(contract.errors[field_name]).to be_nil
+          end
+        end
+      end
+    end
+  end
+
+  describe 'optional language-specific fields' do
+    %i[
+      cho_description
+    ].each do |field_name|
+      describe field_name do
+        context 'when missing' do
+          let(:cho) { {} }
+
+          it 'has no errors' do
+            expect(contract.errors[field_name]).to be_nil
+          end
+        end
+
+        context 'when not a hash' do
+          let(:cho) { { field_name => 'foo' } }
+
+          it 'states the field is not a hash' do
+            expect(contract.errors[field_name]).to include('must be a hash')
+          end
+        end
+
+        context 'when an empty hash' do
+          let(:cho) { { field_name => {} } }
+
+          it 'has no errors' do
+            expect(contract.errors[field_name]).to be_nil
           end
         end
 
