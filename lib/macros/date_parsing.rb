@@ -43,8 +43,8 @@ module Macros
       end
     end
 
+    # HELPER METHOD for other macros - NOT A MACRO
     # Given an array of year values, return a flat, sorted array of unique values with `nil`s filtered out
-    # NOTE: this is not a macro, but a helper method for other macros
     def normalize_year_range(range)
       return range if range.empty?
 
@@ -64,7 +64,7 @@ module Macros
     HIJRI_MODIFIER = 1.030684
     HIJRI_OFFSET = 621.5643
 
-    # NOTE: this is not a macro, but a helper method for macros
+    # HELPER METHOD for other macros - NOT A MACRO
     # @param [Integer] a single year to be converted
     # @return [Integer] a converted integer year
     # This method uses the first formula provided here: https://en.wikipedia.org/wiki/Hijri_year#Formula
@@ -79,7 +79,7 @@ module Macros
     HIJRI_TAG_B4_REGEX = Regexp.new("#{HIJRI_TAG}\s+(?<hijri>[^\(\)\/]*)", REGEX_OPTS)
     HIJRI_TAG_AFTER_REGEX = Regexp.new("(?<hijri>[^\(\)\/]*)\s+#{HIJRI_TAG}", REGEX_OPTS)
 
-    # NOTE: this is not a macro, but a helper method for macros
+    # HELPER METHOD for other macros - NOT A MACRO
     # given a string with both hijri and gregorian date info (e.g. 'A.H. 986 (1578)'),
     #   change the string to only contain hijri date info
     def hijri_from_mixed(date_str)
@@ -265,7 +265,7 @@ module Macros
     MODS_NS = { mods: 'http://www.loc.gov/mods/v3' }.freeze
     ORIGIN_INFO_PATH = '//mods:mods/mods:originInfo'
 
-    # NOTE: this is not a macro, but a helper method for mods_date_range macro
+    # HELPER METHOD for other macros - NOT A MACRO
     # given the namespace prefixed name for a MODS date element in mods:originInfo,
     # extract date range if available
     #   - look for attribute 'point' on element for "start" and "end" and use those values for range
