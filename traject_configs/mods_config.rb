@@ -104,7 +104,7 @@ to_field 'agg_data_provider', data_provider_ar, lang('ar-Arab')
 to_field 'agg_provider', provider, lang('en')
 to_field 'agg_provider', provider_ar, lang('ar-Arab')
 
-each_record convert_to_language_hash('agg_data_provider', 'agg_data_provider_country', 'agg_provider', 'agg_provider_country', 'cho_title')
+each_record convert_to_language_hash('agg_data_provider', 'agg_data_provider_country', 'agg_provider', 'agg_provider_country', 'cho_title', 'cho_description')
 
 # agg_dc_rights:,
 # agg_edm_rights:,
