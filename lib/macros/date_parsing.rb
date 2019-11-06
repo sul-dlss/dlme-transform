@@ -39,16 +39,16 @@ module Macros
             hijri_range << (to_hijri(gregorian_range.first)..to_hijri(gregorian_range.last) + 1).to_a
           end
         end
-        accumulator.replace(normalize_year_range(hijri_range))
+        accumulator.replace(normalize_year_array(hijri_range))
       end
     end
 
+    # HELPER METHOD for other macros - NOT A MACRO
     # Given an array of year values, return a flat, sorted array of unique values with `nil`s filtered out
-    # NOTE: this is not a macro, but a helper method for other macros
-    def normalize_year_range(range)
-      return range if range.empty?
+    def normalize_year_array(years)
+      return years if years.empty?
 
-      range.flatten.compact.uniq.sort
+      years.flatten.compact.uniq.sort
     end
 
     # Takes an existing array of year integers and returns an array converted to hijri
@@ -64,7 +64,7 @@ module Macros
     HIJRI_MODIFIER = 1.030684
     HIJRI_OFFSET = 621.5643
 
-    # NOTE: this is not a macro, but a helper method for macros
+    # HELPER METHOD for other macros - NOT A MACRO
     # @param [Integer] a single year to be converted
     # @return [Integer] a converted integer year
     # This method uses the first formula provided here: https://en.wikipedia.org/wiki/Hijri_year#Formula
@@ -79,7 +79,7 @@ module Macros
     HIJRI_TAG_B4_REGEX = Regexp.new("#{HIJRI_TAG}\s+(?<hijri>[^\(\)\/]*)", REGEX_OPTS)
     HIJRI_TAG_AFTER_REGEX = Regexp.new("(?<hijri>[^\(\)\/]*)\s+#{HIJRI_TAG}", REGEX_OPTS)
 
-    # NOTE: this is not a macro, but a helper method for macros
+    # HELPER METHOD for other macros - NOT A MACRO
     # given a string with both hijri and gregorian date info (e.g. 'A.H. 986 (1578)'),
     #   change the string to only contain hijri date info
     def hijri_from_mixed(date_str)
@@ -98,7 +98,7 @@ module Macros
         accumulator.each do |val|
           range_years << ParseDate.parse_range(val) if val&.strip.present?
         end
-        accumulator.replace(normalize_year_range(range_years))
+        accumulator.replace(normalize_year_array(range_years))
       end
     end
 
@@ -115,7 +115,7 @@ module Macros
           range_years << val.scan(AUC_REGEX).map { |year| year.sub(AUC_DELIM, '').to_i }
           range_years << ParseDate.range_array(ParseDate.earliest_year(val), ParseDate.latest_year(val))
         end
-        accumulator.replace(normalize_year_range(range_years))
+        accumulator.replace(normalize_year_array(range_years))
       end
     end
 
@@ -265,7 +265,7 @@ module Macros
     MODS_NS = { mods: 'http://www.loc.gov/mods/v3' }.freeze
     ORIGIN_INFO_PATH = '//mods:mods/mods:originInfo'
 
-    # NOTE: this is not a macro, but a helper method for mods_date_range macro
+    # HELPER METHOD for other macros - NOT A MACRO
     # given the namespace prefixed name for a MODS date element in mods:originInfo,
     # extract date range if available
     #   - look for attribute 'point' on element for "start" and "end" and use those values for range
