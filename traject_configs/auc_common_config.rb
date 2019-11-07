@@ -28,30 +28,30 @@ end
 
 # Cho Required
 to_field 'id', extract_oai_identifier, strip
-to_field 'cho_title', extract_oai('dc:title'), strip, lang('en')
+to_field 'cho_title', extract_oai('dc:title'), strip
 
 # Cho Other
 to_field 'cho_contributor', extract_oai('dc:contributor'),
-         strip, split('.'), lang('en')
-to_field 'cho_coverage', extract_oai('dc:coverage'), strip, lang('en')
+         strip, split('.')
+to_field 'cho_coverage', extract_oai('dc:coverage'), strip
 to_field 'cho_creator', extract_oai('dc:creator'),
-         strip, split('.'), lang('en')
+         strip, split('.')
 to_field 'cho_date', extract_oai('dc:date'), strip, lang('en')
-to_field 'cho_description', extract_oai('dc:description'), strip, lang('en')
-to_field 'cho_dc_rights', extract_oai('dc:rights'), strip, lang('en')
+to_field 'cho_description', extract_oai('dc:description'), strip
+to_field 'cho_dc_rights', extract_oai('dc:rights'), strip
 to_field 'cho_edm_type', extract_oai('dc:type'),
          split(';'), strip, transform(&:downcase), normalize_type, lang('en')
 to_field 'cho_edm_type', extract_oai('dc:type'),
          split(';'), strip, transform(&:downcase), normalize_type, translation_map('norm_types_to_ar'), lang('ar-Arab')
-to_field 'cho_format', extract_oai('dc:format'), strip, lang('en')
-to_field 'cho_type', extract_oai('dc:type'), lang('en')
+to_field 'cho_format', extract_oai('dc:format'), strip
+to_field 'cho_type', extract_oai('dc:type')
 to_field 'cho_language', extract_oai('dc:language'), split(';'),
          split(','), strip, transform(&:downcase), normalize_language, lang('en')
 to_field 'cho_language', extract_oai('dc:language'), split(';'),
          split(','), strip, transform(&:downcase), normalize_language, translation_map('norm_languages_to_ar'), lang('ar-Arab')
-to_field 'cho_publisher', extract_oai('dc:publisher'), strip, lang('en')
-to_field 'cho_relation', extract_oai('dc:relation'), strip, lang('en')
-to_field 'cho_subject', extract_oai('dc:subject'), strip, lang('en')
+to_field 'cho_publisher', extract_oai('dc:publisher'), strip
+to_field 'cho_relation', extract_oai('dc:relation'), strip
+to_field 'cho_subject', extract_oai('dc:subject'), strip
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
