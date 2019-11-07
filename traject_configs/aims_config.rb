@@ -10,8 +10,8 @@ require 'traject_plus'
 extend Macros::AIMS
 extend Macros::DateParsing
 extend Macros::DLME
-extend TrajectPlus::Macros
 extend Macros::PostProcess
+extend TrajectPlus::Macros
 
 settings do
   provide 'writer_class_name', 'DlmeJsonResourceWriter'
@@ -36,10 +36,10 @@ to_field 'cho_has_type', literal('Interview'), lang('en')
 to_field 'cho_has_type', literal('Interview'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
 
 # Agg
-to_field 'agg_provider', provider, lang('en')
-to_field 'agg_provider', provider_ar, lang('ar-Arab')
 to_field 'agg_data_provider', data_provider, lang('en')
 to_field 'agg_data_provider', data_provider_ar, lang('ar-Arab')
+to_field 'agg_data_provider_country', data_provider_country, lang('en')
+to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
@@ -52,11 +52,10 @@ to_field 'agg_preview' do |_record, accumulator, context|
     'wr_id' => [extract_thumbnail, transform(&:to_s)]
   )
 end
-
+to_field 'agg_provider', provider, lang('en')
+to_field 'agg_provider', provider_ar, lang('ar-Arab')
 to_field 'agg_provider_country', provider_country, lang('en')
 to_field 'agg_provider_country', provider_country_ar, lang('ar-Arab')
-to_field 'agg_data_provider_country', data_provider_country, lang('en')
-to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 
 each_record convert_to_language_hash(
   'agg_data_provider',
