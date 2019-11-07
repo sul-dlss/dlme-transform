@@ -41,10 +41,11 @@
   },
   {
     "trajects": [
-      "aub_common_config.rb"
+      "aub_common_config.rb",
+      "aub_postcards_config.rb"
     ],
     "paths": [
-      "aub"
+      "aub/postcards"
     ],
     "extension": ".xml",
     "settings": {
