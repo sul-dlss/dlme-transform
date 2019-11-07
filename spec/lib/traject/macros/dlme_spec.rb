@@ -30,5 +30,13 @@ RSpec.describe Macros::DLME do
       callable = instance.lang('en')
       expect(callable.call(nil, accumulator, nil)).to eq([{ language: 'en', values: accumulator_original }])
     end
+
+    context 'with no values in accumulator' do
+      it 'leaves accumulator empty' do
+        accumulator = []
+        callable = instance.lang('en')
+        expect(callable.call(nil, accumulator, nil)).to eq nil
+      end
+    end
   end
 end
