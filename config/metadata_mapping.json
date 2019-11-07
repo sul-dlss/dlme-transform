@@ -476,7 +476,7 @@
       "princeton_movie_config.rb"
     ],
     "paths": [
-      "princeton/princeton-movie-posters"
+      "princeton/movie_posters"
     ],
     "extension": ".json",
     "settings": {
@@ -496,8 +496,8 @@
       "princeton_mss_config.rb"
     ],
     "paths": [
-      "princeton/princeton_mss",
-      "princeton/princeton_ymdi"
+      "princeton/islamic_mss",
+      "princeton/yemeni_mss"
     ],
     "extension": ".json",
     "settings": {
