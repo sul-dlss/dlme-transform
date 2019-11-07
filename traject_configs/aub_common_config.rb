@@ -67,7 +67,7 @@ each_record convert_to_language_hash(
   'agg_provider',
   'agg_provider_country',
   'cho_alternative',
-  'cho_contributor'
+  'cho_contributor',
   'cho_coverage',
   'cho_creator',
   'cho_date',
