@@ -18,9 +18,9 @@ RSpec.describe 'integration with Traject configs' do
           config_filepaths: config['trajects'].map { |traject| "#{Settings.defaults.traject_dir}/#{traject}" },
           settings: config.fetch('settings', {})
         ).transform
+      rescue StandardError => e
+        raise "error raised mapping #{config['settings']['inst_id']}: #{e.class}: #{e.message}"
       end
-    rescue StandardError => e
-      raise "error raised mapping #{config['settings']['inst_id']}: #{e.class}: #{e.message}"
     end.not_to raise_error
   end
 end
