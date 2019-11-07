@@ -8,6 +8,7 @@ module Macros
       wfw: 'http://wellformedweb.org/CommentAPI/',
       dc: 'http://purl.org/dc/elements/1.1/',
       atom: 'http://www.w3.org/2005/Atom',
+      itunes: 'http://www.itunes.com/dtds/podcast-1.0.dtd',
       PREFIX: 'http://www.PREFIX.com/dtds/podcast-1.0.dtd',
       spotify: 'http://www.spotify.com/ns/rss',
       media: 'http://search.yahoo.com/mrss/'
@@ -26,6 +27,15 @@ module Macros
     # @return [Proc] a proc that traject can call for each record
     def extract_aims(xpath)
       extract_xpath("#{PREFIX}#{xpath}", ns: NS)
+    end
+
+    # Extracts values for the given xpath
+    # @example
+    #   extract_itunes_aims('title') => lambda { ... }
+    # @param [String] xpath the xpath query expression
+    # @return [Proc] a proc that traject can call for each record
+    def extract_itunes_aims(xpath)
+      extract_xpath("#{PREFIX}itunes:#{xpath}", ns: NS)
     end
 
     # Extracts thumbnail values
