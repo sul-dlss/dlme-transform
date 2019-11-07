@@ -32,6 +32,8 @@ to_field 'cho_description', extract_aims('description'), strip # Values in Arabi
 to_field 'cho_edm_type', literal('Sound'), lang('en')
 to_field 'cho_edm_type', literal('Sound'), translation_map('norm_types_to_ar'), lang('ar-Arab')
 to_field 'cho_extent', extract_itunes_aims('duration'), strip, lang('en')
+to_field 'cho_has_type', literal('Interview'), lang('en')
+to_field 'cho_has_type', literal('Interview'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
 
 # Agg
 to_field 'agg_provider', provider, lang('en')
