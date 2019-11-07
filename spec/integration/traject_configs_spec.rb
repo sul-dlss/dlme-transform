@@ -19,6 +19,8 @@ RSpec.describe 'integration with Traject configs' do
           settings: config.fetch('settings', {})
         ).transform
       end
-    end.not_to raise_error(RuntimeError)
+    rescue StandardError => e
+      raise "error raised mapping #{config['settings']['inst_id']}: #{e.class}: #{e.message}"
+    end.not_to raise_error
   end
 end
