@@ -1,16 +1,18 @@
 # frozen_string_literal: true
 
-require 'traject_plus'
 require 'dlme_json_resource_writer'
 require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/michigan'
+require 'macros/normalize_language'
 require 'macros/oai'
 require 'macros/post_process'
+require 'traject_plus'
 
 extend Macros::DateParsing
 extend Macros::DLME
 extend Macros::Michigan
+extend Macros::NormalizeLanguage
 extend Macros::OAI
 extend Macros::PostProcess
 extend TrajectPlus::Macros
@@ -23,14 +25,14 @@ end
 
 # Cho Required
 to_field 'id', extract_xpath("//controlfield[@tag='001']"), strip
-to_field 'cho_title', extract_xpath("//datafield[@tag='245']/subfield[@code='a']")
-to_field 'cho_title', extract_xpath("//datafield[@tag='880']/subfield[contains(text(),'245-03/')]/../subfield[@code='a']"), strip
-to_field 'cho_title', extract_xpath("//datafield[@tag='880']/subfield[contains(text(),'240-02/')]/../subfield[@code='a']"), strip
+to_field 'cho_title', extract_xpath("//datafield[@tag='245']/subfield[@code='a']"), strip
+to_field 'cho_title', extract_xpath("//datafield[@tag='880']/subfield[contains(text(),'245-03/')]/../subfield[@code='a']"), strip, lang('ar-Arab')
+to_field 'cho_title', extract_xpath("//datafield[@tag='880']/subfield[contains(text(),'240-02/')]/../subfield[@code='a']"), strip, lang('ar-Arab')
 
 # Cho Other
-to_field 'cho_creator', extract_xpath("//datafield[@tag='100']/subfield[@code='a']")
-to_field 'cho_creator', extract_xpath("//datafield[@tag='880']/subfield[contains(text(),'100-01/')]/../subfield[@code='a']"), strip
-to_field 'cho_date', extract_xpath("//datafield[@tag='260']"), strip
+to_field 'cho_creator', extract_xpath("//datafield[@tag='100']/subfield[@code='a']"), strip
+to_field 'cho_creator', extract_xpath("//datafield[@tag='880']/subfield[contains(text(),'100-01/')]/../subfield[@code='a']"), strip, lang('ar-Arab')
+to_field 'cho_date', extract_xpath("//datafield[@tag='260']"), strip, lang('en')
 to_field 'cho_date_range_norm', extract_xpath("//controlfield[@tag='008']"),
          ->(_rec, acc) { acc.map! { |raw| raw[6..14] } },
          marc_date_range
@@ -38,14 +40,17 @@ to_field 'cho_date_range_hijri', extract_xpath("//controlfield[@tag='008']"),
          ->(_rec, acc) { acc.map! { |raw| raw[6..14] } },
          marc_date_range,
          hijri_range
-to_field 'cho_description', extract_xpath("//datafield[@tag='300']"), strip
-to_field 'cho_description', extract_xpath("//datafield[@tag='520']"), strip
+to_field 'cho_description', extract_xpath("//datafield[@tag='300']"), strip, lang('en')
+to_field 'cho_description', extract_xpath("//datafield[@tag='520']"), strip, lang('en')
 to_field 'cho_description', extract_xpath("//datafield[@tag='500']"),
          strip,
-         gsub('Special Collections Library,', 'Special Collections Research Center')
+         gsub('Special Collections Library,', 'Special Collections Research Center'), lang('en')
 to_field 'cho_description', extract_xpath("//datafield[@tag='510']"), strip
-to_field 'cho_dc_rights', literal('Public Domain')
-to_field 'cho_edm_type', literal('Text')
+to_field 'cho_dc_rights', literal('Public Domain'), lang('en')
+to_field 'cho_edm_type', literal('Text'), lang('en')
+to_field 'cho_edm_type', literal('Text'), translation_map('norm_types_to_ar'), lang('ar-Arab')
+to_field 'cho_has_type', literal('Manuscript'), lang('en')
+to_field 'cho_has_type', literal('Manuscript'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
 to_field 'cho_language', extract_xpath("//controlfield[@tag='008']"),
          strip,
          transform(&:to_s),
@@ -54,13 +59,26 @@ to_field 'cho_language', extract_xpath("//controlfield[@tag='008']"),
          split(' '),
          last_only,
          gsub('||', ''),
-         translation_map('not_found', 'marc_languages', 'iso_639-2')
-to_field 'cho_subject', extract_xpath("//datafield[@tag='650']"), strip
+         normalize_language,
+         lang('en')
+to_field 'cho_language', extract_xpath("//controlfield[@tag='008']"),
+         strip,
+         transform(&:to_s),
+         transform(&:downcase),
+         gsub(' d', ''),
+         split(' '),
+         last_only,
+         gsub('||', ''),
+         normalize_language,
+         lang('ar-Arab')
+to_field 'cho_subject', extract_xpath("//datafield[@tag='650']"), strip, lang('en')
 to_field 'cho_same_as', extract_xpath("//controlfield[@tag='001']"), strip, prepend('https://catalog.hathitrust.org/Record/')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
 to_field 'agg_data_provider', data_provider_ar, lang('ar-Arab')
+to_field 'agg_data_provider_country', data_provider_country, lang('en')
+to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
@@ -78,11 +96,8 @@ to_field 'agg_preview' do |_record, accumulator, context|
 end
 to_field 'agg_provider', provider, lang('en')
 to_field 'agg_provider', provider_ar, lang('ar-Arab')
-
 to_field 'agg_provider_country', provider_country, lang('en')
 to_field 'agg_provider_country', provider_country_ar, lang('ar-Arab')
-to_field 'agg_data_provider_country', data_provider_country, lang('en')
-to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 
 each_record convert_to_language_hash(
   'agg_data_provider',
