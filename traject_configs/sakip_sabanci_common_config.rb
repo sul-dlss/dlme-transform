@@ -1,18 +1,18 @@
 # frozen_string_literal: true
 
-require 'traject_plus'
 require 'dlme_json_resource_writer'
+require 'macros/content_dm'
 require 'macros/date_parsing'
 require 'macros/dlme'
-require 'macros/oai'
+require 'macros/each_record'
 require 'macros/normalize_type'
-require 'macros/content_dm'
-require 'macros/post_process'
+require 'macros/oai'
+require 'traject_plus'
 
-extend Macros::PostProcess
 extend Macros::ContentDm
-extend Macros::DateParsing
 extend Macros::DLME
+extend Macros::DateParsing
+extend Macros::EachRecord
 extend Macros::NormalizeType
 extend Macros::OAI
 extend TrajectPlus::Macros

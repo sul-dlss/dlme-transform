@@ -1,19 +1,19 @@
 # frozen_string_literal: true
 
 require 'active_support/core_ext/string/inflections'
-require 'traject_plus'
 require 'dlme_json_resource_writer'
+require 'macros/content_dm'
 require 'macros/date_parsing'
 require 'macros/dlme'
+require 'macros/each_record'
 require 'macros/oai'
-require 'macros/content_dm'
-require 'macros/post_process'
+require 'traject_plus'
 
-extend Macros::DateParsing
-extend Macros::PostProcess
-extend Macros::DLME
-extend Macros::OAI
 extend Macros::ContentDm
+extend Macros::DLME
+extend Macros::DateParsing
+extend Macros::EachRecord
+extend Macros::OAI
 extend TrajectPlus::Macros
 extend TrajectPlus::Macros::Xml
 

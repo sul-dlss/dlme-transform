@@ -1,17 +1,17 @@
 # frozen_string_literal: true
 
-require 'traject/macros/marc21_semantics'
-require 'traject/macros/marc_format_classifier'
 require 'dlme_json_resource_writer'
 require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/dlme_marc'
-require 'macros/post_process'
+require 'macros/each_record'
+require 'traject/macros/marc21_semantics'
+require 'traject/macros/marc_format_classifier'
 
-extend Macros::DateParsing
 extend Macros::DLME
+extend Macros::DateParsing
 extend Macros::DlmeMarc
-extend Macros::PostProcess
+extend Macros::EachRecord
 extend Traject::Macros::Marc21
 extend Traject::Macros::Marc21Semantics
 extend Traject::Macros::MarcFormats

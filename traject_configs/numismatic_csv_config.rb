@@ -1,22 +1,20 @@
 # frozen_string_literal: true
 
-# Numismatics CSV Mapping Configuration
-
-require 'traject_plus'
 require 'dlme_json_resource_writer'
-require 'macros/dlme'
 require 'macros/csv'
-require 'macros/numismatic_csv'
 require 'macros/date_parsing'
-require 'macros/post_process'
+require 'macros/dlme'
+require 'macros/each_record'
+require 'macros/numismatic_csv'
+require 'traject_plus'
 
-extend Macros::PostProcess
-extend Macros::DLME
 extend Macros::Csv
+extend Macros::DLME
 extend Macros::DateParsing
+extend Macros::EachRecord
+extend Macros::NumismaticCsv
 extend TrajectPlus::Macros
 extend TrajectPlus::Macros::Csv
-extend Macros::NumismaticCsv
 
 settings do
   provide 'writer_class_name', 'DlmeJsonResourceWriter'

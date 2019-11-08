@@ -167,7 +167,7 @@ RSpec.describe Macros::DateParsing do
     # the macro directly instead of via the Traject indexer because the indexer
     # has side effects that make testing this specific behavior difficult.
     it 'does not return an array of nils' do
-      expect(indexer.parse_range.call(nil, ['[n.d.]'])).to eq([])
+      expect(indexer.parse_range.call(nil, ['[n.d.]'], nil)).to eq([])
     end
   end
 
@@ -451,9 +451,8 @@ RSpec.describe Macros::DateParsing do
         expect(indexer.map_record('objectBeginDate' => '666', 'objectEndDate' => '666')).to include 'range' => [666]
       end
 
-      it 'invalid range raises exception' do
-        exp_err_msg = 'unable to create year range array from 1539, 1292'
-        expect { indexer.map_record('objectBeginDate' => '1539', 'objectEndDate' => '1292') }.to raise_error(StandardError, exp_err_msg)
+      it 'invalid range logs (and does not raise) exception' do
+        expect { indexer.map_record('objectBeginDate' => '1539', 'objectEndDate' => '1292') }.to change { Dlme::ExceptionCollector.instance.count }.by(1)
       end
     end
 
@@ -567,14 +566,12 @@ RSpec.describe Macros::DateParsing do
         expect(indexer.map_record('date_made_early' => '666', 'date_made_late' => '666')).to include 'range' => [666]
       end
 
-      it 'invalid range raises exception' do
-        exp_err_msg = 'unable to create year range array from 1539, 1292'
-        expect { indexer.map_record('date_made_early' => '1539', 'date_made_late' => '1292') }.to raise_error(StandardError, exp_err_msg)
+      it 'invalid range logs (and does not raise) exception' do
+        expect { indexer.map_record('date_made_early' => '1539', 'date_made_late' => '1292') }.to change { Dlme::ExceptionCollector.instance.count }.by(1)
       end
 
-      it 'future date year raises exception' do
-        exp_err_msg = 'unable to create year range array from 1539, 2050'
-        expect { indexer.map_record('date_made_early' => '1539', 'date_made_late' => '2050') }.to raise_error(StandardError, exp_err_msg)
+      it 'future date year logs (and does not raise) exception' do
+        expect { indexer.map_record('date_made_early' => '1539', 'date_made_late' => '2050') }.to change { Dlme::ExceptionCollector.instance.count }.by(1)
       end
     end
 
@@ -649,6 +646,40 @@ RSpec.describe Macros::DateParsing do
       end
       it 'the field is not populated' do
         expect(indexer.map_record(ng_rec)).not_to include 'range'
+      end
+    end
+  end
+
+  describe '#range_array' do
+    subject(:range_array) { instance.range_array(traject_context, nil, nil) }
+
+    let(:instance) { klass.new }
+    let(:klass) do
+      Class.new do
+        include Macros::DateParsing
+      end
+    end
+    let(:traject_context) do
+      instance_double(Traject::Indexer::Context, input_name: nil, source_record: nil)
+    end
+
+    context 'when no exception is raised' do
+      before do
+        allow(ParseDate).to receive(:range_array).and_return([1, 2, 3])
+      end
+
+      it 'returns the value returned by ParseDate.range_array' do
+        expect(range_array).to eq([1, 2, 3])
+      end
+    end
+
+    context 'when exception is raised' do
+      before do
+        allow(ParseDate).to receive(:range_array).and_raise(ParseDate::Error)
+      end
+
+      it 'returns an empty array' do
+        expect(range_array).to eq([])
       end
     end
   end

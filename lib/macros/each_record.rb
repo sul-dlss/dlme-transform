@@ -2,7 +2,7 @@
 
 module Macros
   # Macros for post-processing data
-  module PostProcess
+  module EachRecord
     # Converts one or more fields from arrays or strings into hashes with language codes
     # @example
     #   convert_to_language_hash => lambda { ... }

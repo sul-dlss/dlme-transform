@@ -1,21 +1,21 @@
 # frozen_string_literal: true
 
-require 'traject_plus'
 require 'dlme_json_resource_writer'
 require 'macros/date_parsing'
 require 'macros/dlme'
+require 'macros/each_record'
 require 'macros/normalize_language'
-require 'macros/post_process'
 require 'macros/tei'
+require 'traject_plus'
 
 extend Macros::DLME
 extend Macros::DateParsing
-extend Macros::PostProcess
-extend Macros::Tei
+extend Macros::EachRecord
 extend Macros::NormalizeLanguage
+extend Macros::Tei
 extend TrajectPlus::Macros
-extend TrajectPlus::Macros::Xml
 extend TrajectPlus::Macros::Tei
+extend TrajectPlus::Macros::Xml
 
 settings do
   provide 'writer_class_name', 'DlmeJsonResourceWriter'

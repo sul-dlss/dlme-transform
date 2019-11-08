@@ -29,6 +29,7 @@ module Dlme
       @transformer ||= Traject::Indexer.new.tap do |indexer|
         config_filepaths.each { |config_filepath| indexer.load_config_file(config_filepath) }
         indexer.load_config_file('lib/record_counter_config.rb')
+        indexer.load_config_file('lib/after_processing_config.rb')
         indexer.settings do
           provide 'command_line.filename', this.input_filepath
           provide 'close_output_on_close', false
