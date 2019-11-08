@@ -307,6 +307,7 @@
   },
   {
     "trajects": [
+      "marc_config.rb",
       "michigan_config.rb"
     ],
     "paths": [
