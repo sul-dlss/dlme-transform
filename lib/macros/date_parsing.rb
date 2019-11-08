@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'exception_collector'
 require 'parse_date'
 
 # Macros for Traject transformations.
@@ -93,12 +94,15 @@ module Macros
     #   use parse_date gem to get an array of indicated years as integers
     #   See https://github.com/sul-dlss/parse_date for info on what it can parse
     def parse_range
-      lambda do |_record, accumulator|
+      lambda do |_record, accumulator, context|
         range_years = []
         accumulator.each do |val|
           range_years << ParseDate.parse_range(val) if val&.strip.present?
         end
         accumulator.replace(normalize_year_array(range_years))
+      rescue ParseDate::Error => e
+        collect_exception!(context, e)
+        accumulator.replace([])
       end
     end
 
@@ -109,11 +113,11 @@ module Macros
 
     # Extracts date range from American University of Cairo data
     def auc_date_range
-      lambda do |_record, accumulator, _context|
+      lambda do |_record, accumulator, context|
         range_years = []
         accumulator.each do |val|
           range_years << val.scan(AUC_REGEX).map { |year| year.sub(AUC_DELIM, '').to_i }
-          range_years << ParseDate.range_array(ParseDate.earliest_year(val), ParseDate.latest_year(val))
+          range_years << range_array(context, ParseDate.earliest_year(val), ParseDate.latest_year(val))
         end
         accumulator.replace(normalize_year_array(range_years))
       end
@@ -130,7 +134,7 @@ module Macros
     #  attributes may be empty or missing, in which case the element's value needs to be parsed
     # See specs for examples of all these flavors
     def cambridge_gregorian_range
-      lambda do |record, accumulator, _context|
+      lambda do |record, accumulator, context|
         orig_date_node = record.xpath(TEI_ORIG_DATE_PATH, TEI_NS)&.first
         first = orig_date_node&.attribute('notBefore') ||
                 orig_date_node&.attribute('from') ||
@@ -150,7 +154,7 @@ module Macros
           first = ParseDate.earliest_year(date_str)
           last = ParseDate.latest_year(date_str)
         end
-        accumulator.replace(ParseDate.range_array(first, last))
+        accumulator.replace(range_array(context, first, last))
       end
     end
 
@@ -164,12 +168,12 @@ module Macros
     # a year will be nil if it is NOT between -9999 and (current year + 1), per parse_date gem
     # see https://www.fgdc.gov/metadata/csdgm/09.html, https://www.fgdc.gov/metadata/documents/MetadataQuickGuide.pdf
     def fgdc_date_range
-      lambda do |record, accumulator, _context|
+      lambda do |record, accumulator, context|
         date_range_nodeset = record.xpath(FGDC_DATE_RANGE_XPATH, FGDC_NS)
         if date_range_nodeset.present?
           first_year = ParseDate.earliest_year(date_range_nodeset.xpath('begdate', FGDC_NS)&.text&.strip)
           last_year = ParseDate.earliest_year(date_range_nodeset.xpath('enddate', FGDC_NS)&.text&.strip)
-          accumulator.replace(ParseDate.range_array(first_year, last_year))
+          accumulator.replace(range_array(context, first_year, last_year))
         else
           single_date_nodeset = record.xpath(FGDC_SINGLE_DATE_XPATH, FGDC_NS)
           accumulator.replace([ParseDate.earliest_year(single_date_nodeset.text&.strip)]) if single_date_nodeset.present?
@@ -222,7 +226,7 @@ module Macros
     # see https://www.loc.gov/marc/bibliographic/bd008a.html
     # does NOT work for BC dates (or negative dates) - because MARC 008 isn't set up for that
     def marc_date_range
-      lambda do |_record, accumulator, _context|
+      lambda do |_record, accumulator, context|
         val = accumulator.first
         date_type = val[0]
         unless date_type.match?(/[cdeikmqrs]/)
@@ -238,26 +242,26 @@ module Macros
         elsif date_type == 'r'
           first_year = ParseDate.earliest_year(val[5..8])
         end
-        accumulator.replace(ParseDate.range_array(first_year, last_year))
+        accumulator.replace(range_array(context, first_year, last_year))
       end
     end
 
     # Extracts earliest & latest dates from Met record and merges into singe date range value
     def met_date_range
-      lambda do |record, accumulator, _context|
+      lambda do |record, accumulator, context|
         first_year = record['objectBeginDate']
         last_year = record['objectEndDate']
-        accumulator.replace(ParseDate.range_array(first_year, last_year))
+        accumulator.replace(range_array(context, first_year, last_year))
       end
     end
 
     # Extracts date range from MODS dateCreated, dateValid or dateIssued elements
     #   looks in each element flavor for specific attribs to get best representation of date range
     def mods_date_range
-      lambda do |record, accumulator|
-        range = range_from_mods_date_element('mods:dateCreated', record) ||
-                range_from_mods_date_element('mods:dateValid', record) ||
-                range_from_mods_date_element('mods:dateIssued', record)
+      lambda do |record, accumulator, context|
+        range = range_from_mods_date_element('mods:dateCreated', record, context) ||
+                range_from_mods_date_element('mods:dateValid', record, context) ||
+                range_from_mods_date_element('mods:dateIssued', record, context)
         accumulator.replace(range) if range
       end
     end
@@ -272,7 +276,7 @@ module Macros
     #   - if no "start" and "end", look for 'keyDate' attribute and parse element value for range
     #   - if no keyDate, take the first value and parse it for range
     # @return [Array, nil] Array of Integers for date range, or nil if unable to find a date range
-    def range_from_mods_date_element(xpath_el_name, record)
+    def range_from_mods_date_element(xpath_el_name, record, context)
       return unless record.xpath("#{ORIGIN_INFO_PATH}/#{xpath_el_name}", MODS_NS)
 
       start_node = record.xpath("#{ORIGIN_INFO_PATH}/#{xpath_el_name}[@point='start']", MODS_NS)&.first
@@ -280,7 +284,7 @@ module Macros
         first = start_node&.content&.strip
         end_node = record.xpath("#{ORIGIN_INFO_PATH}/#{xpath_el_name}[@point='end']", MODS_NS)&.first
         last = end_node&.content&.strip
-        return ParseDate.range_array(first, last) if first && last
+        return range_array(context, first, last) if first && last
       end
       key_date_node = record.xpath("#{ORIGIN_INFO_PATH}/#{xpath_el_name}[@keyDate='yes']", MODS_NS)&.first
       if key_date_node
@@ -293,10 +297,10 @@ module Macros
 
     # Extracts earliest & latest dates from Penn museum record and merges into singe date range value
     def penn_museum_date_range
-      lambda do |record, accumulator, _context|
+      lambda do |record, accumulator, context|
         first_year = record['date_made_early'].to_i if record['date_made_early']&.match(/\d+/)
         last_year = record['date_made_late'].to_i if record['date_made_late']&.match(/\d+/)
-        accumulator.replace(ParseDate.range_array(first_year, last_year))
+        accumulator.replace(range_array(context, first_year, last_year))
       end
     end
 
@@ -304,15 +308,34 @@ module Macros
     # of dc:date and latest year as the 3rd occurrence of dc:date.  This algorithm covers
     # the vast majority of reliable date information provided for Kitapvehat and ResimKlksyn colls.
     def sakip_mult_dates_range
-      lambda do |_record, accumulator|
+      lambda do |_record, accumulator, context|
         return if accumulator.empty?
 
         if accumulator[1]&.strip&.match?(/^\d{4}$/) && accumulator[2]&.strip&.match?(/^\d{4}$/)
-          accumulator.replace(ParseDate.range_array(accumulator[1], accumulator[2]))
+          accumulator.replace(range_array(context, accumulator[1], accumulator[2]))
         else
           accumulator.clear
         end
       end
+    end
+
+    # Parse a range of years from two years.
+    #
+    # This method wraps the associated method in `ParseDate` and provides the
+    # ability to trap date parsing errors, allowing the transform to return an
+    # empty result for the field instead of raising an exception.
+    def range_array(context, first_year, last_year)
+      ParseDate.range_array(first_year, last_year)
+    rescue ParseDate::Error => e
+      collect_exception!(context, e)
+      []
+    end
+
+    # Collection a transformation except along with its context for later
+    # display, at the end of a transformation run
+    def collect_exception!(context, exception)
+      Dlme::ExceptionCollector.instance <<
+        "ERROR parsing dates in #{context.input_name}: #{exception.message}. Offending record: #{context.source_record}"
     end
   end
 end

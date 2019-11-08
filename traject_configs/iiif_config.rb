@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-require 'traject_plus'
 require 'dlme_json_resource_writer'
 require 'macros/dlme'
-require 'macros/post_process'
+require 'macros/each_record'
+require 'traject_plus'
 
-extend Macros::PostProcess
 extend Macros::DLME
+extend Macros::EachRecord
 extend TrajectPlus::Macros::JSON
 
 settings do

@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-require 'macros/post_process'
+require 'macros/each_record'
 
-RSpec.describe Macros::PostProcess do
+RSpec.describe Macros::EachRecord do
   let(:klass) do
     Class.new do
       include TrajectPlus::Macros
-      include Macros::PostProcess
+      include Macros::EachRecord
     end
   end
   let(:instance) { klass.new }

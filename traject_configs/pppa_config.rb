@@ -1,16 +1,16 @@
 # frozen_string_literal: true
 
-require 'traject_plus'
 require 'dlme_json_resource_writer'
-require 'macros/dlme'
-require 'macros/date_parsing'
 require 'macros/csv'
-require 'macros/post_process'
+require 'macros/date_parsing'
+require 'macros/dlme'
+require 'macros/each_record'
+require 'traject_plus'
 
-extend Macros::PostProcess
-extend Macros::DLME
 extend Macros::Csv
+extend Macros::DLME
 extend Macros::DateParsing
+extend Macros::EachRecord
 extend TrajectPlus::Macros
 extend TrajectPlus::Macros::Csv
 

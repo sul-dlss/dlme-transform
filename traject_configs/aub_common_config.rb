@@ -3,18 +3,18 @@
 require 'dlme_json_resource_writer'
 require 'macros/date_parsing'
 require 'macros/dlme'
+require 'macros/each_record'
 require 'macros/normalize_language'
 require 'macros/normalize_type'
 require 'macros/oai'
-require 'macros/post_process'
 require 'traject_plus'
 
-extend Macros::DateParsing
 extend Macros::DLME
+extend Macros::DateParsing
+extend Macros::EachRecord
 extend Macros::NormalizeLanguage
 extend Macros::NormalizeType
 extend Macros::OAI
-extend Macros::PostProcess
 extend TrajectPlus::Macros
 
 settings do

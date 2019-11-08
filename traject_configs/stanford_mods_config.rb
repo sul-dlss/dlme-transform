@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
 require 'macros/dlme'
-require 'macros/post_process'
+require 'macros/each_record'
 
 extend Macros::DLME
+extend Macros::EachRecord
 extend Macros::IIIF
-extend Macros::PostProcess
 
 each_record do |record, context|
   context.clipboard[:druid] = generate_druid(record, context)
