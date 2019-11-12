@@ -3,12 +3,6 @@
 RSpec.describe Dlme::CLI::Transform do
   subject(:cli) { described_class.new }
 
-  before(:all) do
-    # Test assumes RecordCounter count is 0. Create that condition in case other
-    # tests have incremented the counter
-    Dlme::RecordCounter.instance.send(:reset!)
-  end
-
   describe '#transform' do
     let(:config) do
       {
@@ -50,6 +44,9 @@ RSpec.describe Dlme::CLI::Transform do
                                                    summary_filepath: summary_filepath,
                                                    debug_writer: nil)
         allow(mock_file).to receive(:puts)
+        # Test assumes RecordCounter count is 0. Create that condition in case other
+        # tests have incremented the counter
+        Dlme::RecordCounter.instance.send(:reset!)
         Dlme::RecordCounter.instance.increment
         Dlme::RecordCounter.instance.increment
       end
