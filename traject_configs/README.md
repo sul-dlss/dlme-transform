@@ -89,42 +89,66 @@ to_field 'agg_provider', provider_ar, lang('ar-Arab')
 
 [TEI configuration / mapping](./tei_config.rb).
 
-### Binary MARC
+#### MARC XML
 
+[Michigan configuration / mapping](./michigan_config.rb).
+
+### Binary MARC
 
 ##### Example Configuration
 
 ```ruby
+# frozen_string_literal: true
+
+# NOTE: most of the fields are populated via marc_config (same for all MARC data)
+
+settings do
+  provide "reader_class_name", "MarcReader"
+end
+
 to_field 'id', extract_marc('001', first: true) do |_record, accumulator, _context|
   accumulator.collect! { |s| "penn_#{s}" }
 end
-to_field 'cho_alternative', extract_marc('130:240:246')
-to_field 'cho_contributor', extract_role('700', 'contributor')
-to_field 'cho_creator', extract_marc('100:110:111', trim_punctuation: true)
-to_field 'cho_date', marc_publication_date, transform(&:to_s)
-to_field 'cho_description', extract_marc('500:505:520')
-to_field 'cho_edm_type', marc_type_to_edm
-to_field 'cho_extent', extract_marc('300a', separator: nil, trim_punctuation: true)
-to_field 'cho_format', marc_formats
-to_field 'cho_has_type', extract_marc('651a', trim_punctuation: true)
-to_field 'cho_identifier', extract_marc('001')
-to_field 'cho_identifier', oclcnum
-to_field 'cho_language', marc_languages
-to_field 'cho_medium', extract_marc('300b', trim_punctuation: true)
-to_field 'cho_publisher', extract_marc('260b:264b', trim_punctuation: true)
-to_field 'cho_spatial', marc_geo_facet
-to_field 'cho_subject', extract_marc('600:610:611:630:650:651:653:654:690:691:692')
-to_field 'cho_temporal', marc_era_facet
-to_field 'cho_title', extract_marc('245', trim_punctuation: true)
-to_field 'cho_type', marc_type_to_edm
 
-to_field 'agg_data_provider', data_provider, lang('en') # set in the settings.yml file
-to_field 'agg_data_provider', data_provider_ar, lang('ar-Arab') # set in the settings.yml file
-to_field 'agg_provider', provider, lang('en') # set in the settings.yml file
-to_field 'agg_provider', provider_ar, lang('ar-Arab') # set in the settings.yml file
-to_field 'agg_has_view' do |_record, accumulator, context|
-  accumulator << transform_values(context, 'wr_id' => extract_marc('856u', first: true))
-end
+# Cho Additional
+to_field 'cho_dc_rights', literal('Public Domain'), lang('en')
+to_field 'cho_description', extract_marc('500a:505agrtu:520abcu', :alternate_script => false), strip, gsub('Special Collections Library,', 'Special Collections Research Center')
+lang('en')
+to_field 'cho_description', extract_marc('500a:505agrtu:520abcu', :alternate_script => :only), strip, lang('ar-Arab')
+to_field 'cho_has_type', literal('Manuscript'), lang('en')
+to_field 'cho_has_type', literal('Manuscript'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
+to_field 'cho_identifier', oclcnum
+
+each_record convert_to_language_hash(
+  'agg_data_provider',
+  'agg_data_provider_country',
+  'agg_provider',
+  'agg_provider_country',
+  'cho_alternative',
+  'cho_contributor',
+  'cho_coverage',
+  'cho_creator',
+  'cho_date',
+  'cho_dc_rights',
+  'cho_description',
+  'cho_edm_type',
+  'cho_extent',
+  'cho_format',
+  'cho_has_part',
+  'cho_has_type',
+  'cho_is_part_of',
+  'cho_language',
+  'cho_medium',
+  'cho_provenance',
+  'cho_publisher',
+  'cho_relation',
+  'cho_source',
+  'cho_spatial',
+  'cho_subject',
+  'cho_temporal',
+  'cho_title',
+  'cho_type'
+)
 ```
 
 ### JSON
