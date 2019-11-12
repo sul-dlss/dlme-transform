@@ -7,6 +7,7 @@ require 'macros/dlme_marc'
 require 'macros/each_record'
 require 'traject/macros/marc21_semantics'
 require 'traject/macros/marc_format_classifier'
+require 'traject_plus'
 
 extend Macros::DLME
 extend Macros::DateParsing
@@ -18,98 +19,112 @@ extend Traject::Macros::MarcFormats
 extend TrajectPlus::Macros
 
 settings do
+  # NOTE: indicate one of the two reader_class_name configs below in coll specific config
+  # provide "reader_class_name", "MARC::XMLReader"
+  # provide "marc_source.type", "xml"
+  #  OR
+  # provide "reader_class_name", "MarcReader"
   provide 'writer_class_name', 'DlmeJsonResourceWriter'
-  provide 'reader_class_name', 'MarcReader'
-end
-
-to_field 'id', extract_marc('001', first: true) do |_record, accumulator, _context|
-  accumulator.collect! { |s| "penn_#{s}" }
 end
 
 # CHO Required
-to_field 'cho_identifier', extract_marc('001')
-to_field 'cho_identifier', extract_marc('010a')
-to_field 'cho_identifier', oclcnum
-to_field 'cho_language', transform(&:downcase), translation_map('not_found', 'languages', 'marc_languages')
-to_field 'cho_title', extract_marc('245', trim_punctuation: true)
+to_field 'id', extract_marc('001'), first_only
+to_field 'cho_title', extract_marc('245ab', alternate_script: false), trim_punctuation, lang('en')
+to_field 'cho_title', extract_marc('245ab', alternate_script: :only), trim_punctuation, lang('ar-Arab')
 
 # CHO Other
-to_field 'cho_alternative', extract_marc('130:240:246')
-to_field 'cho_contributor', extract_role('700', 'contributor')
-to_field 'cho_contributor', extract_role('710', 'contributor')
-to_field 'cho_contributor', extract_role('711', 'contributor')
-# to_field 'cho_coverage', ?
-to_field 'cho_creator', extract_marc('100:110:111', trim_punctuation: true)
-to_field 'cho_creator', extract_role('700', 'creator')
-to_field 'cho_creator', extract_role('710', 'creator')
-to_field 'cho_creator', extract_role('711', 'creator')
-to_field 'cho_date', marc_publication_date, transform(&:to_s)
+to_field 'cho_alternative', extract_marc('130a:240a:246ab', alternate_script: false), trim_punctuation, lang('en')
+to_field 'cho_alternative', extract_marc('130a:240a:246ab', alternate_script: :only), trim_punctuation, lang('ar-Arab')
+to_field 'cho_contributor', extract_marc('700abce:710abcde:711acde:720ae', alternate_script: false), trim_punctuation, lang('en')
+to_field 'cho_contributor', extract_marc('700abce:710abcde:711acde:720ae', alternate_script: :only), trim_punctuation, lang('ar-Arab')
+# to_field 'cho_coverage'
+to_field 'cho_creator', extract_marc('100abc:110abcd:111acd', alternate_script: false), trim_punctuation, lang('en')
+to_field 'cho_creator', extract_marc('100abc:110abcd:111acd', alternate_script: :only), trim_punctuation, lang('ar-Arab')
+to_field 'cho_date', extract_marc('260c')
 to_field 'cho_date_range_norm', extract_marc('008[06-14]'), marc_date_range
 to_field 'cho_date_range_hijri', extract_marc('008[06-14]'), marc_date_range, hijri_range
-# to_field 'cho_dc_rights', ?
-to_field 'cho_description', extract_marc('500:505:520')
-to_field 'cho_edm_type', marc_type_to_edm
-to_field 'cho_extent', extract_marc('300a', separator: nil, trim_punctuation: true)
-to_field 'cho_format', marc_formats
-# to_field 'cho_has_part', ?
-to_field 'cho_type', extract_marc('651a', trim_punctuation: true)
-to_field 'cho_is_part_of', extract_marc('440a:490a:800abcdt:400abcd:810abcdt:410abcd:811acdeft:411acdef:830adfgklmnoprst:760ast')
-to_field 'cho_medium', extract_marc('300b', trim_punctuation: true)
-# fo_field 'cho_provenance', ?
-to_field 'cho_publisher', extract_marc('260b:264b', trim_punctuation: true)
+# to_field 'cho_dc_rights'
+# NOTE: Michigan has coll specific description transform
+# cho_description exemplar below; add it to collection specific config if desired
+# to_field 'cho_description', extract_marc('500a:505agrtu:520abcu', alternate_script: false), strip, lang('en')
+# to_field 'cho_description', extract_marc('500a:505agrtu:520abcu', alternate_script: :only), strip, lang('ar-Arab')
+to_field 'cho_edm_type', marc_type_to_edm, lang('en')
+to_field 'cho_edm_type', marc_type_to_edm, translation_map('norm_types_to_ar'), lang('ar-Arab')
+to_field 'cho_extent', extract_marc('300abcefg', alternate_script: false), trim_punctuation, lang('en')
+to_field 'cho_extent', extract_marc('300abcefg', alternate_script: :only), trim_punctuation, lang('ar-Arab')
+to_field 'cho_format', marc_formats, lang('en')
+# to_field 'cho_has_part', ?  # possibly 24x fields, subfields np
+# to_field 'cho_has_part', extract_marc('245np', alternate_script: false), trim_punctuation, lang('en')
+# to_field "cho_has_part", extract_marc('245np', alternate_script: :only), trim_punctuation, lang('ar-Arab')
+# to_field 'cho_has_type'
+to_field 'cho_identifier', oclcnum
+to_field 'cho_is_part_of', extract_marc('440a:490a:800abcdt:400abcd:810abcdt:410abcd:811acdeft:411acdef:830adfgklmnoprst:760ast', alternate_script: false), lang('en')
+to_field 'cho_is_part_of', extract_marc('440a:490a:800abcdt:400abcd:810abcdt:410abcd:811acdeft:411acdef:830adfgklmnoprst:760ast', alternate_script: :only), lang('ar-Arab')
+to_field 'cho_language', extract_marc('008[35-37]:041a:041d'), transform(&:downcase), translation_map('not_found', 'marc_languages', 'iso_639-2'), lang('en')
+# to_field 'cho_medium'
+# fo_field 'cho_provenance'
+to_field 'cho_publisher', extract_marc('260b:264b', alternate_script: false), trim_punctuation, lang('en')
+to_field 'cho_publisher', extract_marc('260b:264b', alternate_script: :only), trim_punctuation, lang('ar-Arab')
 # to_field 'cho_relation'
+# to_field 'cho_same_as'
 # to_field 'cho_source'
-to_field 'cho_spatial', marc_geo_facet
-to_field 'cho_subject', extract_marc('600:610:611:630:650:651:653:654:690:691:692')
-to_field 'cho_temporal', marc_era_facet
-to_field 'cho_type', marc_type_to_edm
+to_field 'cho_spatial', marc_geo_facet, lang('en')
+SIX00 = '600abcdefghjklmnopqrstuvxy'
+SIX10 = '610abcdefghklmnoprstuvxy'
+SIX11 = '611acdefghjklnpqstuvxy'
+SIX30 = '630adefghklmnoprstvxy'
+SIX5X = '650abcdegvxy:651aegvxy:653a:654abcevy'
+SIXXX_SPEC = [SIX00, SIX10, SIX11, SIX30, SIX5X].join(':')
+to_field 'cho_subject', extract_marc(SIXXX_SPEC, alternate_script: false), lang('en')
+to_field 'cho_subject', extract_marc(SIXXX_SPEC, alternate_script: :only), lang('ar-Arab')
+to_field 'cho_temporal', marc_era_facet, lang('en')
+to_field 'cho_type', marc_type_to_edm, lang('en')
+to_field 'cho_type', marc_type_to_edm, translation_map('norm_types_to_ar'), lang('ar-Arab')
 
 # Agg Required
 to_field 'agg_data_provider', data_provider, lang('en')
 to_field 'agg_data_provider', data_provider_ar, lang('ar-Arab')
-to_field 'agg_provider', provider, lang('en')
-to_field 'agg_provider', provider_ar, lang('ar-Arab')
-to_field 'agg_is_shown_at' do |_record, accumulator, context|
-  values = transform_values(context, 'wr_id' => extract_marc('856u', first: true))
-  if values.fetch('wr_id', []).empty?
-    values = transform_values(context, 'wr_id' => [extract_marc('001', first: true),
-                                                   prepend('http://hdl.library.upenn.edu/1017/d/medren/')])
-  end
-  accumulator << values
-end
-
-to_field 'agg_provider_country', provider_country, lang('en')
-to_field 'agg_provider_country', provider_country_ar, lang('ar-Arab')
 to_field 'agg_data_provider_country', data_provider_country, lang('en')
 to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
+to_field 'agg_provider', provider, lang('en')
+to_field 'agg_provider', provider_ar, lang('ar-Arab')
+to_field 'agg_provider_country', provider_country, lang('en')
+to_field 'agg_provider_country', provider_country_ar, lang('ar-Arab')
 
-each_record convert_to_language_hash(
-  'agg_data_provider',
-  'agg_data_provider_country',
-  'agg_provider',
-  'agg_provider_country',
-  'cho_alternative',
-  'cho_contributor',
-  'cho_coverage',
-  'cho_creator',
-  'cho_date',
-  'cho_dc_rights',
-  'cho_description',
-  'cho_edm_type',
-  'cho_extent',
-  'cho_format',
-  'cho_has_part',
-  'cho_has_type',
-  'cho_is_part_of',
-  'cho_language',
-  'cho_medium',
-  'cho_provenance',
-  'cho_publisher',
-  'cho_relation',
-  'cho_source',
-  'cho_spatial',
-  'cho_subject',
-  'cho_temporal',
-  'cho_title',
-  'cho_type'
-)
+# Agg Additional
+# NOTE: agg_is_shown_at exemplar; add it to collection specific config if desired
+# to_field 'agg_is_shown_at' do |_record, accumulator, context|
+#   accumulator << transform_values(context, 'wr_id' => [extract_marc('856u'), first_only])
+# end
+
+# NOTE:  add the below to collection specific config
+# each_record convert_to_language_hash(
+#   'agg_data_provider',
+#   'agg_data_provider_country',
+#   'agg_provider',
+#   'agg_provider_country',
+#   'cho_alternative',
+#   'cho_contributor',
+#   'cho_coverage',
+#   'cho_creator',
+#   'cho_date',
+#   'cho_dc_rights',
+#   'cho_description',
+#   'cho_edm_type',
+#   'cho_extent',
+#   'cho_format',
+#   'cho_has_part',
+#   'cho_has_type',
+#   'cho_is_part_of',
+#   'cho_language',
+#   'cho_medium',
+#   'cho_provenance',
+#   'cho_publisher',
+#   'cho_relation',
+#   'cho_source',
+#   'cho_spatial',
+#   'cho_subject',
+#   'cho_temporal',
+#   'cho_title',
+#   'cho_type'
+# )
