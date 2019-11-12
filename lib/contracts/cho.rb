@@ -33,6 +33,7 @@ module Contracts
       optional(:cho_temporal).value(:hash?)
       required(:cho_title).value(:hash?)
       optional(:cho_type).value(:hash?)
+      optional(:cho_type_facet).value(:hash?)
 
       # See https://github.com/sul-dlss/dlme/blob/master/docs/application_profile.md#oreaggregation
       required(:id).filled(:string)
