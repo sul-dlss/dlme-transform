@@ -35,8 +35,6 @@ to_field 'agg_preview' do |_record, accumulator, context|
   )
 end
 
-each_record add_cho_type_facet
-
 each_record convert_to_language_hash(
   'agg_data_provider',
   'agg_data_provider_country',
@@ -67,3 +65,6 @@ each_record convert_to_language_hash(
   'cho_title',
   'cho_type'
 )
+
+# NOTE: call add_cho_type_facet AFTER calling convert_to_language_hash fields
+each_record add_cho_type_facet

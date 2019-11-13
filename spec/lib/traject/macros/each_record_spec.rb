@@ -12,122 +12,6 @@ RSpec.describe Macros::EachRecord do
   let(:instance) { klass.new }
   let(:mock_context) { Traject::Indexer::Context.new }
 
-  describe '#add_cho_type_facet' do
-    subject(:macro) { instance.add_cho_type_facet }
-
-    before do
-      mock_context.output_hash = output_hash.dup
-    end
-
-    context 'when cho_edm_type is a Hash (lang specified)' do
-      context 'when cho_has_type is a Hash' do
-        let(:output_hash) do
-          {
-            'cho_edm_type' => [{ language: 'en', values: ['Sound'] }, { language: 'ar-Arab', values: ['صوت'] }],
-            'cho_has_type' => [{ language: 'en', values: ['Interview'] }, { language: 'ar-Arab', values: ['مقابلة'] }]
-          }
-        end
-
-        it 'creates values for each language' do
-          macro.call(nil, mock_context)
-          expect(mock_context.output_hash).to include('cho_type_facet' => { 'en' => ['Sound:Interview'],
-                                                                            'ar-Arab' => ['صوت:مقابلة'] })
-        end
-      end
-
-      context 'when cho_has_type is an Array' do
-        let(:output_hash) do
-          {
-            'cho_edm_type' => [{ language: 'en', values: ['Sound'] }, { language: 'ar-Arab', values: ['صوت'] }],
-            'cho_has_type' => ['bar', 'car']
-          }
-        end
-
-        it 'creates single level value for each language' do
-          macro.call(nil, mock_context)
-          expect(mock_context.output_hash).to include('cho_type_facet' => { 'en' => ['Sound'], 'ar-Arab' => ['صوت'] })
-        end
-      end
-
-      context 'when no cho_hash_type' do
-        let(:output_hash) do
-          {
-            'cho_edm_type' => [{ language: 'en', values: ['Sound'] }, { language: 'ar-Arab', values: ['صوت'] }]
-          }
-        end
-
-        it 'creates single level value for each language' do
-          macro.call(nil, mock_context)
-          expect(mock_context.output_hash).to include('cho_type_facet' => { 'en' => ['Sound'], 'ar-Arab' => ['صوت'] })
-        end
-      end
-    end
-
-    context 'when cho_edm_type is an Array' do
-      context 'when cho_has_type is a Hash' do
-        let(:output_hash) do
-          {
-            'cho_edm_type' => ['foo', 'goo'],
-            'cho_has_type' => [{ language: 'en', values: ['Interview'] }, { language: 'ar-Arab', values: ['مقابلة'] }]
-          }
-        end
-
-        it 'creates single level value for language "none"' do
-          macro.call(nil, mock_context)
-          expect(mock_context.output_hash).to include('cho_type_facet' => { 'none' => ['foo'] })
-        end
-      end
-      context 'when cho_has_type is an Array' do
-        let(:output_hash) do
-          {
-            'cho_edm_type' => ['foo', 'goo'],
-            'cho_has_type' => ['bar', 'car']
-          }
-        end
-
-        it 'creates value for language "none"' do
-          macro.call(nil, mock_context)
-          expect(mock_context.output_hash).to include('cho_type_facet' => { 'none' => ['foo:bar'] })
-        end
-      end
-      context 'when no cho_hash_type' do
-        let(:output_hash) do
-          {
-            'cho_edm_type' => ['foo', 'goo']
-          }
-        end
-
-        it 'creates single level value for language "none"' do
-          macro.call(nil, mock_context)
-          expect(mock_context.output_hash).to include('cho_type_facet' => { 'none' => ['foo'] })
-        end
-      end
-    end
-
-    context 'when no cho_edm_type' do
-      context 'when cho_has_type exists' do
-        let(:output_hash) do
-          {
-            'cho_has_type' => ['bar', 'car']
-          }
-        end
-
-        it 'creates no value' do
-          macro.call(nil, mock_context)
-          expect(mock_context.output_hash).not_to include('cho_type_facet')
-        end
-      end
-      context 'when no cho_hash_type' do
-        let(:output_hash) { {} }
-
-        it 'creates no value' do
-          macro.call(nil, mock_context)
-          expect(mock_context.output_hash).not_to include('cho_type_facet')
-        end
-      end
-    end
-  end
-
   describe '#convert_to_language_hash' do
     subject(:macro) { instance.convert_to_language_hash('cho_title', 'cho_creator') }
 
@@ -159,6 +43,93 @@ RSpec.describe Macros::EachRecord do
       it 'accumulates values in a hash with keys from source hash' do
         macro.call(nil, mock_context)
         expect(mock_context.output_hash).to eq('cho_title' => { 'en' => ['title1'] })
+      end
+    end
+  end
+
+  describe '#add_cho_type_facet' do
+    subject(:macro) { instance.add_cho_type_facet }
+
+    before do
+      mock_context.output_hash = output_hash.dup
+    end
+
+    context 'when cho_edm_type and cho_has_type each have values for mult languages' do
+      let(:output_hash) do
+        {
+          'cho_edm_type' => { 'en' => ['Sound'], 'ar-Arab' => ['صوت'] },
+          'cho_has_type' => { 'en' => ['Interview'], 'ar-Arab' => ['مقابلة'] }
+        }
+      end
+
+      it 'creates values for each language' do
+        macro.call(nil, mock_context)
+        expect(mock_context.output_hash).to include('cho_type_facet' => { 'en' => ['Sound:Interview'],
+                                                                          'ar-Arab' => ['صوت:مقابلة'] })
+      end
+    end
+
+    context 'when cho_edm_type and cho_has_type each have values for language "none"' do
+      let(:output_hash) do
+        {
+          'cho_edm_type' => { 'none' => ['Sound'] },
+          'cho_has_type' => { 'none' => ['Interview'] }
+        }
+      end
+
+      it 'creates value for "none" language' do
+        macro.call(nil, mock_context)
+        expect(mock_context.output_hash).to include('cho_type_facet' => { 'none' => ['Sound:Interview'] })
+      end
+    end
+
+    context 'when cho_edm_type has a value for langs and cho_has_type does not have values' do
+      let(:output_hash) do
+        {
+          'cho_edm_type' => { 'en' => ['Sound'], 'ar-Arab' => ['صوت'] }
+        }
+      end
+
+      it 'creates single level value for each language in cho_edm_type' do
+        macro.call(nil, mock_context)
+        expect(mock_context.output_hash).to include('cho_type_facet' => { 'en' => ['Sound'],
+                                                                          'ar-Arab' => ['صوت'] })
+      end
+    end
+
+    context 'when cho_edm_type does not have a value for a lang and cho_has_type does have a value' do
+      let(:output_hash) do
+        {
+          'cho_edm_type' => { 'none' => ['Sound'] },
+          'cho_has_type' => { 'en' => ['Interview'], 'ar-Arab' => ['مقابلة'] }
+        }
+      end
+
+      it 'creates single level value for each language in cho_edm_type' do
+        macro.call(nil, mock_context)
+        expect(mock_context.output_hash).to include('cho_type_facet' => { 'none' => ['Sound'] })
+      end
+    end
+
+    context 'when no cho_edm_type but cho_has_type does have values' do
+      let(:output_hash) do
+        {
+          'cho_has_type' => { 'en' => ['Interview'], 'ar-Arab' => ['مقابلة'] }
+        }
+      end
+
+      it 'does not add field' do
+        macro.call(nil, mock_context)
+        expect(mock_context.output_hash).not_to include('cho_type_facet')
+      end
+    end
+
+    context 'when no cho_edm_type or cho_has_type' do
+      let(:output_hash) { {} }
+
+      it 'does not add field' do
+        macro.call(nil, mock_context)
+        expect(mock_context.output_hash).not_to include('cho_type_facet')
       end
     end
   end

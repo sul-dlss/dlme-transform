@@ -129,3 +129,6 @@ to_field 'agg_provider_country', provider_country_ar, lang('ar-Arab')
 #   'cho_title',
 #   'cho_type'
 # )
+#
+# # NOTE: call add_cho_type_facet AFTER calling convert_to_language_hash fields
+# each_record add_cho_type_facet
