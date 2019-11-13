@@ -60,6 +60,10 @@ to_field 'agg_provider_country', provider_country_ar, lang('ar-Arab')
 to_field 'agg_data_provider_country', data_provider_country, lang('en')
 to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 
+# NOTE: compute cho_type_facet BEFORE calling convert_to_language_hash fields
+# NOTE: do *not* include cho_type_facet in convert_to_language_hash fields
+each_record add_cho_type_facet
+
 each_record convert_to_language_hash(
   'agg_data_provider',
   'agg_data_provider_country',
