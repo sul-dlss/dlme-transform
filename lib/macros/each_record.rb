@@ -3,17 +3,21 @@
 module Macros
   # Macros for post-processing data
   module EachRecord
-    # NOTE: compute cho_type_facet BEFORE calling convert_to_language_hash fields
-    # NOTE: do *not* include cho_type_facet in convert_to_language_hash fields
-    # create cho_type_facet values from cho_edm_type and cho_has_type values,
-    # add to context.output_hash if there's a value
+    # NOTE: compute cho_type_facet BEFORE calling convert_to_language_hash fields, and
+    #   do *not* include cho_type_facet in convert_to_language_hash fields
+    # Create cho_type_facet hierarchical values from cho_edm_type and cho_has_type values
+    #   for each language present (or 'none')
+    # Add cho_type_facet field to context.output_hash only if there's a value
+    # NOTE: we expect only one value for each language (including 'none').
+    # NOTE: if `cho_edm_type` values are Hashes (lang specified), `cho_has_type` values must also be Hashes to be included
+    #   Similarly, if `cho_edm_type` values are Strings (no lang), `cho_has_type` values must also be Strings to be included
     def add_cho_type_facet
       lambda do |_record, context|
         context.output_hash['cho_type_facet'] = {}
         context.output_hash['cho_edm_type']&.each do |el|
           if el.is_a?(Hash)
             lang_code = el[:language]
-            val = cho_type_facet_val_from_hash(context, lang_code) if lang_code
+            val = cho_type_facet_val_from_hash(context, lang_code)
             context.output_hash['cho_type_facet'][lang_code] = [val] if val.present?
           else
             val = cho_type_facet_val_from_array(context)
@@ -25,41 +29,41 @@ module Macros
     end
 
     # helper method for add_cho_type_facet
-    # @return [String or nil]
+    # NOTE: `cho_has_type` values must (also) be Hashes to be included
+    # @return [String or nil] value for hierarchical facet when `cho_edm_type` values are Hashes (lang specified)
     def cho_type_facet_val_from_hash(context, lang_code)
-      edm_type = lang_hash_value(context, 'cho_edm_type', lang_code)
-      has_type_val = context.output_hash['cho_has_type']&.first
-      has_type = lang_hash_value(context, 'cho_has_type', lang_code) if has_type_val.is_a?(Hash)
+      edm_type = lang_hash_first_value(context, 'cho_edm_type', lang_code)
+      has_type = lang_hash_first_value(context, 'cho_has_type', lang_code)
       hierarchical_val(edm_type, has_type)
     end
 
     # helper method for add_cho_type_facet
-    # @return [String or nil]
+    # NOTE: `cho_has_type` values must (also) be Strings to be included
+    # @return [String or nil] value for hierarchical facet when `cho_edm_type` values are Strings (no lang specified)
     def cho_type_facet_val_from_array(context)
-      edm_type = array_value(context, 'cho_edm_type')
-      has_type_val = context.output_hash['cho_has_type']&.first
-      has_type = array_value(context, 'cho_has_type') if has_type_val.is_a?(String)
+      edm_type = array_first_value(context, 'cho_edm_type')
+      has_type = array_first_value(context, 'cho_has_type')
       hierarchical_val(edm_type, has_type)
     end
 
     # helper method for add_cho_type_facet
     # @return [String or nil]
-    def hierarchical_val(first, second)
-      result = first if first.present?
-      result = "#{result}:#{second}" if result && second.present?
+    def hierarchical_val(root, child)
+      result = root if root.present?
+      result = "#{result}:#{child}" if result && child.present?
       result
     end
 
     # helper method for add_cho_type_facet
-    def array_value(context, field)
+    def array_first_value(context, field)
       raw_val = context.output_hash[field]
-      raw_val&.first
+      raw_val.first if raw_val&.first.is_a?(String)
     end
 
     # helper method for add_cho_type_facet
-    def lang_hash_value(context, field, lang_code)
-      lang_hash = context.output_hash[field]&.select { |el| el[:language] == lang_code }
-      lang_hash.first[:values]&.first
+    def lang_hash_first_value(context, field, lang_code)
+      raw_hash_for_lang = context.output_hash[field]&.select { |el| el.is_a?(Hash) && el[:language] == lang_code }
+      raw_hash_for_lang.first[:values]&.first if raw_hash_for_lang&.first.is_a?(Hash)
     end
 
     # Converts one or more fields from arrays or strings into hashes with language codes
