@@ -17,6 +17,10 @@ to_field 'cho_publisher', literal('Dar al-Adab'), lang('en')
 to_field 'cho_publisher', literal('دار الأدب'), lang('ar-Arab')
 to_field 'cho_subject', extract_oai('dc:subject'), strip, lang('ar-Arab')
 
+# NOTE: compute cho_type_facet BEFORE calling convert_to_language_hash fields
+# NOTE: do *not* include cho_type_facet in convert_to_language_hash fields
+each_record add_cho_type_facet
+
 each_record convert_to_language_hash(
   'cho_contributor',
   'cho_creator',

@@ -35,6 +35,8 @@ to_field 'agg_preview' do |_record, accumulator, context|
   )
 end
 
+each_record add_cho_type_facet
+
 each_record convert_to_language_hash(
   'agg_data_provider',
   'agg_data_provider_country',
