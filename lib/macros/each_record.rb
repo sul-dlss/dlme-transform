@@ -40,7 +40,7 @@ module Macros
           edm_type_first = values&.first
           has_type_first = cho_has_type_raw_hash[lang]&.first if cho_has_type_raw_hash
           val = hierarchical_val(edm_type_first, has_type_first)
-          context.output_hash['cho_type_facet'][lang] = [val] if val.present?
+          context.output_hash['cho_type_facet'][lang] = val if val.present?
         end
         context.output_hash.delete('cho_type_facet') if context.output_hash['cho_type_facet'].empty?
       end
@@ -51,7 +51,10 @@ module Macros
     # helper method for add_cho_type_facet
     # @return [String or nil]
     def hierarchical_val(*values)
-      values.compact.join(HIER_LEVEL_SEP_CHAR)
+      non_nil_values = values.compact
+      return non_nil_values if non_nil_values.count < 2
+
+      [non_nil_values.first, non_nil_values.join(HIER_LEVEL_SEP_CHAR)]
     end
   end
 end
