@@ -64,8 +64,8 @@ RSpec.describe Macros::EachRecord do
 
       it 'creates values for each language' do
         macro.call(nil, mock_context)
-        expect(mock_context.output_hash).to include('cho_type_facet' => { 'en' => ['Sound:Interview'],
-                                                                          'ar-Arab' => ['صوت:مقابلة'] })
+        expect(mock_context.output_hash).to include('cho_type_facet' => { 'en' => ['Sound', 'Sound:Interview'],
+                                                                          'ar-Arab' => ['صوت', 'صوت:مقابلة'] })
       end
     end
 
@@ -79,7 +79,7 @@ RSpec.describe Macros::EachRecord do
 
       it 'creates value for "none" language' do
         macro.call(nil, mock_context)
-        expect(mock_context.output_hash).to include('cho_type_facet' => { 'none' => ['Sound:Interview'] })
+        expect(mock_context.output_hash).to include('cho_type_facet' => { 'none' => ['Sound', 'Sound:Interview'] })
       end
     end
 
