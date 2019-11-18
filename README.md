@@ -156,7 +156,7 @@ Using dlme-transform in the deployed environments requires a DLME account with ?
 
 ### DLSS Terraform for AWS
 
-This is best explained by the README:  https://github.com/sul-dlss/terraform-aws)
+This is best explained by the README:  https://github.com/sul-dlss/terraform-aws
 
 ### Development environment
 
@@ -164,11 +164,13 @@ Terraform tells AWS to use the `latest` docker image of dlme-transform to use fo
 
 In order to update dlme-transform in AWS, we need to use terraform to tell AWS to re-grab the (now new) latest image.
 
+First:  ensure the latest image on Docker Hub has the changes you want.  CircleCI should automatically create a new latest image when new commits are pushed to master (i.e. merged PRs).  You can confirm this by looking for the successful "publish-latest" step completion https://circleci.com/gh/sul-dlss/dlme-transform or by looking for the timestamp on the latest image at Docker Hub:  https://hub.docker.com/r/suldlss/dlme-transform/tags.
+
 In the case of this code base, dlme-transform, a PR to https://github.com/sul-dlss/terraform-aws must be made that updates the "DEPLOYED" environment variable.  We use a date_time format; for an example, see https://github.com/sul-dlss/terraform-aws/pull/525.
 
 Some more info here https://github.com/sul-dlss/terraform-aws/blob/master/organizations/development/dlme/README.md
 
-After this, terraform must be "applied" to the development environment by a developer or ops.
+After this, terraform must be "applied" to the development environment by a developer or Ops.
 
 ### Stage and Production environments
 
@@ -191,6 +193,8 @@ git push origin --tags
 ```
 
 3.  Go to https://github.com/sul-dlss/dlme-transform/releases/new?tag=1.1.3 and "Publish Release".
+
+4.  Confirm the new tagged release is available in Docker Hub. CircleCI should automatically create a new tagged image via a webhook.  You can confirm this by looking for the successful "publish-tag" step completion https://circleci.com/gh/sul-dlss/dlme-transform or by looking for the new tag at Docker Hub:  https://hub.docker.com/r/suldlss/dlme-transform/tags.
 
 #### Deploy New Tagged Release to AWS
 
