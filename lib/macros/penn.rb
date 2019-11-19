@@ -9,12 +9,12 @@ module Macros
     # @return [Proc] a proc that traject can call for each record
     def penn_cho_has_type
       lambda do |_record, accumulator|
-        if accumulator.first == 'Manuscript Fragment'
-          accumulator.first.gsub('Manuscript Fragment', 'MS WORKED')
-        elsif accumulator.first == 'Manuscript'
-          accumulator.first.gsub('Manuscript', 'Manuscript ALSO WORKED')
+        if accumulator[0]&.match('Manuscript Frangment')
+          accumulator.replace(['Manuscript'])
+        elsif accumulator[0]&.match('Manuscript')
+          accumulator.replace(['Manuscript'])
         else
-          accumulator.first.gsub(/./, 'Cultural Artifact')
+          accumulator.replace(['Cultural Artifact'])
         end
       end
     end
