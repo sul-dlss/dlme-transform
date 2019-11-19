@@ -17,8 +17,7 @@ acceptable_bcp47_codes:
   - fa-Arab
   - fa-Latn
   - fr
-  - tr-Arab
-  - tr-Latn
+  - tr
 defaults:
   base_data_dir: 'data'
   data_dir: ''
