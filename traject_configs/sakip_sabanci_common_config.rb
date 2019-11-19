@@ -5,45 +5,47 @@ require 'macros/content_dm'
 require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
+require 'macros/normalize_language'
 require 'macros/normalize_type'
 require 'macros/oai'
 require 'traject_plus'
 
 extend Macros::ContentDm
-extend Macros::DLME
 extend Macros::DateParsing
+extend Macros::DLME
 extend Macros::EachRecord
+extend Macros::NormalizeLanguage
 extend Macros::NormalizeType
 extend Macros::OAI
 extend TrajectPlus::Macros
 
 settings do
-  provide 'writer_class_name', 'DlmeJsonResourceWriter'
   provide 'reader_class_name', 'TrajectPlus::XmlReader'
+  provide 'writer_class_name', 'DlmeJsonResourceWriter'
 end
 
 # Cho Required
 to_field 'id', extract_oai_identifier, strip
-to_field 'cho_title', extract_oai('dc:title'), strip
+to_field 'cho_title', extract_oai('dc:title'), strip, lang('tr')
 
 # Cho Other
 to_field 'cho_contributor', extract_oai('dc:contributor'),
-         strip, split('.')
-to_field 'cho_coverage', extract_oai('dc:coverage'), strip
+         strip, split('.'), lang('tr')
+to_field 'cho_coverage', extract_oai('dc:coverage'), strip, lang('tr')
 to_field 'cho_creator', extract_oai('dc:creator'),
-         strip, split('.')
-to_field 'cho_date', extract_oai('dc:date'), strip
-to_field 'cho_description', extract_oai('dc:description'), strip
-to_field 'cho_dc_rights', extract_oai('dc:rights'), strip
+         strip, split('.'), lang('tr')
+to_field 'cho_date', extract_oai('dc:date'), strip, lang('tr')
+to_field 'cho_description', extract_oai('dc:description'), strip, lang('tr')
+to_field 'cho_dc_rights', extract_oai('dc:rights'), strip, lang('tr')
 to_field 'cho_edm_type', extract_oai('dc:type'),
-         strip, transform(&:downcase), translation_map('not_found', 'types', 'turkish-types')
-to_field 'cho_format', extract_oai('dc:format'), strip
+         strip, normalize_type, lang('tr')
+to_field 'cho_format', extract_oai('dc:format'), strip, lang('tr')
 to_field 'cho_language', extract_oai('dc:language'), split(';'),
-         strip, transform(&:downcase), translation_map('not_found', 'languages', 'turkish-languages', 'marc_languages')
-to_field 'cho_publisher', extract_oai('dc:publisher'), strip
-to_field 'cho_relation', extract_oai('dc:relation'), strip
-to_field 'cho_subject', extract_oai('dc:subject'), strip
-to_field 'cho_type', extract_oai('dc:type')
+         strip, normalize_language, lang('en')
+to_field 'cho_publisher', extract_oai('dc:publisher'), strip, lang('tr')
+to_field 'cho_relation', extract_oai('dc:relation'), strip, lang('tr')
+to_field 'cho_subject', extract_oai('dc:subject'), strip, lang('tr')
+to_field 'cho_type', extract_oai('dc:type'), strip, lang('tr')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
