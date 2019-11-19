@@ -16,11 +16,11 @@ to_field 'cho_has_type', extract_srw('dc:type[1]'),
          gsub('manuscript', 'Manuscript'),
          lang('en')
 to_field 'cho_has_type', extract_srw('dc:type[1]'),
-        gsub('image fixe', 'Photograph'),
-        gsub('text', 'Book'),
-        gsub('manuscript', 'Manuscript'),
-        translation_map('norm_has_type_to_ar'),
-        lang('ar-Arab')
+         gsub('image fixe', 'Photograph'),
+         gsub('text', 'Book'),
+         gsub('manuscript', 'Manuscript'),
+         translation_map('norm_has_type_to_ar'),
+         lang('ar-Arab')
 to_field 'cho_publisher', extract_srw('dc:publisher'), strip, lang('fr')
 to_field 'cho_subject', extract_srw('dc:subject'), strip, lang('fr')
 to_field 'cho_type', extract_srw('dc:type')
