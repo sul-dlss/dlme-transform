@@ -8,6 +8,8 @@ require 'macros/each_record'
 require 'macros/normalize_language'
 require 'macros/normalize_type'
 require 'macros/oai'
+require 'macros/timestamp'
+require 'macros/version'
 require 'traject_plus'
 
 extend Macros::ContentDm
@@ -17,12 +19,18 @@ extend Macros::EachRecord
 extend Macros::NormalizeLanguage
 extend Macros::NormalizeType
 extend Macros::OAI
+extend Macros::Timestamp
+extend Macros::Version
 extend TrajectPlus::Macros
 
 settings do
   provide 'reader_class_name', 'TrajectPlus::XmlReader'
   provide 'writer_class_name', 'DlmeJsonResourceWriter'
 end
+
+# Set Version & Timestamp on each record
+to_field 'transform_version', version
+to_field 'transform_timestamp', timestamp
 
 # Cho Required
 to_field 'id', extract_oai_identifier, strip

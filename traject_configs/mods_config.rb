@@ -7,6 +7,8 @@ require 'macros/each_record'
 require 'macros/mods'
 require 'macros/normalize_type'
 require 'macros/stanford'
+require 'macros/timestamp'
+require 'macros/version'
 require 'traject_plus'
 
 extend Macros::DLME
@@ -16,6 +18,8 @@ extend Macros::IIIF
 extend Macros::Mods
 extend Macros::NormalizeType
 extend Macros::Stanford
+extend Macros::Timestamp
+extend Macros::Version
 extend TrajectPlus::Macros
 extend TrajectPlus::Macros::Mods
 extend TrajectPlus::Macros::Xml
@@ -24,6 +28,10 @@ settings do
   provide 'writer_class_name', 'DlmeJsonResourceWriter'
   provide 'reader_class_name', 'TrajectPlus::XmlReader'
 end
+
+# Set Version & Timestamp on each record
+to_field 'transform_version', version
+to_field 'transform_timestamp', timestamp
 
 # Spotlight DLME IR Record Identifier
 to_field 'id', generate_mods_id

@@ -6,6 +6,8 @@ require 'macros/dlme'
 require 'macros/each_record'
 require 'macros/normalize_language'
 require 'macros/tei'
+require 'macros/timestamp'
+require 'macros/version'
 require 'traject_plus'
 
 extend Macros::DateParsing
@@ -13,6 +15,8 @@ extend Macros::DLME
 extend Macros::EachRecord
 extend Macros::NormalizeLanguage
 extend Macros::Tei
+extend Macros::Timestamp
+extend Macros::Version
 extend TrajectPlus::Macros
 extend TrajectPlus::Macros::Tei
 extend TrajectPlus::Macros::Xml
@@ -21,6 +25,10 @@ settings do
   provide 'reader_class_name', 'TrajectPlus::XmlReader'
   provide 'writer_class_name', 'DlmeJsonResourceWriter'
 end
+
+# Set Version & Timestamp on each record
+to_field 'transform_version', version
+to_field 'transform_timestamp', timestamp
 
 # Shortcut variables
 FACSIMILE = '//tei:facsimile'
