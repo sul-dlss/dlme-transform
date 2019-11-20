@@ -10,7 +10,7 @@ module Macros
                     iso_639-1
                     iso_639-2
                     iso_639-3
-                    auc-languages-errors].freeze
+                    language-errors].freeze
 
     # Maps extracted language values to a series of tranlation maps
     # @example
