@@ -6,6 +6,8 @@ require 'macros/dlme'
 require 'macros/dlme_marc'
 require 'macros/each_record'
 require 'macros/normalize_language'
+require 'macros/timestamp'
+require 'macros/version'
 require 'traject/macros/marc21_semantics'
 require 'traject/macros/marc_format_classifier'
 require 'traject_plus'
@@ -15,6 +17,8 @@ extend Macros::DateParsing
 extend Macros::DlmeMarc
 extend Macros::EachRecord
 extend Macros::NormalizeLanguage
+extend Macros::Timestamp
+extend Macros::Version
 extend Traject::Macros::Marc21
 extend Traject::Macros::Marc21Semantics
 extend Traject::Macros::MarcFormats
@@ -28,6 +32,10 @@ settings do
   # provide "reader_class_name", "MarcReader"
   provide 'writer_class_name', 'DlmeJsonResourceWriter'
 end
+
+# Set Version & Timestamp on each record
+to_field 'transform_version', version
+to_field 'transform_timestamp', timestamp
 
 # CHO Required
 to_field 'id', extract_marc('001'), first_only

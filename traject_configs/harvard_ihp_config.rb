@@ -7,6 +7,8 @@ require 'macros/each_record'
 require 'macros/harvard'
 require 'macros/normalize_language'
 require 'macros/normalize_type'
+require 'macros/timestamp'
+require 'macros/version'
 require 'traject_plus'
 
 extend Macros::DLME
@@ -15,6 +17,8 @@ extend Macros::EachRecord
 extend Macros::Harvard
 extend Macros::NormalizeLanguage
 extend Macros::NormalizeType
+extend Macros::Timestamp
+extend Macros::Version
 extend TrajectPlus::Macros
 extend TrajectPlus::Macros::Xml
 
@@ -22,6 +26,10 @@ settings do
   provide 'writer_class_name', 'DlmeJsonResourceWriter'
   provide 'reader_class_name', 'TrajectPlus::XmlReader'
 end
+
+# Set Version & Timestamp on each record
+to_field 'transform_version', version
+to_field 'transform_timestamp', timestamp
 
 # Cho Required
 to_field 'id', extract_harvard_identifier, strip

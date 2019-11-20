@@ -4,11 +4,15 @@ require 'dlme_json_resource_writer'
 require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
+require 'macros/timestamp'
+require 'macros/version'
 require 'traject_plus'
 
 extend Macros::DLME
 extend Macros::DateParsing
 extend Macros::EachRecord
+extend Macros::Timestamp
+extend Macros::Version
 extend TrajectPlus::Macros
 extend TrajectPlus::Macros::JSON
 
@@ -16,6 +20,10 @@ settings do
   provide 'writer_class_name', 'DlmeJsonResourceWriter'
   provide 'reader_class_name', 'TrajectPlus::JsonReader'
 end
+
+# Set Version & Timestamp on each record
+to_field 'transform_version', version
+to_field 'transform_timestamp', timestamp
 
 # Cho Required
 to_field 'id', extract_json('.url'), strip

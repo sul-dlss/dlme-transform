@@ -5,12 +5,16 @@ require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
 require 'macros/fgdc'
+require 'macros/timestamp'
+require 'macros/version'
 require 'traject_plus'
 
 extend Macros::DLME
 extend Macros::DateParsing
 extend Macros::EachRecord
 extend Macros::FGDC
+extend Macros::Timestamp
+extend Macros::Version
 extend TrajectPlus::Macros
 extend TrajectPlus::Macros::FGDC
 extend TrajectPlus::Macros::Xml
@@ -19,6 +23,10 @@ settings do
   provide 'reader_class_name', 'TrajectPlus::XmlReader'
   provide 'writer_class_name', 'DlmeJsonResourceWriter'
 end
+
+# Set Version & Timestamp on each record
+to_field 'transform_version', version
+to_field 'transform_timestamp', timestamp
 
 # CHO Required
 to_field 'id', generate_fgdc_id(prefixed: true)
