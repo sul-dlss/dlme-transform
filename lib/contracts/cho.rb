@@ -36,6 +36,8 @@ module Contracts
       optional(:cho_type_facet).value(:hash?)
 
       # See https://github.com/sul-dlss/dlme/blob/master/docs/application_profile.md#oreaggregation
+      required(:transform_version).filled(:string)
+      required(:transform_timestamp).filled(:string)
       required(:id).filled(:string)
       optional('__source'.to_sym).filled(:string)
       # Since the IR is a flattened projection of the MAP, 'agg_aggregated_cho' is not used.
