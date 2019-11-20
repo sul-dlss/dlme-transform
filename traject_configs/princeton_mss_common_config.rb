@@ -8,13 +8,17 @@ require 'traject_plus'
 
 extend Macros::DateParsing
 extend Macros::DLME
+<<<<<<< Updated upstream:traject_configs/princeton_mss_config.rb
 extend Macros::PostProcess
+=======
+extend Macros::EachRecord
+>>>>>>> Stashed changes:traject_configs/princeton_mss_common_config.rb
 extend TrajectPlus::Macros
 extend TrajectPlus::Macros::JSON
 
 settings do
-  provide 'writer_class_name', 'DlmeJsonResourceWriter'
   provide 'reader_class_name', 'TrajectPlus::JsonReader'
+  provide 'writer_class_name', 'DlmeJsonResourceWriter'
 end
 
 # Cho Required
@@ -23,6 +27,7 @@ to_field 'cho_title', extract_json('.title')
 
 # Cho Other
 to_field 'cho_alternate', extract_json('.cho_alternate')
+<<<<<<< Updated upstream:traject_configs/princeton_mss_config.rb
 to_field 'cho_creator', extract_json('.author')
 to_field 'cho_contributor', extract_json('.contributor')
 to_field 'cho_date', extract_json('.date')
@@ -42,6 +47,30 @@ to_field 'cho_provenance', extract_json('.provenance')
 to_field 'cho_publisher', extract_json('.publisher')
 to_field 'cho_subject', extract_json('.subject')
 to_field 'cho_type', extract_json('.type')
+=======
+to_field 'cho_creator', extract_json('.author'), strip, lang('en')
+to_field 'cho_date', extract_json('.date'), strip, lang('en')
+to_field 'cho_date_range_norm', extract_json('.date'), parse_range
+to_field 'cho_date_range_hijri', extract_json('.date'), parse_range, hijri_range
+to_field 'cho_dc_rights', literal('https://rbsc.princeton.edu/services/imaging-publication-services'), strip, lang('en')
+to_field 'cho_description', extract_json('.description'), strip, lang('en')
+to_field 'cho_description', extract_json('.contents'), strip, lang('en')
+to_field 'cho_description', extract_json('.binding_note'), strip, lang('en')
+to_field 'cho_edm_type', literal('Text'), lang('en')
+to_field 'cho_edm_type', literal('Text'), translation_map('norm_types_to_ar'), lang('ar-Arab')
+to_field 'cho_extent', extract_json('.extent'), strip, lang('en')
+to_field 'cho_has_type', literal('Manuscript'), lang('en')
+to_field 'cho_has_type', literal('Manuscript'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
+to_field 'cho_identifier', extract_json('.source_metadata_identifier')
+to_field 'cho_identifier', extract_json('.local_identifier')
+to_field 'cho_identifier', extract_json('.alternate_identifier')
+to_field 'cho_language', extract_json('.language'), strip, lang('en')
+to_field 'cho_language', extract_json('.language'), strip, translation_map('norm_languages_to_ar'), lang('ar-Arab')
+to_field 'cho_provenance', extract_json('.provenance'), strip, lang('en')
+to_field 'cho_publisher', extract_json('.publisher'), strip, lang('en')
+to_field 'cho_subject', extract_json('.subject'), strip, lang('en')
+to_field 'cho_type', extract_json('.type'), strip, lang('en')
+>>>>>>> Stashed changes:traject_configs/princeton_mss_common_config.rb
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')

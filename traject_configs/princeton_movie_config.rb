@@ -8,7 +8,11 @@ require 'traject_plus'
 
 extend Macros::DateParsing
 extend Macros::DLME
+<<<<<<< Updated upstream
 extend Macros::PostProcess
+=======
+extend Macros::EachRecord
+>>>>>>> Stashed changes
 extend TrajectPlus::Macros
 extend TrajectPlus::Macros::JSON
 
