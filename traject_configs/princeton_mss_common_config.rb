@@ -3,16 +3,12 @@
 require 'dlme_json_resource_writer'
 require 'macros/date_parsing'
 require 'macros/dlme'
-require 'macros/post_process'
+require 'macros/each_record'
 require 'traject_plus'
 
 extend Macros::DateParsing
 extend Macros::DLME
-<<<<<<< Updated upstream:traject_configs/princeton_mss_config.rb
-extend Macros::PostProcess
-=======
 extend Macros::EachRecord
->>>>>>> Stashed changes:traject_configs/princeton_mss_common_config.rb
 extend TrajectPlus::Macros
 extend TrajectPlus::Macros::JSON
 
@@ -27,27 +23,6 @@ to_field 'cho_title', extract_json('.title')
 
 # Cho Other
 to_field 'cho_alternate', extract_json('.cho_alternate')
-<<<<<<< Updated upstream:traject_configs/princeton_mss_config.rb
-to_field 'cho_creator', extract_json('.author')
-to_field 'cho_contributor', extract_json('.contributor')
-to_field 'cho_date', extract_json('.date')
-to_field 'cho_date_range_norm', extract_json('.date'), parse_range
-to_field 'cho_date_range_hijri', extract_json('.date'), parse_range, hijri_range
-to_field 'cho_dc_rights', literal('https://rbsc.princeton.edu/services/imaging-publication-services')
-to_field 'cho_description', extract_json('.description')
-to_field 'cho_description', extract_json('.contents')
-to_field 'cho_description', extract_json('.binding_note')
-to_field 'cho_edm_type', literal('Text')
-to_field 'cho_extent', extract_json('.extent')
-to_field 'cho_identifier', extract_json('.source_metadata_identifier')
-to_field 'cho_identifier', extract_json('.local_identifier')
-to_field 'cho_identifier', extract_json('.alternate_identifier')
-to_field 'cho_language', extract_json('.language')
-to_field 'cho_provenance', extract_json('.provenance')
-to_field 'cho_publisher', extract_json('.publisher')
-to_field 'cho_subject', extract_json('.subject')
-to_field 'cho_type', extract_json('.type')
-=======
 to_field 'cho_creator', extract_json('.author'), strip, lang('en')
 to_field 'cho_date', extract_json('.date'), strip, lang('en')
 to_field 'cho_date_range_norm', extract_json('.date'), parse_range
@@ -70,7 +45,6 @@ to_field 'cho_provenance', extract_json('.provenance'), strip, lang('en')
 to_field 'cho_publisher', extract_json('.publisher'), strip, lang('en')
 to_field 'cho_subject', extract_json('.subject'), strip, lang('en')
 to_field 'cho_type', extract_json('.type'), strip, lang('en')
->>>>>>> Stashed changes:traject_configs/princeton_mss_common_config.rb
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
@@ -124,3 +98,6 @@ each_record convert_to_language_hash(
   'cho_title',
   'cho_type'
 )
+
+# NOTE: call add_cho_type_facet AFTER calling convert_to_language_hash fields
+each_record add_cho_type_facet

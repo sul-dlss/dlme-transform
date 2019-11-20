@@ -497,9 +497,6 @@
       "princeton_islamic_mss_config.rb"
     ],
     "paths": [
-<<<<<<< Updated upstream
-      "princeton/islamic_mss",
-=======
       "princeton/islamic_mss"
     ],
     "extension": ".json",
@@ -521,7 +518,6 @@
       "princeton_yemeni_mss_config.rb"
     ],
     "paths": [
->>>>>>> Stashed changes
       "princeton/yemeni_mss"
     ],
     "extension": ".json",
