@@ -5,6 +5,7 @@ require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/dlme_marc'
 require 'macros/each_record'
+require 'macros/normalize_language'
 require 'macros/timestamp'
 require 'macros/version'
 require 'traject/macros/marc21_semantics'
@@ -15,6 +16,7 @@ extend Macros::DLME
 extend Macros::DateParsing
 extend Macros::DlmeMarc
 extend Macros::EachRecord
+extend Macros::NormalizeLanguage
 extend Macros::Timestamp
 extend Macros::Version
 extend Traject::Macros::Marc21
@@ -68,8 +70,8 @@ to_field 'cho_format', marc_formats, lang('en')
 to_field 'cho_identifier', oclcnum
 to_field 'cho_is_part_of', extract_marc('440a:490a:800abcdt:400abcd:810abcdt:410abcd:811acdeft:411acdef:830adfgklmnoprst:760ast', alternate_script: false), lang('en')
 to_field 'cho_is_part_of', extract_marc('440a:490a:800abcdt:400abcd:810abcdt:410abcd:811acdeft:411acdef:830adfgklmnoprst:760ast', alternate_script: :only), lang('ar-Arab')
-to_field 'cho_language', extract_marc('008[35-37]:041a:041d'), transform(&:downcase), translation_map('not_found', 'marc_languages', 'iso_639-2'), lang('en')
-to_field 'cho_language', extract_marc('008[35-37]:041a:041d'), transform(&:downcase), translation_map('not_found', 'marc_languages', 'iso_639-2'), translation_map('norm_languages_to_ar'), lang('ar-Arab')
+to_field 'cho_language', extract_marc('008[35-37]:041a:041d'), normalize_language, lang('en')
+to_field 'cho_language', extract_marc('008[35-37]:041a:041d'), normalize_language, translation_map('norm_languages_to_ar'), lang('ar-Arab')
 # to_field 'cho_medium'
 # fo_field 'cho_provenance'
 to_field 'cho_publisher', extract_marc('260b:264b', alternate_script: false), trim_punctuation, lang('en')
