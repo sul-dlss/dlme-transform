@@ -13,7 +13,7 @@ RSpec.describe Macros::Version do
   describe '#version' do
     let(:version) { '8bb2a18' }
     it 'returns a github hash key from the environment' do
-      allow(ENV).to receive(:[]).with('VERSION').and_return(version)
+      allow(ENV).to receive(:fetch).and_return(version)
       callable = instance.version
       expect(callable.call(nil, [])).to eq([version])
     end
