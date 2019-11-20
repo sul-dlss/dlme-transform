@@ -4,16 +4,24 @@ require 'dlme_json_resource_writer'
 require 'macros/csv'
 require 'macros/dlme'
 require 'macros/each_record'
+require 'macros/timestamp'
+require 'macros/version'
 require 'traject_plus'
 
 extend Macros::Csv
 extend Macros::DLME
 extend Macros::EachRecord
+extend Macros::Timestamp
+extend Macros::Version
 
 settings do
   provide 'writer_class_name', 'DlmeJsonResourceWriter'
   provide 'reader_class_name', 'TrajectPlus::CsvReader'
 end
+
+# Set Version & Timestamp on each record
+to_field 'transform_version', version
+to_field 'transform_timestamp', timestamp
 
 # MET Museum
 to_field 'id', column('Object ID')

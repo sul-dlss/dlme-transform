@@ -3,16 +3,24 @@
 require 'dlme_json_resource_writer'
 require 'macros/dlme'
 require 'macros/each_record'
+require 'macros/timestamp'
+require 'macros/version'
 require 'traject_plus'
 
 extend Macros::DLME
 extend Macros::EachRecord
+extend Macros::Timestamp
+extend Macros::Version
 extend TrajectPlus::Macros::JSON
 
 settings do
   provide 'writer_class_name', 'DlmeJsonResourceWriter'
   provide 'reader_class_name', 'TrajectPlus::JsonReader'
 end
+
+# Set Version & Timestamp on each record
+to_field 'transform_version', version
+to_field 'transform_timestamp', timestamp
 
 to_field 'id', lambda { |_record, accumulator, context|
   identifier = default_identifier(context)

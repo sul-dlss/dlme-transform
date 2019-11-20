@@ -5,12 +5,16 @@ require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
 require 'macros/met'
+require 'macros/timestamp'
+require 'macros/version'
 require 'traject_plus'
 
 extend Macros::DateParsing
 extend Macros::DLME
 extend Macros::EachRecord
 extend Macros::Met
+extend Macros::Timestamp
+extend Macros::Version
 extend TrajectPlus::Macros
 extend TrajectPlus::Macros::JSON
 
@@ -20,6 +24,10 @@ settings do
 end
 
 # Note: Met JSON uses blanks ("") instead of nulls.
+
+# Set Version & Timestamp on each record
+to_field 'transform_version', version
+to_field 'transform_timestamp', timestamp
 
 # CHO Required
 to_field 'id', extract_json('.objectID'), lambda { |_record, accumulator, context|
