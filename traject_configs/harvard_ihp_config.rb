@@ -5,12 +5,16 @@ require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
 require 'macros/harvard'
+require 'macros/normalize_language'
+require 'macros/normalize_type'
 require 'traject_plus'
 
 extend Macros::DLME
 extend Macros::DateParsing
 extend Macros::EachRecord
 extend Macros::Harvard
+extend Macros::NormalizeLanguage
+extend Macros::NormalizeType
 extend TrajectPlus::Macros
 extend TrajectPlus::Macros::Xml
 
@@ -26,25 +30,28 @@ to_field 'cho_title', extract_harvard('/*/dc:title'), strip, first_only
 # Cho Other
 to_field 'cho_alternative', extract_harvard('/*/dc:title[last()]'), strip
 to_field 'cho_contributor', extract_harvard('/*/dc:contributor'), strip
-to_field 'cho_coverage', extract_harvard('/*/dc:coverage'), strip
-to_field 'cho_creator', extract_harvard('/*/dc:creator'), strip
-to_field 'cho_date', extract_harvard('/*/dc:date'), strip
+to_field 'cho_creator', extract_harvard('/*/dc:creator'), strip, lang('en')
+to_field 'cho_date', extract_harvard('/*/dc:date'), strip, lang('en')
 to_field 'cho_date_range_norm', extract_harvard('/*/dc:date'), strip, harvard_ihp_date_range
 to_field 'cho_date_range_hijri', extract_harvard('/*/dc:date'), strip, harvard_ihp_date_range, hijri_range
-to_field 'cho_description', extract_harvard('/*/dc:description'), strip
-to_field 'cho_dc_rights', extract_harvard('/*/dc:rights'), strip
-to_field 'cho_edm_type', extract_harvard('/*/dc:type[1]'),
-         strip, transform(&:downcase), translation_map('not_found', 'types')
-to_field 'cho_format', extract_harvard('/*/dc:format'), strip
+to_field 'cho_description', extract_harvard('/*/dc:description'), strip, lang('en')
+to_field 'cho_dc_rights', extract_harvard('/*/dc:rights'), strip, lang('en')
+to_field 'cho_edm_type', extract_harvard('/*/dc:type[1]'), normalize_type, lang('en')
+to_field 'cho_edm_type', extract_harvard('/*/dc:type[1]'), normalize_type, translation_map('norm_types_to_ar'), lang('ar-Arab')
+to_field 'cho_format', extract_harvard('/*/dc:format'), strip, lang('en')
 to_field 'cho_language', extract_harvard('/*/dc:language'),
-         split(' '), first_only, strip, transform(&:downcase), translation_map('not_found', 'iso_639-2')
-to_field 'cho_publisher', extract_harvard('/*/dc:publisher'), strip
-to_field 'cho_relation', extract_harvard('/*/dc:relation'), strip
-to_field 'cho_subject', extract_harvard('/*/dc:subject'), strip
+         split(' '), first_only, strip, normalize_language, lang('en')
+to_field 'cho_language', extract_harvard('/*/dc:language'),
+         split(' '), first_only, strip, normalize_language, translation_map('norm_languages_to_ar'), lang('ar-Arab')
+to_field 'cho_publisher', extract_harvard('/*/dc:publisher'), strip, lang('en')
+to_field 'cho_relation', extract_harvard('/*/dc:relation'), strip, lang('en')
+to_field 'cho_subject', extract_harvard('/*/dc:subject'), strip, lang('en')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
 to_field 'agg_data_provider', data_provider_ar, lang('ar-Arab')
+to_field 'agg_data_provider_country', data_provider_country, lang('en')
+to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
@@ -59,11 +66,8 @@ to_field 'agg_preview' do |_record, accumulator, context|
 end
 to_field 'agg_provider', provider, lang('en')
 to_field 'agg_provider', provider_ar, lang('ar-Arab')
-
 to_field 'agg_provider_country', provider_country, lang('en')
 to_field 'agg_provider_country', provider_country_ar, lang('ar-Arab')
-to_field 'agg_data_provider_country', data_provider_country, lang('en')
-to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 
 each_record convert_to_language_hash(
   'agg_data_provider',
