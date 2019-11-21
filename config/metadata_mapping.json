@@ -369,26 +369,6 @@
   },
   {
     "trajects": [
-      "marc_config.rb"
-    ],
-    "paths": [
-      "penn/marc"
-    ],
-    "extension": ".mrc",
-    "settings": {
-      "agg_provider": "University of Pennsylvania Libraries",
-      "agg_provider_country": "United States of America",
-      "agg_data_provider": "University of Pennsylvania Libraries",
-      "agg_data_provider_country": "United States of America",
-      "agg_provider_ar": "مكتبات جامعة بنسلفانيا",
-      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "agg_data_provider_ar": "مكتبات جامعة بنسلفانيا",
-      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "inst_id": "penn_marc"
-    }
-  },
-  {
-    "trajects": [
       "openn_common_config.rb",
       "openn_no_orig_date_attribs.rb"
     ],
