@@ -27,8 +27,8 @@ end
 
 # Cho Additional
 to_field 'cho_dc_rights', literal('Public Domain'), lang('en')
-to_field 'cho_description', extract_marc('500a:505agrtu:520abcu', alternate_script: false), strip, gsub('Special Collections Library,', 'Special Collections Research Center'), lang('en')
-to_field 'cho_description', extract_marc('500a:505agrtu:520abcu', alternate_script: :only), strip, lang('ar-Arab')
+# to_field 'cho_description', extract_marc('500a:505agrtu:520abcu', alternate_script: false), strip, gsub('Special Collections Library,', 'Special Collections Research Center'), lang('en')
+# to_field 'cho_description', extract_marc('500a:505agrtu:520abcu', alternate_script: :only), strip, lang('ar-Arab')
 to_field 'cho_has_type', literal('Manuscript'), lang('en')
 to_field 'cho_has_type', literal('Manuscript'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
 to_field 'cho_identifier', oclcnum

@@ -1,23 +1,5 @@
 # frozen_string_literal: true
 
-require 'dlme_json_resource_writer'
-require 'macros/date_parsing'
-require 'macros/dlme'
-require 'macros/dlme_marc'
-require 'macros/each_record'
-require 'traject/macros/marc21_semantics'
-require 'traject/macros/marc_format_classifier'
-require 'traject_plus'
-
-extend Macros::DLME
-extend Macros::DateParsing
-extend Macros::DlmeMarc
-extend Macros::EachRecord
-extend Traject::Macros::Marc21
-extend Traject::Macros::Marc21Semantics
-extend Traject::Macros::MarcFormats
-extend TrajectPlus::Macros
-
 settings do
   # NOTE: indicate one of the two reader_class_name configs below in coll specific config
   # provide "reader_class_name", "MARC::XMLReader"
@@ -94,41 +76,41 @@ to_field 'agg_provider_country', provider_country_ar, lang('ar-Arab')
 
 # Agg Additional
 # NOTE: agg_is_shown_at exemplar; add it to collection specific config if desired
-# to_field 'agg_is_shown_at' do |_record, accumulator, context|
-#   accumulator << transform_values(context, 'wr_id' => [extract_marc('856u'), first_only])
-# end
+to_field 'agg_is_shown_at' do |_record, accumulator, context|
+  accumulator << transform_values(context, 'wr_id' => [extract_marc('856u'), first_only])
+end
 
 # NOTE:  add the below to collection specific config
-# each_record convert_to_language_hash(
-#   'agg_data_provider',
-#   'agg_data_provider_country',
-#   'agg_provider',
-#   'agg_provider_country',
-#   'cho_alternative',
-#   'cho_contributor',
-#   'cho_coverage',
-#   'cho_creator',
-#   'cho_date',
-#   'cho_dc_rights',
-#   'cho_description',
-#   'cho_edm_type',
-#   'cho_extent',
-#   'cho_format',
-#   'cho_has_part',
-#   'cho_has_type',
-#   'cho_is_part_of',
-#   'cho_language',
-#   'cho_medium',
-#   'cho_provenance',
-#   'cho_publisher',
-#   'cho_relation',
-#   'cho_source',
-#   'cho_spatial',
-#   'cho_subject',
-#   'cho_temporal',
-#   'cho_title',
-#   'cho_type'
-# )
-#
-# # NOTE: call add_cho_type_facet AFTER calling convert_to_language_hash fields
-# each_record add_cho_type_facet
+each_record convert_to_language_hash(
+  'agg_data_provider',
+  'agg_data_provider_country',
+  'agg_provider',
+  'agg_provider_country',
+  'cho_alternative',
+  'cho_contributor',
+  'cho_coverage',
+  'cho_creator',
+  'cho_date',
+  'cho_dc_rights',
+  'cho_description',
+  'cho_edm_type',
+  'cho_extent',
+  'cho_format',
+  'cho_has_part',
+  'cho_has_type',
+  'cho_is_part_of',
+  'cho_language',
+  'cho_medium',
+  'cho_provenance',
+  'cho_publisher',
+  'cho_relation',
+  'cho_source',
+  'cho_spatial',
+  'cho_subject',
+  'cho_temporal',
+  'cho_title',
+  'cho_type'
+)
+
+# NOTE: call add_cho_type_facet AFTER calling convert_to_language_hash fields
+each_record add_cho_type_facet
