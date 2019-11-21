@@ -6,14 +6,19 @@ require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
 require 'macros/normalize_type'
+require 'macros/penn'
+require 'macros/timestamp'
+require 'macros/version'
 require 'traject_plus'
 
 extend Macros::Csv
 extend Macros::DLME
-extend Macros::DLME
 extend Macros::DateParsing
 extend Macros::EachRecord
 extend Macros::NormalizeType
+extend Macros::Penn
+extend Macros::Timestamp
+extend Macros::Version
 extend TrajectPlus::Macros
 extend TrajectPlus::Macros::Csv
 
@@ -22,44 +27,49 @@ settings do
   provide 'reader_class_name', 'TrajectPlus::CsvReader'
 end
 
+# Set Version & Timestamp on each record
+to_field 'transform_version', version
+to_field 'transform_timestamp', timestamp
+
 # CHO Required
 to_field 'id', normalize_prefixed_id('emuIRN')
-to_field 'cho_title', column('object_name'), split('|')
+to_field 'cho_title', column('object_name'), split('|'), lang('en')
 
 # CHO Other
-to_field 'cho_coverage', column('culture'), split('|')
-to_field 'cho_creator', column('creator')
-to_field 'agg_data_provider', column('curatorial_section'), append(' Section, Penn Museum')
-to_field 'agg_data_provider', data_provider_ar, lang('ar-Arab')
-to_field 'cho_date', column('date_made')
-to_field 'cho_date', column('date_made_early')
-to_field 'cho_date', column('date_made_late')
+to_field 'cho_coverage', column('culture'), split('|'), lang('en')
+to_field 'cho_creator', column('creator'), lang('en')
+to_field 'cho_date', column('date_made'), lang('en')
+to_field 'cho_date', column('date_made_early'), lang('en')
+to_field 'cho_date', column('date_made_late'), lang('en')
 to_field 'cho_date_range_norm', penn_museum_date_range
 to_field 'cho_date_range_hijri', penn_museum_date_range, hijri_range
-to_field 'cho_description', column('description')
-to_field 'cho_description', column('technique'), split('|')
-to_field 'cho_edm_type', literal('Image')
-to_field 'cho_extent', column('measurement_height')
-to_field 'cho_extent', column('measurement_length')
-to_field 'cho_extent', column('measurement_outside_diameter')
-to_field 'cho_extent', column('measurement_tickness')
-to_field 'cho_extent', column('measurement_unit')
-to_field 'cho_extent', column('measurement_width')
+to_field 'cho_description', column('description'), lang('en')
+to_field 'cho_description', column('technique'), split('|'), lang('en')
+to_field 'cho_edm_type', literal('Image'), lang('en')
+to_field 'cho_edm_type', literal('Image'), translation_map('norm_types_to_ar'), lang('ar-Arab')
+to_field 'cho_extent', column('measurement_height'), lang('en')
+to_field 'cho_extent', column('measurement_length'), lang('en')
+to_field 'cho_extent', column('measurement_outside_diameter'), lang('en')
+to_field 'cho_extent', column('measurement_tickness'), lang('en')
+to_field 'cho_extent', column('measurement_unit'), lang('en')
+to_field 'cho_extent', column('measurement_width'), lang('en')
+to_field 'cho_has_type', column('object_name'), penn_cho_has_type, lang('en')
+to_field 'cho_has_type', column('object_name'), penn_cho_has_type, translation_map('norm_has_type_to_ar'), lang('ar-Arab')
 to_field 'cho_identifier', column('emuIRN')
-to_field 'cho_medium', column('material'), split('|')
-to_field 'cho_provenance', column('accession_credit_line')
-to_field 'cho_source', column('object_number')
-to_field 'cho_source', column('other_numbers'), split('|')
-to_field 'cho_spatial', column('provenience'), split('|')
-to_field 'cho_subject', column('iconography')
-to_field 'cho_temporal', column('period'), split('|')
-to_field 'cho_type', column('object_name')
+to_field 'cho_medium', column('material'), split('|'), lang('en')
+to_field 'cho_provenance', column('accession_credit_line'), lang('en')
+to_field 'cho_source', column('object_number'), lang('en')
+to_field 'cho_source', column('other_numbers'), split('|'), lang('en')
+to_field 'cho_spatial', column('provenience'), split('|'), lang('en')
+to_field 'cho_subject', column('iconography'), lang('en')
+to_field 'cho_temporal', column('period'), split('|'), lang('en')
+to_field 'cho_type', column('object_name'), lang('en')
 
 # Agg
-to_field 'agg_provider', provider, lang('en')
-to_field 'agg_provider', provider_ar, lang('ar-Arab')
 to_field 'agg_data_provider', data_provider, lang('en')
 to_field 'agg_data_provider', data_provider_ar, lang('ar-Arab')
+to_field 'agg_data_provider_country', data_provider_country, lang('en')
+to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(context,
                                   'wr_id' => [column('url')])
@@ -68,11 +78,10 @@ to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(context,
                                   'wr_id' => [column('thumbnail'), gsub('collections/assets/1600', 'collections/assets/300')])
 end
-
+to_field 'agg_provider', provider, lang('en')
+to_field 'agg_provider', provider_ar, lang('ar-Arab')
 to_field 'agg_provider_country', provider_country, lang('en')
 to_field 'agg_provider_country', provider_country_ar, lang('ar-Arab')
-to_field 'agg_data_provider_country', data_provider_country, lang('en')
-to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 
 each_record convert_to_language_hash(
   'agg_data_provider',

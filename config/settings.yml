@@ -5,6 +5,8 @@ fields:
       - agg_is_shown_at
       - agg_is_shown_by
       - agg_preview
+      - transform_version
+      - transform_timestamp
     web_resources:
       - agg_is_shown_at
       - agg_is_shown_by

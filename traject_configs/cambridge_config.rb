@@ -6,6 +6,8 @@ require 'macros/dlme'
 require 'macros/each_record'
 require 'macros/normalize_language'
 require 'macros/tei'
+require 'macros/timestamp'
+require 'macros/version'
 require 'traject_plus'
 
 extend Macros::DateParsing
@@ -13,6 +15,8 @@ extend Macros::DLME
 extend Macros::EachRecord
 extend Macros::NormalizeLanguage
 extend Macros::Tei
+extend Macros::Timestamp
+extend Macros::Version
 extend TrajectPlus::Macros
 extend TrajectPlus::Macros::Tei
 extend TrajectPlus::Macros::Xml
@@ -21,6 +25,10 @@ settings do
   provide 'reader_class_name', 'TrajectPlus::XmlReader'
   provide 'writer_class_name', 'DlmeJsonResourceWriter'
 end
+
+# Set Version & Timestamp on each record
+to_field 'transform_version', version
+to_field 'transform_timestamp', timestamp
 
 # Shortcut variables
 FACSIMILE = '//tei:facsimile'
@@ -55,9 +63,9 @@ to_field 'cho_has_type', literal('Manuscript'), strip, lang('en')
 to_field 'cho_has_type', literal('Manuscript'), translation_map('norm_has_type_to_ar'), strip, lang('ar-Arab')
 to_field 'cho_identifier', extract_tei("#{MS_DESC}/#{MS_ID}/tei:idno[@type='call-number']"), strip
 to_field 'cho_language', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:textLang/@mainLang"), strip, normalize_language, lang('en')
-to_field 'cho_language', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:textLang/@otherLangs"), strip, split(' '), normalize_language, lang('en')
+to_field 'cho_language', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:textLang/@otherLangs"), strip, normalize_language, lang('en')
 to_field 'cho_language', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:textLang/@mainLang"), strip, normalize_language, translation_map('norm_languages_to_ar'), lang('ar-Arab')
-to_field 'cho_language', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:textLang/@otherLangs"), strip, split(' '), normalize_language, translation_map('norm_languages_to_ar'), lang('ar-Arab')
+to_field 'cho_language', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:textLang/@otherLangs"), strip, normalize_language, translation_map('norm_languages_to_ar'), lang('ar-Arab')
 to_field 'cho_provenance', extract_tei("#{MS_DESC}/tei:history/tei:provenance"), strip, lang('en')
 to_field 'cho_publisher', extract_tei("#{PUB_STMT}/tei:publisher"), strip, lang('en')
 to_field 'cho_spatial', extract_tei("#{MS_DESC}/#{MS_ORIGIN}/tei:origPlace"), strip, lang('en')

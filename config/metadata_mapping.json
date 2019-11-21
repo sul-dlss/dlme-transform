@@ -370,7 +370,8 @@
   {
     "trajects": [
       "openn_common_config.rb",
-      "openn_no_orig_date_attribs.rb"
+      "openn_no_orig_date_attribs.rb",
+      "openn_columbia_config.rb"
     ],
     "paths": [
       "penn/openn/columbia-0032"
@@ -391,7 +392,8 @@
   {
     "trajects": [
       "openn_common_config.rb",
-      "openn_no_orig_date_attribs.rb"
+      "openn_no_orig_date_attribs.rb",
+      "openn_philadelphia_free_config.rb"
     ],
     "paths": [
       "penn/openn/free-library-philadelphia-0023"
@@ -412,10 +414,32 @@
   {
     "trajects": [
       "openn_common_config.rb",
-      "openn_no_orig_date_attribs.rb"
+      "openn_no_orig_date_attribs.rb",
+      "openn_penn_0001_config.rb"
     ],
     "paths": [
-      "penn/openn/penn-0001",
+      "penn/openn/penn-0001"
+    ],
+    "extension": ".xml",
+    "settings": {
+      "agg_provider": "University of Pennsylvania Libraries",
+      "agg_provider_country": "United States of America",
+      "agg_data_provider": "University of Pennsylvania Libraries",
+      "agg_data_provider_country": "United States of America",
+      "agg_provider_ar": "مكتبات جامعة بنسلفانيا",
+      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "agg_data_provider_ar": "مكتبات جامعة بنسلفانيا",
+      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "inst_id": "penn"
+    }
+  },
+  {
+    "trajects": [
+      "openn_common_config.rb",
+      "openn_no_orig_date_attribs.rb",
+      "openn_penn_0002_config.rb"
+    ],
+    "paths": [
       "penn/openn/penn-0002"
     ],
     "extension": ".xml",
@@ -434,7 +458,8 @@
   {
     "trajects": [
       "openn_common_config.rb",
-      "openn_orig_date_attribs.rb"
+      "openn_orig_date_attribs.rb",
+      "openn_philadelphia_art_config.rb"
     ],
     "paths": [
       "penn/openn/philadelphia-museum-art-0031"

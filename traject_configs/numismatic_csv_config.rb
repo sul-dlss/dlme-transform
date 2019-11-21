@@ -6,6 +6,8 @@ require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
 require 'macros/numismatic_csv'
+require 'macros/timestamp'
+require 'macros/version'
 require 'traject_plus'
 
 extend Macros::Csv
@@ -13,6 +15,8 @@ extend Macros::DLME
 extend Macros::DateParsing
 extend Macros::EachRecord
 extend Macros::NumismaticCsv
+extend Macros::Timestamp
+extend Macros::Version
 extend TrajectPlus::Macros
 extend TrajectPlus::Macros::Csv
 
@@ -20,6 +24,10 @@ settings do
   provide 'reader_class_name', 'TrajectPlus::CsvReader'
   provide 'writer_class_name', 'DlmeJsonResourceWriter'
 end
+
+# Set Version & Timestamp on each record
+to_field 'transform_version', version
+to_field 'transform_timestamp', timestamp
 
 # CHO Required
 to_field 'id', normalize_prefixed_id('RecordId')

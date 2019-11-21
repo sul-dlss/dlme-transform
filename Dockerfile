@@ -44,6 +44,8 @@ ARG BUILD_DATE
 ARG VCS_REF
 ARG VCS_URL
 
+ENV VERSION=$VCS_REF
+
 LABEL org.label-schema.vcs-ref=$VCS_REF \
       org.label-schema.vcs-url=$VCS_URL \
       org.label-schema.build-date=$BUILD_DATE \
