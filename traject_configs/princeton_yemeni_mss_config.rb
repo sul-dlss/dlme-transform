@@ -1,5 +1,17 @@
 # frozen_string_literal: true
 
+require 'dlme_json_resource_writer'
+require 'macros/date_parsing'
+require 'macros/dlme'
+require 'macros/each_record'
+require 'traject_plus'
+
+extend Macros::DateParsing
+extend Macros::DLME
+extend Macros::EachRecord
+extend TrajectPlus::Macros
+extend TrajectPlus::Macros::JSON
+
 # Cho Other
 to_field 'cho_contributor', extract_json('.contributor'), strip, lang('ar-Arab')
 
