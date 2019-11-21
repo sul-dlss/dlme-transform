@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'byebug'
+
 module Macros
   # Macros for post-processing data
   module EachRecord
@@ -16,7 +18,8 @@ module Macros
           values.each do |value|
             case value
             when Hash
-              result[value[:language]] += value[:values]
+              # byebug
+              result[value[:language]] += value[:values].reject(&:nil?).reject(&:empty?)
             else
               result['none'] += Array(value)
             end

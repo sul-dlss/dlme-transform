@@ -73,7 +73,7 @@ module Contracts
     # rubocop:disable Metrics/AbcSize
     def self.required_language_specific_rule
       proc do
-        key.failure('no values provided') if value.keys.empty?
+        key.failure('no values provided') if value.keys.empty? || value.values&.first&.empty?
         unexpected_keys = value.keys - expected_language_values
         key.failure("unexpected language code(s) found in #{key.path.keys.first}: #{unexpected_keys.join(', ')}") if
           unexpected_keys.any?
