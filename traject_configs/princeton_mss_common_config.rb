@@ -4,49 +4,47 @@ require 'dlme_json_resource_writer'
 require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
-require 'macros/timestamp'
-require 'macros/version'
 require 'traject_plus'
 
 extend Macros::DateParsing
 extend Macros::DLME
 extend Macros::EachRecord
-extend Macros::Timestamp
-extend Macros::Version
 extend TrajectPlus::Macros
 extend TrajectPlus::Macros::JSON
 
 settings do
-  provide 'writer_class_name', 'DlmeJsonResourceWriter'
   provide 'reader_class_name', 'TrajectPlus::JsonReader'
+  provide 'writer_class_name', 'DlmeJsonResourceWriter'
 end
 
-# Set Version & Timestamp on each record
-to_field 'transform_version', version
-to_field 'transform_timestamp', timestamp
-
 # Cho Required
-to_field 'id', extract_json('.identifier'), strip
-to_field 'cho_title', extract_json('.title'), strip, lang('ar-Arab')
+to_field 'id', extract_json('.identifier')
+to_field 'cho_title', extract_json('.title')
 
 # Cho Other
-to_field 'cho_contributor', extract_json('.director'), strip, lang('ar-Arab')
-to_field 'cho_contributor', extract_json('.rendered_actors'), strip, lang('ar-Arab')
-to_field 'cho_date', extract_json('.date_created'), strip, lang('en')
-to_field 'cho_date_range_norm', extract_json('.date_created'), strip, parse_range
-to_field 'cho_date_range_hijri', extract_json('.date_created'), strip, parse_range, hijri_range
-to_field 'cho_dc_rights', literal('https://rbsc.princeton.edu/services/imaging-publication-services'), lang('en')
-to_field 'cho_description', extract_json('.member_of_collections'), strip, lang('en')
-to_field 'cho_edm_type', literal('Image'), lang('en')
-to_field 'cho_edm_type', literal('Image'), translation_map('norm_types_to_ar'), lang('ar-Arab')
+to_field 'cho_alternate', extract_json('.cho_alternate')
+to_field 'cho_creator', extract_json('.author'), strip, lang('en')
+to_field 'cho_date', extract_json('.date'), strip, lang('en')
+to_field 'cho_date_range_norm', extract_json('.date'), parse_range
+to_field 'cho_date_range_hijri', extract_json('.date'), parse_range, hijri_range
+to_field 'cho_dc_rights', literal('https://rbsc.princeton.edu/services/imaging-publication-services'), strip, lang('en')
+to_field 'cho_description', extract_json('.description'), strip, lang('en')
+to_field 'cho_description', extract_json('.contents'), strip, lang('en')
+to_field 'cho_description', extract_json('.binding_note'), strip, lang('en')
+to_field 'cho_edm_type', literal('Text'), lang('en')
+to_field 'cho_edm_type', literal('Text'), translation_map('norm_types_to_ar'), lang('ar-Arab')
 to_field 'cho_extent', extract_json('.extent'), strip, lang('en')
-to_field 'cho_has_type', literal('Poster'), lang('en')
-to_field 'cho_has_type', literal('Poster'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
-to_field 'cho_identifier', extract_json('.local_identifier'), strip
+to_field 'cho_has_type', literal('Manuscript'), lang('en')
+to_field 'cho_has_type', literal('Manuscript'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
+to_field 'cho_identifier', extract_json('.source_metadata_identifier')
+to_field 'cho_identifier', extract_json('.local_identifier')
+to_field 'cho_identifier', extract_json('.alternate_identifier')
 to_field 'cho_language', extract_json('.language'), strip, lang('en')
-to_field 'cho_language', extract_json('.language'), strip, transform(&:downcase), translation_map('norm_languages_to_ar'), lang('ar-Arab')
-to_field 'cho_type', extract_json('.resource_type'), lang('en')
-to_field 'cho_type', extract_json('.genre'), lang('en')
+to_field 'cho_language', extract_json('.language'), strip, translation_map('norm_languages_to_ar'), lang('ar-Arab')
+to_field 'cho_provenance', extract_json('.provenance'), strip, lang('en')
+to_field 'cho_publisher', extract_json('.publisher'), strip, lang('en')
+to_field 'cho_subject', extract_json('.subject'), strip, lang('en')
+to_field 'cho_type', extract_json('.type'), strip, lang('en')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
@@ -56,13 +54,13 @@ to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_id' => [extract_json('.identifier'), strip]
+    'wr_id' => [extract_json('.identifier')]
   )
 end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_id' => [extract_json('.thumbnail'), strip]
+    'wr_id' => [extract_json('.thumbnail')]
   )
 end
 to_field 'agg_provider', provider, lang('en')

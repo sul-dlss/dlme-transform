@@ -1,5 +1,23 @@
 # frozen_string_literal: true
 
+require 'dlme_json_resource_writer'
+require 'macros/date_parsing'
+require 'macros/dlme'
+require 'macros/dlme_marc'
+require 'macros/each_record'
+require 'traject/macros/marc21_semantics'
+require 'traject/macros/marc_format_classifier'
+require 'traject_plus'
+
+extend Macros::DLME
+extend Macros::DateParsing
+extend Macros::DlmeMarc
+extend Macros::EachRecord
+extend Traject::Macros::Marc21
+extend Traject::Macros::Marc21Semantics
+extend Traject::Macros::MarcFormats
+extend TrajectPlus::Macros
+
 # NOTE: most of the fields are populated via marc_config
 
 settings do
@@ -9,8 +27,8 @@ end
 
 # Cho Additional
 to_field 'cho_dc_rights', literal('Public Domain'), lang('en')
-to_field 'cho_description', extract_marc('500a:505agrtu:520abcu', alternate_script: false), strip, gsub('Special Collections Library,', 'Special Collections Research Center'), lang('en')
-to_field 'cho_description', extract_marc('500a:505agrtu:520abcu', alternate_script: :only), strip, lang('ar-Arab')
+# to_field 'cho_description', extract_marc('500a:505agrtu:520abcu', alternate_script: false), strip, gsub('Special Collections Library,', 'Special Collections Research Center'), lang('en')
+# to_field 'cho_description', extract_marc('500a:505agrtu:520abcu', alternate_script: :only), strip, lang('ar-Arab')
 to_field 'cho_has_type', literal('Manuscript'), lang('en')
 to_field 'cho_has_type', literal('Manuscript'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
 to_field 'cho_identifier', oclcnum
