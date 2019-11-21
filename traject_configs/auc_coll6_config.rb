@@ -36,7 +36,7 @@ end
 
 # Cho Required
 to_field 'id', extract_oai_identifier, strip
-to_field 'cho_title', extract_oai('dc:title[1]'), strip, lang('en')
+to_field 'cho_title', extract_oai('dc:title'), strip
 
 # Cho Other
 to_field 'cho_contributor', extract_oai('dc:contributor'),
@@ -54,8 +54,8 @@ to_field 'cho_edm_type', extract_oai('dc:type'),
 to_field 'cho_edm_type', extract_oai('dc:type'),
          split(';'), strip, transform(&:downcase), normalize_type, translation_map('norm_types_to_ar'), lang('ar-Arab')
 to_field 'cho_format', extract_oai('dc:format'), strip, lang('en')
-to_field 'cho_has_type', literal('Reference'), lang('en')
-to_field 'cho_has_type', literal('Reference'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
+to_field 'cho_has_type', literal('Map'), lang('en')
+to_field 'cho_has_type', literal('Map'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
 to_field 'cho_language', extract_oai('dc:language'), split(';'),
          split(','), strip, transform(&:downcase), normalize_language, lang('en')
 to_field 'cho_language', extract_oai('dc:language'), split(';'),

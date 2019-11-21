@@ -83,31 +83,10 @@
   },
   {
     "trajects": [
-      "auc_common_config.rb",
-      "auc_all_dates_for_range_config.rb"
+      "auc_coll1_config.rb"
     ],
     "paths": [
-      "auc/p15795coll1",
-      "auc/p15795coll2",
-      "auc/p15795coll4",
-      "auc/p15795coll5",
-      "auc/p15795coll6",
-      "auc/p15795coll9",
-      "auc/p15795coll11",
-      "auc/p15795coll12",
-      "auc/p15795coll13",
-      "auc/p15795coll14",
-      "auc/p15795coll15",
-      "auc/p15795coll16",
-      "auc/p15795coll19",
-      "auc/p15795coll21",
-      "auc/p15795coll23",
-      "auc/p15795coll24",
-      "auc/p15795coll26",
-      "auc/p15795coll29",
-      "auc/p15795coll30",
-      "auc/p15795coll31",
-      "auc/p15795coll32"
+      "auc/p15795coll1"
     ],
     "extension": ".xml",
     "settings": {
@@ -124,11 +103,150 @@
   },
   {
     "trajects": [
-      "auc_common_config.rb",
-      "auc_first_date_for_range_config.rb"
+      "auc_coll2_config.rb"
+    ],
+    "paths": [
+      "auc/p15795coll2"
+    ],
+    "extension": ".xml",
+    "settings": {
+      "agg_provider": "American University in Cairo",
+      "agg_provider_country": "Egypt",
+      "agg_data_provider": "American University in Cairo",
+      "agg_data_provider_country": "Egypt",
+      "agg_provider_ar": "الجامعة الأمريكية في القاهرة",
+      "agg_provider_country_ar": "مصر",
+      "agg_data_provider_ar": "الجامعة الأمريكية في القاهرة",
+      "agg_data_provider_country_ar": "مصر",
+      "inst_id": "auc"
+    }
+  },
+  {
+    "trajects": [
+      "auc_coll4_config.rb"
+    ],
+    "paths": [
+      "auc/p15795coll4"
+    ],
+    "extension": ".xml",
+    "settings": {
+      "agg_provider": "American University in Cairo",
+      "agg_provider_country": "Egypt",
+      "agg_data_provider": "American University in Cairo",
+      "agg_data_provider_country": "Egypt",
+      "agg_provider_ar": "الجامعة الأمريكية في القاهرة",
+      "agg_provider_country_ar": "مصر",
+      "agg_data_provider_ar": "الجامعة الأمريكية في القاهرة",
+      "agg_data_provider_country_ar": "مصر",
+      "inst_id": "auc"
+    }
+  },
+  {
+    "trajects": [
+      "auc_coll5_config.rb"
+    ],
+    "paths": [
+      "auc/p15795coll5"
+    ],
+    "extension": ".xml",
+    "settings": {
+      "agg_provider": "American University in Cairo",
+      "agg_provider_country": "Egypt",
+      "agg_data_provider": "American University in Cairo",
+      "agg_data_provider_country": "Egypt",
+      "agg_provider_ar": "الجامعة الأمريكية في القاهرة",
+      "agg_provider_country_ar": "مصر",
+      "agg_data_provider_ar": "الجامعة الأمريكية في القاهرة",
+      "agg_data_provider_country_ar": "مصر",
+      "inst_id": "auc"
+    }
+  },
+  {
+    "trajects": [
+      "auc_coll6_config.rb"
+    ],
+    "paths": [
+      "auc/p15795coll6"
+    ],
+    "extension": ".xml",
+    "settings": {
+      "agg_provider": "American University in Cairo",
+      "agg_provider_country": "Egypt",
+      "agg_data_provider": "American University in Cairo",
+      "agg_data_provider_country": "Egypt",
+      "agg_provider_ar": "الجامعة الأمريكية في القاهرة",
+      "agg_provider_country_ar": "مصر",
+      "agg_data_provider_ar": "الجامعة الأمريكية في القاهرة",
+      "agg_data_provider_country_ar": "مصر",
+      "inst_id": "auc"
+    }
+  },
+  {
+    "trajects": [
+      "auc_coll8_config.rb"
     ],
     "paths": [
       "auc/p15795coll8"
+    ],
+    "extension": ".xml",
+    "settings": {
+      "agg_provider": "American University in Cairo",
+      "agg_provider_country": "Egypt",
+      "agg_data_provider": "American University in Cairo",
+      "agg_data_provider_country": "Egypt",
+      "agg_provider_ar": "الجامعة الأمريكية في القاهرة",
+      "agg_provider_country_ar": "مصر",
+      "agg_data_provider_ar": "الجامعة الأمريكية في القاهرة",
+      "agg_data_provider_country_ar": "مصر",
+      "inst_id": "auc"
+    }
+  },
+  {
+    "trajects": [
+      "auc_coll9_config.rb"
+    ],
+    "paths": [
+      "auc/p15795coll9"
+    ],
+    "extension": ".xml",
+    "settings": {
+      "agg_provider": "American University in Cairo",
+      "agg_provider_country": "Egypt",
+      "agg_data_provider": "American University in Cairo",
+      "agg_data_provider_country": "Egypt",
+      "agg_provider_ar": "الجامعة الأمريكية في القاهرة",
+      "agg_provider_country_ar": "مصر",
+      "agg_data_provider_ar": "الجامعة الأمريكية في القاهرة",
+      "agg_data_provider_country_ar": "مصر",
+      "inst_id": "auc"
+    }
+  },
+  {
+    "trajects": [
+      "auc_coll11_config.rb"
+    ],
+    "paths": [
+      "auc/p15795coll_11"
+    ],
+    "extension": ".xml",
+    "settings": {
+      "agg_provider": "American University in Cairo",
+      "agg_provider_country": "Egypt",
+      "agg_data_provider": "American University in Cairo",
+      "agg_data_provider_country": "Egypt",
+      "agg_provider_ar": "الجامعة الأمريكية في القاهرة",
+      "agg_provider_country_ar": "مصر",
+      "agg_data_provider_ar": "الجامعة الأمريكية في القاهرة",
+      "agg_data_provider_country_ar": "مصر",
+      "inst_id": "auc"
+    }
+  },
+  {
+    "trajects": [
+      "auc_coll11_config.rb"
+    ],
+    "paths": [
+      "auc/p15795coll_12"
     ],
     "extension": ".xml",
     "settings": {

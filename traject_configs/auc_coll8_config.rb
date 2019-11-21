@@ -39,14 +39,11 @@ to_field 'id', extract_oai_identifier, strip
 to_field 'cho_title', extract_oai('dc:title[1]'), strip, lang('en')
 
 # Cho Other
-to_field 'cho_contributor', extract_oai('dc:contributor'),
-         strip, split('.'), lang('en')
 to_field 'cho_coverage', extract_oai('dc:coverage'), strip, lang('en')
-to_field 'cho_creator', extract_oai('dc:creator'),
-         strip, split('.'), lang('en')
 to_field 'cho_date', extract_oai('dc:date'), strip, lang('en')
-to_field 'cho_date_range_hijri', extract_oai('dc:date'), strip, auc_date_range, hijri_range
-to_field 'cho_date_range_norm', extract_oai('dc:date'), strip, auc_date_range
+# AUC collection p15795coll8 has undesired date info except in first dc:date field
+to_field 'cho_date_range_norm', extract_oai('dc:date'), first_only, strip, auc_date_range
+to_field 'cho_date_range_hijri', extract_oai('dc:date'), first_only, strip, auc_date_range, hijri_range
 to_field 'cho_description', extract_oai('dc:description'), strip, lang('en')
 to_field 'cho_dc_rights', extract_oai('dc:rights'), strip, lang('en')
 to_field 'cho_edm_type', extract_oai('dc:type'),
@@ -54,8 +51,8 @@ to_field 'cho_edm_type', extract_oai('dc:type'),
 to_field 'cho_edm_type', extract_oai('dc:type'),
          split(';'), strip, transform(&:downcase), normalize_type, translation_map('norm_types_to_ar'), lang('ar-Arab')
 to_field 'cho_format', extract_oai('dc:format'), strip, lang('en')
-to_field 'cho_has_type', literal('Reference'), lang('en')
-to_field 'cho_has_type', literal('Reference'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
+to_field 'cho_has_type', literal('Photograph'), lang('en')
+to_field 'cho_has_type', literal('Photograph'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
 to_field 'cho_language', extract_oai('dc:language'), split(';'),
          split(','), strip, transform(&:downcase), normalize_language, lang('en')
 to_field 'cho_language', extract_oai('dc:language'), split(';'),
