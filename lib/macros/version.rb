@@ -8,7 +8,7 @@ module Macros
     # @return [Proc] a proc that traject can call for each record
     def version
       lambda do |_, accumulator|
-        accumulator << ENV.fetch('VERSION', `git rev-parse --short HEAD`.strip)
+        accumulator << ENV.fetch('VERSION') { `git rev-parse --short HEAD`.strip }
       end
     end
   end
