@@ -47,8 +47,8 @@ to_field 'cho_edm_type', literal('Text'), translation_map('norm_types_to_ar'), l
 to_field 'cho_has_type', literal('Manuscript'), lang('en')
 to_field 'cho_has_type', literal('Manuscript'), translation_map('norm_types_to_ar'), lang('ar-Arab')
 to_field 'cho_identifier', extract_json('.catalogue_identifier'), strip
-to_field 'cho_language', extract_json('.language'), strip, transform(&:downcase), normalize_language, lang('en')
-to_field 'cho_language', extract_json('.language'), strip, transform(&:downcase), normalize_language, translation_map('norm_languages_to_ar'), lang('ar-Arab')
+to_field 'cho_language', extract_json('.language'), strip, normalize_language, lang('en')
+to_field 'cho_language', extract_json('.language'), strip, normalize_language, translation_map('norm_languages_to_ar'), lang('ar-Arab')
 to_field 'cho_spatial', extract_json('.place_of_origin'), strip, prepend('Place of Origin: ')
 
 # Agg
