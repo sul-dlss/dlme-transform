@@ -31,17 +31,17 @@ settings do
 end
 
 # Set Version & Timestamp on each record
-# to_field 'transform_version', version
-# to_field 'transform_timestamp', timestamp
+to_field 'transform_version', version
+to_field 'transform_timestamp', timestamp
 
-# Cho Required
+# CHO Required
 to_field 'id', extract_oai_identifier, strip
 to_field 'cho_title', extract_oai('dc:title[1]'), strip, lang('fr')
 to_field 'cho_title', extract_oai('dc:title[2]'), strip, lang('en')
 
-# Cho Other
+# CHO Other
 to_field 'cho_creator', extract_oai('dc:creator'),
-        strip, split('.'), lang('en')
+         strip, split('.'), lang('en')
 to_field 'cho_coverage', extract_oai('dc:coverage'), strip, lang('en')
 to_field 'cho_date', extract_oai('dc:date'), strip, lang('en')
 to_field 'cho_date_range_hijri', extract_oai('dc:date'), strip, auc_date_range, hijri_range

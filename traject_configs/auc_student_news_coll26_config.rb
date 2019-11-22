@@ -31,8 +31,8 @@ settings do
 end
 
 # Set Version & Timestamp on each record
-# to_field 'transform_version', version
-# to_field 'transform_timestamp', timestamp
+to_field 'transform_version', version
+to_field 'transform_timestamp', timestamp
 
 # CHO Required
 to_field 'id', extract_oai_identifier, strip
