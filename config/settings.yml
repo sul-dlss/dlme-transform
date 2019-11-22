@@ -12,6 +12,8 @@ fields:
       - agg_is_shown_by
       - agg_preview
       - agg_has_view
+# if these values are changed, they need to be synced with configuration in DLME
+# (see https://github.com/sul-dlss/dlme/blob/master/config/settings.yml)
 acceptable_bcp47_codes:
   - ar-Arab
   - ar-Latn
