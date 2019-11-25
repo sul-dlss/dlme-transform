@@ -27,7 +27,7 @@ RSpec.describe DlmeDebugWriter do
       let(:data) do
         { 'id' => ['one'], 'two' => %w[two1 two2], 'three' => 'three', 'four' => 'four' }
       end
-      it 'logs an error' do
+      it 'raises an error' do
         expect { put }.to raise_error(
           /Transform produced invalid data.\n\nThe errors are: .*"is missing".*/
         )

@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'dlme_json_resource_writer'
+require 'dlme_debug_writer'
 require 'macros/content_dm'
 require 'macros/date_parsing'
 require 'macros/dlme'
