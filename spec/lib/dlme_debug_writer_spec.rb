@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 require 'stringio'
-require 'dlme_json_resource_writer'
+require 'dlme_debug_writer'
 
-RSpec.describe DlmeJsonResourceWriter do
+RSpec.describe DlmeDebugWriter do
   let(:out) { StringIO.new }
   let(:settings) { { 'output_stream' => out } }
   let(:context) do
@@ -28,9 +28,9 @@ RSpec.describe DlmeJsonResourceWriter do
         { 'id' => ['one'], 'two' => %w[two1 two2], 'three' => 'three', 'four' => 'four' }
       end
       it 'logs an error' do
-        allow(::DLME::Utils.logger).to receive(:error)
-        put
-        expect(::DLME::Utils.logger).to have_received(:error)
+        expect { put }.to raise_error(
+          /Transform produced invalid data.\n\nThe errors are: .*"is missing".*/
+        )
       end
     end
   end
