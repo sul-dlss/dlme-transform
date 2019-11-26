@@ -21,7 +21,7 @@ module Contracts
       optional(:cho_has_type).value(:hash?)
       optional(:cho_identifier).array(:str?)
       optional(:cho_is_part_of).value(:hash?)
-      optional(:cho_language) { hash? { each(:str?, excluded_from?: ['NOT FOUND']) } }
+      optional(:cho_language)
       optional(:cho_medium).value(:hash?)
       optional(:cho_provenance).value(:hash?)
       optional(:cho_publisher).value(:hash?)
@@ -82,7 +82,6 @@ module Contracts
           unexpected_values&.any?
       end
     end
-    # rubocop:enable Metrics/AbcSize
 
     def self.optional_language_specific_rule
       proc do
@@ -95,12 +94,15 @@ module Contracts
         unexpected_values = value.values&.first&.reject { |value| value.is_a?(String) }
         key.failure("unexpected non-string value(s) found in #{key.path.keys.first}: #{unexpected_values}") if
           unexpected_values&.any?
+        key.failure('unknown language found (NOT FOUND)') if value.values&.first&.include?('NOT FOUND')
       end
     end
+    # rubocop:enable Metrics/AbcSize
 
     rule(:cho_description, &optional_language_specific_rule)
 
     rule(:cho_title, &required_language_specific_rule)
+    rule(:cho_language, &optional_language_specific_rule)
     rule(:agg_data_provider, &required_language_specific_rule)
     rule(:agg_data_provider_country, &required_language_specific_rule)
     rule(:agg_provider, &required_language_specific_rule)
