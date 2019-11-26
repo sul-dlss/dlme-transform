@@ -2,16 +2,20 @@
 
 require 'dlme_json_resource_writer'
 require 'dlme_debug_writer'
+require 'macros/collection'
 require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
 require 'traject_plus'
 
+extend Macros::Collection
 extend Macros::DateParsing
 extend Macros::DLME
 extend Macros::EachRecord
 extend TrajectPlus::Macros
 extend TrajectPlus::Macros::JSON
+
+to_field 'agg_data_provider_collection', collection
 
 # Cho Other
 to_field 'cho_contributor', extract_json('.contributor'), strip

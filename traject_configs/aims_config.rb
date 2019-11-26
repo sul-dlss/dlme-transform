@@ -3,6 +3,7 @@
 require 'dlme_json_resource_writer'
 require 'dlme_debug_writer'
 require 'macros/aims'
+require 'macros/collection'
 require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
@@ -10,6 +11,7 @@ require 'macros/timestamp'
 require 'macros/version'
 require 'traject_plus'
 
+extend Macros::Collection
 extend Macros::AIMS
 extend Macros::DLME
 extend Macros::DateParsing
@@ -22,6 +24,8 @@ settings do
   provide 'writer_class_name', 'DlmeJsonResourceWriter'
   provide 'reader_class_name', 'TrajectPlus::XmlReader'
 end
+
+to_field 'agg_data_provider_collection', collection
 
 # Set Version & Timestamp on each record
 to_field 'transform_version', version

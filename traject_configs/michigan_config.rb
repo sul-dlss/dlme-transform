@@ -2,6 +2,7 @@
 
 require 'dlme_json_resource_writer'
 require 'dlme_debug_writer'
+require 'macros/collection'
 require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/dlme_marc'
@@ -10,6 +11,7 @@ require 'traject/macros/marc21_semantics'
 require 'traject/macros/marc_format_classifier'
 require 'traject_plus'
 
+extend Macros::Collection
 extend Macros::DLME
 extend Macros::DateParsing
 extend Macros::DlmeMarc
@@ -25,6 +27,12 @@ settings do
   provide 'reader_class_name', 'MARC::XMLReader'
   provide 'marc_source.type', 'xml'
 end
+
+to_field 'agg_data_provider_collection', collection
+
+# # Set Version & Timestamp on each record
+# to_field 'transform_version', version
+# to_field 'transform_timestamp', timestamp
 
 # Cho Additional
 to_field 'cho_dc_rights', literal('Public Domain'), lang('en')
