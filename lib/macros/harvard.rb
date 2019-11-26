@@ -24,15 +24,14 @@ module Macros
     #   extract_harvard_identifier => lambda { ... }
     # @return [Proc] a proc that traject can call for each record
     def extract_harvard_identifier
-      extract_xpath('/*/dc:identifier[1]', ns: NS)
+      extract_xpath('//*/dc:identifier[1]', ns: NS)
     end
 
     def extract_harvard_thumb
       lambda do |record, accumulator, _context|
-        id = record.xpath('/*/dc:identifier')
+        id = record.xpath('//*/dc:identifier', dc: NS[:dc])
                    .find { |node| node.text.include?('iiif') || node.text.include?('usethumb=y') }
-                   .text
-        accumulator << id
+        accumulator << id.text unless id.nil?
       end
     end
   end

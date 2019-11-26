@@ -34,27 +34,27 @@ to_field 'transform_timestamp', timestamp
 
 # Cho Required
 to_field 'id', extract_harvard_identifier, strip
-to_field 'cho_title', extract_harvard('/*/dc:title'), strip, first_only
+to_field 'cho_title', extract_harvard('//*/dc:title'), strip, first_only
 
 # Cho Other
-to_field 'cho_alternative', extract_harvard('/*/dc:title[last()]'), strip
-to_field 'cho_contributor', extract_harvard('/*/dc:contributor'), strip
-to_field 'cho_creator', extract_harvard('/*/dc:creator'), strip, lang('en')
-to_field 'cho_date', extract_harvard('/*/dc:date'), strip, lang('en')
-to_field 'cho_date_range_norm', extract_harvard('/*/dc:date'), strip, harvard_ihp_date_range
-to_field 'cho_date_range_hijri', extract_harvard('/*/dc:date'), strip, harvard_ihp_date_range, hijri_range
-to_field 'cho_description', extract_harvard('/*/dc:description'), strip, lang('en')
-to_field 'cho_dc_rights', extract_harvard('/*/dc:rights'), strip, lang('en')
-to_field 'cho_edm_type', extract_harvard('/*/dc:type[1]'), normalize_type, lang('en')
-to_field 'cho_edm_type', extract_harvard('/*/dc:type[1]'), normalize_type, translation_map('norm_types_to_ar'), lang('ar-Arab')
-to_field 'cho_format', extract_harvard('/*/dc:format'), strip, lang('en')
-to_field 'cho_language', extract_harvard('/*/dc:language'),
+to_field 'cho_alternative', extract_harvard('//*/dc:title[last()]'), strip
+to_field 'cho_contributor', extract_harvard('//*/dc:contributor'), strip
+to_field 'cho_creator', extract_harvard('//*/dc:creator'), strip, lang('en')
+to_field 'cho_date', extract_harvard('//*/dc:date'), strip, lang('en')
+to_field 'cho_date_range_norm', extract_harvard('//*/dc:date'), strip, harvard_ihp_date_range
+to_field 'cho_date_range_hijri', extract_harvard('//*/dc:date'), strip, harvard_ihp_date_range, hijri_range
+to_field 'cho_description', extract_harvard('//*/dc:description'), strip, lang('en')
+to_field 'cho_dc_rights', extract_harvard('//*/dc:rights'), strip, lang('en')
+to_field 'cho_edm_type', extract_harvard('//*/dc:type[1]'), normalize_type, lang('en')
+to_field 'cho_edm_type', extract_harvard('//*/dc:type[1]'), normalize_type, translation_map('norm_types_to_ar'), lang('ar-Arab')
+to_field 'cho_format', extract_harvard('//*/dc:format'), strip, lang('en')
+to_field 'cho_language', extract_harvard('//*/dc:language'),
          split(' '), first_only, strip, normalize_language, lang('en')
-to_field 'cho_language', extract_harvard('/*/dc:language'),
+to_field 'cho_language', extract_harvard('//*/dc:language'),
          split(' '), first_only, strip, normalize_language, translation_map('norm_languages_to_ar'), lang('ar-Arab')
-to_field 'cho_publisher', extract_harvard('/*/dc:publisher'), strip, lang('en')
-to_field 'cho_relation', extract_harvard('/*/dc:relation'), strip, lang('en')
-to_field 'cho_subject', extract_harvard('/*/dc:subject'), strip, lang('en')
+to_field 'cho_publisher', extract_harvard('//*/dc:publisher'), strip, lang('en')
+to_field 'cho_relation', extract_harvard('//*/dc:relation'), strip, lang('en')
+to_field 'cho_subject', extract_harvard('//*/dc:subject'), strip, lang('en')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
@@ -64,7 +64,7 @@ to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_id' => [extract_harvard('/*/dc:identifier[last()]'), strip]
+    'wr_id' => [extract_harvard('//*/dc:identifier[last()]'), strip]
   )
 end
 to_field 'agg_preview' do |_record, accumulator, context|
