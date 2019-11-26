@@ -33,7 +33,7 @@ module Dlme
         indexer.settings do
           provide 'command_line.filename', this.input_filepath
           provide 'close_output_on_close', false
-          store 'writer_class_name', 'Traject::DebugWriter' if this.debug_writer
+          store 'writer_class_name', 'DlmeDebugWriter' if this.debug_writer
           this.addl_settings.each { |key, value| provide key, value }
         end
       end

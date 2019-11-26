@@ -2,6 +2,7 @@
 
 require 'dlme_json_resource_writer'
 require 'macros/date_parsing'
+require 'dlme_debug_writer'
 require 'macros/dlme'
 require 'macros/each_record'
 require 'macros/timestamp'
