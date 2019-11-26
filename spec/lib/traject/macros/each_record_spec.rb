@@ -45,6 +45,15 @@ RSpec.describe Macros::EachRecord do
         expect(mock_context.output_hash).to eq('cho_title' => { 'en' => ['title1'] })
       end
     end
+
+    context 'when output hash has empty values for given fields' do
+      let(:output_hash) { { 'cho_title' => [] } }
+
+      it 'does not accumulate values in the hash' do
+        macro.call(nil, mock_context)
+        expect(mock_context.output_hash).to eq('cho_title' => {})
+      end
+    end
   end
 
   describe '#add_cho_type_facet' do
