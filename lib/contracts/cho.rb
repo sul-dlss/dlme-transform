@@ -41,6 +41,7 @@ module Contracts
       required(:id).filled(:string)
       optional('__source'.to_sym).filled(:string)
       # Since the IR is a flattened projection of the MAP, 'agg_aggregated_cho' is not used.
+      required(:agg_data_provider_collection).value(:string)
       required(:agg_data_provider).value(:hash?)
       required(:agg_data_provider_country).value(:hash?)
       optional(:agg_dc_rights).array(:str?)

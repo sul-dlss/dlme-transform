@@ -2,6 +2,7 @@
 
 require 'dlme_json_resource_writer'
 require 'dlme_debug_writer'
+require 'macros/collection'
 require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
@@ -10,6 +11,7 @@ require 'macros/timestamp'
 require 'macros/version'
 require 'traject_plus'
 
+extend Macros::Collection
 extend Macros::DateParsing
 extend Macros::DLME
 extend Macros::EachRecord
@@ -25,6 +27,8 @@ settings do
 end
 
 # Note: Met JSON uses blanks ("") instead of nulls.
+
+to_field 'agg_data_provider_collection', collection
 
 # Set Version & Timestamp on each record
 to_field 'transform_version', version
