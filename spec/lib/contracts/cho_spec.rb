@@ -126,6 +126,16 @@ RSpec.describe Contracts::CHO do
           end
         end
 
+        context 'when hash contains the value NOT FOUND' do
+          let(:cho) { { field_name => { 'none' => ['NOT FOUND'] } } }
+
+          it 'states the field included NOT FOUND' do
+            expect(contract.errors[field_name]).to include(
+              'unknown language found (NOT FOUND)'
+            )
+          end
+        end
+
         context 'when hash looks as expected' do
           let(:cho) do
             {
