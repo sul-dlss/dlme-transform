@@ -7,6 +7,7 @@ fields:
       - agg_preview
       - transform_version
       - transform_timestamp
+      - agg_data_provider_collection
     web_resources:
       - agg_is_shown_at
       - agg_is_shown_by
