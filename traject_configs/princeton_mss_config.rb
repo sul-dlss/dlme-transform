@@ -5,6 +5,8 @@ require 'dlme_debug_writer'
 require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
+require 'macros/iiif'
+require 'macros/normalize_language'
 require 'macros/timestamp'
 require 'macros/version'
 require 'traject_plus'
@@ -12,6 +14,8 @@ require 'traject_plus'
 extend Macros::DLME
 extend Macros::DateParsing
 extend Macros::EachRecord
+extend Macros::NormalizeLanguage
+extend Macros::IIIF
 extend Macros::Timestamp
 extend Macros::Version
 extend TrajectPlus::Macros
@@ -22,58 +26,117 @@ settings do
   provide 'reader_class_name', 'TrajectPlus::JsonReader'
 end
 
+# each_record do |record, context|
+#   context.clipboard[:iiif_json] = grab_iiif_manifest(record['iiif_manifest'])
+# end
+
+# Service Objects
+def iiif_thumbnail_service(iiif_json)
+  lambda { |_record, accumulator, context|
+    accumulator << transform_values(context,
+                                    'service_id' => literal(iiif_thumbnail_service_id(iiif_json)),
+                                    'service_conforms_to' => literal(iiif_thumbnail_service_conforms_to(iiif_json)),
+                                    'service_implements' => literal(iiif_thumbnail_service_protocol(iiif_json)))
+  }
+end
+
+# Service Objects
+def iiif_sequences_service(iiif_json)
+  lambda { |_record, accumulator, context|
+    accumulator << transform_values(context,
+                                    'service_id' => literal(iiif_sequence_service_id(iiif_json)),
+                                    'service_conforms_to' => literal(iiif_sequence_service_conforms_to(iiif_json)),
+                                    'service_implements' => literal(iiif_sequence_service_protocol(iiif_json)))
+  }
+end
+
 # Set Version & Timestamp on each record
 to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
 
 # Cho Required
-to_field 'id', extract_json('.identifier'), strip
-to_field 'cho_title', extract_json('.title'), strip
+to_field 'id', extract_json('.rendering'), strip
+# uniform_title is not being used but should be if authority control is applied to title field
+to_field 'cho_title', extract_json('.dlme_title_ara_arab'), lang('ar-Arab')
+to_field 'cho_title', extract_json('.dlme_title_ara_latn'), lang('ar-Latn')
+to_field 'cho_title', extract_json('.dlme_title_en'), lang('en')
+to_field 'cho_title', extract_json('.dlme_title_none')
+to_field 'cho_title', extract_json('.dlme_title_ota_arab'), lang('tr-Arab')
+to_field 'cho_title', extract_json('.dlme_title_ota_latn'), lang('tr-Latn')
+to_field 'cho_title', extract_json('.dlme_title_per_arab'), lang('fa-Arab')
+to_field 'cho_title', extract_json('.dlme_title_per_latn'), lang('fa-Latn')
+to_field 'cho_title', extract_json('.dlme_title_urdu_latn'), lang('ur-Latn')
 
 # Cho Other
-to_field 'cho_alternate', extract_json('.cho_alternate'), strip
-to_field 'cho_creator', extract_json('.author'), strip
-to_field 'cho_contributor', extract_json('.contributor'), strip
-to_field 'cho_date', extract_json('.date'), strip
-to_field 'cho_date_range_norm', extract_json('.date'), strip, parse_range
-to_field 'cho_date_range_hijri', extract_json('.date'), strip, parse_range, hijri_range
+to_field 'cho_creator', extract_json('.dlme_creator_ara_latn'), strip, lang('ar-Latn')
+to_field 'cho_creator', extract_json('.dlme_creator_ara_arab'), strip, lang('ar-Arab')
+to_field 'cho_contributor', extract_json('.dlme_contributor_ara_latn'), strip, lang('ar-Latn')
+to_field 'cho_contributor', extract_json('.dlme_contributor_ara_arab'), strip, lang('ar-Arab')
+to_field 'cho_date', extract_json('.date[0]'), strip, lang('en')
+to_field 'cho_date_range_norm', extract_json('.date[0]'), strip, parse_range
+to_field 'cho_date_range_hijri', extract_json('.date[0]'), strip, parse_range, hijri_range
 to_field 'cho_dc_rights', literal('https://rbsc.princeton.edu/services/imaging-publication-services')
-to_field 'cho_description', extract_json('.description'), strip
-to_field 'cho_description', extract_json('.contents'), strip
-to_field 'cho_description', extract_json('.binding_note'), strip
-to_field 'cho_edm_type', literal('Text')
-to_field 'cho_extent', extract_json('.extent'), strip
-to_field 'cho_identifier', extract_json('.source_metadata_identifier'), strip
-to_field 'cho_identifier', extract_json('.local_identifier'), strip
-to_field 'cho_identifier', extract_json('.alternate_identifier'), strip
-to_field 'cho_language', extract_json('.language'), strip
-to_field 'cho_provenance', extract_json('.provenance'), strip
-to_field 'cho_publisher', extract_json('.publisher'), strip
-to_field 'cho_subject', extract_json('.subject'), strip
-to_field 'cho_type', extract_json('.type')
+to_field 'cho_description', extract_json('.description'), strip, lang('en')
+to_field 'cho_description', extract_json('.contents[0]'), strip, lang('en')
+to_field 'cho_description', extract_json('.binding_note[0]'), strip, lang('en')
+to_field 'cho_edm_type', literal('Text'), lang('en')
+to_field 'cho_edm_type', literal('Text'), translation_map('norm_types_to_ar'), lang('ar-Arab')
+to_field 'cho_extent', extract_json('.extent[0]'), strip, lang('en')
+to_field 'cho_extent', extract_json('.extent[1]'), strip, lang('ar-Arab')
+to_field 'cho_has_type', literal('Manuscript'), lang('en')
+to_field 'cho_has_type', literal('Manuscript'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
+to_field 'cho_identifier', extract_json('.source_metadata_identifier[0]'), strip
+to_field 'cho_identifier', extract_json('.identifier[0]'), strip
+to_field 'cho_identifier', extract_json('.local_identifier[0]'), strip
+to_field 'cho_language', extract_json('.language[0]'), strip, normalize_language, lang('en')
+to_field 'cho_language', extract_json('.language[0]'), strip, normalize_language, translation_map('norm_languages_to_ar'), lang('ar-Arab')
+to_field 'cho_provenance', extract_json('.dlme_en'), strip, lang('en')
+to_field 'cho_provenance', extract_json('.dlme_provenance_ara_arab'), strip, lang('ar-Arab')
+to_field 'cho_publisher', extract_json('.publisher[0]'), strip, lang('en')
+to_field 'cho_publisher', extract_json('.publisher[1]'), strip, lang('ar-Arab')
+to_field 'cho_subject', extract_json('.subject[0]'), strip, lang('en')
+to_field 'cho_type', extract_json('.type[0]'), lang('en')
+to_field 'cho_type', extract_json('.type[1]'), lang('en')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
 to_field 'agg_data_provider', data_provider_ar, lang('ar-Arab')
-to_field 'agg_provider', provider, lang('en')
-to_field 'agg_provider', provider_ar, lang('ar-Arab')
+to_field 'agg_data_provider_country', data_provider_country, lang('en')
+to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_id' => [extract_json('.identifier'), strip]
+    'wr_id' => [extract_json('.rendering'), strip]
   )
 end
-to_field 'agg_preview' do |_record, accumulator, context|
-  accumulator << transform_values(
-    context,
-    'wr_id' => [extract_json('.thumbnail'), strip]
-  )
-end
-
+# to_field 'agg_is_shown_by' do |_record, accumulator, context|
+#   if context.clipboard[:iiif_json].present?
+#     iiif_json = context.clipboard[:iiif_json]
+#     accumulator << transform_values(context,
+#                                     'wr_description' => [
+#                                       to_field 'cho_description', extract_json('.description'),
+#                                       to_field 'cho_description', extract_json('.contents[0]'),
+#                                       to_field 'cho_description', extract_json('.binding_note[0]')
+#                                     ],
+#                                     'wr_has_service' => iiif_sequences_service(iiif_json),
+#                                     'wr_id' => literal(iiif_sequence_id(iiif_json)),
+#                                     'wr_is_referenced_by' => literal(context.clipboard[:manifest]))
+#   end
+# end
+# to_field 'agg_preview' do |_record, accumulator, context|
+#   if context.clipboard[:iiif_json].present?
+#     iiif_json = context.clipboard[:iiif_json]
+#     accumulator << transform_values(context,
+#                                     'wr_has_service' => iiif_thumbnail_service(iiif_json),
+#                                     # The default thumbnail may cause issues
+#                                     'wr_id' => extract_json('.thumbnail'), #, strip, default('https://library.princeton.edu/projects/islamic/images/islamicFeatured.jpg'),
+#                                     'wr_is_referenced_by' => literal(context.clipboard[:manifest]))
+#   end
+# end
+to_field 'agg_provider', provider, lang('en')
+to_field 'agg_provider', provider_ar, lang('ar-Arab')
 to_field 'agg_provider_country', provider_country, lang('en')
 to_field 'agg_provider_country', provider_country_ar, lang('ar-Arab')
-to_field 'agg_data_provider_country', data_provider_country, lang('en')
-to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 
 each_record convert_to_language_hash(
   'agg_data_provider',
