@@ -3,6 +3,20 @@
 module Macros
   # Macros for Penn data extraction and transformation
   module Penn
+    # Map extracted values to appropriate penn_cho_edm_type values
+    # @example
+    #   penn_cho_edm_type => lambda { ... }
+    # @return [Proc] a proc that traject can call for each record
+    def penn_cho_edm_type
+      lambda do |_record, accumulator|
+        if accumulator[0]&.match('Cultural Artifact')
+          accumulator.replace(['Image'])
+        else
+          accumulator.replace(['Text'])
+        end
+      end
+    end
+
     # Map extracted values to appropriate penn_cho_has_type values
     # @example
     #   penn_cho_has_type => lambda { ... }
