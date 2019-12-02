@@ -19,6 +19,8 @@ class DlmeJsonResourceWriter < Traject::LineWriter
       "The errors are: #{errors.messages}}\n\n" \
       "The data looked like this:\n" \
       "The record id is: #{adjusted['id']}"
+
+    nil
   end
 
   private
