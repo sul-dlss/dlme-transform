@@ -123,7 +123,7 @@ module Contracts
       errors = Contracts::EDMWebResource.new.call(resource).errors
       return '' if errors.empty?
 
-      "#{errors.messages.map(&:path).join('=>')} #{errors.messages.map(&:text).join(', ')}"
+      "#{errors.messages.map(&:text).join(', ')} at #{errors.messages.map(&:path).join('.')}"
     end
   end
   # rubocop:enable Metrics/BlockLength
