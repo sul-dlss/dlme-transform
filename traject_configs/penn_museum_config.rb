@@ -50,8 +50,8 @@ to_field 'cho_date_range_norm', penn_museum_date_range
 to_field 'cho_date_range_hijri', penn_museum_date_range, hijri_range
 to_field 'cho_description', column('description'), lang('en')
 to_field 'cho_description', column('technique'), split('|'), lang('en')
-to_field 'cho_edm_type', literal('Image'), lang('en')
-to_field 'cho_edm_type', literal('Image'), translation_map('norm_types_to_ar'), lang('ar-Arab')
+to_field 'cho_edm_type', column('object_name'), penn_cho_has_type, penn_cho_edm_type, lang('en')
+to_field 'cho_edm_type', column('object_name'), penn_cho_has_type, penn_cho_edm_type, translation_map('norm_types_to_ar'), lang('ar-Arab')
 to_field 'cho_extent', column('measurement_height'), lang('en')
 to_field 'cho_extent', column('measurement_length'), lang('en')
 to_field 'cho_extent', column('measurement_outside_diameter'), lang('en')
