@@ -2,7 +2,7 @@
 
 module Macros
   # Macros for extracting Stanford Specific MODS values from Nokogiri documents
-  module Michigan
+  module Princeton
     # Removes all but the last value from accumulator, if more values were present.
     #
     # @example
