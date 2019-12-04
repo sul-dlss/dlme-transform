@@ -266,6 +266,16 @@ module Macros
       end
     end
 
+    # Extracts date range from Stanford subject/temporal element
+    # because the resources are historical maps with more recent GIS data.
+    # The date in the MODS date fields refers to the later but the former is more useful for search.
+    def stanford_maps_date_range
+      lambda do |record, accumulator, context|
+        range = range_from_mods_date_element('/*/mods:subject/mods:temporal', record, context)
+        accumulator.replace(range) if range
+      end
+    end
+
     MODS_NS = { mods: 'http://www.loc.gov/mods/v3' }.freeze
     ORIGIN_INFO_PATH = '//mods:mods/mods:originInfo'
 

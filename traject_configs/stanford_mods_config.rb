@@ -34,30 +34,30 @@ end
 to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
 
-# each_record do |record, context|
-#   context.clipboard[:druid] = generate_druid(record, context)
-#   context.clipboard[:manifest] = "https://purl.stanford.edu/#{context.clipboard[:druid]}/iiif/manifest"
-#   context.clipboard[:iiif_json] = grab_iiif_manifest(context.clipboard[:manifest])
-# end
+each_record do |record, context|
+  context.clipboard[:druid] = generate_druid(record, context)
+  context.clipboard[:manifest] = "https://purl.stanford.edu/#{context.clipboard[:druid]}/iiif/manifest"
+  context.clipboard[:iiif_json] = grab_iiif_manifest(context.clipboard[:manifest])
+end
 
 # Service Objects
-# def iiif_thumbnail_service(iiif_json)
-#   lambda { |_record, accumulator, context|
-#     accumulator << transform_values(context,
-#                                     'service_id' => literal(iiif_thumbnail_service_id(iiif_json)),
-#                                     'service_conforms_to' => literal(iiif_thumbnail_service_conforms_to(iiif_json)),
-#                                     'service_implements' => literal(iiif_thumbnail_service_protocol(iiif_json)))
-#   }
-# end
-#
-# def iiif_sequences_service(iiif_json)
-#   lambda { |_record, accumulator, context|
-#     accumulator << transform_values(context,
-#                                     'service_id' => literal(iiif_sequence_service_id(iiif_json)),
-#                                     'service_conforms_to' => literal(iiif_sequence_service_conforms_to(iiif_json)),
-#                                     'service_implements' => literal(iiif_sequence_service_protocol(iiif_json)))
-#   }
-# end
+def iiif_thumbnail_service(iiif_json)
+  lambda { |_record, accumulator, context|
+    accumulator << transform_values(context,
+                                    'service_id' => literal(iiif_thumbnail_service_id(iiif_json)),
+                                    'service_conforms_to' => literal(iiif_thumbnail_service_conforms_to(iiif_json)),
+                                    'service_implements' => literal(iiif_thumbnail_service_protocol(iiif_json)))
+  }
+end
+
+def iiif_sequences_service(iiif_json)
+  lambda { |_record, accumulator, context|
+    accumulator << transform_values(context,
+                                    'service_id' => literal(iiif_sequence_service_id(iiif_json)),
+                                    'service_conforms_to' => literal(iiif_sequence_service_conforms_to(iiif_json)),
+                                    'service_implements' => literal(iiif_sequence_service_protocol(iiif_json)))
+  }
+end
 
 # CHO Required
 to_field 'id', generate_mods_id
@@ -80,80 +80,64 @@ to_field 'cho_description', extract_mods('/*/mods:physicalDescription/mods:note'
 to_field 'cho_description', extract_mods('/*/mods:tableOfContents'), lang('en')
 to_field 'cho_edm_type', extract_mods('/*/mods:typeOfResource[1]'), normalize_type, lang('en')
 to_field 'cho_edm_type', extract_mods('/*/mods:typeOfResource[1]'), normalize_type, translation_map('norm_types_to_ar'), lang('ar-Arab')
-
-
-
-to_field 'cho_extent', extract_mods('/*/mods:physicalDescription/mods:extent')
-to_field 'cho_format', extract_mods('/*/mods:physicalDescription/mods:form')
+to_field 'cho_extent', extract_mods('/*/mods:physicalDescription/mods:extent'), lang('en')
+to_field 'cho_format', extract_mods('/*/mods:physicalDescription/mods:form'), lang('en')
+to_field 'cho_has_type', literal('Map'), lang('en')
+to_field 'cho_has_type', literal('Map'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
 to_field 'cho_has_part', generate_relation('/*/mods:relatedItem[@type="constituent"]')
 to_field 'cho_identifier', extract_mods('/*/mods:identifier')
 to_field 'cho_identifier', extract_mods('/*/mods:recordInfo/mods:recordIdentifier')
-to_field 'cho_identifier', extract_mods('/*/mods:location/mods:holdingSimple/mods:copyInformation/mods:itemIdentifier')
 to_field 'cho_is_part_of', generate_relation('/*/mods:relatedItem[@type="host"]')
-to_field 'cho_is_part_of', generate_relation('/*/mods:relatedItem[@type="series"]')
-to_field 'cho_language', normalize_mods_language
-to_field 'cho_language', normalize_mods_script
-to_field 'cho_publisher', extract_mods('/*/mods:originInfo/mods:publisher')
-to_field 'cho_relation', generate_relation('/*/mods:relatedItem[not(@*)]')
-to_field 'cho_spatial', extract_mods('/*/mods:subject/mods:cartographics/mods:coordinates')
-to_field 'cho_spatial', extract_mods('/*/mods:subject/mods:cartographics/mods:projection')
-to_field 'cho_spatial', extract_mods('/*/mods:subject/mods:cartographics/mods:scale')
-to_field 'cho_spatial', extract_mods('/*/mods:subject/mods:geographic')
-to_field 'cho_spatial', extract_mods('/*/mods:subject/mods:geographicCode')
-to_field 'cho_spatial', extract_mods('/*/mods:subject/mods:hierarchicalGeographic/mods:area')
-to_field 'cho_spatial', extract_mods('/*/mods:subject/mods:hierarchicalGeographic/mods:city')
-to_field 'cho_spatial', extract_mods('/*/mods:subject/mods:hierarchicalGeographic/mods:citySection')
-to_field 'cho_spatial', extract_mods('/*/mods:subject/mods:hierarchicalGeographic/mods:continent')
-to_field 'cho_spatial', extract_mods('/*/mods:subject/mods:hierarchicalGeographic/mods:country')
-to_field 'cho_spatial', extract_mods('/*/mods:subject/mods:hierarchicalGeographic/mods:county')
-to_field 'cho_spatial', extract_mods('/*/mods:subject/mods:hierarchicalGeographic/mods:extraterrestrialArea')
-to_field 'cho_spatial', extract_mods('/*/mods:subject/mods:hierarchicalGeographic/mods:island')
-to_field 'cho_spatial', extract_mods('/*/mods:subject/mods:hierarchicalGeographic/mods:region')
-to_field 'cho_spatial', extract_mods('/*/mods:subject/mods:hierarchicalGeographic/mods:state')
-to_field 'cho_spatial', extract_mods('/*/mods:subject/mods:hierarchicalGeographic/mods:territory')
-to_field 'cho_subject', extract_mods('/*/mods:classification')
-to_field 'cho_subject', extract_mods('/*/mods:subject/mods:topic')
-to_field 'cho_subject', extract_mods('/*/mods:subject/mods:titleInfo/mods:title')
-to_field 'cho_temporal', extract_mods('/*/mods:subject/mods:temporal')
-to_field 'cho_type', extract_mods('/*/mods:typeOfResource')
-to_field 'cho_type', extract_mods('/*/mods:genre')
+to_field 'cho_language', normalize_mods_language, lang('en')
+to_field 'cho_language', normalize_mods_language, translation_map('norm_languages_to_ar'), lang('ar-Arab')
+to_field 'cho_publisher', extract_mods('/*/mods:originInfo/mods:publisher'), lang('en')
+to_field 'cho_spatial', extract_mods('/*/mods:subject/mods:cartographics/mods:coordinates'), lang('en')
+to_field 'cho_spatial', extract_mods('/*/mods:subject/mods:cartographics/mods:projection'), lang('en')
+to_field 'cho_spatial', extract_mods('/*/mods:subject/mods:cartographics/mods:scale'), lang('en')
+to_field 'cho_spatial', extract_mods('/*/mods:subject/mods:geographic'), lang('en')
+to_field 'cho_spatial', extract_mods('/*/mods:subject/mods:geographicCode'), lang('en')
+to_field 'cho_subject', extract_mods('/*/mods:classification'), lang('en')
+to_field 'cho_subject', extract_mods('/*/mods:subject/mods:topic'), lang('en')
+to_field 'cho_temporal', extract_mods('/*/mods:subject/mods:temporal'), lang('en')
+to_field 'cho_type', extract_mods('/*/mods:typeOfResource'), lang('en')
+to_field 'cho_type', extract_mods('/*/mods:genre'), lang('en')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
 to_field 'agg_data_provider', data_provider_ar, lang('ar-Arab')
 to_field 'agg_data_provider_country', data_provider_country, lang('en')
 to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
-# to_field 'agg_is_shown_at' do |record, accumulator, context|
-#   accumulator << transform_values(context, 'wr_id' => literal(generate_sul_shown_at(record, context.clipboard[:druid])))
-# end
-# to_field 'agg_is_shown_by' do |_record, accumulator, context|
-#   if context.clipboard[:iiif_json].present?
-#     iiif_json = context.clipboard[:iiif_json]
-#     accumulator << transform_values(context,
-#                                     'wr_description' => [
-#                                       extract_mods('/*/mods:physicalDescription/mods:digitalOrigin'),
-#                                       extract_mods('/*/mods:physicalDescription/mods:reformattingQuality')
-#                                     ],
-#                                     'wr_format' => extract_mods('/*/mods:physicalDescription/mods:internetMediaType'),
-#                                     'wr_has_service' => iiif_sequences_service(iiif_json),
-#                                     'wr_id' => literal(iiif_sequence_id(iiif_json)),
-#                                     'wr_is_referenced_by' => literal(context.clipboard[:manifest]))
-#   end
-# end
-# to_field 'agg_preview' do |_record, accumulator, context|
-#   if context.clipboard[:iiif_json].present?
-#     iiif_json = context.clipboard[:iiif_json]
-#     accumulator << transform_values(context,
-#                                     'wr_format' => extract_mods('/*/mods:physicalDescription/mods:internetMediaType'),
-#                                     'wr_has_service' => iiif_thumbnail_service(iiif_json),
-#                                     'wr_id' => literal(iiif_thumbnail_id(iiif_json)),
-#                                     'wr_is_referenced_by' => literal(context.clipboard[:manifest]))
-#   else
-#     accumulator << transform_values(context,
-#                                     'wr_format' => literal('image/jpeg'),
-#                                     'wr_id' => literal("https://stacks.stanford.edu/file/druid:#{context.clipboard[:druid]}/preview.jpg"))
-#   end
-# end
+to_field 'agg_is_shown_at' do |record, accumulator, context|
+  accumulator << transform_values(context, 'wr_id' => literal(generate_sul_shown_at(record, context.clipboard[:druid])))
+end
+to_field 'agg_is_shown_by' do |_record, accumulator, context|
+  if context.clipboard[:iiif_json].present?
+    iiif_json = context.clipboard[:iiif_json]
+    accumulator << transform_values(context,
+                                    'wr_description' => [
+                                      extract_mods('/*/mods:physicalDescription/mods:digitalOrigin'),
+                                      extract_mods('/*/mods:physicalDescription/mods:reformattingQuality')
+                                    ],
+                                    'wr_format' => extract_mods('/*/mods:physicalDescription/mods:internetMediaType'),
+                                    'wr_has_service' => iiif_sequences_service(iiif_json),
+                                    'wr_id' => literal(iiif_sequence_id(iiif_json)),
+                                    'wr_is_referenced_by' => literal(context.clipboard[:manifest]))
+  end
+end
+to_field 'agg_preview' do |_record, accumulator, context|
+  if context.clipboard[:iiif_json].present?
+    iiif_json = context.clipboard[:iiif_json]
+    accumulator << transform_values(context,
+                                    'wr_format' => extract_mods('/*/mods:physicalDescription/mods:internetMediaType'),
+                                    'wr_has_service' => iiif_thumbnail_service(iiif_json),
+                                    'wr_id' => literal(iiif_thumbnail_id(iiif_json)),
+                                    'wr_is_referenced_by' => literal(context.clipboard[:manifest]))
+  else
+    accumulator << transform_values(context,
+                                    'wr_format' => literal('image/jpeg'),
+                                    'wr_id' => literal("https://stacks.stanford.edu/file/druid:#{context.clipboard[:druid]}/preview.jpg"))
+  end
+end
 to_field 'agg_provider', provider, lang('en')
 to_field 'agg_provider', provider_ar, lang('ar-Arab')
 to_field 'agg_provider_country', provider_country, lang('en')
