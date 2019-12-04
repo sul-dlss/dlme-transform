@@ -131,7 +131,7 @@ to_field 'agg_preview' do |_record, accumulator, context|
     accumulator << transform_values(context,
                                     'wr_has_service' => iiif_thumbnail_service(iiif_json),
                                     # The default thumbnail may cause issues
-                                    'wr_id' => extract_json('.thumbnail'), #, strip, default('https://library.princeton.edu/projects/islamic/images/islamicFeatured.jpg'),
+                                    'wr_id' => extract_json('.thumbnail'),
                                     'wr_is_referenced_by' => literal(context.clipboard[:manifest]))
   end
 end

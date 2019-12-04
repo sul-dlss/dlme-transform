@@ -87,8 +87,10 @@ module Macros
         'http://iiif.io/api/presentation/'
       elsif service_profile.include? 'http://iiif.io/api/search/'
         'http://iiif.io/api/search/'
-      elsif service_profile.include? 'http;//iiiif.io/api/image/2/level2.json' # this doesn't look right, but it's what we get.
-        'http;//iiiif.io/api/image/2/level2.json' # can be removed after: https://github.com/pulibrary/figgy/pull/3513
+      # this doesn't look right, but it's what we get.
+      # can be removed after: https://github.com/pulibrary/figgy/pull/3513
+      elsif service_profile.include? 'http;//iiiif.io/api/image/2/level2.json'
+        'http;//iiiif.io/api/image/2/level2.json'
       elsif service_profile.include? 'http://iiif.io/api/image/2/level2.json'
         'http://iiif.io/api/image/2/level2.json'
       end
