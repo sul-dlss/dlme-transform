@@ -116,5 +116,11 @@ module Macros
                    end
       File.basename(identifier, File.extname(identifier)) if identifier.present?
     end
+
+    def last
+      lambda do |_rec, acc|
+        acc.last
+      end
+    end
   end
 end
