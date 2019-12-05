@@ -2,6 +2,7 @@
 
 require 'dlme_json_resource_writer'
 require 'dlme_debug_writer'
+require 'macros/cambridge'
 require 'macros/collection'
 require 'macros/date_parsing'
 require 'macros/dlme'
@@ -13,6 +14,7 @@ require 'macros/version'
 require 'traject_plus'
 
 extend Macros::Collection
+extend Macros::Cambridge
 extend Macros::DateParsing
 extend Macros::DLME
 extend Macros::EachRecord
@@ -29,12 +31,6 @@ settings do
   provide 'writer_class_name', 'DlmeJsonResourceWriter'
 end
 
-to_field 'agg_data_provider_collection', collection
-
-# Set Version & Timestamp on each record
-to_field 'transform_version', version
-to_field 'transform_timestamp', timestamp
-
 # Shortcut variables
 FACSIMILE = '//tei:facsimile'
 MS_CONTENTS = 'tei:msContents'
@@ -46,6 +42,16 @@ OBJ_DESC = 'tei:physDesc/tei:objectDesc'
 PROFILE_DESC = '//tei:teiHeader/tei:profileDesc/tei:textClass'
 PUB_STMT = '//tei:teiHeader/tei:fileDesc/tei:publicationStmt'
 SUPPORT_DESC = 'tei:supportDesc[@material="paper"]'
+
+each_record do |record, context|
+  context.clipboard[:id] = extract_record_id(record)
+end
+
+to_field 'agg_data_provider_collection', collection
+
+# Set Version & Timestamp on each record
+to_field 'transform_version', version
+to_field 'transform_timestamp', timestamp
 
 # Cho Required
 to_field 'id', lambda { |_record, accumulator, context|
@@ -84,10 +90,11 @@ to_field 'agg_data_provider_country', data_provider_country, lang('en')
 to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(context,
-                                  'wr_id' => [extract_tei("#{FACSIMILE}/tei:graphic/@url"),
-                                              gsub('http://cudl.lib.cam.ac.uk/content/images/', 'https://cudl.lib.cam.ac.uk/view/'),
-                                              gsub('-000-0000', '/'),
-                                              gsub('_files/8/0_0.jpg', '')])
+                                  'wr_id' => [literal(context.clipboard[:id]),
+                                              prepend('https://cudl.lib.cam.ac.uk/view/'),
+                                              append('/1')],
+                                  'wr_is_referenced_by' => [literal(context.clipboard[:id]),
+                                                            prepend('https://cudl.lib.cam.ac.uk/iiif/')])
 end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(context,
