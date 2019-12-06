@@ -63,7 +63,7 @@ to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_id' => [extract_json('.manifest'), strip],
+    'wr_id' => [extract_json('.homepage'), strip],
     'wr_is_referenced_by' => [extract_json('.manifest'), strip]
   )
 end
