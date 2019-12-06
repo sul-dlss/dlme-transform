@@ -7,6 +7,8 @@ require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/dlme_marc'
 require 'macros/each_record'
+require 'macros/timestamp'
+require 'macros/version'
 require 'traject/macros/marc21_semantics'
 require 'traject/macros/marc_format_classifier'
 require 'traject_plus'
@@ -16,6 +18,8 @@ extend Macros::DLME
 extend Macros::DateParsing
 extend Macros::DlmeMarc
 extend Macros::EachRecord
+extend Macros::Timestamp
+extend Macros::Version
 extend Traject::Macros::Marc21
 extend Traject::Macros::Marc21Semantics
 extend Traject::Macros::MarcFormats
@@ -31,13 +35,13 @@ end
 to_field 'agg_data_provider_collection', collection
 
 # # Set Version & Timestamp on each record
-# to_field 'transform_version', version
-# to_field 'transform_timestamp', timestamp
+to_field 'transform_version', version
+to_field 'transform_timestamp', timestamp
 
 # Cho Additional
 to_field 'cho_dc_rights', literal('Public Domain'), lang('en')
-# to_field 'cho_description', extract_marc('500a:505agrtu:520abcu', alternate_script: false), strip, gsub('Special Collections Library,', 'Special Collections Research Center'), lang('en')
-# to_field 'cho_description', extract_marc('500a:505agrtu:520abcu', alternate_script: :only), strip, lang('ar-Arab')
+to_field 'cho_description', extract_marc('500a:505agrtu:520abcu', alternate_script: false), strip, gsub('Special Collections Library,', 'Special Collections Research Center'), lang('en')
+to_field 'cho_description', extract_marc('500a:505agrtu:520abcu', alternate_script: :only), strip, lang('ar-Arab')
 to_field 'cho_has_type', literal('Manuscript'), lang('en')
 to_field 'cho_has_type', literal('Manuscript'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
 to_field 'cho_identifier', oclcnum
@@ -63,34 +67,9 @@ to_field 'agg_preview' do |_record, accumulator, context|
 end
 
 each_record convert_to_language_hash(
-  'agg_data_provider',
-  'agg_data_provider_country',
-  'agg_provider',
-  'agg_provider_country',
-  'cho_alternative',
-  'cho_contributor',
-  'cho_coverage',
-  'cho_creator',
-  'cho_date',
   'cho_dc_rights',
   'cho_description',
-  'cho_edm_type',
-  'cho_extent',
-  'cho_format',
-  'cho_has_part',
-  'cho_has_type',
-  'cho_is_part_of',
-  'cho_language',
-  'cho_medium',
-  'cho_provenance',
-  'cho_publisher',
-  'cho_relation',
-  'cho_source',
-  'cho_spatial',
-  'cho_subject',
-  'cho_temporal',
-  'cho_title',
-  'cho_type'
+  'cho_has_type'
 )
 
 # NOTE: call add_cho_type_facet AFTER calling convert_to_language_hash fields
