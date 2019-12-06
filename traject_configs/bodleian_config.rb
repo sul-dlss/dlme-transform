@@ -26,8 +26,6 @@ settings do
   provide 'reader_class_name', 'TrajectPlus::JsonReader'
 end
 
-to_field 'agg_data_provider_collection', collection
-
 # Set Version & Timestamp on each record
 to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
@@ -50,7 +48,7 @@ to_field 'cho_description', extract_json('.description'), strip, lang('en')
 to_field 'cho_edm_type', literal('Text'), lang('en')
 to_field 'cho_edm_type', literal('Text'), translation_map('norm_types_to_ar'), lang('ar-Arab')
 to_field 'cho_has_type', literal('Manuscript'), lang('en')
-to_field 'cho_has_type', literal('Manuscript'), translation_map('norm_types_to_ar'), lang('ar-Arab')
+to_field 'cho_has_type', literal('Manuscript'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
 to_field 'cho_identifier', extract_json('.catalogue_identifier'), strip
 to_field 'cho_language', extract_json('.language'), strip, normalize_language, lang('en')
 to_field 'cho_language', extract_json('.language'), strip, normalize_language, translation_map('norm_languages_to_ar'), lang('ar-Arab')
@@ -59,13 +57,14 @@ to_field 'cho_spatial', extract_json('.place_of_origin'), strip, prepend('Place 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
 to_field 'agg_data_provider', data_provider_ar, lang('ar-Arab')
+to_field 'agg_data_provider_collection', collection
 to_field 'agg_data_provider_country', data_provider_country, lang('en')
 to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_id' => [extract_json('.homepage'), strip],
-    'wr_is_referenced_by' => [extract_json('.homepage'), split('/'), last, prepend('https://iiif.bodleian.ox.ac.uk/iiif/manifest/'), append('.json')]
+    'wr_id' => [extract_json('.manifest'), strip],
+    'wr_is_referenced_by' => [extract_json('.manifest'), strip]
   )
 end
 to_field 'agg_preview' do |_record, accumulator, context|
