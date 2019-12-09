@@ -877,11 +877,10 @@
   },
   {
     "trajects": [
-      "princeton_mss_common_config.rb",
-      "princeton_islamic_mss_config.rb"
+      "princeton_mss_config.rb"
     ],
     "paths": [
-      "princeton/islamic_mss"
+      "princeton/princeton_mss"
     ],
     "extension": ".json",
     "settings": {

@@ -64,7 +64,7 @@ RSpec.describe Contracts::CHO do
               field_name => {
                 'none' => ['value1'],
                 'en' => %w[value2 value3],
-                'tr' => ['value4']
+                'tr-Latn' => ['value4']
               }
             }
           end
@@ -142,7 +142,7 @@ RSpec.describe Contracts::CHO do
               field_name => {
                 'none' => ['value1'],
                 'en' => %w[value2 value3],
-                'tr' => ['value4']
+                'tr-Latn' => ['value4']
               }
             }
           end
