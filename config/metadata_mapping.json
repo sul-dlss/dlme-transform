@@ -531,13 +531,13 @@
     ],
     "extension": ".xml",
     "settings": {
-      "agg_provider": "Bibliothèque nationale de France",
+      "agg_provider": "Institut dominicain d’etudes orientales",
       "agg_provider_country": "France",
-      "agg_data_provider": "Institut dominicain d’etudes orientales",
+      "agg_data_provider": "Bibliothèque nationale de France",
       "agg_data_provider_country": "Egypt",
-      "agg_provider_ar": "مكتبة فرنسا الوطنية",
+      "agg_provider_ar": "معهد الدومينيك للدراسات الشرقية",
       "agg_provider_country_ar": "فرنسا",
-      "agg_data_provider_ar": "معهد الدومينيك للدراسات الشرقية",
+      "agg_data_provider_ar": "مكتبة فرنسا الوطنية",
       "agg_data_provider_country_ar": "مصر",
       "inst_id": "ideo"
     }
@@ -552,13 +552,13 @@
     ],
     "extension": ".xml",
     "settings": {
-      "agg_provider": "Bibliothèque nationale de France",
+      "agg_provider": "Institut français d’archéologie orientale",
       "agg_provider_country": "France",
-      "agg_data_provider": "Institut français d’archéologie orientale",
+      "agg_data_provider": "Bibliothèque nationale de France",
       "agg_data_provider_country": "Egypt",
-      "agg_provider_ar": "مكتبة فرنسا الوطنية",
+      "agg_provider_ar": "المعهد الفرنسي للآثار الشرقية",
       "agg_provider_country_ar": "فرنسا",
-      "agg_data_provider_ar": "المعهد الفرنسي للآثار الشرقية",
+      "agg_data_provider_ar": "مكتبة فرنسا الوطنية",
       "agg_data_provider_country_ar": "مصر",
       "inst_id": "ifao"
     }
@@ -756,13 +756,13 @@
     ],
     "extension": ".xml",
     "settings": {
-      "agg_provider": "University of Pennsylvania Libraries",
+      "agg_provider": "Columbia University, Rare Book & Manuscript Library",
       "agg_provider_country": "United States of America",
-      "agg_data_provider": "Columbia University, Rare Book & Manuscript Library",
+      "agg_data_provider": "University of Pennsylvania Libraries",
       "agg_data_provider_country": "United States of America",
-      "agg_provider_ar": "مكتبات جامعة بنسلفانيا",
+      "agg_provider_ar": "جامعة كولومبيا، مكتبة الكتب والمخطوطات النادرة",
       "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "agg_data_provider_ar": "جامعة كولومبيا، مكتبة الكتب والمخطوطات النادرة",
+      "agg_data_provider_ar": "مكتبات جامعة بنسلفانيا",
       "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
       "inst_id": "penn"
     }
@@ -778,13 +778,13 @@
     ],
     "extension": ".xml",
     "settings": {
-      "agg_provider": "University of Pennsylvania Libraries",
+      "agg_provider": "Free Library of Philadelphia, Special Collections",
       "agg_provider_country": "United States of America",
-      "agg_data_provider": "Free Library of Philadelphia, Special Collections",
+      "agg_data_provider": "University of Pennsylvania Libraries",
       "agg_data_provider_country": "United States of America",
-      "agg_provider_ar": "مكتبات جامعة بنسلفانيا",
+      "agg_provider_ar": "مكتبة فيلادلفيا المجانية، المجموعات الخاصة",
       "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "agg_data_provider_ar": "مكتبة فيلادلفيا المجانية، المجموعات الخاصة",
+      "agg_data_provider_ar": "مكتبات جامعة بنسلفانيا",
       "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
       "inst_id": "penn"
     }
@@ -844,13 +844,13 @@
     ],
     "extension": ".xml",
     "settings": {
-      "agg_provider": "University of Pennsylvania Libraries",
+      "agg_provider": "Philadelphia Museum of Art",
       "agg_provider_country": "United States of America",
-      "agg_data_provider": "Philadelphia Museum of Art",
+      "agg_data_provider": "University of Pennsylvania Libraries",
       "agg_data_provider_country": "United States of America",
-      "agg_provider_ar": "مكتبات جامعة بنسلفانيا",
+      "agg_provider_ar": "متحف فيلادلفيا للفنون",
       "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "agg_data_provider_ar": "متحف فيلادلفيا للفنون",
+      "agg_data_provider_ar": "مكتبات جامعة بنسلفانيا",
       "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
       "inst_id": "penn"
     }
