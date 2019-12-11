@@ -39,26 +39,26 @@ to_field 'transform_timestamp', timestamp
 
 # Cho Required
 to_field 'id', extract_oai_identifier, strip
-to_field 'cho_title', extract_oai('dc:title'), strip, lang('tr')
+to_field 'cho_title', extract_oai('dc:title'), strip, lang('tr-Latn')
 
 # Cho Other
 to_field 'cho_contributor', extract_oai('dc:contributor'),
-         strip, split('.'), lang('tr')
-to_field 'cho_coverage', extract_oai('dc:coverage'), strip, lang('tr')
+         strip, split('.'), lang('tr-Latn')
+to_field 'cho_coverage', extract_oai('dc:coverage'), strip, lang('tr-Latn')
 to_field 'cho_creator', extract_oai('dc:creator'),
-         strip, split('.'), lang('tr')
-to_field 'cho_date', extract_oai('dc:date'), strip, lang('tr')
-to_field 'cho_description', extract_oai('dc:description'), strip, lang('tr')
-to_field 'cho_dc_rights', extract_oai('dc:rights'), strip, lang('tr')
+         strip, split('.'), lang('tr-Latn')
+to_field 'cho_date', extract_oai('dc:date'), strip, lang('tr-Latn')
+to_field 'cho_description', extract_oai('dc:description'), strip, lang('tr-Latn')
+to_field 'cho_dc_rights', extract_oai('dc:rights'), strip, lang('tr-Latn')
 to_field 'cho_edm_type', extract_oai('dc:type'),
-         strip, normalize_type, lang('tr')
-to_field 'cho_format', extract_oai('dc:format'), strip, lang('tr')
+         strip, normalize_type, lang('tr-Latn')
+to_field 'cho_format', extract_oai('dc:format'), strip, lang('tr-Latn')
 to_field 'cho_language', extract_oai('dc:language'), split(';'),
          strip, normalize_language, lang('en')
-to_field 'cho_publisher', extract_oai('dc:publisher'), strip, lang('tr')
-to_field 'cho_relation', extract_oai('dc:relation'), strip, lang('tr')
-to_field 'cho_subject', extract_oai('dc:subject'), strip, lang('tr')
-to_field 'cho_type', extract_oai('dc:type'), strip, lang('tr')
+to_field 'cho_publisher', extract_oai('dc:publisher'), strip, lang('tr-Latn')
+to_field 'cho_relation', extract_oai('dc:relation'), strip, lang('tr-Latn')
+to_field 'cho_subject', extract_oai('dc:subject'), strip, lang('tr-Latn')
+to_field 'cho_type', extract_oai('dc:type'), strip, lang('tr-Latn')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
