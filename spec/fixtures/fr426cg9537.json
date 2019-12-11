@@ -1,0 +1,128 @@
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@id": "https://purl.stanford.edu/fr426cg9537/iiif/manifest",
+  "@type": "sc:Manifest",
+  "label": "Cats",
+  "attribution": "Copyright © Matt Kahn Living Trust. All Rights Reserved.",
+  "logo": {
+    "@id": "https://stacks.stanford.edu/image/iiif/wy534zh7137%2FSULAIR_rosette/full/400,/0/default.jpg",
+    "service": {
+      "@context": "http://iiif.io/api/image/2/context.json",
+      "@id": "https://stacks.stanford.edu/image/iiif/wy534zh7137%2FSULAIR_rosette",
+      "profile": "http://iiif.io/api/image/2/level2.json"
+    }
+  },
+  "seeAlso": {
+    "@id": "https://purl.stanford.edu/fr426cg9537.mods",
+    "format": "application/mods+xml"
+  },
+  "metadata": [
+    {
+      "label": "Available Online",
+      "value": "<a href='https://purl.stanford.edu/fr426cg9537'>https://purl.stanford.edu/fr426cg9537</a>"
+    },
+    {
+      "label": "Title",
+      "value": "Cats"
+    },
+    {
+      "label": "Contributor",
+      "value": "Kahn, Matt, 1928-2013 (phtPhotographer)"
+    },
+    {
+      "label": "Type",
+      "value": "StillImage"
+    },
+    {
+      "label": "Type",
+      "value": "photographs"
+    },
+    {
+      "label": "Date",
+      "value": "1976"
+    },
+    {
+      "label": "Language",
+      "value": "engEnglish"
+    },
+    {
+      "label": "Format",
+      "value": "1 photograph"
+    },
+    {
+      "label": "Format",
+      "value": "slides"
+    },
+    {
+      "label": "Format",
+      "value": "image/jpeg"
+    },
+    {
+      "label": "Subject",
+      "value": "Travel photography"
+    },
+    {
+      "label": "Subject",
+      "value": "Art and design"
+    },
+    {
+      "label": "Relation",
+      "value": "Stanford University. Libraries. Department of Special Collections and University ArchivesSC1094https://purl.stanford.edu/fr426cg9537"
+    },
+    {
+      "label": "Relation",
+      "value": "Matt Kahn papers, circa 1960s-1990s"
+    },
+    {
+      "label": "PublishDate",
+      "value": "2019-08-06T03:04:47Z"
+    }
+  ],
+  "thumbnail": {
+    "@id": "https://stacks.stanford.edu/image/iiif/fr426cg9537%2FSC1094_s3_b14_f17_Cats_1976_0005/full/!400,400/0/default.jpg",
+    "@type": "dctypes:Image",
+    "format": "image/jpeg",
+    "service": {
+      "@context": "http://iiif.io/api/image/2/context.json",
+      "@id": "https://stacks.stanford.edu/image/iiif/fr426cg9537%2FSC1094_s3_b14_f17_Cats_1976_0005",
+      "profile": "http://iiif.io/api/image/2/level2.json"
+    }
+  },
+  "sequences": [
+    {
+      "@id": "https://purl.stanford.edu/fr426cg9537#sequence-1",
+      "@type": "sc:Sequence",
+      "label": "Current order",
+      "viewingDirection": "left-to-right",
+      "canvases": [
+        {
+          "@id": "https://purl.stanford.edu/fr426cg9537/iiif/canvas/fr426cg9537_1",
+          "@type": "sc:Canvas",
+          "label": "Image 1",
+          "height": 4421,
+          "width": 6501,
+          "images": [
+            {
+              "@id": "https://purl.stanford.edu/fr426cg9537/iiif/annotation/fr426cg9537_1",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://stacks.stanford.edu/image/iiif/fr426cg9537%2FSC1094_s3_b14_f17_Cats_1976_0005/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 4421,
+                "width": 6501,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://stacks.stanford.edu/image/iiif/fr426cg9537%2FSC1094_s3_b14_f17_Cats_1976_0005",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://purl.stanford.edu/fr426cg9537/iiif/canvas/fr426cg9537_1"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
