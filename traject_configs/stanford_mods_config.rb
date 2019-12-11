@@ -2,6 +2,7 @@
 
 require 'dlme_json_resource_writer'
 require 'dlme_debug_writer'
+require 'macros/collection'
 require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
@@ -12,6 +13,7 @@ require 'macros/timestamp'
 require 'macros/version'
 require 'traject_plus'
 
+extend Macros::Collection
 extend Macros::DLME
 extend Macros::DateParsing
 extend Macros::EachRecord
@@ -105,6 +107,7 @@ to_field 'cho_type', extract_mods('/*/mods:genre'), lang('en')
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
 to_field 'agg_data_provider', data_provider_ar, lang('ar-Arab')
+to_field 'agg_data_provider_collection', collection
 to_field 'agg_data_provider_country', data_provider_country, lang('en')
 to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_is_shown_at' do |record, accumulator, context|
