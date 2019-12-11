@@ -79,17 +79,13 @@ module Macros
 
     def iiif_service_conforms_to(service_profile)
       # Using the thumbnail service profile for now
-      if service_profile.include? 'http://iiif.io/api/image/'
-        'http://iiif.io/api/image/'
-      elsif service_profile.include? 'http://iiif.io/api/auth/'
-        'http://iiif.io/api/auth/'
-      elsif service_profile.include? 'http://iiif.io/api/presentation/'
-        'http://iiif.io/api/presentation/'
-      elsif service_profile.include? 'http://iiif.io/api/search/'
-        'http://iiif.io/api/search/'
-      elsif service_profile.include? 'http://iiif.io/api/image/2/level2.json'
-        'http://iiif.io/api/image/2/level2.json'
-      end
+      return service_profile if %w[
+        http://iiif.io/api/image/
+        http://iiif.io/api/auth/
+        http://iiif.io/api/presentation/
+        http://iiif.io/api/search/
+        http://iiif.io/api/image/2/level2.json
+      ].include? service_profile
     end
   end
 end

@@ -49,7 +49,7 @@ RSpec.describe Macros::IIIF do
 
   describe 'iiif_thumbnail_service_conforms_to' do
     subject(:iiif_thumbnail_service_conforms_to) { instance.iiif_thumbnail_service_conforms_to(iiif_json) }
-    let(:thumb_service_conforms_to) { 'http://iiif.io/api/image/' }
+    let(:thumb_service_conforms_to) { 'http://iiif.io/api/image/2/level2.json' }
 
     context 'when a iiif thumbnail service conforms to exists in the manifest' do
       it 'returns the thumbnail service conforms to' do
@@ -97,7 +97,7 @@ RSpec.describe Macros::IIIF do
 
   describe 'iiif_sequence_service_conforms_to' do
     subject(:iiif_sequence_service_conforms_to) { instance.iiif_sequence_service_conforms_to(iiif_json) }
-    let(:manifest_sequence_service_conforms_to) { 'http://iiif.io/api/image/' }
+    let(:manifest_sequence_service_conforms_to) { 'http://iiif.io/api/image/2/level2.json' }
 
     context 'when a iiif sequence service conforms to to exists in the manifest' do
       it 'returns the iiif sequence service conforms to' do
