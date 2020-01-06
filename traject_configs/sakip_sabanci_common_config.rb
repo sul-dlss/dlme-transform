@@ -53,12 +53,12 @@ to_field 'cho_dc_rights', extract_oai('dc:rights'), strip, lang('tr-Latn')
 to_field 'cho_edm_type', extract_oai('dc:type'),
          strip, normalize_type, lang('en')
 to_field 'cho_edm_type', extract_oai('dc:type'),
-                  strip, normalize_type, translation_map('norm_types_to_ar'), lang('ar-Arab')
+         strip, normalize_type, translation_map('norm_types_to_ar'), lang('ar-Arab')
 to_field 'cho_format', extract_oai('dc:format'), strip, lang('tr-Latn')
 to_field 'cho_has_type', extract_oai('dc:type'),
          strip, transform(&:downcase), translation_map('turkish_has_type_to_en'), lang('en')
 to_field 'cho_has_type', extract_oai('dc:type'),
-                  strip, transform(&:downcase), translation_map('turkish_has_type_to_en'), translation_map('norm_types_to_ar'), lang('ar-Arab')
+         strip, transform(&:downcase), translation_map('turkish_has_type_to_en'), translation_map('norm_types_to_ar'), lang('ar-Arab')
 to_field 'cho_language', extract_oai('dc:language'), split(';'),
          strip, normalize_language, lang('en')
 to_field 'cho_publisher', extract_oai('dc:publisher'), strip, lang('tr-Latn')
