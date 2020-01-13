@@ -28,7 +28,6 @@ extend Macros::Version
 extend TrajectPlus::Macros
 extend TrajectPlus::Macros::Mods
 extend TrajectPlus::Macros::Xml
-extend Traject::Macros::NokogiriMacros
 
 settings do
   provide 'writer_class_name', 'DlmeJsonResourceWriter'
@@ -48,8 +47,8 @@ to_field 'cho_alternative', extract_mods('/*/mods:titleInfo[@type]/mods:title'),
 to_field 'cho_coverage', extract_mods('/*/mods:originInfo/mods:place/mods:placeTerm'), lang('en')
 to_field 'cho_creator', extract_name(role: %w[author creator]), lang('en')
 to_field 'cho_date', extract_mods('/*/mods:originInfo/mods:dateCreated')
-to_field 'cho_date_range_norm', mods_date_range
-to_field 'cho_date_range_hijri', mods_date_range, hijri_range
+to_field 'cho_date_range_norm', harvard_mods_date_range
+to_field 'cho_date_range_hijri', harvard_mods_date_range, hijri_range
 to_field 'cho_dc_rights', first(
   extract_mods('/*/mods:accessCondition[@type="restrictionOnAccess"]/@xlink:href'),
   extract_mods('/*/mods:accessCondition[@type="restriction on access"]')
@@ -90,7 +89,7 @@ to_field 'agg_is_shown_at' do |_record, accumulator, context|
 end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(context,
-                                  'wr_id' => extract_mods('/*/mods:relatedItem[@type="constituent"]/mods:location/mods:url[@displayLabel="Thumbnail"]'),
+                                  'wr_id' => [extract_mods('/*/mods:relatedItem[@type="constituent"]/mods:location/mods:url[@displayLabel="Thumbnail"]'), default('https://spotlight.dlmenetwork.org/assets/default-52adc3dc03639885e8aa93763e29868269dd3b9dad4689f140c0175b4f945922.png')],
                                   'wr_is_referenced_by' => extract_mods('/*/mods:url'))
 end
 to_field 'agg_provider', provider, lang('en')
