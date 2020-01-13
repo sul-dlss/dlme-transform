@@ -645,6 +645,26 @@
   },
   {
     "trajects": [
+      "harvard_scw_config.rb"
+    ],
+    "paths": [
+      "harvard/scw"
+    ],
+    "extension": ".xml",
+    "settings": {
+      "agg_provider": "Harvard University Library",
+      "agg_provider_country": "United States of America",
+      "agg_data_provider": "Harvard University's Libraries and Museums",
+      "agg_data_provider_country": "United States of America",
+      "agg_provider_ar": "مكتبة جامعة هارفارد",
+      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "agg_data_provider_ar": "مكتبات ومتاحف جامعة هارفارد",
+      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "inst_id": "harvard"
+    }
+  },
+  {
+    "trajects": [
       "fgdc_config.rb"
     ],
     "paths": [
