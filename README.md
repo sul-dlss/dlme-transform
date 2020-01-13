@@ -88,6 +88,17 @@ docker run --rm -v $(pwd)/output:/opt/traject/output \
                 suldlss/dlme-transform:latest
 ```
 
+The `-w` switch can be used to debug transformations. It will stop the transform upon encountering an error.
+
+```shell
+docker run --rm -e SKIP_FETCH_DATA=true \
+                -v $(pwd)/.:/opt/traject \
+                -v $(pwd)/../dlme-metadata:/opt/traject/data \
+                -v $(pwd)/output:/opt/traject/output \
+                suldlss/dlme-transform:latest \
+                stanford/maps/data/kj751hs0595.mods \
+                -w 
+```
 
 Sending output to S3 bucket and publishing an SNS notification:
 ```shell
