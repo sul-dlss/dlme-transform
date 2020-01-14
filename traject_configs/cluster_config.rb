@@ -24,26 +24,25 @@ settings do
   provide 'reader_class_name', 'TrajectPlus::JsonReader'
 end
 
-to_field 'agg_data_provider_collection', collection
-
 # Set Version & Timestamp on each record
 to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
 
 # Cho Required
 to_field 'id', extract_json('.url'), strip
-to_field 'cho_title', extract_json('.title'), strip
+to_field 'cho_title', extract_json('.title'), strip, lang('en')
 
 # Cho Other
-to_field 'cho_creator', extract_json('.creator'), strip
-to_field 'cho_contributor', extract_json('.contributor'), strip
+to_field 'cho_creator', extract_json('.creator'), strip, lang('en')
+to_field 'cho_contributor', extract_json('.contributor'), strip, lang('en')
 to_field 'cho_date', extract_json('.date'), strip
 to_field 'cho_date_range_norm', extract_json('.date'), strip, parse_range
 to_field 'cho_date_range_hijri', extract_json('.date'), strip, parse_range, hijri_range
-to_field 'cho_description', extract_json('.description'), strip
-to_field 'cho_edm_type', literal('Dataset')
-to_field 'cho_language', literal('English')
-to_field 'cho_language', literal('Arabic')
+to_field 'cho_description', extract_json('.description'), strip, lang('en')
+to_field 'cho_edm_type', literal('Dataset'), lang('en')
+to_field 'cho_edm_type', literal('Dataset'), translation_map('norm_types_to_ar'), lang('ar-Arab')
+to_field 'cho_language', literal('English'), lang('en')
+to_field 'cho_language', literal('Arabic'), translation_map('norm_languages_to_ar'), lang('ar-Arab')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
@@ -62,9 +61,9 @@ to_field 'agg_preview' do |_record, accumulator, context|
     'wr_id' => [extract_json('.thumbnail'), strip]
   )
 end
-
 to_field 'agg_provider_country', provider_country, lang('en')
 to_field 'agg_provider_country', provider_country_ar, lang('ar-Arab')
+to_field 'agg_data_provider_collection', collection
 to_field 'agg_data_provider_country', data_provider_country, lang('en')
 to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 
