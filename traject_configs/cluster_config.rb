@@ -38,7 +38,7 @@ to_field 'cho_contributor', extract_json('.contributor'), strip, lang('en')
 to_field 'cho_date', extract_json('.date'), strip
 to_field 'cho_date_range_norm', extract_json('.date'), strip, parse_range
 to_field 'cho_date_range_hijri', extract_json('.date'), strip, parse_range, hijri_range
-to_field 'cho_description', extract_json('.description'), strip
+to_field 'cho_description', extract_json('.description'), strip, lang('en')
 to_field 'cho_edm_type', literal('Dataset'), lang('en')
 to_field 'cho_edm_type', literal('Dataset'), translation_map('norm_types_to_ar'), lang('ar-Arab')
 to_field 'cho_language', literal('English'), lang('en')
