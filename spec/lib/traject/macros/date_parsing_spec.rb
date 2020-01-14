@@ -400,6 +400,24 @@ RSpec.describe Macros::DateParsing do
     end
   end
 
+  describe '#harvard_mods_date_range' do
+    let(:record) do
+      <<-XML
+        <mods:mods xmlns:mods="http://www.loc.gov/mods/v3" version="3.4">
+          <mods:originInfo>
+            #{date_els}
+          </mods:originInfo>
+        </mods:mods>
+      XML
+    end
+    let(:ng_rec) { Nokogiri::XML.parse(record) }
+
+    before do
+      indexer.instance_eval do
+        to_field 'range', harvard_mods_date_range
+      end
+    end
+
   describe '#marc_date_range' do
     {
       # 008[06-14] => expected result
