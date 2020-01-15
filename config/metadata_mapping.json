@@ -983,6 +983,66 @@
   },
   {
     "trajects": [
+      "shahre_farang_persian_config.rb"
+    ],
+    "paths": [
+      "shahre-farang/persian"
+    ],
+    "extension": ".json",
+    "settings": {
+      "agg_provider": "Shahre Farang",
+      "agg_provider_country": "United States of America",
+      "agg_data_provider": "Shahre Farang",
+      "agg_data_provider_country": "United States of America",
+      "agg_provider_ar": "شهرفرنگ",
+      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "agg_data_provider_ar": "شهرفرنگ",
+      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "inst_id": "shahre_farang"
+    }
+  },
+  {
+    "trajects": [
+      "shahre_farang_english_config.rb"
+    ],
+    "paths": [
+      "shahre-farang/english"
+    ],
+    "extension": ".json",
+    "settings": {
+      "agg_provider": "Shahre Farang",
+      "agg_provider_country": "United States of America",
+      "agg_data_provider": "Shahre Farang",
+      "agg_data_provider_country": "United States of America",
+      "agg_provider_ar": "شهرفرنگ",
+      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "agg_data_provider_ar": "شهرفرنگ",
+      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "inst_id": "shahre_farang"
+    }
+  },
+  {
+    "trajects": [
+      "shahre_farang_arabic_config.rb"
+    ],
+    "paths": [
+      "shahre-farang/arabic"
+    ],
+    "extension": ".json",
+    "settings": {
+      "agg_provider": "Shahre Farang",
+      "agg_provider_country": "United States of America",
+      "agg_data_provider": "Shahre Farang",
+      "agg_data_provider_country": "United States of America",
+      "agg_provider_ar": "شهرفرنگ",
+      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "agg_data_provider_ar": "شهرفرنگ",
+      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "inst_id": "shahre_farang"
+    }
+  },
+  {
+    "trajects": [
       "stanford_mods_config.rb"
     ],
     "paths": [
