@@ -400,6 +400,44 @@ RSpec.describe Macros::DateParsing do
     end
   end
 
+  describe '#harvard_mods_date_range' do
+    let(:record) do
+      <<-XML
+        <mods:mods xmlns:mods="http://www.loc.gov/mods/v3" version="3.4">
+          <mods:originInfo>
+            #{date_els}
+          </mods:originInfo>
+        </mods:mods>
+      XML
+    end
+    let(:ng_rec) { Nokogiri::XML.parse(record) }
+
+    before do
+      indexer.instance_eval do
+        to_field 'range', harvard_mods_date_range
+      end
+    end
+
+    context 'when dateCreated element exists' do
+      context 'when point attributes available' do
+        let(:date_els) do
+          '<mods:dateCreated encoding="w3cdtf" keyDate="yes" point="start" qualifier="approximate">1825</mods:dateCreated>
+          <mods:dateCreated encoding="w3cdtf" point="end" qualifier="approximate">1875</mods:dateCreated>'
+        end
+
+        it 'uses end point values for range' do
+          expect(indexer.map_record(ng_rec)).to include 'range' => (1825..1875).to_a
+        end
+      end
+      context 'when keyDate attribute but no point attributes' do
+        let(:date_els) { '<mods:dateCreated encoding="w3cdtf" keyDate="yes" qualifier="inferred">1725</mods:dateCreated>' }
+        it 'uses value for range' do
+          expect(indexer.map_record(ng_rec)).to include 'range' => [1725]
+        end
+      end
+    end
+  end
+
   describe '#marc_date_range' do
     {
       # 008[06-14] => expected result
