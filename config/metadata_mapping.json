@@ -1080,5 +1080,25 @@
       "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
       "inst_id": "stanford"
     }
+  },
+  {
+    "trajects": [
+      "texas_tech_config.rb"
+    ],
+    "paths": [
+      "texas-tech"
+    ],
+    "extension": ".xml",
+    "settings": {
+      "agg_provider": "Texas Tech University Libraries",
+      "agg_provider_country": "United States of America",
+      "agg_data_provider": "Texas Tech University Libraries",
+      "agg_data_provider_country": "United States of America",
+      "agg_provider_ar": "مكتبات جامعة تكساس تك",
+      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "agg_data_provider_ar": "مكتبات جامعة تكساس تك",
+      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "inst_id": "texas-tech"
+    }
   }
 ]
