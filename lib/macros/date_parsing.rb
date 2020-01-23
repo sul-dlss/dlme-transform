@@ -266,6 +266,15 @@ module Macros
       end
     end
 
+    # Extracts date range from Harvard SCW MODS dateCreated element
+    #   looks in each element flavor for specific attribs to get best representation of date range
+    def harvard_mods_date_range
+      lambda do |record, accumulator, context|
+        range = range_from_mods_date_element('mods:dateCreated', record, context)
+        accumulator.replace(range) if range
+      end
+    end
+
     # Extracts date range from Stanford subject/temporal element
     # because the resources are historical maps with more recent GIS data.
     # The date in the MODS date fields refers to the latter but the former is more useful for search.

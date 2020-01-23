@@ -645,6 +645,26 @@
   },
   {
     "trajects": [
+      "harvard_scw_config.rb"
+    ],
+    "paths": [
+      "harvard/scw"
+    ],
+    "extension": ".xml",
+    "settings": {
+      "agg_provider": "Harvard University Library",
+      "agg_provider_country": "United States of America",
+      "agg_data_provider": "Harvard University's Libraries and Museums",
+      "agg_data_provider_country": "United States of America",
+      "agg_provider_ar": "مكتبة جامعة هارفارد",
+      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "agg_data_provider_ar": "مكتبات ومتاحف جامعة هارفارد",
+      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "inst_id": "harvard"
+    }
+  },
+  {
+    "trajects": [
       "fgdc_config.rb"
     ],
     "paths": [
@@ -979,6 +999,66 @@
       "agg_data_provider_ar": "متحف صاقب صابونجي",
       "agg_data_provider_country_ar": "تركيا",
       "inst_id": "sakip-sabanci"
+    }
+  },
+  {
+    "trajects": [
+      "shahre_farang_persian_config.rb"
+    ],
+    "paths": [
+      "shahre-farang/persian"
+    ],
+    "extension": ".json",
+    "settings": {
+      "agg_provider": "Shahre Farang",
+      "agg_provider_country": "United States of America",
+      "agg_data_provider": "Shahre Farang",
+      "agg_data_provider_country": "United States of America",
+      "agg_provider_ar": "شهرفرنگ",
+      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "agg_data_provider_ar": "شهرفرنگ",
+      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "inst_id": "shahre_farang"
+    }
+  },
+  {
+    "trajects": [
+      "shahre_farang_english_config.rb"
+    ],
+    "paths": [
+      "shahre-farang/english"
+    ],
+    "extension": ".json",
+    "settings": {
+      "agg_provider": "Shahre Farang",
+      "agg_provider_country": "United States of America",
+      "agg_data_provider": "Shahre Farang",
+      "agg_data_provider_country": "United States of America",
+      "agg_provider_ar": "شهرفرنگ",
+      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "agg_data_provider_ar": "شهرفرنگ",
+      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "inst_id": "shahre_farang"
+    }
+  },
+  {
+    "trajects": [
+      "shahre_farang_arabic_config.rb"
+    ],
+    "paths": [
+      "shahre-farang/arabic"
+    ],
+    "extension": ".json",
+    "settings": {
+      "agg_provider": "Shahre Farang",
+      "agg_provider_country": "United States of America",
+      "agg_data_provider": "Shahre Farang",
+      "agg_data_provider_country": "United States of America",
+      "agg_provider_ar": "شهرفرنگ",
+      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "agg_data_provider_ar": "شهرفرنگ",
+      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "inst_id": "shahre_farang"
     }
   },
   {
