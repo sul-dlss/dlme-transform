@@ -12,7 +12,7 @@ module Macros
     def extract_record_id(record)
       url = record.xpath('//tei:facsimile/tei:graphic/@url', NS).map(&:text).first
       url.gsub!('http://cudl.lib.cam.ac.uk/content/images/', '')
-      url.gsub!('-000-00001_files/8/0_0.jpg', '')
+      url.gsub!(%r{-\d+-\d+_files\/8\/0_0.jpg}, '')
     end
   end
 end
