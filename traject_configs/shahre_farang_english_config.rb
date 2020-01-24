@@ -31,7 +31,7 @@ to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
 
 # Cho Required
-to_field 'id', extract_json('.id'), strip
+to_field 'id', extract_json('.id'), strip, append('en')
 to_field 'cho_title', extract_json('.title'), strip, lang('en')
 
 # Cho Other
