@@ -51,10 +51,8 @@ to_field 'cho_date_range_hijri', extract_oai('dc:date'), strip, auc_date_range, 
 to_field 'cho_date_range_norm', extract_oai('dc:date'), strip, auc_date_range
 to_field 'cho_description', extract_oai('dc:description'), strip, lang('en')
 to_field 'cho_dc_rights', extract_oai('dc:rights'), strip, lang('en')
-to_field 'cho_edm_type', extract_oai('dc:type'),
-         split(';'), strip, transform(&:downcase), normalize_type, lang('en')
-to_field 'cho_edm_type', extract_oai('dc:type'),
-         split(';'), strip, transform(&:downcase), normalize_type, translation_map('norm_types_to_ar'), lang('ar-Arab')
+to_field 'cho_edm_type', literal('Text'), lang('en')
+to_field 'cho_edm_type', literal('Text'), translation_map('norm_types_to_ar'), lang('ar-Arab')
 to_field 'cho_format', extract_oai('dc:format'), strip, lang('en')
 to_field 'cho_has_type', literal('Manuscript'), lang('en')
 to_field 'cho_has_type', literal('Manuscript'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
