@@ -122,5 +122,13 @@ module Macros
         acc.last
       end
     end
+
+    # Override the traject default as our hashing clobbers the default method passing an empty array afterwards
+    # this is fixed by using the .replace method instead of appending.
+    def default(default_value)
+      lambda do |_rec, acc|
+        acc.replace([default_value]) if acc.reject { |_, v| v.nil? || v.empty? }.empty?
+      end
+    end
   end
 end
