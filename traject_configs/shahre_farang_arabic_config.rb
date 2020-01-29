@@ -46,8 +46,8 @@ to_field 'cho_edm_type', literal('Text'), translation_map('norm_types_to_ar'), l
 to_field 'cho_has_type', literal('Other Document'), lang('en')
 to_field 'cho_has_type', literal('Other Document'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
 to_field 'cho_identifier', extract_json('.id'), strip
-to_field 'cho_language', literal('English'), lang('en')
-to_field 'cho_language', literal('English'), translation_map('norm_languages_to_ar'), lang('ar-Arab')
+to_field 'cho_language', literal('Arabic'), lang('en')
+to_field 'cho_language', literal('Arabic'), translation_map('norm_languages_to_ar'), lang('ar-Arab')
 to_field 'cho_subject', extract_json('.tags[0].term'), strip, lang('ar-Arab')
 to_field 'cho_subject', extract_json('.tags[1].term'), strip, lang('ar-Arab')
 to_field 'cho_subject', extract_json('.tags[2].term'), strip, lang('ar-Arab')
