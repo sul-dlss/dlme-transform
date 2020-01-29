@@ -270,12 +270,19 @@ module Macros
     #   looks in each element flavor for specific attribs to get best representation of date range
     def harvard_mods_date_range
       lambda do |record, accumulator, context|
-        begin
+        start_year = record.xpath("#{ORIGIN_INFO_PATH}/mods:dateCreated[@point='start']", MODS_NS)&.first&.content
+        if start_year.is_a? Integer
           range = range_from_mods_date_element('mods:dateCreated', record, context)
           accumulator.replace(range) if range
-        rescue
-          start_year = record.xpath("#{ORIGIN_INFO_PATH}/mods:dateCreated[@point='start']", MODS_NS)&.first&.content.split.first
-          end_year = record.xpath("#{ORIGIN_INFO_PATH}/mods:dateCreated[@point='end']", MODS_NS)&.first&.content.split.first
+        else
+          start_year = record.xpath("#{ORIGIN_INFO_PATH}/mods:dateCreated[@point='start']", MODS_NS)&.first
+                                                                                                    &.content
+                                                                                                    &.split
+                                                                                                    &.first
+          end_year = record.xpath("#{ORIGIN_INFO_PATH}/mods:dateCreated[@point='end']", MODS_NS)&.first
+                                                                                                &.content
+                                                                                                &.split
+                                                                                                &.first
           accumulator.replace(range_array(context, start_year, end_year))
         end
       end
