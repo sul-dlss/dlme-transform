@@ -625,26 +625,6 @@
   },
   {
     "trajects": [
-      "csic_config.rb"
-    ],
-    "paths": [
-      "csic"
-    ],
-    "extension": ".mrc",
-    "settings": {
-      "agg_provider": "CLUSTER",
-      "agg_provider_country": "Egypt",
-      "agg_data_provider": "CLUSTER",
-      "agg_data_provider_country": "Egypt",
-      "agg_provider_ar": "مختبر عمران القاهرة للتصميم والدراسات",
-      "agg_provider_country_ar": "مصر",
-      "agg_data_provider_ar": "مختبر عمران القاهرة للتصميم والدراسات",
-      "agg_data_provider_country_ar": "مصر",
-      "inst_id": "csic"
-    }
-  },
-  {
-    "trajects": [
       "harvard_ihp_config.rb"
     ],
     "paths": [
