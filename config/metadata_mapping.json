@@ -625,6 +625,26 @@
   },
   {
     "trajects": [
+      "csic_config.rb"
+    ],
+    "paths": [
+      "csic"
+    ],
+    "extension": ".mrc",
+    "settings": {
+      "agg_provider": "CLUSTER",
+      "agg_provider_country": "Egypt",
+      "agg_data_provider": "CLUSTER",
+      "agg_data_provider_country": "Egypt",
+      "agg_provider_ar": "مختبر عمران القاهرة للتصميم والدراسات",
+      "agg_provider_country_ar": "مصر",
+      "agg_data_provider_ar": "مختبر عمران القاهرة للتصميم والدراسات",
+      "agg_data_provider_country_ar": "مصر",
+      "inst_id": "csic"
+    }
+  },
+  {
+    "trajects": [
       "harvard_ihp_config.rb"
     ],
     "paths": [
@@ -681,6 +701,126 @@
       "agg_data_provider_ar": "جامعة هارفارد، مركز التحليل الجغرافي",
       "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
       "inst_id": "harvard"
+    }
+  },
+  {
+    "trajects": [
+      "loc_abdul_hamid_ii_books_config.rb"
+    ],
+    "paths": [
+      "loc/abdul-hamid-ii-books"
+    ],
+    "extension": ".json",
+    "settings": {
+      "agg_provider": "Library of Congress",
+      "agg_provider_country": "United States of America",
+      "agg_data_provider": "Library of Congress",
+      "agg_data_provider_country": "United States of America",
+      "agg_provider_ar": "مكتبة الكونغرس",
+      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "agg_data_provider_ar": "مكتبة الكونغرس",
+      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "inst_id": "loc"
+    }
+  },
+  {
+    "trajects": [
+      "loc_abdul_hamid_ii_photos_config.rb"
+    ],
+    "paths": [
+      "loc/abdul-hamid-ii-photos"
+    ],
+    "extension": ".json",
+    "settings": {
+      "agg_provider": "Library of Congress",
+      "agg_provider_country": "United States of America",
+      "agg_data_provider": "Library of Congress",
+      "agg_data_provider_country": "United States of America",
+      "agg_provider_ar": "مكتبة الكونغرس",
+      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "agg_data_provider_ar": "مكتبة الكونغرس",
+      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "inst_id": "loc"
+    }
+  },
+  {
+    "trajects": [
+      "loc_el_taher_config.rb"
+    ],
+    "paths": [
+      "loc/el-taher"
+    ],
+    "extension": ".json",
+    "settings": {
+      "agg_provider": "Library of Congress",
+      "agg_provider_country": "United States of America",
+      "agg_data_provider": "Library of Congress",
+      "agg_data_provider_country": "United States of America",
+      "agg_provider_ar": "مكتبة الكونغرس",
+      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "agg_data_provider_ar": "مكتبة الكونغرس",
+      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "inst_id": "loc"
+    }
+  },
+  {
+    "trajects": [
+      "loc_greek_and_armenian_patriarchates_config.rb"
+    ],
+    "paths": [
+      "loc/greek-and-armenian-patriarchates"
+    ],
+    "extension": ".json",
+    "settings": {
+      "agg_provider": "Library of Congress",
+      "agg_provider_country": "United States of America",
+      "agg_data_provider": "Library of Congress",
+      "agg_data_provider_country": "United States of America",
+      "agg_provider_ar": "مكتبة الكونغرس",
+      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "agg_data_provider_ar": "مكتبة الكونغرس",
+      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "inst_id": "loc"
+    }
+  },
+  {
+    "trajects": [
+      "loc_persian_config.rb"
+    ],
+    "paths": [
+      "loc/persian"
+    ],
+    "extension": ".json",
+    "settings": {
+      "agg_provider": "Library of Congress",
+      "agg_provider_country": "United States of America",
+      "agg_data_provider": "Library of Congress",
+      "agg_data_provider_country": "United States of America",
+      "agg_provider_ar": "مكتبة الكونغرس",
+      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "agg_data_provider_ar": "مكتبة الكونغرس",
+      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "inst_id": "loc"
+    }
+  },
+  {
+    "trajects": [
+      "loc_st_catherines_monastery_config.rb"
+    ],
+    "paths": [
+      "loc/st-catherines-monastery"
+    ],
+    "extension": ".json",
+    "settings": {
+      "agg_provider": "Library of Congress",
+      "agg_provider_country": "United States of America",
+      "agg_data_provider": "Library of Congress",
+      "agg_data_provider_country": "United States of America",
+      "agg_provider_ar": "مكتبة الكونغرس",
+      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "agg_data_provider_ar": "مكتبة الكونغرس",
+      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "inst_id": "loc"
     }
   },
   {
