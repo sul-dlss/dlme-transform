@@ -41,6 +41,26 @@
   },
   {
     "trajects": [
+      "antiquities_coalition_config.rb"
+    ],
+    "paths": [
+      "antiquities-coalition"
+    ],
+    "extension": ".json",
+    "settings": {
+      "agg_provider": "Antiquities Coalition",
+      "agg_provider_country": "United States of America",
+      "agg_data_provider": "Antiquities Coalition",
+      "agg_data_provider_country": "United States of America",
+      "agg_provider_ar": "التحالف للاثار",
+      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "agg_data_provider_ar": "التحالف للاثار",
+      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "inst_id": "antiquities"
+    }
+  },
+  {
+    "trajects": [
       "aub_common_config.rb",
       "aub_postcards_config.rb"
     ],
