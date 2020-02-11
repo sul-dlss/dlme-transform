@@ -625,6 +625,26 @@
   },
   {
     "trajects": [
+      "csic_config.rb"
+    ],
+    "paths": [
+      "csic"
+    ],
+    "extension": ".xml",
+    "settings": {
+      "agg_provider": "El Consejo Superior de Investigaciones Científicas (CSIC)",
+      "agg_provider_country": "Spain",
+      "agg_data_provider": "El Consejo Superior de Investigaciones Científicas (CSIC)",
+      "agg_data_provider_country": "Spain",
+      "agg_provider_ar": "المجلس الأعلى للبحث العلمي",
+      "agg_provider_country_ar": "إسبانيا",
+      "agg_data_provider_ar": "المجلس الأعلى للبحث العلمي",
+      "agg_data_provider_country_ar": "إسبانيا",
+      "inst_id": "csic"
+    }
+  },
+  {
+    "trajects": [
       "harvard_ihp_config.rb"
     ],
     "paths": [
