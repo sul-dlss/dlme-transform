@@ -43,12 +43,14 @@ to_field 'cho_title', extract_marc('245ab', alternate_script: false), trim_punct
 
 # CHO Other
 to_field 'cho_alternative', extract_marc('130a:240a:246ab', alternate_script: false), trim_punctuation
+to_field 'cho_alternative', extract_marc('740a', alternate_script: false), trim_punctuation
 to_field 'cho_contributor', extract_marc('700abce:710abcde:711acde:720ae', alternate_script: false), trim_punctuation
 to_field 'cho_creator', extract_marc('100abc:110abcd:111acd', alternate_script: false), trim_punctuation
 to_field 'cho_date', extract_marc('260c')
 to_field 'cho_date_range_norm', extract_marc('008[06-14]'), marc_date_range
 to_field 'cho_date_range_hijri', extract_marc('008[06-14]'), marc_date_range, hijri_range
 to_field 'cho_description', extract_marc('500a:505agrtu:520abcu', alternate_script: false), strip, lang('es')
+to_field 'cho_description', extract_marc('563a', alternate_script: false), strip, lang('es')
 to_field 'cho_edm_type', marc_type_to_edm, translation_map('norm_types_to_ar'), lang('ar-Arab')
 to_field 'cho_extent', extract_marc('300abcefg', alternate_script: false), trim_punctuation, lang('es')
 to_field 'cho_format', marc_formats, lang('en')
@@ -59,6 +61,7 @@ to_field 'cho_is_part_of', extract_marc('440a:490a:800abcdt:400abcd:810abcdt:410
 to_field 'cho_language', extract_marc('008[35-37]:041a:041d'), normalize_language, lang('en')
 to_field 'cho_language', extract_marc('008[35-37]:041a:041d'), normalize_language, translation_map('norm_languages_to_ar'), lang('ar-Arab')
 to_field 'cho_publisher', extract_marc('260b:264b', alternate_script: false), trim_punctuation, lang('en')
+to_field 'cho_provenance', extract_marc('541a', alternate_script: false), trim_punctuation, lang('es')
 to_field 'cho_spatial', marc_geo_facet, lang('en')
 SIX00 = '600abcdefghjklmnopqrstuvxy'
 SIX10 = '610abcdefghklmnoprstuvxy'
