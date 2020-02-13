@@ -86,11 +86,6 @@ to_field 'agg_is_shown_at' do |_record, accumulator, context|
     'wr_id' => [extract_json('.rendering'), strip]
   )
 end
-to_field 'agg_is_shown_by' do |_record, accumulator, context|
-  accumulator << transform_values(context,
-                                  'wr_id' => [extract_json('.rendering'), strip],
-                                  'wr_is_referenced_by' => extract_json('.iiif_manifest'))
-end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(context,
                                   'wr_id' => extract_json('.thumbnail'),
