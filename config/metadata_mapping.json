@@ -1100,32 +1100,10 @@
   },
   {
     "trajects": [
-      "princeton_mss_common_config.rb",
-      "princeton_islamic_mss_config.rb"
+      "princeton_mss_config.rb"
     ],
     "paths": [
       "princeton/islamic_mss"
-    ],
-    "extension": ".json",
-    "settings": {
-      "agg_provider": "Princeton University Library",
-      "agg_provider_country": "United States of America",
-      "agg_data_provider": "Princeton University Library",
-      "agg_data_provider_country": "United States of America",
-      "agg_provider_ar": "مكتبة جامعة برينستون",
-      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "agg_data_provider_ar": "مكتبة جامعة برينستون",
-      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "inst_id": "princeton"
-    }
-  },
-  {
-    "trajects": [
-      "princeton_mss_common_config.rb",
-      "princeton_yemeni_mss_config.rb"
-    ],
-    "paths": [
-      "princeton/yemeni_mss"
     ],
     "extension": ".json",
     "settings": {
