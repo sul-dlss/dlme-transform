@@ -26,30 +26,6 @@ settings do
   provide 'reader_class_name', 'TrajectPlus::JsonReader'
 end
 
-each_record do |record, context|
-  context.clipboard[:iiif_json] = grab_iiif_manifest(record['iiif_manifest'])
-end
-
-# Service Objects
-def iiif_thumbnail_service(iiif_json)
-  lambda { |_record, accumulator, context|
-    accumulator << transform_values(context,
-                                    'service_id' => literal(iiif_thumbnail_service_id(iiif_json)),
-                                    'service_conforms_to' => literal(iiif_thumbnail_service_conforms_to(iiif_json)),
-                                    'service_implements' => literal(iiif_thumbnail_service_protocol(iiif_json)))
-  }
-end
-
-# Service Objects
-def iiif_sequences_service(iiif_json)
-  lambda { |_record, accumulator, context|
-    accumulator << transform_values(context,
-                                    'service_id' => literal(iiif_sequence_service_id(iiif_json)),
-                                    'service_conforms_to' => literal(iiif_sequence_service_conforms_to(iiif_json)),
-                                    'service_implements' => literal(iiif_sequence_service_protocol(iiif_json)))
-  }
-end
-
 # Set Version & Timestamp on each record
 to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
@@ -104,38 +80,15 @@ to_field 'agg_data_provider', data_provider_ar, lang('ar-Arab')
 to_field 'agg_data_provider_country', data_provider_country, lang('en')
 to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
-  accumulator << transform_values(
-    context,
-    'wr_id' => [extract_json('.rendering'), strip]
-  )
+  accumulator << transform_values(context,
+                                    'wr_id' => extract_json('.rendering'),
+                                    'wr_is_referenced_by' => extract_json('.iiif_manifest'))
 end
-
-to_field 'agg_is_shown_by' do |_record, accumulator, context|
-  if context.clipboard[:iiif_json].present?
-    iiif_json = context.clipboard[:iiif_json]
-    accumulator << transform_values(context,
-                                    'wr_description' => [
-                                      extract_json('.description'),
-                                      extract_json('.contents[0]'),
-                                      extract_json('.binding_note[0]')
-                                    ],
-                                    'wr_has_service' => iiif_sequences_service(iiif_json),
-                                    'wr_id' => literal(iiif_sequence_id(iiif_json)),
-                                    'wr_is_referenced_by' => literal(context.clipboard[:manifest]))
-  end
-end
-
 to_field 'agg_preview' do |_record, accumulator, context|
-  if context.clipboard[:iiif_json].present?
-    iiif_json = context.clipboard[:iiif_json]
-    accumulator << transform_values(context,
-                                    'wr_has_service' => iiif_thumbnail_service(iiif_json),
-                                    # The default thumbnail may cause issues
+  accumulator << transform_values(context,
                                     'wr_id' => extract_json('.thumbnail'),
-                                    'wr_is_referenced_by' => literal(context.clipboard[:manifest]))
-  end
+                                    'wr_is_referenced_by' => extract_json('.iiif_manifest'))
 end
-
 to_field 'agg_provider', provider, lang('en')
 to_field 'agg_provider', provider_ar, lang('ar-Arab')
 to_field 'agg_provider_country', provider_country, lang('en')
