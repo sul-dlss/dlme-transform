@@ -266,6 +266,26 @@
   },
   {
     "trajects": [
+      "auc_university_on_square_coll7_config.rb"
+    ],
+    "paths": [
+      "auc/university_on_square_coll7"
+    ],
+    "extension": ".xml",
+    "settings": {
+      "agg_provider": "American University in Cairo",
+      "agg_provider_country": "Egypt",
+      "agg_data_provider": "American University in Cairo",
+      "agg_data_provider_country": "Egypt",
+      "agg_provider_ar": "الجامعة الأمريكية في القاهرة",
+      "agg_provider_country_ar": "مصر",
+      "agg_data_provider_ar": "الجامعة الأمريكية في القاهرة",
+      "agg_data_provider_country_ar": "مصر",
+      "inst_id": "auc"
+    }
+  },
+  {
+    "trajects": [
       "auc_underwood_coll8_config.rb"
     ],
     "paths": [
