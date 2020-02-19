@@ -430,9 +430,9 @@ RSpec.describe Macros::DateParsing do
         end
       end
       context 'when keyDate attribute but no point attributes' do
-        let(:date_els) { '<mods:dateCreated encoding="w3cdtf" keyDate="yes" qualifier="approximate">1725</mods:dateCreated>' }
+        let(:date_els) { '<mods:dateCreated encoding="w3cdtf" keyDate="yes">1123</mods:dateCreated>' }
         it 'uses value for range' do
-          expect(indexer.map_record(ng_rec)).to include 'range' => [1725]
+          expect(indexer.map_record(ng_rec)).to include 'range' => [1123]
         end
       end
     end
