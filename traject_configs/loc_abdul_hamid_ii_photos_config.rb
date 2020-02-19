@@ -61,14 +61,13 @@ to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_id' => [extract_json('.id'), strip],
-    'wr_is_referenced_by' => [extract_json('.id'), split('item[-1]'), append('manifest.json')]
+    'wr_id' => [extract_json('.id'), strip]
   )
 end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_id' => [extract_json('image_url[0]'), strip, prepend('http:')]
+    'wr_id' => [extract_json('image_url[0]'), strip, gsub('https', ''), gsub('http', ''), prepend('http:')]
   )
 end
 to_field 'agg_provider', provider, lang('en')
