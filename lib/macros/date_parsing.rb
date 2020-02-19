@@ -272,15 +272,11 @@ module Macros
       lambda do |record, accumulator, context|
         return unless record.xpath("#{ORIGIN_INFO_PATH}/mods:dateCreated", MODS_NS)
 
-        start_year = record.xpath("#{ORIGIN_INFO_PATH}/mods:dateCreated[@point='start']", MODS_NS)&.first&.content
-        if start_year.is_a? Integer
-          range = range_from_mods_date_element('mods:dateCreated', record, context)
-          accumulator.replace(range) if range
-        else
-          start_year = record.xpath("#{ORIGIN_INFO_PATH}/mods:dateCreated[@point='start']", MODS_NS)&.first
-                                                                                                    &.content
-                                                                                                    &.split
-                                                                                                    &.first
+        start_year = record.xpath("#{ORIGIN_INFO_PATH}/mods:dateCreated[@point='start']", MODS_NS)&.first
+                                                                                                  &.content
+                                                                                                  &.split
+                                                                                                  &.first
+        if start_year
           end_year = record.xpath("#{ORIGIN_INFO_PATH}/mods:dateCreated[@point='end']", MODS_NS)&.first
                                                                                                 &.content
                                                                                                 &.split
