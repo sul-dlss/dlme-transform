@@ -270,27 +270,30 @@ module Macros
     #   looks in each element flavor for specific attribs to get best representation of date range
     def harvard_mods_date_range
       lambda do |record, accumulator, context|
-        return unless record.xpath("#{ORIGIN_INFO_PATH}/mods:dateCreated", MODS_NS)
-
-        start_year = record.xpath("#{ORIGIN_INFO_PATH}/mods:dateCreated[@point='start']", MODS_NS)&.first
-                                                                                                  &.content
-                                                                                                  &.split
-                                                                                                  &.first
-        if start_year
-          end_year = record.xpath("#{ORIGIN_INFO_PATH}/mods:dateCreated[@point='end']", MODS_NS)&.first
-                                                                                                &.content
-                                                                                                &.split
-                                                                                                &.first
-          accumulator.replace(range_array(context, start_year, end_year))
-        end
-        key_date_node = record.xpath("#{ORIGIN_INFO_PATH}/mods:dateCreated[@keyDate='yes']", MODS_NS)&.first
-        if key_date_node
-          year_str = key_date_node&.content&.strip
-          return ParseDate.parse_range(year_str) if year_str
-        end
-        plain_node_value = record.xpath("#{ORIGIN_INFO_PATH}/mods:dateCreated", MODS_NS)&.first&.content
-        return ParseDate.parse_range(plain_node_value) if plain_node_value
+        range = range_from_harvard_mods_date_range('mods:dateCreated', record, context)
+        accumulator.replace(range) if range
       end
+    end
+
+    # Extracts date range from Harvard SCW MODS dateCreated element
+    #   looks in each element flavor for specific attribs to get best representation of date range
+    def range_from_harvard_mods_date_range(xpath_el_name, record, context)
+      return unless record.xpath("#{ORIGIN_INFO_PATH}/#{xpath_el_name}", MODS_NS)
+
+      start_node = record.xpath("#{ORIGIN_INFO_PATH}/#{xpath_el_name}[@point='start']", MODS_NS)&.first
+      if start_node
+        first = start_node&.content&.split&.first&.strip
+        end_node = record.xpath("#{ORIGIN_INFO_PATH}/#{xpath_el_name}[@point='end']", MODS_NS)&.first
+        last = end_node&.content&.split&.first&.strip
+        return range_array(context, first, last) if first && last
+      end
+      key_date_node = record.xpath("#{ORIGIN_INFO_PATH}/#{xpath_el_name}[@keyDate='yes']", MODS_NS)&.first
+      if key_date_node
+        year_str = key_date_node&.content&.strip
+        return ParseDate.parse_range(year_str) if year_str
+      end
+      plain_node_value = record.xpath("#{ORIGIN_INFO_PATH}/#{xpath_el_name}", MODS_NS)&.first&.content
+      return ParseDate.parse_range(plain_node_value) if plain_node_value
     end
 
     # Extracts date range from Stanford subject/temporal element
