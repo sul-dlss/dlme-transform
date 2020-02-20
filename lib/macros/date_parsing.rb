@@ -185,41 +185,6 @@ module Macros
     HIJRI_IE_GREGORIAN_REGEX = /\d.*i\.?e\.?(?<gregorian>.*\d{3,4}.*)/.freeze
     UU_TRAILING_HYPHEN_REGEX = /\d+uu\-$/.freeze
 
-    # Extracts date range from Harvard IHP data
-    # if the first value has [] chars, take the value inside the brackets and use parse_date
-    # if the first value has i.e., take the value after i.e. and use parse_date
-    # if the first value has no [ and no i.e., take the value and use parse_date
-    # if no result, take the second value and use parse_date
-    def harvard_ihp_date_range
-      lambda do |_record, accumulator|
-        return nil if accumulator.empty?
-
-        first_val = accumulator.first
-        if !first_val.match(GREGORIAN_IN_BRACKET_REGEX).nil?
-          result = ParseDate.parse_range(Regexp.last_match(:gregorian).sub('or', '-'))
-        elsif !first_val.match(HIJRI_IE_GREGORIAN_REGEX).nil?
-          result = ParseDate.parse_range(Regexp.last_match(:gregorian).sub('or', '-'))
-        elsif !first_val.match?(/\[/)
-          result = if first_val.match?(UU_TRAILING_HYPHEN_REGEX)
-                     ParseDate.parse_range(first_val.chop)
-                   else
-                     ParseDate.parse_range(first_val)
-                   end
-        end
-
-        unless result
-          second_val = accumulator[1]
-          result = ParseDate.parse_range(second_val)
-        end
-
-        if result
-          accumulator.replace(result)
-        else
-          accumulator.clear
-        end
-      end
-    end
-
     # Extracts dates from slice of MARC 008 field
     #  to_field "date_range", extract_marc("008[06-14]"), marc_date_range
     #  or, if you have marcxml, get the correct bytes from 008 into the accumulator then call this
@@ -262,15 +227,6 @@ module Macros
         range = range_from_mods_date_element('mods:dateCreated', record, context) ||
                 range_from_mods_date_element('mods:dateValid', record, context) ||
                 range_from_mods_date_element('mods:dateIssued', record, context)
-        accumulator.replace(range) if range
-      end
-    end
-
-    # Extracts date range from Harvard SCW MODS dateCreated element
-    #   looks in each element flavor for specific attribs to get best representation of date range
-    def harvard_mods_date_range
-      lambda do |record, accumulator, context|
-        range = range_from_mods_date_element('mods:dateCreated', record, context)
         accumulator.replace(range) if range
       end
     end
