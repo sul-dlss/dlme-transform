@@ -3,26 +3,27 @@
 require 'dlme_json_resource_writer'
 require 'dlme_debug_writer'
 require 'macros/collection'
+require 'macros/harvard'
+# require 'macros/iiif'
 require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
 require 'macros/mods'
 require 'macros/normalize_language'
 require 'macros/normalize_type'
-require 'macros/stanford'
 require 'macros/timestamp'
 require 'macros/version'
 require 'traject_plus'
 
 extend Macros::Collection
-extend Macros::DLME
 extend Macros::DateParsing
+extend Macros::DLME
 extend Macros::EachRecord
-extend Macros::IIIF
+extend Macros::Harvard
+# extend Macros::IIIF
 extend Macros::Mods
 extend Macros::NormalizeLanguage
 extend Macros::NormalizeType
-extend Macros::Stanford
 extend Macros::Timestamp
 extend Macros::Version
 extend TrajectPlus::Macros

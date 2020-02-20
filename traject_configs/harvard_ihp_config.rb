@@ -14,8 +14,8 @@ require 'macros/version'
 require 'traject_plus'
 
 extend Macros::Collection
-extend Macros::DLME
 extend Macros::DateParsing
+extend Macros::DLME
 extend Macros::EachRecord
 extend Macros::Harvard
 extend Macros::NormalizeLanguage
