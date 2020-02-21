@@ -1163,7 +1163,7 @@
       "qnl_config.rb"
     ],
     "paths": [
-      "qnl"
+      "qnl/british-library-combined"
     ],
     "extension": ".xml",
     "settings": {

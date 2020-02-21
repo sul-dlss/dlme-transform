@@ -119,7 +119,7 @@ module Macros
 
     def last
       lambda do |_rec, acc|
-        acc.last
+        acc.slice!(0, acc.length - 1)
       end
     end
 
