@@ -46,21 +46,6 @@ module Macros
     # @example
     #   name_with_role('en')
     # @return [Proc] a proc that traject can call for each record
-    def name_with_role_works(lang)
-      lambda do |record, accumulator|
-        name = record.xpath("/oai:record/oai:#{lang}_metadata/mods:mods/mods:name/mods:namePart", NS)&.first
-        name_str = name&.content&.strip
-        role = record.xpath("/oai:record/oai:#{lang}_metadata/mods:mods/mods:name/mods:role/mods:roleTerm", NS)&.first
-        role_str = role&.content&.strip
-        name_and_role = name_str + ' (' + role_str + ')'
-        accumulator << name_and_role
-      end
-    end
-
-    # Joins QNL name and role
-    # @example
-    #   name_with_role('en')
-    # @return [Proc] a proc that traject can call for each record
     def name_with_role(lang)
       lambda do |record, accumulator|
         names = []
