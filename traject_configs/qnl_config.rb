@@ -6,18 +6,22 @@ require 'macros/collection'
 require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
+require 'macros/normalize_language'
+require 'macros/normalize_type'
 require 'macros/qnl'
 require 'macros/timestamp'
 require 'macros/version'
 require 'traject_plus'
 
 extend Macros::Collection
-extend Macros::DLME
 extend Macros::DateParsing
+extend Macros::DLME
 extend Macros::EachRecord
+extend Macros::NormalizeLanguage
+extend Macros::NormalizeType
+extend Macros::QNL
 extend Macros::Timestamp
 extend Macros::Version
-extend Macros::QNL
 extend TrajectPlus::Macros
 
 settings do
@@ -25,49 +29,75 @@ settings do
   provide 'reader_class_name', 'TrajectPlus::XmlReader'
 end
 
-to_field 'agg_data_provider_collection', collection
-
 # Set Version & Timestamp on each record
 to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
 
 # CHO Required
 to_field 'id', extract_qnl_identifier, strip
-to_field 'cho_title', extract_qnl('mods:titleInfo/mods:title')
+to_field 'cho_title', extract_qnl_ar('mods:titleInfo/mods:title'), lang('ar-Arab')
+to_field 'cho_title', extract_qnl_en('mods:titleInfo/mods:title'), lang('en')
 
 # CHO Other
-to_field 'cho_coverage', extract_qnl('mods:subject/mods:geographic'), strip
-to_field 'cho_creator', extract_qnl('mods:name/mods:namePart'), strip
-to_field 'cho_date', extract_qnl('mods:originInfo/mods:dateIssued'), strip
-to_field 'cho_date_range_norm', extract_qnl('mods:originInfo/mods:dateIssued'), strip, gsub('/', '-'), parse_range
-to_field 'cho_date_range_hijri', extract_qnl('mods:originInfo/mods:dateIssued'),
+to_field 'cho_coverage', extract_qnl_ar('mods:subject/mods:geographic'), strip, lang('ar-Arab')
+to_field 'cho_coverage', extract_qnl_en('mods:subject/mods:geographic'), strip, lang('en')
+to_field 'cho_contributor', name_with_role('en'), lang('en')
+to_field 'cho_contributor', name_with_role('ar'), lang('ar-Arab')
+to_field 'cho_date', extract_qnl_en('mods:originInfo/mods:dateIssued'), strip
+to_field 'cho_date_range_norm', extract_qnl_en('mods:originInfo/mods:dateIssued'), strip, gsub('/', '-'), parse_range
+to_field 'cho_date_range_hijri', extract_qnl_en('mods:originInfo/mods:dateIssued'),
          strip, gsub('/', '-'), parse_range, hijri_range
-to_field 'cho_dc_rights', literal('Open Government Licence')
-to_field 'cho_description', extract_qnl('mods:physicalDescription/mods:extent'), strip
-to_field 'cho_edm_type', extract_qnl('mods:typeOfResource'),
-         strip, transform(&:downcase), translation_map('not_found', 'types')
-to_field 'cho_extent', extract_qnl('mods:physicalDescription/mods:extent[1]'), strip
-to_field 'cho_identifier', extract_qnl('mods:recordInfo/mods:recordIdentifier')
-to_field 'cho_language', extract_qnl('mods:language/mods/languageTerm'),
-         strip, transform(&:downcase), translation_map('not_found', 'languages', 'marc_languages')
-to_field 'cho_subject', extract_qnl('mods:subject/mods:topic'), strip
+to_field 'cho_dc_rights', extract_qnl_ar('mods:accessCondition'), lang('ar-Arab')
+to_field 'cho_dc_rights', extract_qnl_en('mods:accessCondition'), lang('en')
+to_field 'cho_description', extract_qnl_ar('mods:abstract'), strip, lang('ar-Arab')
+to_field 'cho_description', extract_qnl_en('mods:abstract'), strip, lang('en')
+to_field 'cho_description', extract_qnl_ar('mods:physicalDescription/mods:extent'), strip, lang('ar-Arab')
+to_field 'cho_description', extract_qnl_en('mods:physicalDescription/mods:extent'), strip, lang('en')
+to_field 'cho_edm_type', extract_qnl_en('mods:typeOfResource'), normalize_type, translation_map('norm_types_to_ar'), lang('ar-Arab')
+to_field 'cho_edm_type', extract_qnl_en('mods:typeOfResource'), normalize_type, lang('en')
+to_field 'cho_extent', extract_qnl_ar('mods:physicalDescription/mods:extent[1]'), strip, lang('ar-Arab')
+to_field 'cho_extent', extract_qnl_en('mods:physicalDescription/mods:extent[1]'), strip, lang('en')
+to_field 'cho_has_type', extract_qnl_ar('mods:genre'), strip, lang('ar-Arab')
+to_field 'cho_has_type', extract_qnl_en('mods:genre'), strip, lang('en')
+to_field 'cho_identifier', extract_qnl_ar('mods:identifier'), strip
+to_field 'cho_identifier', extract_qnl_en('mods:identifier'), strip
+to_field 'cho_identifier', extract_qnl_en('mods:recordInfo/mods:recordIdentifier'), strip
+to_field 'cho_identifier', extract_qnl_en('mods:location/mods:shelfLocator'), strip
+to_field 'cho_is_part_of', extract_qnl_ar('mods:location/mods:physicalLocation'), strip, lang('ar-Arab')
+to_field 'cho_is_part_of', extract_qnl_en('mods:location/mods:physicalLocation'), strip, lang('en')
+to_field 'cho_language', extract_qnl_en('mods:language/mods:languageTerm'), normalize_language, translation_map('norm_languages_to_ar'), lang('ar-Arab')
+to_field 'cho_language', extract_qnl_en('mods:language/mods:languageTerm'), normalize_language, lang('en')
+to_field 'cho_spatial', extract_qnl_ar('mods:subject/mods:geographic'), strip, lang('ar-Arab')
+to_field 'cho_spatial', extract_qnl_en('mods:subject/mods:geographic'), strip, lang('en')
+to_field 'cho_subject', extract_qnl_ar('mods:subject/mods:topic'), strip, lang('ar-Arab')
+to_field 'cho_subject', extract_qnl_en('mods:subject/mods:topic'), strip, lang('en')
+to_field 'cho_type', extract_qnl_ar('mods:genre'), strip, lang('ar-Arab')
+to_field 'cho_type', extract_qnl_en('mods:genre'), strip, lang('en')
 
 # Agg
-to_field 'agg_provider', provider, lang('en')
-to_field 'agg_provider', provider_ar, lang('ar-Arab')
 to_field 'agg_data_provider', data_provider, lang('en')
 to_field 'agg_data_provider', data_provider_ar, lang('ar-Arab')
+to_field 'agg_data_provider_collection', collection
+to_field 'agg_data_provider_country', data_provider_country, lang('en')
+to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_id' => [extract_qnl('mods:location/mods:url'), strip]
+    'wr_id' => [extract_qnl_en('mods:location/mods:url'), strip],
+    'wr_is_referenced_by' => [extract_qnl_en('mods:location/mods:url[@access="preview"]'), strip, split('vdc_'), last, split('/'), first_only, prepend('https://www.qdl.qa/en/iiif/81055/vdc_'), append('/manifest')]
   )
 end
-
+to_field 'agg_preview' do |_record, accumulator, context|
+  accumulator << transform_values(
+    context,
+    'wr_id' => [extract_qnl_en('mods:location/mods:url[@access="preview"]'), strip],
+    'wr_is_referenced_by' => [extract_qnl_en('mods:location/mods:url[@access="preview"]'), strip, split('vdc_'), last, split('/'), first_only, prepend('https://www.qdl.qa/en/iiif/81055/vdc_'), append('/manifest')]
+  )
+end
+to_field 'agg_provider', provider, lang('en')
+to_field 'agg_provider', provider_ar, lang('ar-Arab')
 to_field 'agg_provider_country', provider_country, lang('en')
 to_field 'agg_provider_country', provider_country_ar, lang('ar-Arab')
-to_field 'agg_data_provider_country', data_provider_country, lang('en')
-to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 
 each_record convert_to_language_hash(
   'agg_data_provider',
