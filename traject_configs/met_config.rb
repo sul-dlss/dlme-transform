@@ -28,8 +28,6 @@ end
 
 # Note: Met JSON uses blanks ("") instead of nulls.
 
-to_field 'agg_data_provider_collection', collection
-
 # Set Version & Timestamp on each record
 to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
@@ -41,10 +39,10 @@ to_field 'id', extract_json('.objectID'), lambda { |_record, accumulator, contex
 to_field 'cho_title', extract_json('.title'), lang('en')
 
 # CHO Other
-to_field 'cho_creator', generate_creator, lang('en')
 to_field 'cho_coverage', extract_json('.culture'), transform(&:presence), lang('en')
 to_field 'cho_coverage', extract_json('.dynasty'), transform(&:presence), lang('en')
 to_field 'cho_coverage', extract_json('.excavation'), transform(&:presence), lang('en')
+to_field 'cho_creator', generate_creator, lang('en')
 to_field 'cho_date', generate_object_date, transform(&:presence), lang('en')
 to_field 'cho_date', extract_json('.objectDate'), transform(&:presence), lang('en')
 to_field 'cho_date_range_hijri', met_date_range, hijri_range
@@ -59,7 +57,6 @@ to_field 'cho_has_type', literal('Cultural Artifact'), lang('en')
 to_field 'cho_has_type', literal('Cultural Artifact'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
 to_field 'cho_identifier', extract_json('.accessionNumber')
 to_field 'cho_medium', extract_json('.medium'), lang('en')
-to_field 'cho_provenance', extract_json('.creditLine'), lang('en')
 to_field 'cho_spatial', extract_json('.city'), transform(&:presence), lang('en')
 to_field 'cho_spatial', extract_json('.country'), transform(&:presence), lang('en')
 to_field 'cho_spatial', extract_json('.county'), transform(&:presence), lang('en')
@@ -75,6 +72,7 @@ to_field 'cho_type', extract_json('.classification'), lang('en')
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
 to_field 'agg_data_provider', data_provider_ar, lang('ar-Arab')
+to_field 'agg_data_provider_collection', collection
 to_field 'agg_data_provider_country', data_provider_country, lang('en')
 to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
