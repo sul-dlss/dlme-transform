@@ -90,7 +90,7 @@ to_field 'agg_is_shown_at' do |_record, accumulator, context|
 end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(context,
-                                  'wr_id' => [extract_mods('/*/mods:relatedItem[@type="constituent"]/mods:location/mods:url[@displayLabel="Thumbnail"]'), default('https://spotlight.dlmenetwork.org/assets/default-52adc3dc03639885e8aa93763e29868269dd3b9dad4689f140c0175b4f945922.png')],
+                                  'wr_id' => [extract_mods('/*/mods:url'), split('ids:'), last, prepend('https://ids.lib.harvard.edu/ids/iiif/'), append('/full/200,200/0/default.jpg')],
                                   'wr_is_referenced_by' => extract_mods('/*/mods:url'))
 end
 to_field 'agg_provider', provider, lang('en')
