@@ -46,12 +46,14 @@ to_field 'cho_alternative', extract_marc('130a:240a:246ab', alternate_script: fa
 to_field 'cho_alternative', extract_marc('740a', alternate_script: false), trim_punctuation
 to_field 'cho_contributor', extract_marc('700abce:710abcde:711acde:720ae', alternate_script: false), trim_punctuation
 to_field 'cho_creator', extract_marc('100abc:110abcd:111acd', alternate_script: false), trim_punctuation
-to_field 'cho_date', extract_marc('260c')
+to_field 'cho_date_260', extract_marc('260c')
+to_field 'cho_date', extract_marc('008[06-14]')
 to_field 'cho_date_range_norm', extract_marc('008[06-14]'), marc_date_range
 to_field 'cho_date_range_hijri', extract_marc('008[06-14]'), marc_date_range, hijri_range
 to_field 'cho_description', extract_marc('500a:505agrtu:520abcu', alternate_script: false), strip, lang('es')
 to_field 'cho_description', extract_marc('563a', alternate_script: false), strip, lang('es')
-to_field 'cho_edm_type', marc_type_to_edm, translation_map('norm_types_to_ar'), lang('ar-Arab')
+to_field 'cho_edm_type', literal('Text'), lang('en')
+to_field 'cho_edm_type', literal('Text'), translation_map('norm_types_to_ar'), lang('ar-Arab')
 to_field 'cho_extent', extract_marc('300abcefg', alternate_script: false), trim_punctuation, lang('es')
 to_field 'cho_format', marc_formats, lang('en')
 to_field 'cho_has_type', literal('Manuscript'), lang('en')
@@ -71,8 +73,7 @@ SIX5X = '650abcdegvxy:651aegvxy:653a:654abcevy'
 SIXXX_SPEC = [SIX00, SIX10, SIX11, SIX30, SIX5X].join(':')
 to_field 'cho_subject', extract_marc(SIXXX_SPEC, alternate_script: false), lang('es')
 to_field 'cho_temporal', marc_era_facet, lang('en')
-to_field 'cho_type', marc_type_to_edm, lang('en')
-to_field 'cho_type', marc_type_to_edm, translation_map('norm_types_to_ar'), lang('ar-Arab')
+to_field 'cho_type', extract_marc('245h', alternate_script: false), trim_punctuation, lang('es')
 
 # Agg Required
 to_field 'agg_data_provider', data_provider, lang('en')
