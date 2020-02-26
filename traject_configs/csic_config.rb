@@ -46,8 +46,7 @@ to_field 'cho_alternative', extract_marc('130a:240a:246ab', alternate_script: fa
 to_field 'cho_alternative', extract_marc('740a', alternate_script: false), trim_punctuation
 to_field 'cho_contributor', extract_marc('700abce:710abcde:711acde:720ae', alternate_script: false), trim_punctuation
 to_field 'cho_creator', extract_marc('100abc:110abcd:111acd', alternate_script: false), trim_punctuation
-to_field 'cho_date_260', extract_marc('260c')
-to_field 'cho_date', extract_marc('008[06-14]')
+to_field 'cho_date', extract_marc('260c')
 to_field 'cho_date_range_norm', extract_marc('008[06-14]'), marc_date_range
 to_field 'cho_date_range_hijri', extract_marc('008[06-14]'), marc_date_range, hijri_range
 to_field 'cho_description', extract_marc('500a:505agrtu:520abcu', alternate_script: false), strip, lang('es')
