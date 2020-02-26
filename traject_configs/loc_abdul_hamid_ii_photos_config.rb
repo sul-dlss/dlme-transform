@@ -67,7 +67,7 @@ end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_id' => [extract_json('image_url[0]'), strip, gsub('https', ''), gsub('http', ''), prepend('http:')]
+    'wr_id' => [extract_json('image_url[0]'), strip, gsub('https:', ''), gsub('http:', ''), gsub('https', ''), gsub('http', ''), prepend('http:')]
   )
 end
 to_field 'agg_provider', provider, lang('en')
