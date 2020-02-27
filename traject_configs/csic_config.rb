@@ -80,6 +80,9 @@ to_field 'agg_data_provider', data_provider_ar, lang('ar-Arab')
 to_field 'agg_data_provider_collection', collection
 to_field 'agg_data_provider_country', data_provider_country, lang('en')
 to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
+to_field 'agg_preview' do |_record, accumulator, context|
+  accumulator << transform_values(context, 'wr_id' => [extract_marc('035a'), first_only, strip, prepend('http://aleph.csic.es/imagenes/mad01/0006_PMSC/thumb/'), append('.jpg')])
+end
 to_field 'agg_provider', provider, lang('en')
 to_field 'agg_provider', provider_ar, lang('ar-Arab')
 to_field 'agg_provider_country', provider_country, lang('en')
