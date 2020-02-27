@@ -735,9 +735,9 @@
     ],
     "extension": ".xml",
     "settings": {
-      "agg_provider": "El Consejo Superior de Investigaciones Científicas (CSIC)",
+      "agg_provider": "Consejo Superior de Investigaciones Científicas (CSIC)",
       "agg_provider_country": "Spain",
-      "agg_data_provider": "El Consejo Superior de Investigaciones Científicas (CSIC)",
+      "agg_data_provider": "Consejo Superior de Investigaciones Científicas (CSIC)",
       "agg_data_provider_country": "Spain",
       "agg_provider_ar": "المجلس الأعلى للبحث العلمي",
       "agg_provider_country_ar": "إسبانيا",
