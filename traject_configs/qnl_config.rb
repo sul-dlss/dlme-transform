@@ -8,6 +8,7 @@ require 'macros/dlme'
 require 'macros/each_record'
 require 'macros/normalize_language'
 require 'macros/normalize_type'
+require 'macros/path_to_file'
 require 'macros/qnl'
 require 'macros/timestamp'
 require 'macros/version'
@@ -19,6 +20,7 @@ extend Macros::DLME
 extend Macros::EachRecord
 extend Macros::NormalizeLanguage
 extend Macros::NormalizeType
+extend Macros::PathToFile
 extend Macros::QNL
 extend Macros::Timestamp
 extend Macros::Version
@@ -32,6 +34,9 @@ end
 # Set Version & Timestamp on each record
 to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
+
+# File path
+to_field 'dlme_source_file', path_to_file
 
 # CHO Required
 to_field 'id', extract_qnl_identifier, strip
