@@ -35,7 +35,7 @@ module Contracts
       optional(:cho_type).value(:hash?)
       optional(:cho_type_facet).value(:hash?)
 
-      required(:dlme_source_file).value(:string)
+      optional(:dlme_source_file).value(:string)
 
       # See https://github.com/sul-dlss/dlme/blob/master/docs/application_profile.md#oreaggregation
       # required(:transform_version).filled(:string)
