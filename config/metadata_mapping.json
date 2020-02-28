@@ -948,8 +948,7 @@
   },
   {
     "trajects": [
-      "michigan_config.rb",
-      "marc_config.rb"
+      "michigan_config.rb"
     ],
     "paths": [
       "michigan"

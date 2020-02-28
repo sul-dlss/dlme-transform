@@ -61,8 +61,8 @@ to_field 'cho_date_range_hijri', extract_marc('008[06-14]'), marc_date_range, hi
 # to_field 'cho_dc_rights'
 # NOTE: Michigan has coll specific description transform
 # cho_description exemplar below; add it to collection specific config if desired
-# to_field 'cho_description', extract_marc('500a:505agrtu:520abcu', alternate_script: false), strip, lang('en')
-# to_field 'cho_description', extract_marc('500a:505agrtu:520abcu', alternate_script: :only), strip, lang('ar-Arab')
+to_field 'cho_description', extract_marc('500a:505agrtu:520abcu', alternate_script: false), strip, lang('en')
+to_field 'cho_description', extract_marc('500a:505agrtu:520abcu', alternate_script: :only), strip, lang('ar-Arab')
 to_field 'cho_edm_type', marc_type_to_edm, lang('en')
 to_field 'cho_edm_type', marc_type_to_edm, translation_map('norm_types_to_ar'), lang('ar-Arab')
 to_field 'cho_extent', extract_marc('300abcefg', alternate_script: false), trim_punctuation, lang('en')
@@ -94,8 +94,8 @@ SIXXX_SPEC = [SIX00, SIX10, SIX11, SIX30, SIX5X].join(':')
 to_field 'cho_subject', extract_marc(SIXXX_SPEC, alternate_script: false), lang('en')
 to_field 'cho_subject', extract_marc(SIXXX_SPEC, alternate_script: :only), lang('ar-Arab')
 to_field 'cho_temporal', marc_era_facet, lang('en')
-to_field 'cho_type', marc_type_to_edm, lang('en')
-to_field 'cho_type', marc_type_to_edm, translation_map('norm_types_to_ar'), lang('ar-Arab')
+# to_field 'cho_type'
+# to_field 'cho_type'
 
 # Agg Required
 to_field 'agg_data_provider', data_provider, lang('en')
@@ -124,10 +124,13 @@ each_record convert_to_language_hash(
   'cho_coverage',
   'cho_creator',
   'cho_date',
+  'cho_dc_rights',
+  'cho_description',
   'cho_edm_type',
   'cho_extent',
   'cho_format',
   'cho_has_part',
+  'cho_has_type',
   'cho_is_part_of',
   'cho_language',
   'cho_medium',
