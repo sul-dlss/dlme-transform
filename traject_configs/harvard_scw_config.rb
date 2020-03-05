@@ -82,15 +82,14 @@ to_field 'agg_data_provider_collection', collection
 to_field 'agg_data_provider_country', data_provider_country, lang('en')
 to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
-  accumulator << transform_values(
-    context,
-    'wr_id' => [extract_mods('/*/mods:relatedItem[@otherType="HOLLIS Images record"]/mods:location/mods:url'), first_only, strip]
-  )
+  accumulator << transform_values(context,
+                                  'wr_id' => [extract_mods('/*/mods:relatedItem[@otherType="HOLLIS Images record"]/mods:location/mods:url'),
+                                              strip])
 end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(context,
-                                  'wr_id' => [extract_mods('/*/mods:relatedItem[@type="constituent"]/mods:location/mods:url[@displayLabel="Thumbnail"]')]
-  )                              
+                                  'wr_id' => [extract_mods('/*/mods:relatedItem[@type="constituent"]/mods:location/mods:url[@displayLabel="Thumbnail"]'),
+                                              strip])
 end
 to_field 'agg_provider', provider, lang('en')
 to_field 'agg_provider', provider_ar, lang('ar-Arab')
