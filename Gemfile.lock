@@ -75,7 +75,7 @@ GEM
       http-parser (~> 1.2.0)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
-    http-form_data (2.2.0)
+    http-form_data (2.3.0)
     http-parser (1.2.1)
       ffi-compiler (>= 1.0, < 2.0)
     httpclient (2.8.3)
@@ -101,7 +101,7 @@ GEM
     parallel (1.19.1)
     parse_date (0.4.2)
       zeitwerk (~> 2.1)
-    parser (2.7.0.3)
+    parser (2.7.0.4)
       ast (~> 2.4.0)
     powerpack (0.1.2)
     pry (0.12.2)
@@ -172,7 +172,7 @@ GEM
     unf_ext (0.0.7.6)
     unicode-display_width (1.4.1)
     yell (2.2.2)
-    zeitwerk (2.2.2)
+    zeitwerk (2.3.0)
 
 PLATFORMS
   ruby
