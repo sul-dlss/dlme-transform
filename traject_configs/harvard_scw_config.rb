@@ -82,16 +82,14 @@ to_field 'agg_data_provider_collection', collection
 to_field 'agg_data_provider_country', data_provider_country, lang('en')
 to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
-  accumulator << transform_values(
-    context,
-    'wr_id' => [extract_mods('/*/mods:relatedItem[@otherType="HOLLIS Images record"]/mods:location/mods:url'), strip],
-    'wr_is_referenced_by' => [extract_mods('/*/mods:url')]
-  )
+  accumulator << transform_values(context,
+                                  'wr_id' => [extract_mods('/*/mods:relatedItem[@otherType="HOLLIS Images record"]/mods:location/mods:url'),
+                                              strip])
 end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(context,
-                                  'wr_id' => [extract_mods('/*/mods:url'), split('ids:'), last, prepend('https://ids.lib.harvard.edu/ids/iiif/'), append('/full/200,200/0/default.jpg')],
-                                  'wr_is_referenced_by' => extract_mods('/*/mods:url'))
+                                  'wr_id' => [extract_mods('/*/mods:relatedItem[@type="constituent"]/mods:location/mods:url[@displayLabel="Thumbnail"]'),
+                                              strip])
 end
 to_field 'agg_provider', provider, lang('en')
 to_field 'agg_provider', provider_ar, lang('ar-Arab')
