@@ -9,13 +9,13 @@
     "extension": ".xml",
     "settings": {
       "agg_provider": "The American Institute for Maghrib Studies",
-      "agg_provider_country": "Morocco",
+      "agg_provider_country": ["Morocco", "Algeria", "Tunisia"],
       "agg_data_provider": "The American Institute for Maghrib Studies",
-      "agg_data_provider_country": "Morocco",
+      "agg_data_provider_country": ["Morocco", "Algeria", "Tunisia"],
       "agg_provider_ar": "المعهد الأمريكي لدراسات المغرب",
-      "agg_provider_country_ar": "المغرب",
+      "agg_provider_country_ar": ["تونس" ,"الجزائر" ,"المغرب"],
       "agg_data_provider_ar": "المعهد الأمريكي لدراسات المغرب",
-      "agg_data_provider_country_ar": "المغرب",
+      "agg_data_provider_country_ar": ["تونس" ,"الجزائر" ,"المغرب"],
       "inst_id": "aims"
     }
   },
