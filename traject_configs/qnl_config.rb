@@ -62,8 +62,8 @@ to_field 'cho_edm_type', extract_qnl_en('mods:typeOfResource'), normalize_type, 
 to_field 'cho_edm_type', extract_qnl_en('mods:typeOfResource'), normalize_type, lang('en')
 to_field 'cho_extent', extract_qnl_ar('mods:physicalDescription/mods:extent[1]'), strip, lang('ar-Arab')
 to_field 'cho_extent', extract_qnl_en('mods:physicalDescription/mods:extent[1]'), strip, lang('en')
-to_field 'cho_has_type', extract_qnl_ar('mods:genre'), strip, lang('ar-Arab')
-to_field 'cho_has_type', extract_qnl_en('mods:genre'), strip, lang('en')
+to_field 'cho_has_type', extract_qnl_ar('mods:genre'), strip, transform(&:downcase), translation_map('has_type'), gsub('Periodical', 'Other Document'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
+to_field 'cho_has_type', extract_qnl_en('mods:genre'), strip, transform(&:downcase), translation_map('has_type'), gsub('Periodical', 'Other Document'), lang('en')
 to_field 'cho_identifier', extract_qnl_ar('mods:identifier'), strip
 to_field 'cho_identifier', extract_qnl_en('mods:identifier'), strip
 to_field 'cho_identifier', extract_qnl_en('mods:recordInfo/mods:recordIdentifier'), strip
@@ -95,7 +95,7 @@ end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_id' => [extract_qnl_en('mods:location/mods:url[@access="preview"]'), strip],
+    'wr_id' => [extract_qnl_en('mods:location/mods:url[@access="preview"]'), strip, gsub(' ', '%20')],
     'wr_is_referenced_by' => [extract_qnl_en('mods:location/mods:url[@access="preview"]'), strip, split('vdc_'), last, split('/'), first_only, prepend('https://www.qdl.qa/en/iiif/81055/vdc_'), append('/manifest')]
   )
 end
