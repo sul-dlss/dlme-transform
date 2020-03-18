@@ -5726,17 +5726,10 @@ ruh: Ruga
 rui: Rufiji
 ruk: Che
 run: Rundi
-
 ruo: Istro Romanian
 rup: Macedo-Romanian
 ruq: Megleno Romanian
-rus:
-  plural_rule_names:
-  - one
-  - few
-  - many
-  - other Russian
-
+rus: Russian
 rut: Rutul
 ruu: Lanas Lobu
 ruy: Mala (Nigeria)
@@ -5756,13 +5749,11 @@ sad: Sandawe
 sae: "Saban\xC3\xAA"
 saf: Safaliba
 sag: Sango
-
 sah: Yakut
 saj: Sahu
 sak: Sake
 sam: Samaritan Aramaic
 san: Sanskrit
-
 sao: Sause
 sap: "Sanapan\xC3\xA1"
 saq: Samburu
@@ -6851,7 +6842,6 @@ ugy: Uruguayan Sign Language
 uha: Uhami
 uhn: Damal
 uig: Uighur
-
 uis: Uisai
 uiv: Iyive
 uji: Tanjijili
@@ -6862,12 +6852,6 @@ ukl: Ukrainian Sign Language
 ukp: Ukpe-Bayobiri
 ukq: Ukwa
 ukr:
-  plural_rule_names:
-  - one
-  - few
-  - many
-  - other Ukrainian
-
 uks: "Urub\xC3\xBA-Kaapor Sign Language"
 uku: Ukue
 ukw: Ukwuani-Aboh-Ndoni
@@ -6978,7 +6962,6 @@ ved: Veddah
 vel: Veluws
 vem: Vemgo-Mabas
 ven: Venda
-
 veo: "Venture\xC3\xB1o"
 vep: Veps
 ver: Mom Jango
@@ -6987,7 +6970,6 @@ vgt: Vlaamse Gebarentaal
 vic: Virgin Islands Creole English
 vid: Vidunda
 vie: Vietnamese
-
 vif: Vili
 vig: Viemo
 vil: Vilela
@@ -7788,13 +7770,11 @@ zgm: Minz Zhuang
 zgn: Guibian Zhuang
 zgr: Magori
 zha: Zhuang
-
 zhb: Zhaba
 zhd: Dai Zhuang
 zhi: Zhire
 zhn: Nong Zhuang
 zho: Chinese
-
 zhw: Zhoa
 zia: Zia
 zib: Zimbabwe Sign Language

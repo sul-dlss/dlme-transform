@@ -1,0 +1,25 @@
+# Basic mapping from common regex patterns to MODS, MARC, EDM, DCMI type terms.
+archival file: Other Document
+archival item: Other Document
+archivalfile: Other Document
+certificate: Other Document
+diagram: Other Document
+drawing: Drawing
+illustration: Drawing
+journal: Periodical
+letter: Letter
+letter book: Letter
+list: Other Document
+manuscript: Manuscript
+manuscript item: Manuscript
+map: Map
+newspaper article: Newspaper
+note: Other Document
+painting: Painting
+photograph: Photograph
+plan: Other Document
+print: Visual Art
+report: Other Document
+statistical table: Other Document
+visual art: Visual Art
+volume: Book
