@@ -50,6 +50,8 @@ to_field 'cho_dc_rights', extract_harvard('//*/dc:rights'), strip, lang('en')
 to_field 'cho_edm_type', extract_harvard('//*/dc:type[1]'), normalize_type, lang('en')
 to_field 'cho_edm_type', extract_harvard('//*/dc:type[1]'), normalize_type, translation_map('norm_types_to_ar'), lang('ar-Arab')
 to_field 'cho_format', extract_harvard('//*/dc:format'), strip, lang('en')
+to_field 'cho_has_type', literal('Manuscript'), lang('en')
+to_field 'cho_has_type', literal('Manuscript'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
 to_field 'cho_language', extract_harvard('//*/dc:language'),
          split(' '), first_only, strip, normalize_language, lang('en')
 to_field 'cho_language', extract_harvard('//*/dc:language'),
