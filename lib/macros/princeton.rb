@@ -11,7 +11,7 @@ module Macros
     end
 
     def get_title_language(record)
-      lang_map = { ara: 'ar' }
+      lang_map = { ara: 'ar' } # other values needed here to map from incoming data to output expected?
       lang_map[record.dig('title').first.dig('@language').to_sym]
     end
   end
