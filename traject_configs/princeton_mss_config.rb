@@ -33,46 +33,15 @@ to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
 
 
-# each_record do |record, context|
-#   context.clipboard[:title_language] = get_language(record)
-# end
-
 # Cho Required
 to_field 'id', extract_json('.identifier[0]'), split(' '), strip, gsub("<a href='http://arks.princeton.edu/", ''), gsub("'", '')
 # uniform_title is not being used but should be if authority control is applied to title field
 
-# to_field 'cho_title', extract_json('.title[0].@value'), strip, lang(context.clipboard[:language])
 # to_field 'id', extract_json('.objectID'), lambda { |_record, accumulator, context|
 #   accumulator.map! { |bare_id| identifier_with_prefix(context, bare_id.to_s) }
 # }
-# to_field 'cho_title' do |record, accumulator, context|
-#   title_language = context.clipboard[:title_language]
-#   puts "This is where the title language goes #{title_language}"
-#   accumulator << transform_values(context, extract_json('.title[0].@value'))
-# end
 
-
-# Passes string to accumulator but lang doesn't work
-# to_field 'cho_title', extract_json('.title[0].@value'), lambda { |record, accumulator| lang(get_language(record)) }
-
-# # Passes proc to accumulator
-# to_field 'cho_title', lambda { |record, accumulator|
-#   accumulator << [extract_json('.title[0].@value'), lang(get_language(record))]
-# }
-
-# Passes proc to accumulator
-each_record do |record, accumulator|
-  accumulator << to_field 'cho_title', extract_json('.title[0].@value'), lang(get_language(record))
-}
-
-# to_field 'cho_title', extract_json('.uniform_title'), lang('en')
-# to_field 'cho_title', extract_json('.dlme_title_en'), lang('en')
-# to_field 'cho_title', extract_json('.dlme_title_none')
-# to_field 'cho_title', extract_json('.dlme_title_ota_arab'), lang('tr-Arab')
-# to_field 'cho_title', extract_json('.dlme_title_ota_latn'), lang('tr-Latn')
-# to_field 'cho_title', extract_json('.dlme_title_per_arab'), lang('fa-Arab')
-# to_field 'cho_title', extract_json('.dlme_title_per_latn'), lang('fa-Latn')
-# to_field 'cho_title', extract_json('.dlme_title_urdu_latn'), lang('ur-Latn')
+to_field 'cho_title', extract_json('.title[0].@value'), strip, get_language_rec
 
 # Cho Other
 to_field 'cho_creator', extract_json('.author[0]'), strip, lang('ar-Latn')
