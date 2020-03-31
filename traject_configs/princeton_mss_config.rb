@@ -33,9 +33,9 @@ to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
 
 
-each_record do |record, context|
-  context.clipboard[:title_language] = get_language_rec(record)
-end
+# each_record do |record, context|
+#   context.clipboard[:title_language] = get_language_rec(record)
+# end
 
 # Cho Required
 to_field 'id', extract_json('.identifier[0]'), split(' '), strip, gsub("<a href='http://arks.princeton.edu/", ''), gsub("'", '')
@@ -47,12 +47,13 @@ to_field 'id', extract_json('.identifier[0]'), split(' '), strip, gsub("<a href=
 #   accumulator.map! { |bare_id| identifier_with_prefix(context, bare_id.to_s) }
 # }
 
-to_field 'cho_title' do |record, accumulator, context|
-  title_language = context.clipboard[:title_language]
-  puts "This is where the title language goes #{title_language}"
-  accumulator << title_language
-end
+# to_field 'cho_title' do |record, accumulator, context|
+#   title_language = context.clipboard[:title_language]
+#   puts "This is where the title language goes #{title_language}"
+#   accumulator << title_language
+# end
 
+to_field 'cho_title', extract_json('.title[0].@value'), strip, get_language_rec
 
 # Passes string to accumulator but lang doesn't work
 # to_field 'cho_title', extract_json('.title[0].@value'), lang(get_language(record)) #, lambda { |record, accumulator| lang(get_language(record)) }
