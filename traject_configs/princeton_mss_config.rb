@@ -32,7 +32,6 @@ end
 to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
 
-
 # Cho Required
 to_field 'id', extract_json('.identifier[0]'), split(' '), strip, gsub("<a href='http://arks.princeton.edu/", ''), gsub("'", '')
 # uniform_title is not being used but should be if authority control is applied to title field
@@ -41,7 +40,7 @@ to_field 'id', extract_json('.identifier[0]'), split(' '), strip, gsub("<a href=
 #   accumulator.map! { |bare_id| identifier_with_prefix(context, bare_id.to_s) }
 # }
 
-to_field 'cho_title', extract_json('.title[0].@value'), strip, get_language_rec
+to_field 'cho_title', extract_json('.title[0].@value'), strip, language_rec
 
 # Cho Other
 to_field 'cho_creator', extract_json('.author[0]'), strip, lang('ar-Latn')
