@@ -24,7 +24,8 @@ acceptable_bcp47_codes:
   - fa-Arab
   - fa-Latn
   - fr
-  - ms
+  - ms-Arab
+  - ms-Latn
   - tr-Arab
   - tr-Latn
   - ur-Arab

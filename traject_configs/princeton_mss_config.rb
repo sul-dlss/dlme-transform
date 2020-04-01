@@ -7,6 +7,7 @@ require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
 require 'macros/normalize_language'
+require 'macros/path_to_file'
 require 'macros/princeton'
 require 'macros/timestamp'
 require 'macros/version'
@@ -17,6 +18,7 @@ extend Macros::DLME
 extend Macros::DateParsing
 extend Macros::EachRecord
 extend Macros::NormalizeLanguage
+extend Macros::PathToFile
 extend Macros::Princeton
 extend Macros::Timestamp
 extend Macros::Version
@@ -32,15 +34,13 @@ end
 to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
 
+# File path
+to_field 'dlme_source_file', path_to_file
+
 # Cho Required
 to_field 'id', extract_json('.identifier[0]'), split(' '), strip, gsub("<a href='http://arks.princeton.edu/", ''), gsub("'", '')
 # uniform_title is not being used but should be if authority control is applied to title field
-
-# to_field 'id', extract_json('.objectID'), lambda { |_record, accumulator, context|
-#   accumulator.map! { |bare_id| identifier_with_prefix(context, bare_id.to_s) }
-# }
-
-to_field 'cho_title', extract_json('.title[0].@value'), strip, language_rec
+to_field 'cho_title', princeton_title_and_lang
 
 # Cho Other
 to_field 'cho_creator', extract_json('.author[0]'), strip, lang('ar-Latn')
