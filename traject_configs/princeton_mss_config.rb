@@ -38,36 +38,37 @@ to_field 'transform_timestamp', timestamp
 to_field 'dlme_source_file', path_to_file
 
 # Cho Required
-to_field 'id', extract_json('.identifier[0]'), split(' '), strip, gsub("<a href='http://arks.princeton.edu/", ''), gsub("'", '')
+to_field 'id', extract_json('.identifier[0]'), split('alt='), first_only, strip, gsub("<a href='http://arks.princeton.edu/", ''), gsub("'", '')
 # uniform_title is not being used but should be if authority control is applied to title field
 to_field 'cho_title', princeton_title_and_lang
 
 # Cho Other
-to_field 'cho_creator', extract_json('.author[0]'), strip, lang('ar-Latn')
-to_field 'cho_creator', extract_json('.creator[0]'), strip, lang('ar-Arab')
-to_field 'cho_contributor', extract_json('.contributor[0]'), strip, lang('ar-Latn')
-to_field 'cho_contributor', extract_json('.contributor[1]'), strip, lang('ar-Arab')
+to_field 'cho_creator', extract_json('.author[0]'), strip, lang('en')
+to_field 'cho_creator', extract_json('.creator[0]'), strip, lang('en')
+to_field 'cho_contributor', extract_json('.contributor[0]'), strip, lang('en')
+to_field 'cho_contributor', extract_json('.contributor[1]'), strip, naive_language_extractor
 to_field 'cho_date', extract_json('.date[0]'), strip, lang('en')
 to_field 'cho_date_range_norm', extract_json('.date[0]'), strip, parse_range
 to_field 'cho_date_range_hijri', extract_json('.date[0]'), strip, parse_range, hijri_range
+to_field 'cho_date', extract_json('.date_created[0]'), strip, lang('en')
+to_field 'cho_date_range_norm', extract_json('.date_created[0]'), strip, parse_range
+to_field 'cho_date_range_hijri', extract_json('.date_created[0]'), strip, parse_range, hijri_range
 to_field 'cho_dc_rights', literal('https://rbsc.princeton.edu/services/imaging-publication-services')
 to_field 'cho_description', extract_json('.description'), strip, lang('en')
-to_field 'cho_description', extract_json('.contents[0]'), strip, lang('en')
+to_field 'cho_description', extract_json('.contents[0]'), strip, naive_language_extractor
 to_field 'cho_description', extract_json('.binding_note[0]'), strip, lang('en')
 to_field 'cho_edm_type', literal('Text'), lang('en')
 to_field 'cho_edm_type', literal('Text'), translation_map('norm_types_to_ar'), lang('ar-Arab')
 to_field 'cho_extent', extract_json('.extent[0]'), strip, lang('en')
-to_field 'cho_extent', extract_json('.extent[1]'), strip, lang('ar-Arab')
 to_field 'cho_has_type', literal('Manuscript'), lang('en')
 to_field 'cho_has_type', literal('Manuscript'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
-to_field 'cho_identifier', extract_json('.source_metadata_identifier[0]'), strip
-to_field 'cho_identifier', extract_json('.identifier[0]'), strip
 to_field 'cho_identifier', extract_json('.local_identifier[0]'), strip
+to_field 'cho_identifier', extract_json('.identifier[0]'), strip
+to_field 'cho_identifier', extract_json('.replaces[0]'), strip, prepend('Replaces: ')
 to_field 'cho_is_part_of', extract_json('.member_of_collections[0]'), strip, lang('en')
 to_field 'cho_language', extract_json('.language[0]'), strip, normalize_language, lang('en')
-to_field 'cho_language', extract_json('.text_language[0]'), strip, normalize_language, translation_map('norm_languages_to_ar'), lang('ar-Arab')
-to_field 'cho_provenance', extract_json('.dlme_en'), strip, lang('en')
-to_field 'cho_provenance', extract_json('.dlme_provenance_ara_arab'), strip, lang('ar-Arab')
+to_field 'cho_language', extract_json('.language[0]'), strip, normalize_language, translation_map('norm_languages_to_ar'), lang('ar-Arab')
+to_field 'cho_provenance', extract_json('.provenance[0]'), strip, naive_language_extractor
 to_field 'cho_publisher', extract_json('.publisher[0]'), strip, lang('en')
 to_field 'cho_publisher', extract_json('.publisher[1]'), strip, lang('ar-Arab')
 to_field 'cho_subject', extract_json('.subject[0]'), strip, lang('en')
@@ -125,8 +126,6 @@ each_record convert_to_language_hash(
   'cho_title',
   'cho_type'
 )
-
-# 'cho_title',
 
 # NOTE: call add_cho_type_facet AFTER calling convert_to_language_hash fields
 each_record add_cho_type_facet
