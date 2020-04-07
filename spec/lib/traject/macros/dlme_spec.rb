@@ -44,14 +44,16 @@ RSpec.describe Macros::DLME do
     context 'when extracted string contains Arabic characters' do
       it 'returns the correct language value ar-Arab' do
         extracted_string = 'الولايات المتحدة الامريكيه'
-        expect(instance).to eq([{ language: 'ar-Arab', values: [extracted_string] }])
+        callable = instance.naive_language_extractor
+        expect(callable.call(nil, [extracted_string])).to eq([{ language: 'ar-Arab', values: [extracted_string] }])
       end
     end
 
     context 'when extracted string does not contain Arabic characters' do
       it 'returns the default language of english' do
         extracted_string = 'Some extracted string value'
-        expect(instance).to eq([{ language: 'en', values: [extracted_string] }])
+        callable = instance.naive_language_extractor
+        expect(callable.call(nil, [extracted_string])).to eq([{ language: 'en', values: [extracted_string] }])
       end
     end
   end
