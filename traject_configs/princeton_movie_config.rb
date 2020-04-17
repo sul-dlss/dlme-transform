@@ -6,6 +6,7 @@ require 'macros/collection'
 require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
+require 'macros/normalize_language'
 require 'macros/timestamp'
 require 'macros/version'
 require 'traject_plus'
@@ -14,6 +15,7 @@ extend Macros::Collection
 extend Macros::DateParsing
 extend Macros::DLME
 extend Macros::EachRecord
+extend Macros::NormalizeLanguage
 extend Macros::Timestamp
 extend Macros::Version
 extend TrajectPlus::Macros
@@ -31,27 +33,33 @@ to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
 
 # Cho Required
-to_field 'id', extract_json('.identifier'), strip
-to_field 'cho_title', extract_json('.title'), strip, lang('ar-Arab')
+to_field 'id', extract_json('.identifier[0]')
+to_field 'cho_title', extract_json('.title[0].@value'), strip, lang('ar-Arab')
 
 # Cho Other
-to_field 'cho_contributor', extract_json('.director'), strip, lang('ar-Arab')
-to_field 'cho_contributor', extract_json('.rendered_actors'), strip, lang('ar-Arab')
-to_field 'cho_date', extract_json('.date_created'), strip, lang('en')
-to_field 'cho_date_range_norm', extract_json('.date_created'), strip, parse_range
-to_field 'cho_date_range_hijri', extract_json('.date_created'), strip, parse_range, hijri_range
+to_field 'cho_creator', extract_json('.director[0].@value'), strip, lang('ar-Arab')
+to_field 'cho_contributor', extract_json('.rendered_actors[0]'), strip, lang('ar-Arab')
+to_field 'cho_contributor', extract_json('.rendered_actors[1]'), strip, lang('ar-Arab')
+to_field 'cho_contributor', extract_json('.rendered_actors[2]'), strip, lang('ar-Arab')
+to_field 'cho_contributor', extract_json('.rendered_actors[3]'), strip, lang('ar-Arab')
+to_field 'cho_contributor', extract_json('.rendered_actors[4]'), strip, lang('ar-Arab')
+to_field 'cho_date', extract_json('.date_created[0]'), strip, lang('en')
+to_field 'cho_date_range_norm', extract_json('.date_created[0]'), strip, parse_range
+to_field 'cho_date_range_hijri', extract_json('.date_created[0]'), strip, parse_range, hijri_range
 to_field 'cho_dc_rights', literal('https://rbsc.princeton.edu/services/imaging-publication-services'), lang('en')
-to_field 'cho_description', extract_json('.member_of_collections'), strip, lang('en')
 to_field 'cho_edm_type', literal('Image'), lang('en')
 to_field 'cho_edm_type', literal('Image'), translation_map('norm_types_to_ar'), lang('ar-Arab')
-to_field 'cho_extent', extract_json('.extent'), strip, lang('en')
+to_field 'cho_extent', extract_json('.extent[0]'), strip, lang('en')
 to_field 'cho_has_type', literal('Poster'), lang('en')
 to_field 'cho_has_type', literal('Poster'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
-to_field 'cho_identifier', extract_json('.local_identifier'), strip
-to_field 'cho_language', extract_json('.language'), strip, lang('en')
-to_field 'cho_language', extract_json('.language'), strip, transform(&:downcase), translation_map('norm_languages_to_ar'), lang('ar-Arab')
-to_field 'cho_type', extract_json('.resource_type'), lang('en')
-to_field 'cho_type', extract_json('.genre'), lang('en')
+to_field 'cho_identifier', extract_json('.local_identifier[0]'), strip
+to_field 'cho_is_part_of', extract_json('.member_of_collections[0]'), strip, lang('en')
+to_field 'cho_is_part_of', extract_json('.member_of_collections[1]'), strip, lang('en')
+to_field 'cho_language', extract_json('.language[0]'), strip, normalize_language, lang('en')
+to_field 'cho_language', extract_json('.language[0]'), strip, normalize_language, translation_map('norm_languages_to_ar'), lang('ar-Arab')
+to_field 'cho_spatial', extract_json('.geographic_origin[0]'), lang('en')
+to_field 'cho_type', extract_json('.resource_type[0]'), lang('en')
+to_field 'cho_type', extract_json('.genre[0]'), lang('en')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
@@ -61,13 +69,15 @@ to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_id' => [extract_json('.identifier'), strip]
+    'wr_id' => [extract_json('.identifier[0]'), strip, prepend('http://arks.princeton.edu/')],
+    'wr_is_referenced_by' => [extract_json('.manifest'), strip]
   )
 end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_id' => [extract_json('.thumbnail'), strip]
+    'wr_id' => [extract_json('.thumbnail'), strip],
+    'wr_is_referenced_by' => [extract_json('.manifest'), strip]
   )
 end
 to_field 'agg_provider', provider, lang('en')

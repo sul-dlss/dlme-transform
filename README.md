@@ -97,7 +97,7 @@ docker run --rm -e SKIP_FETCH_DATA=true \
                 -v $(pwd)/output:/opt/traject/output \
                 suldlss/dlme-transform:latest \
                 stanford/maps/data/kj751hs0595.mods \
-                -w 
+                -w
 ```
 
 Sending output to S3 bucket and publishing an SNS notification:
@@ -233,6 +233,10 @@ to_field 'cho_language', extract_xpath("#{record}/dc:language", ns: NS), first_o
 ## Testing
 
 To run the code linter (Rubocop) and the test suite, including unit and integration tests, run:
+
+In order to run the integration tests, you can clone the `dlme-metadata` repo into the `data` subfolder.
+All of the files except for `.keep` are git ignored, so they should not be re-added to the `dlme-transform`
+repo.
 
 ```shell
 $ bundle exec rake

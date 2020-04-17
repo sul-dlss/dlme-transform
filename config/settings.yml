@@ -24,13 +24,16 @@ acceptable_bcp47_codes:
   - fa-Arab
   - fa-Latn
   - fr
-  - ms
+  - ms-Arab
+  - ms-Latn
   - tr-Arab
   - tr-Latn
   - ur-Arab
   - ur-Latn
 defaults:
   base_data_dir: 'data'
+#  base_data_dir: '../dlme-metadata' # if you haven't cloned the dlme-metadata repo into the `data` subfolder
+#                                      you can uncomment this line if needed when running tests locally (but don't commit)
   data_dir: ''
   mapping_file: 'config/metadata_mapping.json'
   traject_dir: 'traject_configs'

@@ -1122,7 +1122,7 @@
       "princeton_movie_config.rb"
     ],
     "paths": [
-      "princeton/movie_posters"
+      "princeton/movie-posters"
     ],
     "extension": ".json",
     "settings": {
@@ -1142,7 +1142,9 @@
       "princeton_mss_config.rb"
     ],
     "paths": [
-      "princeton/islamic_mss"
+      "princeton/princeton-mss",
+      "princeton/princeton-ymdi",
+      "princeton/babi-bahai"
     ],
     "extension": ".json",
     "settings": {
