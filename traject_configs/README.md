@@ -79,7 +79,7 @@ to_field 'agg_provider', provider_ar, lang('ar-Arab')
 
 #### MODS
 
-[Princeton MODS configuration / mapping](./mods_config.rb).
+[Stanford MODS configuration / mapping](./stanford_mods_config.rb).
 
 #### FGDC
 

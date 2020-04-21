@@ -6,7 +6,7 @@ RSpec.describe Dlme::CLI::Transform do
   describe '#transform' do
     let(:config) do
       {
-        'trajects' => ['mods_config.rb'],
+        'trajects' => ['stanford_mods_config.rb'],
         'settings' => {
           'agg_provider' => 'Stanford Libraries'
         }
@@ -25,7 +25,7 @@ RSpec.describe Dlme::CLI::Transform do
     let(:metadata_mapping_filepath) { 'metadata_mapping.json' }
     let(:base_data_dir) { 'data' }
     let(:traject_dir) { 'traject_configs' }
-    let(:traject_config_filepath) { 'traject_configs/mods_config.rb' }
+    let(:traject_config_filepath) { 'traject_configs/stanford_mods_config.rb' }
     let(:mock_file) { instance_double(File, 'summary') }
     let(:data_dir) { 'stanford/record.mods' }
     let(:summary_filepath) { 'summary.json' }
