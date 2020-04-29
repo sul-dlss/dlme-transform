@@ -72,12 +72,7 @@ to_field 'agg_is_shown_at' do |_record, accumulator, context|
     'wr_id' => [extract_harvard('//*/dc:identifier[last()]'), strip]
   )
 end
-to_field 'agg_preview' do |_record, accumulator, context|
-  accumulator << transform_values(
-    context,
-    'wr_id' => [extract_harvard_thumb]
-  )
-end
+to_field 'agg_preview', extract_harvard_thumb
 to_field 'agg_provider', provider, lang('en')
 to_field 'agg_provider', provider_ar, lang('ar-Arab')
 to_field 'agg_provider_country', provider_country, lang('en')

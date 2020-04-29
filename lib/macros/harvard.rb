@@ -31,7 +31,7 @@ module Macros
       lambda do |record, accumulator, _context|
         id = record.xpath('//*/dc:identifier', dc: NS[:dc])
                    .find { |node| node.text.include?('iiif') || node.text.include?('usethumb=y') }
-        accumulator << id.text unless id.nil?
+        accumulator << { 'wr_id' => [id.text] } unless id.nil?
       end
     end
 
