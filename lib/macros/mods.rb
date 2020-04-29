@@ -73,9 +73,9 @@ module Macros
       mods_lang_xp = '/*/mods:language/mods:languageTerm'
       first(
         extract_mods(mods_lang_label_xp),
-        extract_mods(mods_lang_code_xp, translation_map: ['marc_languages']),
+        extract_mods(mods_lang_code_xp),
         # the last one is separate to eventually pass fuzzy matching parameters
-        extract_mods(mods_lang_xp, translation_map: ['marc_languages', default: '__passthrough__'])
+        extract_mods(mods_lang_xp)
       )
     end
 
