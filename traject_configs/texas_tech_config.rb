@@ -47,10 +47,8 @@ to_field 'cho_date_range_hijri', extract_oai('dc:date'), strip, parse_range, hij
 to_field 'cho_date_range_norm', extract_oai('dc:date'), strip, parse_range
 to_field 'cho_dc_rights', extract_oai('dc:rights'), strip, lang('en')
 to_field 'cho_description', extract_oai('dc:description'), strip, lang('en')
-to_field 'cho_edm_type', extract_oai('dc:type'),
-         split(';'), strip, transform(&:downcase), normalize_type, lang('en')
-to_field 'cho_edm_type', extract_oai('dc:type'),
-         split(';'), strip, transform(&:downcase), normalize_type, translation_map('norm_types_to_ar'), lang('ar-Arab')
+to_field 'cho_edm_type', literal('Text'), lang('en')
+to_field 'cho_edm_type', translation_map('norm_types_to_ar'), lang('ar-Arab')
 to_field 'cho_has_type', literal('Oral Narrative'), lang('en')
 to_field 'cho_has_type', literal('Oral Narrative'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
 to_field 'cho_language', extract_oai('dc:language'), normalize_language, lang('en')
@@ -110,3 +108,6 @@ each_record convert_to_language_hash(
   'cho_title',
   'cho_type'
 )
+
+# NOTE: call add_cho_type_facet AFTER calling convert_to_language_hash fields
+each_record add_cho_type_facet
