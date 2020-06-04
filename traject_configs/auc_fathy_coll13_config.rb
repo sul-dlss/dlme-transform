@@ -52,6 +52,7 @@ to_field 'cho_edm_type', literal('Image'), translation_map('norm_types_to_ar'), 
 to_field 'cho_format', extract_oai('dc:format'), strip, lang('en')
 to_field 'cho_has_type', literal('Drawing'), lang('en')
 to_field 'cho_has_type', literal('Drawing'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
+to_field 'cho_source', extract_oai('dc:source'), strip, lang('en')
 to_field 'cho_subject', extract_oai('dc:subject'), strip, lang('en')
 
 # Agg
