@@ -51,6 +51,7 @@ to_field 'cho_format', extract_oai('dc:format'), strip, lang('en')
 to_field 'cho_has_type', literal('Photograph'), lang('en')
 to_field 'cho_has_type', literal('Photograph'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
 to_field 'cho_relation', extract_oai('dc:relation'), strip, lang('en')
+to_field 'cho_source', extract_oai('dc:source'), strip, lang('en')
 to_field 'cho_subject', extract_oai('dc:subject'), strip, lang('en')
 to_field 'cho_type', extract_oai('dc:type'), lang('en')
 
