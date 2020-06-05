@@ -103,8 +103,7 @@ to_field 'agg_preview' do |_record, accumulator, context|
                                               gsub(%r{_files\/8\/0_0.jpg}, ''),
                                               append('.jp2'),
                                               prepend('https://images.lib.cam.ac.uk/iiif/'),
-                                              append('/full/!200,150/0/default.jpg')
-                                  ])
+                                              append('/full/!200,150/0/default.jpg')])
 end
 to_field 'agg_provider', provider, lang('en')
 to_field 'agg_provider', provider_ar, lang('ar-Arab')
