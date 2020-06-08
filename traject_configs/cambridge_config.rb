@@ -32,7 +32,6 @@ settings do
 end
 
 # Shortcut variables
-FACSIMILE = '//tei:facsimile'
 MS_CONTENTS = 'tei:msContents'
 MS_DESC = '//tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc'
 MS_ID = 'tei:msIdentifier'
@@ -98,7 +97,12 @@ to_field 'agg_is_shown_at' do |_record, accumulator, context|
 end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(context,
-                                  'wr_id' => [extract_tei("#{FACSIMILE}/tei:graphic/@url"), gsub('http://', 'https://image01.')])
+                                  'wr_id' => [extract_tei('//tei:facsimile/tei:graphic/@url'),
+                                              gsub('http://cudl.lib.cam.ac.uk/content/images/', ''),
+                                              gsub(%r{_files\/8\/0_0.jpg}, ''),
+                                              append('.jp2'),
+                                              prepend('https://images.lib.cam.ac.uk/iiif/'),
+                                              append('/full/!200,150/0/default.jpg')])
 end
 to_field 'agg_provider', provider, lang('en')
 to_field 'agg_provider', provider_ar, lang('ar-Arab')
