@@ -32,7 +32,6 @@ settings do
 end
 
 # Shortcut variables
-FACSIMILE = '//tei:facsimile'
 MS_CONTENTS = 'tei:msContents'
 MS_DESC = '//tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc'
 MS_ID = 'tei:msIdentifier'
