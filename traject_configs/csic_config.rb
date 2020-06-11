@@ -3,6 +3,7 @@
 require 'dlme_json_resource_writer'
 require 'dlme_debug_writer'
 require 'macros/collection'
+require 'macros/csic'
 require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/dlme_marc'
@@ -15,6 +16,7 @@ require 'traject/macros/marc_format_classifier'
 require 'traject_plus'
 
 extend Macros::Collection
+extend Macros::Csic
 extend Macros::DLME
 extend Macros::DateParsing
 extend Macros::DlmeMarc
@@ -90,7 +92,7 @@ to_field 'agg_provider_country', provider_country_ar, lang('ar-Arab')
 
 # Agg Additional
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
-  accumulator << transform_values(context, 'wr_id' => [extract_marc('856u'), first_only])
+  accumulator << transform_values(context, 'wr_id' => [extract_marc('856u'), extract_preview])
 end
 
 # NOTE:  add the below to collection specific config
