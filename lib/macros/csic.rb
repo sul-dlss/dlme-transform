@@ -10,7 +10,7 @@ module Macros
     # @return [Proc] a proc that traject can call for each record
     def extract_preview
       lambda { |_record, accumulator, _context|
-        accumulator.filter! { |val| val.include?('simurg.bibliotecas.csic.es') }
+        accumulator&.filter! { |val| val.include?('simurg.bibliotecas.csic.es') }
       }
     end
   end
