@@ -44,8 +44,6 @@ to_field 'cho_title', extract_qnl_ar('mods:titleInfo/mods:title'), lang('ar-Arab
 to_field 'cho_title', extract_qnl_en('mods:titleInfo/mods:title'), lang('en')
 
 # CHO Other
-to_field 'cho_coverage', extract_qnl_ar('mods:subject/mods:geographic'), strip, lang('ar-Arab')
-to_field 'cho_coverage', extract_qnl_en('mods:subject/mods:geographic'), strip, lang('en')
 to_field 'cho_contributor', name_with_role('en'), lang('en')
 to_field 'cho_contributor', name_with_role('ar'), lang('ar-Arab')
 to_field 'cho_date', extract_qnl_en('mods:originInfo/mods:dateIssued'), strip
