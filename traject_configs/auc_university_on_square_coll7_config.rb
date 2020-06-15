@@ -57,9 +57,9 @@ to_field 'cho_edm_type', extract_oai('dc:type'),
          split(';'), strip, transform(&:downcase), normalize_type, translation_map('norm_types_to_ar'), lang('ar-Arab')
 to_field 'cho_format', extract_oai('dc:format'), strip, lang('en')
 to_field 'cho_has_type', extract_oai('dc:type'),
-         split(';'), strip, transform(&:downcase), translation_map('norm_has_type_to_en'), lang('en')
+         split(';'), strip, translation_map('norm_has_type_to_en'), lang('en')
 to_field 'cho_has_type', extract_oai('dc:type'),
-         split(';'), strip, transform(&:downcase), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
+         split(';'), strip, translation_map('norm_has_type_to_ar'), lang('ar-Arab')
 to_field 'cho_language', extract_oai('dc:language'), split(';'),
          split(','), strip, transform(&:downcase), normalize_language, lang('en')
 to_field 'cho_language', extract_oai('dc:language'), split(';'),
