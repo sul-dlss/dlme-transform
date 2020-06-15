@@ -47,21 +47,9 @@ to_field 'id', generate_mods_id
 to_field 'cho_alternative', extract_mods('/*/mods:titleInfo[@type]/mods:title'), lang('en')
 to_field 'cho_coverage', extract_mods('/*/mods:originInfo/mods:place/mods:placeTerm'), lang('en')
 to_field 'cho_creator', extract_name(role: %w[author creator]), lang('en')
-to_field 'cho_date', extract_mods('/*/mods:originInfo/mods:dateCreated')
+to_field 'cho_date', extract_mods('/*/mods:originInfo/mods:dateCreated[3]')
 to_field 'cho_date_range_norm', harvard_mods_date_range
 to_field 'cho_date_range_hijri', harvard_mods_date_range, hijri_range
-to_field 'cho_dc_rights', first(
-  extract_mods('/*/mods:accessCondition[@type="restrictionOnAccess"]/@xlink:href'),
-  extract_mods('/*/mods:accessCondition[@type="restriction on access"]')
-), lang('en')
-to_field 'cho_dc_rights', first(
-  extract_mods('/*/mods:accessCondition[@type="useAndReproduction"]/@xlink:href'),
-  extract_mods('/*/mods:accessCondition[@type="use and reproduction"]')
-), lang('en')
-to_field 'cho_dc_rights', conditional(
-  ->(_record, context) { context.output_hash['cho_dc_rights'].blank? },
-  extract_mods('/*/mods:accessCondition')
-), lang('en')
 to_field 'cho_description', extract_mods('/*/mods:abstract'), lang('en')
 to_field 'cho_edm_type', extract_mods('/*/mods:typeOfResource[1]'), normalize_type, lang('en')
 to_field 'cho_edm_type', extract_mods('/*/mods:typeOfResource[1]'), normalize_type, translation_map('norm_types_to_ar'), lang('ar-Arab')
