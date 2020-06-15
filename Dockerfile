@@ -9,7 +9,7 @@ ENV BUNDLER_VERSION 2.0.2
 RUN apk add --no-cache \
     curl \
     zip \
-    python \
+    python3 \
     libxml2-dev \
     libxslt-dev \
     jq \
@@ -18,7 +18,7 @@ RUN apk add --no-cache \
       build-base \
     && apk add --no-cache --virtual python-dependencies \
     py-pip \
-    python-dev \
+    python3-dev \
     && pip install awscli \
     && apk del python-dependencies \
     && gem install bundler
