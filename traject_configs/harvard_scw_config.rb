@@ -55,6 +55,7 @@ to_field 'cho_edm_type', extract_mods('/*/mods:typeOfResource[1]'), normalize_ty
 to_field 'cho_edm_type', extract_mods('/*/mods:typeOfResource[1]'), normalize_type, translation_map('norm_types_to_ar'), lang('ar-Arab')
 to_field 'cho_extent', extract_mods('/*/mods:physicalDescription/mods:extent'), lang('en')
 to_field 'cho_has_part', generate_relation('/*/mods:relatedItem[@type="constituent"]')
+to_field 'cho_is_part_of', literal('Stuart Cary Welch Islamic and South Asian Photographic Collection'), lang('en')
 to_field 'cho_identifier', extract_mods('/*/mods:recordInfo/mods:recordIdentifier')
 to_field 'cho_language', extract_mods('/*/mods:language/mods:languageTerm[1]'), normalize_language, lang('en')
 to_field 'cho_language', extract_mods('/*/mods:language/mods:languageTerm[1]'), normalize_language, translation_map('norm_languages_to_ar'), lang('ar-Arab')
