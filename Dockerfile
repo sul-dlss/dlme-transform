@@ -19,7 +19,8 @@ RUN apk add --no-cache \
     && apk add --no-cache --virtual python-dependencies \
     py-pip \
     python3-dev \
-    && pip install awscli \
+    && pip3 install six \
+    && pip3 install awscli \
     && apk del python-dependencies \
     && gem install bundler
 
