@@ -20,7 +20,6 @@ RUN apk add --no-cache \
     py-pip \
     python3-dev \
     && pip3 install awscli \
-    && pip3 install --ignore-installed six \
     && apk del python-dependencies \
     && gem install bundler
 
