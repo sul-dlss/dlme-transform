@@ -16,11 +16,11 @@ RUN apk add --no-cache \
     util-linux \
     && apk add --no-cache --virtual build-dependencies \
       build-base \
-    && apk add --no-cache --virtual python-dependencies \
+    && apk add --no-cache --virtual python3-dependencies \
     py-pip \
     python3-dev \
     && pip3 install awscli \
-    && apk del python-dependencies \
+    && apk del python3-dependencies \
     && gem install bundler
 
 # Copy the Gemfile and Gemfile.lock, and run bundle install prior to copying all source files
