@@ -40,7 +40,7 @@ to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
 
 # CHO Required
-to_field 'cho_title', extract_mods('/*/mods:titleInfo/mods:title'), lang('en')
+to_field 'cho_title', extract_mods('/*/mods:titleInfo/mods:title'), first_only, lang('en')
 to_field 'id', generate_mods_id
 
 # CHO Other
