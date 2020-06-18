@@ -1285,16 +1285,16 @@
   },
   {
     "trajects": [
-      "stanford_mods_config.rb"
+      "stanford_config.rb"
     ],
     "paths": [
-      "stanford/maps"
+      "stanford/rumsey-maps"
     ],
-    "extension": ".mods",
+    "extension": ".json",
     "settings": {
       "agg_provider": "Stanford Libraries",
       "agg_provider_country": "United States of America",
-      "agg_data_provider": "Stanford Libraries",
+      "agg_data_provider": "David Rumsey Map Center, Stanford Libraries",
       "agg_data_provider_country": "United States of America",
       "agg_provider_ar": "مكتبات ستانفورد",
       "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
