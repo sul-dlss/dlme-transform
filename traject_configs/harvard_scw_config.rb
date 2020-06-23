@@ -60,7 +60,7 @@ to_field 'cho_identifier', extract_mods('/*/mods:recordInfo/mods:recordIdentifie
 to_field 'cho_language', extract_mods('/*/mods:language/mods:languageTerm[1]'), normalize_language, lang('en')
 to_field 'cho_language', extract_mods('/*/mods:language/mods:languageTerm[1]'), normalize_language, translation_map('norm_languages_to_ar'), lang('ar-Arab')
 to_field 'cho_spatial', extract_mods('/*/mods:subject/mods:geographic')
-to_field 'cho_subject_topic', extract_mods('/*/mods:subject/mods:topic'), lang('en') # key error
+to_field 'cho_subject', extract_mods('/*/mods:subject/mods:topic'), lang('en') # key error
 to_field 'cho_type', extract_mods('/*/mods:typeOfResource'), lang('en')
 to_field 'cho_type', extract_mods('/*/mods:genre'), lang('en')
 
@@ -72,13 +72,13 @@ to_field 'agg_data_provider_country', data_provider_country, lang('en')
 to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(context,
-                                  'wr_id' => [extract_mods('/*/mods:relatedItem[@otherType="HOLLIS Images record"]/mods:location/mods:url'),
-                                              strip])
+                                  'wr_id' => [extract_mods('/*/mods:relatedItem[@otherType="HOLLIS Images record"]/mods:location/mods:url'), strip],
+                                  'wr_is_referenced_by' => [extract_mods('/*/mods:url'), first_only])
 end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(context,
-                                  'wr_id' => [extract_mods('/*/mods:relatedItem[@type="constituent"]/mods:location/mods:url[@displayLabel="Thumbnail"]'),
-                                              strip])
+                                  'wr_id' => [extract_mods('/*/mods:relatedItem[@type="constituent"]/mods:location/mods:url[@displayLabel="Thumbnail"]'), strip],
+                                  'wr_is_referenced_by' => [extract_mods('/*/mods:url'), first_only])
 end
 to_field 'agg_provider', provider, lang('en')
 to_field 'agg_provider', provider_ar, lang('ar-Arab')
