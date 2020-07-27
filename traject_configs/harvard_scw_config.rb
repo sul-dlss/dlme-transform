@@ -4,7 +4,6 @@ require 'dlme_json_resource_writer'
 require 'dlme_debug_writer'
 require 'macros/collection'
 require 'macros/harvard'
-# require 'macros/iiif'
 require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
@@ -20,7 +19,6 @@ extend Macros::DateParsing
 extend Macros::DLME
 extend Macros::EachRecord
 extend Macros::Harvard
-# extend Macros::IIIF
 extend Macros::Mods
 extend Macros::NormalizeLanguage
 extend Macros::NormalizeType
@@ -48,8 +46,8 @@ to_field 'cho_alternative', extract_mods('/*/mods:titleInfo[@type]/mods:title'),
 to_field 'cho_coverage', extract_mods('/*/mods:originInfo/mods:place/mods:placeTerm'), lang('en')
 to_field 'cho_creator', extract_name(role: %w[author creator]), lang('en')
 to_field 'cho_date', extract_mods('/*/mods:originInfo/mods:dateCreated[3]')
-to_field 'cho_date_range_norm', harvard_mods_date_range
-to_field 'cho_date_range_hijri', harvard_mods_date_range, hijri_range
+to_field 'cho_date_range_norm', harvard_scw_date_range
+to_field 'cho_date_range_hijri', harvard_scw_date_range, hijri_range
 to_field 'cho_description', extract_mods('/*/mods:abstract'), lang('en')
 to_field 'cho_edm_type', extract_mods('/*/mods:typeOfResource[1]'), normalize_type, lang('en')
 to_field 'cho_edm_type', extract_mods('/*/mods:typeOfResource[1]'), normalize_type, translation_map('norm_types_to_ar'), lang('ar-Arab')
