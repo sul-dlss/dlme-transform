@@ -51,11 +51,12 @@ module Macros
         manuscript = record.xpath('/*/*/mods:mods/mods:typeOfResource[@manuscript="yes"]', mods: NS[:mods])&.first
         other_value = record.xpath('/*/*/mods:mods/mods:genre', mods: NS[:mods])&.first&.content
         if manuscript
-          accumulator << "Manuscript"
-        elsif other_value == "map"
-          accumulator << "Map"
+          accumulator << 'Manuscript'
+          return accumulator
+        elsif other_value == 'map'
+          accumulator << 'Map'
         else
-          accumulator << "Book"
+          accumulator << 'Book'
         end
       end
     end
@@ -73,6 +74,7 @@ module Macros
     #   looks in each element flavor for specific attribs to get best representation of date range
     def range_from_harvard_ihp_date_range(xpath_el_name, record, context)
       return unless record.xpath("#{IHP_ORIGIN_INFO_PATH}/#{xpath_el_name}", MODS_NS)
+
       start_node = record.xpath("#{IHP_ORIGIN_INFO_PATH}/#{xpath_el_name}[@point='start']", MODS_NS)&.first
       if start_node
         first = start_node&.content&.split&.first&.strip&.gsub('u', '0')

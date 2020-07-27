@@ -50,7 +50,7 @@ to_field 'id', extract_mods('/*/*/mods:mods/mods:recordInfo/mods:recordIdentifie
 
 # CHO Other
 to_field 'cho_alternative', extract_mods('/*/*/mods:mods/mods:titleInfo[@type]/mods:title'), lang('en')
-to_field 'cho_creator', extract_mods("/*/*/mods:mods/mods:name/mods:namePart"), lang('en')
+to_field 'cho_creator', extract_mods('/*/*/mods:mods/mods:name/mods:namePart'), lang('en')
 to_field 'cho_date', extract_mods('/*/*/mods:mods/mods:originInfo/*[@encoding="marc"]')
 to_field 'cho_date_range_norm', harvard_ihp_date_range
 to_field 'cho_date_range_hijri', harvard_ihp_date_range, hijri_range
