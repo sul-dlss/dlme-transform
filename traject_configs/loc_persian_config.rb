@@ -41,7 +41,6 @@ to_field 'cho_title', extract_json('.item.title'), strip, persian_or_none
 to_field 'cho_title', extract_json('.item.other_title[0]'), strip, persian_or_none
 
 # Cho Other
-# to_field 'cho_alternative', extract_json('.item.other_title[0]'), strip
 to_field 'cho_contributor', extract_json('item.contributors[0]'), strip, lang('en')
 to_field 'cho_date', extract_json('item.date'), strip
 to_field 'cho_date_range_norm', extract_json('item.date'), strip, parse_range
