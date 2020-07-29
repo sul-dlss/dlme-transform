@@ -69,14 +69,14 @@ to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
     'wr_id' => [extract_json('.id'), strip],
-    'wr_is_referenced_by' => [extract_json('.id'), strip, append('manifest.json')]
+    'wr_is_referenced_by' => [extract_json('.id'), strip, gsub('http', 'https'), append('manifest.json')]
   )
 end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
     'wr_id' => [extract_json('.resources[0].image'), strip],
-    'wr_is_referenced_by' => [extract_json('.id'), strip, append('manifest.json')]
+    'wr_is_referenced_by' => [extract_json('.id'), strip, gsub('http', 'https'), append('manifest.json')]
   )
 end
 to_field 'agg_provider', provider, lang('en')
