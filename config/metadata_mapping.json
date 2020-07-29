@@ -877,12 +877,12 @@
     "settings": {
       "agg_provider": "Library of Congress",
       "agg_provider_country": "United States of America",
-      "agg_data_provider": "Library of Congress",
-      "agg_data_provider_country": "United States of America",
+      "agg_data_provider": "Libraries of the Greek and Armenian Patriarchates in Jerusalem",
+      "agg_data_provider_country": "",
       "agg_provider_ar": "مكتبة الكونغرس",
       "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "agg_data_provider_ar": "مكتبة الكونغرس",
-      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "agg_data_provider_ar": "مكتبات البطريركية اليونانية والأرمنية في القدس",
+      "agg_data_provider_country_ar": "",
       "inst_id": "loc"
     }
   },
@@ -917,12 +917,12 @@
     "settings": {
       "agg_provider": "Library of Congress",
       "agg_provider_country": "United States of America",
-      "agg_data_provider": "Library of Congress",
-      "agg_data_provider_country": "United States of America",
+      "agg_data_provider": "St. Catherine's Monastery, Mount Sinai",
+      "agg_data_provider_country": "Egypt",
       "agg_provider_ar": "مكتبة الكونغرس",
-      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "agg_provider_country_ar": "دير سانت كاترين ، جبل سيناء",
       "agg_data_provider_ar": "مكتبة الكونغرس",
-      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "agg_data_provider_country_ar": "مصر",
       "inst_id": "loc"
     }
   },
