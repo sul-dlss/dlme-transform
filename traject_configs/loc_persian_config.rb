@@ -8,6 +8,7 @@ require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
 require 'macros/normalize_language'
+require 'macros/path_to_file'
 require 'macros/timestamp'
 require 'macros/version'
 
@@ -16,6 +17,7 @@ extend Macros::DateParsing
 extend Macros::DLME
 extend Macros::EachRecord
 extend Macros::NormalizeLanguage
+extend Macros::PathToFile
 extend Macros::Timestamp
 extend Macros::Version
 extend TrajectPlus::Macros
@@ -30,12 +32,15 @@ end
 to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
 
+# File path
+to_field 'dlme_source_file', path_to_file
+
 # Cho Required
 to_field 'id', extract_json('.id')
-to_field 'cho_title', extract_json('.item.title'), strip
+to_field 'cho_title', extract_json('.item.title'), strip, persian_or_none
+to_field 'cho_title', extract_json('.item.other_title[0]'), strip, persian_or_none
 
 # Cho Other
-to_field 'cho_alternative', extract_json('.item.other_title[0]'), strip
 to_field 'cho_contributor', extract_json('item.contributors[0]'), strip, lang('en')
 to_field 'cho_date', extract_json('item.date'), strip
 to_field 'cho_date_range_norm', extract_json('item.date'), strip, parse_range
@@ -46,17 +51,18 @@ to_field 'cho_description', extract_json('.item.notes[0]'), strip, lang('en')
 to_field 'cho_edm_type', literal('Text'), lang('en')
 to_field 'cho_edm_type', literal('Text'), translation_map('norm_types_to_ar'), lang('ar-Arab')
 to_field 'cho_extent', extract_json('.item.medium[0]'), strip, lang('en')
-to_field 'cho_has_type', literal('Manuscript'), lang('en')
-to_field 'cho_has_type', literal('Manuscript'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
+to_field 'cho_has_type', extract_json('.original_format[0]'), strip, translation_map('has_type'), lang('en')
+to_field 'cho_has_type', extract_json('.original_format[0]'), strip, translation_map('has_type'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
 to_field 'cho_identifier', extract_json('.item.call_number[0]'), strip
 to_field 'cho_identifier', extract_json('.number_lccn[0]'), strip
 to_field 'cho_identifier', extract_json('.shelf_id'), strip
-to_field 'cho_is_part_of', extract_json('.partof[0]'), strip, lang('en')
+to_field 'cho_is_part_of', literal('Persian Language Rare Materials'), lang('en')
 to_field 'cho_language', extract_json('.item.language[0]'), strip, normalize_language, lang('en')
 to_field 'cho_language', extract_json('.item.language[0]'), strip, normalize_language, translation_map('norm_languages_to_ar'), lang('ar-Arab')
-to_field 'cho_spatial', extract_json('.location[0]'), strip, lang('en')
-to_field 'cho_subject', extract_json('item.subjects[0]'), strip, lang('en')
-to_field 'cho_type', extract_json('.item.format[0]'), strip, lang('en')
+to_field 'cho_publisher', extract_json('.item.created_published[0]'), strip, lang('en')
+to_field 'cho_spatial', extract_json('.location_country[0]'), strip, lang('en')
+to_field 'cho_subject', extract_json('.item.subjects[0]'), strip, lang('en')
+to_field 'cho_type', extract_json('.original_format[0]'), strip, lang('en')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
@@ -67,13 +73,15 @@ to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_id' => [extract_json('.id'), strip]
+    'wr_id' => [extract_json('.id'), strip],
+    'wr_is_referenced_by' => [extract_json('.id'), strip, append('manifest.json')]
   )
 end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_id' => [extract_json('.resources[0].image'), strip]
+    'wr_id' => [extract_json('.resources[0].image'), strip],
+    'wr_is_referenced_by' => [extract_json('.id'), strip, append('manifest.json')]
   )
 end
 to_field 'agg_provider', provider, lang('en')

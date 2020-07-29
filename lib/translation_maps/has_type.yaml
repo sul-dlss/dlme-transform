@@ -2,6 +2,7 @@
 archival file: Other Document
 archival item: Other Document
 archivalfile: Other Document
+book: Book
 certificate: Other Document
 diagram: Other Document
 drawing: Drawing
@@ -12,10 +13,13 @@ letter book: Letter
 list: Other Document
 manuscript: Manuscript
 manuscript item: Manuscript
+manuscript/mixed material: Manuscript
 map: Map
 newspaper article: Newspaper
 note: Other Document
 painting: Painting
+periodical: Periodical
+photo, print, drawing: Photograph
 photograph: Photograph
 plan: Other Document
 print: Visual Art
