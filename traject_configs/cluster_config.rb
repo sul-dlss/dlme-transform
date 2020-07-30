@@ -50,6 +50,8 @@ to_field 'cho_description', column('description_en'), strip, lang('en')
 to_field 'cho_description', column('description_ar'), strip, lang('en')
 to_field 'cho_edm_type', literal('Dataset'), lang('en')
 to_field 'cho_edm_type', literal('Dataset'), translation_map('norm_types_to_ar'), lang('ar-Arab')
+to_field 'cho_has_type', literal('Geospatial'), lang('en')
+to_field 'cho_has_type', literal('Geospatial'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
 to_field 'cho_language', literal('Arabic'), lang('en')
 to_field 'cho_language', literal('English'), lang('en')
 to_field 'cho_language', literal('Arabic'), translation_map('norm_languages_to_ar'), lang('ar-Arab')
@@ -69,7 +71,7 @@ end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_id' => [column('.thumbnail'), strip]
+    'wr_id' => [column('thumbnail_image'), strip]
   )
 end
 to_field 'agg_provider_country', provider_country, lang('en')
