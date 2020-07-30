@@ -37,7 +37,6 @@ to_field 'id', column('url'), strip
 to_field 'cho_title', column('title_en'), strip, lang('en')
 to_field 'cho_title', column('title_ar'), strip, lang('ar-Arab')
 
-
 # Cho Other
 to_field 'cho_creator', column('creator_en'), strip, lang('en')
 to_field 'cho_creator', column('creator_ar'), strip, lang('ar-Arab')
