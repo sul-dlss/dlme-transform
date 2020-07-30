@@ -1,27 +1,31 @@
 # frozen_string_literal: true
 
 require 'dlme_json_resource_writer'
-require 'macros/date_parsing'
 require 'dlme_debug_writer'
 require 'macros/collection'
+require 'macros/csv'
+require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
+require 'macros/numismatic_csv'
 require 'macros/timestamp'
 require 'macros/version'
 require 'traject_plus'
 
 extend Macros::Collection
+extend Macros::Csv
 extend Macros::DLME
 extend Macros::DateParsing
 extend Macros::EachRecord
+extend Macros::NumismaticCsv
 extend Macros::Timestamp
 extend Macros::Version
 extend TrajectPlus::Macros
-extend TrajectPlus::Macros::JSON
+extend TrajectPlus::Macros::Csv
 
 settings do
+  provide 'reader_class_name', 'TrajectPlus::CsvReader'
   provide 'writer_class_name', 'DlmeJsonResourceWriter'
-  provide 'reader_class_name', 'TrajectPlus::JsonReader'
 end
 
 # Set Version & Timestamp on each record
@@ -29,20 +33,27 @@ to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
 
 # Cho Required
-to_field 'id', extract_json('.url'), strip
-to_field 'cho_title', extract_json('.title'), strip, lang('en')
+to_field 'id', column('url'), strip
+to_field 'cho_title', column('title_en'), strip, lang('en')
+to_field 'cho_title', column('title_ar'), strip, lang('ar-Arab')
+
 
 # Cho Other
-to_field 'cho_creator', extract_json('.creator'), strip, lang('en')
-to_field 'cho_contributor', extract_json('.contributor'), strip, lang('en')
-to_field 'cho_date', extract_json('.date'), strip
-to_field 'cho_date_range_norm', extract_json('.date'), strip, parse_range
-to_field 'cho_date_range_hijri', extract_json('.date'), strip, parse_range, hijri_range
-to_field 'cho_description', extract_json('.description'), strip, lang('en')
+to_field 'cho_creator', column('creator_en'), strip, lang('en')
+to_field 'cho_creator', column('creator_ar'), strip, lang('ar-Arab')
+to_field 'cho_contributor', column('contributor_en'), strip, lang('en')
+to_field 'cho_contributor', column('contributor_ar'), strip, lang('ar-Arab')
+to_field 'cho_date', column('date'), strip
+to_field 'cho_date_range_norm', column('date'), strip, parse_range
+to_field 'cho_date_range_hijri', column('date'), strip, parse_range, hijri_range
+to_field 'cho_description', column('description_en'), strip, lang('en')
+to_field 'cho_description', column('description_ar'), strip, lang('en')
 to_field 'cho_edm_type', literal('Dataset'), lang('en')
 to_field 'cho_edm_type', literal('Dataset'), translation_map('norm_types_to_ar'), lang('ar-Arab')
+to_field 'cho_language', literal('Arabic'), lang('en')
 to_field 'cho_language', literal('English'), lang('en')
 to_field 'cho_language', literal('Arabic'), translation_map('norm_languages_to_ar'), lang('ar-Arab')
+to_field 'cho_language', literal('English'), translation_map('norm_languages_to_ar'), lang('ar-Arab')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
@@ -52,13 +63,13 @@ to_field 'agg_provider', provider_ar, lang('ar-Arab')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_id' => [extract_json('.url'), strip]
+    'wr_id' => [column('url'), strip]
   )
 end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_id' => [extract_json('.thumbnail'), strip]
+    'wr_id' => [column('.thumbnail'), strip]
   )
 end
 to_field 'agg_provider_country', provider_country, lang('en')

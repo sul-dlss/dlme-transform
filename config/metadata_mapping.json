@@ -713,7 +713,7 @@
     "paths": [
       "cluster"
     ],
-    "extension": ".json",
+    "extension": ".csv",
     "settings": {
       "agg_provider": "CLUSTER",
       "agg_provider_country": "Egypt",
