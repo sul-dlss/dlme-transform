@@ -878,11 +878,11 @@
       "agg_provider": "Library of Congress",
       "agg_provider_country": "United States of America",
       "agg_data_provider": "Libraries of the Greek and Armenian Patriarchates in Jerusalem",
-      "agg_data_provider_country": "",
+      "agg_data_provider_country": "Palestine",
       "agg_provider_ar": "مكتبة الكونغرس",
       "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
       "agg_data_provider_ar": "مكتبات البطريركية اليونانية والأرمنية في القدس",
-      "agg_data_provider_country_ar": "",
+      "agg_data_provider_country_ar": "فلسطين",
       "inst_id": "loc"
     }
   },
