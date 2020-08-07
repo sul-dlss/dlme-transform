@@ -18,6 +18,18 @@ SUMMARY_FILEPATH="output/summary-$UUID.json"
 set +e
 exe/transform --summary-filepath $SUMMARY_FILEPATH --data-dir $@ | tee $OUTPUT_FILEPATH
 
+if [ -n "$PUSH_TO_AWS" ]; then
+  echo "Logging into AWS DevelopersRole"
+  temp_role=$(AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID \
+              AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY \
+        aws sts assume-role \
+        --role-session-name "DevelopersRole" \
+        --role-arn $DEV_ROLE_ARN)
+  export AWS_ACCESS_KEY_ID=$(echo $temp_role | jq .Credentials.AccessKeyId | xargs)
+  export AWS_SECRET_ACCESS_KEY=$(echo $temp_role | jq .Credentials.SecretAccessKey | xargs)
+  export AWS_SESSION_TOKEN=$(echo $temp_role | jq .Credentials.SessionToken | xargs)
+fi
+
 if [ -n "$S3_BUCKET" ]; then
   if [ -n "$S3_ENDPOINT_URL" ]; then
     S3_ENDPOINT_URL_ARG="--endpoint-url=$S3_ENDPOINT_URL"
