@@ -113,6 +113,25 @@ Note that actual S3 credentials are available from `shared_configs`.
 
 For more information on traject, [read the documentation](https://github.com/traject/traject#Traject)
 
+### Sending tranformation result to S3
+
+```
+docker run --rm -e PUSH_TO_AWS=true \
+                -e DEV_ROLE_ARN=[DEVELOPERS ROLE ARN] \
+                -e S3_BUCKET=dlme-transform \
+                -e AWS_ACCESS_KEY_ID=[YOUR ACCESS KEY] \
+                -e AWS_SECRET_ACCESS_KEY=[YOUR SECRET ACCESS KEY] \
+                -e AWS_DEFAULT_REGION=us-west-2 \
+                -e SNS_TOPIC_ARN=arn:arn:aws:sns:us-west-2:418214828013:dlme-status \
+                -e SKIP_FETCH_DATA=true \
+                -v $(pwd)/../dlme-transform:/opt/traject \
+                -v $(pwd)/../dlme-metadata:/opt/traject/data \
+                -v $(pwd)/tmp/output:/opt/traject/output \
+                --network="host" \
+                suldlss/dlme-transform:latest \
+                stanford/maps/data/kj751hs0595.mods
+```
+
 ## Configuring transforms
 
 Configuration for transforms is specified in `config/metadata_mapping.json`. For example:
