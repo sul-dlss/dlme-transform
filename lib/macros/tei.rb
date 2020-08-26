@@ -55,18 +55,6 @@ module Macros
       end
     end
 
-    # @return [String] an xpath for a thumbnail image
-    def openn_thumbnail
-      lambda do |record, accumulator|
-        thumb_xpath = record.xpath("/*/tei:facsimile/tei:surface[@n='2r']/tei:graphic[2]/@url", NS).map(&:text)
-                            .first
-        ending = "/data/#{thumb_xpath}"
-        url_node_set = record.xpath('/*/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc'\
-                           "/tei:msIdentifier/tei:altIdentifier[@type='openn-url']/tei:idno", NS)
-        accumulator << url_node_set.map(&:text).first.gsub('/html', '').gsub('.html', ending) if url_node_set.present?
-      end
-    end
-
     # Sets a url for the given query
     # @param [String] query an xpath expression
     # @return [Proc] a proc that traject can call for each record
@@ -74,7 +62,7 @@ module Macros
       lambda do |record, accumulator, context|
         # Identifier without the prefix
         id = context.output_hash['id'].first.sub(/^[^_]*_/, '')
-        path = extract_tei(query).call(record, [], context).first
+        path = extract_tei(query).call(record, [], context).first if url.present?
         accumulator << penn_uri(id, path)
       end
     end

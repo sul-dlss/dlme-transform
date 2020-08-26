@@ -26,8 +26,11 @@ acceptable_bcp47_codes:
   - fr
   - ms-Arab
   - ms-Latn
+  - syc
   - tr-Arab
   - tr-Latn
+  - und-Arab
+  - und-Latn
   - ur-Arab
   - ur-Latn
 defaults:
