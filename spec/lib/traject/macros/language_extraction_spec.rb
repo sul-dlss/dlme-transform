@@ -83,24 +83,6 @@ RSpec.describe Macros::LanguageExtraction do
     end
   end
 
-  describe 'tei_lower_resource_language' do
-    context 'when the main language of the text is Arabic' do
-      it 'returns the correct language value ar-Arab' do
-        main_lang = 'ara'
-        callable = instance.tei_lower_resource_language
-        expect(callable.call(nil, [main_lang])).to eq([{ language: 'ar-Arab', values: [main_lang] }])
-      end
-    end
-
-    context 'when the main language of the text is Persian' do
-      it 'returns the default language of fa-Arab' do
-        main_lang = 'per'
-        callable = instance.naive_language_extractor
-        expect(callable.call(nil, [main_lang])).to eq([{ language: 'fa-Arab', values: [main_lang] }])
-      end
-    end
-  end
-
   describe 'und_arabic_or_syriac' do
     context 'when extracted string contains Arabic characters' do
       it 'returns the correct language value und-Arab' do
