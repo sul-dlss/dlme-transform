@@ -6,6 +6,7 @@ require 'macros/collection'
 require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
+require 'macros/language_extraction'
 require 'macros/normalize_language'
 require 'macros/path_to_file'
 require 'macros/princeton'
@@ -17,6 +18,7 @@ extend Macros::Collection
 extend Macros::DLME
 extend Macros::DateParsing
 extend Macros::EachRecord
+extend Macros::LanguageExtraction
 extend Macros::NormalizeLanguage
 extend Macros::PathToFile
 extend Macros::Princeton
