@@ -231,6 +231,39 @@ module Macros
       end
     end
 
+    TEI_MS_DESC_LOWER = '//tei:teiheader/tei:filedesc/tei:sourcedesc/tei:msdesc'
+    TEI_MS_ORIGIN_LOWER = 'tei:history/tei:origin'
+    TEI_ORIG_DATE_PATH_LOWER = "#{TEI_MS_DESC_LOWER}/#{TEI_MS_ORIGIN_LOWER}/tei:origdate"
+    # extracts dates from TEI origDate element for Penn Openn data
+    # Best dates will be in notBefore/notAfter attributes, or from/to attributes
+    # 'when' attribute is usually a single date;
+    #  attributes may be empty or missing, in which case the element's value needs to be parsed
+    # See specs for examples of all these flavors
+    def openn_gregorian_range
+      lambda do |record, accumulator, context|
+        orig_date_node = record.xpath(TEI_ORIG_DATE_PATH_LOWER, TEI_NS)&.first
+        first = orig_date_node&.attribute('notbefore') ||
+                orig_date_node&.attribute('from') ||
+                orig_date_node&.attribute('when')
+        last = orig_date_node&.attribute('notafter') ||
+               orig_date_node&.attribute('to') ||
+               orig_date_node&.attribute('when')
+        first = first&.value&.strip
+        last = last&.value&.strip
+        if first.present? && last.present?
+          first = ParseDate.earliest_year(first)
+          last = ParseDate.latest_year(last)
+        else
+          date_str = orig_date_node&.text
+          hijri_val = hijri_from_mixed(date_str)
+          date_str = date_str.split(hijri_val).join(' ') if hijri_val
+          first = ParseDate.earliest_year(date_str)
+          last = ParseDate.latest_year(date_str)
+        end
+        accumulator.replace(range_array(context, first, last))
+      end
+    end
+
     # Extracts date range from Stanford subject/temporal element
     # because the resources are historical maps with more recent GIS data.
     # The date in the MODS date fields refers to the latter but the former is more useful for search.
