@@ -15,6 +15,7 @@ interactive resource: Interactive Resource
 manuscript: Text
 map: Image
 mixed material: Text
+movingimage: Video
 moving image: Video
 moving images: Video
 multimedia: [Sound, Video]
