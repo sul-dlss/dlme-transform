@@ -25,22 +25,6 @@ module Macros
     # @return [Proc] a proc that traject can call for each record
     # @example
     #  naive_language_extractor => {'ar-Arab': ['من كتب محمد بن محمد الكبسي. لقطة رقم (1).']}
-    def arabic_or_en
-      lambda do |_record, accumulator|
-        extracted_string = accumulator[0]
-        if extracted_string
-          script = extracted_string.match?(/[ضصثقفغعهخحمنتالبيسشظطذدزرو]/) ? 'ar-Arab' : 'en'
-          accumulator.replace([{ language: script.to_s, values: [extracted_string] }])
-        end
-      end
-    end
-
-    # Returns the value extracted by 'to_field' reformated as a hash with accompanying BCP47 language code.
-    # Should only be used when metadata is known to be either Arabic in Arabic script or none.
-    # Any other values will not parse correctly.
-    # @return [Proc] a proc that traject can call for each record
-    # @example
-    #  naive_language_extractor => {'ar-Arab': ['من كتب محمد بن محمد الكبسي. لقطة رقم (1).']}
     def arabic_or_none
       lambda do |_record, accumulator|
         extracted_string = accumulator[0]
