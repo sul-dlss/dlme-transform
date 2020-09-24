@@ -103,6 +103,26 @@
   },
   {
     "trajects": [
+      "aub_poha_config.rb"
+    ],
+    "paths": [
+      "aub/poha"
+    ],
+    "extension": ".xml",
+    "settings": {
+      "agg_provider": "American University of Beirut",
+      "agg_provider_country": "Lebanon",
+      "agg_data_provider": "American University of Beirut",
+      "agg_data_provider_country": "Lebanon",
+      "agg_provider_ar": "الجامعة الأمريكية في بيروت",
+      "agg_provider_country_ar": "لبنان",
+      "agg_data_provider_ar": "الجامعة الأمريكية في بيروت",
+      "agg_data_provider_country_ar": "لبنان",
+      "inst_id": "aub"
+    }
+  },
+  {
+    "trajects": [
       "aub_common_config.rb",
       "aub_postcards_config.rb"
     ],
