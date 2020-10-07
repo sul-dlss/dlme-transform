@@ -1475,6 +1475,26 @@
   },
   {
     "trajects": [
+      "vatican_config.rb"
+    ],
+    "paths": [
+      "vatican"
+    ],
+    "extension": ".xml",
+    "settings": {
+      "agg_provider": "The Vatican Library",
+      "agg_provider_country": "Vatican City",
+      "agg_data_provider": "The Vatican Library",
+      "agg_data_provider_country": "Vatican City",
+      "agg_provider_ar": "مكتبة الفاتيكان",
+      "agg_provider_country_ar": "مدينة الفاتيكان",
+      "agg_data_provider_ar": "مكتبة الفاتيكان",
+      "agg_data_provider_country_ar": "مدينة الفاتيكان",
+      "inst_id": "vatican"
+    }
+  },
+  {
+    "trajects": [
       "yale_medical_config.rb"
     ],
     "paths": [
