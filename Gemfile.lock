@@ -61,8 +61,9 @@ GEM
       dry-equalizer (~> 0.2)
       dry-initializer (~> 3.0)
       dry-schema (~> 1.5, >= 1.5.2)
-    faraday (1.0.1)
+    faraday (1.1.0)
       multipart-post (>= 1.2, < 3)
+      ruby2_keywords
     ffi (1.13.1)
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
@@ -139,6 +140,7 @@ GEM
     rubocop-rspec (1.21.0)
       rubocop (>= 0.52.0)
     ruby-progressbar (1.10.1)
+    ruby2_keywords (0.0.2)
     scrub_rb (1.0.1)
     simplecov (0.17.1)
       docile (~> 1.1)
