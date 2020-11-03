@@ -83,6 +83,24 @@ RSpec.describe Macros::LanguageExtraction do
     end
   end
 
+  describe 'persian_or_und_latn' do
+    context 'when extracted string contains Arabic characters' do
+      it 'returns the correct language value fa-Arab' do
+        extracted_string = 'الولايات المتحدة الامريكيه'
+        callable = instance.persian_or_und_latn
+        expect(callable.call(nil, [extracted_string])).to eq([{ language: 'fa-Arab', values: [extracted_string] }])
+      end
+    end
+
+    context 'when extracted string does not contain Arabic characters' do
+      it 'returns the default language of und-Latn' do
+        extracted_string = 'Some extracted string value'
+        callable = instance.persian_or_und_latn
+        expect(callable.call(nil, [extracted_string])).to eq([{ language: 'und-Latn', values: [extracted_string] }])
+      end
+    end
+  end
+
   describe 'und_arabic_or_syriac' do
     context 'when extracted string contains Arabic characters' do
       it 'returns the correct language value und-Arab' do
