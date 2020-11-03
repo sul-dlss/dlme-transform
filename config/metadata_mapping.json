@@ -688,10 +688,90 @@
   },
   {
     "trajects": [
-      "bodleian_config.rb"
+      "bodleian_arabic_config.rb"
     ],
     "paths": [
-      "bodleian"
+      "bodleian/arabic"
+    ],
+    "extension": ".json",
+    "settings": {
+      "agg_provider": "Bodleian Libraries",
+      "agg_provider_country": "United Kingdom",
+      "agg_data_provider": "Bodleian Libraries",
+      "agg_data_provider_country": "United Kingdom",
+      "agg_provider_ar": "مكتبات بودليان",
+      "agg_provider_country_ar": "المملكة المتحدة",
+      "agg_data_provider_ar": "مكتبات بودليان",
+      "agg_data_provider_country_ar": "المملكة المتحدة",
+      "inst_id": "bodleian"
+    }
+  },
+  {
+    "trajects": [
+      "bodleian_hebrew_config.rb"
+    ],
+    "paths": [
+      "bodleian/hebrew"
+    ],
+    "extension": ".json",
+    "settings": {
+      "agg_provider": "Bodleian Libraries",
+      "agg_provider_country": "United Kingdom",
+      "agg_data_provider": "Bodleian Libraries",
+      "agg_data_provider_country": "United Kingdom",
+      "agg_provider_ar": "مكتبات بودليان",
+      "agg_provider_country_ar": "المملكة المتحدة",
+      "agg_data_provider_ar": "مكتبات بودليان",
+      "agg_data_provider_country_ar": "المملكة المتحدة",
+      "inst_id": "bodleian"
+    }
+  },
+  {
+    "trajects": [
+      "bodleian_egypt_config.rb"
+    ],
+    "paths": [
+      "bodleian/exploring-egypt"
+    ],
+    "extension": ".json",
+    "settings": {
+      "agg_provider": "Bodleian Libraries",
+      "agg_provider_country": "United Kingdom",
+      "agg_data_provider": "Bodleian Libraries",
+      "agg_data_provider_country": "United Kingdom",
+      "agg_provider_ar": "مكتبات بودليان",
+      "agg_provider_country_ar": "المملكة المتحدة",
+      "agg_data_provider_ar": "مكتبات بودليان",
+      "agg_data_provider_country_ar": "المملكة المتحدة",
+      "inst_id": "bodleian"
+    }
+  },
+  {
+    "trajects": [
+      "bodleian_persian_config.rb"
+    ],
+    "paths": [
+      "bodleian/persian"
+    ],
+    "extension": ".json",
+    "settings": {
+      "agg_provider": "Bodleian Libraries",
+      "agg_provider_country": "United Kingdom",
+      "agg_data_provider": "Bodleian Libraries",
+      "agg_data_provider_country": "United Kingdom",
+      "agg_provider_ar": "مكتبات بودليان",
+      "agg_provider_country_ar": "المملكة المتحدة",
+      "agg_data_provider_ar": "مكتبات بودليان",
+      "agg_data_provider_country_ar": "المملكة المتحدة",
+      "inst_id": "bodleian"
+    }
+  },
+  {
+    "trajects": [
+      "bodleian_turkish_config.rb"
+    ],
+    "paths": [
+      "bodleian/turkish"
     ],
     "extension": ".json",
     "settings": {
