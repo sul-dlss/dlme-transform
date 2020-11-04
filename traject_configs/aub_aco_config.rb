@@ -1,7 +1,11 @@
 # frozen_string_literal: true
 
+require 'macros/aub'
+
+extend Macros::AUB
+
 # Cho Required
-to_field 'cho_title', extract_oai('dc:title'), strip, default('Untitled'), lang('en')
+to_field 'cho_title', extract_oai('dc:title'), strip, basic_default('Untitled'), lang('en')
 
 # Cho Other
 to_field 'cho_contributor', extract_oai('dc:contributor'),
