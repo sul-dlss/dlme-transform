@@ -23,11 +23,5 @@ module Macros
     def extract_poha(xpath)
       extract_xpath(xpath.to_s, ns: NS)
     end
-
-    def basic_default(default_value)
-      lambda do |_rec, acc|
-        acc.replace([default_value]) if acc.empty?
-      end
-    end
   end
 end

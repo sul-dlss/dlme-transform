@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-require 'macros/aub'
+require 'macros/language_extraction'
 
-extend Macros::AUB
+extend Macros::LanguageExtraction
 
 # Cho Required
-to_field 'cho_title', extract_oai('dc:title'), strip, basic_default('Untitled'), lang('en')
+to_field 'cho_title', extract_oai('dc:title'), strip, arabic_or_default('en')
 
 # Cho Other
 to_field 'cho_contributor', extract_oai('dc:contributor'),

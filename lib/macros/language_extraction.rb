@@ -35,6 +35,15 @@ module Macros
       end
     end
 
+    def arabic_or_default(default = 'none')
+      lambda do |_record, accumulator|
+        accumulator.map! do |val|
+          script = val.match?(/[ضصثقفغعهخحمنتالبيسشظطذدزرو]/) ? 'ar-Arab' : default
+          { language: script.to_s, values: [val] }
+        end
+      end
+    end
+
     # Returns the value extracted by 'to_field' reformated as a hash with accompanying BCP47 language code.
     # Should only be used when metadata is known to be either Arabic in Arabic script or none.
     # Any other values will not parse correctly.
