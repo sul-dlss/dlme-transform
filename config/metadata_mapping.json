@@ -1028,6 +1028,86 @@
   },
   {
     "trajects": [
+      "manchester_genizah_config.rb"
+    ],
+    "paths": [
+      "manchester/genizah"
+    ],
+    "extension": ".xml",
+    "settings": {
+      "agg_provider": "University of Manchester Library",
+      "agg_provider_country": "United Kingdom",
+      "agg_data_provider": "University of Manchester Library",
+      "agg_data_provider_country": "United Kingdom",
+      "agg_provider_ar": "مكتبة جامعة مانشستر",
+      "agg_provider_country_ar": "المملكة المتحدة",
+      "agg_data_provider_ar": "مكتبة جامعة مانشستر",
+      "agg_data_provider_country_ar": "المملكة المتحدة",
+      "inst_id": "manchester"
+    }
+  },
+  {
+    "trajects": [
+      "manchester_hebraica_config.rb"
+    ],
+    "paths": [
+      "manchester/hebraica"
+    ],
+    "extension": ".xml",
+    "settings": {
+      "agg_provider": "University of Manchester Library",
+      "agg_provider_country": "United Kingdom",
+      "agg_data_provider": "University of Manchester Library",
+      "agg_data_provider_country": "United Kingdom",
+      "agg_provider_ar": "مكتبة جامعة مانشستر",
+      "agg_provider_country_ar": "المملكة المتحدة",
+      "agg_data_provider_ar": "مكتبة جامعة مانشستر",
+      "agg_data_provider_country_ar": "المملكة المتحدة",
+      "inst_id": "manchester"
+    }
+  },
+  {
+    "trajects": [
+      "manchester_nashriyah_config.rb"
+    ],
+    "paths": [
+      "manchester/nashriyah"
+    ],
+    "extension": ".xml",
+    "settings": {
+      "agg_provider": "University of Manchester Library",
+      "agg_provider_country": "United Kingdom",
+      "agg_data_provider": "University of Manchester Library",
+      "agg_data_provider_country": "United Kingdom",
+      "agg_provider_ar": "مكتبة جامعة مانشستر",
+      "agg_provider_country_ar": "المملكة المتحدة",
+      "agg_data_provider_ar": "مكتبة جامعة مانشستر",
+      "agg_data_provider_country_ar": "المملكة المتحدة",
+      "inst_id": "manchester"
+    }
+  },
+  {
+    "trajects": [
+      "manchester_papyri_config.rb"
+    ],
+    "paths": [
+      "manchester/papyri"
+    ],
+    "extension": ".xml",
+    "settings": {
+      "agg_provider": "University of Manchester Library",
+      "agg_provider_country": "United Kingdom",
+      "agg_data_provider": "University of Manchester Library",
+      "agg_data_provider_country": "United Kingdom",
+      "agg_provider_ar": "مكتبة جامعة مانشستر",
+      "agg_provider_country_ar": "المملكة المتحدة",
+      "agg_data_provider_ar": "مكتبة جامعة مانشستر",
+      "agg_data_provider_country_ar": "المملكة المتحدة",
+      "inst_id": "manchester"
+    }
+  },
+  {
+    "trajects": [
       "met_config.rb"
     ],
     "paths": [
