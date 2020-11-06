@@ -84,6 +84,22 @@ module Macros
     end
 
     # Returns the value extracted by 'to_field' reformated as a hash with accompanying BCP47 language code.
+    # Should only be used when metadata is known to be either Persian in Arabic script or an unpredictable language.
+    # Any other values will not parse correctly.
+    # @return [Proc] a proc that traject can call for each record
+    # @example
+    #  persian_or_und_latn => {'fa-Arab': ['نظامنامۀ مقياسات']}
+    def persian_or_und_latn
+      lambda do |_record, accumulator|
+        extracted_string = accumulator[0]
+        if extracted_string
+          script = extracted_string.match?(/[ضصثقفغعهخحمنتالبيسشظطذدزرو]/) ? 'fa-Arab' : 'und-Latn'
+          accumulator.replace([{ language: script.to_s, values: [extracted_string] }])
+        end
+      end
+    end
+
+    # Returns the value extracted by 'to_field' reformated as a hash with accompanying BCP47 language code.
     # Caution: assumes the language of the metadata field is the same as the main language of the text.
     # Works on cases where the element names are downcased instead of camel cased.
     # @return [Proc] a proc that traject can call for each record

@@ -7,6 +7,7 @@ require 'macros/collection'
 require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
+require 'macros/language_extraction'
 require 'macros/normalize_language'
 require 'macros/timestamp'
 require 'macros/version'
@@ -15,6 +16,7 @@ extend Macros::Collection
 extend Macros::DateParsing
 extend Macros::DLME
 extend Macros::EachRecord
+extend Macros::LanguageExtraction
 extend Macros::NormalizeLanguage
 extend Macros::Timestamp
 extend Macros::Version
@@ -31,15 +33,13 @@ to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
 
 # Cho Required
-to_field 'id', extract_json('.thumbnail'),
+to_field 'id', extract_json('.rendering'),
          strip,
-         gsub('/full/256,/0/default.jpg', ''),
-         gsub('https://iiif.bodleian.ox.ac.uk/iiif/image/', '')
-to_field 'cho_title', extract_json('.title'), strip, default('Untitled Item')
+         gsub('https://digital.bodleian.ox.ac.uk/inquire/p/', '')
+to_field 'cho_title', extract_json('.title'), strip, persian_or_und_latn
 
 # Cho Other
-to_field 'cho_creator', extract_json('.author'), strip, lang('en')
-to_field 'cho_contributor', extract_json('.printer'), strip, append(' [printer]'), lang('en')
+to_field 'cho_creator', extract_json('.author'), strip
 to_field 'cho_date', extract_json('.date_statement'), strip, lang('en')
 to_field 'cho_date_range_norm', extract_json('.date_statement'), strip, gsub('/', '-'), parse_range
 to_field 'cho_date_range_hijri', extract_json('.date_statement'), strip, gsub('/', '-'), parse_range, hijri_range
@@ -50,9 +50,10 @@ to_field 'cho_edm_type', literal('Text'), translation_map('norm_types_to_ar'), l
 to_field 'cho_has_type', literal('Manuscript'), lang('en')
 to_field 'cho_has_type', literal('Manuscript'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
 to_field 'cho_identifier', extract_json('.catalogue_identifier'), strip
-to_field 'cho_language', extract_json('.language'), strip, normalize_language, lang('en')
-to_field 'cho_language', extract_json('.language'), strip, normalize_language, translation_map('norm_languages_to_ar'), lang('ar-Arab')
-to_field 'cho_spatial', extract_json('.place_of_origin'), strip, prepend('Place of Origin: ')
+to_field 'cho_is_part_of', extract_json('.collection'), strip, lang('en')
+to_field 'cho_language', literal('Persian'), lang('en')
+to_field 'cho_language', literal('Persian'), translation_map('norm_languages_to_ar'), lang('ar-Arab')
+to_field 'cho_spatial', extract_json('.place_of_origin'), strip, lang('en')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
@@ -63,14 +64,21 @@ to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_id' => [extract_json('.homepage'), strip],
-    'wr_is_referenced_by' => [extract_json('.manifest'), strip]
+    'wr_id' => [extract_json('.rendering'), strip],
+    'wr_is_referenced_by' => [extract_json('.rendering'),
+                              strip,
+                              gsub('https://digital.bodleian.ox.ac.uk/inquire/p/', 'https://iiif.bodleian.ox.ac.uk/iiif/manifest/'),
+                              append('.json')]
   )
 end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_id' => [extract_json('.thumbnail'), strip]
+    'wr_id' => [extract_json('.thumbnail'), strip],
+    'wr_is_referenced_by' => [extract_json('.rendering'),
+                              strip,
+                              gsub('https://digital.bodleian.ox.ac.uk/inquire/p/', 'https://iiif.bodleian.ox.ac.uk/iiif/manifest/'),
+                              append('.json')]
   )
 end
 to_field 'agg_provider', provider, lang('en')
