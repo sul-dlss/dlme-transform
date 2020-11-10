@@ -7,6 +7,7 @@ require 'macros/csv'
 require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
+require 'macros/lausanne'
 require 'macros/normalize_type'
 require 'macros/path_to_file'
 require 'macros/penn'
@@ -19,6 +20,7 @@ extend Macros::Csv
 extend Macros::DLME
 extend Macros::DateParsing
 extend Macros::EachRecord
+extend Macros::Lausanne
 extend Macros::NormalizeType
 extend Macros::PathToFile
 extend Macros::Penn
