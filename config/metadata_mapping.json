@@ -908,6 +908,26 @@
   },
   {
     "trajects": [
+      "lausanne_ias_config.rb"
+    ],
+    "paths": [
+      "lausanne/ias"
+    ],
+    "extension": ".csv",
+    "settings": {
+      "agg_provider": "University of Lausanne",
+      "agg_provider_country": "Switzerland",
+      "agg_data_provider": "University of Lausanne",
+      "agg_data_provider_country": "Switzerland",
+      "agg_provider_ar": "جامعة لوزان",
+      "agg_provider_country_ar": "سويسرا",
+      "agg_data_provider_ar": "جامعة لوزان",
+      "agg_data_provider_country_ar": "سويسرا",
+      "inst_id": "lausanne"
+    }
+  },
+  {
+    "trajects": [
       "loc_abdul_hamid_ii_books_config.rb"
     ],
     "paths": [
