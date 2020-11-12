@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Cho Required
-to_field 'cho_title', xpath_title_or_desc("#{OAI_PREFIX}/dc:title", "#{OAI_PREFIX}/dc:description[1]"), arabic_or_und_latn, default('Untitled', 'بدون عنوان')
+to_field 'cho_title', xpath_title_or_desc("#{PREFIX}/dc:title", "#{PREFIX}/dc:description[1]"), arabic_or_und_latn, default('Untitled', 'بدون عنوان')
 
 # Cho Other
 to_field 'cho_contributor', extract_oai('dc:contributor'),
