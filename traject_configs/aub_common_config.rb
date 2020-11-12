@@ -2,6 +2,7 @@
 
 require 'dlme_json_resource_writer'
 require 'dlme_debug_writer'
+require 'macros/aub'
 require 'macros/collection'
 require 'macros/date_parsing'
 require 'macros/dlme'
@@ -13,6 +14,7 @@ require 'macros/timestamp'
 require 'macros/version'
 require 'traject_plus'
 
+extend Macros::AUB
 extend Macros::Collection
 extend Macros::DLME
 extend Macros::DateParsing

@@ -10,9 +10,6 @@ module Macros
     }.freeze
     private_constant :NS
 
-    PREFIX = '/oai_dc:dc'
-    private_constant :PREFIX
-
     include Traject::Macros::NokogiriMacros
 
     # Extracts values for the given xpath which is prefixed with oai and oai_dc wrappers
