@@ -2,10 +2,12 @@
 
 require 'dlme_json_resource_writer'
 require 'dlme_debug_writer'
+require 'macros/aub'
 require 'macros/collection'
 require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
+require 'macros/language_extraction'
 require 'macros/normalize_language'
 require 'macros/normalize_type'
 require 'macros/oai'
@@ -13,10 +15,12 @@ require 'macros/timestamp'
 require 'macros/version'
 require 'traject_plus'
 
+extend Macros::AUB
 extend Macros::Collection
 extend Macros::DLME
 extend Macros::DateParsing
 extend Macros::EachRecord
+extend Macros::LanguageExtraction
 extend Macros::NormalizeLanguage
 extend Macros::NormalizeType
 extend Macros::OAI

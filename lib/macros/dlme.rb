@@ -3,22 +3,13 @@
 module Macros
   # DLME helpers for traject mappings
   module DLME
-    # Returns the provider as specified in the ++agg_provider++ field of ++config/metadata_mapping.json++
-    # @return [Proc] a proc that traject can call for each record
-    # @example
-    #  provider => "Bibliothèque nationale de France"
-    def provider
-      from_settings('agg_provider')
-    end
-
-    # Returns the Ara lang provider as specified in the ++agg_provider_ar++
-    # field of ++config/metadata_mapping.json++
-    # @return [Proc] a proc that traject can call for each record
-    # @example
-    #  provider => "أرشيف ملصق فلسطين"
-    def provider_ar
-      from_settings('agg_provider_ar')
-    end
+    NS = {
+      dc: 'http://purl.org/dc/elements/1.1/',
+      oai: 'http://www.openarchives.org/OAI/2.0/',
+      oai_dc: 'http://www.openarchives.org/OAI/2.0/oai_dc/',
+      tei: 'http://www.tei-c.org/ns/1.0'
+    }.freeze
+    private_constant :NS
 
     # Returns the data provider as specified in the ++agg_data_provider++ field of ++config/metadata_mapping.json++
     # @return [Proc] a proc that traject can call for each record
@@ -37,23 +28,6 @@ module Macros
       from_settings('agg_data_provider_ar')
     end
 
-    # Returns the provider country as specified in the ++agg_provider_country++ field of ++config/metadata_mapping.json++
-    # @return [Proc] a proc that traject can call for each record
-    # @example
-    #  provider_country => "France"
-    def provider_country
-      from_settings('agg_provider_country')
-    end
-
-    # Returns the Ara lang provider country as specified in the ++agg_provider_country_ar++
-    # field of ++config/metadata_mapping.json++
-    # @return [Proc] a proc that traject can call for each record
-    # @example
-    #  provider_country => "الولايات المتحدة الامريكيه"
-    def provider_country_ar
-      from_settings('agg_provider_country_ar')
-    end
-
     # Returns the data provider country specified in ++agg_data_provider_country++ field of ++config/metadata_mapping.json++
     # @return [Proc] a proc that traject can call for each record
     # @example
@@ -69,6 +43,37 @@ module Macros
     #  data_provider_country => "فرنسا"
     def data_provider_country_ar
       from_settings('agg_data_provider_country_ar')
+    end
+
+    # Override the traject default method, passing two values-one English, one Arabic-instead of none
+    # and adding language keys. Cannot use this method in conjunction with the lang method. Call them
+    # on seperate lines.
+    # @example
+    #  # to_field 'cho_title', extract_tei("tei:title"), lang('en')
+    #  # to_field 'cho_title', extract_tei("tei:title"), default('Untitled', 'بدون عنوان')
+    def default(default_en, default_ar)
+      lambda do |_rec, acc|
+        acc.replace([{ language: 'en', values: [default_en] }, { language: 'ar-Arab', values: [default_ar] }]) if acc.all?(
+          &:blank?
+        )
+      end
+    end
+
+    # Create an identifier that can be used in case none is encoded in the record.
+    # It will first try to take it from the ++command_line.filename++ setting and
+    # if that is not available, from the `identifier` setting.
+    # @return [String] a record identifier
+    # @example
+    #  # when settings contains: "command_line.filename"=>"data/penn/schoenberg/data/ljs407.xml"
+    #
+    #  default_identifier(context) => 'ljs407'
+    def default_identifier(context)
+      identifier = if context.settings.key?('command_line.filename')
+                     context.settings.fetch('command_line.filename')
+                   elsif context.settings.key?('identifier')
+                     context.settings.fetch('identifier')
+                   end
+      File.basename(identifier, File.extname(identifier)) if identifier.present?
     end
 
     # Returns the given identifier prefixed with the ++inst_id++  as specified in ++config/metadata_mapping.json++
@@ -91,6 +96,7 @@ module Macros
       end
     end
 
+    # Assign a language key to extracted value. Raise an exception if assigned value not in config/settings.yml.
     def lang(bcp47_string)
       raise "#{bcp47_string} is not an acceptable BCP47 language code" unless
         Settings.acceptable_bcp47_codes.include?(bcp47_string)
@@ -100,34 +106,63 @@ module Macros
       end
     end
 
-    # Create an identifier that can be used in case none is encoded in the record.
-    # It will first try to take it from the ++command_line.filename++ setting and
-    # if that is not available, from the `identifier` setting.
-    # @return [String] a record identifier
-    # @example
-    #  # when settings contains: "command_line.filename"=>"data/penn/schoenberg/data/ljs407.xml"
-    #
-    #  default_identifier(context) => 'ljs407'
-    def default_identifier(context)
-      identifier = if context.settings.key?('command_line.filename')
-                     context.settings.fetch('command_line.filename')
-                   elsif context.settings.key?('identifier')
-                     context.settings.fetch('identifier')
-                   end
-      File.basename(identifier, File.extname(identifier)) if identifier.present?
-    end
-
+    # Take only the last value from the accumulator
     def last
       lambda do |_rec, acc|
         acc.slice!(0, acc.length - 1)
       end
     end
 
-    # Override the traject default as our hashing clobbers the default method passing an empty array afterwards
-    # this is fixed by using the .replace method instead of appending.
-    def default(default_value)
-      lambda do |_rec, acc|
-        acc.replace([default_value]) if acc.reject { |_, v| v.nil? || v.empty? }.empty?
+    # Returns the provider as specified in the ++agg_provider++ field of ++config/metadata_mapping.json++
+    # @return [Proc] a proc that traject can call for each record
+    # @example
+    #  provider => "Bibliothèque nationale de France"
+    def provider
+      from_settings('agg_provider')
+    end
+
+    # Returns the Ara lang provider as specified in the ++agg_provider_ar++
+    # field of ++config/metadata_mapping.json++
+    # @return [Proc] a proc that traject can call for each record
+    # @example
+    #  provider => "أرشيف ملصق فلسطين"
+    def provider_ar
+      from_settings('agg_provider_ar')
+    end
+
+    # Returns the provider country as specified in the ++agg_provider_country++ field of ++config/metadata_mapping.json++
+    # @return [Proc] a proc that traject can call for each record
+    # @example
+    #  provider_country => "France"
+    def provider_country
+      from_settings('agg_provider_country')
+    end
+
+    # Returns the Ara lang provider country as specified in the ++agg_provider_country_ar++
+    # field of ++config/metadata_mapping.json++
+    # @return [Proc] a proc that traject can call for each record
+    # @example
+    #  provider_country => "الولايات المتحدة الامريكيه"
+    def provider_country_ar
+      from_settings('agg_provider_country_ar')
+    end
+
+    # Shorten a string and follow it with an ellipsis.
+    def truncate(text, length = 100, truncate_string = '...')
+      l = length - truncate_string.chars.length
+      (text.length > length ? text[0...l] + truncate_string : text).to_s
+    end
+
+    # Extract a OAI Dublin Core title or, if no title in record, extract abridged description, else pass default values.
+    def xpath_title_or_desc(xpath_title, xpath_desc)
+      lambda do |rec, acc|
+        title = rec.xpath(xpath_title, NS).map(&:text).first
+        description = rec.xpath(xpath_desc, NS).map(&:text).first
+        if title.present?
+          acc.replace([title])
+        elsif description.present?
+          acc.replace([truncate(description)])
+        end
       end
     end
   end
