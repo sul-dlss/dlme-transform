@@ -17,7 +17,9 @@ module Macros
       lambda do |record, accumulator|
         first_year = record['from'] if record['from']&.match(/\d+/)
         last_year = record['to'] if record['to']&.match(/\d+/)
-        accumulator.replace(["#{first_year} - #{last_year}"]) if record['from'] || record['to']
+        accumulator << first_year if first_year.present?
+        accumulator << last_year if last_year.present?
+        accumulator.replace(["#{first_year} to #{last_year}"]) if accumulator.length == 2
       end
     end
   end
