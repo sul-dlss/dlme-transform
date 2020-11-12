@@ -76,8 +76,8 @@ RSpec.describe Macros::Lausanne do
     end
 
     it 'when one date is empty, range is a single year' do
-      expect(indexer.map_record('from' => '300')).to include 'range' => ['300']
-      expect(indexer.map_record('to' => '666')).to include 'range' => ['666']
+      expect(indexer.map_record('from' => '300')).not_to include 'range' => ['300']
+      expect(indexer.map_record('to' => '666')).not_to include 'range' => ['666']
     end
 
     it 'when both dates are empty, no error is raised' do
