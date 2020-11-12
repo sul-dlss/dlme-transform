@@ -11,7 +11,6 @@ require 'macros/normalize_language'
 require 'macros/path_to_file'
 require 'macros/tei'
 require 'macros/timestamp'
-require 'macros/vatican'
 require 'macros/version'
 require 'traject_plus'
 
@@ -24,11 +23,13 @@ extend Macros::NormalizeLanguage
 extend Macros::PathToFile
 extend Macros::Tei
 extend Macros::Timestamp
-extend Macros::Vatican
 extend Macros::Version
 extend TrajectPlus::Macros
 extend TrajectPlus::Macros::Tei
 extend TrajectPlus::Macros::Xml
+
+# Shortcut variables
+MS_DESC = '//teiHeader/fileDesc/sourceDesc/msDescription'
 
 settings do
   provide 'reader_class_name', 'TrajectPlus::XmlReader'
