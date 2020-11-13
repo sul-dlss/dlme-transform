@@ -26,11 +26,6 @@ extend TrajectPlus::Macros
 extend TrajectPlus::Macros::Tei
 extend TrajectPlus::Macros::Xml
 
-settings do
-  provide 'reader_class_name', 'TrajectPlus::XmlReader'
-  provide 'writer_class_name', 'DlmeJsonResourceWriter'
-end
-
 # Shortcut variables
 MS_CONTENTS = 'tei:msContents'
 MS_DESC = '//tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc'
@@ -41,6 +36,11 @@ OBJ_DESC = 'tei:physDesc/tei:objectDesc'
 PROFILE_DESC = '//tei:teiHeader/tei:profileDesc/tei:textClass'
 PUB_STMT = '//tei:teiHeader/tei:fileDesc/tei:publicationStmt'
 SUPPORT_DESC = 'tei:supportDesc[@material="paper"]'
+
+settings do
+  provide 'reader_class_name', 'TrajectPlus::XmlReader'
+  provide 'writer_class_name', 'DlmeJsonResourceWriter'
+end
 
 each_record do |record, context|
   context.clipboard[:id] = extract_record_id(record)
@@ -57,7 +57,7 @@ to_field 'id', lambda { |_record, accumulator, context|
   bare_id = default_identifier(context)
   accumulator << identifier_with_prefix(context, bare_id)
 }
-to_field 'cho_title', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:title[1]"), strip, default('Untitled'), lang('en')
+to_field 'cho_title', xpath_title_or_desc("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:title[1]", "#{MS_DESC}/#{MS_CONTENTS}/tei:summary[1]"), lang('en'), default('Untitled', 'بدون عنوان')
 
 # Cho other
 to_field 'cho_creator', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:author"), strip, lang('en')

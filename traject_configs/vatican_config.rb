@@ -28,6 +28,9 @@ extend TrajectPlus::Macros
 extend TrajectPlus::Macros::Tei
 extend TrajectPlus::Macros::Xml
 
+# Shortcut variables
+MS_DESC = '//teiHeader/fileDesc/sourceDesc/msDescription'
+
 settings do
   provide 'reader_class_name', 'TrajectPlus::XmlReader'
   provide 'writer_class_name', 'DlmeJsonResourceWriter'
@@ -36,16 +39,13 @@ end
 # File path
 to_field 'dlme_source_file', path_to_file
 
-# Shortcut variables
-MS_DESC = '//teiHeader/fileDesc/sourceDesc/msDescription'
-
 # Set Version & Timestamp on each record
 to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
 
 # Cho Required
 to_field 'id', extract_tei("#{MS_DESC}/msIdentifier/idno")
-to_field 'cho_title', extract_tei('//fileDesc/titleStmt/title'), default('Untitled'), strip, lang('en')
+to_field 'cho_title', xpath_title_or_desc('//fileDesc/titleStmt/title', "#{MS_DESC}/msPart/msContents/overview"), lang('und-Latn'), default('Untitled', 'بدون عنوان')
 
 # Cho other
 to_field 'cho_creator', extract_tei('//fileDesc/titleStmt/author/alias/authorityAuthor'), strip, lang('en')

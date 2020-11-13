@@ -44,8 +44,8 @@ to_field 'dlme_source_file', path_to_file
 
 # CHO Required
 to_field 'id', extract_oai_identifier, strip
-to_field 'cho_title', extract_oai('dc:title'), strip, first_only, lang('fa-Arab')
-to_field 'cho_title', extract_oai('dc:title'), strip, last, lang('en')
+to_field 'cho_title', xpath_title_or_desc("#{PREFIX}/dc:title[1]", "#{PREFIX}/dc:description[1]"), lang('fa-Arab'), default('Untitled', 'بدون عنوان')
+to_field 'cho_title', xpath_title_or_desc("#{PREFIX}/dc:title[last()]", "#{PREFIX}/dc:description[last()]"), lang('fa-Latn')
 
 # CHO Other
 to_field 'cho_creator', extract_oai('dc:creator'), strip, lang('fa-Arab')
