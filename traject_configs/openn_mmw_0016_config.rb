@@ -66,12 +66,12 @@ to_field 'cho_title', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:titl
          tei_lower_resource_language
 
 # CHO Other
-to_field 'cho_creator', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:author[1]"), first_only, strip, split('    '), first_only, strip, naive_language_extractor
-to_field 'cho_creator', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:author[1]"), first_only, strip, split('    '), last, strip, naive_language_extractor
-to_field 'cho_creator', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:author[2]"), first_only, strip, split('    '), first_only, strip, naive_language_extractor
-to_field 'cho_creator', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:author[2]"), first_only, strip, split('    '), last, strip, naive_language_extractor
-to_field 'cho_creator', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:author[3]"), first_only, strip, split('    '), first_only, strip, naive_language_extractor
-to_field 'cho_creator', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:author[3]"), first_only, strip, split('    '), last, strip, naive_language_extractor
+to_field 'cho_creator', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:author[1]"), first_only, strip, split('    '), first_only, strip, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_creator', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:author[1]"), first_only, strip, split('    '), last, strip, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_creator', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:author[2]"), first_only, strip, split('    '), first_only, strip, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_creator', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:author[2]"), first_only, strip, split('    '), last, strip, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_creator', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:author[3]"), first_only, strip, split('    '), first_only, strip, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_creator', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:author[3]"), first_only, strip, split('    '), last, strip, arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_creator', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:author/tei:persname[@type='authority']"), strip, lang('en')
 to_field 'cho_creator', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:author/tei:persname[@type='vernacular']"), strip, lang('ar-Arab')
 to_field 'cho_date', extract_tei("#{MS_DESC}/#{MS_ORIGIN}/tei:origdate"), strip, lang('en')

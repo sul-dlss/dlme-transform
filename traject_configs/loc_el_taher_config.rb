@@ -39,8 +39,8 @@ to_field 'dlme_source_file', path_to_file
 
 # Cho Required
 to_field 'id', extract_json('.id')
-to_field 'cho_title', extract_json('.item.title'), strip, gsub('/', ''), arabic_or_none
-to_field 'cho_title', extract_json('.item.other_title[0]'), strip, gsub('/', ''), arabic_or_none
+to_field 'cho_title', extract_json('.item.title'), strip, gsub('/', ''), arabic_script_lang_or_default('ar-Arab', 'und-Latn')
+to_field 'cho_title', extract_json('.item.other_title[0]'), strip, gsub('/', ''), arabic_script_lang_or_default('ar-Arab', 'und-Latn')
 
 # Cho Other
 to_field 'cho_contributor', extract_json('.item.contributors[0]'), strip, lang('en')
