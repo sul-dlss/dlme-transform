@@ -14,32 +14,34 @@ module Macros
     PUB_STMT = '//tei:teiHeader/tei:fileDesc/tei:publicationStmt'
     SUPPORT_DESC = 'tei:supportDesc'
 
-    TEI_MS_DESC = '//tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc'
-    TEI_MS_ORIGIN = 'tei:history/tei:origin'
-    TEI_ORIG_DATE_PATH = "#{TEI_MS_DESC}/#{TEI_MS_ORIGIN}/tei:origDate"
-
     # Namespaces and prefixes for XML documents
     NS = { tei: 'http://www.tei-c.org/ns/1.0' }.freeze
 
-    # Extract and transform the extent, dimensions of Cambridge record.
-    # @param [Nokogiri::Document] record
-    # @return [String] the resource dimensions
     def cambridge_dimensions
       lambda do |record, accumulator|
         return unless extent(record)
         return unless height(record)
-        return unless width(record)
+        return unless meausured_object(record)
         return unless unit(record)
+        return unless width(record)
 
-        accumulator.replace(["#{extent(record)} Written height: #{height(record)} #{unit(record)},
-           width: #{width(record)} #{unit(record)}"])
+        accumulator.replace(["#{extent(record)} #{meausured_object(record).first.capitalize}: "\
+                              "(height: #{height(record).first} #{unit(record).first}, width: "\
+                              "#{width(record).first} #{unit(record).first})".strip])
+        if height(record).length > 1
+          accumulator << "#{meausured_object(record)[1].capitalize}: (height: #{height(record)[1]} "\
+                          "#{unit(record)[1]}, width: #{width(record)[1]} #{unit(record)[1]})".strip
+        end
       end
     end
 
     def extent(record)
-      return if record.xpath("#{MS_DESC}/#{OBJ_DESC}/#{SUPPORT_DESC}/tei:extent", NS).map(&:text).blank?
+      return if record.xpath("#{MS_DESC}/#{OBJ_DESC}/#{SUPPORT_DESC}/tei:extent/text()[last()]", NS).map(&:text).blank?
 
-      record.xpath("#{MS_DESC}/#{OBJ_DESC}/#{SUPPORT_DESC}/tei:extent", NS).map(&:text).first.split("\n").first
+      record.xpath("#{MS_DESC}/#{OBJ_DESC}/#{SUPPORT_DESC}/tei:extent/text()[last()]", NS).map(&:text)
+            .first
+            .split("\n")
+            .first
     end
 
     def height(record)
@@ -49,7 +51,18 @@ module Macros
 
       record.xpath("#{MS_DESC}/#{OBJ_DESC}/#{SUPPORT_DESC}/tei:extent/tei:dimensions/tei:height", NS)
             .map(&:text)
-            .first
+    end
+
+    def meausured_object(record)
+      return if record.xpath("#{MS_DESC}/#{OBJ_DESC}/#{SUPPORT_DESC}/tei:extent/tei:dimensions/@type", NS).map(&:text).blank?
+
+      record.xpath("#{MS_DESC}/#{OBJ_DESC}/#{SUPPORT_DESC}/tei:extent/tei:dimensions/@type", NS).map(&:text)
+    end
+
+    def unit(record)
+      return if record.xpath("#{MS_DESC}/#{OBJ_DESC}/#{SUPPORT_DESC}/tei:extent/tei:dimensions/@unit", NS).map(&:text).blank?
+
+      record.xpath("#{MS_DESC}/#{OBJ_DESC}/#{SUPPORT_DESC}/tei:extent/tei:dimensions/@unit", NS).map(&:text)
     end
 
     def width(record)
@@ -59,13 +72,6 @@ module Macros
 
       record.xpath("#{MS_DESC}/#{OBJ_DESC}/#{SUPPORT_DESC}/tei:extent/tei:dimensions/tei:width", NS)
             .map(&:text)
-            .first
-    end
-
-    def unit(record)
-      return if record.xpath("#{MS_DESC}/#{OBJ_DESC}/#{SUPPORT_DESC}/tei:extent/tei:dimensions/@unit", NS).map(&:text).blank?
-
-      record.xpath("#{MS_DESC}/#{OBJ_DESC}/#{SUPPORT_DESC}/tei:extent/tei:dimensions/@unit", NS).map(&:text).first
     end
 
     # This is a ID for the Digital Object in its information context

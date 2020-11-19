@@ -9,6 +9,7 @@ require 'macros/dlme'
 require 'macros/each_record'
 require 'macros/normalize_language'
 require 'macros/path_to_file'
+require 'macros/string_helper'
 require 'macros/tei'
 require 'macros/timestamp'
 require 'macros/version'
@@ -21,6 +22,7 @@ extend Macros::DLME
 extend Macros::EachRecord
 extend Macros::NormalizeLanguage
 extend Macros::PathToFile
+extend Macros::StringHelper
 extend Macros::Tei
 extend Macros::Timestamp
 extend Macros::Version
@@ -54,13 +56,13 @@ to_field 'cho_title', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:titl
 # Cho other
 to_field 'cho_alternative', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:title[@type='alt']"), squish
 to_field 'cho_creator', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:author"), strip, lang('en')
-to_field 'cho_date', extract_tei("#{MS_DESC}/#{MS_ORIGIN}/tei:origDate"), strip, squish, lang('en')
+to_field 'cho_date', extract_tei("#{MS_DESC}/#{MS_ORIGIN}/tei:origDate"), squish, strip, lang('en')
 to_field 'cho_date_range_norm', cambridge_gregorian_range
 to_field 'cho_date_range_hijri', cambridge_gregorian_range, hijri_range
-to_field 'cho_dc_rights', extract_tei("#{PUB_STMT}/tei:availability/tei:licence"), strip, squish, lang('en')
-to_field 'cho_description', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/tei:summary"), strip, squish, lang('en')
-to_field 'cho_description', return_or_prepend("#{MS_DESC}/#{OBJ_DESC}/#{SUPPORT_DESC}/tei:condition", 'Condition:'), strip, squish, lang('en')
-to_field 'cho_description', return_or_prepend("#{MS_DESC}/#{OBJ_DESC}/tei:layoutDesc/tei:layout", 'Layout:'), strip, squish, lang('en')
+to_field 'cho_dc_rights', extract_tei("#{PUB_STMT}/tei:availability/tei:licence"), squish, strip, lang('en')
+to_field 'cho_description', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/tei:summary"), squish, strip, lang('en')
+to_field 'cho_description', return_or_prepend("#{MS_DESC}/#{OBJ_DESC}/#{SUPPORT_DESC}/tei:condition", 'Condition:'), squish, strip, lang('en')
+to_field 'cho_description', return_or_prepend("#{MS_DESC}/#{OBJ_DESC}/tei:layoutDesc/tei:layout", 'Layout:'), squish, strip, lang('en')
 to_field 'cho_edm_type', literal('Text'), lang('en')
 to_field 'cho_edm_type', literal('Text'), translation_map('norm_types_to_ar'), lang('ar-Arab')
 to_field 'cho_extent', cambridge_dimensions, squish, lang('en')
@@ -73,8 +75,8 @@ to_field 'cho_language', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:t
 to_field 'cho_language', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:textLang/@otherLangs"), strip, split(' '), normalize_language, lang('en')
 to_field 'cho_language', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:textLang/@mainLang"), strip, split(' '), normalize_language, translation_map('norm_languages_to_ar'), lang('ar-Arab')
 to_field 'cho_language', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:textLang/@otherLangs"), strip, split(' '), normalize_language, translation_map('norm_languages_to_ar'), lang('ar-Arab')
-to_field 'cho_medium', extract_tei("#{MS_DESC}/#{OBJ_DESC}/#{SUPPORT_DESC}/tei:support"), strip, squish, lang('en')
-to_field 'cho_provenance', extract_tei("#{MS_DESC}/tei:history/tei:provenance"), strip, squish, lang('en')
+to_field 'cho_medium', extract_tei("#{MS_DESC}/#{OBJ_DESC}/#{SUPPORT_DESC}/tei:support"), squish, strip, lang('en')
+to_field 'cho_provenance', extract_tei("#{MS_DESC}/tei:history/tei:provenance"), squish, strip, lang('en')
 to_field 'cho_publisher', extract_tei("#{PUB_STMT}/tei:publisher"), strip, lang('en')
 to_field 'cho_spatial', extract_tei("#{MS_DESC}/#{MS_ORIGIN}/tei:origPlace"), strip, lang('en')
 to_field 'cho_subject', extract_tei("#{PROFILE_DESC}/tei:keywords[@n='form/genre']/tei:term"), strip, lang('en')
@@ -85,10 +87,10 @@ to_field 'agg_data_provider', data_provider, lang('en')
 to_field 'agg_data_provider', data_provider_ar, lang('ar-Arab')
 to_field 'agg_data_provider_country', data_provider_country, lang('en')
 to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
-to_field 'agg_dc_rights', extract_tei("#{PUB_STMT}/tei:availability/tei:licence"), strip, squish
+to_field 'agg_dc_rights', extract_tei("#{PUB_STMT}/tei:availability/tei:licence"), squish, strip
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(context,
-                                  'wr_dc_rights' => [extract_tei("#{PUB_STMT}/tei:availability/tei:licence"), first_only, strip, squish],
+                                  'wr_dc_rights' => [extract_tei("#{PUB_STMT}/tei:availability/tei:licence"), first_only, squish, strip],
                                   'wr_edm_rights' => [literal('BY-NC-SA'), translation_map('edm_rights')],
                                   'wr_id' => [literal(context.clipboard[:id]),
                                               prepend('https://cudl.lib.cam.ac.uk/view/'),
@@ -98,7 +100,7 @@ to_field 'agg_is_shown_at' do |_record, accumulator, context|
 end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(context,
-                                  'wr_dc_rights' => [extract_tei("#{PUB_STMT}/tei:availability/tei:licence"), first_only, strip, squish],
+                                  'wr_dc_rights' => [extract_tei("#{PUB_STMT}/tei:availability/tei:licence"), first_only, squish, strip],
                                   'wr_edm_rights' => [literal('BY-NC-SA'), translation_map('edm_rights')],
                                   'wr_id' => [extract_tei('//tei:facsimile/tei:graphic/@url'),
                                               gsub('http://cudl.lib.cam.ac.uk/content/images/', ''),

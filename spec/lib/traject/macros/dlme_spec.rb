@@ -1,12 +1,14 @@
 # frozen_string_literal: true
 
 require 'macros/dlme'
+require 'macros/string_helper'
 
 RSpec.describe Macros::DLME do
   subject(:indexer) do
     Traject::Indexer.new.tap do |indexer|
       indexer.instance_eval do
         extend Macros::DLME
+        extend Macros::StringHelper
         extend TrajectPlus::Macros
       end
     end
@@ -65,73 +67,36 @@ RSpec.describe Macros::DLME do
     end
   end
 
-  describe '#squish' do
-    it 'returns an Array' do
-      string = 'Euchologion ad usum Melchitarum'
-      callable = instance.squish
-      expect(callable.call(nil, [string])).to be_a(Array)
+  describe '#return_or_prepend' do
+    let(:record) do
+      <<-XML
+        <record>
+          <metadata>
+            #{title}
+          </metadata>
+        </record>
+      XML
     end
-
-    context 'when extracted string contains long chunks of whitespace and/or newlines' do
-      it 'removes extra whitespace and newlines' do
-        string = "Euchologion ad usum Melchitarum,    \n     partim arabice partim syriace,
-        cum titulis et rubricis plerumque    \n     mere arabicis, prinicpio       et fine mutilum."
-        callable = instance.squish
-        expect(callable.call(nil, [string])).to eq(["Euchologion ad usum Melchitarum, partim arabice partim syriace, cum titulis et rubricis plerumque mere arabicis, prinicpio et fine mutilum."])
-      end
-    end
-  end
-
-  describe '#titleize' do
-    it 'returns an Array' do
-      string = 'suchologion ad usum nelchitarum'
-      callable = instance.titleize
-      expect(callable.call(nil, [string])).to be_a(Array)
-    end
-
-    context 'when extracted string in lowercase' do
-      it 'titleizes the string' do
-        string = "euchologion ad usum melchitarum"
-        callable = instance.titleize
-        expect(callable.call(nil, [string])).to eq(['Euchologion Ad Usum Melchitarum'])
+    let(:ng_rec) { Nokogiri::XML.parse(record) }
+    before do
+      indexer.instance_eval do
+        to_field 'cho_title', return_or_prepend('/record/metadata/title', 'Prepended ')
       end
     end
 
-    context 'when extracted string in all caps' do
-      it 'titleizes the string' do
-        string = "EUCHOLOGION AD USUM MELCHITARUM"
-        callable = instance.titleize
-        expect(callable.call(nil, [string])).to eq(['Euchologion Ad Usum Melchitarum'])
-      end
-    end
-  end
+    context 'when value missing' do
+      let(:title) { '<title><title>' }
 
-  describe '#truncate' do
-    it 'returns a String' do
-      expect(instance.truncate('Euchologion ad usum Melchitarum')).to be_a(String)
-    end
-
-    context 'when extracted string longer than 100 charachters' do
-      it 'truncates string on first white space after character 100, adds ellipsis' do
-        arabic_string = 'تتعلق المراسلات وأوراق أخرى بزيارات قامت بها شخصيات أوروبية وأمريكية إلى '\
-        'المملكة العربية السعودية، وتحديدًا إلى الرياض:زيارة في سنة ١٩٣٧قام بها '\
-        'المقدم هارولد ريتشارد باتريك ديكسون، الوكيل السياسي السابق في الكويت'
-        latin_string = 'Euchologion ad usum Melchitarum, partim arabice partim syriace, cum titulis et rubricis plerumque
-        mere arabicis, prinicpio et fine mutilum. Codicem meorat Cyrillus Charon (Korolevski) apud Χρυσοστομικά,
-        Romae, 1908, pp. 673 sq. Cf. cod. Vat. ar. 54 ; iisdem notis utimur ac in codice laudato.'
-        expect(instance.truncate(arabic_string)).to eq('تتعلق المراسلات وأوراق أخرى بزيارات قامت بها شخصيات '\
-          'أوروبية وأمريكية إلى المملكة العربية السعودية...')
-        expect(instance.truncate(latin_string)).to eq('Euchologion ad usum Melchitarum, partim arabice partim syriace, '\
-          'cum titulis et rubricis plerumque...')
+      it 'has title provided a value' do
+        expect(indexer.map_record(ng_rec)).to eq({})
       end
     end
 
-    context 'when extracted string shorter than 100 charachters' do
-      it 'returns string without change' do
-        arabic_string = 'تتعلق المراسلات وأوراق أخرى'
-        latin_string = 'Euchologion ad usum Melchitarum'
-        expect(instance.truncate(arabic_string)).to eq('تتعلق المراسلات وأوراق أخرى')
-        expect(instance.truncate(latin_string)).to eq('Euchologion ad usum Melchitarum')
+    context 'when value present' do
+      let(:title) { '<title>Title<title>' }
+
+      it 'has title provided a value' do
+        expect(indexer.map_record(ng_rec)).to eq('cho_title' => ['Prepended Title'])
       end
     end
   end

@@ -12,30 +12,6 @@ RSpec.describe Macros::Cambridge do
     end
   end
 
-  # Fails with "undefined method `xpath' for {"extent"=>"3ff.", "height"=>16, "width"=>12, "unit"=>"mm"}:Hash"
-  # let(:raw_val_lambda) do
-  #   lambda do |record, accumulafromr|
-  #     accumulafromr << record[:raw]
-  #   end
-  # end
-  #
-  # describe '#cambridge_dimensions' do
-  #   before do
-  #     indexer.instance_eval do
-  #       to_field 'dimensions', cambridge_dimensions
-  #     end
-  #   end
-  #
-  #   context 'when all fields populated' do
-  #     it 'returns a formated string' do
-  #       expect(indexer.map_record('extent' => '3ff.', 'height' => 16, 'width' => 12, 'unit' => 'mm')).to include 'dimensions' => ['mm']
-  #     end
-  #   end
-  # end
-
-
-
-
   describe '#cambridge_dimensions' do
     let(:record) do
       <<-XML
@@ -64,19 +40,37 @@ RSpec.describe Macros::Cambridge do
       end
     end
 
-    context "when 'extent', 'height', 'width', and 'unit' provided" do
-      let(:extent) { '<extent> 368 ff. <dimensions type="leaf" unit="cm"> <height>32.5</height> <width>23</width> </dimensions> </extent>' }
+    context 'when all elements and attribute values present' do
+      let(:extent) do
+        '<tei:extent> 368 ff.<tei:dimensions type="leaf" unit="cm"><tei:height>32.5</tei:height>'\
+        '<tei:width>23</tei:width></tei:dimensions></tei:extent>'
+      end
 
       it 'returns values in a formatted string' do
-        # Fails with "expected {} to include {"value" => "368"}
-          #Diff:
-          #@@ -1,2 +1 @@
-          #-"value" => "368","
-        # expect(indexer.map_record(ng_rec)).to include 'dimensions' => (["368 ff. Written height: 32.5 cm, width: 23 cm"])
-        # Fails with "{}"
-        expect(indexer.map_record(ng_rec)).to eq({'dimensions' => ["368 ff. Written height: 32.5 cm, width: 23 cm"]})
-        # Fails with "undefined method `xpath' for {"extent"=>"3ff.", "height"=>16, "width"=>12, "unit"=>"mm"}:Hash"
-        # expect(indexer.map_record('extent' => '3ff.', 'height' => 16, 'width' => 12, 'unit' => 'mm')).to include 'dimensions' => ['mm']
+        expect(indexer.map_record(ng_rec)).to eq('dimensions' => ['368 ff. Leaf: (height: 32.5 cm, width: 23 cm)'])
+      end
+    end
+
+    context 'when multiple instances and all elements and attribute values present' do
+      let(:extent) do
+        '<tei:extent> 368 ff.<tei:dimensions type="leaf" unit="cm"><tei:height>32.5</tei:height>'\
+        '<tei:width>23</tei:width></tei:dimensions><tei:dimensions type="written" unit="cm">'\
+        '<tei:height>27</tei:height><tei:width>19</tei:width></tei:dimensions></tei:extent>'
+      end
+
+      it 'returns values in a formatted string' do
+        expect(indexer.map_record(ng_rec)).to eq('dimensions' => ['368 ff. Leaf: (height: 32.5 cm, width:'\
+                                                  ' 23 cm)', 'Written: (height: 27 cm, width: 19 cm)'])
+      end
+    end
+
+    context 'when one or more elements or attribute missing or empty' do
+      let(:extent) do
+        '<tei:extent> 368 ff.<tei:dimensions type="leaf" unit="cm"><tei:width>23</tei:width></tei:dimensions></tei:extent>'
+      end
+
+      it 'returns an empty hash' do
+        expect(indexer.map_record(ng_rec)).to eq({})
       end
     end
   end
