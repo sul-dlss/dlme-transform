@@ -36,7 +36,7 @@ to_field 'transform_timestamp', timestamp
 to_field 'id', extract_json('.rendering'),
          strip,
          gsub('https://digital.bodleian.ox.ac.uk/inquire/p/', '')
-to_field 'cho_title', extract_json('.title'), strip, arabic_or_und_latn
+to_field 'cho_title', extract_json('.title'), strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
 
 # Cho Other
 to_field 'cho_creator', extract_json('.author'), strip, lang('en')

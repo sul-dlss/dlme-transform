@@ -44,8 +44,8 @@ to_field 'transform_timestamp', timestamp
 
 # Cho Required
 to_field 'id', extract_xpath('/*/identifier'), strip
-to_field 'cho_title', extract_poha('/*/dc:title'), strip, naive_language_extractor
-to_field 'cho_title', extract_poha('/*/dc:title[2]'), strip, naive_language_extractor
+to_field 'cho_title', extract_poha('/*/dc:title'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_title', extract_poha('/*/dc:title[2]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
 
 # Cho Other
 to_field 'cho_contributor', extract_poha('/*/dc:interviewee'), strip, prepend('Interviewee: '), lang('en')
