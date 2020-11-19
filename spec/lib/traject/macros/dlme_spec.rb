@@ -65,6 +65,47 @@ RSpec.describe Macros::DLME do
     end
   end
 
+  describe '#squish' do
+    it 'returns an Array' do
+      string = 'Euchologion ad usum Melchitarum'
+      callable = instance.squish
+      expect(callable.call(nil, [string])).to be_a(Array)
+    end
+
+    context 'when extracted string contains long chunks of whitespace and/or newlines' do
+      it 'removes extra whitespace and newlines' do
+        string = "Euchologion ad usum Melchitarum,    \n     partim arabice partim syriace,
+        cum titulis et rubricis plerumque    \n     mere arabicis, prinicpio       et fine mutilum."
+        callable = instance.squish
+        expect(callable.call(nil, [string])).to eq(["Euchologion ad usum Melchitarum, partim arabice partim syriace, cum titulis et rubricis plerumque mere arabicis, prinicpio et fine mutilum."])
+      end
+    end
+  end
+
+  describe '#titleize' do
+    it 'returns an Array' do
+      string = 'suchologion ad usum nelchitarum'
+      callable = instance.titleize
+      expect(callable.call(nil, [string])).to be_a(Array)
+    end
+
+    context 'when extracted string in lowercase' do
+      it 'titleizes the string' do
+        string = "euchologion ad usum melchitarum"
+        callable = instance.titleize
+        expect(callable.call(nil, [string])).to eq(['Euchologion Ad Usum Melchitarum'])
+      end
+    end
+
+    context 'when extracted string in all caps' do
+      it 'titleizes the string' do
+        string = "EUCHOLOGION AD USUM MELCHITARUM"
+        callable = instance.titleize
+        expect(callable.call(nil, [string])).to eq(['Euchologion Ad Usum Melchitarum'])
+      end
+    end
+  end
+
   describe '#truncate' do
     it 'returns a String' do
       expect(instance.truncate('Euchologion ad usum Melchitarum')).to be_a(String)

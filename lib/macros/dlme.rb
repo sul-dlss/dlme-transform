@@ -147,10 +147,58 @@ module Macros
       from_settings('agg_provider_country_ar')
     end
 
+    def return_or_prepend(xpath, prepend_string)
+      lambda do |record, accumulator|
+        field_value = record.xpath(xpath, NS).map(&:text).first
+        return unless field_value.present?
+
+        accumulator.replace(["#{prepend_string} #{field_value}"])
+      end
+    end
+
+    # Returns a string with new lines and whitespace removed.
+    # @return [Proc] a proc that traject can call for each record
+    # @example
+    # "Part of the \n      Islamic Manuscripts |n    Collection" => "Part of the Islamic Manuscripts Collection"
+    def squish
+      lambda do |_rec, acc|
+        acc.collect! do |v|
+          # unicode whitespace class aware
+          v.gsub(/\s+/, ' ')
+        end
+      end
+    end
+
+    # Returns a string with first letter of each word capitalized.
+    # @return [Proc] a proc that traject can call for each record
+    # @example
+    # "the qur'an" => "The Qur'an"
+    def titleize
+      lambda do |_rec, acc|
+        acc.collect! do |v|
+          v.split(/(\W)/).map(&:capitalize).join
+        end
+      end
+    end
+
     # Shorten a string and follow it with an ellipsis.
     def truncate(text, length = 100, truncate_string = '...')
       l = length - truncate_string.chars.length
       (text.length > length ? text[0...l] + truncate_string : text).to_s
+    end
+
+    # Extract a OAI Dublin Core title or, if no title in record, extract abridged description, else pass default values.
+    def xpath_common_title_or_desc(xpath_title, xpath_desc, xpath_id)
+      lambda do |rec, acc|
+        title = rec.xpath(xpath_title, NS).map(&:text).first
+        description = rec.xpath(xpath_desc, NS).map(&:text).first
+        id = rec.xpath(xpath_id, NS).map(&:text).first
+        if title.present?
+          acc.replace(["#{title} #{id}"])
+        elsif description.present?
+          acc.replace([truncate(description)])
+        end
+      end
     end
 
     # Extract a OAI Dublin Core title or, if no title in record, extract abridged description, else pass default values.
