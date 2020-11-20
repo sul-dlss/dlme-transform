@@ -19,20 +19,22 @@ module Macros
 
     def cambridge_dimensions
       lambda do |record, accumulator|
-        return unless extent(record)
-        return unless height(record)
-        return unless meausured_object(record)
-        return unless unit(record)
-        return unless width(record)
+        return unless all_dimension_info?(record)
 
-        accumulator.replace(["#{extent(record)} #{meausured_object(record).first.capitalize}: "\
-                              "(height: #{height(record).first} #{unit(record).first}, width: "\
-                              "#{width(record).first} #{unit(record).first})".strip])
-        if height(record).length > 1
-          accumulator << "#{meausured_object(record)[1].capitalize}: (height: #{height(record)[1]} "\
-                          "#{unit(record)[1]}, width: #{width(record)[1]} #{unit(record)[1]})".strip
-        end
+        accumulator.replace(["#{extent(record)} #{height_width_str(record, 0)}".strip])
+        accumulator << height_width_str(record, 1).strip if height(record).length > 1
       end
+    end
+
+    # @param [Nokogiri::Document] record from which to get dimension lists
+    # @param [Integer] idx which set of dimensions to stringify
+    def height_width_str(record, idx)
+      "#{meausured_object(record)[idx].capitalize}: "\
+        "(height: #{height(record)[idx]} #{unit(record)[idx]}, width: #{width(record)[idx]} #{unit(record)[idx]})"
+    end
+
+    def all_dimension_info?(record)
+      extent(record) && height(record) && meausured_object(record) && unit(record) && width(record)
     end
 
     def extent(record)
