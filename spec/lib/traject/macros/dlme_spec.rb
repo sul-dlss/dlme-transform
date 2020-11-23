@@ -85,7 +85,7 @@ RSpec.describe Macros::DLME do
     end
 
     context 'when value missing' do
-      let(:title) { '<title><title>' }
+      let(:title) { '<title></title>' }
 
       it 'has title provided a value' do
         expect(indexer.map_record(ng_rec)).to eq({})
@@ -93,7 +93,7 @@ RSpec.describe Macros::DLME do
     end
 
     context 'when value present' do
-      let(:title) { '<title>Title<title>' }
+      let(:title) { '<title>Title</title>' }
 
       it 'has title provided a value' do
         expect(indexer.map_record(ng_rec)).to eq('cho_title' => ['Prepended Title'])
