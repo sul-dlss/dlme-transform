@@ -6,6 +6,7 @@ require 'macros/collection'
 require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
+require 'macros/iiif'
 require 'macros/normalize_language'
 require 'macros/normalize_type'
 require 'macros/path_to_file'
@@ -18,6 +19,7 @@ extend Macros::Collection
 extend Macros::DateParsing
 extend Macros::DLME
 extend Macros::EachRecord
+extend Macros::IIIF
 extend Macros::NormalizeLanguage
 extend Macros::NormalizeType
 extend Macros::PathToFile
@@ -37,6 +39,31 @@ to_field 'transform_timestamp', timestamp
 
 # File path
 to_field 'dlme_source_file', path_to_file
+
+each_record do |record, context|
+  context.clipboard[:id] = generate_qnl_iiif_id(record, context)
+  context.clipboard[:manifest] = "https://www.qdl.qa/en/iiif/#{context.clipboard[:id]}/manifest"
+  context.clipboard[:iiif_json] = grab_iiif_manifest(context.clipboard[:manifest])
+end
+
+# Service Objects
+def iiif_thumbnail_service(iiif_json)
+  lambda { |_record, accumulator, context|
+    accumulator << transform_values(context,
+                                    'service_id' => literal(iiif_thumbnail_service_id(iiif_json)),
+                                    'service_conforms_to' => literal(iiif_thumbnail_service_conforms_to(iiif_json)),
+                                    'service_implements' => literal(iiif_thumbnail_service_protocol(iiif_json)))
+  }
+end
+
+def iiif_sequences_service(iiif_json)
+  lambda { |_record, accumulator, context|
+    accumulator << transform_values(context,
+                                    'service_id' => literal(iiif_sequence_service_id(iiif_json)),
+                                    'service_conforms_to' => literal(iiif_sequence_service_conforms_to(iiif_json)),
+                                    'service_implements' => literal(iiif_sequence_service_protocol(iiif_json)))
+  }
+end
 
 # CHO Required
 to_field 'id', extract_qnl_identifier, strip
@@ -83,19 +110,49 @@ to_field 'agg_data_provider', data_provider_ar, lang('ar-Arab')
 to_field 'agg_data_provider_collection', collection
 to_field 'agg_data_provider_country', data_provider_country, lang('en')
 to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
-to_field 'agg_is_shown_at' do |_record, accumulator, context|
-  accumulator << transform_values(
-    context,
-    'wr_id' => [extract_qnl_en('mods:location/mods:url'), strip],
-    'wr_is_referenced_by' => [extract_qnl_en('mods:location/mods:url[@access="preview"]'), strip, split('vdc_'), last, split('/'), first_only, prepend('https://www.qdl.qa/en/iiif/81055/vdc_'), append('/manifest')]
-  )
+# to_field 'agg_is_shown_at' do |_record, accumulator, context|
+#   accumulator << transform_values(
+#     context,
+#     # 'wr_dc_rights' => [extract_qnl_en('mods:accessCondition'), strip],
+#     # 'wr_edm_rights' => [extract_qnl_en('mods:accessCondition'), strip, translation_map('edm_rights')],
+#     # 'wr_has_service' => [extract_qnl_en('mods:location/mods:url[@access="preview"]'), strip, split('vdc_'), last, split('/'), first_only, prepend('https://www.qdl.qa/annos/search/81055/vdc_')],
+#     'wr_format' => [literal('image/jpeg')],
+#     'wr_id' => [extract_qnl_en('mods:location/mods:url'), strip],
+#     'wr_is_referenced_by' => [extract_qnl_en('mods:location/mods:url[@access="preview"]'), strip, split('vdc_'), last, split('/'), first_only, prepend('https://www.qdl.qa/en/iiif/81055/vdc_'), append('/manifest')]
+#   )
+# end
+# to_field 'agg_is_shown_at' do |record, accumulator, context|
+#   accumulator << transform_values(context, 'wr_id' => literal(generate_qnl_shown_at(record, context.clipboard[:id])))
+# end
+to_field 'agg_is_shown_by' do |_record, accumulator, context|
+  if context.clipboard[:iiif_json].present?
+    iiif_json = context.clipboard[:iiif_json]
+    accumulator << transform_values(context,
+      'wr_format' => [literal('image/jpeg')],
+      # 'wr_has_service' => iiif_sequences_service(iiif_json),
+      'wr_id' => literal(iiif_sequence_id(iiif_json)),
+      'wr_is_referenced_by' => literal(context.clipboard[:manifest]))
+  # else
+  #   accumulator << transform_values(context,
+  #                                   'wr_format' => literal('image/jpeg'),
+  #                                   'wr_is_referenced_by' => literal(context.clipboard[:manifest]),
+  #                                   'wr_id' => literal(context.clipboard[:id]))
+  end
 end
 to_field 'agg_preview' do |_record, accumulator, context|
-  accumulator << transform_values(
-    context,
-    'wr_id' => [extract_qnl_en('mods:location/mods:url[@access="preview"]'), strip, gsub(' ', '%20')],
-    'wr_is_referenced_by' => [extract_qnl_en('mods:location/mods:url[@access="preview"]'), strip, split('vdc_'), last, split('/'), first_only, prepend('https://www.qdl.qa/en/iiif/81055/vdc_'), append('/manifest')]
-  )
+  if context.clipboard[:iiif_json].present?
+    iiif_json = context.clipboard[:iiif_json]
+    accumulator << transform_values(context,
+                                    'wr_format' => [literal('image/jpeg')],
+                                    # 'wr_has_service' => iiif_thumbnail_service(iiif_json),
+                                    'wr_id' => literal(iiif_thumbnail_id(iiif_json)),
+                                    'wr_is_referenced_by' => literal(context.clipboard[:manifest]))
+  # else
+  #   accumulator << transform_values(context,
+  #                                   'wr_format' => literal('image/jpeg'),
+  #                                   'wr_is_referenced_by' => literal(context.clipboard[:manifest]),
+  #                                   'wr_id' => literal(context.clipboard[:id]))
+  end
 end
 to_field 'agg_provider', provider, lang('en')
 to_field 'agg_provider', provider_ar, lang('ar-Arab')
