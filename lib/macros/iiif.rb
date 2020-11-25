@@ -26,7 +26,9 @@ module Macros
     # @param [Hash] iiif_json the IIIF document
     # @return [String] the thumbnail service id
     def iiif_thumbnail_service_id(iiif_json)
-      iiif_json.dig('thumbnail', 'service', '@id')
+      # iiif_json.dig('thumbnail', 'service', '@id')
+      puts "*****" + iiif_json.dig('@id')
+      # iiif_json.dig('@id')
     end
 
     # Retrieve the thumbnail service protocol from the IIIF manifest document
