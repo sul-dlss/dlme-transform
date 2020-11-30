@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+require 'active_support/core_ext/string/inflections'
+require 'active_support/core_ext/string/filters'
+
 module Macros
   # String helper macros for traject mappings
   module StringHelper
@@ -9,10 +12,7 @@ module Macros
     # "Part of the \n      Islamic Manuscripts |n    Collection" => "Part of the Islamic Manuscripts Collection"
     def squish
       lambda do |_rec, acc|
-        acc.collect! do |v|
-          # unicode whitespace class aware
-          v.gsub(/\s+/, ' ')
-        end
+        acc.collect!(&:squish)
       end
     end
 
@@ -22,9 +22,7 @@ module Macros
     # "the qur'an" => "The Qur'an"
     def titleize
       lambda do |_rec, acc|
-        acc.collect! do |v|
-          v.split(/(\W)/).map(&:capitalize).join
-        end
+        acc.collect!(&:titleize)
       end
     end
 
