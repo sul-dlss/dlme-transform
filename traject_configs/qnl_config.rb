@@ -110,23 +110,23 @@ to_field 'agg_data_provider', data_provider_ar, lang('ar-Arab')
 to_field 'agg_data_provider_collection', collection
 to_field 'agg_data_provider_country', data_provider_country, lang('en')
 to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
-to_field 'agg_is_shown_at' do |_record, accumulator, context|
-  accumulator << transform_values(
-    context,
-    'wr_dc_rights' => [extract_qnl_en('mods:accessCondition'), strip],
-    'wr_edm_rights' => [extract_qnl_en('mods:accessCondition'), strip, translation_map('edm_rights')],
-    'wr_format' => [literal('image/jpeg')],
-    'wr_id' => [literal("https://www.qdl.qa/en/mirador/#{context.clipboard[:id]}")],
-    'wr_is_referenced_by' => [extract_qnl_en('mods:location/mods:url[@access="preview"]'), strip, split('vdc_'), last, split('/'), first_only, prepend('https://www.qdl.qa/en/iiif/81055/vdc_'), append('/manifest')]
-  )
-end
+# to_field 'agg_is_shown_at' do |_record, accumulator, context|
+#   accumulator << transform_values(
+#     context,
+#     'wr_dc_rights' => [extract_qnl_en('mods:accessCondition'), strip],
+#     'wr_edm_rights' => [extract_qnl_en('mods:accessCondition'), strip, translation_map('edm_rights')],
+#     'wr_format' => [literal('image/jpeg')],
+#     'wr_id' => [literal("https://www.qdl.qa/en/mirador/#{context.clipboard[:id]}")],
+#     'wr_is_referenced_by' => [extract_qnl_en('mods:location/mods:url[@access="preview"]'), strip, split('vdc_'), last, split('/'), first_only, prepend('https://www.qdl.qa/en/iiif/81055/vdc_'), append('/manifest')]
+#   )
+# end
 to_field 'agg_is_shown_by' do |_record, accumulator, context|
   if context.clipboard[:iiif_json].present?
     iiif_json = context.clipboard[:iiif_json]
     accumulator << transform_values(context,
       'wr_edm_rights' => [extract_qnl_en('mods:accessCondition'), strip, translation_map('edm_rights')],
       'wr_format' => [literal('image/jpeg')],
-      # 'wr_has_service' => iiif_sequences_service(iiif_json),
+      'wr_has_service' => iiif_sequences_service(iiif_json),
       'wr_id' => literal(iiif_sequence_id(iiif_json)),
       'wr_is_referenced_by' => literal(context.clipboard[:manifest]))
   else
