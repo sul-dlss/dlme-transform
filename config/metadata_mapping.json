@@ -788,10 +788,50 @@
   },
   {
     "trajects": [
-      "cambridge_config.rb"
+      "cambridge_genizah_config.rb"
     ],
     "paths": [
-      "cambridge"
+      "cambridge/genizah"
+    ],
+    "extension": ".xml",
+    "settings": {
+      "agg_provider": "Cambridge University Library",
+      "agg_provider_country": "United Kingdom",
+      "agg_data_provider": "Cambridge University Library",
+      "agg_data_provider_country": "United Kingdom",
+      "agg_provider_ar": "مكتبة جامعة كامبريدج",
+      "agg_provider_country_ar": "المملكة المتحدة",
+      "agg_data_provider_ar": "مكتبة جامعة كامبريدج",
+      "agg_data_provider_country_ar": "المملكة المتحدة",
+      "inst_id": "cambridge"
+    }
+  },
+  {
+    "trajects": [
+      "cambridge_hebrew_config.rb"
+    ],
+    "paths": [
+      "cambridge/hebrew"
+    ],
+    "extension": ".xml",
+    "settings": {
+      "agg_provider": "Cambridge University Library",
+      "agg_provider_country": "United Kingdom",
+      "agg_data_provider": "Cambridge University Library",
+      "agg_data_provider_country": "United Kingdom",
+      "agg_provider_ar": "مكتبة جامعة كامبريدج",
+      "agg_provider_country_ar": "المملكة المتحدة",
+      "agg_data_provider_ar": "مكتبة جامعة كامبريدج",
+      "agg_data_provider_country_ar": "المملكة المتحدة",
+      "inst_id": "cambridge"
+    }
+  },
+  {
+    "trajects": [
+      "cambridge_islamic_config.rb"
+    ],
+    "paths": [
+      "cambridge/islamic"
     ],
     "extension": ".xml",
     "settings": {

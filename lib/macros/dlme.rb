@@ -147,10 +147,28 @@ module Macros
       from_settings('agg_provider_country_ar')
     end
 
-    # Shorten a string and follow it with an ellipsis.
-    def truncate(text, length = 100, truncate_string = '...')
-      l = length - truncate_string.chars.length
-      (text.length > length ? text[0...l] + truncate_string : text).to_s
+    # Returns if no value in field, else prepends prepend string
+    def return_or_prepend(xpath, prepend_string)
+      lambda do |record, accumulator|
+        field_value = record.xpath(xpath, NS).map(&:text).first
+        return unless field_value.present?
+
+        accumulator.replace(["#{prepend_string} #{field_value}".gsub(/\s+/, ' ').strip])
+      end
+    end
+
+    # Extract a OAI Dublin Core title or, if no title in record, extract abridged description, else pass default values.
+    def xpath_common_title_or_desc(xpath_title, xpath_desc, xpath_id)
+      lambda do |rec, acc|
+        title = rec.xpath(xpath_title, NS).map(&:text).first
+        description = rec.xpath(xpath_desc, NS).map(&:text).first
+        id = rec.xpath(xpath_id, NS).map(&:text).first
+        if title.present?
+          acc.replace(["#{title} #{id}"])
+        elsif description.present?
+          acc.replace([truncate(description)])
+        end
+      end
     end
 
     # Extract a OAI Dublin Core title or, if no title in record, extract abridged description, else pass default values.
