@@ -19,16 +19,18 @@ module Macros
     # @param [Hash] iiif_json the IIIF document
     # @return [String] the thumbnail id
     def iiif_thumbnail_id(iiif_json)
-      iiif_json.dig('thumbnail', '@id')
+      service = iiif_json.dig('thumbnail')
+      service = service.first if service.is_a?(Array)
+      service.dig('@id')
     end
 
     # Retrieve the thumbnail service id from the IIIF manifest document
     # @param [Hash] iiif_json the IIIF document
     # @return [String] the thumbnail service id
     def iiif_thumbnail_service_id(iiif_json)
-      # iiif_json.dig('thumbnail', 'service', '@id')
-      puts "*****" + iiif_json.dig('@id')
-      # iiif_json.dig('@id')
+      service = iiif_json.dig('thumbnail', 'service')
+      service = service.first if service.is_a?(Array)
+      service.dig('@id')
     end
 
     # Retrieve the thumbnail service protocol from the IIIF manifest document
@@ -36,7 +38,7 @@ module Macros
     # @return [String] the thumbnail service protocol
     def iiif_thumbnail_service_protocol(iiif_json)
       service = iiif_json.dig('thumbnail', 'service')
-      service = service.first if service.kind_of?(Array)
+      service = service.first if service.is_a?(Array)
       iiif_service_conforms_to(service.dig('profile'))
     end
 
@@ -45,7 +47,7 @@ module Macros
     # @return [String] the url for the service API specification
     def iiif_thumbnail_service_conforms_to(iiif_json)
       service = iiif_json.dig('thumbnail', 'service')
-      service = service.first if service.kind_of?(Array)
+      service = service.first if service.is_a?(Array)
       iiif_service_conforms_to(service.dig('profile'))
     end
 
@@ -53,7 +55,7 @@ module Macros
     # @param [Hash] iiif_json the IIIF document
     # @return [String] the sequence id
     def iiif_sequence_id(iiif_json)
-      rep_iiif_resource(iiif_json).dig('@id')
+      rep_iiif_resource(iiif_json).dig('service', '@id')
     end
 
     # Retrieve the service sequence id from the IIIF manifest document
@@ -74,7 +76,8 @@ module Macros
     # @param [Hash] iiif_json the IIIF document
     # @return [String] the url for the service API specification
     def iiif_sequence_service_conforms_to(iiif_json)
-      iiif_service_conforms_to(rep_iiif_resource(iiif_json).dig('service', 'profile'))
+      # iiif_service_conforms_to(rep_iiif_resource(iiif_json).dig('service', 'profile'))
+      rep_iiif_resource(iiif_json).dig('service', 'profile')
     end
 
     private
@@ -84,6 +87,7 @@ module Macros
     end
 
     def iiif_service_conforms_to(service_profile)
+      puts service_profile
       # Using the thumbnail service profile for now
       return service_profile if %w[
         http://iiif.io/api/image/
@@ -91,6 +95,8 @@ module Macros
         http://iiif.io/api/presentation/
         http://iiif.io/api/search/
         http://iiif.io/api/image/2/level2.json
+        http://iiif.io/api/image/2/level1.json
+        http://iiif.io/api/image/1/level2.json
       ].include? service_profile
     end
   end
