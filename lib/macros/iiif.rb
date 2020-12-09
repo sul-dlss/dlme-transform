@@ -35,14 +35,18 @@ module Macros
     # @param [Hash] iiif_json the IIIF document
     # @return [String] the thumbnail service protocol
     def iiif_thumbnail_service_protocol(iiif_json)
-      iiif_json.dig('thumbnail', 'service', 'profile')
+      service = iiif_json.dig('thumbnail', 'service')
+      service = service.first if service.kind_of?(Array)
+      iiif_service_conforms_to(service.dig('profile'))
     end
 
     # Retrieve the thumbnail service API spec url from the IIIF manifest document
     # @param [Hash] iiif_json the IIIF document
     # @return [String] the url for the service API specification
     def iiif_thumbnail_service_conforms_to(iiif_json)
-      iiif_service_conforms_to(iiif_json.dig('thumbnail', 'service', 'profile'))
+      service = iiif_json.dig('thumbnail', 'service')
+      service = service.first if service.kind_of?(Array)
+      iiif_service_conforms_to(service.dig('profile'))
     end
 
     # Retrieve the sequence id from the IIIF manifest document

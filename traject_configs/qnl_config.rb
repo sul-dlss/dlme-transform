@@ -123,7 +123,8 @@ to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_is_shown_by' do |_record, accumulator, context|
   if context.clipboard[:iiif_json].present?
     iiif_json = context.clipboard[:iiif_json]
-    accumulator << transform_values(context,
+    accumulator << transform_values(
+      context,
       'wr_edm_rights' => [extract_qnl_en('mods:accessCondition'), strip, translation_map('edm_rights')],
       'wr_format' => [literal('image/jpeg')],
       'wr_has_service' => iiif_sequences_service(iiif_json),
