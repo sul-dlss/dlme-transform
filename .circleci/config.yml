@@ -47,9 +47,9 @@ jobs:
       - run:
           name: Copy data files over for integration tests
           command: |
-            curl -L https://github.com/sul-dlss/dlme-metadata/archive/master.zip > master.zip
-            unzip -q master.zip
-            mv dlme-metadata-master/* data/
+            curl -L https://github.com/sul-dlss/dlme-metadata/archive/main.zip > main.zip
+            unzip -q main.zip
+            mv dlme-metadata-main/* data/
 
       - run:
           name: Run Rubocop and RSpec tests
@@ -128,13 +128,13 @@ workflows:
       - build-image:
           filters:
             branches:
-              only: master
+              only: main
       - publish-latest:
           requires:
           - build-image
           filters:
             branches:
-              only: master
+              only: main
   build-tags:
     jobs:
       - build-image:

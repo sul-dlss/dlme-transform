@@ -6,8 +6,8 @@ For the majority of the metadata provided to this DLME demonstration, URLs for t
 
 As such, where we were able to discern the logic, we have to develop DLME-specific Traject macros specific to data providers to then generate these URLs. Examples of this work include:
 
-- [the IIIF manifest lookups written for Stanford MODS records](https://github.com/sul-dlss/dlme-transform/blob/master/lib/macros/iiif.rb#L9)
-- [the Metropolitan Museum CSV records then leverage a Metropolitan Museum Open Data API to retrieve thumbnail URLs](https://github.com/sul-dlss/dlme-transform/blob/master/lib/macros/met_csv.rb#L36)
+- [the IIIF manifest lookups written for Stanford MODS records](https://github.com/sul-dlss/dlme-transform/blob/main/lib/macros/iiif.rb#L9)
+- [the Metropolitan Museum CSV records then leverage a Metropolitan Museum Open Data API to retrieve thumbnail URLs](https://github.com/sul-dlss/dlme-transform/blob/main/lib/macros/met_csv.rb#L36)
 
 For future data providers, being able to perform URL look-ups or generation based on values in the records (in particular, identifiers) will continue to be tricky and probably require the writing of similar macros.
 
