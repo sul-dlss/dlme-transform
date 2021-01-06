@@ -7,7 +7,7 @@
 
 Transforms raw DLME metadata from https://github.com/sul-dlss/dlme-metadata and
 uses transformations in `traject_configs/` to create [DLME intermediate
-representation](https://github.com/sul-dlss/dlme/blob/master/docs/application_profile.md)
+representation](https://github.com/sul-dlss/dlme/blob/main/docs/application_profile.md)
 documents in S3.
 
 You can read more about our data and related documentation in our [data
@@ -15,7 +15,7 @@ documentation](./docs/README.md).
 
 ## Docker
 
-When there are commits to master, webhooks are set up for CircleCI to run tests, and if successful, build a docker image and publish that docker image to Docker Hub.
+When there are commits to main, webhooks are set up for CircleCI to run tests, and if successful, build a docker image and publish that docker image to Docker Hub.
 
 You can also do this manually (see below).  You only need the local docker image to run tranforms locally;  no need to publish the image to Docker Hub.
 
@@ -35,7 +35,7 @@ docker push suldlss/dlme-transform:latest
 ### Running Transforms
 
 You can run transforms locally by getting DLME data from GitHub (assuming
-everything is update to date on the master branches):
+everything is update to date on the main branches):
 
 ```shell
 docker run --rm -v $(pwd)/output:/opt/traject/output \
@@ -194,11 +194,11 @@ Terraform tells AWS to use the `latest` docker image of dlme-transform to use fo
 
 In order to update dlme-transform in AWS, we need to use terraform to tell AWS to re-grab the (now new) latest image.
 
-First:  ensure the latest image on Docker Hub has the changes you want.  CircleCI should automatically create a new latest image when new commits are pushed to master (i.e. merged PRs).  You can confirm this by looking for the successful "publish-latest" step completion https://circleci.com/gh/sul-dlss/dlme-transform or by looking for the timestamp on the latest image at Docker Hub:  https://hub.docker.com/r/suldlss/dlme-transform/tags.
+First:  ensure the latest image on Docker Hub has the changes you want.  CircleCI should automatically create a new latest image when new commits are pushed to main (i.e. merged PRs).  You can confirm this by looking for the successful "publish-latest" step completion https://circleci.com/gh/sul-dlss/dlme-transform or by looking for the timestamp on the latest image at Docker Hub:  https://hub.docker.com/r/suldlss/dlme-transform/tags.
 
 In the case of this code base, dlme-transform, a PR to https://github.com/sul-dlss/terraform-aws must be made that updates the "DEPLOYED" environment variable.  We use a date_time format; for an example, see https://github.com/sul-dlss/terraform-aws/pull/525.
 
-Some more info here https://github.com/sul-dlss/terraform-aws/blob/master/organizations/development/dlme/README.md
+Some more info here https://github.com/sul-dlss/terraform-aws/blob/main/organizations/development/dlme/README.md
 
 After this, terraform must be "applied" to the development environment by a developer or Ops.
 
@@ -232,7 +232,7 @@ Terraform tells AWS which tagged image of dlme-transform to use for staging and 
 
 In the case of this code base, dlme-transform, a PR to https://github.com/sul-dlss/terraform-aws must be made that updates the "image" variable for dlme-transform, e.g. `"suldlss/dlme-transform:1.1.3"`.  For an example, see https://github.com/sul-dlss/terraform-aws/pull/525.
 
-Some more info here https://github.com/sul-dlss/terraform-aws/blob/master/organizations/staging/dlme/README.md, https://github.com/sul-dlss/terraform-aws/tree/master/organizations/production/dlme
+Some more info here https://github.com/sul-dlss/terraform-aws/blob/main/organizations/staging/dlme/README.md, https://github.com/sul-dlss/terraform-aws/tree/main/organizations/production/dlme
 
 After this, terraform must be applied to the Stage and Prod environments.  Note that only Ops folks can update the Production environment.
 
