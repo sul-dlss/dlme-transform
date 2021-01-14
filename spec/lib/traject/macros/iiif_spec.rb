@@ -61,10 +61,10 @@ RSpec.describe Macros::IIIF do
   describe 'iiif_sequence_id' do
     subject(:iiif_sequence_id) { instance.iiif_sequence_id(iiif_json) }
     let(:manifest_sequence_id) do
-      'https://stacks.stanford.edu/image/iiif/fr426cg9537%2FSC1094_s3_b14_f17_Cats_1976_0005/full/full/0/default.jpg'
+      'https://stacks.stanford.edu/image/iiif/fr426cg9537%2FSC1094_s3_b14_f17_Cats_1976_0005'
     end
 
-    context 'when a iiif sequence id to exists in the manifest' do
+    context 'when a iiif sequence id exists in the manifest' do
       it 'returns the iiif sequence id' do
         expect(iiif_sequence_id).to eq(manifest_sequence_id)
       end

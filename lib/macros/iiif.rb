@@ -87,7 +87,6 @@ module Macros
     end
 
     def iiif_service_conforms_to(service_profile)
-      puts service_profile
       # Using the thumbnail service profile for now
       return service_profile if %w[
         http://iiif.io/api/image/
