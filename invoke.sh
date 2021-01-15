@@ -3,11 +3,11 @@ set -e
 
 if [ $SKIP_FETCH_DATA != "true" ]; then
   echo "Getting github.com/sul-dlss/dlme-metadata"
-  curl -L https://github.com/sul-dlss/dlme-metadata/archive/master.zip > master.zip
-  unzip -q master.zip
+  curl -L https://github.com/sul-dlss/dlme-metadata/archive/main.zip > main.zip
+  unzip -q main.zip
   mkdir -p /opt/traject/data
-  mv dlme-metadata-master/* /opt/traject/data
-  rm master.zip
+  mv dlme-metadata-main/* /opt/traject/data
+  rm main.zip
 fi
 
 UUID=$(uuidgen)
