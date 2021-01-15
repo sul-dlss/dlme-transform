@@ -7,7 +7,9 @@ require 'macros/collection'
 require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
+require 'macros/language_extraction'
 require 'macros/normalize_language'
+require 'macros/path_to_file'
 require 'macros/timestamp'
 require 'macros/version'
 
@@ -15,7 +17,9 @@ extend Macros::Collection
 extend Macros::DateParsing
 extend Macros::DLME
 extend Macros::EachRecord
+extend Macros::LanguageExtraction
 extend Macros::NormalizeLanguage
+extend Macros::PathToFile
 extend Macros::Timestamp
 extend Macros::Version
 extend TrajectPlus::Macros
@@ -30,11 +34,15 @@ end
 to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
 
+# File path
+to_field 'dlme_source_file', path_to_file
+
 # Cho Required
 to_field 'id', extract_json('.rendering'),
          strip,
          gsub('https://digital.bodleian.ox.ac.uk/inquire/p/', '')
 to_field 'cho_title', extract_json('.title'), strip, lang('tr-Arab')
+to_field 'cho_title', extract_json('.other_titles'), strip, arabic_script_lang_or_default('tr-Arab', 'und-Latn')
 
 # Cho Other
 to_field 'cho_creator', extract_json('.author'), strip, lang('en')
@@ -43,6 +51,10 @@ to_field 'cho_date_range_norm', extract_json('.date_statement'), strip, gsub('/'
 to_field 'cho_date_range_hijri', extract_json('.date_statement'), strip, gsub('/', '-'), parse_range, hijri_range
 to_field 'cho_dc_rights', literal('Photo: © Bodleian Libraries, University of Oxford, Terms of use: http://digital.bodleian.ox.ac.uk/terms.html'), lang('en')
 to_field 'cho_description', extract_json('.description'), strip, lang('en')
+to_field 'cho_description', extract_json('.hand'), strip, prepend('Hand: '), lang('en')
+to_field 'cho_description', extract_json('.dimensions'), strip, prepend('Dimensions: '), lang('en')
+to_field 'cho_description', extract_json('.decoration'), strip, prepend('Decoration: '), lang('en')
+to_field 'cho_description', extract_json('.materials'), prepend('Materials: '), strip
 to_field 'cho_edm_type', literal('Text'), lang('en')
 to_field 'cho_edm_type', literal('Text'), translation_map('norm_types_to_ar'), lang('ar-Arab')
 to_field 'cho_has_type', literal('Manuscript'), lang('en')
@@ -72,7 +84,7 @@ end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_id' => [extract_json('.thumbnail'), strip],
+    'wr_id' => [extract_json('.thumbnail'), split('/full'), first_only, append('/full/!400,400/0/default.jpg'), strip],
     'wr_is_referenced_by' => [extract_json('.rendering'),
                               strip,
                               gsub('https://digital.bodleian.ox.ac.uk/inquire/p/', 'https://iiif.bodleian.ox.ac.uk/iiif/manifest/'),

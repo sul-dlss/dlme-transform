@@ -7,7 +7,9 @@ require 'macros/collection'
 require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
+require 'macros/language_extraction'
 require 'macros/normalize_language'
+require 'macros/path_to_file'
 require 'macros/timestamp'
 require 'macros/version'
 
@@ -15,7 +17,9 @@ extend Macros::Collection
 extend Macros::DateParsing
 extend Macros::DLME
 extend Macros::EachRecord
+extend Macros::LanguageExtraction
 extend Macros::NormalizeLanguage
+extend Macros::PathToFile
 extend Macros::Timestamp
 extend Macros::Version
 extend TrajectPlus::Macros
@@ -29,6 +33,9 @@ end
 # Set Version & Timestamp on each record
 to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
+
+# File path
+to_field 'dlme_source_file', path_to_file
 
 # Cho Required
 to_field 'id', extract_json('.rendering'),
@@ -73,7 +80,7 @@ end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_id' => [extract_json('.thumbnail'), strip],
+    'wr_id' => [extract_json('.thumbnail'), split('/full'), first_only, append('/full/!400,400/0/default.jpg'), strip],
     'wr_is_referenced_by' => [extract_json('.rendering'),
                               strip,
                               gsub('https://digital.bodleian.ox.ac.uk/inquire/p/', 'https://iiif.bodleian.ox.ac.uk/iiif/manifest/'),
