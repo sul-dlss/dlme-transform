@@ -10,6 +10,7 @@ require 'macros/each_record'
 require 'macros/normalize_language'
 require 'macros/normalize_type'
 require 'macros/oai'
+require 'macros/path_to_file'
 require 'macros/timestamp'
 require 'macros/version'
 require 'traject_plus'
@@ -22,6 +23,7 @@ extend Macros::EachRecord
 extend Macros::NormalizeLanguage
 extend Macros::NormalizeType
 extend Macros::OAI
+extend Macros::PathToFile
 extend Macros::Timestamp
 extend Macros::Version
 extend TrajectPlus::Macros
@@ -31,11 +33,12 @@ settings do
   provide 'writer_class_name', 'DlmeJsonResourceWriter'
 end
 
-to_field 'agg_data_provider_collection', collection
-
 # Set Version & Timestamp on each record
 to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
+
+# File path
+to_field 'dlme_source_file', path_to_file
 
 # Cho Required
 to_field 'id', extract_oai_identifier, strip
@@ -48,6 +51,10 @@ to_field 'cho_coverage', extract_oai('dc:coverage'), strip, lang('tr-Latn')
 to_field 'cho_creator', extract_oai('dc:creator'),
          strip, split('.'), lang('tr-Latn')
 to_field 'cho_date', extract_oai('dc:date'), strip, lang('tr-Latn')
+to_field 'cho_date_range_norm', extract_oai('dc:date'), gsub('/', '-'), parse_range
+to_field 'cho_date_range_hijri', extract_oai('dc:date'), gsub('/', '-'), parse_range, hijri_range
+to_field 'cho_date_range_norm', extract_oai('dc:date'), sakip_mult_dates_range
+to_field 'cho_date_range_hijri', extract_oai('dc:date'), sakip_mult_dates_range, hijri_range
 to_field 'cho_description', extract_oai('dc:description'), strip, lang('tr-Latn')
 to_field 'cho_dc_rights', extract_oai('dc:rights'), strip, lang('tr-Latn')
 to_field 'cho_edm_type', extract_oai('dc:type'),
@@ -62,13 +69,13 @@ to_field 'cho_has_type', extract_oai('dc:type'),
 to_field 'cho_language', extract_oai('dc:language'), split(';'),
          strip, normalize_language, lang('en')
 to_field 'cho_publisher', extract_oai('dc:publisher'), strip, lang('tr-Latn')
-to_field 'cho_relation', extract_oai('dc:relation'), strip, lang('tr-Latn')
 to_field 'cho_subject', extract_oai('dc:subject'), strip, lang('tr-Latn')
 to_field 'cho_type', extract_oai('dc:type'), strip, lang('tr-Latn')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
 to_field 'agg_data_provider', data_provider_ar, lang('ar-Arab')
+to_field 'agg_data_provider_collection', collection
 to_field 'agg_provider', provider, lang('en')
 to_field 'agg_provider', provider_ar, lang('ar-Arab')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
