@@ -87,8 +87,8 @@ to_field 'cho_edm_type', extract_qnl_en('mods:typeOfResource'), normalize_type, 
 to_field 'cho_edm_type', extract_qnl_en('mods:typeOfResource'), normalize_type, lang('en')
 to_field 'cho_extent', extract_qnl_ar('mods:physicalDescription/mods:extent[1]'), strip, lang('ar-Arab')
 to_field 'cho_extent', extract_qnl_en('mods:physicalDescription/mods:extent[1]'), strip, lang('en')
-to_field 'cho_has_type', extract_qnl_ar('mods:genre'), strip, transform(&:downcase), translation_map('has_type'), gsub('Periodical', 'Other Document'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
-to_field 'cho_has_type', extract_qnl_en('mods:genre'), strip, transform(&:downcase), translation_map('has_type'), gsub('Periodical', 'Other Document'), lang('en')
+to_field 'cho_has_type', extract_qnl_ar('mods:genre'), strip, transform(&:downcase), translation_map('has_type'), translation_map('not_found'), gsub('Periodical', 'Other Document'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
+to_field 'cho_has_type', extract_qnl_en('mods:genre'), strip, transform(&:downcase), translation_map('has_type'), translation_map('not_found'), gsub('Periodical', 'Other Document'), lang('en')
 to_field 'cho_identifier', extract_qnl_ar('mods:identifier'), strip
 to_field 'cho_identifier', extract_qnl_en('mods:identifier'), strip
 to_field 'cho_identifier', extract_qnl_en('mods:recordInfo/mods:recordIdentifier'), strip
@@ -125,7 +125,7 @@ to_field 'agg_is_shown_by' do |_record, accumulator, context|
     iiif_json = context.clipboard[:iiif_json]
     accumulator << transform_values(
       context,
-      'wr_edm_rights' => [extract_qnl_en('mods:accessCondition'), strip, translation_map('edm_rights')],
+      'wr_edm_rights' => [extract_qnl_en('mods:accessCondition'), strip, translation_map('edm_rights'), translation_map('not_found')],
       'wr_format' => [literal('image/jpeg')],
       'wr_has_service' => iiif_sequences_service(iiif_json),
       'wr_id' => literal(iiif_sequence_id(iiif_json)),
@@ -133,7 +133,7 @@ to_field 'agg_is_shown_by' do |_record, accumulator, context|
     )
   else
     accumulator << transform_values(context,
-                                    'wr_edm_rights' => [extract_qnl_en('mods:accessCondition'), strip, translation_map('edm_rights')],
+                                    'wr_edm_rights' => [extract_qnl_en('mods:accessCondition'), strip, translation_map('edm_rights'), translation_map('not_found')],
                                     'wr_format' => literal('image/jpeg'),
                                     'wr_id' => literal(context.clipboard[:id]),
                                     'wr_is_referenced_by' => literal(context.clipboard[:manifest]))

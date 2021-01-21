@@ -14,9 +14,6 @@ module Macros
     private_constant :AR_PREFIX
     private_constant :EN_PREFIX
 
-    # OAI_NS = 'http://www.openarchives.org/OAI/2.0/'
-    # private_constant :OAI_NA
-
     include Traject::Macros::NokogiriMacros
 
     # Extracts values for the given xpath which is prefixed with oai and mods wrappers
@@ -52,16 +49,6 @@ module Macros
         default_identifier(context)
       end
     end
-
-    # Grab the identifier from the MODS XML, or if one cannot be found, from the default.
-    # @param [Nokogiri::Document] record the MODS xml
-    # @param [Traject::Indexer::Context] context
-    # @return [String] the identifier
-
-    # def generate_druid(record, context)
-    #   mods_id = select_identifier(record, context)
-    #   mods_id.sub 'stanford_', '' if mods_id.present?
-    # end
 
     # Joins QNL name and role
     # @example
