@@ -2,8 +2,7 @@
 # Codes not found in the Europeana model will be mapped to a functional equivalent. 
 # These codes will be used to determine downstream access.
 
-BY-NC-SA: 'CC BY-NC-SA'
-InC-EDU: 'InC-EDU'
-Open Government Licence: 'BY-SA'
-Open Government License: 'BY-SA'
-
+BY-NC-SA: 'CC BY-NC-SA: http://creativecommons.org/licenses/by-nc-sa/4.0/'
+InC-EDU: 'InC-EDU: http://rightsstatements.org/page/InC-EDU/1.0/'
+Open Government Licence: 'BY-SA: https://creativecommons.org/licenses/by-sa/4.0/'
+Open Government License: 'BY-SA: https://creativecommons.org/licenses/by-sa/4.0/'
