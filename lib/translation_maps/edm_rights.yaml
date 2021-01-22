@@ -1,6 +1,7 @@
 # Basic mapping from data provider values to Europeana rights codes to value displayed in application.
 # Codes not found in the Europeana model will be mapped to a functional equivalent. 
 # These codes will be used to determine downstream access.
+# Misspellings in partner metadata are caught here, which may appear as duplicate lines.
 
 BY-NC-SA: 'CC BY-NC-SA: http://creativecommons.org/licenses/by-nc-sa/4.0/'
 InC-EDU: 'InC-EDU: http://rightsstatements.org/page/InC-EDU/1.0/'
