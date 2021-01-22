@@ -42,6 +42,14 @@ module Macros
       extract_xpath('/oai:record/oai:header/oai:identifier', ns: NS)
     end
 
+    def generate_qnl_iiif_id(record, context)
+      if record.xpath('/oai:record/oai:header/oai:identifier', NS).map(&:text).reject(&:blank?).any?
+        record.xpath('/oai:record/oai:header/oai:identifier', NS).map(&:text).reject(&:blank?).first.strip.gsub('_dlme', '')
+      else
+        default_identifier(context)
+      end
+    end
+
     # Joins QNL name and role
     # @example
     #   name_with_role('en')

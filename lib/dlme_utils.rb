@@ -2,6 +2,7 @@
 
 require 'active_support/benchmarkable'
 require 'faraday'
+require 'faraday_middleware'
 
 module DLME
   # Misc. utilities for working with DLME data
@@ -11,7 +12,7 @@ module DLME
     def self.client
       Faraday.new do |builder|
         # builder.use :http_cache, store: Rails.cache
-
+        builder.use FaradayMiddleware::FollowRedirects, limit: 3
         builder.adapter Faraday.default_adapter
       end
     end

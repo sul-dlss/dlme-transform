@@ -63,8 +63,9 @@ GEM
       faraday-net_http (~> 1.0)
       multipart-post (>= 1.2, < 3)
       ruby2_keywords
+    faraday_middleware (1.0.0)
+      faraday (~> 1.0)
     faraday-net_http (1.0.1)
-    ffi (1.14.2)
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
       rake
@@ -188,6 +189,7 @@ DEPENDENCIES
   config
   dry-validation
   faraday
+  faraday_middleware
   parse_date
   pry-byebug
   rake
