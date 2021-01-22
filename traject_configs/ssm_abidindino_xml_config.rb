@@ -81,6 +81,7 @@ to_field 'agg_provider', provider_ar, lang('ar-Arab')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
+    'agg_edm_rights' => [literal('InC-EDU: http://rightsstatements.org/page/InC-EDU/1.0/')],
     'wr_id' => [extract_oai('dc:identifier[last()]'), strip]
   )
 end

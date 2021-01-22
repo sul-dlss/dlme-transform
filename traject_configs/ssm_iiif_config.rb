@@ -60,6 +60,7 @@ to_field 'cho_date', extract_json('.date'), strip, lang('tr-Latn')
 to_field 'cho_date_range_norm', extract_json('.date'), gsub('/', '-'), parse_range
 to_field 'cho_date_range_hijri', extract_json('.date'), gsub('/', '-'), parse_range, hijri_range
 to_field 'cho_dc_rights', extract_json('.rights'), strip, lang('tr-Latn')
+to_field 'cho_dc_rights', extract_json('.copyright'), strip, lang('tr-Latn')
 to_field 'cho_description', extract_json('.binding'), strip, prepend('Binding: ')
 to_field 'cho_description', extract_json('.conservation'), strip, prepend('Conservation: '), lang('und-Latn')
 to_field 'cho_description', extract_json('.description'), strip, lang('tr-Latn')
@@ -101,7 +102,8 @@ to_field 'agg_provider', provider_ar, lang('ar-Arab')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_edm_rights' => [literal('InC')],
+    'agg_edm_rights' => [literal('InC-EDU: http://rightsstatements.org/page/InC-EDU/1.0/')],
+    'wr_edm_rights' => [literal('InC-EDU: http://rightsstatements.org/page/InC-EDU/1.0/')],
     'wr_format' => [extract_json('.iiif_format'), strip],
     'wr_id' => [extract_json('.id')],
     'wr_is_referenced_by' => [extract_json('.manifest'), strip]
@@ -110,7 +112,7 @@ end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_edm_rights' => [literal('InC')],
+    'wr_edm_rights' => [literal('InC-EDU: http://rightsstatements.org/page/InC-EDU/1.0/')],
     'wr_format' => [extract_json('.iiif_format'), strip],
     'wr_id' => [extract_json('.resource'), strip, gsub('/full/full/0/default.jpg', '/full/400,400/0/default.jpg')],
     'wr_is_referenced_by' => [extract_json('.manifest'), strip]
