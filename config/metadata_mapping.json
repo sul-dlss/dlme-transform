@@ -1551,12 +1551,10 @@
   },
   {
     "trajects": [
-      "sakip_sabanci_common_config.rb",
-      "sakip_single_date_config.rb"
+      "ssm_abidindino_xml_config.rb"
     ],
     "paths": [
-      "sakip-sabanci/abidindino",
-      "sakip-sabanci/emirgan"
+      "sakip-sabanci/abidindino-xml"
     ],
     "extension": ".xml",
     "settings": {
@@ -1568,19 +1566,20 @@
       "agg_provider_country_ar": "تركيا",
       "agg_data_provider_ar": "متحف صاقب صابونجي",
       "agg_data_provider_country_ar": "تركيا",
-      "inst_id": "sakip-sabanci"
+      "inst_id": "ssm"
     }
   },
   {
     "trajects": [
-      "sakip_sabanci_common_config.rb",
-      "sakip_mult_dates_config.rb"
+      "ssm_iiif_config.rb"
     ],
     "paths": [
-      "sakip-sabanci/Kitapvehat",
-      "sakip-sabanci/ResimKlksyn"
+      "sakip-sabanci/abidindino-iiif",
+      "sakip-sabanci/emirgan",
+      "sakip-sabanci/kitap-vehat",
+      "sakip-sabanci/resim-klksyn"
     ],
-    "extension": ".xml",
+    "extension": ".json",
     "settings": {
       "agg_provider": "Sakip Sabanci Museum",
       "agg_provider_country": "Turkey",
@@ -1590,7 +1589,7 @@
       "agg_provider_country_ar": "تركيا",
       "agg_data_provider_ar": "متحف صاقب صابونجي",
       "agg_data_provider_country_ar": "تركيا",
-      "inst_id": "sakip-sabanci"
+      "inst_id": "ssm"
     }
   },
   {
