@@ -51,8 +51,8 @@ to_field 'cho_dc_rights', extract_json('.license'), strip, lang('en')
 to_field 'cho_edm_type', literal('Image'), lang('en')
 to_field 'cho_edm_type', literal('Image'), translation_map('norm_types_to_ar'), lang('ar-Arab')
 to_field 'cho_extent', extract_json('.extent'), strip, lang('en')
-to_field 'cho_has_type', literal('Architectural Drawing'), lang('en')
-to_field 'cho_has_type', literal('Architectural Drawing'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
+to_field 'cho_has_type', literal('Drawing'), lang('en')
+to_field 'cho_has_type', literal('Drawing'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
 to_field 'cho_identifier', extract_json('.identifier'), strip
 to_field 'cho_identifier', extract_json('.original-identifier'), strip
 to_field 'cho_is_part_of', extract_json('.collection'), strip, lang('en')
