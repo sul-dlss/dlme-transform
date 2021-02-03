@@ -1,13 +1,18 @@
+require 'macros/string_helper'
 # frozen_string_literal: true
 
 module Macros
   # Macros for extracting OAI values from Nokogiri documents
   module Harvard
     NS = {
-      dc: 'http://purl.org/dc/elements/1.1/'
+      cdwalite: 'http://www.getty.edu/research/conducting_research/standards/cdwa/cdwalite',
+      dc: 'http://purl.org/dc/elements/1.1/',
+      HarvardDRS: 'http://hul.harvard.edu/ois/xml/ns/HarvardDRS',
+      mods: 'http://www.loc.gov/mods/v3'
     }.freeze
     private_constant :NS
 
+    include Macros::StringHelper
     include Traject::Macros::NokogiriMacros
 
     # Extracts values for the given xpath which is prefixed with dc wrappers
@@ -32,6 +37,31 @@ module Macros
         id = record.xpath('//*/dc:identifier', dc: NS[:dc])
                    .find { |node| node.text.include?('iiif') || node.text.include?('usethumb=y') }
         accumulator << { 'wr_id' => [id.text] } unless id.nil?
+      end
+    end
+
+    # Joins QNL name and role
+    # @example
+    #   name_with_role('en')
+    # @return [Proc] a proc that traject can call for each record
+    def extract_name_with_role(lang)
+      lambda do |record, accumulator|
+        names = []
+        roles = []
+        name = record.xpath("/*/mods:name/mods:namePart", NS)
+        name.each do |val|
+          names << val&.content&.strip&.squish
+        end
+        role = record.xpath("/*/mods:name[1]/mods:role/mods:roleTerm", NS)
+        role.each do |val|
+          roles << val&.content&.strip
+        end
+        # name_and_role = names.zip(roles)
+        name_with_role = []
+        names.each do |val|
+          name_with_role << val[0] + ' (' + val[1] + ')'
+        end
+        accumulator.replace([{ language: lang, values: ["#{name}, (#{role})"] }])
       end
     end
 

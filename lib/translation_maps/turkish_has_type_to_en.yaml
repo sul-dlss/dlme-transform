@@ -1,7 +1,7 @@
 # Turkish language types
 baskı: Book
 belge: Book
-broşür: Other Document
+broşür: Brochure
 davetiye: Invitation
 desen: Visual Art
 dijital fotoğraf: Photograph
@@ -11,15 +11,15 @@ gotoğraf: Photograph
 gazete küpürü: Serial
 gravür: Visual Art
 hat: Calligraphy
-karikatür: Visual Art
+karikatür: Drawing
 kartpostal: Postcard
 kitap bölümü: Book
 kumaş: Cultural Artifact
 köşe yazısı: Serial
 makale: Serial
-mektup: Other Document
+mektup: Letter
 metin: Other Document
-resim: Visual Art
+resim: Painting
 yazı: Serial
 yazı malzemeleri: Cultural Artifact
 yazışma: Letter

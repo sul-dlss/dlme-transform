@@ -4,7 +4,6 @@ require 'dlme_json_resource_writer'
 require 'dlme_debug_writer'
 require 'macros/collection'
 require 'macros/harvard'
-# require 'macros/iiif'
 require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
@@ -20,7 +19,6 @@ extend Macros::DateParsing
 extend Macros::DLME
 extend Macros::EachRecord
 extend Macros::Harvard
-# extend Macros::IIIF
 extend Macros::Mods
 extend Macros::NormalizeLanguage
 extend Macros::NormalizeType
@@ -35,30 +33,37 @@ settings do
   provide 'reader_class_name', 'TrajectPlus::XmlReader'
 end
 
+HarvardDRS="http://hul.harvard.edu/ois/xml/ns/HarvardDRS"
+
 # Set Version & Timestamp on each record
 to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
 
 # CHO Required
-to_field 'cho_title', extract_mods('/*/mods:titleInfo/mods:title'), first_only, lang('en')
+to_field 'cho_title', xpath_title_plus('/*/mods:relatedItem[@type="constituent"]/mods:titleInfo/mods:title', '/*/mods:relatedItem/mods:recordInfo/mods:recordIdentifier'), lang('en')
 to_field 'id', generate_mods_id
 
 # CHO Other
 to_field 'cho_alternative', extract_mods('/*/mods:titleInfo[@type]/mods:title'), lang('en')
 to_field 'cho_coverage', extract_mods('/*/mods:originInfo/mods:place/mods:placeTerm'), lang('en')
-to_field 'cho_creator', extract_name(role: %w[author creator]), lang('en')
+to_field 'cho_creator', extract_mods('/*/mods:name/mods:namePart'), lang('en')
+# to_field 'cho_creator', extract_mods('/*/mods:name[1]/mods:role/mods:roleTerm'), prepend('('), append(')'), lang('en')
 to_field 'cho_date', extract_mods('/*/mods:originInfo/mods:dateCreated[3]')
 to_field 'cho_date_range_norm', harvard_mods_date_range
 to_field 'cho_date_range_hijri', harvard_mods_date_range, hijri_range
 to_field 'cho_description', extract_mods('/*/mods:abstract'), lang('en')
+to_field 'cho_description', extract_harvard('/*/mods:extension/cdwalite:cultureWrap/cdwalite:culture'), prepend('Culture: '), lang('en')
+to_field 'cho_description', extract_harvard('/*/mods:extension/cdwalite:indexingMaterialsTechSet/cdwalite:termMaterialsTech'), prepend('Materials/Techniques: '), lang('en')
+to_field 'cho_description', extract_mods('/*/mods:note'), prepend('Note: '), lang('en')
 to_field 'cho_edm_type', extract_mods('/*/mods:typeOfResource[1]'), normalize_type, lang('en')
 to_field 'cho_edm_type', extract_mods('/*/mods:typeOfResource[1]'), normalize_type, translation_map('norm_types_to_ar'), lang('ar-Arab')
 to_field 'cho_extent', extract_mods('/*/mods:physicalDescription/mods:extent'), lang('en')
-to_field 'cho_has_part', generate_relation('/*/mods:relatedItem[@type="constituent"]')
+to_field 'cho_has_type'
 to_field 'cho_is_part_of', literal('Stuart Cary Welch Islamic and South Asian Photographic Collection'), lang('en')
+to_field 'cho_is_part_of', extract_mods('/*/mods:titleInfo/mods:title'), first_only, prepend('Image Source: '), lang('en')
 to_field 'cho_identifier', extract_mods('/*/mods:recordInfo/mods:recordIdentifier')
-to_field 'cho_language', extract_mods('/*/mods:language/mods:languageTerm[1]'), normalize_language, lang('en')
-to_field 'cho_language', extract_mods('/*/mods:language/mods:languageTerm[1]'), normalize_language, translation_map('norm_languages_to_ar'), lang('ar-Arab')
+to_field 'cho_language', extract_mods('/*/mods:language/mods:languageTerm[@type="code"]'), normalize_language, lang('en')
+to_field 'cho_language', extract_mods('/*/mods:language/mods:languageTerm[@type="code"]'), normalize_language, translation_map('norm_languages_to_ar'), lang('ar-Arab')
 to_field 'cho_spatial', extract_mods('/*/mods:subject/mods:geographic')
 to_field 'cho_subject', extract_mods('/*/mods:subject/mods:topic'), lang('en') # key error
 to_field 'cho_type', extract_mods('/*/mods:typeOfResource'), lang('en')
@@ -73,12 +78,12 @@ to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(context,
                                   'wr_id' => [extract_mods('/*/mods:relatedItem[@otherType="HOLLIS Images record"]/mods:location/mods:url'), strip],
-                                  'wr_is_referenced_by' => [extract_mods('/*/mods:url'), first_only])
+                                  'wr_is_referenced_by' => [extract_harvard('/*/mods:extension/HarvardDRS:DRSMetadata/HarvardDRS:drsFileId'), prepend('https://iiif.lib.harvard.edu/manifests/ids:')])
 end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(context,
-                                  'wr_id' => [extract_mods('/*/mods:relatedItem[@type="constituent"]/mods:location/mods:url[@displayLabel="Thumbnail"]'), strip],
-                                  'wr_is_referenced_by' => [extract_mods('/*/mods:url'), first_only])
+                                  'wr_id' => [extract_mods('/*/mods:relatedItem[@type="constituent"]/mods:location/mods:url[@displayLabel="Thumbnail"]'), strip, gsub('width=150', 'width=400'), gsub('height=150', 'height=400')],
+                                  'wr_is_referenced_by' => [extract_harvard('/*/mods:extension/HarvardDRS:DRSMetadata/HarvardDRS:drsFileId'), prepend('https://iiif.lib.harvard.edu/manifests/ids:')])
 end
 to_field 'agg_provider', provider, lang('en')
 to_field 'agg_provider', provider_ar, lang('ar-Arab')
