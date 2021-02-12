@@ -1,0 +1,2 @@
+# Basic mapping from common regex patterns to MODS, MARC, EDM, DCMI type terms.
+print: Book

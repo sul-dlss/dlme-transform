@@ -7,7 +7,7 @@ module Macros
     # @param [String] role (nil) if provided, find the name for the corresponding role
     # @param [String] exclude (nil) if provided, exclude these from the results
     # @return [Proc] a proc that traject can call for each record
-    def extract_name(role: nil, exclude: nil)
+    def extract_name(xpath, role: nil, exclude: nil)
       clause = if role
                  Array(role).map { |r| "text() = '#{r}'" }.join(' or ')
                elsif exclude
@@ -15,7 +15,14 @@ module Macros
                else
                  raise ArgumentError, 'You must provide either role or exclude parameters'
                end
-      extract_mods("/*/mods:name[mods:role/mods:roleTerm/#{clause}]/mods:namePart")
+      lambda do |record, accumulator|
+        name_parts = []
+        name_nodes = record.xpath("#{xpath}#{clause}]/mods:namePart", TrajectPlus::Macros::Mods::NS)
+        name_nodes.each do |val|
+          name_parts << val&.content&.strip
+        end
+        accumulator.replace(["#{name_parts.join(', ')} (#{role})"]) if name_parts.present?
+      end
     end
 
     # Gets the identifier from the MODS xml or a default value

@@ -11,6 +11,7 @@ require 'macros/normalize_language'
 require 'macros/path_to_file'
 require 'macros/tei'
 require 'macros/timestamp'
+require 'macros/title_extraction'
 require 'macros/version'
 require 'traject_plus'
 
@@ -23,6 +24,7 @@ extend Macros::NormalizeLanguage
 extend Macros::PathToFile
 extend Macros::Tei
 extend Macros::Timestamp
+extend Macros::TitleExtraction
 extend Macros::Version
 extend TrajectPlus::Macros
 extend TrajectPlus::Macros::Tei

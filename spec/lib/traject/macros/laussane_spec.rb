@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'macros/date_parsing'
-require 'macros/harvard'
 require 'macros/lausanne'
 
 RSpec.describe Macros::Lausanne do
