@@ -87,7 +87,7 @@ module Macros
     def ihp_uniform_title
       lambda do |record, accumulator|
         uniform = record.xpath('//*/mods:titleInfo[@type="uniform"][1]/mods:title', NS)[0]&.content ||
-                  record.xpath('//*/mods:titleInfo[1]', NS)[0]&.content
+                  record.xpath('//*/mods:titleInfo[1]', NS)[0]&.content&.squish
         accumulator.replace([uniform]) if uniform
       end
     end

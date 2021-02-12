@@ -62,19 +62,8 @@ module Macros
       end
     end
 
-    GREGORIAN_MODIFIER = 0.9692
     HIJRI_MODIFIER = 1.030684
     HIJRI_OFFSET = 621.5643
-
-    # HELPER METHOD for other macros - NOT A MACRO
-    # @param [Integer] a single year to be converted
-    # @return [Integer] a converted integer year
-    # This method uses the first formula provided here: https://en.wikipedia.org/wiki/Hijri_year#Formula
-    def to_gregorian(year)
-      return unless year.is_a? Integer
-
-      ((GREGORIAN_MODIFIER * year) + HIJRI_OFFSET).floor
-    end
 
     # HELPER METHOD for other macros - NOT A MACRO
     # @param [Integer] a single year to be converted

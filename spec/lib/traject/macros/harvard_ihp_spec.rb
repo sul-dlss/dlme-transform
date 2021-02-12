@@ -52,5 +52,69 @@ RSpec.describe Macros::HarvardIHP do
         end
       end
     end
+
+    describe '#ihp_has_type' do
+      let(:record) do
+        <<-XML
+          <mods:mods xmlns:mods="http://www.loc.gov/mods/v3" version="3.4">
+            <mods:name>
+              <mods:role>
+                <mods:roleTerm>
+                  #{role}
+                </mods:roleTerm>
+              <mods:role>
+            </mods:name>
+          </mods:mods>
+        XML
+      end
+      let(:ng_rec) { Nokogiri::XML.parse(record) }
+
+      before do
+        indexer.instance_eval do
+          to_field 'cho_has_type', ihp_has_type
+        end
+      end
+
+      context 'resource has scirbe or copyist' do
+        let(:role) do
+          '<mods:name><mods:roleTerm><mods:role>copyist.</mods:name></mods:roleTerm><mods:role>'
+        end
+
+        it 'assigns Manuscript value' do
+          expect(indexer.map_record(ng_rec)).to eq 'cho_has_type' => ['Manuscript']
+        end
+      end
+    end
+
+    describe '#ihp_uniform_title' do
+      let(:record) do
+        <<-XML
+          <mods:mods xmlns:mods="http://www.loc.gov/mods/v3" version="3.4">
+            <mods:titleInfo>
+              <mods:title>
+                #{title}
+              </mods:title>
+            </mods:titleInfo>
+          </mods:mods>
+        XML
+      end
+      let(:ng_rec) { Nokogiri::XML.parse(record) }
+
+      before do
+        indexer.instance_eval do
+          to_field 'cho_title', ihp_uniform_title
+        end
+      end
+
+      context 'both the uniform title is the first title' do
+        let(:title) do
+          '<mods:titleInfo><mods:title>This book</mods:title></mods:titleInfo>'
+        end
+
+        it 'does not duplicate the value' do
+          expect(indexer.map_record(ng_rec)).to eq 'cho_title' => ['This book']
+        end
+      end
+    end
   end
 end
