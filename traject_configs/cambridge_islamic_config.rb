@@ -123,7 +123,7 @@ to_field 'agg_preview' do |_record, accumulator, context|
                                               gsub(%r{_files\/8\/0_0.jpg}, ''),
                                               append('.jp2'),
                                               prepend('https://images.lib.cam.ac.uk/iiif/'),
-                                              append('/full/!200,150/0/default.jpg')],
+                                              append('/full/!400,400/0/default.jpg')],
                                   'wr_is_referenced_by' => [literal(context.clipboard[:id]),
                                                             prepend('https://cudl.lib.cam.ac.uk/iiif/')])
 end

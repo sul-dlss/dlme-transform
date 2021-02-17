@@ -8,6 +8,7 @@ require 'macros/content_dm'
 require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
+require 'macros/manchester'
 require 'macros/normalize_language'
 require 'macros/normalize_type'
 require 'macros/path_to_file'
@@ -23,6 +24,7 @@ extend Macros::DateParsing
 extend Macros::DLME
 extend Macros::EachRecord
 extend Macros::OAI
+extend Macros::Manchester
 extend Macros::NormalizeLanguage
 extend Macros::NormalizeType
 extend Macros::PathToFile
@@ -52,16 +54,18 @@ to_field 'cho_title', xpath_title_or_desc("#{PREFIX}/dc:title[last()]", "#{PREFI
 # CHO Other
 to_field 'cho_creator', extract_oai('dc:creator'), strip, lang('fa-Arab')
 to_field 'cho_date', extract_oai('dc:date'), strip, lang('fa-Arab')
-to_field 'cho_dc_rights', extract_oai('dc:rights'), strip, lang('en')
+to_field 'cho_date_range_hijri', extract_oai('dc:date'), strip, manchester_solar_hijri_range, hijri_range
+to_field 'cho_date_range_norm', extract_oai('dc:date'), strip, manchester_solar_hijri_range
+to_field 'cho_description', extract_oai('dc:description'), strip, lang('en')
 to_field 'cho_description', extract_oai('dc:description'), strip, lang('en')
 to_field 'cho_edm_type', literal('Text'), lang('en')
 to_field 'cho_edm_type', literal('Text'), translation_map('norm_types_to_ar'), lang('ar-Arab')
 to_field 'cho_has_type', literal('Periodical'), lang('en')
 to_field 'cho_has_type', literal('Periodical'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
+to_field 'cho_is_part_of', literal('Nashriyah: digital Iranian history'), lang('en')
+to_field 'cho_is_part_of', literal('آرشیو آنلاین نشریات دانشگاه منچستر'), lang('fa-Arab')
 to_field 'cho_language', literal('Persian'), lang('en')
 to_field 'cho_language', literal('Persian'), translation_map('norm_languages_to_ar'), lang('ar-Arab')
-to_field 'cho_relation', extract_oai('dc:relation'), strip, split('history'), first_only, append('history'), lang('en')
-to_field 'cho_relation', extract_oai('dc:relation'), strip, split('history'), last, lang('fa-Arab')
 to_field 'cho_spatial', literal('Iran'), lang('en')
 to_field 'cho_spatial', literal('إيران'), lang('ar-Arab')
 to_field 'cho_type', extract_oai('dc:type'), lang('en')

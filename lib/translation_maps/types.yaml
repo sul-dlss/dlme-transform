@@ -5,6 +5,7 @@ artifact: Image
 audio: Sound
 black-and-white photographs: Image
 brochure: Image
+books: Text
 cartographic: Image
 collection: Collection
 color photographs: Image
@@ -13,7 +14,9 @@ digital data: Dataset
 image: Image
 interactive resource: Interactive Resource
 manuscript: Text
+manuscripts: Text
 map: Image
+maps: Image
 mixed material: Text
 movingimage: Video
 moving image: Video
