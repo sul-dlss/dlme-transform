@@ -14,6 +14,7 @@ require 'macros/normalize_type'
 require 'macros/path_to_file'
 require 'macros/oai'
 require 'macros/timestamp'
+require 'macros/title_extraction'
 require 'macros/version'
 require 'traject_plus'
 
@@ -28,6 +29,7 @@ extend Macros::NormalizeLanguage
 extend Macros::NormalizeType
 extend Macros::PathToFile
 extend Macros::Timestamp
+extend Macros::TitleExtraction
 extend Macros::Version
 extend TrajectPlus::Macros
 extend TrajectPlus::Macros::Xml

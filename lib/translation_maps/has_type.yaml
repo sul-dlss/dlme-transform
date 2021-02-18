@@ -2,15 +2,20 @@
 archival file: Other Document
 archival item: Other Document
 archivalfile: Other Document
+bibliography: Bibliography
 book: Book
 books: Book
+catalogs: Reference
 certificate: Other Document
+dictionary: Dictionary
+dictionaries: Dictionary
 diagram: Other Document
 drawing: Drawing
 illustration: Drawing
 journal: Periodical
 letter: Letter
 letter book: Letter
+lithographs*: Book
 list: Other Document
 manuscript: Manuscript
 manuscripts: Manuscript
@@ -22,6 +27,7 @@ newspaper article: Newspaper
 note: Other Document
 painting: Painting
 periodical: Periodical
+periodicals: Periodical
 photo, print, drawing: Photograph
 photograph: Photograph
 plan: Other Document

@@ -12,6 +12,7 @@ require 'macros/path_to_file'
 require 'macros/string_helper'
 require 'macros/tei'
 require 'macros/timestamp'
+require 'macros/title_extraction'
 require 'macros/version'
 require 'traject_plus'
 
@@ -25,6 +26,7 @@ extend Macros::PathToFile
 extend Macros::StringHelper
 extend Macros::Tei
 extend Macros::Timestamp
+extend Macros::TitleExtraction
 extend Macros::Version
 extend TrajectPlus::Macros
 extend TrajectPlus::Macros::Tei

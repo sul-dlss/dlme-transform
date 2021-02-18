@@ -5,6 +5,7 @@ module Macros
   module DLME
     NS = {
       dc: 'http://purl.org/dc/elements/1.1/',
+      mods: 'http://www.loc.gov/mods/v3',
       oai: 'http://www.openarchives.org/OAI/2.0/',
       oai_dc: 'http://www.openarchives.org/OAI/2.0/oai_dc/',
       tei: 'http://www.tei-c.org/ns/1.0'
@@ -154,33 +155,6 @@ module Macros
         return unless field_value.present?
 
         accumulator.replace(["#{prepend_string} #{field_value}".gsub(/\s+/, ' ').strip])
-      end
-    end
-
-    # Extract a OAI Dublin Core title or, if no title in record, extract abridged description, else pass default values.
-    def xpath_common_title_or_desc(xpath_title, xpath_desc, xpath_id)
-      lambda do |rec, acc|
-        title = rec.xpath(xpath_title, NS).map(&:text).first
-        description = rec.xpath(xpath_desc, NS).map(&:text).first
-        id = rec.xpath(xpath_id, NS).map(&:text).first
-        if title.present?
-          acc.replace(["#{title} #{id}"])
-        elsif description.present?
-          acc.replace([truncate(description)])
-        end
-      end
-    end
-
-    # Extract a OAI Dublin Core title or, if no title in record, extract abridged description, else pass default values.
-    def xpath_title_or_desc(xpath_title, xpath_desc)
-      lambda do |rec, acc|
-        title = rec.xpath(xpath_title, NS).map(&:text).first
-        description = rec.xpath(xpath_desc, NS).map(&:text).first
-        if title.present?
-          acc.replace([title])
-        elsif description.present?
-          acc.replace([truncate(description)])
-        end
       end
     end
   end
