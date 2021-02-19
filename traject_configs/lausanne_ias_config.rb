@@ -43,20 +43,25 @@ to_field 'dlme_source_file', path_to_file
 
 # CHO Required
 to_field 'id', normalize_prefixed_id('id')
-to_field 'cho_title', column('name'), lang('fr')
+to_field 'cho_title', column('name'), gsub('/<em>', ''), gsub('</em>', ''), lang('fr')
 
 # CHO Other
 to_field 'cho_date', lausanne_date_string, lang('en')
 to_field 'cho_date_range_norm', lausanne_date_range
 to_field 'cho_date_range_hijri', lausanne_date_range, hijri_range
+to_field 'cho_description', column('expanded_name'), gsub('/<em>', ''), gsub('</em>', ''), lang('fr')
+to_field 'cho_description', column('location'), gsub('POINT(', ''), gsub(')', ''), lang('fr')
+to_field 'cho_description', literal('Site: Tiresias'), lang('en')
+to_field 'cho_description', column('precision'), prepend('Precision: '), lang('en')
 to_field 'cho_edm_type', literal('Image'), lang('en')
 to_field 'cho_edm_type', literal('Image'), translation_map('norm_types_to_ar'), lang('ar-Arab')
 to_field 'cho_extent', column('width'), prepend('Width: '), lang('en')
 to_field 'cho_extent', column('height'), prepend('Height: '), lang('en')
 to_field 'cho_format', column('format'), lang('en')
-to_field 'cho_has_type', literal('Cultural Artifact'), lang('en')
-to_field 'cho_has_type', literal('Cultural Artifact'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
+to_field 'cho_has_type', column('document_type_id'), translation_map('lausanne_types'), lang('en')
+to_field 'cho_has_type', column('document_type_id'), translation_map('lausanne_types'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
 to_field 'cho_medium', column('material'), lang('fr')
+to_field 'cho_source' column('literature'), lang('fr')
 to_field 'cho_spatial', column('locatlity'), lang('en')
 
 # Agg
@@ -71,7 +76,7 @@ to_field 'agg_is_shown_at' do |_record, accumulator, context|
 end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(context,
-                                  'wr_id' => [column('id'), prepend('https://tiresias.unil.ch/card/'), append('/300')])
+                                  'wr_id' => [column('id'), prepend('https://tiresias.unil.ch/image/'), append('/300')])
 end
 to_field 'agg_provider', provider, lang('en')
 to_field 'agg_provider', provider_ar, lang('ar-Arab')
