@@ -196,7 +196,7 @@ In order to update dlme-transform in AWS, we need to use terraform to tell AWS t
 
 First:  ensure the latest image on Docker Hub has the changes you want.  CircleCI should automatically create a new latest image when new commits are pushed to main (i.e. merged PRs).  You can confirm this by looking for the successful "publish-latest" step completion https://circleci.com/gh/sul-dlss/dlme-transform or by looking for the timestamp on the latest image at Docker Hub:  https://hub.docker.com/r/suldlss/dlme-transform/tags.
 
-In the case of this code base, dlme-transform, a PR to https://github.com/sul-dlss/terraform-aws must be made that updates the "DEPLOYED" environment variable.  We use a date_time format; for an example, see https://github.com/sul-dlss/terraform-aws/pull/525.
+In the case of this code base, dlme-transform, a PR to https://github.com/sul-dlss/terraform-aws must be made that updates the "DEPLOYED" environment variable.  We use a date_time format; for an example, see https://github.com/sul-dlss/terraform-aws/pull/748/files.
 
 Some more info here https://github.com/sul-dlss/terraform-aws/blob/main/organizations/development/dlme/README.md
 
