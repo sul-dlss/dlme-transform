@@ -56,6 +56,8 @@ to_field 'cho_creator', extract_oai('dc:creator'), strip, lang('fa-Arab')
 to_field 'cho_date', extract_oai('dc:date'), strip, lang('fa-Arab')
 to_field 'cho_date_range_hijri', extract_oai('dc:date'), strip, manchester_solar_hijri_range, hijri_range
 to_field 'cho_date_range_norm', extract_oai('dc:date'), strip, manchester_solar_hijri_range
+to_field 'cho_dc_rights', literal('<a href="https://www.jstor.org/stable/community.28163960?seq=1#metadata_info_tab_contents">"Andishah ha-yi Rastakhiz on JSTOR"</a>'), lang('en')
+to_field 'cho_dc_rights', literal('<a href="https://www.jstor.org/stable/community.28163960?seq=1#metadata_info_tab_contents">"JSTOR اندیشه های رستاخیز در"</a>'), lang('fa-Arab')
 to_field 'cho_description', extract_oai('dc:description'), strip, lang('en')
 to_field 'cho_description', extract_oai('dc:description'), strip, lang('en')
 to_field 'cho_edm_type', literal('Text'), lang('en')
@@ -76,9 +78,11 @@ to_field 'agg_data_provider', data_provider_ar, lang('ar-Arab')
 to_field 'agg_data_provider_collection', collection
 to_field 'agg_data_provider_country', data_provider_country, lang('en')
 to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
+to_field 'agg_edm_rights', literal('http://creativecommons.org/licenses/by-nc-sa/4.0')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
+    'wr_edm_rights' => [literal('http://creativecommons.org/licenses/by-nc-sa/4.0')],
     'wr_id' => [extract_oai_identifier, strip, gsub('oai:N/A:', 'https://luna.manchester.ac.uk/luna/servlet/detail/')],
     'wr_is_referenced_by' => [extract_oai_identifier, strip, gsub('oai:N/A:', 'https://luna.manchester.ac.uk/luna/servlet/iiif/m/'), append('/manifest')]
   )
@@ -86,6 +90,7 @@ end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
+    'wr_edm_rights' => [literal('http://creativecommons.org/licenses/by-nc-sa/4.0')],
     'wr_id' => [extract_oai('dc:identifier[2]')],
     'wr_is_referenced_by' => [extract_oai_identifier, strip, gsub('oai:N/A:', 'https://luna.manchester.ac.uk/luna/servlet/iiif/m/'), append('/manifest')]
   )
