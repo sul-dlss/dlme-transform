@@ -13,6 +13,7 @@ require 'macros/mods'
 require 'macros/normalize_language'
 require 'macros/normalize_type'
 require 'macros/path_to_file'
+require 'macros/string_helper'
 require 'macros/timestamp'
 require 'macros/version'
 require 'traject_plus'
@@ -28,6 +29,7 @@ extend Macros::Mods
 extend Macros::NormalizeLanguage
 extend Macros::NormalizeType
 extend Macros::PathToFile
+extend Macros::StringHelper
 extend Macros::Timestamp
 extend Macros::Version
 extend TrajectPlus::Macros
