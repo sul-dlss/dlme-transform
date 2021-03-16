@@ -61,7 +61,7 @@ to_field 'cho_format', column('format'), lang('en')
 to_field 'cho_has_type', column('document_type_id'), translation_map('lausanne_types'), lang('en')
 to_field 'cho_has_type', column('document_type_id'), translation_map('lausanne_types'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
 to_field 'cho_medium', column('material'), lang('fr')
-to_field 'cho_source' column('literature'), lang('fr')
+to_field 'cho_source', column('literature'), lang('fr')
 to_field 'cho_spatial', column('locatlity'), lang('en')
 
 # Agg
