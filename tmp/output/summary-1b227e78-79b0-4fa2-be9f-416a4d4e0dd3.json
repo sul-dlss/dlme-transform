@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "records": 3938,
+  "data_path": "lausanne/ias",
+  "timestamp": "2021-03-19T13:33:13+00:00",
+  "duration": 7,
+  "url": "https://s3-us-west-2.amazonaws.com/dlme-metadata-dev/output-1b227e78-79b0-4fa2-be9f-416a4d4e0dd3.ndjson"
+}

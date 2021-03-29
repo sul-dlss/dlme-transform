@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "records": 2986,
+  "data_path": "manchester/nashriyah/data",
+  "timestamp": "2021-03-05T18:15:13+00:00",
+  "duration": 62,
+  "url": "https://s3-us-west-2.amazonaws.com/dlme-metadata-dev/output-601b1ecb-111f-44da-a320-dcc7aaae2483.ndjson"
+}
