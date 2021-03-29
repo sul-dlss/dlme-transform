@@ -1,9 +1,0 @@
-{
-  "success": false,
-  "records": 0,
-  "data_path": "luasanne/ias",
-  "timestamp": "2021-03-19T13:19:59+00:00",
-  "duration": 0,
-  "error": "File not found: luasanne/ias",
-  "url": "https://s3-us-west-2.amazonaws.com/dlme-metadata-dev/output-2558e462-e926-4474-bc65-cdebdb4e7bba.ndjson"
-}

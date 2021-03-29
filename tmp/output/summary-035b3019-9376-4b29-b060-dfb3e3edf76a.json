@@ -1,8 +1,0 @@
-{
-  "success": true,
-  "records": 1,
-  "data_path": "manchester/nashriyah/data/Nashriyah-1.xml",
-  "timestamp": "2021-03-05T18:05:48+00:00",
-  "duration": 0,
-  "url": "https://s3-us-west-2.amazonaws.com/dlme-metadata-dev/output-035b3019-9376-4b29-b060-dfb3e3edf76a.ndjson"
-}

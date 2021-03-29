@@ -1,8 +1,0 @@
-{
-  "success": true,
-  "records": 2986,
-  "data_path": "manchester",
-  "timestamp": "2021-03-25T14:52:54+00:00",
-  "duration": 49,
-  "url": "https://s3-us-west-2.amazonaws.com/dlme-metadata-dev/output-1ad2a034-b841-467a-9893-0853aa6ba5d8.ndjson"
-}

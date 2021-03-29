@@ -1,9 +1,0 @@
-{
-  "success": false,
-  "records": 0,
-  "data_path": "manchester",
-  "timestamp": "2021-03-25T13:57:10+00:00",
-  "duration": 0,
-  "error": "undefined method `gsub' for {:language=>\"en\", :values=>[\"Ahangar (1)\"]}:Hash",
-  "url": "https://s3-us-west-2.amazonaws.com/dlme-metadata-dev/output-f5fda01a-6cb7-41bd-9414-92d52722fdd3.ndjson"
-}

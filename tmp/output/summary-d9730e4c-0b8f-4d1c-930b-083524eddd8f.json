@@ -1,8 +1,0 @@
-{
-  "success": true,
-  "records": 14947,
-  "data_path": "harvard",
-  "timestamp": "2021-02-19T17:49:58+00:00",
-  "duration": 433,
-  "url": "https://s3-us-west-2.amazonaws.com/dlme-metadata-dev/output-d9730e4c-0b8f-4d1c-930b-083524eddd8f.ndjson"
-}
