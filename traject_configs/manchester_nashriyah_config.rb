@@ -59,7 +59,6 @@ to_field 'cho_date_range_norm', extract_oai('dc:date'), strip, manchester_solar_
 to_field 'cho_dc_rights', literal('<a href="https://www.jstor.org/stable/community.28163960?seq=1#metadata_info_tab_contents">"Andishah ha-yi Rastakhiz on JSTOR"</a>'), lang('en')
 to_field 'cho_dc_rights', literal('<a href="https://www.jstor.org/stable/community.28163960?seq=1#metadata_info_tab_contents">"JSTOR اندیشه های رستاخیز در"</a>'), lang('fa-Arab')
 to_field 'cho_description', extract_oai('dc:description'), strip, lang('en')
-to_field 'cho_description', extract_oai('dc:description'), strip, lang('en')
 to_field 'cho_edm_type', literal('Text'), lang('en')
 to_field 'cho_edm_type', literal('Text'), translation_map('norm_types_to_ar'), lang('ar-Arab')
 to_field 'cho_has_type', literal('Periodical'), lang('en')
