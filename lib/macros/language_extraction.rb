@@ -27,10 +27,20 @@ module Macros
     #  arabic_script_lang_or_default('ar-Arab', 'en') => {'ar-Arab': ['من كتب محمد بن محمد الكبسي. لقطة رقم (1).']}
     def arabic_script_lang_or_default(arabic_script_lang, default)
       lambda do |_record, accumulator|
-        extracted_string = accumulator[0]
-        if extracted_string
-          lang_code = extracted_string.match?(/[ضصثقفغعهخحمنتالبيسشظطذدزرو]/) ? arabic_script_lang : default
-          accumulator.replace([{ language: lang_code, values: [extracted_string] }])
+        if accumulator
+          ar_values = []
+          default_values = []
+          accumulator.each do |val|
+            lang_code = val.match?(/[ضصثقفغعهخحمنتالبيسشظطذدزرو]/) ? arabic_script_lang : default
+            ar_values << val if lang_code == arabic_script_lang
+            default_values << val if lang_code == default
+          end
+          if ar_values.present?
+            accumulator.replace([{language: arabic_script_lang, values: ar_values }])
+            accumulator << { language: default, values: default_values } if default_values.present?
+          elsif default_values.present?
+            accumulator.replace([{language: default, values: default_values}])
+          end
         end
       end
     end

@@ -7,6 +7,7 @@ require 'macros/collection'
 require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
+require 'macros/field_extraction'
 require 'macros/language_extraction'
 require 'macros/normalize_language'
 require 'macros/normalize_type'
@@ -21,6 +22,7 @@ extend Macros::Collection
 extend Macros::DLME
 extend Macros::DateParsing
 extend Macros::EachRecord
+extend Macros::FieldExtraction
 extend Macros::LanguageExtraction
 extend Macros::NormalizeLanguage
 extend Macros::NormalizeType
@@ -57,10 +59,11 @@ to_field 'cho_date_range_hijri', extract_poha('/*/dc:date[1]'), strip, parse_ran
 to_field 'cho_date_range_norm', extract_poha('/*/dc:date[1]'), strip, parse_range
 to_field 'cho_description', extract_poha('/*/dc:biography'), strip, lang('en')
 to_field 'cho_description', extract_poha('/*/dc:biographyAR'), strip, lang('ar-Arab')
-to_field 'cho_edm_type', extract_poha('/*/dc:type'),
-         split(';'), strip, transform(&:downcase), normalize_type, lang('en')
-to_field 'cho_edm_type', extract_poha('/*/dc:type'),
-         split(';'), strip, transform(&:downcase), normalize_type, translation_map('norm_types_to_ar'), lang('ar-Arab')
+to_field 'cho_description', extract_poha('/*/dc:description'), strip, lang('en')
+to_field 'cho_description', xpath_commas_with_prepend('/*/dc:toc', 'Table of Contents: '), lang('en')
+to_field 'cho_description', xpath_commas_with_prepend('/*/dc:toc', 'جدول المحتويات:'), lang('ar-Arab')
+to_field 'cho_edm_type', literal('Sound'), lang('en')
+to_field 'cho_edm_type', literal('Sound'), translation_map('norm_types_to_ar'), lang('ar-Arab')
 to_field 'cho_extent', extract_poha('/*/dc:duration'), strip, prepend('Duration: '), lang('en')
 to_field 'cho_has_type', literal('Interview'), lang('en')
 to_field 'cho_has_type', literal('Interview'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')

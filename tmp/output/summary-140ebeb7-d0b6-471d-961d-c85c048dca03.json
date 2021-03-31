@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "records": 196,
+  "data_path": "aub/postcard",
+  "timestamp": "2021-03-30T18:29:06+00:00",
+  "duration": 4,
+  "url": "https://s3-us-west-2.amazonaws.com/dlme-metadata-dev/output-140ebeb7-d0b6-471d-961d-c85c048dca03.ndjson"
+}

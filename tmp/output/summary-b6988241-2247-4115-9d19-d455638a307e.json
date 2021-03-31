@@ -1,0 +1,9 @@
+{
+  "success": false,
+  "records": 921,
+  "data_path": "aub/aco",
+  "timestamp": "2021-03-29T19:28:07+00:00",
+  "duration": 23,
+  "error": "undefined method `truncate' for #<Traject::Indexer:0x000055af8e308fc0>\nDid you mean?  trust",
+  "url": "https://s3-us-west-2.amazonaws.com/dlme-metadata-dev/output-b6988241-2247-4115-9d19-d455638a307e.ndjson"
+}
