@@ -14,11 +14,11 @@ module Contracts
       optional(:cho_date_range_norm).array(:integer)
       optional(:cho_dc_rights).value(:hash?)
       optional(:cho_description).value(:hash?)
-      optional(:cho_edm_type) { hash? { each(:str?, excluded_from?: ['NOT FOUND']) } }
+      required(:cho_edm_type) { hash? { each(:str?, excluded_from?: ['NOT FOUND']) } }
       optional(:cho_extent).value(:hash?)
       optional(:cho_format).value(:hash?)
       optional(:cho_has_part).value(:hash?)
-      optional(:cho_has_type).value(:hash?)
+      required(:cho_has_type).value(:hash?)
       optional(:cho_identifier).array(:str?)
       optional(:cho_is_part_of).value(:hash?)
       optional(:cho_language)
