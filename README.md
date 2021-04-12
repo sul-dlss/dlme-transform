@@ -234,6 +234,21 @@ Some more info here https://github.com/sul-dlss/terraform-aws/blob/main/organiza
 
 After this, terraform must be applied to the Stage and Prod environments.  Note that only Ops folks can update the Production environment.
 
+To check and apply the changes after making the Terraform PR as noted above, be sure you are in the dlme folder in terraform (e.g. `organizations/staging/dlme`) and then verify the change with:
+
+```
+terraform plan
+```
+
+If it asks for the profile name, it should match what you set for the `source_profile` in `~/.aws/config`.
+
+You should see output ending with the change to the the dlme-transform container.  You can then apply the change with:
+
+```
+terraform apply
+```
+
+
 ## API Documentation
 https://www.rubydoc.info/github/sul-dlss/dlme-transform
 
