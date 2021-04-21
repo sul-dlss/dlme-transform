@@ -36,10 +36,10 @@ module Macros
             default_values << val if lang_code == default
           end
           if ar_values.present?
-            accumulator.replace([{language: arabic_script_lang, values: ar_values }])
+            accumulator.replace([{ language: arabic_script_lang, values: ar_values }])
             accumulator << { language: default, values: default_values } if default_values.present?
           elsif default_values.present?
-            accumulator.replace([{language: default, values: default_values}])
+            accumulator.replace([{ language: default, values: default_values }])
           end
         end
       end
