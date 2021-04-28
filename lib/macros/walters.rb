@@ -23,15 +23,35 @@ module Macros
         accumulator << record[CLASSIFICATION].split(';')[0].strip.downcase if record[CLASSIFICATION].present?
         accumulator << record[OBJECT_NAME].split(';')[0].strip.downcase if record[CLASSIFICATION].blank? &&
                                                                            record[OBJECT_NAME].present?
+        accumulator
       end
     end
+
+    # # Builds the object date for the record.
+    # # @return [Proc] a proc that traject can call for each record
+    # def generate_object_date
+    #   lambda do |record, accumulator, _context|
+    #     begin_date = record[OBJECT_BEGIN_DATE].to_s
+    #     end_date = record[OBJECT_END_DATE].to_s
+    #     accumulator << if begin_date.blank? && end_date.blank?
+    #                      nil
+    #                    elsif begin_date.present? && end_date.present?
+    #                      "#{begin_date} - #{end_date}"
+    #                    elsif begin_date.present? && end_date.blank?
+    #                      begin_date
+    #                    elsif begin_date.blank? && end_date.present?
+    #                      end_date
+    #                    end
+    #   end
+    # end
 
     # Builds the object date for the record.
     # @return [Proc] a proc that traject can call for each record
     def generate_object_date
       lambda do |record, accumulator, _context|
-        object_date = record[OBJECT_BEGIN_DATE] unless record[OBJECT_BEGIN_DATE].to_s.empty?
-        object_date = "#{object_date} - #{record[OBJECT_END_DATE]}" unless record[OBJECT_END_DATE].to_s.empty?
+        object_date = record[OBJECT_BEGIN_DATE] unless record[OBJECT_BEGIN_DATE].blank?
+        object_date = "#{record[OBJECT_BEGIN_DATE]} - #{record[OBJECT_END_DATE]}" unless record[OBJECT_END_DATE].blank?
+        object_date = record[OBJECT_END_DATE].to_s if record[OBJECT_BEGIN_DATE].blank? && record[OBJECT_END_DATE].present?
         accumulator << object_date
       end
     end
