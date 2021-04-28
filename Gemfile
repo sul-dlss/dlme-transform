@@ -21,8 +21,9 @@ end
 group :test do
   gem 'rspec'
   gem 'rspec_junit_formatter'
-  gem 'rubocop', '~> 0.64.0'
-  gem 'rubocop-rspec', '~> 1.21.0'
+  gem 'rubocop', '~> 1.13.0'
+  gem 'rubocop-performance', '~> 1.11.0'
+  gem 'rubocop-rspec', '~> 2.3.0'
   # Codeclimate is not compatible with 0.18+. See https://github.com/codeclimate/test-reporter/issues/413
-  gem 'simplecov', '~> 0.17.1'
+  gem 'simplecov', '~> 0.21'
 end

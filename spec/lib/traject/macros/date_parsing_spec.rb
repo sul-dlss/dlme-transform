@@ -53,6 +53,7 @@ RSpec.describe Macros::DateParsing do
         to_field 'gregorian', accumulate { |record, *_| record[:value] }, extract_gregorian
       end
     end
+
     mixed_hijri_gregorian.each do |raw, exp_hijri, exp_gregorian|
       it "#{raw} results in string containing '#{exp_gregorian}' and not '#{exp_hijri}'" do
         result = indexer.map_record(value: raw)['gregorian'].first
@@ -97,6 +98,7 @@ RSpec.describe Macros::DateParsing do
         end
       end
     end
+
     context 'when no hijri provided' do
       it 'hijri range is computed from gregorian range' do
         expect(indexer).to receive(:to_hijri).exactly(4).times.and_call_original
@@ -228,6 +230,7 @@ RSpec.describe Macros::DateParsing do
 
       context 'when attrib values are negative' do
         let(:orig_date_el) { '<tei:origDate calendar="Gregorian" notBefore="-0200" notAfter="-0100">Middle of second century BCE</tei:origDate>' }
+
         it 'gets range from attribute values' do
           expect(indexer.map_record(ng_rec)).to include 'range' => (-200..-100).to_a
         end
@@ -252,6 +255,7 @@ RSpec.describe Macros::DateParsing do
 
     context "when 'from' and 'to' attributes provided (Islamic collection)" do
       let(:orig_date_el) { '<tei:origDate calendar="Gregorian" from="0800" to="0877" instant="false">Before 264 AH</tei:origDate>' }
+
       it 'gets range from atttribute values' do
         expect(indexer.map_record(ng_rec)).to include 'range' => (800..877).to_a
       end
@@ -267,12 +271,14 @@ RSpec.describe Macros::DateParsing do
 
     context "when 'when' attribute provided" do
       let(:orig_date_el) { '<tei:origDate calendar="Gregorian" when="1592" unit="mm">1000 A.H. / 1592 C.E.</tei:origDate>' }
+
       it 'gets single year range from attribute value' do
         expect(indexer.map_record(ng_rec)).to include 'range' => [1592]
       end
 
       context 'when attrib values are yyyy-mm-dd' do
         let(:orig_date_el) { '<tei:origDate calendar="Hijri-qamari" when="1231-01-01" instant="false">628 A.H. / 1231 C.E.</tei:origDate>' }
+
         it 'gets single year range from attribute value' do
           expect(indexer.map_record(ng_rec)).to include 'range' => [1231]
         end
@@ -288,6 +294,7 @@ RSpec.describe Macros::DateParsing do
 
       context 'when no value available' do
         let(:orig_date_el) { '<tei:origDate calendar="Hijri-qamari">undated</tei:origDate>' }
+
         it 'the field is absent' do
           expect(indexer.map_record(ng_rec)).not_to include 'range'
         end
@@ -337,6 +344,7 @@ RSpec.describe Macros::DateParsing do
           <caldate>1725</caldate>
         </sngdate>'
       end
+
       it 'range is a single value Array' do
         expect(indexer.map_record(ng_rec)).to include 'range' => [1725]
       end
@@ -454,8 +462,10 @@ RSpec.describe Macros::DateParsing do
           expect(indexer.map_record(ng_rec)).to include 'range' => (1825..1875).to_a
         end
       end
+
       context 'when keyDate attribute but no point attributes' do
         let(:date_els) { '<mods:dateCreated encoding="w3cdtf" keyDate="yes" qualifier="inferred">1725</mods:dateCreated>' }
+
         it 'uses value for range' do
           expect(indexer.map_record(ng_rec)).to include 'range' => [1725]
         end
@@ -467,15 +477,18 @@ RSpec.describe Macros::DateParsing do
       # we have no dateValid elements with point or keyDate attributes
       context 'when no attributes of interest' do
         let(:date_els) { '<mods:dateValid>19th century</mods:dateValid>' }
+
         it 'uses value for range' do
           expect(indexer.map_record(ng_rec)).to include 'range' => (1800..1899).to_a
         end
       end
+
       context 'when dateIssued also present' do
         let(:date_els) do
           '<mods:dateIssued encoding="w3cdtf" keyDate="yes">2012</mods:dateIssued>
           <mods:dateValid encoding="w3cdtf">1990</mods:dateValid>'
         end
+
         it 'uses value from dateValid' do
           expect(indexer.map_record(ng_rec)).to include 'range' => [1990]
         end
@@ -486,15 +499,18 @@ RSpec.describe Macros::DateParsing do
       # we have no dateIssued elements with point attributes
       context 'when keyDate attribute but no point attributes' do
         let(:date_els) { '<mods:dateIssued encoding="w3cdtf" keyDate="yes">2013</mods:dateIssued>' }
+
         it 'uses value for range' do
           expect(indexer.map_record(ng_rec)).to include 'range' => [2013]
         end
       end
+
       context 'when no attributes of interest' do
         let(:date_els) do
           '<mods:dateIssued>ca. 1720]</mods:dateIssued>
           <mods:dateIssued encoding="marc">1720</mods:dateIssued>'
         end
+
         it 'uses first value for range' do
           expect(indexer.map_record(ng_rec)).to include 'range' => [1720]
         end
@@ -575,6 +591,7 @@ RSpec.describe Macros::DateParsing do
           <dc:date>1426</dc:date>
           <dc:date>1520</dc:date>'
         end
+
         it 'uses them as endpoints for range' do
           expect(indexer.map_record(ng_rec)).to include 'range' => (1426..1520).to_a
         end
@@ -588,6 +605,7 @@ RSpec.describe Macros::DateParsing do
           <dc:date>1799</dc:date>
           <dc:date>2002</dc:date>'
         end
+
         it 'the field is not populated' do
           expect(indexer.map_record(ng_rec)).not_to include 'range'
         end
@@ -599,6 +617,7 @@ RSpec.describe Macros::DateParsing do
         '<dc:date>17. yüzyıl</dc:date>
         <dc:date>2002</dc:date>'
       end
+
       it 'the field is not populated' do
         expect(indexer.map_record(ng_rec)).not_to include 'range'
       end

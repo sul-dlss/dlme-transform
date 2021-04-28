@@ -89,7 +89,7 @@ module Macros
     # Looks up the script from the MODS document and normalizes it using the ++lib/translation_maps/scripts.yaml++ table
     # @return [Proc] a proc that traject can call for each record
     def normalize_mods_script
-      extract_mods('/*/mods:language/mods:scriptTerm', translation_map: ['scripts', default: '__passthrough__'])
+      extract_mods('/*/mods:language/mods:scriptTerm', translation_map: ['scripts', { default: '__passthrough__' }])
     end
   end
 end

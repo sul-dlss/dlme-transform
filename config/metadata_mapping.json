@@ -1734,6 +1734,26 @@
   },
   {
     "trajects": [
+      "walters_config.rb"
+    ],
+    "paths": [
+      "walters-art-museum"
+    ],
+    "extension": ".json",
+    "settings": {
+      "agg_provider": "The Walters Art Museum",
+      "agg_provider_country": "United States of America",
+      "agg_data_provider": "The Walters Art Museum",
+      "agg_data_provider_country": "United States of America",
+      "agg_provider_ar": "متحف والتر للفنون",
+      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "agg_data_provider_ar": "متحف والتر للفنون",
+      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "inst_id": "walters"
+    }
+  },
+  {
+    "trajects": [
       "yale_medical_config.rb"
     ],
     "paths": [

@@ -25,6 +25,7 @@ map: Map
 maps: Map
 newspaper article: Newspaper
 note: Other Document
+object: Museum Object
 painting: Painting
 periodical: Periodical
 periodicals: Periodical

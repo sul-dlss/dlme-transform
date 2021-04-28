@@ -1,40 +1,74 @@
 # Basic mapping from common regex patterns to MODS, MARC, EDM, DCMI type terms.
 3d: 3d
+arms & armor: Object
 architectural drawings (visual works): Image
 artifact: Image
 audio: Sound
 black-and-white photographs: Image
 brochure: Image
 books: Text
+bowls (vessels): Object
 cartographic: Image
+ceramics: Object
 collection: Collection
 color photographs: Image
+cylinder seals: Object
 dataset: Dataset
 digital data: Dataset
+finger rings: Object
+glasswares: Object
+gold, silver & jewelry: Object
+helmets: Object
+illuminated manuscripts: Text
 image: Image
+inlays: Object
 interactive resource: Interactive Resource
+ivory & bone: Object
+jars: Object
+lacquer & inlay: Object
+lamps: Object
+leather: Object
 manuscript: Text
 manuscripts: Text
+manuscripts & rare books: Text
 map: Image
 maps: Image
+metal: Object
+mirrors: Object
 mixed material: Text
 movingimage: Video
 moving image: Video
 moving images: Video
 multimedia: [Sound, Video]
+mummies & cartonnage: Object
 notated music: Text
 software: Interactive Resource
 software, multimedia: Interactive Resource
+painting & drawing: Image
 photographs: Image
+plaques: Object
 poster: Image
+precious stones & gems: Object
+reliefs: Object
+scarabs: Object
+sculpture: Object
+shoes (footwear): Object
 sound: Sound
 sound recording: Sound
 sound recording-musical: Sound
 sound recording-nonmusical: Sound
+statues: Object
+statuettes (statues): Object
 still image: Image
 stillimage: Image
+stone: Object
+tablets: Object
 tactile: Image
+tapestries: Object
+textiles: Object
 text: Text
 three dimensional object: Image
+vases: Object
 vector digital data: Dataset
 video: Video
+wood: Object

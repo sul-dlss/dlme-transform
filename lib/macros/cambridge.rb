@@ -56,13 +56,15 @@ module Macros
     end
 
     def meausured_object(record)
-      return if record.xpath("#{MS_DESC}/#{OBJ_DESC}/#{SUPPORT_DESC}/tei:extent/tei:dimensions/@type", NS).map(&:text).blank?
+      return if record.xpath("#{MS_DESC}/#{OBJ_DESC}/#{SUPPORT_DESC}/tei:extent/tei:dimensions/@type",
+                             NS).map(&:text).blank?
 
       record.xpath("#{MS_DESC}/#{OBJ_DESC}/#{SUPPORT_DESC}/tei:extent/tei:dimensions/@type", NS).map(&:text)
     end
 
     def unit(record)
-      return if record.xpath("#{MS_DESC}/#{OBJ_DESC}/#{SUPPORT_DESC}/tei:extent/tei:dimensions/@unit", NS).map(&:text).blank?
+      return if record.xpath("#{MS_DESC}/#{OBJ_DESC}/#{SUPPORT_DESC}/tei:extent/tei:dimensions/@unit",
+                             NS).map(&:text).blank?
 
       record.xpath("#{MS_DESC}/#{OBJ_DESC}/#{SUPPORT_DESC}/tei:extent/tei:dimensions/@unit", NS).map(&:text)
     end
@@ -82,7 +84,7 @@ module Macros
     def extract_record_id(record)
       url = record.xpath('//tei:facsimile/tei:graphic/@url', NS).map(&:text).first
       url.gsub!('http://cudl.lib.cam.ac.uk/content/images/', '')
-      url.gsub!(%r{-\d+-\d+_files\/8\/0_0.jpg}, '')
+      url.gsub!(%r{-\d+-\d+_files/8/0_0.jpg}, '')
     end
   end
 end

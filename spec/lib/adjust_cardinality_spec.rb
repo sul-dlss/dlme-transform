@@ -23,6 +23,7 @@ RSpec.describe AdjustCardinality do
                                                ])
       end
     end
+
     context 'when flattened web resource id is not an array' do
       let(:attributes) do
         { 'agg_has_view' =>

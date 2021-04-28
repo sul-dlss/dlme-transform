@@ -41,7 +41,7 @@ module Contracts
       # required(:transform_version).filled(:string)
       # required(:transform_timestamp).filled(:string)
       required(:id).filled(:string)
-      optional('__source'.to_sym).filled(:string)
+      optional(:__source).filled(:string)
       # Since the IR is a flattened projection of the MAP, 'agg_aggregated_cho' is not used.
       required(:agg_data_provider_collection).value(:string)
       required(:agg_data_provider).value(:hash?)
