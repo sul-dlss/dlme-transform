@@ -20,6 +20,7 @@ RSpec.describe 'not_found translation map' do
 
   context 'for a not found key' do
     let(:key) { 'foo' }
+
     it 'returns the key and NOT FOUND' do
       expect(translation).to eq(['NOT FOUND', key])
     end

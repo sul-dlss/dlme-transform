@@ -13,6 +13,7 @@ RSpec.describe Macros::Collection do
   describe '#collection' do
     let(:collection) { 'stanford/maps' }
     let(:input_name) { 'data/stanford/maps/file_1.xml' }
+
     it 'returns a path string that cooresponds to a collection' do
       context = {}
       allow(context).to receive(:input_name).and_return(input_name)

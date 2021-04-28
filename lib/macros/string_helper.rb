@@ -28,7 +28,7 @@ module Macros
 
     # Shorten a string and follow it with an ellipsis.
     def truncate(text, length = 100, truncate_string = '...')
-      l = length - truncate_string.chars.length
+      l = length - truncate_string.length
       (text.length > length ? text[0...l] + truncate_string : text).to_s
     end
   end

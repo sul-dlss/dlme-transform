@@ -162,7 +162,7 @@ module Macros
     FGDC_TIMEINFO_XPATH = '/metadata/idinfo/timeperd/timeinfo'
     FGDC_SINGLE_DATE_XPATH = "#{FGDC_TIMEINFO_XPATH}/sngdate/caldate"
     FGDC_DATE_RANGE_XPATH = "#{FGDC_TIMEINFO_XPATH}/rngdates"
-    # Note:  saw no "#{FGDC_TIMEINFO_XPATH}/mdattim" multiple dates path data
+    # NOTE: saw no "#{FGDC_TIMEINFO_XPATH}/mdattim" multiple dates path data
 
     # Extracts dates from FGDC idinfo/timeperd to create a single date range value
     # a year will be nil if it is NOT between -9999 and (current year + 1), per parse_date gem
@@ -176,14 +176,16 @@ module Macros
           accumulator.replace(range_array(context, first_year, last_year))
         else
           single_date_nodeset = record.xpath(FGDC_SINGLE_DATE_XPATH, FGDC_NS)
-          accumulator.replace([ParseDate.earliest_year(single_date_nodeset.text&.strip)]) if single_date_nodeset.present?
+          if single_date_nodeset.present?
+            accumulator.replace([ParseDate.earliest_year(single_date_nodeset.text&.strip)])
+          end
         end
       end
     end
 
     GREGORIAN_IN_BRACKET_REGEX = /\[(?<gregorian>.*\d{3,4}.*)\]/.freeze
     HIJRI_IE_GREGORIAN_REGEX = /\d.*i\.?e\.?(?<gregorian>.*\d{3,4}.*)/.freeze
-    UU_TRAILING_HYPHEN_REGEX = /\d+uu\-$/.freeze
+    UU_TRAILING_HYPHEN_REGEX = /\d+uu-$/.freeze
 
     # Extracts dates from slice of MARC 008 field
     #  to_field "date_range", extract_marc("008[06-14]"), marc_date_range

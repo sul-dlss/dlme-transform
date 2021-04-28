@@ -13,6 +13,7 @@ RSpec.describe Macros::PathToFile do
   describe '#path_to_file' do
     let(:path_to_file) { 'data/stanford/maps/file_1.xml' }
     let(:input_name) { 'data/stanford/maps/file_1.xml' }
+
     it 'returns a path string that corresponds to a file' do
       context = {}
       allow(context).to receive(:input_name).and_return(input_name)

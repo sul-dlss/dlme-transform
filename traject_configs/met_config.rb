@@ -26,7 +26,7 @@ settings do
   provide 'reader_class_name', 'TrajectPlus::JsonReader'
 end
 
-# Note: Met JSON uses blanks ("") instead of nulls.
+# NOTE: Met JSON uses blanks ("") instead of nulls.
 
 # Set Version & Timestamp on each record
 to_field 'transform_version', version

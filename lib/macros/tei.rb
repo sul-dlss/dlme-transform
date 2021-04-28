@@ -28,9 +28,9 @@ module Macros
       tei_main_lang_xp = '/*/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc/tei:msContents/tei:textLang/@mainLang'
       tei_lang_text_xp = '/*/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc/tei:msContents/tei:textLang'
       first(
-        extract_tei(tei_main_lang_xp, translation_map: ['marc_languages', default: '__passthrough__']),
+        extract_tei(tei_main_lang_xp, translation_map: ['marc_languages', { default: '__passthrough__' }]),
         # the last one is separate to eventually pass fuzzy matching parameters
-        extract_tei(tei_lang_text_xp, translation_map: ['marc_languages', default: '__passthrough__'])
+        extract_tei(tei_lang_text_xp, translation_map: ['marc_languages', { default: '__passthrough__' }])
       )
     end
 

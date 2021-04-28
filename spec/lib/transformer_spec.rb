@@ -22,7 +22,7 @@ RSpec.describe Dlme::Transformer do
     context 'when provided with settings' do
       let(:indexer) { transformer.send(:transformer) }
 
-      let(:settings) { { 'agg_provider': 'Stanford' } }
+      let(:settings) { { agg_provider: 'Stanford' } }
 
       it 'correctly configures indexer' do
         expect(indexer.settings).to include('agg_provider' => 'Stanford')

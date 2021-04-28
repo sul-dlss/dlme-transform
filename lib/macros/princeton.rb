@@ -6,7 +6,12 @@ module Macros
     def princeton_title_and_lang
       lambda do |record, accumulator|
         rec_title = record.dig('title') # look for the title
-        title_and_language = rec_title ? get_title_and_language(rec_title.first) : { language: 'none', values: ['Untitled'] }
+        title_and_language = if rec_title
+                               get_title_and_language(rec_title.first)
+                             else
+                               { language: 'none',
+                                 values: ['Untitled'] }
+                             end
         accumulator.replace([title_and_language])
       end
     end
@@ -14,7 +19,7 @@ module Macros
     private
 
     def get_title_and_language(rec_title)
-      if rec_title.class == Hash # if we have a value/lang pair in the title field, we can auto set the language
+      if rec_title.instance_of?(Hash) # if we have a value/lang pair in the title field, we can auto set the language
         title = rec_title.dig('@value') # grab the title from @value attribute
         language = map_language_value(rec_title) # get the language from the title
         script = title.match?(/[aeiou]/) ? 'Latn' : 'Arab'

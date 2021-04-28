@@ -104,7 +104,7 @@ to_field 'agg_preview' do |_record, accumulator, context|
                                   'wr_edm_rights' => [literal('BY-NC-SA'), translation_map('edm_rights')],
                                   'wr_id' => [extract_tei('//tei:facsimile/tei:graphic/@url'),
                                               gsub('http://cudl.lib.cam.ac.uk/content/images/', ''),
-                                              gsub(%r{_files\/8\/0_0.jpg}, ''),
+                                              gsub(%r{_files/8/0_0.jpg}, ''),
                                               append('.jp2'),
                                               prepend('https://images.lib.cam.ac.uk/iiif/'),
                                               append('/full/!400,400/0/default.jpg')],

@@ -76,6 +76,7 @@ RSpec.describe Macros::DLME do
       XML
     end
     let(:ng_rec) { Nokogiri::XML.parse(record) }
+
     before do
       indexer.instance_eval do
         to_field 'cho_title', return_or_prepend('/record/metadata/title', 'Prepended ')

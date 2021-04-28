@@ -54,9 +54,12 @@ module Macros
     #  # to_field 'cho_title', extract_tei("tei:title"), default('Untitled', 'بدون عنوان')
     def default(default_en, default_ar)
       lambda do |_rec, acc|
-        acc.replace([{ language: 'en', values: [default_en] }, { language: 'ar-Arab', values: [default_ar] }]) if acc.all?(
+        if acc.all?(
           &:blank?
         )
+          acc.replace([{ language: 'en', values: [default_en] },
+                       { language: 'ar-Arab', values: [default_ar] }])
+        end
       end
     end
 

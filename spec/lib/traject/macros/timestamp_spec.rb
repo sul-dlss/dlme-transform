@@ -12,6 +12,7 @@ RSpec.describe Macros::Timestamp do
 
   describe '#timestamp' do
     let(:time_now) { Time.now }
+
     it 'returns a timestamp value' do
       allow(Time).to receive(:now).and_return(time_now)
       callable = instance.timestamp

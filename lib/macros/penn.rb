@@ -54,7 +54,8 @@ module Macros
       lambda do |record, accumulator|
         thumb_xpath = if record.xpath('/*/*/*/tei:facsimile/tei:surface[16]/tei:graphic[2]/@url', NS).map(&:text).first
                         record.xpath('/*/*/*/tei:facsimile/tei:surface[16]/tei:graphic[2]/@url', NS).map(&:text).first
-                      elsif record.xpath('/*/*/*/tei:facsimile/tei:surface[8]/tei:graphic[2]/@url', NS).map(&:text).first
+                      elsif record.xpath('/*/*/*/tei:facsimile/tei:surface[8]/tei:graphic[2]/@url',
+                                         NS).map(&:text).first
                         record.xpath('/*/*/*/tei:facsimile/tei:surface[8]/tei:graphic[2]/@url', NS).map(&:text).first
                       else
                         record.xpath('/*/*/*/tei:facsimile/tei:surface[1]/tei:graphic[2]/@url', NS).map(&:text).first

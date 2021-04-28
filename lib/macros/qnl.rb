@@ -44,7 +44,9 @@ module Macros
 
     def generate_qnl_iiif_id(record, context)
       if record.xpath('/oai:record/oai:header/oai:identifier', NS).map(&:text).reject(&:blank?).any?
-        record.xpath('/oai:record/oai:header/oai:identifier', NS).map(&:text).reject(&:blank?).first.strip.gsub('_dlme', '')
+        record.xpath('/oai:record/oai:header/oai:identifier', NS).map(&:text).reject(&:blank?).first.strip.gsub(
+          '_dlme', ''
+        )
       else
         default_identifier(context)
       end
