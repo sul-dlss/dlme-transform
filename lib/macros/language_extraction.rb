@@ -24,7 +24,7 @@ module Macros
     # language '-Latn'.
     # @return [Proc] a proc that traject can call for each record
     # @example
-    #  arabic_script_lang_or_default('ar-Arab', 'en') => {'ar-Arab': ['من كتب محمد بن محمد الكبسي. لقطة رقم (1).']}
+    # arabic_script_lang_or_default('ar-Arab', 'en') => {'ar-Arab': ['من كتب محمد بن محمد الكبسي. لقطة رقم (1).']}
     def arabic_script_lang_or_default(arabic_script_lang, default)
       lambda do |_record, accumulator|
         if accumulator
@@ -35,15 +35,37 @@ module Macros
             ar_values << val if lang_code == arabic_script_lang
             default_values << val if lang_code == default
           end
-          if ar_values.present?
+          if ar_values.present? && default_values.present?
             accumulator.replace([{ language: arabic_script_lang, values: ar_values }])
             accumulator << { language: default, values: default_values } if default_values.present?
-          elsif default_values.present?
+          elsif ar_values.present? && default_values.empty?
+            accumulator.replace([{ language: arabic_script_lang, values: ar_values }])
+          elsif ar_values.empty? && default_values.present?
             accumulator.replace([{ language: default, values: default_values }])
           end
         end
       end
     end
+
+    # def arabic_script_lang_or_default(arabic_script_lang, default)
+    #   lambda do |_record, accumulator|
+    #     if accumulator
+    #       ar_values = []
+    #       default_values = []
+    #       accumulator.each do |val|
+    #         lang_code = val.match?(/[ضصثقفغعهخحمنتالبيسشظطذدزرو]/) ? arabic_script_lang : default
+    #         ar_values << val if lang_code == arabic_script_lang
+    #         default_values << val if lang_code == default
+    #       end
+    #       if ar_values.present?
+    #         accumulator.replace([{ language: arabic_script_lang, values: ar_values }])
+    #         accumulator << { language: default, values: default_values } if default_values.present?
+    #       else
+    #         accumulator.replace([{ language: default, values: default_values }])
+    #       end
+    #     end
+    #   end
+    # end
 
     # Returns the value extracted by 'to_field' reformated as a hash with accompanying BCP47 language code.
     # Caution: assumes the language of the metadata field is the same as the main language of the text.
