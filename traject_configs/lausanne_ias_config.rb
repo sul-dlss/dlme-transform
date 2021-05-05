@@ -80,7 +80,7 @@ to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(context,
                                   'agg_edm_rights' => [literal('InC: http://https://rightsstatements.org/page/InC/1.0')],
                                   'wr_dc_rights' => [literal('Paul Collart © ASA-UNIL'), lang('en')],
-                                  'wr_id' => [column('id'), prepend('https://tiresias.unil.ch/image/'), append('/300')])
+                                  'wr_id' => [column('id'), prepend('https://tiresias.unil.ch/api/image/'), append('/300')])
 end
 to_field 'agg_provider', provider, lang('en')
 to_field 'agg_provider', provider_ar, lang('ar-Arab')
