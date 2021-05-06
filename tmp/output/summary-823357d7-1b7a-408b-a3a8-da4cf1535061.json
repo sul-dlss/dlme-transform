@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "records": 730,
+  "data_path": "aub/poha",
+  "timestamp": "2021-03-30T15:02:02+00:00",
+  "duration": 17,
+  "url": "https://s3-us-west-2.amazonaws.com/dlme-metadata-dev/output-823357d7-1b7a-408b-a3a8-da4cf1535061.ndjson"
+}
