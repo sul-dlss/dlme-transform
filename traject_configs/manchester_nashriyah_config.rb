@@ -48,8 +48,8 @@ to_field 'dlme_source_file', path_to_file
 
 # CHO Required
 to_field 'id', extract_oai_identifier, strip
-to_field 'cho_title', xpath_title_or_desc("#{PREFIX}/dc:title[1]", "#{PREFIX}/dc:description[1]"), lang('fa-Arab'), default('Untitled', 'بدون عنوان')
 to_field 'cho_title', xpath_title_or_desc("#{PREFIX}/dc:title[last()]", "#{PREFIX}/dc:description[last()]"), lang('fa-Latn')
+to_field 'cho_title', xpath_title_or_desc("#{PREFIX}/dc:title[1]", "#{PREFIX}/dc:description[1]"), lang('fa-Arab'), default('Untitled', 'بدون عنوان')
 
 # CHO Other
 to_field 'cho_creator', extract_oai('dc:creator'), strip, lang('fa-Arab')
@@ -58,7 +58,6 @@ to_field 'cho_date_range_hijri', extract_oai('dc:date'), strip, manchester_solar
 to_field 'cho_date_range_norm', extract_oai('dc:date'), strip, manchester_solar_hijri_range
 to_field 'cho_dc_rights', literal('<a href="https://www.jstor.org/stable/community.28163960?seq=1#metadata_info_tab_contents">"Andishah ha-yi Rastakhiz on JSTOR"</a>'), lang('en')
 to_field 'cho_dc_rights', literal('<a href="https://www.jstor.org/stable/community.28163960?seq=1#metadata_info_tab_contents">"JSTOR اندیشه های رستاخیز در"</a>'), lang('fa-Arab')
-to_field 'cho_description', extract_oai('dc:description'), strip, lang('en')
 to_field 'cho_description', extract_oai('dc:description'), strip, lang('en')
 to_field 'cho_edm_type', literal('Text'), lang('en')
 to_field 'cho_edm_type', literal('Text'), translation_map('norm_types_to_ar'), lang('ar-Arab')
