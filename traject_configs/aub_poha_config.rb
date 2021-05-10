@@ -7,7 +7,6 @@ require 'macros/collection'
 require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
-require 'macros/field_extraction'
 require 'macros/language_extraction'
 require 'macros/normalize_language'
 require 'macros/normalize_type'
@@ -22,7 +21,6 @@ extend Macros::Collection
 extend Macros::DLME
 extend Macros::DateParsing
 extend Macros::EachRecord
-extend Macros::FieldExtraction
 extend Macros::LanguageExtraction
 extend Macros::NormalizeLanguage
 extend Macros::NormalizeType
@@ -57,19 +55,12 @@ to_field 'cho_contributor', extract_poha('/*/dc:interviewerAR'), strip, lang('ar
 to_field 'cho_date', extract_poha('/*/dc:date[1]'), strip
 to_field 'cho_date_range_hijri', extract_poha('/*/dc:date[1]'), strip, parse_range, hijri_range
 to_field 'cho_date_range_norm', extract_poha('/*/dc:date[1]'), strip, parse_range
-to_field 'cho_dc_rights', literal('Available under a Creative Commons Attribution-Noncommercial-NoDerivatives '\
-                           '4.0 International License. Anyone is free to download and share works under '\
-                           'this license as long as they give credit for the original creation, the '\
-                           'shared work is not changed and not used for commercial purposes. '\
-                           'Attribution should be given to "AUB University Libraries." e.g. "Campus '\
-                           '1967" by AUB University Libraries is licensed under CC BY-NC-ND 4.0'), lang('en')
 to_field 'cho_description', extract_poha('/*/dc:biography'), strip, lang('en')
 to_field 'cho_description', extract_poha('/*/dc:biographyAR'), strip, lang('ar-Arab')
-to_field 'cho_description', extract_poha('/*/dc:description'), strip, lang('en')
-to_field 'cho_description', xpath_commas_with_prepend('/*/dc:toc', 'Table of Contents: '), lang('en')
-to_field 'cho_description', xpath_commas_with_prepend('/*/dc:toc', 'جدول المحتويات:'), lang('ar-Arab')
-to_field 'cho_edm_type', literal('Sound'), lang('en')
-to_field 'cho_edm_type', literal('Sound'), translation_map('norm_types_to_ar'), lang('ar-Arab')
+to_field 'cho_edm_type', extract_poha('/*/dc:type'),
+         split(';'), strip, transform(&:downcase), normalize_type, lang('en')
+to_field 'cho_edm_type', extract_poha('/*/dc:type'),
+         split(';'), strip, transform(&:downcase), normalize_type, translation_map('norm_types_to_ar'), lang('ar-Arab')
 to_field 'cho_extent', extract_poha('/*/dc:duration'), strip, prepend('Duration: '), lang('en')
 to_field 'cho_has_type', literal('Interview'), lang('en')
 to_field 'cho_has_type', literal('Interview'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
@@ -97,26 +88,12 @@ to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_dc_rights' => [literal('Available under a Creative Commons Attribution-Noncommercial-NoDerivatives '\
-                               '4.0 International License. Anyone is free to download and share works under '\
-                               'this license as long as they give credit for the original creation, the '\
-                               'shared work is not changed and not used for commercial purposes. '\
-                               'Attribution should be given to "AUB University Libraries." e.g. "Campus '\
-                               '1967" by AUB University Libraries is licensed under CC BY-NC-ND 4.0')],
-    'wr_edm_rights' => [literal('CC BY-ND: https://creativecommons.org/licenses/by-nd/4.0/')],
     'wr_id' => [extract_poha('/*/dc:identifierURI'), strip]
   )
 end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_dc_rights' => [literal('Available under a Creative Commons Attribution-Noncommercial-NoDerivatives '\
-                               '4.0 International License. Anyone is free to download and share works under '\
-                               'this license as long as they give credit for the original creation, the '\
-                               'shared work is not changed and not used for commercial purposes. '\
-                               'Attribution should be given to "AUB University Libraries." e.g. "Campus '\
-                               '1967" by AUB University Libraries is licensed under CC BY-NC-ND 4.0')],
-    'wr_edm_rights' => [literal('CC BY-ND: https://creativecommons.org/licenses/by-nd/4.0/')],
     'wr_id' => [extract_poha('/*/dc:thumbnail')]
   )
 end

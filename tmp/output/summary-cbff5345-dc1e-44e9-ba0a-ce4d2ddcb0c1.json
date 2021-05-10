@@ -1,8 +1,0 @@
-{
-  "success": true,
-  "records": 18,
-  "data_path": "aub/travelbooks",
-  "timestamp": "2021-03-30T14:31:58+00:00",
-  "duration": 0,
-  "url": "https://s3-us-west-2.amazonaws.com/dlme-metadata-dev/output-cbff5345-dc1e-44e9-ba0a-ce4d2ddcb0c1.ndjson"
-}
