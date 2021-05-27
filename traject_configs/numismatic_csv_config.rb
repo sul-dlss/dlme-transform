@@ -8,6 +8,7 @@ require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
 require 'macros/numismatic_csv'
+require 'macros/path_to_file'
 require 'macros/timestamp'
 require 'macros/version'
 require 'traject_plus'
@@ -18,6 +19,7 @@ extend Macros::DLME
 extend Macros::DateParsing
 extend Macros::EachRecord
 extend Macros::NumismaticCsv
+extend Macros::PathToFile
 extend Macros::Timestamp
 extend Macros::Version
 extend TrajectPlus::Macros
@@ -28,52 +30,62 @@ settings do
   provide 'writer_class_name', 'DlmeJsonResourceWriter'
 end
 
-to_field 'agg_data_provider_collection', collection
-
 # Set Version & Timestamp on each record
 to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
+
+# File path
+to_field 'dlme_source_file', path_to_file
 
 # CHO Required
 to_field 'id', normalize_prefixed_id('RecordId')
 to_field 'cho_title', column('Title'), strip, lang('en')
 
 # CHO Other
-to_field 'cho_contributor', column('Maker'), split('|'), strip, lang('en')
-to_field 'cho_coverage', column('Findspot'), strip, lang('en')
-to_field 'cho_creator', column('Authority'), strip, lang('en')
+to_field 'cho_contributor', column('Maker'), split('|'), strip, prepend('Maker: '), lang('en')
+to_field 'cho_creator', column('Authority'), split('|'), strip, prepend('Authority: '), lang('en')
 to_field 'cho_date', column('Year'), gsub('|', ' - '), strip, lang('en')
 to_field 'cho_date_range_norm', column('Year'), gsub('|', ' - '), parse_range
 to_field 'cho_date_range_hijri', column('Year'), gsub('|', ' - '), parse_range, hijri_range
-to_field 'cho_description', column('Denomination'), strip, lang('en')
-to_field 'cho_description', column('Obverse Legend'), strip, lang('en')
-to_field 'cho_description', column('Obverse Type'), strip, lang('en')
-to_field 'cho_description', column('Reverse Legend'), strip
-to_field 'cho_description', column('Reverse Type'), strip, lang('en')
+to_field 'cho_dc_rights', literal('Public Domain'), lang('en')
+to_field 'cho_description', column('Denomination'), strip, prepend('Denomination: '), lang('en')
+to_field 'cho_description', column('Findspot'), strip, prepend('Findspot: '), lang('en')
+to_field 'cho_description', column('Obverse Legend'), strip, prepend('Obverse legend: '), lang('en')
+to_field 'cho_description', column('Obverse Type'), strip, prepend('Obverse type: '), lang('en')
+to_field 'cho_description', column('Reverse Legend'), strip, prepend('Reverse legend: '), lang('en')
+to_field 'cho_description', column('Reverse Type'), strip, prepend('Reverse type: '), lang('en')
 to_field 'cho_edm_type', literal('Image'), lang('en')
 to_field 'cho_edm_type', literal('Image'), translation_map('norm_types_to_ar'), lang('ar-Arab')
-to_field 'cho_extent', column('Diameter'), strip, lang('en')
+to_field 'cho_extent', column('Diameter'), strip, prepend('Diameter: '), lang('en')
+to_field 'cho_extent', column('Weight'), strip, prepend('Weight: '), lang('en')
+to_field 'cho_has_type', literal('Coin'), lang('en')
+to_field 'cho_has_type', literal('Coin'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
 to_field 'cho_identifier', column('URI')
 to_field 'cho_identifier', column('RecordId')
 to_field 'cho_medium', column('Material'), strip, lang('en')
 to_field 'cho_source', column('Reference'), strip, lang('en')
-to_field 'cho_spatial', column('Mint'), strip, lang('en')
-to_field 'cho_spatial', column('Region'), strip, lang('en')
+to_field 'cho_spatial', column('Mint'), strip, prepend('Mint: '), lang('en')
+to_field 'cho_spatial', column('Region'), strip, prepend('Region: '), lang('en')
+to_field 'cho_spatial', column('State'), strip, prepend('State: '), lang('en')
 to_field 'cho_temporal', column('Dynasty'), strip, lang('en')
 to_field 'cho_type', column('Object Type'), strip, lang('en')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
 to_field 'agg_data_provider', data_provider_ar, lang('ar-Arab')
+to_field 'agg_data_provider_collection', collection
 to_field 'agg_data_provider_country', data_provider_country, lang('en')
 to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
+to_field 'agg_edm_rights', literal('https://creativecommons.org/share-your-work/public-domain/cc0/')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(context,
-                                  'wr_id' => [column('URI')])
+                                  'wr_id' => [column('RecordId'), prepend('http://numismatics.org/collection/')],
+                                  'wr_dc_rights' => [literal('Public Domain')])
 end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(context,
-                                  'wr_id' => [column('Thumbnail_obv')])
+                                  'wr_id' => [column('Thumbnail_obv')],
+                                  'wr_dc_rights' => [literal('Public Domain')])
 end
 to_field 'agg_provider', provider, lang('en')
 to_field 'agg_provider', provider_ar, lang('ar-Arab')
