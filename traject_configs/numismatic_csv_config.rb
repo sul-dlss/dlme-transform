@@ -7,7 +7,6 @@ require 'macros/csv'
 require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
-require 'macros/numismatic_csv'
 require 'macros/timestamp'
 require 'macros/version'
 require 'traject_plus'
@@ -17,7 +16,6 @@ extend Macros::Csv
 extend Macros::DLME
 extend Macros::DateParsing
 extend Macros::EachRecord
-extend Macros::NumismaticCsv
 extend Macros::Timestamp
 extend Macros::Version
 extend TrajectPlus::Macros
@@ -43,8 +41,8 @@ to_field 'cho_contributor', column('Maker'), split('|'), strip, lang('en')
 to_field 'cho_coverage', column('Findspot'), strip, lang('en')
 to_field 'cho_creator', column('Authority'), strip, lang('en')
 to_field 'cho_date', column('Year'), gsub('|', ' - '), strip, lang('en')
-to_field 'cho_date_range_norm', column('Year'), gsub('|', ' - '), parse_range
-to_field 'cho_date_range_hijri', column('Year'), gsub('|', ' - '), parse_range, hijri_range
+to_field 'cho_date_range_norm', csv_or_json_date_range('From Date', 'To Date')
+to_field 'cho_date_range_hijri', csv_or_json_date_range('From Date', 'To Date'), hijri_range
 to_field 'cho_description', column('Denomination'), strip, lang('en')
 to_field 'cho_description', column('Obverse Legend'), strip, lang('en')
 to_field 'cho_description', column('Obverse Type'), strip, lang('en')

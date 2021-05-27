@@ -3,13 +3,6 @@
 module Macros
   # Macros for extracting values from Lausanne records
   module Lausanne
-    # Extracts earliest & latest dates from Lausanne record and merges into singe date range value
-    def lausanne_date_range
-      lambda do |record, accumulator, context|
-        accumulator.replace(range_array(context, first_year(record), last_year(record)))
-      end
-    end
-
     # Extracts earliest & latest dates from Lausanne record and merges into singe date string value
     def lausanne_date_string
       lambda do |record, accumulator|

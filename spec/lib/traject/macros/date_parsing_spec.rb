@@ -21,6 +21,39 @@ RSpec.describe Macros::DateParsing do
   end
 
   # -- Specs for general macros follow, alphabetical
+  describe '#csv_or_json_date_range' do
+    before do
+      indexer.instance_eval do
+        to_field 'range', csv_or_json_date_range('start_year_column', 'end_year_column')
+      end
+    end
+
+    context 'when start_year_column and end_year_column populated' do
+      it 'both dates and range are valid' do
+        expect(indexer.map_record('start_year_column' => '-2', 'end_year_column' => '1')).to include 'range' => [-2, -1, 0, 1]
+        expect(indexer.map_record('start_year_column' => '-11', 'end_year_column' => '1')).to include 'range' => (-11..1).to_a
+        expect(indexer.map_record('start_year_column' => '-100', 'end_year_column' => '-99')).to include 'range' => [-100, -99]
+        expect(indexer.map_record('start_year_column' => '-1540', 'end_year_column' => '-1538')).to include 'range' => (-1540..-1538).to_a
+        expect(indexer.map_record('start_year_column' => '0', 'end_year_column' => '99')).to include 'range' => (0..99).to_a
+        expect(indexer.map_record('start_year_column' => '1', 'end_year_column' => '10')).to include 'range' => (1..10).to_a
+        expect(indexer.map_record('start_year_column' => '300', 'end_year_column' => '319')).to include 'range' => (300..319).to_a
+        expect(indexer.map_record('start_year_column' => '666', 'end_year_column' => '666')).to include 'range' => [666]
+      end
+
+      it 'invalid range logs (and does not raise) exception' do
+        expect { indexer.map_record('start_year_column' => '1539', 'end_year_column' => '1292') }.to change { Dlme::ExceptionCollector.instance.count }.by(1)
+      end
+    end
+
+    it 'when one date is empty, range is a single year' do
+      expect(indexer.map_record('start_year_column' => '300')).to include 'range' => [300]
+      expect(indexer.map_record('start_year_column' => '666')).to include 'range' => [666]
+    end
+
+    it 'when both dates are empty, no error is raised' do
+      expect(indexer.map_record({})).to eq({})
+    end
+  end
 
   mixed_hijri_gregorian =
     [ # raw, hijri part, gregorian part
@@ -395,44 +428,6 @@ RSpec.describe Macros::DateParsing do
     end
   end
 
-  describe '#met_date_range' do
-    before do
-      indexer.instance_eval do
-        to_field 'range', met_date_range
-      end
-    end
-
-    context 'when objectBeginDate and objectEndDate populated' do
-      it 'both dates and range are valid' do
-        expect(indexer.map_record('objectBeginDate' => '-2', 'objectEndDate' => '1')).to include 'range' => [-2, -1, 0, 1]
-        expect(indexer.map_record('objectBeginDate' => '-11', 'objectEndDate' => '1')).to include 'range' => (-11..1).to_a
-        expect(indexer.map_record('objectBeginDate' => '-100', 'objectEndDate' => '-99')).to include 'range' => [-100, -99]
-        expect(indexer.map_record('objectBeginDate' => '-1540', 'objectEndDate' => '-1538')).to include 'range' => (-1540..-1538).to_a
-        expect(indexer.map_record('objectBeginDate' => '0', 'objectEndDate' => '99')).to include 'range' => (0..99).to_a
-        expect(indexer.map_record('objectBeginDate' => '1', 'objectEndDate' => '10')).to include 'range' => (1..10).to_a
-        expect(indexer.map_record('objectBeginDate' => '300', 'objectEndDate' => '319')).to include 'range' => (300..319).to_a
-        expect(indexer.map_record('objectBeginDate' => '666', 'objectEndDate' => '666')).to include 'range' => [666]
-      end
-
-      it 'invalid range logs (and does not raise) exception' do
-        expect { indexer.map_record('objectBeginDate' => '1539', 'objectEndDate' => '1292') }.to change { Dlme::ExceptionCollector.instance.count }.by(1)
-      end
-    end
-
-    it 'when one date is empty, range is a single year' do
-      expect(indexer.map_record('objectBeginDate' => '300')).to include 'range' => [300]
-      expect(indexer.map_record('objectEndDate' => '666')).to include 'range' => [666]
-    end
-
-    it 'when both dates are empty, no error is raised' do
-      expect(indexer.map_record({})).to eq({})
-    end
-
-    it 'date strings with text and numbers are interpreted as 0' do
-      expect(indexer.map_record('date_made_early' => 'not999', 'date_made_late' => 'year of 1939')).to eq({})
-    end
-  end
-
   describe '#mods_date_range' do
     let(:record) do
       <<-XML
@@ -515,52 +510,6 @@ RSpec.describe Macros::DateParsing do
           expect(indexer.map_record(ng_rec)).to include 'range' => [1720]
         end
       end
-    end
-  end
-
-  describe '#penn_museum_date_range' do
-    before do
-      indexer.instance_eval do
-        to_field 'range', penn_museum_date_range
-      end
-    end
-
-    context 'when date_made_early and date_made_late populated' do
-      it 'both dates and range are valid' do
-        expect(indexer.map_record('date_made_early' => '-2', 'date_made_late' => '1')).to include 'range' => [-2, -1, 0, 1]
-        expect(indexer.map_record('date_made_early' => '-11', 'date_made_late' => '1')).to include 'range' => (-11..1).to_a
-        expect(indexer.map_record('date_made_early' => '-100', 'date_made_late' => '-99')).to include 'range' => [-100, -99]
-        expect(indexer.map_record('date_made_early' => '-1540', 'date_made_late' => '-1538')).to include 'range' => (-1540..-1538).to_a
-        expect(indexer.map_record('date_made_early' => '0', 'date_made_late' => '99')).to include 'range' => (0..99).to_a
-        expect(indexer.map_record('date_made_early' => '1', 'date_made_late' => '10')).to include 'range' => (1..10).to_a
-        expect(indexer.map_record('date_made_early' => '300', 'date_made_late' => '319')).to include 'range' => (300..319).to_a
-        expect(indexer.map_record('date_made_early' => '666', 'date_made_late' => '666')).to include 'range' => [666]
-      end
-
-      it 'invalid range logs (and does not raise) exception' do
-        expect { indexer.map_record('date_made_early' => '1539', 'date_made_late' => '1292') }.to change { Dlme::ExceptionCollector.instance.count }.by(1)
-      end
-
-      it 'future date year logs (and does not raise) exception' do
-        expect { indexer.map_record('date_made_early' => '1539', 'date_made_late' => '2050') }.to change { Dlme::ExceptionCollector.instance.count }.by(1)
-      end
-    end
-
-    it 'when one date is empty, range is a single year' do
-      expect(indexer.map_record('date_made_early' => '300')).to include 'range' => [300]
-      expect(indexer.map_record('date_made_late' => '666')).to include 'range' => [666]
-    end
-
-    it 'when both dates are empty, no error is raised' do
-      expect(indexer.map_record({})).to eq({})
-    end
-
-    it 'date strings with no numbers are interpreted as missing' do
-      expect(indexer.map_record('date_made_early' => 'not_a_number', 'date_made_late' => 'me_too')).to eq({})
-    end
-
-    it 'date strings with text and numbers are interpreted as 0' do
-      expect(indexer.map_record('date_made_early' => 'not999', 'date_made_late' => 'year of 1939')).to include 'range' => [0]
     end
   end
 

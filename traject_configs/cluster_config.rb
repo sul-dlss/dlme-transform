@@ -7,7 +7,6 @@ require 'macros/csv'
 require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
-require 'macros/numismatic_csv'
 require 'macros/timestamp'
 require 'macros/version'
 require 'traject_plus'
@@ -17,7 +16,6 @@ extend Macros::Csv
 extend Macros::DLME
 extend Macros::DateParsing
 extend Macros::EachRecord
-extend Macros::NumismaticCsv
 extend Macros::Timestamp
 extend Macros::Version
 extend TrajectPlus::Macros
