@@ -7,7 +7,6 @@ require 'macros/csv'
 require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
-require 'macros/numismatic_csv'
 require 'macros/path_to_file'
 require 'macros/timestamp'
 require 'macros/version'
@@ -18,7 +17,6 @@ extend Macros::Csv
 extend Macros::DLME
 extend Macros::DateParsing
 extend Macros::EachRecord
-extend Macros::NumismaticCsv
 extend Macros::PathToFile
 extend Macros::Timestamp
 extend Macros::Version
@@ -45,8 +43,8 @@ to_field 'cho_title', column('Title'), strip, lang('en')
 to_field 'cho_contributor', column('Maker'), split('|'), strip, prepend('Maker: '), lang('en')
 to_field 'cho_creator', column('Authority'), split('|'), strip, prepend('Authority: '), lang('en')
 to_field 'cho_date', column('Year'), gsub('|', ' - '), strip, lang('en')
-to_field 'cho_date_range_norm', column('Year'), gsub('|', ' - '), parse_range
-to_field 'cho_date_range_hijri', column('Year'), gsub('|', ' - '), parse_range, hijri_range
+to_field 'cho_date_range_norm', csv_or_json_date_range('From Date', 'To Date')
+to_field 'cho_date_range_hijri', csv_or_json_date_range('From Date', 'To Date'), hijri_range
 to_field 'cho_dc_rights', literal('Public Domain'), lang('en')
 to_field 'cho_description', column('Denomination'), strip, prepend('Denomination: '), lang('en')
 to_field 'cho_description', column('Findspot'), strip, prepend('Findspot: '), lang('en')

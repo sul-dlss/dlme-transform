@@ -47,8 +47,8 @@ to_field 'cho_title', column('name'), gsub('/<em>', ''), gsub('</em>', ''), lang
 
 # CHO Other
 to_field 'cho_date', lausanne_date_string, lang('en')
-to_field 'cho_date_range_norm', lausanne_date_range
-to_field 'cho_date_range_hijri', lausanne_date_range, hijri_range
+to_field 'cho_date_range_norm', csv_or_json_date_range('from', 'to')
+to_field 'cho_date_range_hijri', csv_or_json_date_range('from', 'to'), hijri_range
 to_field 'cho_description', column('expanded_name'), gsub('/<em>', ''), gsub('</em>', ''), lang('fr')
 to_field 'cho_description', column('location'), gsub('POINT(', ''), gsub(')', ''), lang('fr')
 to_field 'cho_description', literal('Site: Tiresias'), lang('en')

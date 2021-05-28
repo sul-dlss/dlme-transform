@@ -39,8 +39,8 @@ to_field 'cho_title', column('Title'), strip, lang('en')
 # CHO Other
 to_field 'cho_creator', column('Creator'), strip, lang('en')
 to_field 'cho_date', column('Date'), strip, lang('en')
-to_field 'cho_date_range_norm', column('Date'), parse_range
-to_field 'cho_date_range_hijri', column('Date'), parse_range, hijri_range
+to_field 'cho_date_range_norm', csv_or_json_date_range('Date')
+to_field 'cho_date_range_hijri', csv_or_json_date_range('Date'), hijri_range
 to_field 'cho_description', column('Description'), strip, lang('en')
 to_field 'cho_edm_type', literal('Image'), lang('en')
 to_field 'cho_edm_type', literal('Image'), translation_map('norm_types_to_ar'), lang('ar-Arab')
