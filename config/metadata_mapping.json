@@ -61,7 +61,6 @@
   },
   {
     "trajects": [
-      "aub_common_config.rb",
       "aub_aco_config.rb"
     ],
     "paths": [
@@ -82,7 +81,6 @@
   },
   {
     "trajects": [
-      "aub_common_config.rb",
       "aub_aladab_config.rb"
     ],
     "paths": [
@@ -123,7 +121,6 @@
   },
   {
     "trajects": [
-      "aub_common_config.rb",
       "aub_postcards_config.rb"
     ],
     "paths": [
@@ -144,7 +141,6 @@
   },
   {
     "trajects": [
-      "aub_common_config.rb",
       "aub_posters_config.rb"
     ],
     "paths": [
@@ -165,7 +161,6 @@
   },
   {
     "trajects": [
-      "aub_common_config.rb",
       "aub_travelbooks_config.rb"
     ],
     "paths": [

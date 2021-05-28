@@ -5,6 +5,7 @@ module Macros
   module FieldExtraction
     NS = {
       cdwalite: 'http://www.getty.edu/research/conducting_research/standards/cdwa/cdwalite',
+      dc: 'http://purl.org/dc/elements/1.1/',
       mods: 'http://www.loc.gov/mods/v3'
     }.freeze
     private_constant :NS

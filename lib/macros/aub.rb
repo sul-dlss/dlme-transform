@@ -23,5 +23,22 @@ module Macros
     def extract_poha(xpath)
       extract_xpath(xpath.to_s, ns: NS)
     end
+
+    # Extracts values for the given xpath which is prefixed with oai and oai_dc wrappers
+    # while ignoring the thumbmnail urls in the description field
+    # @example
+    #   extract_oai('dc:language') => lambda { ... }
+    # @param [String] xpath the xpath query expression
+    # @return [Proc] a proc that traject can call for each record
+    def extract_aub_description
+      lambda do |record, accumulator|
+        node = record.xpath('/*/*/*/dc:description', NS)
+        values = []
+        node.each do |val|
+          values.append(val&.content&.strip) unless val&.content&.strip&.start_with?('http')
+        end
+        accumulator.replace(values)
+      end
+    end
   end
 end
