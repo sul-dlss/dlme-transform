@@ -50,9 +50,9 @@ module Macros
     def generate_preview
       lambda do |record, accumulator, _context|
         if record[THUMBNAIL_URL].present?
-          accumulator << record[THUMBNAIL_URL]['Medium']
+          accumulator << record[THUMBNAIL_URL]['Medium'].gsub('width=150', 'width=400')
         else
-          accumulator << record[IMAGES].split(',')[0].delete('.').gsub('jpg', '.jpg').prepend('https://art.thewalters.org/images/art/thumbnails/s_').downcase
+          accumulator << record[IMAGES].split(',')[0].delete('.').gsub('jpg', '.jpg').prepend('https://art.thewalters.org/images/art/thumbnails/s_').downcase.gsub('width=150', 'width=400')
         end
       end
     end
