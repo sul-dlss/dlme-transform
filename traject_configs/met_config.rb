@@ -45,8 +45,8 @@ to_field 'cho_coverage', extract_json('.excavation'), transform(&:presence), lan
 to_field 'cho_creator', generate_creator, lang('en')
 to_field 'cho_date', generate_object_date, transform(&:presence), lang('en')
 to_field 'cho_date', extract_json('.objectDate'), transform(&:presence), lang('en')
-to_field 'cho_date_range_hijri', met_date_range, hijri_range
-to_field 'cho_date_range_norm', met_date_range
+to_field 'cho_date_range_hijri', csv_or_json_date_range('objectBeginDate', 'objectEndDate'), hijri_range
+to_field 'cho_date_range_norm', csv_or_json_date_range('objectBeginDate', 'objectEndDate')
 to_field 'cho_dc_rights', public_domain, lang('en')
 to_field 'cho_dc_rights', extract_json('.rightsAndReproduction'), transform(&:presence), lang('en')
 to_field 'cho_edm_type', literal('Image'), lang('en')

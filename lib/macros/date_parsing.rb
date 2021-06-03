@@ -213,12 +213,15 @@ module Macros
       end
     end
 
-    # Extracts earliest & latest dates from Met record and merges into singe date range value
-    def met_date_range
+    # Takes start year and, possibly, end year from csv and converts to year range
+    def csv_or_json_date_range(start_year_column, *end_year_column)
       lambda do |record, accumulator, context|
-        first_year = record['objectBeginDate']
-        last_year = record['objectEndDate']
-        accumulator.replace(range_array(context, first_year, last_year))
+        return if record[start_year_column].blank?
+
+        first_year = record[start_year_column].to_i
+        last_year = record[end_year_column[0]].to_i
+        accumulator.replace(range_array(context, first_year, last_year)) if record[end_year_column[0]].present?
+        accumulator.replace(range_array(context, first_year, first_year)) if record[end_year_column[0]].blank?
       end
     end
 
@@ -303,15 +306,6 @@ module Macros
       end
       plain_node_value = record.xpath("#{ORIGIN_INFO_PATH}/#{xpath_el_name}", MODS_NS)&.first&.content
       return ParseDate.parse_range(plain_node_value) if plain_node_value
-    end
-
-    # Extracts earliest & latest dates from Penn museum record and merges into singe date range value
-    def penn_museum_date_range
-      lambda do |record, accumulator, context|
-        first_year = record['date_made_early'].to_i if record['date_made_early']&.match(/\d+/)
-        last_year = record['date_made_late'].to_i if record['date_made_late']&.match(/\d+/)
-        accumulator.replace(range_array(context, first_year, last_year))
-      end
     end
 
     # sakip records with multiple dates tend to have earliest year as the 2nd occurence
