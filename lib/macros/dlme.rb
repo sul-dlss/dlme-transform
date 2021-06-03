@@ -80,6 +80,19 @@ module Macros
       File.basename(identifier, File.extname(identifier)) if identifier.present?
     end
 
+    # Returns the accumulator with parameters filtered out
+    # @param [Array] terms_to_filter
+    # @return [Array] an array of strings with parameters filtered out
+    # @example
+    #  # when settings contains: "cho_spatiel"=>"Michigan", "Turkey"
+    #
+    #  filter_data_errors('Michigan') => ["Turkey"]
+    def filter_data_errors(*terms_to_filter)
+      lambda do |_record, accumulator, _context|
+        accumulator.replace(accumulator.reject { |item| terms_to_filter.include? item })
+      end
+    end
+
     # Returns the given identifier prefixed with the ++inst_id++  as specified in ++config/metadata_mapping.json++
     # @param [Traject::Indexer::Context] context
     # @param [String] identifier

@@ -36,6 +36,32 @@ RSpec.describe Macros::DLME do
     end
   end
 
+  describe '#filter_data_errors' do
+    context 'with bad data values found in the accumulator' do
+      it 'removes bad values from accumulator' do
+        accumulator_original = ['good', 'bad']
+        callable = instance.filter_data_errors('bad')
+        expect(callable.call(nil, accumulator_original, nil)).to eq(['good'])
+      end
+    end
+
+    context 'with no bad data values found in the accumulator' do
+      it 'returns accumulator unchanged' do
+        accumulator_original = ['good', 'also good']
+        callable = instance.filter_data_errors('bad')
+        expect(callable.call(nil, accumulator_original, nil)).to eq(['good', 'also good'])
+      end
+    end
+
+    context 'with no values in accumulator' do
+      it 'returns empty array' do
+        accumulator_original = []
+        callable = instance.filter_data_errors('bad')
+        expect(callable.call(nil, accumulator_original, nil)).to eq([])
+      end
+    end
+  end
+
   describe '#lang' do
     context 'with bogus language string' do
       let(:language_string) { 'foobar' }
