@@ -24,7 +24,7 @@
       "numismatic_csv_config.rb"
     ],
     "paths": [
-      "american-numismatic-society/islamic-department"
+      "american-numismatic-society"
     ],
     "extension": ".csv",
     "settings": {

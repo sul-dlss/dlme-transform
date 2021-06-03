@@ -40,8 +40,8 @@ to_field 'id', normalize_prefixed_id('RecordId')
 to_field 'cho_title', column('Title'), strip, lang('en')
 
 # CHO Other
-to_field 'cho_contributor', column('Maker'), split('|'), strip, prepend('Maker: '), lang('en')
-to_field 'cho_creator', column('Authority'), split('|'), strip, prepend('Authority: '), lang('en')
+to_field 'cho_contributor', column('Maker'), split('||'), strip, prepend('Maker: '), lang('en')
+to_field 'cho_creator', column('Authority'), split('||'), strip, prepend('Authority: '), lang('en')
 to_field 'cho_date', column('Year'), gsub('|', ' - '), strip, lang('en')
 to_field 'cho_date_range_norm', csv_or_json_date_range('From Date', 'To Date')
 to_field 'cho_date_range_hijri', csv_or_json_date_range('From Date', 'To Date'), hijri_range
@@ -62,10 +62,10 @@ to_field 'cho_identifier', column('URI')
 to_field 'cho_identifier', column('RecordId')
 to_field 'cho_medium', column('Material'), strip, lang('en')
 to_field 'cho_source', column('Reference'), strip, lang('en')
-to_field 'cho_spatial', column('Mint'), strip, prepend('Mint: '), lang('en')
-to_field 'cho_spatial', column('Region'), strip, prepend('Region: '), lang('en')
-to_field 'cho_spatial', column('State'), strip, prepend('State: '), lang('en')
-to_field 'cho_temporal', column('Dynasty'), strip, lang('en')
+to_field 'cho_spatial', column('Mint'), split('||'), strip, prepend('Mint: '), lang('en')
+to_field 'cho_spatial', column('Region'), split('||'), strip, prepend('Region: '), lang('en')
+to_field 'cho_spatial', column('State'), split('||'), strip, prepend('State: '), lang('en')
+to_field 'cho_temporal', column('Dynasty'), split('||'), strip, lang('en')
 to_field 'cho_type', column('Object Type'), strip, lang('en')
 
 # Agg
@@ -82,7 +82,7 @@ to_field 'agg_is_shown_at' do |_record, accumulator, context|
 end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(context,
-                                  'wr_id' => [column('Thumbnail_obv')],
+                                  'wr_id' => [column('Thumbnail_obv'), gsub('width175', 'width350')],
                                   'wr_dc_rights' => [literal('Public Domain')])
 end
 to_field 'agg_provider', provider, lang('en')
