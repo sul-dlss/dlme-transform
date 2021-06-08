@@ -39,7 +39,7 @@ module Macros
       end
     end
 
-    # Extract a OAI Dublin Core title or, if no title in record, extract abridged description, else pass default values.
+    # Extract an xpath title and truncated second field or, if no title in record, extract truncated second field.
     def xpath_title_plus(xpath_title, xpath_other)
       lambda do |rec, acc|
         title = rec.xpath(xpath_title, NS).map(&:text).first
@@ -47,9 +47,24 @@ module Macros
         if title.present?
           if other.present?
             acc.replace(["#{title} #{truncate(other)}"])
-          elsif other.present?
-            acc.replace([truncate(other)])
           end
+        elsif other.present?
+          acc.replace([truncate(other)])
+        end
+      end
+    end
+
+    # Extract a json title and truncated second field or, if no title in record, extract truncated second field.
+    def json_title_plus(json_title, json_other)
+      lambda do |rec, acc|
+        title = rec.dig(json_title)
+        other = rec.dig(json_other)
+        if title.present?
+          if other.present?
+            acc.replace(["#{title} #{truncate(other)}"])
+          end
+        elsif other.present?
+          acc.replace([truncate(other)])
         end
       end
     end

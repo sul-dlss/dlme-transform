@@ -7,7 +7,10 @@ require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
 require 'macros/met'
+require 'macros/path_to_file'
+require 'macros/string_helper'
 require 'macros/timestamp'
+require 'macros/title_extraction'
 require 'macros/version'
 require 'traject_plus'
 
@@ -16,7 +19,10 @@ extend Macros::DateParsing
 extend Macros::DLME
 extend Macros::EachRecord
 extend Macros::Met
+extend Macros::PathToFile
+extend Macros::StringHelper
 extend Macros::Timestamp
+extend Macros::TitleExtraction
 extend Macros::Version
 extend TrajectPlus::Macros
 extend TrajectPlus::Macros::JSON
@@ -36,7 +42,7 @@ to_field 'transform_timestamp', timestamp
 to_field 'id', extract_json('.objectID'), lambda { |_record, accumulator, context|
   accumulator.map! { |bare_id| identifier_with_prefix(context, bare_id.to_s) }
 }
-to_field 'cho_title', extract_json('.title'), lang('en')
+to_field 'cho_title', json_title_plus('title', 'dimensions'), squish, lang('en')
 
 # CHO Other
 to_field 'cho_coverage', extract_json('.culture'), transform(&:presence), lang('en')
@@ -52,7 +58,6 @@ to_field 'cho_dc_rights', extract_json('.rightsAndReproduction'), transform(&:pr
 to_field 'cho_edm_type', literal('Image'), lang('en')
 to_field 'cho_edm_type', literal('Image'), translation_map('norm_types_to_ar'), lang('ar-Arab')
 to_field 'cho_extent', extract_json('.dimensions'), lang('en')
-to_field 'cho_format', extract_json('.objectName'), lang('en')
 to_field 'cho_has_type', literal('Cultural Artifact'), lang('en')
 to_field 'cho_has_type', literal('Cultural Artifact'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
 to_field 'cho_identifier', extract_json('.accessionNumber')
