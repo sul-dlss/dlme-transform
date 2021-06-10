@@ -62,6 +62,7 @@ statuettes (statues): Object
 still image: Image
 stillimage: Image
 stone: Object
+tablet: Object
 tablets: Object
 tactile: Image
 tapestries: Object

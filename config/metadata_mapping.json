@@ -1749,6 +1749,26 @@
   },
   {
     "trajects": [
+      "yale_babylonian_config.rb"
+    ],
+    "paths": [
+      "yale/babylonian"
+    ],
+    "extension": ".csv",
+    "settings": {
+      "agg_provider": "Yale Peabody Museum of Natural History",
+      "agg_provider_country": "United States of America",
+      "agg_data_provider": "Yale Peabody Museum of Natural History",
+      "agg_data_provider_country": "United States of America",
+      "agg_provider_ar": "متحف ييل بيبودي للتاريخ الطبيعي",
+      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "agg_data_provider_ar": "متحف ييل بيبودي للتاريخ الطبيعي",
+      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "inst_id": "yale"
+    }
+  },
+  {
+    "trajects": [
       "yale_medical_config.rb"
     ],
     "paths": [
