@@ -44,6 +44,7 @@ to_field 'cho_title', column('title'), lang('en')
 # CHO Other
 to_field 'cho_aat_material', column('era'), split(';'), split(':'), split('/'), strip, transform(&:downcase), translation_map('getty_aat_materials'), lang('en')
 to_field 'cho_aat_material', column('era'), split(':'), strip, transform(&:downcase), translation_map('getty_aat_materials'), translation_map('getty_aat_materials_to_ar'), lang('ar-Arab')
+to_field 'cho_dc_rights', literal('http://creativecommons.org/publicdomain/zero/1.0/'), lang('en')
 to_field 'cho_description', column('type'), lang('en')
 to_field 'cho_edm_type', literal('Object'), lang('en')
 to_field 'cho_edm_type', literal('Object'), lang('ar-Arab')
@@ -70,11 +71,13 @@ to_field 'agg_data_provider_country', data_provider_country, lang('en')
 to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(context,
+                                  'wr_dc_rights' => literal('http://creativecommons.org/publicdomain/zero/1.0/'),
                                   'wr_id' => [column('callnumber'), prepend('https://collections.peabody.yale.edu/search/Record/'), gsub(' ', '-')],
                                   'wr_is_referenced_by' => [column('iiif_id'), prepend('https://manifests.collections.yale.edu')])
 end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(context,
+                                  'wr_dc_rights' => literal('http://creativecommons.org/publicdomain/zero/1.0/'),
                                   'wr_id' => [column('image_id'), gsub('/full/full/', '/full/400,400/')],
                                   'wr_is_referenced_by' => [column('iiif_id'), prepend('https://manifests.collections.yale.edu')])
 end
