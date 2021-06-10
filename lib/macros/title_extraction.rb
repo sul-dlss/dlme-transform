@@ -44,28 +44,18 @@ module Macros
       lambda do |rec, acc|
         title = rec.xpath(xpath_title, NS).map(&:text).first
         other = rec.xpath(xpath_other, NS).map(&:text).first
-        if title.present?
-          if other.present?
-            acc.replace(["#{title} #{truncate(other)}"])
-          end
-        elsif other.present?
-          acc.replace([truncate(other)])
-        end
+        acc.replace(["#{title} #{truncate(other)}"]) if title.present? && other.present?
+        acc.replace([truncate(other)]) if other.present? && title.empty?
       end
     end
 
     # Extract a json title and truncated second field or, if no title in record, extract truncated second field.
     def json_title_plus(json_title, json_other)
       lambda do |rec, acc|
-        title = rec.dig(json_title)
-        other = rec.dig(json_other)
-        if title.present?
-          if other.present?
-            acc.replace(["#{title} #{truncate(other)}"])
-          end
-        elsif other.present?
-          acc.replace([truncate(other)])
-        end
+        title = rec[json_title]
+        other = rec[json_other]
+        acc.replace(["#{title} #{truncate(other)}"]) if title.present? && other.present?
+        acc.replace([truncate(other)]) if other.present? && title.empty?
       end
     end
   end
