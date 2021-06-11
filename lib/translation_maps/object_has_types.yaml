@@ -1,0 +1,31 @@
+# Basic mapping from common regex patterns to MODS, MARC, EDM, DCMI type terms.
+art (ritual objects, figurines): Other Object
+barrel cylinder: Other Object
+burial goods: Other Object
+case: Other Object
+clothing adornment: Other Object
+clothing adornment; clothing adornment: Other Object
+coins, currency: Other Object
+cone: Other Object
+containers (baskets): Other Object
+containers (other): Other Object
+containers (pots, etc.): Other Object
+containers (sherds): Other Object
+fire making, fuel: Other Object
+measuring devices: Other Object
+musical instruments: Other Object
+prism: Other Object
+raw materials: Other Object
+seal (cylinder): Other Object
+seal (stamp): Other Object
+structures furnishings: Other Object
+tablet: Tablet
+tag: Other Object
+textiles weaving equipment: Other Object
+tools & manufacturing equipment: Other Object
+tools manufacturing equipment: Other Object
+toys games: Other Object
+transportation: Other Object
+weaponry food procurement: Other Object
+writing & printing: Other Object
+writing printing: Other Object
