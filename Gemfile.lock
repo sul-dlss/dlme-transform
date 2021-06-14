@@ -92,7 +92,7 @@ GEM
       concurrent-ruby (~> 1.0)
     jsonpath (1.1.0)
       multi_json
-    marc (1.1.0)
+    marc (1.1.1)
       rexml
       scrub_rb (>= 1.0.1, < 2)
       unf
