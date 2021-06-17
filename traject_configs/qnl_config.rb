@@ -83,12 +83,12 @@ to_field 'cho_description', extract_qnl_ar('mods:abstract'), strip, lang('ar-Ara
 to_field 'cho_description', extract_qnl_en('mods:abstract'), strip, lang('en')
 to_field 'cho_description', extract_qnl_ar('mods:physicalDescription/mods:extent'), strip, lang('ar-Arab')
 to_field 'cho_description', extract_qnl_en('mods:physicalDescription/mods:extent'), strip, lang('en')
-to_field 'cho_edm_type', extract_qnl_en('mods:typeOfResource'), normalize_type, translation_map('norm_types_to_ar'), lang('ar-Arab')
-to_field 'cho_edm_type', extract_qnl_en('mods:typeOfResource'), normalize_type, lang('en')
+to_field 'cho_edm_type', extract_qnl_en('mods:genre'), normalize_has_type, normalize_edm_type, lang('en')
+to_field 'cho_edm_type', extract_qnl_en('mods:genre'), normalize_has_type, normalize_edm_type, translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_extent', extract_qnl_ar('mods:physicalDescription/mods:extent[1]'), strip, lang('ar-Arab')
 to_field 'cho_extent', extract_qnl_en('mods:physicalDescription/mods:extent[1]'), strip, lang('en')
-to_field 'cho_has_type', extract_qnl_ar('mods:genre'), strip, transform(&:downcase), translation_map('has_type'), translation_map('not_found'), gsub('Periodical', 'Other Document'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
-to_field 'cho_has_type', extract_qnl_en('mods:genre'), strip, transform(&:downcase), translation_map('has_type'), translation_map('not_found'), gsub('Periodical', 'Other Document'), lang('en')
+to_field 'cho_has_type', extract_qnl_en('mods:genre'), normalize_has_type, lang('en')
+to_field 'cho_has_type', extract_qnl_en('mods:genre'), normalize_has_type, translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_identifier', extract_qnl_ar('mods:identifier'), strip
 to_field 'cho_identifier', extract_qnl_en('mods:identifier'), strip
 to_field 'cho_identifier', extract_qnl_en('mods:recordInfo/mods:recordIdentifier'), strip

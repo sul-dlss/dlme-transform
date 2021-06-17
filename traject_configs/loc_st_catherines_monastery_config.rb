@@ -8,6 +8,7 @@ require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
 require 'macros/normalize_language'
+require 'macros/normalize_type'
 require 'macros/path_to_file'
 require 'macros/timestamp'
 require 'macros/version'
@@ -17,6 +18,7 @@ extend Macros::DateParsing
 extend Macros::DLME
 extend Macros::EachRecord
 extend Macros::NormalizeLanguage
+extend Macros::NormalizeType
 extend Macros::PathToFile
 extend Macros::Timestamp
 extend Macros::Version
@@ -46,10 +48,10 @@ to_field 'cho_date_range_hijri', extract_json('.item.date'), strip, parse_range,
 to_field 'cho_dc_rights', extract_json('.item.rights'), strip, lang('en')
 to_field 'cho_description', extract_json('.item.notes[0]'), strip, lang('en')
 to_field 'cho_edm_type', literal('Text'), lang('en')
-to_field 'cho_edm_type', literal('Text'), translation_map('norm_types_to_ar'), lang('ar-Arab')
+to_field 'cho_edm_type', literal('Text'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_extent', extract_json('.item.medium[0]'), strip, lang('en')
-to_field 'cho_has_type', extract_json('.original_format[0]'), strip, translation_map('has_type'), lang('en')
-to_field 'cho_has_type', extract_json('.original_format[0]'), strip, translation_map('has_type'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
+to_field 'cho_has_type', extract_json('.original_format[0]'), normalize_has_type, lang('en')
+to_field 'cho_has_type', extract_json('.original_format[0]'), normalize_has_type, translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_identifier', extract_json('.item.call_number[0]'), strip
 to_field 'cho_identifier', extract_json('.shelf_id'), strip
 to_field 'cho_is_part_of', literal("Manuscripts in St. Catherine's Monastery, Mount Sinai"), lang('en')
@@ -57,7 +59,7 @@ to_field 'cho_language', extract_json('.language[0]'), strip, normalize_language
 to_field 'cho_language', extract_json('.language[0]'), strip, normalize_language, translation_map('norm_languages_to_ar'), lang('ar-Arab')
 to_field 'cho_publisher', extract_json('.item.created_published[0]'), strip, lang('en')
 to_field 'cho_subject', extract_json('.subject[0]'), strip, lang('en')
-to_field 'cho_has_type', extract_json('.original_format[0]'), strip, lang('en')
+to_field 'cho_type', extract_json('.original_format[0]'), strip, lang('en')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')

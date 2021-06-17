@@ -50,9 +50,9 @@ to_field 'cho_date_range_norm', extract_json('.date-created'), strip, auc_date_r
 to_field 'cho_dc_rights', extract_json('.license'), strip, lang('en')
 to_field 'cho_description', extract_json('.architectural-detail'), strip, prepend('Architectural Detail: '), lang('en')
 to_field 'cho_edm_type', literal('Image'), lang('en')
-to_field 'cho_edm_type', literal('Image'), translation_map('norm_types_to_ar'), lang('ar-Arab')
-to_field 'cho_has_type', literal('Drawing'), lang('en')
-to_field 'cho_has_type', literal('Drawing'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
+to_field 'cho_edm_type', literal('Image'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
+to_field 'cho_has_type', literal('Drawings'), lang('en')
+to_field 'cho_has_type', literal('Drawings'), translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_identifier', extract_json('.identifier'), strip
 to_field 'cho_is_part_of', literal('Hassan Fathy Architectural Archives'), strip, lang('en')
 to_field 'cho_spatial', extract_json('.location'), strip, lang('en')

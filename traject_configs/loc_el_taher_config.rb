@@ -9,6 +9,7 @@ require 'macros/dlme'
 require 'macros/each_record'
 require 'macros/language_extraction'
 require 'macros/normalize_language'
+require 'macros/normalize_type'
 require 'macros/path_to_file'
 require 'macros/timestamp'
 require 'macros/version'
@@ -19,6 +20,7 @@ extend Macros::DLME
 extend Macros::EachRecord
 extend Macros::LanguageExtraction
 extend Macros::NormalizeLanguage
+extend Macros::NormalizeType
 extend Macros::PathToFile
 extend Macros::Timestamp
 extend Macros::Version
@@ -50,11 +52,11 @@ to_field 'cho_date_range_hijri', extract_json('.item.date'), strip, parse_range,
 to_field 'cho_dc_rights', literal('The Library of Congress presents the Eltaher Pamphlet Collection for educational and research purposes in accordance with fair use under United States copyright law. Researchers should watch for modern documents that may be copyrighted (for example, published in the United States less than 95 years ago, or unpublished and the author died less than 70 years ago). Rights assessment is your responsibility. The written permission of the copyright owners in materials not in the public domain is required for distribution, reproduction, or other use of protected items beyond that allowed by fair use or other statutory exemptions. There may also be content that is protected under the copyright or neighboring-rights laws of other nations. Permissions may additionally be required from holders of other rights (such as publicity and/or privacy rights). Whenever possible, we provide information that we have about copyright owners and related matters in the catalog records, finding aids and other texts that accompany collections. However, the information we have may not be accurate or complete. More about Copyright and other Restrictions. For guidance about compiling full citations consult Citing Primary Sources. Credit Line: Library of Congress, African and Middle East Division, Eltaher Pamphlet Collection.'), lang('en')
 to_field 'cho_description', extract_json('.description[0]'), strip, lang('en')
 to_field 'cho_description', extract_json('.item.notes[0]'), strip, lang('en')
-to_field 'cho_edm_type', extract_json('.item.format[0]'), strip, translation_map('types'), lang('en')
-to_field 'cho_edm_type', extract_json('.item.format[0]'), strip, translation_map('types'), translation_map('norm_types_to_ar'), lang('ar-Arab')
+to_field 'cho_edm_type', extract_json('.original_format[0]'), normalize_has_type, normalize_edm_type, lang('en')
+to_field 'cho_edm_type', extract_json('.original_format[0]'), normalize_has_type, normalize_edm_type, translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_extent', extract_json('.item.medium[0]'), strip, lang('en')
-to_field 'cho_has_type', extract_json('.original_format[0]'), strip, translation_map('has_type'), lang('en')
-to_field 'cho_has_type', extract_json('.original_format[0]'), strip, translation_map('has_type'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
+to_field 'cho_has_type', extract_json('.original_format[0]'), normalize_has_type, lang('en')
+to_field 'cho_has_type', extract_json('.original_format[0]'), normalize_has_type, translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_identifier', extract_json('.item.call_number[0]'), strip
 to_field 'cho_identifier', extract_json('.number_lccn[0]'), strip
 to_field 'cho_identifier', extract_json('.shelf_id'), strip

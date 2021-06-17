@@ -63,8 +63,8 @@ to_field 'cho_date_range_hijri', extract_marc('008[06-14]'), marc_date_range, hi
 # cho_description exemplar below; add it to collection specific config if desired
 to_field 'cho_description', extract_marc('500a:505agrtu:520abcu', alternate_script: false), strip, lang('en')
 to_field 'cho_description', extract_marc('500a:505agrtu:520abcu', alternate_script: :only), strip, lang('ar-Arab')
-to_field 'cho_edm_type', marc_type_to_edm, lang('en')
-to_field 'cho_edm_type', marc_type_to_edm, translation_map('norm_types_to_ar'), lang('ar-Arab')
+# to_field 'cho_edm_type', marc_type_to_edm, lang('en')
+# to_field 'cho_edm_type', marc_type_to_edm, translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_extent', extract_marc('300abcefg', alternate_script: false), trim_punctuation, lang('en')
 to_field 'cho_extent', extract_marc('300abcefg', alternate_script: :only), trim_punctuation, lang('ar-Arab')
 to_field 'cho_format', marc_formats, lang('en')

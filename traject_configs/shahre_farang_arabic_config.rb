@@ -42,9 +42,9 @@ to_field 'cho_date_range_hijri', extract_json('.published'), strip, parse_range,
 to_field 'cho_dc_rights', literal('© 2011-2020 شهرفرنگ - ShahreFarang'), lang('en')
 to_field 'cho_description', extract_json('.summary'), strip, lang('ar-Arab')
 to_field 'cho_edm_type', literal('Text'), lang('en')
-to_field 'cho_edm_type', literal('Text'), translation_map('norm_types_to_ar'), lang('ar-Arab')
-to_field 'cho_has_type', literal('Other Document'), lang('en')
-to_field 'cho_has_type', literal('Other Document'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
+to_field 'cho_edm_type', literal('Text'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
+to_field 'cho_has_type', literal('Other Texts'), lang('en')
+to_field 'cho_has_type', literal('Other Texts'), translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_identifier', extract_json('.id'), strip
 to_field 'cho_language', literal('Arabic'), lang('en')
 to_field 'cho_language', literal('Arabic'), translation_map('norm_languages_to_ar'), lang('ar-Arab')

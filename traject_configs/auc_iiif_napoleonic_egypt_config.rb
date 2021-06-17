@@ -49,11 +49,11 @@ to_field 'cho_date_range_hijri', extract_json('.date'), strip, auc_date_range, h
 to_field 'cho_date_range_norm', extract_json('.date'), strip, auc_date_range
 to_field 'cho_dc_rights', extract_json('.license'), strip, lang('en')
 to_field 'cho_description', extract_json('.description'), strip, lang('und-Latn')
-to_field 'cho_edm_type', extract_json('.genre-aat'), translation_map('types'), lang('en')
-to_field 'cho_edm_type', extract_json('.genre-aat'), translation_map('types'), translation_map('norm_types_to_ar'), lang('ar-Arab')
+to_field 'cho_edm_type', extract_json('.genre-aat'), split(';'), normalize_has_type, normalize_edm_type, lang('en')
+to_field 'cho_edm_type', extract_json('.genre-aat'), split(';'), normalize_has_type, normalize_edm_type, translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_format', extract_json('.format'), strip, lang('en')
-to_field 'cho_has_type', extract_json('.genre-aat'), translation_map('has_type'), lang('en')
-to_field 'cho_has_type', extract_json('.genre-aat'), translation_map('has_type'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
+to_field 'cho_has_type', extract_json('.genre-aat'), split(';'), normalize_has_type, lang('en')
+to_field 'cho_has_type', extract_json('.genre-aat'), split(';'), normalize_has_type, translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_identifier', extract_json('.identifier'), strip
 to_field 'cho_is_part_of', extract_json('.collection'), strip, lang('en')
 to_field 'cho_language', extract_json('.language'), strip, normalize_language, lang('en')
