@@ -8,6 +8,7 @@ require 'macros/dlme'
 require 'macros/each_record'
 require 'macros/language_extraction'
 require 'macros/normalize_language'
+require 'macros/normalize_type'
 require 'macros/path_to_file'
 require 'macros/timestamp'
 require 'macros/version'
@@ -20,6 +21,7 @@ extend Macros::DateParsing
 extend Macros::EachRecord
 extend Macros::LanguageExtraction
 extend Macros::NormalizeLanguage
+extend Macros::NormalizeType
 extend Macros::PathToFile
 extend Macros::Timestamp
 extend Macros::Version
@@ -56,11 +58,11 @@ to_field 'cho_description', extract_json('.Dynasty'), prepend('Dynasty: '), lang
 to_field 'cho_description', extract_json('.Inscriptions'), lang('en')
 to_field 'cho_description', extract_json('.Reign'), lang('en')
 to_field 'cho_description', extract_json('.Style'), lang('en')
-to_field 'cho_edm_type', generate_edm_type, translation_map('types'), lang('en')
-to_field 'cho_edm_type', generate_edm_type, translation_map('types'), translation_map('norm_types_to_ar'), lang('ar-Arab')
+to_field 'cho_edm_type', generate_edm_type, normalize_has_type, normalize_edm_type, lang('en')
+to_field 'cho_edm_type', generate_edm_type, normalize_has_type, normalize_edm_type, translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_extent', extract_json('.Dimensions'), prepend('Dimensions: '), lang('en')
-to_field 'cho_has_type', generate_edm_type, translation_map('types'), gsub('Object', 'Museum Object'), gsub('Text', 'Manuscript'), gsub('Image', 'Painting'), lang('en')
-to_field 'cho_has_type', generate_edm_type, translation_map('types'), gsub('Object', 'Museum Object'), gsub('Text', 'Manuscript'), gsub('Image', 'Painting'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
+to_field 'cho_has_type', generate_edm_type, normalize_has_type, lang('en')
+to_field 'cho_has_type', generate_edm_type, normalize_has_type, translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_identifier', extract_json('.ObjectNumber')
 to_field 'cho_identifier', extract_json('.SortNumber')
 to_field 'cho_is_part_of', extract_json('.Collection'), lang('en')
@@ -70,7 +72,7 @@ to_field 'cho_subject', extract_json('.Culture'), prepend('Culture: '), lang('en
 to_field 'cho_subject', extract_json('.Keywords'), lang('en')
 to_field 'cho_temporal', extract_json('.Period'), lang('en')
 to_field 'cho_type', extract_json('.Classification'), lang('en')
-to_field 'cho_type', extract_json('.ObjectName'), lang('en')
+to_field 'cho_type', extract_json('.ObjectName'), split(';'), strip, lang('en')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')

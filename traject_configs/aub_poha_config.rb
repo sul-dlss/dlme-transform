@@ -69,10 +69,10 @@ to_field 'cho_description', extract_poha('/*/dc:description'), strip, lang('en')
 to_field 'cho_description', xpath_commas_with_prepend('/*/dc:toc', 'Table of Contents: '), lang('en')
 to_field 'cho_description', xpath_commas_with_prepend('/*/dc:toc', 'جدول المحتويات:'), lang('ar-Arab')
 to_field 'cho_edm_type', literal('Sound'), lang('en')
-to_field 'cho_edm_type', literal('Sound'), translation_map('norm_types_to_ar'), lang('ar-Arab')
+to_field 'cho_edm_type', literal('Sound'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_extent', extract_poha('/*/dc:duration'), strip, prepend('Duration: '), lang('en')
-to_field 'cho_has_type', literal('Interview'), lang('en')
-to_field 'cho_has_type', literal('Interview'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
+to_field 'cho_has_type', literal('Oral History'), lang('en')
+to_field 'cho_has_type', literal('Oral History'), translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_format', extract_poha('/*/dc:format'), strip, lang('en')
 to_field 'cho_identifier', extract_poha('/*/dc:identifier'), strip
 to_field 'cho_identifier', extract_poha('/*/dc:localID'), strip

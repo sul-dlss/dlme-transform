@@ -62,9 +62,9 @@ to_field 'cho_dc_rights', literal('Available under a Creative Commons Attributio
                            '1967" by AUB University Libraries is licensed under CC BY-NC-ND 4.0'), lang('en')
 to_field 'cho_description', extract_aub_description, strip, arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_edm_type', literal('Text'), lang('en')
-to_field 'cho_edm_type', literal('Text'), translation_map('norm_types_to_ar'), lang('ar-Arab')
-to_field 'cho_has_type', literal('Book'), lang('en')
-to_field 'cho_has_type', literal('Book'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
+to_field 'cho_edm_type', literal('Text'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
+to_field 'cho_has_type', literal('Books'), lang('en')
+to_field 'cho_has_type', literal('Books'), translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_identifier', extract_oai('dc:identifier'), strip
 to_field 'cho_is_part_of', literal('Arabic Collections Online'), lang('en')
 to_field 'cho_is_part_of', literal('المجموعات العربية على الانترنِت'), lang('ar-Arab')

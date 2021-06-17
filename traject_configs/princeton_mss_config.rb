@@ -60,10 +60,10 @@ to_field 'cho_description', extract_json('.description'), strip, lang('en')
 to_field 'cho_description', extract_json('.contents[0]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_description', extract_json('.binding_note[0]'), strip, lang('en')
 to_field 'cho_edm_type', literal('Text'), lang('en')
-to_field 'cho_edm_type', literal('Text'), translation_map('norm_types_to_ar'), lang('ar-Arab')
+to_field 'cho_edm_type', literal('Text'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_extent', extract_json('.extent[0]'), strip, lang('en')
-to_field 'cho_has_type', literal('Manuscript'), lang('en')
-to_field 'cho_has_type', literal('Manuscript'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
+to_field 'cho_has_type', literal('Manuscripts'), lang('en')
+to_field 'cho_has_type', literal('Manuscripts'), translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_identifier', extract_json('.local_identifier[0]'), strip
 to_field 'cho_identifier', extract_json('.identifier[0]'), strip
 to_field 'cho_identifier', extract_json('.replaces[0]'), strip, prepend('Replaces: ')

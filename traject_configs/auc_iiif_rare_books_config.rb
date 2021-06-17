@@ -53,11 +53,11 @@ to_field 'cho_date_range_norm', extract_json('.date'), strip, auc_date_range
 to_field 'cho_dc_rights', extract_json('.rights'), strip, lang('en')
 to_field 'cho_description', extract_json('.description'), strip, lang('en')
 to_field 'cho_edm_type', literal('Text'), lang('en')
-to_field 'cho_edm_type', literal('Text'), translation_map('norm_types_to_ar'), lang('ar-Arab')
+to_field 'cho_edm_type', literal('Text'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_extent', extract_json('.extent'), strip, lang('en')
 to_field 'cho_format', extract_json('.format'), strip, lang('en')
-to_field 'cho_has_type', literal('Book'), lang('en')
-to_field 'cho_has_type', literal('Book'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
+to_field 'cho_has_type', literal('Books'), lang('en')
+to_field 'cho_has_type', literal('Books'), translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_identifier', extract_json('.identifier'), strip
 to_field 'cho_identifier', extract_json('.original-item-identifier'), strip
 to_field 'cho_is_part_of', extract_json('.collection'), strip, lang('en')

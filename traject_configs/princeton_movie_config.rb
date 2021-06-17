@@ -48,10 +48,10 @@ to_field 'cho_date_range_norm', extract_json('.date_created[0]'), strip, parse_r
 to_field 'cho_date_range_hijri', extract_json('.date_created[0]'), strip, parse_range, hijri_range
 to_field 'cho_dc_rights', literal('https://rbsc.princeton.edu/services/imaging-publication-services'), lang('en')
 to_field 'cho_edm_type', literal('Image'), lang('en')
-to_field 'cho_edm_type', literal('Image'), translation_map('norm_types_to_ar'), lang('ar-Arab')
+to_field 'cho_edm_type', literal('Image'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_extent', extract_json('.extent[0]'), strip, lang('en')
-to_field 'cho_has_type', literal('Poster'), lang('en')
-to_field 'cho_has_type', literal('Poster'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
+to_field 'cho_has_type', literal('Posters'), lang('en')
+to_field 'cho_has_type', literal('Posters'), translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_identifier', extract_json('.local_identifier[0]'), strip
 to_field 'cho_is_part_of', extract_json('.member_of_collections[0]'), strip, lang('en')
 to_field 'cho_is_part_of', extract_json('.member_of_collections[1]'), strip, lang('en')

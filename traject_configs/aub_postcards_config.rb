@@ -55,9 +55,9 @@ to_field 'cho_date_range_norm', extract_oai('dc:date'), strip, parse_range
 to_field 'cho_dc_rights', extract_oai('dc:rights'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_description', extract_aub_description, strip, arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_edm_type', literal('Image'), lang('en')
-to_field 'cho_edm_type', literal('Image'), translation_map('norm_types_to_ar'), lang('ar-Arab')
-to_field 'cho_has_type', literal('Postcard'), lang('en')
-to_field 'cho_has_type', literal('Postcard'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
+to_field 'cho_edm_type', literal('Image'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
+to_field 'cho_has_type', literal('Postcards'), lang('en')
+to_field 'cho_has_type', literal('Postcards'), translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_identifier', extract_oai('dc:identifier'), strip
 to_field 'cho_is_part_of', extract_oai('dc:source'), strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
 to_field 'cho_language', extract_oai('dc:language'), split(';'),

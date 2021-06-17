@@ -63,18 +63,10 @@ module Macros
           roles << val&.content&.strip&.downcase
         end
         if roles.any? { |x| ['scribe.', 'copyist.'].include?(x) }
-          accumulator.replace(['Manuscript'])
+          accumulator.replace(['manuscript'])
         else
           has_type = accumulator.map!(&:downcase)
-          TRANSFORMS
-            .map { |spec| Traject::TranslationMap.new(spec) }
-            .reduce(:merge)
-            .translate_array!(accumulator)
-          if has_type[0].present?
-            accumulator.replace([has_type[0].gsub('NOT FOUND', 'Book')])
-          else
-            accumulator.replace(['Book'])
-          end
+          accumulator.replace([has_type[0].gsub('text', 'book').gsub('mixed material', 'manuscript')]) if has_type[0].present?
         end
       end
     end

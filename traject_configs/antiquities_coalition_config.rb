@@ -39,7 +39,7 @@ to_field 'cho_date_range_hijri', extract_json('.date'), strip, parse_range, hijr
 to_field 'cho_dc_rights', extract_json('.rights'), strip, lang('en')
 to_field 'cho_description', extract_json('.description'), strip, lang('en')
 to_field 'cho_edm_type', literal('Dataset'), lang('en')
-to_field 'cho_edm_type', literal('Dataset'), translation_map('norm_types_to_ar'), lang('ar-Arab')
+to_field 'cho_edm_type', literal('Dataset'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_language', literal('English'), lang('en')
 to_field 'cho_language', literal('Arabic'), translation_map('norm_languages_to_ar'), lang('ar-Arab')
 

@@ -50,10 +50,10 @@ to_field 'cho_date_range_norm', extract_oai('dc:date'), strip, auc_date_range
 to_field 'cho_dc_rights', extract_oai('dc:rights'), strip, lang('en')
 to_field 'cho_description', extract_oai('dc:description'), strip, lang('en')
 to_field 'cho_edm_type', literal('Video'), lang('en')
-to_field 'cho_edm_type', literal('Video'), translation_map('norm_types_to_ar'), lang('ar-Arab')
+to_field 'cho_edm_type', literal('Video'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_format', extract_oai('dc:format'), strip, lang('en')
-to_field 'cho_has_type', literal('Historical Video'), lang('en')
-to_field 'cho_has_type', literal('Historical Video'), translation_map('norm_types_to_ar'), lang('ar-Arab')
+to_field 'cho_has_type', literal('Historical Videos'), lang('en')
+to_field 'cho_has_type', literal('Historical Videos'), translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_is_part_of', extract_oai('dc:source'), strip, lang('en')
 to_field 'cho_language', extract_oai('dc:language'), split(';'),
          split(','), strip, normalize_language, lang('en')

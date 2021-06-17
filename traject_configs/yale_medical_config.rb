@@ -43,9 +43,11 @@ to_field 'cho_dc_rights', column('Rights'), strip
 to_field 'cho_dc_rights', column('Item Permission'), strip
 to_field 'cho_description', column('Abstract'), strip
 to_field 'cho_description', column('Notes'), strip
-to_field 'cho_edm_type', column('Type of resource'),
-         strip, transform(&:downcase), translation_map('not_found', 'types')
+to_field 'cho_edm_type', column('Type of resource'), normalize_has_type, normalize_edm_type, lang('en')
+to_field 'cho_edm_type', column('Type of resource'), normalize_has_type, normalize_edm_type, translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_extent', column('Physical description'), strip
+to_field 'cho_has_type', column('Type of resource'), normalize_has_type, lang('en')
+to_field 'cho_has_type', column('Type of resource'), normalize_has_type, translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_identifier', column('Accession number'), strip
 to_field 'cho_language', column('Language', split: '|'),
          strip, transform(&:downcase), translation_map('not_found', 'languages', 'marc_languages')

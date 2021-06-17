@@ -6,6 +6,7 @@ require 'macros/collection'
 require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
+require 'macros/language_extraction'
 require 'macros/normalize_language'
 require 'macros/normalize_type'
 require 'macros/path_to_file'
@@ -17,6 +18,7 @@ extend Macros::Collection
 extend Macros::DLME
 extend Macros::DateParsing
 extend Macros::EachRecord
+extend Macros::LanguageExtraction
 extend Macros::NormalizeLanguage
 extend Macros::NormalizeType
 extend Macros::PathToFile
@@ -72,15 +74,11 @@ to_field 'cho_description', extract_json('.measurements'), strip, prepend('Measu
 to_field 'cho_description', extract_json('.physical-appearance'), strip, prepend('Physical Appearance: '), lang('und-Latn')
 to_field 'cho_description', extract_json('.script'), strip, prepend('Script: '), lang('und-Latn')
 to_field 'cho_description', extract_json('.transcription'), strip, prepend('Translation: '), lang('und-Latn')
-to_field 'cho_edm_type', extract_json('.type'),
-         strip, normalize_type, lang('en')
-to_field 'cho_edm_type', extract_json('.type'),
-         strip, normalize_type, translation_map('norm_types_to_ar'), lang('ar-Arab')
+to_field 'cho_edm_type', extract_json('.type'), normalize_has_type, normalize_edm_type, lang('en')
+to_field 'cho_edm_type', extract_json('.type'), normalize_has_type, normalize_edm_type, translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_format', extract_json('.format'), strip, lang('tr-Latn')
-to_field 'cho_has_type', extract_json('.type'),
-         strip, transform(&:downcase), translation_map('turkish_has_type_to_en'), lang('en')
-to_field 'cho_has_type', extract_json('.type'),
-         strip, transform(&:downcase), translation_map('turkish_has_type_to_en'), translation_map('norm_types_to_ar'), lang('ar-Arab')
+to_field 'cho_has_type', extract_json('.type'), normalize_has_type, lang('en')
+to_field 'cho_has_type', extract_json('.type'), normalize_has_type, translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_identifier', extract_json('.identifier'), strip
 to_field 'cho_language', extract_json('.language'), split(';'),
          strip, normalize_language, lang('en')
@@ -91,7 +89,7 @@ to_field 'cho_related', extract_json('see-also'), strip, lang('tr-Latn')
 to_field 'cho_spatial', extract_json('creation-place'), strip, prepend('Creation place: ')
 to_field 'cho_subject', extract_json('.subject'), strip, lang('tr-Latn')
 to_field 'cho_temporal', extract_json('object-work-culture'), strip, lang('tr-Latn')
-to_field 'cho_type', extract_json('.type'), strip, lang('tr-Latn')
+to_field 'cho_type', extract_json('.type'), strip, arabic_script_lang_or_default('und-Latn', 'ar-Arab')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')

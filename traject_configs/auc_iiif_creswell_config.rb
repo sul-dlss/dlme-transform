@@ -50,10 +50,10 @@ to_field 'cho_description', extract_json('.architectural-detail'), strip, prepen
 to_field 'cho_description', extract_json('.description'), strip, lang('en')
 to_field 'cho_description', extract_json('.site'), prepend('Site: '), strip, lang('en')
 to_field 'cho_edm_type', literal('Image'), lang('en')
-to_field 'cho_edm_type', literal('Image'), translation_map('norm_types_to_ar'), lang('ar-Arab')
+to_field 'cho_edm_type', literal('Image'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_format', extract_json('.format'), strip, lang('en')
-to_field 'cho_has_type', literal('Photograph'), lang('en')
-to_field 'cho_has_type', literal('Photograph'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
+to_field 'cho_has_type', literal('Photographs'), lang('en')
+to_field 'cho_has_type', literal('Photographs'), translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_identifier', extract_json('.identifier'), strip
 to_field 'cho_identifier', extract_json('.original-identifier'), strip
 to_field 'cho_is_part_of', extract_json('.collection'), strip, lang('en')

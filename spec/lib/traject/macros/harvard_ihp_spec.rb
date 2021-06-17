@@ -81,7 +81,7 @@ RSpec.describe Macros::HarvardIHP do
         end
 
         it 'assigns Manuscript value' do
-          expect(indexer.map_record(ng_rec)).to eq 'cho_has_type' => ['Manuscript']
+          expect(indexer.map_record(ng_rec)).to eq 'cho_has_type' => ['manuscript']
         end
       end
     end

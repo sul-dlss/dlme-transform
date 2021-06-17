@@ -7,6 +7,7 @@ require 'macros/collection'
 require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
+require 'macros/normalize_type'
 require 'macros/timestamp'
 require 'macros/version'
 require 'traject_plus'
@@ -16,6 +17,7 @@ extend Macros::AIMS
 extend Macros::DLME
 extend Macros::DateParsing
 extend Macros::EachRecord
+extend Macros::NormalizeType
 extend Macros::Timestamp
 extend Macros::Version
 extend TrajectPlus::Macros
@@ -43,10 +45,10 @@ to_field 'cho_date_range_hijri', extract_aims('pubDate'), strip, parse_range, hi
 to_field 'cho_dc_rights', literal('Use of content for classroom purposes and on other non-profit educational websites is granted (and encouraged) with proper citation.'), lang('en')
 to_field 'cho_description', extract_aims('description'), strip # Values in Arabic, English, and French
 to_field 'cho_edm_type', literal('Sound'), lang('en')
-to_field 'cho_edm_type', literal('Sound'), translation_map('norm_types_to_ar'), lang('ar-Arab')
+to_field 'cho_edm_type', literal('Sound'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_extent', extract_itunes_aims('duration'), strip, lang('en')
-to_field 'cho_has_type', literal('Interview'), lang('en')
-to_field 'cho_has_type', literal('Interview'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
+to_field 'cho_has_type', literal('Interviews'), lang('en')
+to_field 'cho_has_type', literal('Interviews'), translation_map('has_type_ar_from_en'), lang('ar-Arab')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
