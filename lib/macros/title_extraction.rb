@@ -44,8 +44,9 @@ module Macros
       lambda do |rec, acc|
         title = rec.xpath(xpath_title, NS).map(&:text).first
         other = rec.xpath(xpath_other, NS).map(&:text).first
-        acc.replace(["#{title} #{truncate(other)}"]) if title.present? && other.present?
-        acc.replace([truncate(other)]) if other.present? && title.empty?
+        if other.present?
+          title.present? ? acc.replace(["#{title} #{truncate(other)}"]) : acc.replace([truncate(other)])
+        end
       end
     end
 
@@ -54,8 +55,9 @@ module Macros
       lambda do |rec, acc|
         title = rec[json_title]
         other = rec[json_other]
-        acc.replace(["#{title} #{truncate(other)}"]) if title.present? && other.present?
-        acc.replace([truncate(other)]) if other.present? && title.empty?
+        if other.present?
+          title.present? ? acc.replace(["#{title} #{truncate(other)}"]) : acc.replace([truncate(other)])
+        end
       end
     end
   end

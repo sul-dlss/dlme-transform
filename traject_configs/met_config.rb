@@ -38,6 +38,9 @@ end
 to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
 
+# File path
+to_field 'dlme_source_file', path_to_file
+
 # CHO Required
 to_field 'id', extract_json('.objectID'), lambda { |_record, accumulator, context|
   accumulator.map! { |bare_id| identifier_with_prefix(context, bare_id.to_s) }
@@ -58,8 +61,8 @@ to_field 'cho_dc_rights', extract_json('.rightsAndReproduction'), transform(&:pr
 to_field 'cho_edm_type', literal('Object'), lang('en')
 to_field 'cho_edm_type', literal('Object'), translation_map('norm_types_to_ar'), lang('ar-Arab')
 to_field 'cho_extent', extract_json('.dimensions'), lang('en')
-to_field 'cho_has_type', literal('Other Object'), lang('en')
-to_field 'cho_has_type', literal('Other Object'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
+to_field 'cho_has_type', literal('Other Objects'), lang('en')
+to_field 'cho_has_type', literal('Other Objects'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
 to_field 'cho_identifier', extract_json('.accessionNumber')
 to_field 'cho_medium', extract_json('.medium'), lang('en')
 to_field 'cho_spatial', extract_json('.city'), transform(&:presence), lang('en')
