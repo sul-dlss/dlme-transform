@@ -8,6 +8,7 @@ require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
 require 'macros/normalize_language'
+require 'macros/normalize_type'
 require 'macros/path_to_file'
 require 'macros/timestamp'
 require 'macros/version'
@@ -17,6 +18,7 @@ extend Macros::DateParsing
 extend Macros::DLME
 extend Macros::EachRecord
 extend Macros::NormalizeLanguage
+extend Macros::NormalizeType
 extend Macros::PathToFile
 extend Macros::Timestamp
 extend Macros::Version
@@ -48,9 +50,9 @@ to_field 'cho_dc_rights', literal("The Library of Congress does not own rights t
 to_field 'cho_description', extract_json('.description[0]'), strip, lang('en')
 to_field 'cho_description', extract_json('.item.notes[0]'), strip, lang('en')
 to_field 'cho_edm_type', literal('Image'), lang('en')
-to_field 'cho_edm_type', literal('Image'), translation_map('norm_types_to_ar'), lang('ar-Arab')
-to_field 'cho_has_type', extract_json('.original_format[0]'), strip, translation_map('has_type'), lang('en')
-to_field 'cho_has_type', extract_json('.original_format[0]'), strip, translation_map('has_type'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
+to_field 'cho_edm_type', literal('Image'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
+to_field 'cho_has_type', extract_json('.original_format[0]'), normalize_has_type, lang('en')
+to_field 'cho_has_type', extract_json('.original_format[0]'), normalize_has_type, translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_identifier', extract_json('.shelf_id'), strip
 to_field 'cho_is_part_of', literal('Abdul Hamid II Collection'), lang('en')
 to_field 'cho_language', extract_json('.language[0]'), strip, normalize_language, lang('en')

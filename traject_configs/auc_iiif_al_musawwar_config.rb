@@ -48,10 +48,10 @@ to_field 'cho_date_range_hijri', extract_json('.date'), strip, auc_date_range, h
 to_field 'cho_date_range_norm', extract_json('.date'), strip, auc_date_range
 to_field 'cho_dc_rights', extract_json('.rights'), strip, lang('en')
 to_field 'cho_edm_type', literal('Text'), lang('en')
-to_field 'cho_edm_type', literal('Text'), translation_map('norm_types_to_ar'), lang('ar-Arab')
+to_field 'cho_edm_type', literal('Text'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_format', extract_json('.format'), strip, lang('en')
-to_field 'cho_has_type', literal('Periodical'), lang('en')
-to_field 'cho_has_type', literal('Periodical'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
+to_field 'cho_has_type', literal('Serials'), lang('en')
+to_field 'cho_has_type', literal('Serials'), translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_language', extract_json('.language'), strip, normalize_language, lang('en')
 to_field 'cho_language', extract_json('.language'), strip, normalize_language, translation_map('norm_languages_to_ar'), lang('ar-Arab')
 to_field 'cho_publisher', extract_json('.publisher'), strip, lang('en')

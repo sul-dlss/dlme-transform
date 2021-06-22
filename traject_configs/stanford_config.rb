@@ -45,10 +45,10 @@ to_field 'cho_date_range_norm', extract_json('.date'), strip, parse_range
 to_field 'cho_date_range_hijri', extract_json('.date'), strip, parse_range, hijri_range
 to_field 'cho_description', extract_json('.description'), lang('en')
 to_field 'cho_edm_type', literal('Image'), lang('en')
-to_field 'cho_edm_type', literal('Image'), translation_map('norm_types_to_ar'), lang('ar-Arab')
+to_field 'cho_edm_type', literal('Image'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_format', extract_json('.format'), lang('en')
-to_field 'cho_has_type', literal('Map'), lang('en')
-to_field 'cho_has_type', literal('Map'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
+to_field 'cho_has_type', literal('Maps'), lang('en')
+to_field 'cho_has_type', literal('Maps'), translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_idnetifier', extract_json('.identifier')
 to_field 'cho_title', extract_json('.title'), lang('en')
 to_field 'cho_is_part_of', extract_json('.relation'), lang('en')

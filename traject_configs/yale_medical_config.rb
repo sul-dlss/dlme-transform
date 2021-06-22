@@ -6,6 +6,7 @@ require 'macros/collection'
 require 'macros/csv'
 require 'macros/dlme'
 require 'macros/each_record'
+require 'macros/normalize_type'
 require 'macros/timestamp'
 require 'macros/version'
 require 'traject_plus'
@@ -14,6 +15,7 @@ extend Macros::Collection
 extend Macros::Csv
 extend Macros::DLME
 extend Macros::EachRecord
+extend Macros::NormalizeType
 extend Macros::Timestamp
 extend Macros::Version
 extend TrajectPlus::Macros
@@ -43,9 +45,11 @@ to_field 'cho_dc_rights', column('Rights'), strip
 to_field 'cho_dc_rights', column('Item Permission'), strip
 to_field 'cho_description', column('Abstract'), strip
 to_field 'cho_description', column('Notes'), strip
-to_field 'cho_edm_type', column('Type of resource'),
-         strip, transform(&:downcase), translation_map('not_found', 'types')
+to_field 'cho_edm_type', column('Type of resource'), normalize_has_type, normalize_edm_type, lang('en')
+to_field 'cho_edm_type', column('Type of resource'), normalize_has_type, normalize_edm_type, translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_extent', column('Physical description'), strip
+to_field 'cho_has_type', column('Type of resource'), normalize_has_type, lang('en')
+to_field 'cho_has_type', column('Type of resource'), normalize_has_type, translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_identifier', column('Accession number'), strip
 to_field 'cho_language', column('Language', split: '|'),
          strip, transform(&:downcase), translation_map('not_found', 'languages', 'marc_languages')

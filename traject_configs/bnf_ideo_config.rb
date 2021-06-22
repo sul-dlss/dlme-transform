@@ -10,9 +10,9 @@ to_field 'cho_contributor', extract_srw('dc:contributor[2]'), strip, gsub(/. Fon
 to_field 'cho_creator', extract_srw('dc:creator'), split('. '), first_only, strip
 to_field 'cho_creator', extract_srw('dc:creator[2]'), strip, gsub(/. Fonction indéterminée/, '')
 to_field 'cho_edm_type', literal('Text'), lang('en')
-to_field 'cho_edm_type', literal('Text'), translation_map('norm_types_to_ar'), lang('ar-Arab')
-to_field 'cho_has_type', literal('Book'), lang('en')
-to_field 'cho_has_type', literal('Book'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
+to_field 'cho_edm_type', literal('Text'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
+to_field 'cho_has_type', literal('Books'), lang('en')
+to_field 'cho_has_type', literal('Books'), translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_publisher', extract_srw('dc:publisher[1]'), strip, lang('ar-Latn')
 to_field 'cho_publisher', extract_srw('dc:publisher[2]'), strip, lang('ar-Arab')
 to_field 'cho_subject', extract_srw('dc:subject'), strip

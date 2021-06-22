@@ -1,0 +1,25 @@
+# Get cho_has_type values from Turkish strings
+baskı: Books
+belge: Books
+broşür: Other Texts
+davetiye: Other Texts
+desen: Other Images
+dijital fotoğraf: Photographs
+elyazma kitap: Manuscripts
+fotoğraf: Photographs
+gotoğraf: Photographs
+gazete küpürü: Serials
+gravür: Other Images
+hat: Calligraphy
+karikatür: Drawings
+kartpostal: Postcards
+kitap bölümü: Books
+kumaş: Other Objects
+köşe yazısı: Serials
+makale: Serials
+mektup: Letters
+metin: Other Texts
+resim: Paintings
+yazı: Serials
+yazı malzemeleri: Other Objects
+yazışma: Letters

@@ -7,6 +7,7 @@ require 'macros/content_dm'
 require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
+require 'macros/language_extraction'
 require 'macros/normalize_language'
 require 'macros/normalize_type'
 require 'macros/oai'
@@ -20,6 +21,7 @@ extend Macros::ContentDm
 extend Macros::DateParsing
 extend Macros::DLME
 extend Macros::EachRecord
+extend Macros::LanguageExtraction
 extend Macros::NormalizeLanguage
 extend Macros::NormalizeType
 extend Macros::OAI
@@ -57,20 +59,16 @@ to_field 'cho_date_range_norm', extract_oai('dc:date'), sakip_mult_dates_range
 to_field 'cho_date_range_hijri', extract_oai('dc:date'), sakip_mult_dates_range, hijri_range
 to_field 'cho_description', extract_oai('dc:description'), strip, lang('tr-Latn')
 to_field 'cho_dc_rights', extract_oai('dc:rights'), strip, lang('tr-Latn')
-to_field 'cho_edm_type', extract_oai('dc:type'),
-         strip, normalize_type, lang('en')
-to_field 'cho_edm_type', extract_oai('dc:type'),
-         strip, normalize_type, translation_map('norm_types_to_ar'), lang('ar-Arab')
+to_field 'cho_edm_type', extract_oai('dc:type'), normalize_has_type, normalize_edm_type, lang('en')
+to_field 'cho_edm_type', extract_oai('dc:type'), normalize_has_type, normalize_edm_type, translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_format', extract_oai('dc:format'), strip, lang('tr-Latn')
-to_field 'cho_has_type', extract_oai('dc:type'),
-         strip, transform(&:downcase), translation_map('turkish_has_type_to_en'), lang('en')
-to_field 'cho_has_type', extract_oai('dc:type'),
-         strip, transform(&:downcase), translation_map('turkish_has_type_to_en'), translation_map('norm_types_to_ar'), lang('ar-Arab')
+to_field 'cho_has_type', extract_oai('dc:type'), normalize_has_type, lang('en')
+to_field 'cho_has_type', extract_oai('dc:type'), normalize_has_type, translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_language', extract_oai('dc:language'), split(';'),
          strip, normalize_language, lang('en')
 to_field 'cho_publisher', extract_oai('dc:publisher'), strip, lang('tr-Latn')
 to_field 'cho_subject', extract_oai('dc:subject'), strip, lang('tr-Latn')
-to_field 'cho_type', extract_oai('dc:type'), strip, lang('tr-Latn')
+to_field 'cho_type', extract_oai('dc:type'), strip, arabic_script_lang_or_default('und-Latn', 'ar-Arab')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')

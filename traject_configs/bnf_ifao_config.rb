@@ -8,19 +8,10 @@ to_field 'cho_contributor', extract_srw('dc:contributor'), strip # split('.'), f
 to_field 'cho_creator', extract_srw('dc:creator'), split('.'), first_only, strip
 to_field 'cho_creator', extract_srw('dc:creator[2]'), split('.'), first_only, strip
 to_field 'cho_creator', extract_srw('dc:creator[3]'), split('.'), first_only, strip
-to_field 'cho_edm_type', extract_srw('dc:type'), first_only, strip, normalize_type, lang('en')
-to_field 'cho_edm_type', extract_srw('dc:type'), first_only, strip, normalize_type, translation_map('norm_types_to_ar'), lang('ar-Arab')
-to_field 'cho_has_type', extract_srw('dc:type[1]'),
-         gsub('image fixe', 'Photograph'),
-         gsub('text', 'Book'),
-         gsub('manuscript', 'Manuscript'),
-         lang('en')
-to_field 'cho_has_type', extract_srw('dc:type[1]'),
-         gsub('image fixe', 'Photograph'),
-         gsub('text', 'Book'),
-         gsub('manuscript', 'Manuscript'),
-         translation_map('norm_has_type_to_ar'),
-         lang('ar-Arab')
+to_field 'cho_edm_type', extract_srw('dc:type'), first_only, normalize_has_type, normalize_edm_type, lang('en')
+to_field 'cho_edm_type', extract_srw('dc:type'), first_only, normalize_has_type, normalize_edm_type, translation_map('edm_type_ar_from_en'), lang('ar-Arab')
+to_field 'cho_has_type', extract_srw('dc:type[1]'), normalize_has_type, lang('en')
+to_field 'cho_has_type', extract_srw('dc:type[1]'), normalize_has_type, translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_publisher', extract_srw('dc:publisher'), strip, lang('fr')
 to_field 'cho_subject', extract_srw('dc:subject'), strip, lang('fr')
 to_field 'cho_type', extract_srw('dc:type')
