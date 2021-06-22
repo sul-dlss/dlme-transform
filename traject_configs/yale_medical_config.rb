@@ -6,6 +6,7 @@ require 'macros/collection'
 require 'macros/csv'
 require 'macros/dlme'
 require 'macros/each_record'
+require 'macros/normalize_type'
 require 'macros/timestamp'
 require 'macros/version'
 require 'traject_plus'
@@ -14,6 +15,7 @@ extend Macros::Collection
 extend Macros::Csv
 extend Macros::DLME
 extend Macros::EachRecord
+extend Macros::NormalizeType
 extend Macros::Timestamp
 extend Macros::Version
 extend TrajectPlus::Macros
