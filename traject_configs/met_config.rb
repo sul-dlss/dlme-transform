@@ -7,6 +7,7 @@ require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
 require 'macros/met'
+require 'macros/normalize_type'
 require 'macros/path_to_file'
 require 'macros/string_helper'
 require 'macros/timestamp'
@@ -19,6 +20,7 @@ extend Macros::DateParsing
 extend Macros::DLME
 extend Macros::EachRecord
 extend Macros::Met
+extend Macros::NormalizeType
 extend Macros::PathToFile
 extend Macros::StringHelper
 extend Macros::Timestamp
@@ -58,11 +60,11 @@ to_field 'cho_date_range_hijri', csv_or_json_date_range('objectBeginDate', 'obje
 to_field 'cho_date_range_norm', csv_or_json_date_range('objectBeginDate', 'objectEndDate')
 to_field 'cho_dc_rights', public_domain, lang('en')
 to_field 'cho_dc_rights', extract_json('.rightsAndReproduction'), transform(&:presence), lang('en')
-to_field 'cho_edm_type', literal('Object'), lang('en')
-to_field 'cho_edm_type', literal('Object'), translation_map('norm_types_to_ar'), lang('ar-Arab')
+to_field 'cho_edm_type', extract_json('.classification'), split('-'), normalize_has_type, normalize_edm_type, lang('en')
+to_field 'cho_edm_type', extract_json('.classification'), split('-'), normalize_has_type, normalize_edm_type, translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_extent', extract_json('.dimensions'), lang('en')
-to_field 'cho_has_type', literal('Other Objects'), lang('en')
-to_field 'cho_has_type', literal('Other Objects'), translation_map('norm_has_type_to_ar'), lang('ar-Arab')
+to_field 'cho_has_type', extract_json('.classification'), split('-'), normalize_has_type, lang('en')
+to_field 'cho_has_type', extract_json('.classification'), split('-'), normalize_has_type, translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_identifier', extract_json('.accessionNumber')
 to_field 'cho_medium', extract_json('.medium'), lang('en')
 to_field 'cho_spatial', extract_json('.city'), transform(&:presence), lang('en')
