@@ -11,6 +11,7 @@ ceramic: ceramic (material)
 chalcedony: chalcedony
 clay: clay
 copper: copper (metal)
+diorite: diorite
 dye: dye
 faience: faience (composite material)
 feldspar: feldspar
@@ -27,11 +28,13 @@ lead: lead (metal)
 limestone: limestone
 magnetite: magnetite
 marble: marble (rock)
+metal: metal
 paper: paper (fiber product)
 pitch: pitch (tar)
 obsidian: obsidian
 paint: paint (coating)
 plant material: plant material
+plant matter: plant material
 plaster: plaster (composite coating)
 plastic: plastic (material)
 quartz: quartz (mineral)
