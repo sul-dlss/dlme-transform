@@ -42,8 +42,8 @@ to_field 'id', column('id')
 to_field 'cho_title', column('title'), lang('en')
 
 # CHO Other
-to_field 'cho_aat_material', column('era'), split(';'), split(':'), split('/'), strip, transform(&:downcase), translation_map('getty_aat_materials'), lang('en')
-to_field 'cho_aat_material', column('era'), split(':'), strip, transform(&:downcase), translation_map('getty_aat_materials'), translation_map('getty_aat_materials_to_ar'), lang('ar-Arab')
+to_field 'cho_aat_material', column('era'), split(';'), split(':'), split('/'), strip, transform(&:downcase), translation_map('getty_aat_material_from_contributor'), lang('en')
+to_field 'cho_aat_material', column('era'), split(':'), strip, transform(&:downcase), translation_map('getty_aat_material_from_contributor'), translation_map('getty_aat_material_ar_from_en'), lang('ar-Arab')
 to_field 'cho_dc_rights', literal('http://creativecommons.org/publicdomain/zero/1.0/'), lang('en')
 to_field 'cho_description', column('type'), lang('en')
 to_field 'cho_edm_type', literal('Object'), lang('en')
