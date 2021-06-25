@@ -59,9 +59,8 @@ to_field 'cho_spatial', column('geographic_country'), strip, transform(&:downcas
 to_field 'cho_spatial', column('geographic_country'), strip, transform(&:downcase), translation_map('spatial_from_contributor'), translation_map('spatial_ar_from_en'), lang('ar-Arab')
 to_field 'cho_spatial', column('geographic_municipality'), strip, transform(&:downcase), translation_map('spatial_from_contributor'), lang('en')
 to_field 'cho_spatial', column('geographic_municipality'), strip, transform(&:downcase), translation_map('spatial_from_contributor'), translation_map('spatial_ar_from_en'), lang('ar-Arab')
-to_field 'cho_temporal', column('geographic_culture'), lang('en')
-to_field 'cho_temporal_norm', column('geographic_culture'), translation_map('temporal'), lang('en')
-to_field 'cho_temporal_norm', column('geographic_culture'), translation_map('temporal'), translation_map('temporal_to_ar'), lang('en')
+to_field 'cho_temporal', column('geographic_culture'), strip, transform(&:downcase), translation_map('temporal_from_contributor'), lang('en')
+to_field 'cho_temporal', column('geographic_culture'), strip, transform(&:downcase), translation_map('temporal_from_contributor'), translation_map('temporal_ar_from_en'), lang('ar-Arab')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
