@@ -13,12 +13,15 @@ RSpec.describe 'edm_type_ar_from_en_spec translation map' do
   end
 
   has_type = YAML.load_file('lib/translation_maps/edm_type_from_has_type.yaml')
-  has_type.each do |_key, value|
-    context 'with a value from edm_type_from_has_type' do
-      let(:key) { value }
+  has_type.each do |_key, values|
+    values = [values] if values.is_a? String # required since the values can strings OR arrays of strings
+    values.each do |value|
+      context 'with a value from edm_type_from_has_type' do
+        let(:key) { value }
 
-      it "translates #{value} to Arabic" do
-        expect(translation).not_to be_nil
+        it "translates #{value} to Arabic" do
+          expect(translation).not_to be_nil
+        end
       end
     end
   end
