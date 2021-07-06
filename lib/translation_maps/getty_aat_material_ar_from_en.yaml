@@ -10,6 +10,7 @@ ceramic (material):
 chalcedony:
 clay:
 copper (metal):
+diorite:
 dye:
 faience (composite material):
 feldspar:
@@ -27,6 +28,7 @@ lead (metal):
 limestone:
 marble (rock):
 magnetite:
+metal:
 obsidian:
 onyx marble:
 paint (coating):
