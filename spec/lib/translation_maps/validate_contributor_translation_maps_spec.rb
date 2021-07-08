@@ -2,6 +2,8 @@
 
 require 'yaml'
 
+# expect that all the values listed in contributor_map_filename are translatable using the
+# mapping config specified by lang_map_name
 RSpec.shared_examples 'a valid translation map' do |lang_map_name, contributor_map_filename|
   YAML.load_file(contributor_map_filename).each do |_key, values|
     Array(values).each do |literal_value| # ensure values is an array (since values can be a string OR an array of strings)
