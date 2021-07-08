@@ -41,4 +41,6 @@ RSpec.describe 'contributor translation maps are valid' do # rubocop:disable RSp
   # TODO: un-skip once we have the translations that will make it pass. see https://github.com/sul-dlss/dlme-transform/issues/742
   it_behaves_like 'a valid translation map', 'has_type_ar_from_en', 'lib/translation_maps/has_type_from_tr.yaml'
   # it_behaves_like 'a valid translation map', 'edm_type_from_has_type', 'lib/translation_maps/has_type_from_tr.yaml'
+
+  it_behaves_like 'a valid translation map', 'edm_type_ar_from_en', 'lib/translation_maps/edm_type_from_has_type.yaml'
 end
