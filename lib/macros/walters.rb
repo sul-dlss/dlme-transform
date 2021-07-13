@@ -18,7 +18,7 @@ module Macros
 
     # Extracts or builds thumbnail url for the record.
     # @return [Proc] a proc that traject can call for each record
-    def generate_edm_type
+    def generate_has_type
       lambda do |record, accumulator, _context|
         accumulator << record[CLASSIFICATION].split(';')[0].strip.downcase if record[CLASSIFICATION].present?
         accumulator << record[OBJECT_NAME].split(';')[0].strip.downcase if record[CLASSIFICATION].blank? &&
