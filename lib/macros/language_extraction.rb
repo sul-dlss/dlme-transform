@@ -32,6 +32,10 @@ module Macros
           ar_values = []
           default_values = []
           accumulator.each do |val|
+            role = val.match(/(\()(\w+)(\))/)
+            role = role[2] if role
+            role_ar_map = Traject::TranslationMap.new('role_ar_from_en')
+            val = val.gsub(role, role_ar_map[role.to_s]) if role
             lang_code = val.match?(/[ضصثقفغعهخحمنتالبيسشظطذدزرو]/) ? arabic_script_lang : default
             ar_values << val if lang_code == arabic_script_lang
             default_values << val if lang_code == default
