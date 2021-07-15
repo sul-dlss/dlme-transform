@@ -21,9 +21,10 @@ module Macros
         name_nodes.each do |val|
           name_parts << val&.content&.strip
         end
+
         role_map = Traject::TranslationMap.new('role_from_contributor')
-        role = role_map[role].to_s if role
-        accumulator.replace(["#{name_parts.join(', ')} (#{role})"]) if name_parts.present?
+        role = " (#{role_map[role]})" if role
+        accumulator.replace(["#{name_parts.join(', ')}#{role}"]) if name_parts.present?
       end
     end
 

@@ -41,7 +41,7 @@ RSpec.describe Macros::Mods do
         end
       end
 
-      it 'returns values with blah' do
+      it 'returns values with a mapped role' do
         expect(indexer.map_record(ng_rec)).to eq({ 'cho_contributor' => ['Doe, John (Copyist)'] })
       end
     end
@@ -53,7 +53,7 @@ RSpec.describe Macros::Mods do
         end
       end
 
-      it 'returns values with blah' do
+      it 'returns an empty hash' do
         expect(indexer.map_record(ng_rec)).to eq({})
       end
     end
@@ -65,8 +65,8 @@ RSpec.describe Macros::Mods do
         end
       end
 
-      it 'returns values with blah' do
-        expect(indexer.map_record(ng_rec)).to eq({ 'cho_contributor' => ['Doe, John ()'] })
+      it 'returns values without role included' do
+        expect(indexer.map_record(ng_rec)).to eq({ 'cho_contributor' => ['Doe, John'] })
       end
     end
   end
