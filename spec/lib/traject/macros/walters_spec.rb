@@ -11,8 +11,8 @@ RSpec.describe Macros::Walters do
   end
   let(:instance) { klass.new }
 
-  describe 'generate_edm_type' do
-    subject(:macro) { instance.send(:generate_edm_type).call(record, accumulator, context) }
+  describe 'generate_has_type' do
+    subject(:macro) { instance.send(:generate_has_type).call(record, accumulator, context) }
 
     let(:accumulator) { [] }
     let(:context) { {} }
