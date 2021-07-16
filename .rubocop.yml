@@ -30,6 +30,9 @@ Performance/StringReplacement:
   Exclude:
     - 'traject_configs/**/*'
 
+RSpec/NestedGroups:
+  Max: 5
+
 Style/AsciiComments:
   Enabled: false
 
