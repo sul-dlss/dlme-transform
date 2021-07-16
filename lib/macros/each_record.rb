@@ -8,15 +8,33 @@ module Macros
     # @example
     #   convert_to_language_hash => lambda { ... }
     # @return [Proc] a proc that traject can call for each record
-    def convert_to_language_hash(*fields)
+    def convert_to_language_hash(*fields) # rubocop:disable Metrics/PerceivedComplexity
+      # If needed for the log messages, getting caller info here is more helpful, because it'll
+      # get us the calling config (invoking caller_locations from the lambda returns a call stack
+      # entirely within the traject gem, besides this method).
+      # caller_locations[0] is the current stack frame, and caller_locations[1] is its direct caller.
+      config_file_path = caller_locations(1, 1).first.path
+
       lambda do |_record, context|
         context.output_hash.select { |key, _values| fields.include?(key) }.each do |key, values|
           result = Hash.new { [] }
 
-          values.each do |value|
+          unique_values = values.uniq
+          unless unique_values.length == values.length
+            ::DLME::Utils.logger.warn("#{config_file_path}: key=#{key}; values=#{values}; values array contains duplicates.  "\
+                                      'Check source data and/or traject config for errors.')
+          end
+
+          unique_values.each do |value|
             case value
             when Hash
-              result[value[:language]] += value[:values].reject(&:nil?).reject(&:empty?)
+              sub_values = value[:values].reject(&:nil?).reject(&:empty?)
+              result[value[:language]] += sub_values.uniq.tap do |unique_sub_values|
+                unless unique_sub_values.length == sub_values.length
+                  ::DLME::Utils.logger.warn("#{config_file_path}: key=#{key}; sub_values=#{sub_values}; sub_values array contains duplicates.  "\
+                                            'Check source data and/or traject config for errors.')
+                end
+              end
             else
               result['none'] += Array(value)
             end
