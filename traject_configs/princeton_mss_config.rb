@@ -45,9 +45,9 @@ to_field 'id', extract_json('.identifier[0]'), split('alt='), first_only, strip,
 to_field 'cho_title', princeton_title_and_lang
 
 # Cho Other
-to_field 'cho_creator', extract_json('.author[0]'), strip, lang('en')
-to_field 'cho_creator', extract_json('.creator[0]'), strip, lang('en')
-to_field 'cho_contributor', extract_json('.contributor[0]'), strip, lang('en')
+to_field 'cho_creator', extract_json('.author[0]'), strip, arabic_script_lang_or_default('und-Arab', 'en')
+to_field 'cho_creator', extract_json('.creator[0]'), strip, arabic_script_lang_or_default('und-Arab', 'en')
+to_field 'cho_contributor', extract_json('.contributor[0]'), strip, arabic_script_lang_or_default('und-Arab', 'en')
 to_field 'cho_contributor', extract_json('.contributor[1]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_date', extract_json('.date[0]'), strip, lang('en')
 to_field 'cho_date_range_norm', extract_json('.date[0]'), strip, parse_range
@@ -90,7 +90,7 @@ to_field 'agg_is_shown_at' do |_record, accumulator, context|
 end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(context,
-                                  'wr_id' => extract_json('.thumbnail'),
+                                  'wr_id' => [extract_json('.thumbnail'), split('/full/'), first_only, strip, append('/full/!400,400/0/default.jpg')],
                                   'wr_is_referenced_by' => extract_json('.manifest'))
 end
 to_field 'agg_provider', provider, lang('en')
