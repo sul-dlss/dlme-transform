@@ -113,6 +113,7 @@ RSpec/DescribedClass:
     - 'spec/lib/traject/macros/harvard_scw_spec.rb'
     - 'spec/lib/traject/macros/laussane_spec.rb'
     - 'spec/lib/traject/macros/manchester_spec.rb'
+    - 'spec/lib/traject/macros/mods_spec.rb'
     - 'spec/lib/traject/macros/string_helper_spec.rb'
     - 'spec/lib/traject/macros/title_extraction_spec.rb'
 
