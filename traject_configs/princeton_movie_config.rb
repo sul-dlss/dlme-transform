@@ -6,6 +6,7 @@ require 'macros/collection'
 require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
+require 'macros/language_extraction'
 require 'macros/normalize_language'
 require 'macros/timestamp'
 require 'macros/version'
@@ -15,6 +16,7 @@ extend Macros::Collection
 extend Macros::DateParsing
 extend Macros::DLME
 extend Macros::EachRecord
+extend Macros::LanguageExtraction
 extend Macros::NormalizeLanguage
 extend Macros::Timestamp
 extend Macros::Version
@@ -34,15 +36,15 @@ to_field 'transform_timestamp', timestamp
 
 # Cho Required
 to_field 'id', extract_json('.identifier[0]')
-to_field 'cho_title', extract_json('.title[0].@value'), strip, lang('ar-Arab')
+to_field 'cho_title', extract_json('.title[0].@value'), strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
 
 # Cho Other
-to_field 'cho_creator', extract_json('.director[0].@value'), strip, lang('ar-Arab')
-to_field 'cho_contributor', extract_json('.rendered_actors[0]'), strip, lang('ar-Arab')
-to_field 'cho_contributor', extract_json('.rendered_actors[1]'), strip, lang('ar-Arab')
-to_field 'cho_contributor', extract_json('.rendered_actors[2]'), strip, lang('ar-Arab')
-to_field 'cho_contributor', extract_json('.rendered_actors[3]'), strip, lang('ar-Arab')
-to_field 'cho_contributor', extract_json('.rendered_actors[4]'), strip, lang('ar-Arab')
+to_field 'cho_creator', extract_json('.director[0].@value'), strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
+to_field 'cho_contributor', extract_json('.rendered_actors[0]'), strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
+to_field 'cho_contributor', extract_json('.rendered_actors[1]'), strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
+to_field 'cho_contributor', extract_json('.rendered_actors[2]'), strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
+to_field 'cho_contributor', extract_json('.rendered_actors[3]'), strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
+to_field 'cho_contributor', extract_json('.rendered_actors[4]'), strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
 to_field 'cho_date', extract_json('.date_created[0]'), strip, lang('en')
 to_field 'cho_date_range_norm', extract_json('.date_created[0]'), strip, parse_range
 to_field 'cho_date_range_hijri', extract_json('.date_created[0]'), strip, parse_range, hijri_range
@@ -76,7 +78,7 @@ end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_id' => [extract_json('.thumbnail'), strip],
+    'wr_id' => [extract_json('.thumbnail'), split('/full/'), first_only, strip, append('/full/!400,400/0/default.jpg')],
     'wr_is_referenced_by' => [extract_json('.manifest'), strip]
   )
 end
