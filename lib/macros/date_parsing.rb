@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'exception_collector'
+require 'honeybadger'
 require 'parse_date'
 
 # Macros for Traject transformations.
@@ -338,8 +339,9 @@ module Macros
     # Collection a transformation except along with its context for later
     # display, at the end of a transformation run
     def collect_exception!(context, exception)
-      Dlme::ExceptionCollector.instance <<
-        "ERROR parsing dates in #{context.input_name}: #{exception.message}. Offending record: #{context.source_record}"
+      msg = "ERROR parsing dates in #{context.input_name}: #{exception.message}. Offending record: #{context.source_record}"
+      Honeybadger.notify(msg)
+      Dlme::ExceptionCollector.instance << msg
     end
   end
 end
