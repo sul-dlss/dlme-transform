@@ -67,14 +67,14 @@ module Macros
 
     # Returns the provided value with the english role translated to arabic if found
     def translate_role_to_ar(val)
-      role = val.match(/(\()(\w+)(\))/)
-      return val unless role
+      role_name = val.match(/(\()(\w+)(\))/)&.to_a&.at(2)
+      return val unless role_name
 
       role_ar_map = Traject::TranslationMap.new('role_ar_from_en')
-      translated_role = role_ar_map[role[2]]
+      translated_role = role_ar_map[role_name]
       return val unless translated_role
 
-      val.gsub(role[2], translated_role)
+      val.gsub(role_name, translated_role)
     end
   end
 end
