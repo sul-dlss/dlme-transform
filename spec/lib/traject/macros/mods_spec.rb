@@ -37,7 +37,7 @@ RSpec.describe Macros::Mods do
     context 'when contributor role matches the search' do
       before do
         indexer.instance_eval do
-          to_field 'cho_contributor', extract_name('//*/mods:name[1][mods:role/mods:roleTerm/', role: 'copyist.') # , strip, arabic_script_lang_or_default('und-Arab', 'und-Latn')
+          to_field 'cho_contributor', extract_name('//*/mods:name[1][mods:role/mods:roleTerm/', role: 'copyist.')
         end
       end
 
@@ -49,7 +49,7 @@ RSpec.describe Macros::Mods do
     context 'when contributor role does not match the search' do
       before do
         indexer.instance_eval do
-          to_field 'cho_contributor', extract_name('//*/mods:name[1][mods:role/mods:roleTerm/', role: 'scribe.') # , strip, arabic_script_lang_or_default('und-Arab', 'und-Latn')
+          to_field 'cho_contributor', extract_name('//*/mods:name[1][mods:role/mods:roleTerm/', role: 'scribe.')
         end
       end
 
@@ -61,7 +61,7 @@ RSpec.describe Macros::Mods do
     context 'when role is excluded from the search' do
       before do
         indexer.instance_eval do
-          to_field 'cho_contributor', extract_name('//*/mods:name[1][mods:role/mods:roleTerm/', exclude: true) # , strip, arabic_script_lang_or_default('und-Arab', 'und-Latn')
+          to_field 'cho_contributor', extract_name('//*/mods:name[1][mods:role/mods:roleTerm/', exclude: true)
         end
       end
 
