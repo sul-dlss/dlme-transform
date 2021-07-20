@@ -42,18 +42,20 @@ to_field 'cho_title', extract_oai('dc:title'), strip, lang('en')
 # Cho Other
 to_field 'cho_creator', extract_oai('dc:creator'),
          strip, split('.'), lang('en')
-to_field 'cho_date', extract_oai('dc:date'), strip, lang('en')
+to_field 'cho_date', extract_oai('dc:date'), last, strip, lang('en')
 to_field 'cho_date_range_hijri', extract_oai('dc:date'), strip, parse_range, hijri_range
 to_field 'cho_date_range_norm', extract_oai('dc:date'), strip, parse_range
 to_field 'cho_dc_rights', extract_oai('dc:rights'), strip, lang('en')
 to_field 'cho_description', extract_oai('dc:description'), strip, lang('en')
 to_field 'cho_edm_type', literal('Text'), lang('en')
 to_field 'cho_edm_type', literal('Text'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
+to_field 'cho_format', extract_oai('dc:format'), strip, lang('en')
 to_field 'cho_has_type', literal('Other Texts'), lang('en')
 to_field 'cho_has_type', literal('Other Texts'), translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_language', extract_oai('dc:language'), normalize_language, lang('en')
 to_field 'cho_language', extract_oai('dc:language'), normalize_language, translation_map('norm_languages_to_ar'), lang('ar-Arab')
-to_field 'cho_subject', extract_oai('dc:subject'), strip, lang('ar-Arab')
+to_field 'cho_publisher', extract_oai('dc:publisher'), strip, lang('en')
+to_field 'cho_subject', extract_oai('dc:subject'), strip, lang('en')
 to_field 'cho_type', extract_oai('dc:type'), lang('en')
 
 # Agg
@@ -65,12 +67,6 @@ to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
     'wr_id' => [extract_oai('dc:identifier[last()]'), strip]
-  )
-end
-to_field 'agg_preview' do |_record, accumulator, context|
-  accumulator << transform_values(
-    context,
-    'wr_id' => [literal('https://spotlight.dlmenetwork.org/assets/default-52adc3dc03639885e8aa93763e29868269dd3b9dad4689f140c0175b4f945922.png')]
   )
 end
 to_field 'agg_provider', provider, lang('en')
