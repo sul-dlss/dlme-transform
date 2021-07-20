@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'macros/iiif'
+require 'honeybadger'
 
 RSpec.describe Macros::IIIF do
   let(:klass) do
@@ -111,6 +112,19 @@ RSpec.describe Macros::IIIF do
       it 'returns the iiif sequence service conforms to' do
         expect(iiif_sequence_service_conforms_to).to eq(manifest_sequence_service_conforms_to)
       end
+    end
+  end
+
+  describe 'iiif_honeybadger_alert' do
+    let(:iiif_manifest) { 'https://stacks.stanford.edu/image/iiif/missing-manifest' }
+
+    before do
+      allow(Honeybadger).to receive(:notify).and_return("IIIF Manifest not found: #{iiif_manifest}")
+    end
+
+    it 'Honeybadger notified for missing IIIF Manifest' do
+      instance.grab_iiif_manifest(iiif_manifest)
+      expect(Honeybadger.notify).to eq("IIIF Manifest not found: #{iiif_manifest}")
     end
   end
 end

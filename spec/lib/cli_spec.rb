@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'honeybadger'
+
 RSpec.describe Dlme::CLI::Transform do
   subject(:cli) { described_class.new }
 
@@ -67,6 +69,32 @@ RSpec.describe Dlme::CLI::Transform do
         expect(mock_transformer).to have_received(:transform).twice
         expect(mock_file).to have_received(:puts)
           .with(start_with "{\"success\":true,\"records\":2,\"data_path\":\"#{data_dir}\"")
+      end
+
+      context 'when a transform error occurs' do
+        let(:error_msg) { '[ERROR] Transformation error' }
+        let(:metadata_mapping_filepath) { 'metadata_mapping_missing.json' }
+
+        before do
+          allow(Dlme::ConfigFinder).to receive(:for).and_return(transform_map)
+          allow(Dlme::Transformer).to receive(:new).and_return(mock_transformer)
+          allow(mock_transformer).to receive(:transform)
+          allow(File).to receive(:read).and_return(metadata_mapping)
+          allow(File).to receive(:open).and_yield(mock_file)
+          allow(cli).to receive(:options).and_return(mapping_file: metadata_mapping_filepath,
+                                                     base_data_dir: base_data_dir,
+                                                     data_dir: data_dir,
+                                                     traject_dir: traject_dir,
+                                                     summary_filepath: summary_filepath,
+                                                     debug_writer: nil)
+          allow(mock_file).to receive(:puts)
+          allow(Honeybadger).to receive(:notify).and_return(error_msg)
+        end
+
+        it 'notifies honeybadger' do
+          cli.transform
+          expect(Honeybadger.notify).to eq(error_msg)
+        end
       end
     end
   end
