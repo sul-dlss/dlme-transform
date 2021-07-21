@@ -14,12 +14,6 @@ RSpec.describe Macros::Lausanne do
     end
   end
 
-  let(:raw_val_lambda) do
-    lambda do |record, accumulafromr|
-      accumulafromr << record[:raw]
-    end
-  end
-
   describe '#lausanne_date_string' do
     before do
       indexer.instance_eval do
