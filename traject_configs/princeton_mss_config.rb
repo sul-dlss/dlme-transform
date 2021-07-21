@@ -85,7 +85,7 @@ to_field 'agg_data_provider_country', data_provider_country, lang('en')
 to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(context,
-                                  'wr_id' => [extract_json('.identifier[0]'), split(' '), strip, gsub("<a href='http://arks.princeton.edu/", ''), gsub("'", '')],
+                                  'wr_id' => [extract_json('.identifier[0]'), split("href='"), last, split("' alt='"), first_only, strip],
                                   'wr_is_referenced_by' => extract_json('.manifest'))
 end
 to_field 'agg_preview' do |_record, accumulator, context|
