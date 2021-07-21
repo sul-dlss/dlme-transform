@@ -17,12 +17,6 @@ RSpec.describe Macros::HarvardIHP do
     end
   end
 
-  let(:raw_val_lambda) do
-    lambda do |record, accumulator|
-      accumulator << record[:raw]
-    end
-  end
-
   describe '#ihp_date_range' do
     let(:record) do
       <<-XML

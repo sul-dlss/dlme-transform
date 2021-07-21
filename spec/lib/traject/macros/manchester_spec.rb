@@ -14,12 +14,6 @@ RSpec.describe Macros::Manchester do
     end
   end
 
-  let(:raw_val_lambda) do
-    lambda do |record, accumulator|
-      accumulator << record[:raw]
-    end
-  end
-
   describe '#manchester_solar_hijri_range' do
     before do
       indexer.instance_eval do

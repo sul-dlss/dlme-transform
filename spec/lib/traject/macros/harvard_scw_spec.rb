@@ -17,12 +17,6 @@ RSpec.describe Macros::HarvardSCW do
     end
   end
 
-  let(:raw_val_lambda) do
-    lambda do |record, accumulator|
-      accumulator << record[:raw]
-    end
-  end
-
   describe '#scw_has_type' do
     let(:record) do
       <<-XML
