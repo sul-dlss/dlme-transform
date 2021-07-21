@@ -211,18 +211,10 @@ All you will need to do is publish a new release on github; a webhook will autom
 1. Draft a github release first to describe the changes since the last release in detail:
 - https://github.com/sul-dlss/dlme-transform/releases hit "Draft a New Release" button in upper right
 - following the format of other releases, fill in the form
-- "Save Draft"  (NOT:  "Publish Release")
+- fill in "Tag version" with the version (e.g. "1.18.3")
+- Click the "Publish Release" button
 
-2. On your laptop, create a tag and push it to github
-
-```
-git tag 1.1.3
-git push origin --tags
-```
-
-3.  Go to https://github.com/sul-dlss/dlme-transform/releases/new?tag=1.1.3 and "Publish Release".
-
-4.  Confirm the new tagged release is available in Docker Hub. CircleCI should automatically create a new tagged image via a webhook.  You can confirm this by looking for the successful "publish-tag" step completion https://circleci.com/gh/sul-dlss/dlme-transform or by looking for the new tag at Docker Hub:  https://hub.docker.com/r/suldlss/dlme-transform/tags.
+2.  Confirm the new tagged release is available in Docker Hub. CircleCI should automatically create a new tagged image via a webhook.  You can confirm this by looking for the successful "publish-tag" step completion https://circleci.com/gh/sul-dlss/dlme-transform or by looking for the new tag at Docker Hub:  https://hub.docker.com/r/suldlss/dlme-transform/tags.
 
 #### Deploy New Tagged Release to AWS
 
