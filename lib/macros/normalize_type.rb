@@ -29,6 +29,10 @@ module Macros
                                Traject::TranslationMap.new(spec)
                              end.reduce(:merge)
         translation_map.translate_array!(accumulator)
+
+        # if there are type values more specific than "[O|o]ther *", keep only those more specific values
+        acc_minus_generic_types = accumulator.reject { |str| str.start_with?(/[O|o]ther /) }
+        accumulator.replace(acc_minus_generic_types) unless acc_minus_generic_types.empty?
       end
     end
   end
