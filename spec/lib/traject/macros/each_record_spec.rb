@@ -29,11 +29,22 @@ RSpec.describe Macros::EachRecord do
     end
 
     context 'when output hash has string values for given fields' do
+      before do
+        allow(::DLME::Utils.logger).to receive(:error)
+      end
+
       let(:output_hash) { { 'cho_title' => ['title1'] } }
 
       it 'accumulates values in a hash with "none" key' do
         macro.call(nil, mock_context)
         expect(mock_context.output_hash).to eq('cho_title' => { 'none' => ['title1'] })
+      end
+
+      it 'logs an error indicating that the output is missing language' do
+        macro.call(nil, mock_context)
+        err_msg = "each_record_spec.rb: key=cho_title; value=.*; 'none' not allowed as IR language key, "\
+                                'language must be specified.  Check source data and/or traject config for errors'
+        expect(::DLME::Utils.logger).to have_received(:error).with(a_string_matching(err_msg))
       end
 
       context 'when context has duplicate values' do
