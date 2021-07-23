@@ -598,12 +598,12 @@ RSpec.describe Macros::DateParsing do
 
     context 'when exception is raised' do
       let(:error_msg) do
-        "ERROR parsing dates in #{traject_context}: ParseData::Error. Offending record: #{traject_context.source_record}"
+        "ERROR parsing dates in #{traject_context.input_name}: ParseDate::Error. Offending record: #{traject_context.source_record}"
       end
 
       before do
         allow(ParseDate).to receive(:range_array).and_raise(ParseDate::Error)
-        allow(Honeybadger).to receive(:notify).and_return(error_msg)
+        allow(Honeybadger).to receive(:notify)
       end
 
       it 'returns an empty array' do
@@ -611,7 +611,8 @@ RSpec.describe Macros::DateParsing do
       end
 
       it 'notifies honeybadger of error' do
-        expect(Honeybadger.notify).to eq(error_msg)
+        range_array
+        expect(Honeybadger).to have_received(:notify).with(error_msg)
       end
     end
   end

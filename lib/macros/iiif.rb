@@ -11,7 +11,7 @@ module Macros
     def grab_iiif_manifest(manifest)
       ::DLME::Utils.fetch_json(manifest)
     rescue StandardError => e
-      msg = "IIIF Manifest not found: #{e}"
+      msg = "Error retrieving IIIF Manifest: #{e}"
       ::DLME::Utils.logger.error msg
       Honeybadger.notify(msg)
       []

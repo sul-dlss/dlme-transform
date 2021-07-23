@@ -71,27 +71,15 @@ RSpec.describe Dlme::CLI::Transform do
 
       context 'when a transform error occurs' do
         let(:error_msg) { '[ERROR] Transformation error' }
-        let(:metadata_mapping_filepath) { 'metadata_mapping_missing.json' }
 
         before do
-          allow(Dlme::ConfigFinder).to receive(:for).and_return(transform_map)
-          allow(Dlme::Transformer).to receive(:new).and_return(mock_transformer)
-          allow(mock_transformer).to receive(:transform)
-          allow(File).to receive(:read).and_return(metadata_mapping)
-          allow(File).to receive(:open).and_yield(mock_file)
-          allow(cli).to receive(:options).and_return(mapping_file: metadata_mapping_filepath,
-                                                     base_data_dir: base_data_dir,
-                                                     data_dir: data_dir,
-                                                     traject_dir: traject_dir,
-                                                     summary_filepath: summary_filepath,
-                                                     debug_writer: nil)
-          allow(mock_file).to receive(:puts)
-          allow(Honeybadger).to receive(:notify).and_return(error_msg)
+          allow(Honeybadger).to receive(:notify)
+          allow(mock_transformer).to receive(:transform).and_raise(StandardError, error_msg)
         end
 
         it 'notifies honeybadger' do
-          cli.transform
-          expect(Honeybadger.notify).to eq(error_msg)
+          expect { cli.transform }.to raise_error(StandardError, error_msg)
+          expect(Honeybadger).to have_received(:notify).with(error_msg, backtrace: an_instance_of(Array))
         end
       end
     end
