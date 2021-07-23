@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'honeybadger'
-
 RSpec.describe Dlme::CLI::Transform do
   subject(:cli) { described_class.new }
 

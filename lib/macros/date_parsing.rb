@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'exception_collector'
-require 'honeybadger'
 require 'parse_date'
 
 # Macros for Traject transformations.

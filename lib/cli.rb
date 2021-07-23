@@ -10,6 +10,12 @@ require 'traject'
 require 'traject_plus'
 require 'transformer'
 
+# @note "require the honeybadger gem after any other gems you’re using... Honeybadger will detect any
+# supported 3rd-party gems you’re using such as Sidekiq, Rake, etc. and integrate with them automatically."
+# @see [Honeybadger installation] https://docs.honeybadger.io/lib/ruby/integration-guides/ruby-exception-tracking/#installation
+# @see [Thor plugin] https://github.com/honeybadger-io/honeybadger-ruby/blob/master/lib/honeybadger/plugins/thor.rb
+require 'honeybadger'
+
 module Dlme
   module CLI
     # Transform subcommand
@@ -58,7 +64,7 @@ module Dlme
       rescue StandardError => e
         warn "[ERROR] #{e.message}"
         write_summary(error: e.message)
-        Honeybadger.notify(e)
+        Honeybadger.notify(e.message, backtrace: e.backtrace)
         raise e unless e.is_a?(RuntimeError)
 
         exit(1)

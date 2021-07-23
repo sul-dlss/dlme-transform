@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'macros/iiif'
-require 'honeybadger'
 
 RSpec.describe Macros::IIIF do
   let(:klass) do
