@@ -33,7 +33,7 @@ to_field 'id', extract_json('.url'), strip
 to_field 'cho_title', extract_json('.title'), strip, lang('en')
 
 # Cho Other
-to_field 'cho_date', extract_json('.date'), strip
+to_field 'cho_date', extract_json('.date'), strip, lang('en')
 to_field 'cho_date_range_norm', extract_json('.date'), strip, parse_range
 to_field 'cho_date_range_hijri', extract_json('.date'), strip, parse_range, hijri_range
 to_field 'cho_dc_rights', extract_json('.rights'), strip, lang('en')
