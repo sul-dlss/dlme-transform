@@ -50,7 +50,7 @@ to_field 'cho_contributor', extract_oai('dc:contributor'),
 to_field 'cho_date', extract_oai('dc:date'), strip, lang('en')
 to_field 'cho_date_range_hijri', extract_oai('dc:date'), strip, auc_date_range, hijri_range
 to_field 'cho_date_range_norm', extract_oai('dc:date'), strip, auc_date_range
-to_field 'cho_description', extract_oai('dc:description'), strip
+to_field 'cho_description', extract_oai('dc:description'), strip, lang('en')
 to_field 'cho_dc_rights', extract_oai('dc:rights'), strip, lang('en')
 to_field 'cho_edm_type', literal('Text'), lang('en')
 to_field 'cho_edm_type', literal('Text'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
