@@ -39,7 +39,6 @@ to_field 'cho_creator', extract_json('.author'), strip
 to_field 'cho_date', extract_json('.published'), strip
 to_field 'cho_date_range_norm', extract_json('.published'), strip, parse_range
 to_field 'cho_date_range_hijri', extract_json('.published'), strip, parse_range, hijri_range
-to_field 'cho_dc_rights', literal('© 2011-2020 شهرفرنگ - ShahreFarang'), lang('en')
 to_field 'cho_description', extract_json('.summary'), strip, lang('ar-Arab')
 to_field 'cho_edm_type', literal('Text'), lang('en')
 to_field 'cho_edm_type', literal('Text'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
@@ -66,13 +65,15 @@ to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_id' => [extract_json('.link'), strip]
+    'wr_id' => [extract_json('.link'), strip],
+    'wr_dc_rights' => [literal('© 2011-2020 شهرفرنگ - ShahreFarang')]
   )
 end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_id' => [extract_json('.media_content[0].url'), strip]
+    'wr_id' => [extract_json('.media_content[0].url'), strip],
+    'wr_dc_rights' => [literal('© 2011-2020 شهرفرنگ - ShahreFarang')]
   )
 end
 to_field 'agg_provider', provider, lang('en')
