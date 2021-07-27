@@ -54,7 +54,7 @@ to_field 'cho_contributor', extract_poha('/*/dc:interviewee'), strip, prepend('I
 to_field 'cho_contributor', extract_poha('/*/dc:intervieweeAR'), strip, lang('ar-Arab')
 to_field 'cho_contributor', extract_poha('/*/dc:interviewer'), strip, prepend('Interviewer: '), lang('en')
 to_field 'cho_contributor', extract_poha('/*/dc:interviewerAR'), strip, lang('ar-Arab')
-to_field 'cho_date', extract_poha('/*/dc:date[1]'), strip
+to_field 'cho_date', extract_poha('/*/dc:date[1]'), strip, lang('en')
 to_field 'cho_date_range_hijri', extract_poha('/*/dc:date[1]'), strip, parse_range, hijri_range
 to_field 'cho_date_range_norm', extract_poha('/*/dc:date[1]'), strip, parse_range
 to_field 'cho_dc_rights', literal('Available under a Creative Commons Attribution-Noncommercial-NoDerivatives '\

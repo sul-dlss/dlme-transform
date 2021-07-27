@@ -7,6 +7,7 @@ require 'macros/collection'
 require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
+require 'macros/language_extraction'
 require 'macros/normalize_type'
 require 'macros/timestamp'
 require 'macros/version'
@@ -17,6 +18,7 @@ extend Macros::AIMS
 extend Macros::DLME
 extend Macros::DateParsing
 extend Macros::EachRecord
+extend Macros::LanguageExtraction
 extend Macros::NormalizeType
 extend Macros::Timestamp
 extend Macros::Version
@@ -35,7 +37,7 @@ to_field 'transform_timestamp', timestamp
 
 # CHO Required
 to_field 'id', extract_aims('guid'), strip
-to_field 'cho_title', extract_aims('title'), strip # Values in Arabic, English, and French
+to_field 'cho_title', extract_aims('title'), strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
 
 # CHO Other
 to_field 'cho_creator', extract_itunes_aims('author'), strip, lang('en')
@@ -43,7 +45,7 @@ to_field 'cho_date', extract_aims('pubDate'), strip, lang('en')
 to_field 'cho_date_range_norm', extract_aims('pubDate'), strip, parse_range
 to_field 'cho_date_range_hijri', extract_aims('pubDate'), strip, parse_range, hijri_range
 to_field 'cho_dc_rights', literal('Use of content for classroom purposes and on other non-profit educational websites is granted (and encouraged) with proper citation.'), lang('en')
-to_field 'cho_description', extract_aims('description'), strip # Values in Arabic, English, and French
+to_field 'cho_description', extract_aims('description'), strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
 to_field 'cho_edm_type', literal('Sound'), lang('en')
 to_field 'cho_edm_type', literal('Sound'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_extent', extract_itunes_aims('duration'), strip, lang('en')
