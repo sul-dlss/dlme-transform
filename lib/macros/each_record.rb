@@ -3,6 +3,8 @@
 module Macros
   # Macros for post-processing data
   module EachRecord
+    class UnspecifiedLanguageError < RuntimeError; end
+
     # Converts one or more fields from arrays or strings into hashes with language codes
     # NOTE: do *not* include cho_type_facet in fields list
     # @example
@@ -40,9 +42,9 @@ module Macros
                 end
               end
             else
-              result['none'] += Array(value)
               err_msg = format(log_msg_template, { msg: "value=#{value}; 'none' not allowed as IR language key, language must be specified" })
               ::DLME::Utils.logger.error(err_msg)
+              raise UnspecifiedLanguageError, err_msg
             end
           end
 
