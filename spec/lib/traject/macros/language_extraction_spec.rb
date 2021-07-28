@@ -20,12 +20,22 @@ RSpec.describe Macros::LanguageExtraction do
       end
     end
 
-    context 'when extracted string contains Arabic characters and an english role' do
+    context 'when extracted string contains Arabic characters and an English role' do
       it 'returns the correct script value arabic_script_lang' do
         extracted_string = 'الولايات المتحدة الامريكيه (Copyist)'
         translated_string = 'الولايات المتحدة الامريكيه (الناسخ)'
         callable = instance.arabic_script_lang_or_default('ar-Arab', 'en')
         expect(callable.call(nil, [extracted_string])).to eq([{ language: 'ar-Arab', values: [translated_string] }])
+      end
+    end
+
+    describe 'hebrew_script_lang_or_default' do
+      context 'when extracted string contains Hebrew characters' do
+        it 'returns the correct script value hebrew_script_lang' do
+          extracted_string = 'ספר בחכמות הרפואות'
+          callable = instance.hebrew_script_lang_or_default('he', 'en')
+          expect(callable.call(nil, [extracted_string])).to eq([{ language: 'he', values: [extracted_string] }])
+        end
       end
     end
   end

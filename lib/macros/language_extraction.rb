@@ -51,6 +51,37 @@ module Macros
     # rubocop:enable Metrics/PerceivedComplexity, Metrics/CyclomaticComplexity, Metrics/AbcSize, Metrics/MethodLength
 
     # Returns the value extracted by 'to_field' reformated as a hash with accompanying BCP47 language code.
+    # Should only be used to differentiate between an Hebrew script language and a Latin script
+    # language '-Latn'.
+    # @return [Proc] a proc that traject can call for each record
+    # @example
+    # arabic_script_lang_or_default('he', 'en') => {'he': ['ספר בחכמות הרפואות']}
+    # rubocop:disable Metrics/PerceivedComplexity, Metrics/CyclomaticComplexity, Metrics/AbcSize, Metrics/MethodLength
+    def hebrew_script_lang_or_default(hebrew_script_lang, default)
+      lambda do |_record, accumulator|
+        if accumulator
+          he_values = []
+          default_values = []
+          accumulator.each do |val|
+            val = translate_role_to_ar(val)
+            lang_code = val.match?(/[תשרקץצףפעסןנםמלךכיטחזוהדגבא]/) ? hebrew_script_lang : default
+            he_values << val if lang_code == hebrew_script_lang
+            default_values << val if lang_code == default
+          end
+        end
+        if he_values.present? && default_values.present?
+          accumulator.replace([{ language: hebrew_script_lang, values: he_values }])
+          accumulator << { language: default, values: default_values } if default_values.present?
+        elsif he_values.present? && default_values.empty?
+          accumulator.replace([{ language: hebrew_script_lang, values: he_values }])
+        elsif he_values.empty? && default_values.present?
+          accumulator.replace([{ language: default, values: default_values }])
+        end
+      end
+    end
+    # rubocop:enable Metrics/PerceivedComplexity, Metrics/CyclomaticComplexity, Metrics/AbcSize, Metrics/MethodLength
+
+    # Returns the value extracted by 'to_field' reformated as a hash with accompanying BCP47 language code.
     # Caution: assumes the language of the metadata field is the same as the main language of the text.
     # Works on cases where the element names are downcased instead of camel cased.
     # @return [Proc] a proc that traject can call for each record
