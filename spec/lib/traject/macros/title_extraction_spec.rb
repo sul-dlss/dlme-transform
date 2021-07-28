@@ -14,14 +14,6 @@ RSpec.describe Macros::TitleExtraction do
     end
   end
 
-  let(:klass) do
-    Class.new do
-      include Macros::TitleExtraction
-      include TrajectPlus::Macros
-    end
-  end
-  let(:instance) { klass.new }
-
   describe 'json_title_or' do
     # Sample records
     let(:both_fields) { { 'title' => 'Some title', 'other' => 'Some other field' } }
