@@ -7,6 +7,7 @@ require 'macros/collection'
 require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
+require 'macros/language_extraction'
 require 'macros/normalize_language'
 require 'macros/timestamp'
 require 'macros/version'
@@ -15,6 +16,7 @@ extend Macros::Collection
 extend Macros::DateParsing
 extend Macros::DLME
 extend Macros::EachRecord
+extend Macros::LanguageExtraction
 extend Macros::NormalizeLanguage
 extend Macros::Timestamp
 extend Macros::Version
@@ -34,7 +36,7 @@ to_field 'transform_timestamp', timestamp
 to_field 'id', extract_json('.rendering'),
          strip,
          gsub('https://digital.bodleian.ox.ac.uk/inquire/p/', '')
-to_field 'cho_title', extract_json('.title'), strip
+to_field 'cho_title', extract_json('.title'), split(' ('), gsub(')', ''), gsub('(', ''), strip, hebrew_script_lang_or_default('he', 'und-Latn')
 
 # Cho Other
 to_field 'cho_creator', extract_json('.author'), strip, lang('en')
