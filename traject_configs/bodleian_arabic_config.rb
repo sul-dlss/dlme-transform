@@ -45,7 +45,7 @@ to_field 'dlme_source_file', path_to_file
 to_field 'id', extract_json('.rendering'),
          strip,
          gsub('https://digital.bodleian.ox.ac.uk/inquire/p/', '')
-to_field 'cho_title', extract_json('.title'), split(' ('), gsub(')', ''), gsub('(', ''), strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
+to_field 'cho_title', json_title_or('title', 'description'), split(' ('), gsub(')', ''), gsub('(', ''), strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
 
 # Cho Other
 to_field 'cho_creator', extract_json('.author'), strip, lang('en')
