@@ -265,3 +265,13 @@ repo.
 ```shell
 $ bundle exec rake
 ```
+
+By default, test setup squelches any output that the code being tested sends to `STDOUT` and `STDERR`.  `DLME::Utils.logger` output is still printed.  This is because test output can be very verbose, especially when using all of `dlme-metadata` in the `data` dir, as is done for CI.  The default behavior can make debugging failing tests easier, especially in CircleCI, where there's a size limit on browser display of test output.
+
+If `STDOUT` or `STDERR` would be useful, output to each from the tests can be allowed by using env vars (independently or together).
+```sh
+$ be rspec # default, just the logger output
+$ NO_SQUELCH_STDERR=1 be rspec # allow tests to print to STDERR (plus logger output)
+$ NO_SQUELCH_STDOUT=1 be rspec # allow tests to print to STDOUT (plus logger output), can be very noisy if run over all metadata
+$ NO_SQUELCH_STDERR=1 NO_SQUELCH_STDOUT=1 be rspec # everything
+```
