@@ -52,7 +52,7 @@ to_field 'cho_identifier', extract_json('.catalogue_identifier'), strip
 to_field 'cho_is_part_of', extract_json('.collection'), strip, lang('en')
 to_field 'cho_language', literal('Hebrew'), lang('en')
 to_field 'cho_language', literal('Hebrew'), translation_map('norm_languages_to_ar'), lang('ar-Arab')
-to_field 'cho_spatial', extract_json('.place_of_origin'), strip, gsub('[', ''), gsub(']', '')
+to_field 'cho_spatial', extract_json('.place_of_origin'), strip, gsub('[', ''), gsub(']', ''), lang('en')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
