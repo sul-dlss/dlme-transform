@@ -50,6 +50,15 @@ module Macros
       end
     end
 
+    # Extract a json title or truncated second field, if no title in record.
+    def json_title_or(json_title, json_other)
+      lambda do |rec, acc|
+        title = rec[json_title]
+        other = rec[json_other]
+        title.present? ? acc.replace([title]) : acc.replace([truncate(other)])
+      end
+    end
+
     # Extract a json title and truncated second field or, if no title in record, extract truncated second field.
     def json_title_plus(json_title, json_other)
       lambda do |rec, acc|
@@ -57,6 +66,8 @@ module Macros
         other = rec[json_other]
         if other.present?
           title.present? ? acc.replace(["#{title} #{truncate(other)}"]) : acc.replace([truncate(other)])
+        else
+          acc.replace([title])
         end
       end
     end
