@@ -148,12 +148,6 @@ to_field 'agg_preview' do |_record, accumulator, context|
                                     'wr_has_service' => iiif_thumbnail_service(iiif_json),
                                     'wr_id' => literal(iiif_thumbnail_id(iiif_json)),
                                     'wr_is_referenced_by' => literal(context.clipboard[:manifest]))
-  else
-    accumulator << transform_values(context,
-                                    'wr_edm_rights' => [extract_qnl_en('mods:accessCondition'), strip, translation_map('edm_rights')],
-                                    'wr_format' => literal('image/jpeg'),
-                                    'wr_id' => literal(context.clipboard[:id]),
-                                    'wr_is_referenced_by' => literal(context.clipboard[:manifest]))
   end
 end
 to_field 'agg_provider', provider, lang('en')
