@@ -180,4 +180,11 @@ RSpec.describe Macros::EachRecord do
       end
     end
   end
+
+  describe '#html_check' do
+    it 'returns just the text for values containing html tags' do
+      values = instance.html_check(['ab', 'cd', '<p id="23">homer</p>'])
+      expect(values).to eq(['ab', 'cd', 'homer'])
+    end
+  end
 end
