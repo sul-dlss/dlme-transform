@@ -9,7 +9,10 @@ require 'macros/dlme'
 require 'macros/each_record'
 require 'macros/language_extraction'
 require 'macros/normalize_language'
+require 'macros/path_to_file'
+require 'macros/string_helper'
 require 'macros/timestamp'
+require 'macros/title_extraction'
 require 'macros/version'
 
 extend Macros::Collection
@@ -18,7 +21,10 @@ extend Macros::DLME
 extend Macros::EachRecord
 extend Macros::LanguageExtraction
 extend Macros::NormalizeLanguage
+extend Macros::PathToFile
+extend Macros::StringHelper
 extend Macros::Timestamp
+extend Macros::TitleExtraction
 extend Macros::Version
 extend TrajectPlus::Macros
 extend TrajectPlus::Macros::JSON
@@ -32,11 +38,14 @@ end
 to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
 
+# File path
+to_field 'dlme_source_file', path_to_file
+
 # Cho Required
 to_field 'id', extract_json('.rendering'),
          strip,
          gsub('https://digital.bodleian.ox.ac.uk/inquire/p/', '')
-to_field 'cho_title', extract_json('.title'), strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
+to_field 'cho_title', json_title_or('title', 'description'), split(' ('), gsub(')', ''), gsub('(', ''), strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
 
 # Cho Other
 to_field 'cho_creator', extract_json('.author'), strip, lang('en')
@@ -54,7 +63,7 @@ to_field 'cho_identifier', extract_json('.catalogue_identifier'), strip
 to_field 'cho_is_part_of', extract_json('.collection'), strip, lang('en')
 to_field 'cho_language', literal('Arabic'), lang('en')
 to_field 'cho_language', literal('Arabic'), translation_map('norm_languages_to_ar'), lang('ar-Arab')
-to_field 'cho_spatial', extract_json('.place_of_origin'), strip
+to_field 'cho_spatial', extract_json('.place_of_origin'), strip, lang('en')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
