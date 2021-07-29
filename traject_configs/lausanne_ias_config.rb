@@ -11,7 +11,9 @@ require 'macros/lausanne'
 require 'macros/normalize_type'
 require 'macros/path_to_file'
 require 'macros/penn'
+require 'macros/string_helper'
 require 'macros/timestamp'
+require 'macros/title_extraction'
 require 'macros/version'
 require 'traject_plus'
 
@@ -24,7 +26,9 @@ extend Macros::Lausanne
 extend Macros::NormalizeType
 extend Macros::PathToFile
 extend Macros::Penn
+extend Macros::StringHelper
 extend Macros::Timestamp
+extend Macros::TitleExtraction
 extend Macros::Version
 extend TrajectPlus::Macros
 extend TrajectPlus::Macros::Csv
@@ -43,13 +47,13 @@ to_field 'dlme_source_file', path_to_file
 
 # CHO Required
 to_field 'id', normalize_prefixed_id('id')
-to_field 'cho_title', column('name'), gsub('/<em>', ''), gsub('</em>', ''), lang('fr')
+to_field 'cho_title', json_title_or('name', 'expanded_name'), lang('fr')
 
 # CHO Other
 to_field 'cho_date', lausanne_date_string, lang('en')
 to_field 'cho_date_range_norm', csv_or_json_date_range('from', 'to')
 to_field 'cho_date_range_hijri', csv_or_json_date_range('from', 'to'), hijri_range
-to_field 'cho_description', column('expanded_name'), gsub('/<em>', ''), gsub('</em>', ''), lang('fr')
+to_field 'cho_description', column('expanded_name'), lang('fr')
 to_field 'cho_description', column('location'), gsub('POINT(', ''), gsub(')', ''), lang('fr')
 to_field 'cho_description', literal('Site: Tiresias'), lang('en')
 to_field 'cho_description', column('precision'), prepend('Precision: '), lang('en')
