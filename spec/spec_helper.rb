@@ -90,4 +90,21 @@ RSpec.configure do |config|
   # test failures related to randomization by passing the same `--seed` value
   # as the one that triggered the failure.
   Kernel.srand config.seed
+
+  # stderr and stdout are pretty noisy in this app.  silencing them
+  # does not affect test behavior, but it does make it easier to pore
+  # over output from failed tests, especially in CI, where the amount of
+  # output can overrun CircleCI's limit for in-browser display.
+  # Note also that this shouldn't squelch output from ::DLME::Utils.logger.
+  original_stderr = $stderr
+  original_stdout = $stdout
+  config.before(:all) do
+    # Redirect stderr and stdout
+    $stderr = File.open(File::NULL, 'w') unless ENV['NO_SQUELCH_STDERR']
+    $stdout = File.open(File::NULL, 'w') unless ENV['NO_SQUELCH_STDOUT']
+  end
+  config.after(:all) do
+    $stderr = original_stderr unless ENV['NO_SQUELCH_STDERR']
+    $stdout = original_stdout unless ENV['NO_SQUELCH_STDOUT']
+  end
 end
