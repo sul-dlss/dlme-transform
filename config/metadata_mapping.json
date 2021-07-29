@@ -1766,25 +1766,5 @@
       "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
       "inst_id": "yale"
     }
-  },
-  {
-    "trajects": [
-      "yale_medical_config.rb"
-    ],
-    "paths": [
-      "yale/medical-manuscripts"
-    ],
-    "extension": ".csv",
-    "settings": {
-      "agg_provider": "Yale University Library",
-      "agg_provider_country": "United States of America",
-      "agg_data_provider": "Yale University Library",
-      "agg_data_provider_country": "United States of America",
-      "agg_provider_ar": "مكتبة جامعة ييل",
-      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "agg_data_provider_ar": "مكتبة جامعة ييل",
-      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "inst_id": "yale"
-    }
   }
 ]
