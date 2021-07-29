@@ -30,6 +30,9 @@ Performance/StringReplacement:
   Exclude:
     - 'traject_configs/**/*'
 
+RSpec/MultipleMemoizedHelpers:
+  Enabled: false
+
 RSpec/NestedGroups:
   Max: 5
 

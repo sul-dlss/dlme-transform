@@ -68,6 +68,20 @@ RSpec.describe Dlme::CLI::Transform do
         expect(mock_file).to have_received(:puts)
           .with(start_with "{\"success\":true,\"records\":2,\"data_path\":\"#{data_dir}\"")
       end
+
+      context 'when a transform error occurs' do
+        let(:error_msg) { '[ERROR] Transformation error' }
+
+        before do
+          allow(Honeybadger).to receive(:notify)
+          allow(mock_transformer).to receive(:transform).and_raise(StandardError, error_msg)
+        end
+
+        it 'notifies honeybadger' do
+          expect { cli.transform }.to raise_error(StandardError, error_msg)
+          expect(Honeybadger).to have_received(:notify).with(error_msg, backtrace: an_instance_of(Array))
+        end
+      end
     end
   end
 end
