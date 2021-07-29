@@ -61,9 +61,9 @@ to_field 'cho_format', extract_fgdc('/*/spdoinfo/rastinfo/rasttype'), strip, lan
 to_field 'cho_has_type', literal('Maps'), lang('en')
 to_field 'cho_has_type', literal('Maps'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_identifier', generate_fgdc_id
-to_field 'cho_is_part_of', extract_fgdc('*/dataqual/lineage/srcinfo/srccite/citeinfo/lworkcit/citeinfo/serinfo/sername')
-to_field 'cho_is_part_of', extract_fgdc('*/dataqual/lineage/srcinfo/srccite/citeinfo/lworkcit/citeinfo/title')
-to_field 'cho_is_part_of', extract_fgdc('*/idinfo/citation/citeinfo/serinfo/sername')
+to_field 'cho_is_part_of', extract_fgdc('*/dataqual/lineage/srcinfo/srccite/citeinfo/lworkcit/citeinfo/serinfo/sername'), lang('en')
+to_field 'cho_is_part_of', extract_fgdc('*/dataqual/lineage/srcinfo/srccite/citeinfo/lworkcit/citeinfo/title'), lang('en')
+to_field 'cho_is_part_of', extract_fgdc('*/idinfo/citation/citeinfo/serinfo/sername'), lang('en')
 to_field 'cho_provenance', extract_fgdc('/*/dataqual/lineage/procstep/proccont/cntinfo/cntorgp/cntorg'), strip, lang('en')
 to_field 'cho_provenance', extract_fgdc('/*/idinfo/citation/citeinfo/origin'), strip, lang('en')
 to_field 'cho_provenance', extract_fgdc('/*/idinfo/crossref/citeinfo/origin'), strip, lang('en')
@@ -84,7 +84,7 @@ to_field 'cho_spatial', extract_fgdc('/*/idinfo/spdom/bounding/eastbc'), strip, 
 to_field 'cho_spatial', extract_fgdc('/*/idinfo/spdom/bounding/northbc'), strip, lang('en')
 to_field 'cho_spatial', extract_fgdc('/*/idinfo/spdom/bounding/southbc'), strip, lang('en')
 to_field 'cho_spatial', extract_fgdc('/*/idinfo/spdom/bounding/westbc'), strip, lang('en')
-to_field 'cho_type', extract_fgdc('/*/dataqual/lineage/srcinfo/srccite/citeinfo/geoform')
+to_field 'cho_type', extract_fgdc('/*/dataqual/lineage/srcinfo/srccite/citeinfo/geoform'), lang('en')
 to_field 'cho_type', extract_fgdc('/*/idinfo/citation/citeinfo/geoform'), strip, lang('en')
 to_field 'cho_type', extract_fgdc('/*/idinfo/crossref/citeinfo/geoform'), strip, lang('en')
 

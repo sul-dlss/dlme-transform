@@ -42,7 +42,7 @@ to_field 'id', extract_json('.id')
 to_field 'cho_title', extract_json('.item.title'), strip, lang('en')
 
 # Cho Other
-to_field 'cho_date', extract_json('.item.date'), strip
+to_field 'cho_date', extract_json('.item.date'), strip, lang('en')
 to_field 'cho_date_range_norm', extract_json('.item.date'), strip, parse_range
 to_field 'cho_date_range_hijri', extract_json('.item.date'), strip, parse_range, hijri_range
 to_field 'cho_dc_rights', extract_json('.item.rights'), strip, lang('en')

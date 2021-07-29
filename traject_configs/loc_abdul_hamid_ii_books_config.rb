@@ -7,6 +7,7 @@ require 'macros/collection'
 require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
+require 'macros/language_extraction'
 require 'macros/normalize_language'
 require 'macros/normalize_type'
 require 'macros/path_to_file'
@@ -17,6 +18,7 @@ extend Macros::Collection
 extend Macros::DateParsing
 extend Macros::DLME
 extend Macros::EachRecord
+extend Macros::LanguageExtraction
 extend Macros::NormalizeLanguage
 extend Macros::NormalizeType
 extend Macros::PathToFile
@@ -39,12 +41,12 @@ to_field 'dlme_source_file', path_to_file
 
 # Cho Required
 to_field 'id', extract_json('.id')
-to_field 'cho_title', extract_json('.item.title'), strip
+to_field 'cho_title', extract_json('.item.title'), strip, arabic_script_lang_or_default('ar-Arab', 'und_latn')
 
 # Cho Other
-to_field 'cho_alternative', extract_json('.item.other_title[0]'), strip
+to_field 'cho_alternative', extract_json('.item.other_title[0]'), strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
 to_field 'cho_contributor', extract_json('.item.contributors[0]'), strip, lang('en')
-to_field 'cho_date', extract_json('.item.date'), strip
+to_field 'cho_date', extract_json('.item.date'), strip, lang('en')
 to_field 'cho_date_range_norm', extract_json('.item.date'), strip, parse_range
 to_field 'cho_date_range_hijri', extract_json('.item.date'), strip, parse_range, hijri_range
 to_field 'cho_dc_rights', literal('The contents of the Library of Congress Sultan Abdul-Hamid II Collection are in the public domain and are free to use and reuse. Credit Line: Library of Congress, African and Middle East Division, Sultan Abdul-Hamid II Collection.'), lang('en')

@@ -7,6 +7,7 @@ require 'macros/collection'
 require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
+require 'macros/language_extraction'
 require 'macros/normalize_language'
 require 'macros/path_to_file'
 require 'macros/string_helper'
@@ -20,6 +21,7 @@ extend Macros::Cambridge
 extend Macros::DateParsing
 extend Macros::DLME
 extend Macros::EachRecord
+extend Macros::LanguageExtraction
 extend Macros::NormalizeLanguage
 extend Macros::PathToFile
 extend Macros::StringHelper
@@ -51,10 +53,10 @@ to_field 'id', lambda { |_record, accumulator, context|
   bare_id = default_identifier(context)
   accumulator << identifier_with_prefix(context, bare_id)
 }
-to_field 'cho_title', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:title[1]"), squish, default('Untitled', 'بدون عنوان')
+to_field 'cho_title', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:title[1]"), squish, default('Untitled', 'بدون عنوان'), lang('en')
 
 # Cho other
-to_field 'cho_alternative', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:title[@type='alt']"), squish
+to_field 'cho_alternative', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:title[@type='alt']"), squish, hebrew_script_lang_or_default('he', 'en')
 to_field 'cho_creator', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:author"), strip, lang('en')
 to_field 'cho_date', extract_tei("#{MS_DESC}/#{MS_ORIGIN}/tei:origDate"), squish, strip, lang('en')
 to_field 'cho_date_range_norm', cambridge_gregorian_range

@@ -73,7 +73,7 @@ to_field 'cho_title', extract_qnl_en('mods:titleInfo/mods:title'), lang('en')
 # CHO Other
 to_field 'cho_contributor', name_with_role('en'), lang('en')
 to_field 'cho_contributor', name_with_role('ar'), lang('ar-Arab')
-to_field 'cho_date', extract_qnl_en('mods:originInfo/mods:dateIssued'), strip
+to_field 'cho_date', extract_qnl_en('mods:originInfo/mods:dateIssued'), strip, lang('en')
 to_field 'cho_date_range_norm', extract_qnl_en('mods:originInfo/mods:dateIssued'), strip, gsub('/', '-'), parse_range
 to_field 'cho_date_range_hijri', extract_qnl_en('mods:originInfo/mods:dateIssued'),
          strip, gsub('/', '-'), parse_range, hijri_range

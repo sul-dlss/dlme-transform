@@ -66,9 +66,9 @@ to_field 'cho_title', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:titl
          tei_lower_resource_language
 
 # CHO Other
-to_field 'cho_creator', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:author[1]"), first_only, strip
-to_field 'cho_creator', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:author[2]"), first_only, strip
-to_field 'cho_creator', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:author[3]"), first_only, strip
+to_field 'cho_creator', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:author[1]"), first_only, strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
+to_field 'cho_creator', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:author[2]"), first_only, strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
+to_field 'cho_creator', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:author[3]"), first_only, strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
 to_field 'cho_date', extract_tei("#{MS_DESC}/#{MS_ORIGIN}/tei:origdate"), strip, lang('en')
 to_field 'cho_date_range_norm', openn_gregorian_range
 to_field 'cho_date_range_hijri', openn_gregorian_range, hijri_range

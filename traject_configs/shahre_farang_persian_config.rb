@@ -36,7 +36,7 @@ to_field 'cho_title', extract_json('.title'), strip, lang('fa-Arab')
 
 # Cho Other
 to_field 'cho_creator', extract_json('.author'), strip, lang('fa-Arab')
-to_field 'cho_date', extract_json('.published'), strip
+to_field 'cho_date', extract_json('.published'), strip, lang('en')
 to_field 'cho_date_range_norm', extract_json('.published'), strip, parse_range
 to_field 'cho_date_range_hijri', extract_json('.published'), strip, parse_range, hijri_range
 to_field 'cho_description', extract_json('.summary'), strip, lang('fa-Arab')

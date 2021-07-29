@@ -46,7 +46,7 @@ to_field 'cho_title', extract_json('.item.other_title[0]'), strip, gsub('/', '')
 
 # Cho Other
 to_field 'cho_contributor', extract_json('.item.contributors[0]'), strip, lang('en')
-to_field 'cho_date', extract_json('.item.date'), strip
+to_field 'cho_date', extract_json('.item.date'), strip, lang('en')
 to_field 'cho_date_range_norm', extract_json('.item.date'), strip, parse_range
 to_field 'cho_date_range_hijri', extract_json('.item.date'), strip, parse_range, hijri_range
 to_field 'cho_dc_rights', literal('The Library of Congress presents the Eltaher Pamphlet Collection for educational and research purposes in accordance with fair use under United States copyright law. Researchers should watch for modern documents that may be copyrighted (for example, published in the United States less than 95 years ago, or unpublished and the author died less than 70 years ago). Rights assessment is your responsibility. The written permission of the copyright owners in materials not in the public domain is required for distribution, reproduction, or other use of protected items beyond that allowed by fair use or other statutory exemptions. There may also be content that is protected under the copyright or neighboring-rights laws of other nations. Permissions may additionally be required from holders of other rights (such as publicity and/or privacy rights). Whenever possible, we provide information that we have about copyright owners and related matters in the catalog records, finding aids and other texts that accompany collections. However, the information we have may not be accurate or complete. More about Copyright and other Restrictions. For guidance about compiling full citations consult Citing Primary Sources. Credit Line: Library of Congress, African and Middle East Division, Eltaher Pamphlet Collection.'), lang('en')
@@ -65,7 +65,7 @@ to_field 'cho_language', extract_json('.language[0]'), strip, normalize_language
 to_field 'cho_language', extract_json('.language[0]'), strip, normalize_language, translation_map('norm_languages_to_ar'), lang('ar-Arab')
 to_field 'cho_publisher', extract_json('.item.created_published[0]'), strip, lang('en')
 to_field 'cho_spatial', extract_json('.location[0]'), strip, lang('en')
-to_field 'cho_subject', extract_json('.subject[0]'), strip
+to_field 'cho_subject', extract_json('.subject[0]'), strip, lang('en')
 to_field 'cho_type', extract_json('.original_format[0]'), strip, lang('en')
 
 # Agg

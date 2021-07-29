@@ -46,7 +46,7 @@ to_field 'cho_title', extract_json('.item.other_title[0]'), strip, arabic_script
 
 # Cho Other
 to_field 'cho_contributor', extract_json('item.contributors[0]'), strip, lang('en')
-to_field 'cho_date', extract_json('item.date'), strip
+to_field 'cho_date', extract_json('item.date'), strip, lang('en')
 to_field 'cho_date_range_norm', extract_json('item.date'), strip, parse_range
 to_field 'cho_date_range_hijri', extract_json('item.date'), strip, parse_range, hijri_range
 to_field 'cho_dc_rights', literal('The contents of the Library of Congress Persian Language Manuscript Project are in the public domain or have no known copyright restrictions and are free to use and reuse. Credit Line: Library of Congress, African and Middle East Division, Near East Section Persian Manuscript Collection'), lang('en')

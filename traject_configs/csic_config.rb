@@ -8,6 +8,7 @@ require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/dlme_marc'
 require 'macros/each_record'
+require 'macros/language_extraction'
 require 'macros/normalize_language'
 require 'macros/timestamp'
 require 'macros/version'
@@ -21,6 +22,7 @@ extend Macros::DLME
 extend Macros::DateParsing
 extend Macros::DlmeMarc
 extend Macros::EachRecord
+extend Macros::LanguageExtraction
 extend Macros::NormalizeLanguage
 extend Macros::Timestamp
 extend Macros::Version
@@ -41,14 +43,14 @@ to_field 'transform_timestamp', timestamp
 
 # CHO Required
 to_field 'id', extract_marc('001'), first_only
-to_field 'cho_title', extract_marc('245ab', alternate_script: false), trim_punctuation
+to_field 'cho_title', extract_marc('245ab', alternate_script: false), trim_punctuation, arabic_script_lang_or_default('ar-Arab', 'es')
 
 # CHO Other
-to_field 'cho_alternative', extract_marc('130a:240a:246ab', alternate_script: false), trim_punctuation
-to_field 'cho_alternative', extract_marc('740a', alternate_script: false), trim_punctuation
-to_field 'cho_contributor', extract_marc('700abce:710abcde:711acde:720ae', alternate_script: false), trim_punctuation
-to_field 'cho_creator', extract_marc('100abc:110abcd:111acd', alternate_script: false), trim_punctuation
-to_field 'cho_date', extract_marc('260c')
+to_field 'cho_alternative', extract_marc('130a:240a:246ab', alternate_script: false), trim_punctuation, arabic_script_lang_or_default('ar-Arab', 'es')
+to_field 'cho_alternative', extract_marc('740a', alternate_script: false), trim_punctuation, arabic_script_lang_or_default('ar-Arab', 'es')
+to_field 'cho_contributor', extract_marc('700abce:710abcde:711acde:720ae', alternate_script: false), trim_punctuation, arabic_script_lang_or_default('ar-Arab', 'es')
+to_field 'cho_creator', extract_marc('100abc:110abcd:111acd', alternate_script: false), trim_punctuation, arabic_script_lang_or_default('ar-Arab', 'es')
+to_field 'cho_date', extract_marc('260c'), arabic_script_lang_or_default('und-Latn')
 to_field 'cho_date_range_norm', extract_marc('008[06-14]'), marc_date_range
 to_field 'cho_date_range_hijri', extract_marc('008[06-14]'), marc_date_range, hijri_range
 to_field 'cho_description', extract_marc('500a:505agrtu:520abcu', alternate_script: false), strip, lang('es')

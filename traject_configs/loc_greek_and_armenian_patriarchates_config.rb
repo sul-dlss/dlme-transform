@@ -43,7 +43,7 @@ to_field 'cho_title', extract_json('.title'), strip, lang('en')
 
 # Cho Other
 to_field 'cho_contributor', extract_json('.contributor[0]'), strip, lang('en')
-to_field 'cho_date', extract_json('.date'), strip
+to_field 'cho_date', extract_json('.date'), strip, lang('en')
 to_field 'cho_date_range_norm', extract_json('.date'), strip, parse_range
 to_field 'cho_date_range_hijri', extract_json('.date'), strip, parse_range, hijri_range
 to_field 'cho_dc_rights', literal('The contents of the Manuscripts in the Libraries of the Greek and Armenian Patriarchates in Jerusalem are in the public domain and are free to use and reuse. Credit Line: Library of Congress, African and Middle East Division, Manuscripts in the Libraries of the Greek and Armenian Patriarchates in Jerusalem.'), lang('en')
