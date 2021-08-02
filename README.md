@@ -220,7 +220,7 @@ All you will need to do is publish a new release on github; a webhook will autom
 
 Terraform tells AWS which tagged image of dlme-transform to use for staging and production environments.
 
-In the case of this code base, dlme-transform, a PR to https://github.com/sul-dlss/terraform-aws must be made that updates the "image" variable for dlme-transform, e.g. `"suldlss/dlme-transform:1.1.3"`.  For an example, see https://github.com/sul-dlss/terraform-aws/pull/525.
+In the case of this code base, dlme-transform, a PR to https://github.com/sul-dlss/terraform-aws must be made that updates the "image" variable for dlme-transform, e.g. `"suldlss/dlme-transform:1.1.3"`.  For an example, see https://github.com/sul-dlss/terraform-aws/pull/860.
 
 Some more info here https://github.com/sul-dlss/terraform-aws/blob/main/organizations/staging/dlme/README.md, https://github.com/sul-dlss/terraform-aws/tree/main/organizations/production/dlme
 
