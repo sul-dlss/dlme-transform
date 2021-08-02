@@ -15,8 +15,8 @@ module Macros
       # caller_locations[0] is the current stack frame, and caller_locations[1] is its direct caller.
       config_file_path = caller_locations(1, 1).first.path
 
-      lambda do |_record, context|
-        context.output_hash.select { |key, _values| fields.include?(key) }.each do |key, values|
+      lambda do |_record, context| # rubocop:disable  Metrics/BlockLength
+        context.output_hash.select { |key, _values| fields.include?(key) }.each do |key, values| # rubocop:disable  Metrics/BlockLength
           result = Hash.new { [] }
 
           unique_values = values.uniq
@@ -30,8 +30,8 @@ module Macros
             when Hash
               sub_values = value[:values].reject(&:nil?).reject(&:empty?)
               html_cleaned = html_check(sub_values)
-              unless html_cleaned.sort == sub_values.sort
-                ::DLME::Utils.logger.warn("#{file_path}: key=#{key} #{value} contains HTML")
+              unless html_cleaned == sub_values
+                ::DLME::Utils.logger.warn("#{config_file_path}: key=#{key} contains HTML")
                 sub_values = html_cleaned
               end
               result[value[:language]] += sub_values.uniq.tap do |unique_sub_values|
