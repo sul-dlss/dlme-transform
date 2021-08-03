@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'macros/language_extraction'
+require 'macros/string_helper'
 
 RSpec.describe Macros::LanguageExtraction do
   let(:klass) do
@@ -10,6 +11,16 @@ RSpec.describe Macros::LanguageExtraction do
     end
   end
   let(:instance) { klass.new }
+  subject(:indexer) do
+    Traject::Indexer.new.tap do |indexer|
+      indexer.instance_eval do
+        extend Macros::StringHelper
+        extend Macros::LanguageExtraction
+        extend TrajectPlus::Macros
+        extend TrajectPlus::Macros::JSON
+      end
+    end
+  end
 
   describe 'arabic_script_lang_or_default' do
     context 'when extracted string contains Arabic characters' do
@@ -31,21 +42,28 @@ RSpec.describe Macros::LanguageExtraction do
   end
 
   describe 'hebrew_script_lang_or_default' do
-    context 'when extracted string contains Hebrew characters' do
-      it 'returns the correct script value hebrew_script_lang' do
-        extracted_string = 'ספר בחכמות הרפואות'
-        callable = instance.hebrew_script_lang_or_default('he', 'en')
-        expect(callable.call(nil, [extracted_string])).to eq([{ language: 'he', values: [extracted_string] }])
+    # Sample records
+    let(:he_value) { { 'value' => 'ספר בחכמות הרפואות' } }
+    let(:default_value) { { 'value' => 'value in default script' } }
+    # let(:both_values) { { 'value' => 'ספר בחכמות הרפואות',  'value' => 'value in default script' } }
+    let(:both_values) { { 'value' => ['ספר בחכמות הרפואות', 'value in default script'] } }
+
+    before do
+      indexer.instance_eval do
+        to_field 'field', extract_json('.value'), hebrew_script_lang_or_default('he', 'en')
       end
     end
 
-    context 'when extracted strings contain Hebrew and default characters' do
-      it 'returns the correct script value for each string' do
-        extracted_values = ['ספר בחכמות הרפואות', 'default values']
-        callable = instance.hebrew_script_lang_or_default('he', 'en')
-        expect(callable.call(nil, [extracted_values[0]])).to eq([{ language: 'he', values: [extracted_values[0]] }])
-        expect(callable.call(nil, [extracted_values[1]])).to eq([{ language: 'en', values: [extracted_values[1]] }])
-      end
+    it 'assigns he value' do
+      expect(indexer.map_record(he_value)).to eq({'field'=>[{:language=>'he', :values=>['ספר בחכמות הרפואות']}]})
+    end
+
+    it 'assigns default value' do
+      expect(indexer.map_record(default_value)).to eq({'field'=>[{:language=>'en', :values=>['value in default script']}]})
+    end
+
+    it 'assigns both value' do
+      expect(indexer.map_record(both_values)).to eq({'field'=>[{:language=>'en', :values=>['value in default script']}, {:language=>'he', :values=>['ספר בחכמות הרפואות']}]})
     end
   end
 end
