@@ -41,9 +41,9 @@ module Macros
         if ar_values.present? && default_values.present?
           accumulator.replace([{ language: arabic_script_lang, values: ar_values }])
           accumulator << { language: default, values: default_values } if default_values.present?
-        elsif ar_values.present? && default_values.empty?
+        elsif ar_values.present?
           accumulator.replace([{ language: arabic_script_lang, values: ar_values }])
-        elsif ar_values.empty? && default_values.present?
+        elsif default_values.present?
           accumulator.replace([{ language: default, values: default_values }])
         end
       end
