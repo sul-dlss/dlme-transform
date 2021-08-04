@@ -4,13 +4,6 @@ require 'macros/language_extraction'
 require 'macros/string_helper'
 
 RSpec.describe Macros::LanguageExtraction do
-  let(:klass) do
-    Class.new do
-      include TrajectPlus::Macros
-      include Macros::LanguageExtraction
-    end
-  end
-  let(:instance) { klass.new }
   subject(:indexer) do
     Traject::Indexer.new.tap do |indexer|
       indexer.instance_eval do
@@ -21,6 +14,14 @@ RSpec.describe Macros::LanguageExtraction do
       end
     end
   end
+
+  let(:klass) do
+    Class.new do
+      include TrajectPlus::Macros
+      include Macros::LanguageExtraction
+    end
+  end
+  let(:instance) { klass.new }
 
   describe 'arabic_script_lang_or_default' do
     context 'when extracted string contains Arabic characters' do
@@ -55,15 +56,15 @@ RSpec.describe Macros::LanguageExtraction do
     end
 
     it 'assigns he value' do
-      expect(indexer.map_record(he_value)).to eq({'field'=>[{:language=>'he', :values=>['ספר בחכמות הרפואות']}]})
+      expect(indexer.map_record(he_value)).to eq({ 'field' => [{ language: 'he', values: ['ספר בחכמות הרפואות'] }] })
     end
 
     it 'assigns default value' do
-      expect(indexer.map_record(default_value)).to eq({'field'=>[{:language=>'en', :values=>['value in default script']}]})
+      expect(indexer.map_record(default_value)).to eq({ 'field' => [{ language: 'en', values: ['value in default script'] }] })
     end
 
     it 'assigns both value' do
-      expect(indexer.map_record(both_values)).to eq({'field'=>[{:language=>'en', :values=>['value in default script']}, {:language=>'he', :values=>['ספר בחכמות הרפואות']}]})
+      expect(indexer.map_record(both_values)).to eq({ 'field' => [{ language: 'en', values: ['value in default script'] }, { language: 'he', values: ['ספר בחכמות הרפואות'] }] })
     end
   end
 end
