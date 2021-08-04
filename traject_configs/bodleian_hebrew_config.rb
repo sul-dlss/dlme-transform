@@ -9,6 +9,7 @@ require 'macros/dlme'
 require 'macros/each_record'
 require 'macros/language_extraction'
 require 'macros/normalize_language'
+require 'macros/path_to_file'
 require 'macros/timestamp'
 require 'macros/version'
 
@@ -18,6 +19,7 @@ extend Macros::DLME
 extend Macros::EachRecord
 extend Macros::LanguageExtraction
 extend Macros::NormalizeLanguage
+extend Macros::PathToFile
 extend Macros::Timestamp
 extend Macros::Version
 extend TrajectPlus::Macros
@@ -31,6 +33,9 @@ end
 # Set Version & Timestamp on each record
 to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
+
+# File path
+to_field 'dlme_source_file', path_to_file
 
 # Cho Required
 to_field 'id', extract_json('.rendering'),

@@ -46,12 +46,11 @@ RSpec.describe Macros::LanguageExtraction do
     # Sample records
     let(:he_value) { { 'value' => 'ספר בחכמות הרפואות' } }
     let(:default_value) { { 'value' => 'value in default script' } }
-    let(:both_values) { [ { 'value' => 'ספר בחכמות הרפואות' }, { 'value' => 'value in default script' } ] }
-    # let(:both_values) { { 'value' => ['ספר בחכמות הרפואות', 'value in default script'] } }
+    let(:both_values) { { 'value' => 'ספר בחכמות הרפואות|value in default script' } }
 
     before do
       indexer.instance_eval do
-        to_field 'field', extract_json('value'), hebrew_script_lang_or_default('he', 'en')
+        to_field 'field', extract_json('value'), split('|'), hebrew_script_lang_or_default('he', 'en')
       end
     end
 
@@ -64,7 +63,7 @@ RSpec.describe Macros::LanguageExtraction do
     end
 
     it 'assigns both value' do
-      expect(indexer.map_record(both_values)).to eq({ 'field' => [{ language: 'en', values: ['value in default script'] }, { language: 'he', values: ['ספר בחכמות הרפואות'] }] })
+      expect(indexer.map_record(both_values)).to eq({ 'field' => [{ language: 'he', values: ['ספר בחכמות הרפואות'] }, { language: 'en', values: ['value in default script'] }] })
     end
   end
 end
