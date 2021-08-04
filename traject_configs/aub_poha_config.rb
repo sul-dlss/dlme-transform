@@ -107,18 +107,22 @@ to_field 'agg_is_shown_at' do |_record, accumulator, context|
     'wr_id' => [extract_poha('/*/dc:identifierURI'), strip]
   )
 end
-to_field 'agg_preview' do |_record, accumulator, context|
-  accumulator << transform_values(
-    context,
-    'wr_dc_rights' => [literal('Available under a Creative Commons Attribution-Noncommercial-NoDerivatives '\
-                               '4.0 International License. Anyone is free to download and share works under '\
-                               'this license as long as they give credit for the original creation, the '\
-                               'shared work is not changed and not used for commercial purposes. '\
-                               'Attribution should be given to "AUB University Libraries." e.g. "Campus '\
-                               '1967" by AUB University Libraries is licensed under CC BY-NC-ND 4.0')],
-    'wr_edm_rights' => [literal('CC BY-ND: https://creativecommons.org/licenses/by-nd/4.0/')],
-    'wr_id' => [extract_poha('/*/dc:thumbnail')]
-  )
+each_record do |record|
+  next if record.xpath('/*/dc:thumbnail', NS).map(&:text).blank?
+
+  to_field 'agg_preview' do |_record, accumulator, context|
+    accumulator << transform_values(
+      context,
+      'wr_dc_rights' => [literal('Available under a Creative Commons Attribution-Noncommercial-NoDerivatives '\
+                           '4.0 International License. Anyone is free to download and share works under '\
+                           'this license as long as they give credit for the original creation, the '\
+                           'shared work is not changed and not used for commercial purposes. '\
+                           'Attribution should be given to "AUB University Libraries." e.g. "Campus '\
+                           '1967" by AUB University Libraries is licensed under CC BY-NC-ND 4.0')],
+      'wr_edm_rights' => [literal('CC BY-ND: https://creativecommons.org/licenses/by-nd/4.0/')],
+      'wr_id' => [extract_poha('/*/dc:thumbnail')]
+    )
+  end
 end
 to_field 'agg_provider', provider, lang('en')
 to_field 'agg_provider', provider_ar, lang('ar-Arab')
