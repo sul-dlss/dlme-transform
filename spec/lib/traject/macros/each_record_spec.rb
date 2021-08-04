@@ -54,6 +54,19 @@ RSpec.describe Macros::EachRecord do
           expect(::DLME::Utils.logger).to have_received(:warn).with(a_string_matching(err_msg))
         end
       end
+
+      context 'when context has html tags' do
+        before do
+          mock_context.output_hash = { 'cho_title' => [{ language: 'en', values: ['<p>title1</p>', 'title2'] }] }
+          allow(::DLME::Utils.logger).to receive(:warn)
+        end
+
+        it 'logs a warning indicating html tags were found' do
+          macro.call(nil, mock_context)
+          err_msg = 'each_record_spec.rb: key=cho_title contains HTML'
+          expect(::DLME::Utils.logger).to have_received(:warn).with(a_string_matching(err_msg))
+        end
+      end
     end
 
     context 'when output hash has hash values for given fields' do
@@ -178,6 +191,13 @@ RSpec.describe Macros::EachRecord do
         macro.call(nil, mock_context)
         expect(mock_context.output_hash).not_to include('cho_type_facet')
       end
+    end
+  end
+
+  describe '#html_check' do
+    it 'returns just the text for values containing html tags' do
+      values = instance.html_check(['ab', 'cd', '<p id="23">homer</p>'])
+      expect(values).to eq(['ab', 'cd', 'homer'])
     end
   end
 end

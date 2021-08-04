@@ -15,8 +15,8 @@ module Macros
       # caller_locations[0] is the current stack frame, and caller_locations[1] is its direct caller.
       config_file_path = caller_locations(1, 1).first.path
 
-      lambda do |_record, context|
-        context.output_hash.select { |key, _values| fields.include?(key) }.each do |key, values|
+      lambda do |_record, context| # rubocop:disable  Metrics/BlockLength
+        context.output_hash.select { |key, _values| fields.include?(key) }.each do |key, values| # rubocop:disable  Metrics/BlockLength
           result = Hash.new { [] }
 
           unique_values = values.uniq
@@ -29,6 +29,11 @@ module Macros
             case value
             when Hash
               sub_values = value[:values].reject(&:nil?).reject(&:empty?)
+              html_cleaned = html_check(sub_values)
+              unless html_cleaned == sub_values
+                ::DLME::Utils.logger.warn("#{config_file_path}: key=#{key} contains HTML")
+                sub_values = html_cleaned
+              end
               result[value[:language]] += sub_values.uniq.tap do |unique_sub_values|
                 unless unique_sub_values.length == sub_values.length
                   ::DLME::Utils.logger.warn("#{config_file_path}: key=#{key}; sub_values=#{sub_values}; sub_values array contains duplicates.  "\
@@ -73,6 +78,17 @@ module Macros
       return non_nil_values if non_nil_values.count < 2
 
       [non_nil_values.first, non_nil_values.join(HIER_LEVEL_SEP_CHAR)]
+    end
+
+    # helper method for HTML tag checks in values
+    def html_check(values)
+      cleaned_values = []
+      values.each do |value|
+        html_fragment = Nokogiri::HTML.fragment(value)
+        value = html_fragment.text unless html_fragment.elements.empty?
+        cleaned_values.push(value)
+      end
+      cleaned_values
     end
   end
 end
