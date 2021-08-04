@@ -63,7 +63,6 @@ module Macros
           he_values = []
           default_values = []
           accumulator.each do |val|
-            val = translate_role_to_ar(val)
             lang_code = val.match?(/[תשרקץצףפעסןנםמלךכיטחזוהדגבא]/) ? hebrew_script_lang : default
             he_values << val if lang_code == hebrew_script_lang
             default_values << val if lang_code == default
