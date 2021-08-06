@@ -3,6 +3,8 @@
 module Macros
   # Macros for post-processing data
   module EachRecord
+    class UnspecifiedLanguageError < RuntimeError; end
+
     # Converts one or more fields from arrays or strings into hashes with language codes
     # NOTE: do *not* include cho_type_facet in fields list
     # @example
@@ -18,11 +20,11 @@ module Macros
       lambda do |_record, context| # rubocop:disable  Metrics/BlockLength
         context.output_hash.select { |key, _values| fields.include?(key) }.each do |key, values| # rubocop:disable  Metrics/BlockLength
           result = Hash.new { [] }
+          log_msg_template = "#{config_file_path}: key=#{key}; %<msg>s.  Check source data and/or traject config for errors."
 
           unique_values = values.uniq
-          unless unique_values.length == values.length
-            ::DLME::Utils.logger.warn("#{config_file_path}: key=#{key}; values=#{values}; values array contains duplicates.  "\
-                                      'Check source data and/or traject config for errors.')
+          unless unique_values.length == values.length # rubocop:disable Style/IfUnlessModifier these lines are long for a one liner
+            ::DLME::Utils.logger.warn(format(log_msg_template, { msg: "values=#{values}; values array contains duplicates" }))
           end
 
           unique_values.each do |value|
@@ -35,13 +37,14 @@ module Macros
                 sub_values = html_cleaned
               end
               result[value[:language]] += sub_values.uniq.tap do |unique_sub_values|
-                unless unique_sub_values.length == sub_values.length
-                  ::DLME::Utils.logger.warn("#{config_file_path}: key=#{key}; sub_values=#{sub_values}; sub_values array contains duplicates.  "\
-                                            'Check source data and/or traject config for errors.')
+                unless unique_sub_values.length == sub_values.length # rubocop:disable Style/IfUnlessModifier 2 lines good, one line bad
+                  ::DLME::Utils.logger.warn(format(log_msg_template, { msg: "sub_values=#{sub_values}; sub_values array contains duplicates" }))
                 end
               end
             else
-              result['none'] += Array(value)
+              err_msg = format(log_msg_template, { msg: "value=#{value}; 'none' not allowed as IR language key, language must be specified" })
+              ::DLME::Utils.logger.error(err_msg)
+              raise UnspecifiedLanguageError, err_msg
             end
           end
 

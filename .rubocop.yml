@@ -33,6 +33,9 @@ Performance/StringReplacement:
 RSpec/MultipleMemoizedHelpers:
   Enabled: false
 
+RSpec/MultipleExpectations:
+  Max: 5 # arbitrary limit to start, the default of 1 is too low
+
 RSpec/NestedGroups:
   Max: 5
 

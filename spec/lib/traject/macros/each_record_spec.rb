@@ -28,12 +28,20 @@ RSpec.describe Macros::EachRecord do
       end
     end
 
-    context 'when output hash has string values for given fields' do
-      let(:output_hash) { { 'cho_title' => ['title1'] } }
+    context 'when output hash has string values for given fields (i.e. no language specified)' do
+      before do
+        allow(::DLME::Utils.logger).to receive(:error)
+      end
 
-      it 'accumulates values in a hash with "none" key' do
-        macro.call(nil, mock_context)
-        expect(mock_context.output_hash).to eq('cho_title' => { 'none' => ['title1'] })
+      let(:output_hash) { { 'cho_title' => ['title1'] } }
+      let(:missing_lang_err_msg) do
+        "each_record_spec.rb: key=cho_title; value=.*; 'none' not allowed as IR language key, "\
+        'language must be specified.  Check source data and/or traject config for errors'
+      end
+
+      it 'logs an error indicating that the output is missing language' do
+        expect { macro.call(nil, mock_context) }.to raise_error(Macros::EachRecord::UnspecifiedLanguageError, /#{missing_lang_err_msg}/)
+        expect(::DLME::Utils.logger).to have_received(:error).with(a_string_matching(missing_lang_err_msg))
       end
 
       context 'when context has duplicate values' do
@@ -42,13 +50,8 @@ RSpec.describe Macros::EachRecord do
           allow(::DLME::Utils.logger).to receive(:warn)
         end
 
-        it 'accumulates only the unique values in a hash with "none" key' do
-          macro.call(nil, mock_context)
-          expect(mock_context.output_hash).to eq('cho_title' => { 'none' => ['title1'] })
-        end
-
         it 'logs a warning indicating that duplicate values were found' do
-          macro.call(nil, mock_context)
+          expect { macro.call(nil, mock_context) }.to raise_error(Macros::EachRecord::UnspecifiedLanguageError, /#{missing_lang_err_msg}/)
           err_msg = Regexp.escape('each_record_spec.rb: key=cho_title; values=["title1", "title1"]; values array contains duplicates.  '\
                                   'Check source data and/or traject config for errors')
           expect(::DLME::Utils.logger).to have_received(:warn).with(a_string_matching(err_msg))
