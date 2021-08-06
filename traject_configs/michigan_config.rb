@@ -46,7 +46,7 @@ to_field 'dlme_source_file', path_to_file
 
 # CHO Required
 to_field 'id', extract_marc('001'), first_only
-to_field 'cho_title', extract_marc('245ab', alternate_script: false), trim_punctuation
+to_field 'cho_title', extract_marc('245ab', alternate_script: false), trim_punctuation, lang('und-Latn')
 to_field 'cho_title', extract_marc('245ab', alternate_script: :only), trim_punctuation, lang('und-Arab')
 
 # Cho Additional
@@ -56,7 +56,7 @@ to_field 'cho_contributor', extract_marc('700abce:710abcde:711acde:720ae', alter
 to_field 'cho_contributor', extract_marc('700abce:710abcde:711acde:720ae', alternate_script: :only), trim_punctuation, lang('und-Arab')
 to_field 'cho_creator', extract_marc('100abc:110abcd:111acd', alternate_script: false), trim_punctuation, lang('und-Latn')
 to_field 'cho_creator', extract_marc('100abc:110abcd:111acd', alternate_script: :only), trim_punctuation, lang('und-Arab')
-to_field 'cho_date', extract_marc('260c')
+to_field 'cho_date', extract_marc('260c'), lang('en')
 to_field 'cho_date_range_norm', extract_marc('008[06-14]'), marc_date_range
 to_field 'cho_date_range_hijri', extract_marc('008[06-14]'), marc_date_range, hijri_range
 to_field 'cho_dc_rights', literal('Public Domain'), lang('en')

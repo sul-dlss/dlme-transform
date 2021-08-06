@@ -107,6 +107,7 @@ RSpec/DescribedClass:
     - 'spec/lib/traject/macros/mods_spec.rb'
     - 'spec/lib/traject/macros/string_helper_spec.rb'
     - 'spec/lib/traject/macros/title_extraction_spec.rb'
+    - 'spec/lib/traject/macros/language_extraction_spec.rb'
 
 # Offense count: 10
 # Configuration parameters: Max, CountAsOne.

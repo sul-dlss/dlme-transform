@@ -41,9 +41,39 @@ module Macros
         if ar_values.present? && default_values.present?
           accumulator.replace([{ language: arabic_script_lang, values: ar_values }])
           accumulator << { language: default, values: default_values } if default_values.present?
-        elsif ar_values.present? && default_values.empty?
+        elsif ar_values.present?
           accumulator.replace([{ language: arabic_script_lang, values: ar_values }])
-        elsif ar_values.empty? && default_values.present?
+        elsif default_values.present?
+          accumulator.replace([{ language: default, values: default_values }])
+        end
+      end
+    end
+    # rubocop:enable Metrics/PerceivedComplexity, Metrics/CyclomaticComplexity, Metrics/AbcSize, Metrics/MethodLength
+
+    # Returns the value extracted by 'to_field' reformated as a hash with accompanying BCP47 language code.
+    # Should only be used to differentiate between an Hebrew script language and a Latin script
+    # language '-Latn'.
+    # @return [Proc] a proc that traject can call for each record
+    # @example
+    # arabic_script_lang_or_default('he', 'en') => {'he': ['ספר בחכמות הרפואות']}
+    # rubocop:disable Metrics/PerceivedComplexity, Metrics/CyclomaticComplexity, Metrics/AbcSize, Metrics/MethodLength
+    def hebrew_script_lang_or_default(hebrew_script_lang, default)
+      lambda do |_record, accumulator|
+        if accumulator
+          he_values = []
+          default_values = []
+          accumulator.each do |val|
+            lang_code = val.match?(/[תשרקץצףפעסןנםמלךכיטחזוהדגבא]/) ? hebrew_script_lang : default
+            he_values << val if lang_code == hebrew_script_lang
+            default_values << val if lang_code == default
+          end
+        end
+        if he_values.present? && default_values.present?
+          accumulator.replace([{ language: hebrew_script_lang, values: he_values }])
+          accumulator << { language: default, values: default_values }
+        elsif he_values.present?
+          accumulator.replace([{ language: hebrew_script_lang, values: he_values }])
+        elsif default_values.present?
           accumulator.replace([{ language: default, values: default_values }])
         end
       end

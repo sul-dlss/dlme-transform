@@ -43,7 +43,7 @@ to_field 'cho_title', extract_json('.title'), strip, gsub('[', ''), gsub(']', ''
 
 # Cho Other
 to_field 'cho_contributor', extract_json('.contributor[0]'), strip, lang('en')
-to_field 'cho_date', extract_json('.date'), strip
+to_field 'cho_date', extract_json('.date'), strip, lang('en')
 to_field 'cho_date_range_norm', extract_json('.date'), strip, parse_range
 to_field 'cho_date_range_hijri', extract_json('.date'), strip, parse_range, hijri_range
 to_field 'cho_dc_rights', literal("The Library of Congress does not own rights to material in its collections. Therefore, it does not license or charge permission fees for use of such material and cannot grant or deny permission to publish or otherwise distribute the material. Ultimately, it is the researcher's obligation to assess copyright or other use restrictions and obtain permission from third parties when necessary before publishing or otherwise distributing materials found in the Library's collections. For information about reproducing, publishing, and citing material from this collection, as well as access to the original items, see: Abdul Hamid II Collection - Rights and Restrictions Information."), lang('en')

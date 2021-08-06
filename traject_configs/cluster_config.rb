@@ -40,7 +40,7 @@ to_field 'cho_creator', column('creator_en'), strip, lang('en')
 to_field 'cho_creator', column('creator_ar'), strip, lang('ar-Arab')
 to_field 'cho_contributor', column('contributor_en'), strip, lang('en')
 to_field 'cho_contributor', column('contributor_ar'), strip, lang('ar-Arab')
-to_field 'cho_date', column('date'), strip
+to_field 'cho_date', column('date'), strip, lang('en')
 to_field 'cho_date_range_norm', column('date'), strip, parse_range
 to_field 'cho_date_range_hijri', column('date'), strip, parse_range, hijri_range
 to_field 'cho_description', column('description_en'), strip, lang('en')

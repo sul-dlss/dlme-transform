@@ -55,7 +55,7 @@ to_field 'cho_date_range_hijri', extract_json('.date[0]'), strip, parse_range, h
 to_field 'cho_date', extract_json('.date_created[0]'), strip, lang('en')
 to_field 'cho_date_range_norm', extract_json('.date_created[0]'), strip, parse_range
 to_field 'cho_date_range_hijri', extract_json('.date_created[0]'), strip, parse_range, hijri_range
-to_field 'cho_dc_rights', literal('https://rbsc.princeton.edu/services/imaging-publication-services')
+to_field 'cho_dc_rights', literal('https://rbsc.princeton.edu/services/imaging-publication-services'), lang('en')
 to_field 'cho_description', extract_json('.description'), strip, lang('en')
 to_field 'cho_description', extract_json('.contents[0]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_description', extract_json('.binding_note[0]'), strip, lang('en')

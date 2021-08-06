@@ -51,7 +51,7 @@ to_field 'cho_title', xpath_title_or_desc('//fileDesc/titleStmt/title', "#{MS_DE
 
 # Cho other
 to_field 'cho_creator', extract_tei('//fileDesc/titleStmt/author/alias/authorityAuthor'), strip, lang('en')
-to_field 'cho_date', extract_tei('//fileDesc/publicationStmt/date'), strip
+to_field 'cho_date', extract_tei('//fileDesc/publicationStmt/date'), strip, lang('en')
 to_field 'cho_date_range_norm', extract_tei('//fileDesc/publicationStmt/date'), strip, parse_range
 to_field 'cho_date_range_hijri', extract_tei('//fileDesc/publicationStmt/date'), strip, parse_range, hijri_range
 to_field 'cho_dc_rights', literal('Images Copyright Biblioteca Apostolica Vaticana'), lang('en')

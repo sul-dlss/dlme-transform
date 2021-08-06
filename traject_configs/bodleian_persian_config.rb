@@ -39,7 +39,7 @@ to_field 'id', extract_json('.rendering'),
 to_field 'cho_title', extract_json('.title'), strip, arabic_script_lang_or_default('fa-Arab', 'und-Latn')
 
 # Cho Other
-to_field 'cho_creator', extract_json('.author'), strip
+to_field 'cho_creator', extract_json('.author'), strip, arabic_script_lang_or_default('fa-Arab', 'und-Latn')
 to_field 'cho_date', extract_json('.date_statement'), strip, lang('en')
 to_field 'cho_date_range_norm', extract_json('.date_statement'), strip, gsub('/', '-'), parse_range
 to_field 'cho_date_range_hijri', extract_json('.date_statement'), strip, gsub('/', '-'), parse_range, hijri_range

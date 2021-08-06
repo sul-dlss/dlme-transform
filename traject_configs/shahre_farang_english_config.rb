@@ -7,6 +7,7 @@ require 'macros/collection'
 require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
+require 'macros/language_extraction'
 require 'macros/normalize_language'
 require 'macros/timestamp'
 require 'macros/version'
@@ -15,6 +16,7 @@ extend Macros::Collection
 extend Macros::DateParsing
 extend Macros::DLME
 extend Macros::EachRecord
+extend Macros::LanguageExtraction
 extend Macros::NormalizeLanguage
 extend Macros::Timestamp
 extend Macros::Version
@@ -35,8 +37,8 @@ to_field 'id', extract_json('.id'), strip, append('en')
 to_field 'cho_title', extract_json('.title'), strip, lang('en')
 
 # Cho Other
-to_field 'cho_creator', extract_json('.author'), strip
-to_field 'cho_date', extract_json('.published'), strip
+to_field 'cho_creator', extract_json('.author'), strip, arabic_script_lang_or_default('fa-Arab', 'fa-Latn')
+to_field 'cho_date', extract_json('.published'), strip, lang('en')
 to_field 'cho_date_range_norm', extract_json('.published'), strip, parse_range
 to_field 'cho_date_range_hijri', extract_json('.published'), strip, parse_range, hijri_range
 to_field 'cho_description', extract_json('.summary'), strip, lang('en')
