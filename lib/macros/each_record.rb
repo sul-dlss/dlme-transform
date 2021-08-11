@@ -32,9 +32,7 @@ module Macros
             when Hash
               sub_values = value[:values].reject(&:nil?).reject(&:empty?)
               html_cleaned = html_check(sub_values)
-              unless html_cleaned == sub_values
-                sub_values = html_cleaned
-              end
+              sub_values = html_cleaned
               result[value[:language]] += sub_values.uniq.tap do |unique_sub_values|
                 unless unique_sub_values.length == sub_values.length # rubocop:disable Style/IfUnlessModifier 2 lines good, one line bad
                   ::DLME::Utils.logger.warn(format(log_msg_template, { msg: "sub_values=#{sub_values}; sub_values array contains duplicates" }))
