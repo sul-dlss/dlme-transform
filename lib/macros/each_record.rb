@@ -33,7 +33,6 @@ module Macros
               sub_values = value[:values].reject(&:nil?).reject(&:empty?)
               html_cleaned = html_check(sub_values)
               unless html_cleaned == sub_values
-                ::DLME::Utils.logger.warn("#{config_file_path}: key=#{key} contains HTML")
                 sub_values = html_cleaned
               end
               result[value[:language]] += sub_values.uniq.tap do |unique_sub_values|
