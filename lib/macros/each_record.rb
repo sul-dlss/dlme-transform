@@ -18,7 +18,7 @@ module Macros
       config_file_path = caller_locations(1, 1).first.path
 
       lambda do |_record, context| # rubocop:disable  Metrics/BlockLength
-        context.output_hash.select { |key, _values| fields.include?(key) }.each do |key, values| # rubocop:disable  Metrics/BlockLength
+        context.output_hash.select { |key, _values| fields.include?(key) }.each do |key, values|
           result = Hash.new { [] }
           log_msg_template = "#{config_file_path}: key=#{key}; %<msg>s.  Check source data and/or traject config for errors."
 
