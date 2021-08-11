@@ -18,7 +18,7 @@ module Macros
       config_file_path = caller_locations(1, 1).first.path
 
       lambda do |_record, context| # rubocop:disable  Metrics/BlockLength
-        context.output_hash.select { |key, _values| fields.include?(key) }.each do |key, values| # rubocop:disable  Metrics/BlockLength
+        context.output_hash.select { |key, _values| fields.include?(key) }.each do |key, values|
           result = Hash.new { [] }
           log_msg_template = "#{config_file_path}: key=#{key}; %<msg>s.  Check source data and/or traject config for errors."
 
@@ -32,10 +32,7 @@ module Macros
             when Hash
               sub_values = value[:values].reject(&:nil?).reject(&:empty?)
               html_cleaned = html_check(sub_values)
-              unless html_cleaned == sub_values
-                ::DLME::Utils.logger.warn("#{config_file_path}: key=#{key} contains HTML")
-                sub_values = html_cleaned
-              end
+              sub_values = html_cleaned
               result[value[:language]] += sub_values.uniq.tap do |unique_sub_values|
                 unless unique_sub_values.length == sub_values.length # rubocop:disable Style/IfUnlessModifier 2 lines good, one line bad
                   ::DLME::Utils.logger.warn(format(log_msg_template, { msg: "sub_values=#{sub_values}; sub_values array contains duplicates" }))
