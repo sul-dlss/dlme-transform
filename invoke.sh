@@ -10,10 +10,11 @@ if [ $SKIP_FETCH_DATA != "true" ]; then
   rm main.zip
 fi
 
-UUID=$(uuidgen)
-OUTPUT_FILENAME="output-$UUID.ndjson"
+DATA_DIR=$@
+DATA_DIR=${DATA_DIR//\//-}
+OUTPUT_FILENAME="output-$DATA_DIR.ndjson"
 OUTPUT_FILEPATH="output/$OUTPUT_FILENAME"
-SUMMARY_FILEPATH="output/summary-$UUID.json"
+SUMMARY_FILEPATH="output/summary-$DATA_DIR.json"
 
 set +e
 exe/transform --summary-filepath $SUMMARY_FILEPATH --data-dir $@ | tee $OUTPUT_FILEPATH
