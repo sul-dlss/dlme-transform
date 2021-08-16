@@ -1,49 +1,53 @@
 # Basic mapping from has_type_values to edm_type_values
-3d: 3D
-adornments: Object
-amulets: Object
-archaeological sites: Image
-armaments: Object
-adornments: Object
-books: Text
-calligraphy:
+3D: 3D
+Adornments: Object
+Amulets: Object
+Archaeological Sites: Image
+Armaments: Object
+Adornments: Object
+Books: Text
+Calligraphy:
   - Image
   - Text
-carpets: Object
-coins: Object
-containers: Object
-dataset: Dataset
-drawings: Image
-fiberworking tools & equipment: Object
-furniture: Object
-funerary objects: Object
-illuminated manuscripts: Text
-inscriptions: Text
-interactive resource: Interactive Resource
-letters: Text
-manuscript illuminations: Image
-manuscripts: Text
-maps: Image
-musical instruments: Object
-oral history: Sound
-other images: Image
-other objects: Object
-other sounds: Sound
-other texts: Text
-other videos: Video
-paintings: Image
-photographs: Image
-postcards: Image
-posters: Image
-recreational artifacts: Object
-reference books: Text
-sculptures: Object
-structures: Object
-seals: Object
-serials: Text
-stelae: Object
-tablets: Object
-scrolls: Text
-tools & equipment: Object
-weights & measures: Object
-writing accessories: Object
+Carpets: Object
+Coins: Object
+Containers: Object
+Dataset: Dataset
+Drawings: Image
+Fiberworking Rools & Equipment: Object
+Furniture: Object
+Funerary Objects: Object
+Illuminated Manuscripts: Text
+Inscriptions: Text
+Interactive Resource: Interactive Resource
+Letters: Text
+Manuscript Illuminations: Image
+Manuscripts: Text
+Maps: Image
+Musical Instruments: Object
+Notebooks: Text
+Oral History: Sound
+Other Images: Image
+Other Objects: Object
+Other Sounds: Sound
+Other Texts: Text
+Other Videos: Video
+Paintings: Image
+Photographs: Image
+Postcards: Image
+Posters: Image
+Recreational Artifacts: Object
+Reference Books: Text
+Sculptures: Object
+Structures: Object
+Seals: Object
+Serials: Text
+Stelae: Object
+Rablets: Object
+Scrolls: Text
+Tablets:
+  - Object
+  - Text
+Tools & Equipment: Object
+Weights & Measures: Object
+Writing Accessories: Object
