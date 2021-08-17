@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'dlme_utils'
+
 module Macros
   # Macros for post-processing data
   module EachRecord

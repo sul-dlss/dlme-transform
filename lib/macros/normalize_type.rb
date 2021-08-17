@@ -9,7 +9,6 @@ module Macros
     # @return [Proc] a proc that traject can call for each record
     def normalize_edm_type
       lambda do |_record, accumulator|
-        accumulator.map!(&:downcase)
         translation_map = %w[edm_type_from_has_type].map do |spec|
           Traject::TranslationMap.new(spec)
         end.reduce(:merge)
