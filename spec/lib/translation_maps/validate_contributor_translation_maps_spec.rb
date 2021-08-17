@@ -25,7 +25,7 @@ RSpec.shared_examples 'a valid translation map' do |lang_map_name, contributor_m
 end
 
 RSpec.describe 'contributor translation maps are valid' do # rubocop:disable RSpec/DescribeClass this tests config consistency, not a class
-  # it_behaves_like 'a valid translation map', 'temporal_ar_from_en', 'lib/translation_maps/temporal_from_contributor.yaml'
+  it_behaves_like 'a valid translation map', 'temporal_ar_from_en', 'lib/translation_maps/temporal_from_contributor.yaml'
   it_behaves_like 'a valid translation map', 'spatial_ar_from_en', 'lib/translation_maps/spatial_from_contributor.yaml'
   it_behaves_like 'a valid translation map', 'has_type_ar_from_en', 'lib/translation_maps/has_type_from_fr.yaml'
   it_behaves_like 'a valid translation map', 'edm_type_from_has_type', 'lib/translation_maps/has_type_from_fr.yaml'

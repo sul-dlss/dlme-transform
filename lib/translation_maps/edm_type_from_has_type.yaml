@@ -14,7 +14,7 @@ Coins: Object
 Containers: Object
 Dataset: Dataset
 Drawings: Image
-Fiberworking Rools & Equipment: Object
+Fiberworking Tools & Equipment: Object
 Furniture: Object
 Funerary Objects: Object
 Illuminated Manuscripts: Text
@@ -43,7 +43,6 @@ Structures: Object
 Seals: Object
 Serials: Text
 Stelae: Object
-Rablets: Object
 Scrolls: Text
 Tablets:
   - Object
