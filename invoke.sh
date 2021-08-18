@@ -10,14 +10,18 @@ if [ $SKIP_FETCH_DATA != "true" ]; then
   rm main.zip
 fi
 
-DATA_DIR=$@
+DATA_PATH=${DATA_PATH:-$@} # Get the data dir from the environment first if it exists.
+DATA_DIR=$DATA_PATH
 DATA_DIR=${DATA_DIR//\//-}
+
+echo "Starting dlme-transform for: ${DATA_PATH}"
+
 OUTPUT_FILENAME="output-$DATA_DIR.ndjson"
 OUTPUT_FILEPATH="output/$OUTPUT_FILENAME"
 SUMMARY_FILEPATH="output/summary-$DATA_DIR.json"
 
 set +e
-exe/transform --summary-filepath $SUMMARY_FILEPATH --data-dir $@ | tee $OUTPUT_FILEPATH
+exe/transform --summary-filepath $SUMMARY_FILEPATH --data-dir $DATA_PATH | tee $OUTPUT_FILEPATH
 
 if [ -n "$PUSH_TO_AWS" ]; then
   echo "Logging into AWS DevelopersRole"
@@ -52,3 +56,5 @@ if [ -n "$SNS_TOPIC_ARN" ]; then
   echo "Sending notification to SNS"
   aws sns publish --topic-arn $SNS_TOPIC_ARN --message file://$SUMMARY_FILEPATH $SNS_ENDPOINT_URL_ARG
 fi
+
+echo "Dlme-transform complete for: ${DATA_PATH}"
