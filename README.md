@@ -41,6 +41,14 @@ docker run --rm -v $(pwd)/output:/opt/traject/output \
                 stanford/maps/data/kj751hs0595.mods
 ```
 
+Optionally set the data dir in the environment:
+
+```shell
+docker run --rm -e DATA_PATH=stanford/maps/data/kj751hs0595.mods \
+                -v $(pwd)/output:/opt/traject/output \
+                suldlss/dlme-transform:latest
+```
+
 The output will appear in STDOUT inside the container and be written to
 `/opt/traject/output`. (In this example, `/opt/traject/output` inside the
 container is mounted from `./output` outside the container, which will
