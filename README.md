@@ -194,60 +194,13 @@ Using dlme-transform in the deployed environments requires a DLME account with ?
 
 This is best explained by the README:  https://github.com/sul-dlss/terraform-aws
 
-### Development environment
+### All environments
 
 Terraform tells AWS to use the `latest` docker image of dlme-transform to use for the development environment.
 
-In order to update dlme-transform in AWS, we need to use terraform to tell AWS to re-grab the (now new) latest image.
+Ensure the latest image on Docker Hub has the changes you want.  CircleCI should automatically create a new latest image when new commits are pushed to main (i.e. merged PRs).  You can confirm this by looking for the successful "publish-latest" step completion https://circleci.com/gh/sul-dlss/dlme-transform or by looking for the timestamp on the latest image at Docker Hub:  https://hub.docker.com/r/suldlss/dlme-transform/tags.
 
-First:  ensure the latest image on Docker Hub has the changes you want.  CircleCI should automatically create a new latest image when new commits are pushed to main (i.e. merged PRs).  You can confirm this by looking for the successful "publish-latest" step completion https://circleci.com/gh/sul-dlss/dlme-transform or by looking for the timestamp on the latest image at Docker Hub:  https://hub.docker.com/r/suldlss/dlme-transform/tags.
-
-In the case of this code base, dlme-transform, a PR to https://github.com/sul-dlss/terraform-aws must be made that updates the "DEPLOYED" environment variable.  We use a date_time format; for an example, see https://github.com/sul-dlss/terraform-aws/pull/748/files.
-
-Some more info here https://github.com/sul-dlss/terraform-aws/blob/main/organizations/development/dlme/README.md
-
-After this, terraform must be "applied" to the development environment by a developer or Ops.
-
-### Stage and Production environments
-
-We use tagged docker image releases for Stage and Prod environments.
-
-#### Create a Tagged Docker Image
-
-All you will need to do is publish a new release on github; a webhook will automatically trigger CircleCi to publish the tagged release to Docker Hub.
-
-1. Draft a github release first to describe the changes since the last release in detail:
-- https://github.com/sul-dlss/dlme-transform/releases hit "Draft a New Release" button in upper right
-- following the format of other releases, fill in the form
-- fill in "Tag version" with the version (e.g. "1.18.3")
-- Click the "Publish Release" button
-
-2.  Confirm the new tagged release is available in Docker Hub. CircleCI should automatically create a new tagged image via a webhook.  You can confirm this by looking for the successful "publish-tag" step completion https://circleci.com/gh/sul-dlss/dlme-transform or by looking for the new tag at Docker Hub:  https://hub.docker.com/r/suldlss/dlme-transform/tags.
-
-#### Deploy New Tagged Release to AWS
-
-Terraform tells AWS which tagged image of dlme-transform to use for staging and production environments.
-
-In the case of this code base, dlme-transform, a PR to https://github.com/sul-dlss/terraform-aws must be made that updates the "image" variable for dlme-transform, e.g. `"suldlss/dlme-transform:1.1.3"`.  For an example, see https://github.com/sul-dlss/terraform-aws/pull/860.
-
-Some more info here https://github.com/sul-dlss/terraform-aws/blob/main/organizations/staging/dlme/README.md, https://github.com/sul-dlss/terraform-aws/tree/main/organizations/production/dlme
-
-After this, terraform must be applied to the Stage and Prod environments.  Note that only Ops folks can update the Production environment.
-
-To check and apply the changes after making the Terraform PR as noted above, be sure you are in the dlme folder in terraform (e.g. `organizations/staging/dlme`) and then verify the change with:
-
-```
-terraform plan
-```
-
-If it asks for the profile name, it should match what you set for the `source_profile` in `~/.aws/config`.
-
-You should see output ending with the change to the the dlme-transform container.  You can then apply the change with:
-
-```
-terraform apply
-```
-
+As dlme-transform is run as a task only and not as an ECS service, changes to the delopment environment are not required as the tagged `suldlss/dlme-transform:lastest` is always pulled form docker hub on launch.
 
 ## API Documentation
 https://www.rubydoc.info/github/sul-dlss/dlme-transform
