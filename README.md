@@ -200,7 +200,7 @@ Terraform tells AWS to use the `latest` docker image of dlme-transform to use fo
 
 Ensure the latest image on Docker Hub has the changes you want.  CircleCI should automatically create a new latest image when new commits are pushed to main (i.e. merged PRs).  You can confirm this by looking for the successful "publish-latest" step completion https://circleci.com/gh/sul-dlss/dlme-transform or by looking for the timestamp on the latest image at Docker Hub:  https://hub.docker.com/r/suldlss/dlme-transform/tags.
 
-As dlme-transform is run as a task only and not as an ECS service, changes to the delopment environment are not required as the tagged `suldlss/dlme-transform:lastest` is always pulled form docker hub on launch.
+As dlme-transform is run as a task only and not as an ECS service, changes to the delopment environment are not required as the tagged `suldlss/dlme-transform:latest` is always pulled form docker hub on launch.
 
 ## API Documentation
 https://www.rubydoc.info/github/sul-dlss/dlme-transform
