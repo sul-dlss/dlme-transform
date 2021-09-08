@@ -37,4 +37,5 @@ RSpec.describe 'contributor translation maps are valid' do # rubocop:disable RSp
   it_behaves_like 'a valid translation map', 'getty_aat_material_ar_from_en', 'lib/translation_maps/getty_aat_material_from_contributor.yaml'
   it_behaves_like 'a valid translation map', 'has_type_ar_from_en', 'lib/translation_maps/has_type_from_contributor.yaml'
   it_behaves_like 'a valid translation map', 'edm_type_from_has_type', 'lib/translation_maps/has_type_from_contributor.yaml'
+  it_behaves_like 'a valid translation map', 'dlme_collection_ar_from_en', 'lib/translation_maps/dlme_collection_from_provider_id.yaml'
 end

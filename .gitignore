@@ -2,7 +2,7 @@
 !/output/.keep
 /data/*
 !/data/.keep
-/tmp/*
+/tmp/output/*
 
 # Rspec files:
 spec/examples.txt

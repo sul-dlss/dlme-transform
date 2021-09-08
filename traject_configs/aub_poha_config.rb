@@ -37,6 +37,9 @@ settings do
   provide 'reader_class_name', 'TrajectPlus::XmlReader'
 end
 
+to_field 'dlme_collection', literal('aub-poha'), translation_map('dlme_collection_from_provider_id'), lang('en')
+to_field 'dlme_collection', literal('aub-poha'), translation_map('dlme_collection_from_provider_id'), translation_map('dlme_collection_ar_from_en'), lang('ar-Arab')
+
 # File path
 to_field 'dlme_source_file', path_to_file
 
@@ -157,7 +160,8 @@ each_record convert_to_language_hash(
   'cho_subject',
   'cho_temporal',
   'cho_title',
-  'cho_type'
+  'cho_type',
+  'dlme_collection'
 )
 
 # NOTE: call add_cho_type_facet AFTER calling convert_to_language_hash fields
