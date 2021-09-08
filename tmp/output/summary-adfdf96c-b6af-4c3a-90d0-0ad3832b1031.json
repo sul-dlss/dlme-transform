@@ -1,8 +1,0 @@
-{
-  "success": true,
-  "records": 19328,
-  "data_path": "aub",
-  "timestamp": "2021-03-30T16:52:11+00:00",
-  "duration": 382,
-  "url": "https://s3-us-west-2.amazonaws.com/dlme-metadata-dev/output-adfdf96c-b6af-4c3a-90d0-0ad3832b1031.ndjson"
-}
