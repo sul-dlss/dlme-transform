@@ -41,6 +41,9 @@ end
 to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
 
+to_field 'dlme_collection', literal('csic'), translation_map('dlme_collection_from_provider_id'), lang('en')
+to_field 'dlme_collection', literal('csic'), translation_map('dlme_collection_from_provider_id'), translation_map('dlme_collection_ar_from_en'), lang('ar-Arab')
+
 # CHO Required
 to_field 'id', extract_marc('001'), first_only
 to_field 'cho_title', extract_marc('245ab', alternate_script: false), trim_punctuation, arabic_script_lang_or_default('ar-Arab', 'es')
@@ -125,7 +128,8 @@ each_record convert_to_language_hash(
   'cho_subject',
   'cho_temporal',
   'cho_title',
-  'cho_type'
+  'cho_type',
+  'dlme_collection'
 )
 
 # NOTE: call add_cho_type_facet AFTER calling convert_to_language_hash fields

@@ -1,9 +1,0 @@
-{
-  "success": false,
-  "records": 0,
-  "data_path": "aub/poha",
-  "timestamp": "2021-03-30T15:22:30+00:00",
-  "duration": 0,
-  "error": "ERROR: Undefined namespace prefix: /*/dc:toc",
-  "url": "https://s3-us-west-2.amazonaws.com/dlme-metadata-dev/output-1271bc8b-9de0-4f93-96b9-b8472c0ef669.ndjson"
-}

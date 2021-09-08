@@ -1,0 +1,93 @@
+# Basic mapping from data provider identifier, plus collection identifier string
+# if needed, to dlme_collection value. Ensures dlme_collection is unique per
+# collection.
+
+aims: Maghrib in Past & Present | Postcasts
+antiquities: Antiquities Coalition
+aub-aco: Arabic Collections Online (AUB)
+aub-aladab: Al-Adab Magazine (AUB)
+aub-poha: Palestinian Oral History Archive (AUB)
+aub-postcards: Postcards (AUB)
+aub-posters: Posters (AUB)
+aub-travelbooks: Travel Books (AUB)
+auc-almusawwar: Al-Musawwar Magazine (AUC)
+auc-alexandria: Alexandria Bombardment of 1882 Photograph Album (AUC)
+auc-bint-alnil: Bint al-Nil Journal (AUC)
+auc-coptic: Iryan Moftah Coptic Language and Religion Manuscripts
+auc-creswell: K.A.C. Creswell Photographs of Islamic Architecture
+auc-fathy: Hassan Fathy Architectural Archives
+auc-hopkins: Nicholas S. Hopkins Rural Egypt Photographs
+auc-islamic-aa: Islamic Art & Architecture Slides (AUC)
+auc-maps: Historical Maps (AUC)
+auc-maritz: Philip Maritz Collection of Émile Béchard's Oriental Studies Photographs
+auc-napoleonic-egypt: Napoleonic Egypt (ACU)
+auc-parker: Richard B. Parker Nile Watercraft Photographs
+auc-postcards: Postcards (AUC)
+auc-qurna: Qurna Hillside Oral History Project
+auc-rare-books: Rare Books (AUC)
+auc-sphinx: The Sphinx Magazine (AUC)
+auc-student-news: AUC Student Newspapers
+auc-taxiphote-slides: Taxiphote Slides (AUC)
+auc-underwood: Underwood & Underwood Egypt Stereoviews
+auc-university-square: University on the Square - Documenting Egypt's 21st Century Revolution
+auc-wassef: Ramses Wissa Wassef Architectural Drawings
+auc-historical-videos: AUC Films and Videos
+auc-kraus-meyerhof: Kraus-Meyerhof Offprints
+bnf-ideo: Institut dominicain d’etudes orientales (BnF)
+bnf-ifao: Institut français d’archéologie orientale (BnF)
+bodleian-arabic: Arabic Manuscripts at the Bodleian Library
+bodleian-egypt: Exploring Egypt in the 19th Century
+bodleian-hebrew: Hebrew Manuscripts at the Bodleian Library
+bodleian-persian: Persian Manuscripts at the Bodleian Library
+bodleian-turkish: Turkish Manuscripts at the Bodleian Library
+cambridge-genizah: Cairo Genizah (Cambridge)
+cambridge-hebrew: Hebrew Manuscripts at Cambridge
+cambridge-islamic: Islamic Manuscripts at Cambridge
+csic: Consejo Superior de Investigaciones Científicas (CSIC)
+harvard-ihp: Islamic Heritage Project (Harvard)
+harvard-scw: The Stuart Cary Welch Islamic and South Asian Photograph Collection
+lausanne-ias: Tiresias (Lausanne)
+loc-abdul-hamid-books: Abdu'l-Hamid II Books (LOC)
+loc-abdul-hamid-photos: Abdu'l-Hamid II Photographs (LOC)
+loc-eltaher: Eltaher (LOC)
+loc-patriarchates: Manuscripts in the Libraries of the Greek and Armenian Patriarchates
+loc-persian: Persian Manuscripts (LOC)
+loc-st-catherine: Maunscripts at Saint Catherine's Monastery
+manchester-nashriyah: Nashriyah (Manchester)
+met: Ancient Near Eastern Art (The Met)
+michigan: Islamic Manuscripts at the University of Michigan
+ans: Islamic Coins at the American Numismatic Society
+openn-genizah: Cairo Genizah (OPenn)
+openn-mmw-1-and-2: Islamic Manuscripts (Penn)
+openn-mmw-1-and-2: Islamic Manuscripts (Penn)
+openn-mmw-3: Islamic Manuscripts (Bryn Mawr College)
+openn-mmw-6: Islamic Manuscripts (Haverford College)
+openn-mmw-12: Islamic Manuscripts (Library Company)
+openn-mmw-16: Islamic Manuscripts (Penn Museum)
+openn-mmw-23: Islamic Manuscripts (Free Library of Philadelphia)
+openn-mmw-31: Islamic Manuscripts (Philadelphia Museum of Art)
+openn-mmw-32-and-33: Islamic Manuscripts (Columbia)
+openn-mmw-43: Islamic Manuscripts (American Philosophical Society)
+penn-egyptian: Egyptian Museum (Penn)
+penn-near-east: Near Eastern Museum (Penn)
+pppa: Palestine Poster Archive
+princeton-mss: Islamic Manuscripts (Princeton)
+princeton-posters: Arabic Movie Posters (Princeton)
+qnl: Gulf Records (British Library)
+shahre-farang: Shahre Farang
+ssm-abidindino: Abidin Dino Archive at Sakıp Sabancı Museum
+ssm-emirgan: Emirgan Archive at Sakıp Sabancı Museum
+ssm-kitapvehat: The Arts of the Book and Calligraphy at Sakıp Sabancı Museum
+ssm-resimklksyn: Painting Collection at Sakıp Sabancı Museum
+stanford-maps: David Rumsey Map Collectoion (Stanford)
+texas-tech: Turkish Oral Narrative (Texas Tech)
+vatican: Manuscripts at the Vatican
+walters-18th-and-19th-century-art: 18th and 19th Century Art (Walters)
+walters-ancient-art: Ancient Art (Walters)
+walters-east-asian-art: East Asian Art (Walters)
+walters-islamic-art: Islamic Art (Walters)
+walters-manuscripts: Manuscripts (Walters)
+walters-medieval-art: Medieval Art (Walters)
+walters-renaissance-and-baroque-art: Renaissance and Baroque Art (Walters)
+walters-south-and-southeast-asian-art: South and Southeast Asian Art (Walters)
+yale-babylon: Babylon (Yale)
