@@ -10,9 +10,10 @@ if [ $SKIP_FETCH_DATA != "true" ]; then
   rm main.zip
 fi
 
-DATA_PATH=${DATA_PATH:-$@} # Get the data dir from the environment first if it exists.
+DATA_PATH=${DATA_PATH:-$1} # Get the data dir from the environment first if it exists.
 DATA_DIR=$DATA_PATH
 DATA_DIR=${DATA_DIR//\//-}
+DEBUG_FLAG=$2
 
 echo "Starting dlme-transform for: ${DATA_PATH}"
 
@@ -21,7 +22,7 @@ OUTPUT_FILEPATH="output/$OUTPUT_FILENAME"
 SUMMARY_FILEPATH="output/summary-$DATA_DIR.json"
 
 set +e
-exe/transform --summary-filepath $SUMMARY_FILEPATH --data-dir $DATA_PATH | tee $OUTPUT_FILEPATH
+exe/transform --summary-filepath $SUMMARY_FILEPATH --data-dir $DATA_PATH $DEBUG_FLAG | tee $OUTPUT_FILEPATH
 
 if [ -n "$PUSH_TO_AWS" ]; then
   echo "Logging into AWS DevelopersRole"
