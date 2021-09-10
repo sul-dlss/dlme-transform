@@ -78,7 +78,7 @@ to_field 'cho_has_type', extract_mods('//*/mods:typeOfResource[1]'), ihp_has_typ
 to_field 'cho_is_part_of', extract_mods('//*/mods:relatedItem[@type="series"]/mods:titleInfo'), gsub('UniversityIslamic', 'University Islamic'), lang('en')
 to_field 'cho_identifier', extract_mods('//*/mods:recordInfo/mods:recordIdentifier')
 to_field 'cho_language', extract_mods('//*/mods:language/mods:languageTerm[1]'), normalize_language, lang('en')
-to_field 'cho_language', extract_mods('//*/mods:language/mods:languageTerm[1]'), normalize_language, translation_map('norm_languages_to_ar'), lang('ar-Arab')
+to_field 'cho_language', extract_mods('//*/mods:language/mods:languageTerm[1]'), normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
 to_field 'cho_provenance', extract_name('//*/mods:name[1][mods:role/mods:roleTerm/', role: 'former owner.'), gsub('former owner.', 'former owner'), arabic_script_lang_or_default('und-Arab', 'und-Latn')
 to_field 'cho_provenance', extract_name('//*/mods:name[2][mods:role/mods:roleTerm/', role: 'former owner.'), gsub('former owner.', 'former owner'), gsub('former owner', 'مالك سابق'), arabic_script_lang_or_default('und-Arab', 'und-Latn')
 to_field 'cho_publisher', extract_mods('//*/mods:originInfo/mods:publisher'), lang('en')

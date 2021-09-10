@@ -64,7 +64,7 @@ to_field 'cho_edm_type', literal('Text'), translation_map('edm_type_ar_from_en')
 to_field 'cho_has_type', literal('Manuscripts'), strip, lang('en')
 to_field 'cho_has_type', literal('Manuscripts'), translation_map('has_type_ar_from_en'), strip, lang('ar-Arab')
 to_field 'cho_language', literal('Arabic'), lang('en')
-to_field 'cho_language', literal('Arabic'), translation_map('norm_languages_to_ar'), lang('ar-Arab')
+to_field 'cho_language', literal('Arabic'), translation_map('lang_ar_from_en'), lang('ar-Arab')
 to_field 'cho_spatial', extract_tei('//fileDesc/publicationStmt/pubPlace'), strip, lang('en')
 
 # Agg

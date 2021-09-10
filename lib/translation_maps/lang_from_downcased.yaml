@@ -1,0 +1,41 @@
+amharic: Amharic
+arabic: Arabic
+aramaic: Aramaic
+aramaic, christian palestinian: Aramaic
+aratur: Aratur
+armenian: Armenian
+classical armenian: Armenian
+coptic: Coptic
+dutch: Dutch
+english: English
+en_us: English
+french: French
+geez: Ge'ez
+georgian: Georgian
+german: German
+greek: Greek
+greek, ancient: Greek, Ancient
+greek, ancient (to 1453): Greek, Ancient
+hebrew: Hebrew
+italian: Italian
+judeo arabic: Judeo-Arabic
+judaeo arabic: Judeo-Arabic
+judaeo-arabic: Judeo-Arabic
+judeo-arabic: Judeo-Arabic
+judaeo-italian: Judeo-Italian
+judaeo-persian: Judeo-Persian
+judaeo-portuguese: Judeo-Portuguese
+judaeo-spanish: Ladino
+latin: Latin
+old bulgarian: Old Bulgarian
+pahlavi: Pahlavi
+persian: Persian
+russian: Russian
+slavic languages: Slavic Languages
+spanish: Spanish
+syriac: Syriac
+turkish, ottoman: Turkish, Ottoman (1500-1928)
+turkish, ottoman (1500-1928): Turkish, Ottoman (1500-1928)
+turkish: Turkish
+urdu: Urdu
+# "": "" # prevents empty strings from raising `not found` error

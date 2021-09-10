@@ -64,6 +64,8 @@ to_field 'cho_identifier', extract_oai('dc:identifier'), strip
 to_field 'cho_is_part_of', extract_oai('dc:source'), strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
 to_field 'cho_language', extract_oai('dc:language'), split(';'),
          split(','), strip, normalize_language, lang('en')
+to_field 'cho_language', extract_oai('dc:language'), split(';'),
+         split(','), strip, normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
 to_field 'cho_spatial', extract_oai('dc:coverage'), strip, lang('en')
 to_field 'cho_subject', extract_oai('dc:subject'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_type', extract_oai('dc:type'), arabic_script_lang_or_default('ar-Arab', 'und-Latn')

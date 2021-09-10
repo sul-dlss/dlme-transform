@@ -1,0 +1,47 @@
+amh: Amharic
+ara: Arabic
+arc: Official Aramaic (700-300 BCE); Imperial Aramaic (700-300 BCE)
+arm: Armenian
+ave: Avestan
+ber: Berber languages
+chg: Chagatai
+cop: Coptic
+dut: Dutch
+egy: Egyptian (Ancient)
+eng: English
+fas: Persian
+fre: French
+geo: Georgian
+ger: German
+grc: Greek, Ancient (to 1453)
+guj: Gujarati
+heb: Hebrew
+inc: Indic languages
+ind: Indonesian
+ita: Italian
+jpr: Judeo-Persian
+jrb: Judeo-Arabic
+kur: Kurdish
+lad: Ladino
+lat: Latin
+may: Malay
+ota: Turkish, Ottoman (1500-1928)
+pal: Pahlavi
+pan: Panjabi
+phi: Philippine languages
+pus: Pashto
+per: Persian
+sam: Samaritan Aramaic
+spa: Spanish
+syc: Classical Syriac
+syr: Syriac
+tat: Tatar
+tgk: Tajik
+tur: Turkish
+tut: Altaic languages
+urd: Urdu
+uzb: Uzbek
+
+# ignore
+und: ~
+zxx: ~

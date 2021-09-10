@@ -21,7 +21,7 @@ module Contracts
       optional(:cho_has_type).value(:hash?) { hash? { each(:str?, excluded_from?: ['NOT FOUND']) } }
       optional(:cho_identifier).array(:str?)
       optional(:cho_is_part_of).value(:hash?)
-      optional(:cho_language)
+      optional(:cho_language).value(:hash?) { hash? { each(:str?, excluded_from?: ['NOT FOUND']) } }
       optional(:cho_medium).value(:hash?)
       optional(:cho_provenance).value(:hash?)
       optional(:cho_publisher).value(:hash?)
@@ -104,14 +104,12 @@ module Contracts
     # rubocop:enable Metrics/AbcSize
 
     rule(:cho_description, &optional_language_specific_rule)
-
     rule(:cho_title, &required_language_specific_rule)
     rule(:cho_language, &optional_language_specific_rule)
     rule(:agg_data_provider, &required_language_specific_rule)
     rule(:agg_data_provider_country, &required_language_specific_rule)
     rule(:agg_provider, &required_language_specific_rule)
     rule(:agg_provider_country, &required_language_specific_rule)
-
     rule(:agg_is_shown_at, &web_resource_validation_rule)
     rule(:agg_is_shown_by, &web_resource_validation_rule)
     rule(:agg_preview, &web_resource_validation_rule)

@@ -98,7 +98,7 @@ to_field 'cho_identifier', extract_qnl_en('mods:recordInfo/mods:recordIdentifier
 to_field 'cho_identifier', extract_qnl_en('mods:location/mods:shelfLocator'), strip
 to_field 'cho_is_part_of', extract_qnl_ar('mods:location/mods:physicalLocation'), strip, lang('ar-Arab')
 to_field 'cho_is_part_of', extract_qnl_en('mods:location/mods:physicalLocation'), strip, lang('en')
-to_field 'cho_language', extract_qnl_en('mods:language/mods:languageTerm'), normalize_language, translation_map('norm_languages_to_ar'), lang('ar-Arab')
+to_field 'cho_language', extract_qnl_en('mods:language/mods:languageTerm'), normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
 to_field 'cho_language', extract_qnl_en('mods:language/mods:languageTerm'), normalize_language, lang('en')
 to_field 'cho_spatial', extract_qnl_ar('mods:subject/mods:geographic'), strip, lang('ar-Arab')
 to_field 'cho_spatial', extract_qnl_en('mods:subject/mods:geographic'), strip, lang('en')
