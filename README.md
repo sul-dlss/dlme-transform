@@ -119,6 +119,9 @@ Note that actual S3 credentials are available from `shared_configs`.
 
 For more information on traject, [read the documentation](https://github.com/traject/traject#Traject)
 
+
+Using dlme-transform in the deployed environments requires a DLME account with ? admin ? access so you can view the form here: https://spotlight.dev.dlmenetwork.org/transform .
+
 ### Sending tranformation result to S3
 
 ```
@@ -186,21 +189,12 @@ Note that this task modifies `config/metadata_mapping.json`, and you will need t
 
 ## Deploying
 
-dlme-transform is "deployed" to AWS environments via terraform.
+dlme-transform is deployed by publishing an image to docker hub. CircleCI should automatically create a new latest image when new commits are pushed to main (i.e. merged PRs).   
+You can confirm this by looking for the successful "publish-latest" step completion https://circleci.com/gh/sul-dlss/dlme-transform or by looking for the timestamp on the latest image at Docker Hub:  https://hub.docker.com/r/suldlss/dlme-transform/tags.
 
-Using dlme-transform in the deployed environments requires a DLME account with ? admin ? access so you can get to, e.g. https://spotlight.dev.dlmenetwork.org/transform .
+The terraform config tells AWS to use the `latest` docker image of dlme-transform. As dlme-transform is run as a task only and not as an ECS service, the tagged `suldlss/dlme-transform:latest` is always pulled from docker hub on launch.
 
-### DLSS Terraform for AWS
-
-This is best explained by the README:  https://github.com/sul-dlss/terraform-aws
-
-### All environments
-
-Terraform tells AWS to use the `latest` docker image of dlme-transform to use for the development environment.
-
-Ensure the latest image on Docker Hub has the changes you want.  CircleCI should automatically create a new latest image when new commits are pushed to main (i.e. merged PRs).  You can confirm this by looking for the successful "publish-latest" step completion https://circleci.com/gh/sul-dlss/dlme-transform or by looking for the timestamp on the latest image at Docker Hub:  https://hub.docker.com/r/suldlss/dlme-transform/tags.
-
-As dlme-transform is run as a task only and not as an ECS service, changes to the delopment environment are not required as the tagged `suldlss/dlme-transform:latest` is always pulled form docker hub on launch.
+See the dlss Terraform README:  https://github.com/sul-dlss/terraform-aws
 
 ## API Documentation
 https://www.rubydoc.info/github/sul-dlss/dlme-transform
