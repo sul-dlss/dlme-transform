@@ -708,7 +708,7 @@
     "paths": [
       "bodleian/arabic"
     ],
-    "extension": ".json",
+    "extension": ".csv",
     "settings": {
       "agg_provider": "Bodleian Libraries",
       "agg_provider_country": "United Kingdom",
@@ -728,7 +728,7 @@
     "paths": [
       "bodleian/hebrew"
     ],
-    "extension": ".json",
+    "extension": ".csv",
     "settings": {
       "agg_provider": "Bodleian Libraries",
       "agg_provider_country": "United Kingdom",
@@ -748,7 +748,7 @@
     "paths": [
       "bodleian/exploring-egypt"
     ],
-    "extension": ".json",
+    "extension": ".csv",
     "settings": {
       "agg_provider": "Bodleian Libraries",
       "agg_provider_country": "United Kingdom",
@@ -768,7 +768,7 @@
     "paths": [
       "bodleian/persian"
     ],
-    "extension": ".json",
+    "extension": ".csv",
     "settings": {
       "agg_provider": "Bodleian Libraries",
       "agg_provider_country": "United Kingdom",
@@ -788,7 +788,7 @@
     "paths": [
       "bodleian/turkish"
     ],
-    "extension": ".json",
+    "extension": ".csv",
     "settings": {
       "agg_provider": "Bodleian Libraries",
       "agg_provider_country": "United Kingdom",
