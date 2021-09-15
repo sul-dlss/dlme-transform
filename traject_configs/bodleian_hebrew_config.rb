@@ -56,7 +56,7 @@ to_field 'cho_date_range_norm', column('date_statement'), strip, gsub('/', '-'),
 to_field 'cho_date_range_hijri', column('date_statement'), strip, gsub('/', '-'), parse_range, hijri_range
 to_field 'cho_dc_rights', literal('Photo: © Bodleian Libraries, University of Oxford, Terms of use: http://digital.bodleian.ox.ac.uk/terms.html'), lang('en')
 to_field 'cho_description', column('description'), strip, lang('en')
-to_field 'cho_description', column('contents-note'), strip, prepend('Contents Note: '),lang('en')
+to_field 'cho_description', column('contents-note'), strip, prepend('Contents Note: '), lang('en')
 to_field 'cho_description', column('layout'), strip, prepend('Layout: '), lang('en')
 to_field 'cho_description', column('hand'), strip, prepend('Hand: '), lang('en')
 to_field 'cho_description', column('dimensions'), strip, prepend('Dimensions: '), lang('en')
