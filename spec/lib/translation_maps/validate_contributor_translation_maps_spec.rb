@@ -2,22 +2,21 @@
 
 require 'yaml'
 
-# expect that all the values listed in contributor_map_filename are translatable using the
-# mapping config specified by lang_map_name
-RSpec.shared_examples 'a valid translation map' do |lang_map_name, contributor_map_filename|
-  YAML.load_file(contributor_map_filename).each do |_key, values|
-    Array(values).each do |literal_value| # ensure values is an array (since values can be a string OR an array of strings)
-      context "with a value from #{contributor_map_filename}" do
-        let(:translation) do
-          indexer = Traject::Indexer.new
-          indexer.configure do
-            to_field 'cho_to_field', literal(literal_value), translation_map(lang_map_name)
+# expect that all the values in preceding_translation_maps appear as keys in
+# next_translation_map; used to ensure values get translated when chaining
+# translation maps together
+RSpec.shared_examples 'a valid translation map chain' do |next_translation_map, preceding_translation_maps|
+  keys_in_next_translation_map = []
+  YAML.load_file(next_translation_map).each do |key, _values|
+    keys_in_next_translation_map << key.downcase
+  end
+  preceding_translation_maps.each do |preceding_translation_map|
+    YAML.load_file(preceding_translation_map).each do |_key, values|
+      Array(values).each do |literal_value|
+        context "with a value from #{preceding_translation_map}" do
+          it "translates #{literal_value} using #{next_translation_map}" do
+            expect(keys_in_next_translation_map).to include(literal_value.downcase)
           end
-          indexer.map_record(nil)['cho_to_field']
-        end
-
-        it "translates #{literal_value} using #{lang_map_name}" do
-          expect(translation).not_to be_nil
         end
       end
     end
@@ -25,17 +24,12 @@ RSpec.shared_examples 'a valid translation map' do |lang_map_name, contributor_m
 end
 
 RSpec.describe 'contributor translation maps are valid' do # rubocop:disable RSpec/DescribeClass this tests config consistency, not a class
-  it_behaves_like 'a valid translation map', 'temporal_ar_from_en', 'lib/translation_maps/temporal_from_contributor.yaml'
-  it_behaves_like 'a valid translation map', 'spatial_ar_from_en', 'lib/translation_maps/spatial_from_contributor.yaml'
-  it_behaves_like 'a valid translation map', 'has_type_ar_from_en', 'lib/translation_maps/has_type_from_fr.yaml'
-  it_behaves_like 'a valid translation map', 'edm_type_from_has_type', 'lib/translation_maps/has_type_from_fr.yaml'
-  it_behaves_like 'a valid translation map', 'has_type_ar_from_en', 'lib/translation_maps/has_type_from_lausanne.yaml'
-  it_behaves_like 'a valid translation map', 'edm_type_from_has_type', 'lib/translation_maps/has_type_from_lausanne.yaml'
-  it_behaves_like 'a valid translation map', 'has_type_ar_from_en', 'lib/translation_maps/has_type_from_tr.yaml'
-  it_behaves_like 'a valid translation map', 'edm_type_from_has_type', 'lib/translation_maps/has_type_from_tr.yaml'
-  it_behaves_like 'a valid translation map', 'edm_type_ar_from_en', 'lib/translation_maps/edm_type_from_has_type.yaml'
-  it_behaves_like 'a valid translation map', 'getty_aat_material_ar_from_en', 'lib/translation_maps/getty_aat_material_from_contributor.yaml'
-  it_behaves_like 'a valid translation map', 'has_type_ar_from_en', 'lib/translation_maps/has_type_from_contributor.yaml'
-  it_behaves_like 'a valid translation map', 'edm_type_from_has_type', 'lib/translation_maps/has_type_from_contributor.yaml'
-  it_behaves_like 'a valid translation map', 'dlme_collection_ar_from_en', 'lib/translation_maps/dlme_collection_from_provider_id.yaml'
+  it_behaves_like 'a valid translation map chain', 'lib/translation_maps/dlme_collection_ar_from_en.yaml', ['lib/translation_maps/dlme_collection_from_provider_id.yaml']
+  it_behaves_like 'a valid translation map chain', 'lib/translation_maps/edm_type_ar_from_en.yaml', ['lib/translation_maps/edm_type_from_has_type.yaml']
+  it_behaves_like 'a valid translation map chain', 'lib/translation_maps/edm_type_from_has_type.yaml', ['lib/translation_maps/has_type_from_fr.yaml', 'lib/translation_maps/has_type_from_lausanne.yaml', 'lib/translation_maps/has_type_from_tr.yaml', 'lib/translation_maps/has_type_from_contributor.yaml']
+  it_behaves_like 'a valid translation map chain', 'lib/translation_maps/getty_aat_material_ar_from_en.yaml', ['lib/translation_maps/getty_aat_material_from_contributor.yaml']
+  it_behaves_like 'a valid translation map chain', 'lib/translation_maps/has_type_ar_from_en.yaml', ['lib/translation_maps/has_type_from_fr.yaml', 'lib/translation_maps/has_type_from_lausanne.yaml', 'lib/translation_maps/has_type_from_tr.yaml', 'lib/translation_maps/has_type_from_contributor.yaml']
+  it_behaves_like 'a valid translation map chain', 'lib/translation_maps/lang_ar_from_en.yaml', ['lib/translation_maps/lang_from_downcased.yaml', 'lib/translation_maps/lang_from_iso_639-1.yaml', 'lib/translation_maps/lang_from_turkish.yaml']
+  it_behaves_like 'a valid translation map chain', 'lib/translation_maps/spatial_ar_from_en.yaml', ['lib/translation_maps/spatial_from_contributor.yaml']
+  it_behaves_like 'a valid translation map chain', 'lib/translation_maps/temporal_ar_from_en.yaml', ['lib/translation_maps/temporal_from_contributor.yaml']
 end

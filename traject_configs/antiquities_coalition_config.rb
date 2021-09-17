@@ -44,7 +44,7 @@ to_field 'cho_description', extract_json('.description'), strip, lang('en')
 to_field 'cho_edm_type', literal('Dataset'), lang('en')
 to_field 'cho_edm_type', literal('Dataset'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_language', literal('English'), lang('en')
-to_field 'cho_language', literal('Arabic'), translation_map('norm_languages_to_ar'), lang('ar-Arab')
+to_field 'cho_language', literal('Arabic'), translation_map('lang_ar_from_en'), lang('ar-Arab')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')

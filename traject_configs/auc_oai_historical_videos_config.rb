@@ -61,7 +61,7 @@ to_field 'cho_is_part_of', extract_oai('dc:source'), strip, lang('en')
 to_field 'cho_language', extract_oai('dc:language'), split(';'),
          split(','), strip, normalize_language, lang('en')
 to_field 'cho_language', extract_oai('dc:language'), split(';'),
-         split(','), strip, normalize_language, translation_map('norm_languages_to_ar'), lang('ar-Arab')
+         split(','), strip, normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
 to_field 'cho_publisher', extract_oai('dc:publisher'), strip, lang('en')
 to_field 'cho_spatial', extract_oai('dc:coverage'), strip, lang('en')
 to_field 'cho_subject', extract_oai('dc:subject'), strip, lang('en')

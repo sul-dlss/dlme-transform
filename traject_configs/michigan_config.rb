@@ -73,7 +73,7 @@ to_field 'cho_has_type', literal('Manuscripts'), lang('en')
 to_field 'cho_has_type', literal('Manuscripts'), translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_identifier', oclcnum, prepend('OCLC: ')
 to_field 'cho_language', extract_marc('008[35-37]:041a:041d'), normalize_language, lang('en')
-to_field 'cho_language', extract_marc('008[35-37]:041a:041d'), normalize_language, translation_map('norm_languages_to_ar'), lang('ar-Arab')
+to_field 'cho_language', extract_marc('008[35-37]:041a:041d'), normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
 to_field 'cho_same_as', extract_marc('001'), strip, prepend('https://search.lib.umich.edu/catalog/record/')
 to_field 'cho_spatial', marc_geo_facet, filter_data_errors('Ann Arbor (Michigan)', 'Michigan'), lang('en')
 SIX00 = '600abcdefghjklmnopqrstuvxy'

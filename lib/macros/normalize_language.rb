@@ -4,13 +4,11 @@ module Macros
   # Macros for normalizing incoming metadata
   module NormalizeLanguage
     TRANSFORMS = %w[not_found
-                    languages
-                    marc_languages
-                    turkish-languages
-                    iso_639-1
-                    iso_639-2
-                    iso_639-3
-                    language-errors].freeze
+                    lang_from_downcased
+                    lang_from_errors
+                    lang_from_iso_639-1
+                    lang_from_iso_639-2
+                    lang_from_turkish].freeze
 
     # Maps extracted language values to a series of tranlation maps
     # @example

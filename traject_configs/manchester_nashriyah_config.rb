@@ -69,7 +69,7 @@ to_field 'cho_has_type', literal('Serials'), translation_map('has_type_ar_from_e
 to_field 'cho_is_part_of', literal('Nashriyah: digital Iranian history'), lang('en')
 to_field 'cho_is_part_of', literal('آرشیو آنلاین نشریات دانشگاه منچستر'), lang('fa-Arab')
 to_field 'cho_language', literal('Persian'), lang('en')
-to_field 'cho_language', literal('Persian'), translation_map('norm_languages_to_ar'), lang('ar-Arab')
+to_field 'cho_language', literal('Persian'), translation_map('lang_ar_from_en'), lang('ar-Arab')
 to_field 'cho_spatial', literal('Iran'), lang('en')
 to_field 'cho_spatial', literal('إيران'), lang('ar-Arab')
 to_field 'cho_type', extract_oai('dc:type'), lang('en')
