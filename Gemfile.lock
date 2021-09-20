@@ -55,7 +55,7 @@ GEM
       dry-core (~> 0.5, >= 0.5)
       dry-initializer (~> 3.0)
       dry-schema (~> 1.8, >= 1.8.0)
-    faraday (1.7.1)
+    faraday (1.8.0)
       faraday-em_http (~> 1.0)
       faraday-em_synchrony (~> 1.0)
       faraday-excon (~> 1.1)
@@ -195,8 +195,8 @@ GEM
       thread_safe (~> 0.1)
     unf (0.1.4)
       unf_ext
-    unf_ext (0.0.7.7)
-    unicode-display_width (2.0.0)
+    unf_ext (0.0.8)
+    unicode-display_width (2.1.0)
     yell (2.2.2)
     zeitwerk (2.4.2)
 
