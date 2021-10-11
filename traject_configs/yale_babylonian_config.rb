@@ -57,7 +57,7 @@ to_field 'cho_has_type', column('format'), split(';'), normalize_has_type, trans
 to_field 'cho_identifier', column('callnumber'), prepend('Catalog Number: ')
 to_field 'cho_identifier', column('type'), split(';'), last, gsub(' original catalog number ', ''), prepend('Original Number: ')
 to_field 'cho_medium', column('era'), lang('en')
-to_field 'cho_periodo_period', column('geographic_culture'), translation_map('periodo')
+to_field 'cho_periodo_period', column('geographic_culture'), translation_map('periodo_from_contributor')
 to_field 'cho_spatial', column('geographic_country'), strip, transform(&:downcase), translation_map('spatial_from_contributor'), lang('en')
 to_field 'cho_spatial', column('geographic_country'), strip, transform(&:downcase), translation_map('spatial_from_contributor'), translation_map('spatial_ar_from_en'), lang('ar-Arab')
 to_field 'cho_spatial', column('geographic_municipality'), strip, transform(&:downcase), translation_map('spatial_from_contributor'), lang('en')
