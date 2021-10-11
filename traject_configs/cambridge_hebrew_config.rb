@@ -96,7 +96,7 @@ to_field 'agg_dc_rights', extract_tei("#{PUB_STMT}/tei:availability/tei:licence"
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(context,
                                   'wr_dc_rights' => [extract_tei("#{PUB_STMT}/tei:availability/tei:licence"), first_only, squish, strip],
-                                  'wr_edm_rights' => [literal('BY-NC-SA'), translation_map('edm_rights')],
+                                  'wr_edm_rights' => [literal('BY-NC-SA'), translation_map('edm_rights_from_contributor')],
                                   'wr_id' => [literal(context.clipboard[:id]),
                                               prepend('https://cudl.lib.cam.ac.uk/view/'),
                                               append('/1')],
@@ -106,7 +106,7 @@ end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(context,
                                   'wr_dc_rights' => [extract_tei("#{PUB_STMT}/tei:availability/tei:licence"), first_only, squish, strip],
-                                  'wr_edm_rights' => [literal('BY-NC-SA'), translation_map('edm_rights')],
+                                  'wr_edm_rights' => [literal('BY-NC-SA'), translation_map('edm_rights_from_contributor')],
                                   'wr_id' => [extract_tei('//tei:facsimile/tei:graphic/@url'),
                                               gsub('http://cudl.lib.cam.ac.uk/content/images/', ''),
                                               gsub(%r{_files/8/0_0.jpg}, ''),
