@@ -67,7 +67,7 @@ to_field 'cho_has_type', literal('Manuscripts'), translation_map('has_type_ar_fr
 to_field 'cho_identifier', oclcnum
 to_field 'cho_is_part_of', extract_marc('440a:490a:800abcdt:400abcd:810abcdt:410abcd:811acdeft:411acdef:830adfgklmnoprst:760ast', alternate_script: false), lang('es')
 to_field 'cho_language', extract_marc('008[35-37]:041a:041d'), normalize_language, lang('en')
-to_field 'cho_language', extract_marc('008[35-37]:041a:041d'), normalize_language, translation_map('norm_languages_to_ar'), lang('ar-Arab')
+to_field 'cho_language', extract_marc('008[35-37]:041a:041d'), normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
 to_field 'cho_publisher', extract_marc('260b:264b', alternate_script: false), trim_punctuation, lang('en')
 to_field 'cho_provenance', extract_marc('541a', alternate_script: false), trim_punctuation, lang('es')
 to_field 'cho_spatial', marc_geo_facet, lang('en')

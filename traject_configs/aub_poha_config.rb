@@ -82,7 +82,7 @@ to_field 'cho_identifier', extract_poha('/*/dc:localID'), strip
 to_field 'cho_is_part_of', extract_poha('/*/dc:collectionName'), strip, lang('en')
 to_field 'cho_is_part_of', extract_poha('/*/dc:collectionNameAR'), strip, lang('ar-Arab')
 to_field 'cho_language', literal('Arabic'), lang('en')
-to_field 'cho_language', literal('Arabic'), translation_map('norm_languages_to_ar'), lang('ar-Arab')
+to_field 'cho_language', literal('Arabic'), translation_map('lang_ar_from_en'), lang('ar-Arab')
 to_field 'cho_dc_rights', literal('The copyright holder of this interview is the Nakba Archive, all rights reserved.'), lang('en')
 to_field 'cho_spatial', extract_poha('/*/dc:village'), strip, lang('en')
 to_field 'cho_spatial', extract_poha('/*/dc:villageAR'), strip, lang('ar-Arab')

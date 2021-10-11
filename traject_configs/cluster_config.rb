@@ -51,8 +51,8 @@ to_field 'cho_has_type', literal('Geospatial'), lang('en')
 to_field 'cho_has_type', literal('Geospatial'), translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_language', literal('Arabic'), lang('en')
 to_field 'cho_language', literal('English'), lang('en')
-to_field 'cho_language', literal('Arabic'), translation_map('norm_languages_to_ar'), lang('ar-Arab')
-to_field 'cho_language', literal('English'), translation_map('norm_languages_to_ar'), lang('ar-Arab')
+to_field 'cho_language', literal('Arabic'), translation_map('lang_ar_from_en'), lang('ar-Arab')
+to_field 'cho_language', literal('English'), translation_map('lang_ar_from_en'), lang('ar-Arab')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')

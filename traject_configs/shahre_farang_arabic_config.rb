@@ -51,7 +51,7 @@ to_field 'cho_has_type', literal('Other Texts'), lang('en')
 to_field 'cho_has_type', literal('Other Texts'), translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_identifier', extract_json('.id'), strip
 to_field 'cho_language', literal('Arabic'), lang('en')
-to_field 'cho_language', literal('Arabic'), translation_map('norm_languages_to_ar'), lang('ar-Arab')
+to_field 'cho_language', literal('Arabic'), translation_map('lang_ar_from_en'), lang('ar-Arab')
 to_field 'cho_subject', extract_json('.tags[0].term'), strip, lang('ar-Arab')
 to_field 'cho_subject', extract_json('.tags[1].term'), strip, lang('ar-Arab')
 to_field 'cho_subject', extract_json('.tags[2].term'), strip, lang('ar-Arab')

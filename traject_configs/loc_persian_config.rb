@@ -65,7 +65,7 @@ to_field 'cho_identifier', extract_json('.number_lccn[0]'), strip
 to_field 'cho_identifier', extract_json('.shelf_id'), strip
 to_field 'cho_is_part_of', literal('Persian Language Rare Materials'), lang('en')
 to_field 'cho_language', extract_json('.item.language[0]'), strip, normalize_language, lang('en')
-to_field 'cho_language', extract_json('.item.language[0]'), strip, normalize_language, translation_map('norm_languages_to_ar'), lang('ar-Arab')
+to_field 'cho_language', extract_json('.item.language[0]'), strip, normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
 to_field 'cho_publisher', extract_json('.item.created_published[0]'), strip, lang('en')
 to_field 'cho_spatial', extract_json('.location_country[0]'), strip, lang('en')
 to_field 'cho_subject', extract_json('.item.subjects[0]'), strip, lang('en')

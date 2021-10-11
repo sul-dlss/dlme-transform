@@ -59,7 +59,7 @@ to_field 'cho_identifier', extract_json('.item.call_number[0]'), strip
 to_field 'cho_identifier', extract_json('.shelf_id'), strip
 to_field 'cho_is_part_of', literal("Manuscripts in St. Catherine's Monastery, Mount Sinai"), lang('en')
 to_field 'cho_language', extract_json('.language[0]'), strip, normalize_language, lang('en')
-to_field 'cho_language', extract_json('.language[0]'), strip, normalize_language, translation_map('norm_languages_to_ar'), lang('ar-Arab')
+to_field 'cho_language', extract_json('.language[0]'), strip, normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
 to_field 'cho_publisher', extract_json('.item.created_published[0]'), strip, lang('en')
 to_field 'cho_subject', extract_json('.subject[0]'), strip, lang('en')
 to_field 'cho_type', extract_json('.original_format[0]'), strip, lang('en')

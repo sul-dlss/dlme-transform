@@ -85,7 +85,7 @@ to_field 'cho_has_type', literal('Manuscripts'), translation_map('has_type_ar_fr
 to_field 'cho_identifier', extract_tei("#{MS_DESC}/#{MS_ID}/tei:idno[@type='call-number']")
 to_field 'cho_is_part_of', literal('OPenn: Manuscripts of the Muslim World'), lang('en')
 to_field 'cho_language', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/tei:textlang/@mainlang"), normalize_language, lang('en')
-to_field 'cho_language', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/tei:textlang/@mainlang"), normalize_language, translation_map('norm_languages_to_ar'), lang('ar-Arab')
+to_field 'cho_language', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/tei:textlang/@mainlang"), normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
 to_field 'cho_provenance', extract_tei("#{MS_DESC}/tei:history/tei:provenance"), strip, lang('en')
 to_field 'cho_publisher', extract_tei("#{PUB_STMT}/tei:publisher"), strip, lang('en')
 to_field 'cho_spatial', extract_tei("#{MS_DESC}/#{MS_ORIGIN}/tei:origplace"), strip, lang('en')

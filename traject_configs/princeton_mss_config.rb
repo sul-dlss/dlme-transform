@@ -71,7 +71,7 @@ to_field 'cho_identifier', extract_json('.identifier[0]'), strip
 to_field 'cho_identifier', extract_json('.replaces[0]'), strip, prepend('Replaces: ')
 to_field 'cho_is_part_of', extract_json('.member_of_collections[0]'), strip, lang('en')
 to_field 'cho_language', extract_json('.language[0]'), strip, normalize_language, lang('en')
-to_field 'cho_language', extract_json('.language[0]'), strip, normalize_language, translation_map('norm_languages_to_ar'), lang('ar-Arab')
+to_field 'cho_language', extract_json('.language[0]'), strip, normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
 to_field 'cho_provenance', extract_json('.provenance[0]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_publisher', extract_json('.publisher[0]'), strip, lang('en')
 to_field 'cho_publisher', extract_json('.publisher[1]'), strip, lang('ar-Arab')

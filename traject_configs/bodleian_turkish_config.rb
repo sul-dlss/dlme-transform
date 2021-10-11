@@ -55,7 +55,7 @@ to_field 'cho_has_type', literal('Manuscripts'), translation_map('has_type_ar_fr
 to_field 'cho_identifier', column('catalogue_identifier'), strip
 to_field 'cho_is_part_of', column('collection'), strip, lang('en')
 to_field 'cho_language', column('language'), normalize_language, lang('en')
-to_field 'cho_language', column('language'), normalize_language, translation_map('norm_languages_to_ar'), lang('ar-Arab')
+to_field 'cho_language', column('language'), normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
 to_field 'cho_medium', column('materials'), strip, lang('en')
 to_field 'cho_spatial', column('place_of_origin'), strip, lang('en')
 

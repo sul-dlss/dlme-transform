@@ -60,7 +60,7 @@ to_field 'cho_identifier', extract_json('.local_identifier[0]'), strip
 to_field 'cho_is_part_of', extract_json('.member_of_collections[0]'), strip, lang('en')
 to_field 'cho_is_part_of', extract_json('.member_of_collections[1]'), strip, lang('en')
 to_field 'cho_language', extract_json('.language[0]'), strip, normalize_language, lang('en')
-to_field 'cho_language', extract_json('.language[0]'), strip, normalize_language, translation_map('norm_languages_to_ar'), lang('ar-Arab')
+to_field 'cho_language', extract_json('.language[0]'), strip, normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
 to_field 'cho_spatial', extract_json('.geographic_origin[0]'), lang('en')
 to_field 'cho_type', extract_json('.resource_type[0]'), lang('en')
 to_field 'cho_type', extract_json('.genre[0]'), lang('en')

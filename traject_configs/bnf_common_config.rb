@@ -50,7 +50,7 @@ to_field 'cho_dc_rights', extract_srw('dc:rights[1]'), strip, lang('fr')
 to_field 'cho_dc_rights', extract_srw('dc:rights[2]'), strip, lang('en')
 to_field 'cho_format', extract_srw('dc:format'), strip, lang('fr')
 to_field 'cho_language', extract_srw('dc:language'), first_only, strip, normalize_language, lang('en')
-to_field 'cho_language', extract_srw('dc:language'), first_only, strip, normalize_language, translation_map('norm_languages_to_ar'), lang('ar-Arab')
+to_field 'cho_language', extract_srw('dc:language'), first_only, strip, normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
 to_field 'cho_relation', extract_srw('dc:relation'), strip, lang('fr')
 to_field 'cho_source', extract_srw('dc:source'), strip, lang('fr')
 

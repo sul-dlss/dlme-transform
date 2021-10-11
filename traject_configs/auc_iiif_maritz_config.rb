@@ -61,7 +61,7 @@ to_field 'cho_has_type', literal('Photographs'), translation_map('has_type_ar_fr
 to_field 'cho_identifier', extract_json('.identifier'), strip
 to_field 'cho_is_part_of', extract_json('.collection'), strip, lang('en')
 to_field 'cho_language', extract_json('.language'), strip, normalize_language, lang('en')
-to_field 'cho_language', extract_json('.language'), strip, normalize_language, translation_map('norm_languages_to_ar'), lang('ar-Arab')
+to_field 'cho_language', extract_json('.language'), strip, normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
 to_field 'cho_spatial', extract_json('.location'), strip, lang('en')
 to_field 'cho_type', extract_json('.type'), strip, lang('en')
 to_field 'cho_type', extract_json('.getty-aat'), strip, lang('en')
