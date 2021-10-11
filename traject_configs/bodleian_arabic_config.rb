@@ -83,7 +83,6 @@ to_field 'cho_provenance', column('former-owner'), strip, prepend('Former Owner:
 to_field 'cho_provenance', column('provenance'), strip, lang('en')
 to_field 'cho_spatial', column('place_of_origin'), strip, lang('en')
 
-
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
 to_field 'agg_data_provider', data_provider_ar, lang('ar-Arab')
