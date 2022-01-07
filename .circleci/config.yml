@@ -4,11 +4,11 @@ executors:
     environment:
       IMAGE_NAME: suldlss/dlme-transform
     docker:
-    - image: circleci/buildpack-deps:stretch
+    - image: cimg/base
 jobs:
   test:
     docker:
-      - image: circleci/ruby:2.7.1-node
+      - image: cimg/ruby:2.7
     steps:
       - checkout
 
