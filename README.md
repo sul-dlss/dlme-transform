@@ -225,8 +225,8 @@ By default, test setup squelches any output that the code being tested sends to 
 
 If `STDOUT` or `STDERR` would be useful, output to each from the tests can be allowed by using env vars (independently or together).
 ```sh
-$ be rspec # default, just the logger output
-$ NO_SQUELCH_STDERR=1 be rspec # allow tests to print to STDERR (plus logger output)
-$ NO_SQUELCH_STDOUT=1 be rspec # allow tests to print to STDOUT (plus logger output), can be very noisy if run over all metadata
-$ NO_SQUELCH_STDERR=1 NO_SQUELCH_STDOUT=1 be rspec # everything
+$ bundle exec rspec # default, just the logger output
+$ NO_SQUELCH_STDERR=1 bundle exec rspec # allow tests to print to STDERR (plus logger output)
+$ NO_SQUELCH_STDOUT=1 bundle exec rspec # allow tests to print to STDOUT (plus logger output), can be very noisy if run over all metadata
+$ NO_SQUELCH_STDERR=1 NO_SQUELCH_STDOUT=1 bundle exec rspec # everything
 ```
