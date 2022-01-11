@@ -8,7 +8,7 @@ executors:
 jobs:
   test:
     docker:
-      - image: cimg/ruby:2.7
+      - image: cimg/ruby:3.0
     steps:
       - checkout
 
