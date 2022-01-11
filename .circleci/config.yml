@@ -4,7 +4,7 @@ executors:
     environment:
       IMAGE_NAME: suldlss/dlme-transform
     docker:
-    - image: cimg/base
+    - image: cimg/base:stable
 jobs:
   test:
     docker:
