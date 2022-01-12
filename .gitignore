@@ -3,6 +3,8 @@
 /data/*
 !/data/.keep
 /tmp/output/*
+/dlme-metadata-main/*
+main.zip
 
 # Rspec files:
 spec/examples.txt
