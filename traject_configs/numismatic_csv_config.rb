@@ -45,10 +45,11 @@ to_field 'cho_title', column('Title'), strip, lang('en')
 # CHO Other
 to_field 'cho_contributor', column('Maker'), split('||'), strip, prepend('Maker: '), lang('en')
 to_field 'cho_creator', column('Authority'), split('||'), strip, prepend('Authority: '), lang('en')
-to_field 'cho_date', column('Year'), gsub('|', ' - '), strip, lang('en')
+to_field 'cho_date', column('Ah'), split('.'), first_only, strip, append(' AH'), lang('en')
 to_field 'cho_date_range_norm', csv_or_json_date_range('From Date', 'To Date')
 to_field 'cho_date_range_hijri', csv_or_json_date_range('From Date', 'To Date'), hijri_range
 to_field 'cho_dc_rights', literal('Public Domain'), lang('en')
+to_field 'cho_description', column('Axis'), strip, prepend('Axis: '), lang('en')
 to_field 'cho_description', column('Denomination'), strip, prepend('Denomination: '), lang('en')
 to_field 'cho_description', column('Findspot'), strip, prepend('Findspot: '), lang('en')
 to_field 'cho_description', column('Obverse Legend'), strip, prepend('Obverse legend: '), lang('en')
