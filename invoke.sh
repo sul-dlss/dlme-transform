@@ -18,7 +18,7 @@ DATA_DIR=$DATA_PATH
 DATA_DIR=${DATA_DIR//\//-}
 DEBUG_FLAG=$2
 DOWNLOAD_PATH=${DATA_PATH%/*}
-S3_DATA="s3://$S3_BUCKET/source/$DOWNLOAD_PATH"
+S3_DATA="s3://$S3_BUCKET/metadata/$DOWNLOAD_PATH"
 
 if [ $SKIP_FETCH_DATA != "true" ]; then  
   echo "Getting $S3_DATA"
