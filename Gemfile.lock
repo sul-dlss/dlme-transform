@@ -32,7 +32,7 @@ GEM
     dry-core (0.7.1)
       concurrent-ruby (~> 1.0)
     dry-inflector (0.2.1)
-    dry-initializer (3.1.0)
+    dry-initializer (3.1.1)
     dry-logic (1.2.0)
       concurrent-ruby (~> 1.0)
       dry-core (~> 0.5, >= 0.5)
@@ -85,7 +85,7 @@ GEM
       ffi (>= 1.0.0)
       rake
     hashie (4.1.0)
-    honeybadger (4.9.0)
+    honeybadger (4.10.0)
     http (5.0.4)
       addressable (~> 2.8)
       http-cookie (~> 1.0)
