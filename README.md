@@ -19,7 +19,7 @@ You can also do this manually (see below).  You only need the local docker image
 
 ### Build image
 ```shell
-docker build --no-cache
+docker build --no-cache \
              --build-arg VCS_REF=`git rev-parse --short HEAD` \
              --build-arg VCS_URL=`git config --get remote.origin.url` \
              --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` \
