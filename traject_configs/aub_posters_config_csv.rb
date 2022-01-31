@@ -58,7 +58,7 @@ to_field 'cho_date', column('date'), strip, lang('en')
 to_field 'cho_date_range_hijri', column('date'), strip, parse_range, hijri_range
 to_field 'cho_date_range_norm', column('date'), strip, parse_range
 to_field 'cho_dc_rights', column('rights'), lang('en')
-to_field 'cho_description', column('description'), strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
+to_field 'cho_description', column('description'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
 to_field 'cho_edm_type', literal('Image'), lang('en')
 to_field 'cho_edm_type', literal('Image'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_has_type', literal('Posters'), lang('en')
