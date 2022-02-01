@@ -39,6 +39,7 @@ to_field 'transform_timestamp', timestamp
 
 to_field 'dlme_collection', literal('auc-historical-videos'), translation_map('dlme_collection_from_provider_id'), lang('en')
 to_field 'dlme_collection', literal('auc-historical-videos'), translation_map('dlme_collection_from_provider_id'), translation_map('dlme_collection_ar_from_en'), lang('ar-Arab')
+to_field 'dlme_collection_id', literal('auc-historical-videos')
 
 # CHO Required
 to_field 'id', extract_oai_identifier, gsub('oai:cdm15795.contentdm.oclc.org:', ''), strip

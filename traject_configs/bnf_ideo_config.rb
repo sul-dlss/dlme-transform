@@ -2,6 +2,7 @@
 
 to_field 'dlme_collection', literal('bnf-ideo'), translation_map('dlme_collection_from_provider_id'), lang('en')
 to_field 'dlme_collection', literal('bnf-ideo'), translation_map('dlme_collection_from_provider_id'), translation_map('dlme_collection_ar_from_en'), lang('ar-Arab')
+to_field 'dlme_collection_id', literal('bnf-ideo')
 
 # Cho Required
 to_field 'cho_title', extract_srw('dc:title[1]'), strip, lang('ar-Arab')

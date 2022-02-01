@@ -43,6 +43,7 @@ end
 
 to_field 'dlme_collection', literal('cambridge-genizah'), translation_map('dlme_collection_from_provider_id'), lang('en')
 to_field 'dlme_collection', literal('cambridge-genizah'), translation_map('dlme_collection_from_provider_id'), translation_map('dlme_collection_ar_from_en'), lang('ar-Arab')
+to_field 'dlme_collection_id', literal('cambridge-genizah')
 
 # File path
 to_field 'dlme_source_file', path_to_file
