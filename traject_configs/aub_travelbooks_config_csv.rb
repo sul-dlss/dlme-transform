@@ -48,28 +48,28 @@ to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
 
 # Cho Required
-to_field 'id', column('id'), strip
-to_field 'cho_title', json_title_or('title', 'description'), arabic_script_lang_or_default('ar-Arab', 'und-Latn'), default('Untitled', 'بدون عنوان')
+to_field 'id', column('id'), strip, parse_csv
+to_field 'cho_title', json_title_or('title', 'description'), parse_csv, arabic_script_lang_or_default('ar-Arab', 'und-Latn'), default('Untitled', 'بدون عنوان')
 
 # Cho Other
-to_field 'cho_creator', extract_csv_values('creator'), strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
-to_field 'cho_date', column('date'), strip, lang('en')
-to_field 'cho_date_range_hijri', column('date'), strip, parse_range, hijri_range
-to_field 'cho_date_range_norm', column('date'), strip, parse_range
-to_field 'cho_dc_rights', column('rights'), lang('en')
-to_field 'cho_description', column('description'), strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
+to_field 'cho_creator', column('creator'), strip, parse_csv, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
+to_field 'cho_date', column('date'), strip, parse_csv, lang('en')
+to_field 'cho_date_range_hijri', column('date'), strip, parse_csv, parse_range, hijri_range
+to_field 'cho_date_range_norm', column('date'), strip, parse_csv, parse_range
+to_field 'cho_dc_rights', column('rights'), strip, parse_csv, lang('en')
+to_field 'cho_description', column('description'), strip, parse_csv, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
 to_field 'cho_edm_type', literal('Text'), lang('en')
 to_field 'cho_edm_type', literal('Text'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_has_type', literal('Books'), lang('en')
 to_field 'cho_has_type', literal('Books'), translation_map('has_type_ar_from_en'), lang('ar-Arab')
-to_field 'cho_identifier', column('identifier'), strip
-# to_field 'cho_language', column('language'), first_only, split(';'),
-#          split(','), strip, normalize_language, lang('en')
-# to_field 'cho_language', column('language'), first_only, split(';'),
-#          split(','), strip, normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
-# to_field 'cho_publisher', column('publisher'), strip, lang('en')
-# to_field 'cho_subject', column('subject'), strip, lang('en')
-# to_field 'cho_type', column('type'), arabic_script_lang_or_default('ar-Arab', 'und-Latn')
+to_field 'cho_identifier', column('identifier'), strip, parse_csv
+to_field 'cho_language', column('language'), parse_csv, first_only, split(';'),
+         split(','), strip, normalize_language, lang('en')
+to_field 'cho_language', column('language'), parse_csv, first_only, split(';'),
+         split(','), strip, normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
+to_field 'cho_publisher', column('publisher'), strip, parse_csv, lang('en')
+to_field 'cho_subject', column('subject'), strip, parse_csv, lang('en')
+to_field 'cho_type', column('type'), strip, parse_csv, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
@@ -79,17 +79,17 @@ to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_dc_rights' => [column('rights')],
+    'wr_dc_rights' => [column('rights'), strip, parse_csv],
     'wr_edm_rights' => [literal('CC BY-ND: https://creativecommons.org/licenses/by-nd/4.0/')],
-    'wr_id' => [column('identifier'), strip]
+    'wr_id' => [column('identifier'), strip, parse_csv]
   )
 end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_dc_rights' => [column('rights')],
+    'wr_dc_rights' => [column('rights'), strip, parse_csv],
     'wr_edm_rights' => [literal('CC BY-ND: https://creativecommons.org/licenses/by-nd/4.0/')],
-    'wr_id' => [column('id'), prepend('https://libraries.aub.edu.lb/xtf/data/ulbooks/'), append('/thumb.jpg')]
+    'wr_id' => [column('id'), strip, parse_csv, prepend('https://libraries.aub.edu.lb/xtf/data/ulbooks/'), append('/thumb.jpg')]
   )
 end
 to_field 'agg_provider', provider, lang('en')
