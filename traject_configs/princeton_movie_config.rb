@@ -31,6 +31,7 @@ end
 to_field 'agg_data_provider_collection', collection
 to_field 'dlme_collection', literal('princeton-posters'), translation_map('dlme_collection_from_provider_id'), lang('en')
 to_field 'dlme_collection', literal('princeton-posters'), translation_map('dlme_collection_from_provider_id'), translation_map('dlme_collection_ar_from_en'), lang('ar-Arab')
+to_field 'dlme_collection_id', literal('princeton-posters')
 
 # Set Version & Timestamp on each record
 to_field 'transform_version', version

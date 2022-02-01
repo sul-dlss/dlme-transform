@@ -36,6 +36,7 @@ to_field 'transform_timestamp', timestamp
 
 to_field 'dlme_collection', literal('yale-babylon'), translation_map('dlme_collection_from_provider_id'), lang('en')
 to_field 'dlme_collection', literal('yale-babylon'), translation_map('dlme_collection_from_provider_id'), translation_map('dlme_collection_ar_from_en'), lang('ar-Arab')
+to_field 'dlme_collection_id', literal('yale-babylon')
 
 # File path
 to_field 'dlme_source_file', path_to_file

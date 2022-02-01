@@ -38,6 +38,7 @@ to_field 'transform_timestamp', timestamp
 
 to_field 'dlme_collection', literal('penn-egyptian'), translation_map('dlme_collection_from_provider_id'), lang('en')
 to_field 'dlme_collection', literal('penn-egyptian'), translation_map('dlme_collection_from_provider_id'), translation_map('dlme_collection_ar_from_en'), lang('ar-Arab')
+to_field 'dlme_collection_id', literal('penn-egyptian')
 
 # CHO Required
 to_field 'id', normalize_prefixed_id('emuIRN')

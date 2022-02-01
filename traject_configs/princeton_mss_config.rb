@@ -40,6 +40,7 @@ to_field 'transform_timestamp', timestamp
 to_field 'dlme_source_file', path_to_file
 to_field 'dlme_collection', literal('princeton-mss'), translation_map('dlme_collection_from_provider_id'), lang('en')
 to_field 'dlme_collection', literal('princeton-mss'), translation_map('dlme_collection_from_provider_id'), translation_map('dlme_collection_ar_from_en'), lang('ar-Arab')
+to_field 'dlme_collection_id', literal('princeton-mss')
 
 # Cho Required
 to_field 'id', extract_json('.identifier[0]'), split('alt='), first_only, strip, gsub("<a href='http://arks.princeton.edu/", ''), gsub("'", '')
