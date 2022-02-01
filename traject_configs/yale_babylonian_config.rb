@@ -51,7 +51,6 @@ to_field 'cho_dc_rights', literal('http://creativecommons.org/publicdomain/zero/
 to_field 'cho_description', column('type'), lang('en')
 to_field 'cho_edm_type', column('format'), split(';'), normalize_has_type, normalize_edm_type, lang('en')
 to_field 'cho_edm_type', column('format'), split(';'), normalize_has_type, normalize_edm_type, translation_map('edm_type_ar_from_en'), lang('ar-Arab')
-to_field 'cho_format', column('format'), lang('en')
 to_field 'cho_has_type', column('format'), split(';'), normalize_has_type, lang('en')
 to_field 'cho_has_type', column('format'), split(';'), normalize_has_type, translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_identifier', column('callnumber'), prepend('Catalog Number: ')
@@ -64,6 +63,7 @@ to_field 'cho_spatial', column('geographic_municipality'), strip, transform(&:do
 to_field 'cho_spatial', column('geographic_municipality'), strip, transform(&:downcase), translation_map('spatial_from_contributor'), translation_map('spatial_ar_from_en'), lang('ar-Arab')
 to_field 'cho_temporal', column('geographic_culture'), strip, transform(&:downcase), translation_map('temporal_from_contributor'), lang('en')
 to_field 'cho_temporal', column('geographic_culture'), strip, transform(&:downcase), translation_map('temporal_from_contributor'), translation_map('temporal_ar_from_en'), lang('ar-Arab')
+to_field 'cho_type', column('format'), split(';'), lang('en')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
