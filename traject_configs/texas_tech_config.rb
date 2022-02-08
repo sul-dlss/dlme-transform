@@ -29,15 +29,13 @@ settings do
   provide 'reader_class_name', 'TrajectPlus::XmlReader'
 end
 
-to_field 'agg_data_provider_collection', collection
-
 # Set Version & Timestamp on each record
 to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
 
-to_field 'dlme_collection', literal('texas-tech'), translation_map('dlme_collection_from_provider_id'), lang('en')
-to_field 'dlme_collection', literal('texas-tech'), translation_map('dlme_collection_from_provider_id'), translation_map('dlme_collection_ar_from_en'), lang('ar-Arab')
-to_field 'dlme_collection_id', literal('texas-tech')
+to_field 'agg_data_provider_collection', literal('texas-tech'), translation_map('agg_collection_from_provider_id'), lang('en')
+to_field 'agg_data_provider_collection', literal('texas-tech'), translation_map('agg_collection_from_provider_id'), translation_map('agg_collection_ar_from_en'), lang('ar-Arab')
+to_field 'agg_data_provider_collection_id', literal('texas-tech')
 
 # Cho Required
 to_field 'id', extract_oai_identifier, strip
@@ -107,7 +105,7 @@ each_record convert_to_language_hash(
   'cho_temporal',
   'cho_title',
   'cho_type',
-  'dlme_collection'
+  'agg_data_provider_collection'
 )
 
 # NOTE: call add_cho_type_facet AFTER calling convert_to_language_hash fields

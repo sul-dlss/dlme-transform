@@ -37,9 +37,9 @@ to_field 'transform_timestamp', timestamp
 # File path
 to_field 'dlme_source_file', path_to_file
 
-to_field 'dlme_collection', literal('auc-postcards'), translation_map('dlme_collection_from_provider_id'), lang('en')
-to_field 'dlme_collection', literal('auc-postcards'), translation_map('dlme_collection_from_provider_id'), translation_map('dlme_collection_ar_from_en'), lang('ar-Arab')
-to_field 'dlme_collection_id', literal('auc-postcards')
+to_field 'agg_data_provider_collection', literal('auc-postcards'), translation_map('agg_collection_from_provider_id'), lang('en')
+to_field 'agg_data_provider_collection', literal('auc-postcards'), translation_map('agg_collection_from_provider_id'), translation_map('agg_collection_ar_from_en'), lang('ar-Arab')
+to_field 'agg_data_provider_collection_id', literal('auc-postcards')
 
 # Cho Required
 to_field 'id', extract_json('.id'), strip, gsub('/manifest.json', ''), gsub('https://cdm15795.contentdm.oclc.org/iiif/info/', '')
@@ -69,7 +69,7 @@ to_field 'cho_type', extract_json('.genre-aat'), strip, lang('en')
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
 to_field 'agg_data_provider', data_provider_ar, lang('ar-Arab')
-to_field 'agg_data_provider_collection', collection
+
 to_field 'agg_provider', provider, lang('en')
 to_field 'agg_provider', provider_ar, lang('ar-Arab')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
@@ -124,7 +124,7 @@ each_record convert_to_language_hash(
   'cho_temporal',
   'cho_title',
   'cho_type',
-  'dlme_collection'
+  'agg_data_provider_collection'
 )
 
 # NOTE: call add_cho_type_facet AFTER calling convert_to_language_hash fields

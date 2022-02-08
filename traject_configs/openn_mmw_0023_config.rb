@@ -39,9 +39,9 @@ end
 to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
 
-to_field 'dlme_collection', literal('openn-mmw-23'), translation_map('dlme_collection_from_provider_id'), lang('en')
-to_field 'dlme_collection', literal('openn-mmw-23'), translation_map('dlme_collection_from_provider_id'), translation_map('dlme_collection_ar_from_en'), lang('ar-Arab')
-to_field 'dlme_collection_id', literal('openn-mmw-23')
+to_field 'agg_data_provider_collection', literal('openn-mmw-23'), translation_map('agg_collection_from_provider_id'), lang('en')
+to_field 'agg_data_provider_collection', literal('openn-mmw-23'), translation_map('agg_collection_from_provider_id'), translation_map('agg_collection_ar_from_en'), lang('ar-Arab')
+to_field 'agg_data_provider_collection_id', literal('openn-mmw-23')
 
 # File path
 to_field 'dlme_source_file', path_to_file
@@ -99,7 +99,7 @@ to_field 'cho_subject', extract_tei("#{PROFILE_DESC}/tei:keywords[@n='subjects']
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
 to_field 'agg_data_provider', data_provider_ar, lang('ar-Arab')
-to_field 'agg_data_provider_collection', collection
+
 to_field 'agg_data_provider_country', data_provider_country, lang('en')
 to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_edm_rights', public_domain
@@ -143,7 +143,7 @@ each_record convert_to_language_hash(
   'cho_temporal',
   'cho_title',
   'cho_type',
-  'dlme_collection'
+  'agg_data_provider_collection'
 )
 
 # NOTE: call add_cho_type_facet AFTER calling convert_to_language_hash fields

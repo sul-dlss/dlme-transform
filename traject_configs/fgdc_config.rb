@@ -27,8 +27,6 @@ settings do
   provide 'writer_class_name', 'DlmeJsonResourceWriter'
 end
 
-to_field 'agg_data_provider_collection', collection
-
 # Set Version & Timestamp on each record
 to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
