@@ -41,9 +41,9 @@ each_record do |record, context|
   context.clipboard[:id] = extract_record_id(record)
 end
 
-to_field 'dlme_collection', literal('cambridge-islamic'), translation_map('dlme_collection_from_provider_id'), lang('en')
-to_field 'dlme_collection', literal('cambridge-islamic'), translation_map('dlme_collection_from_provider_id'), translation_map('dlme_collection_ar_from_en'), lang('ar-Arab')
-to_field 'dlme_collection_id', literal('cambridge-islamic')
+to_field 'agg_data_provider_collection', literal('cambridge-islamic'), translation_map('agg_collection_from_provider_id'), lang('en')
+to_field 'agg_data_provider_collection', literal('cambridge-islamic'), translation_map('agg_collection_from_provider_id'), translation_map('agg_collection_ar_from_en'), lang('ar-Arab')
+to_field 'agg_data_provider_collection_id', literal('cambridge-islamic')
 
 # File path
 to_field 'dlme_source_file', path_to_file
@@ -133,7 +133,7 @@ to_field 'agg_preview' do |_record, accumulator, context|
 end
 to_field 'agg_provider', provider, lang('en')
 to_field 'agg_provider', provider_ar, lang('ar-Arab')
-to_field 'agg_data_provider_collection', collection
+
 to_field 'agg_provider_country', provider_country, lang('en')
 to_field 'agg_provider_country', provider_country_ar, lang('ar-Arab')
 
@@ -166,7 +166,7 @@ each_record convert_to_language_hash(
   'cho_temporal',
   'cho_title',
   'cho_type',
-  'dlme_collection'
+  'agg_data_provider_collection'
 )
 
 # NOTE: call add_cho_type_facet AFTER calling convert_to_language_hash fields

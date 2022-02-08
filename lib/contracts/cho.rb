@@ -34,9 +34,6 @@ module Contracts
       required(:cho_title).value(:hash?)
       optional(:cho_type).value(:hash?)
       optional(:cho_type_facet).value(:hash?)
-
-      required(:dlme_collection).value(:hash?)
-      required(:dlme_collection_id).value(:array)
       optional(:dlme_source_file).value(:string)
 
       # See https://github.com/sul-dlss/dlme/blob/master/docs/application_profile.md#oreaggregation
@@ -45,12 +42,13 @@ module Contracts
       required(:id).filled(:string)
       optional(:__source).filled(:string)
       # Since the IR is a flattened projection of the MAP, 'agg_aggregated_cho' is not used.
-      required(:agg_data_provider_collection).value(:string)
+
       required(:agg_data_provider).value(:hash?)
+      optional(:agg_data_provider_collection).value(:hash?)
+      optional(:agg_data_provider_collection_id).value(:string)
       required(:agg_data_provider_country).value(:hash?)
       optional(:agg_dc_rights).array(:str?)
       optional(:agg_edm_rights).array(:str?) # At least one is required
-
       optional(:agg_has_view).value(:array) # 0 to n
       optional(:agg_is_shown_at) # 0 or 1
       optional(:agg_is_shown_by) # 0 or 1

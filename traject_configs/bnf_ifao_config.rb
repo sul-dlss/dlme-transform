@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-to_field 'dlme_collection', literal('bnf-ifao'), translation_map('dlme_collection_from_provider_id'), lang('en')
-to_field 'dlme_collection', literal('bnf-ifao'), translation_map('dlme_collection_from_provider_id'), translation_map('dlme_collection_ar_from_en'), lang('ar-Arab')
-to_field 'dlme_collection_id', literal('bnf-ifao')
+to_field 'agg_data_provider_collection', literal('bnf-ifao'), translation_map('agg_collection_from_provider_id'), lang('en')
+to_field 'agg_data_provider_collection', literal('bnf-ifao'), translation_map('agg_collection_from_provider_id'), translation_map('agg_collection_ar_from_en'), lang('ar-Arab')
+to_field 'agg_data_provider_collection_id', literal('bnf-ifao')
 
 # Cho Required
 to_field 'cho_title', extract_srw('dc:title'), strip, lang('fr')
@@ -29,7 +29,7 @@ each_record convert_to_language_hash(
   'cho_subject',
   'cho_title',
   'cho_type',
-  'dlme_collection'
+  'agg_data_provider_collection'
 )
 
 # NOTE: call add_cho_type_facet AFTER calling convert_to_language_hash fields

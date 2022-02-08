@@ -30,9 +30,9 @@ end
 to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
 
-to_field 'dlme_collection', literal('cluster'), translation_map('dlme_collection_from_provider_id'), lang('en')
-to_field 'dlme_collection', literal('cluster'), translation_map('dlme_collection_from_provider_id'), translation_map('dlme_collection_ar_from_en'), lang('ar-Arab')
-to_field 'dlme_collection_id', literal('cluster')
+to_field 'agg_data_provider_collection', literal('cluster'), translation_map('agg_collection_from_provider_id'), lang('en')
+to_field 'agg_data_provider_collection', literal('cluster'), translation_map('agg_collection_from_provider_id'), translation_map('agg_collection_ar_from_en'), lang('ar-Arab')
+to_field 'agg_data_provider_collection_id', literal('cluster')
 
 # Cho Required
 to_field 'id', column('url'), strip
@@ -77,7 +77,7 @@ to_field 'agg_preview' do |_record, accumulator, context|
 end
 to_field 'agg_provider_country', provider_country, lang('en')
 to_field 'agg_provider_country', provider_country_ar, lang('ar-Arab')
-to_field 'agg_data_provider_collection', collection
+
 to_field 'agg_data_provider_country', data_provider_country, lang('en')
 to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 

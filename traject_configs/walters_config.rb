@@ -40,9 +40,9 @@ end
 to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
 
-to_field 'dlme_collection', extract_json('.Collection'), transform(&:downcase), gsub(' ', '-'), prepend('walters-'), translation_map('dlme_collection_from_provider_id'), lang('en')
-to_field 'dlme_collection', extract_json('.Collection'), transform(&:downcase), gsub(' ', '-'), prepend('walters-'), translation_map('dlme_collection_from_provider_id'), translation_map('dlme_collection_ar_from_en'), lang('ar-Arab')
-to_field 'dlme_collection_id', extract_json('.Collection'), transform(&:downcase), gsub(' ', '-'), prepend('walters-')
+to_field 'agg_data_provider_collection', extract_json('.Collection'), transform(&:downcase), gsub(' ', '-'), prepend('walters-'), translation_map('agg_collection_from_provider_id'), lang('en')
+to_field 'agg_data_provider_collection', extract_json('.Collection'), transform(&:downcase), gsub(' ', '-'), prepend('walters-'), translation_map('agg_collection_from_provider_id'), translation_map('agg_collection_ar_from_en'), lang('ar-Arab')
+to_field 'agg_data_provider_collection_id', extract_json('.Collection'), transform(&:downcase), gsub(' ', '-'), prepend('walters-')
 
 # File path
 to_field 'dlme_source_file', path_to_file
@@ -81,7 +81,7 @@ to_field 'cho_type', extract_json('.ObjectName'), split(';'), strip, lang('en')
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
 to_field 'agg_data_provider', data_provider_ar, lang('ar-Arab')
-to_field 'agg_data_provider_collection', collection
+
 to_field 'agg_data_provider_country', data_provider_country, lang('en')
 to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_edm_rights', literal('CC0: https://creativecommons.org/publicdomain/zero/1.0/')
@@ -129,7 +129,7 @@ each_record convert_to_language_hash(
   'cho_temporal',
   'cho_title',
   'cho_type',
-  'dlme_collection'
+  'agg_data_provider_collection'
 )
 
 # NOTE: call add_cho_type_facet AFTER calling convert_to_language_hash fields

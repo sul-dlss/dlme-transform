@@ -37,10 +37,9 @@ settings do
   provide 'reader_class_name', 'TrajectPlus::XmlReader'
 end
 
-to_field 'agg_data_provider_collection', collection
-to_field 'dlme_collection', literal('aub-aco'), translation_map('dlme_collection_from_provider_id'), lang('en')
-to_field 'dlme_collection', literal('aub-aco'), translation_map('dlme_collection_from_provider_id'), translation_map('dlme_collection_ar_from_en'), lang('ar-Arab')
-to_field 'dlme_collection_id', literal('aub-aco')
+to_field 'agg_data_provider_collection', literal('aub-aco'), translation_map('agg_collection_from_provider_id'), lang('en')
+to_field 'agg_data_provider_collection', literal('aub-aco'), translation_map('agg_collection_from_provider_id'), translation_map('agg_collection_ar_from_en'), lang('ar-Arab')
+to_field 'agg_data_provider_collection_id', literal('aub-aco')
 
 # Set Version & Timestamp on each record
 to_field 'transform_version', version
@@ -144,7 +143,7 @@ each_record convert_to_language_hash(
   'cho_temporal',
   'cho_title',
   'cho_type',
-  'dlme_collection'
+  'agg_data_provider_collection'
 )
 
 # NOTE: call add_cho_type_facet AFTER calling convert_to_language_hash fields

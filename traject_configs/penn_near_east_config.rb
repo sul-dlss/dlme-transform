@@ -30,15 +30,13 @@ settings do
   provide 'reader_class_name', 'TrajectPlus::CsvReader'
 end
 
-to_field 'agg_data_provider_collection', collection
-
 # Set Version & Timestamp on each record
 to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
 
-to_field 'dlme_collection', literal('penn-near-east'), translation_map('dlme_collection_from_provider_id'), lang('en')
-to_field 'dlme_collection', literal('penn-near-east'), translation_map('dlme_collection_from_provider_id'), translation_map('dlme_collection_ar_from_en'), lang('ar-Arab')
-to_field 'dlme_collection_id', literal('penn-near-east')
+to_field 'agg_data_provider_collection', literal('penn-near-east'), translation_map('agg_collection_from_provider_id'), lang('en')
+to_field 'agg_data_provider_collection', literal('penn-near-east'), translation_map('agg_collection_from_provider_id'), translation_map('agg_collection_ar_from_en'), lang('ar-Arab')
+to_field 'agg_data_provider_collection_id', literal('penn-near-east')
 
 # CHO Required
 to_field 'id', normalize_prefixed_id('emuIRN')
@@ -121,7 +119,7 @@ each_record convert_to_language_hash(
   'cho_temporal',
   'cho_title',
   'cho_type',
-  'dlme_collection'
+  'agg_data_provider_collection'
 )
 
 # NOTE: call add_cho_type_facet AFTER calling convert_to_language_hash fields

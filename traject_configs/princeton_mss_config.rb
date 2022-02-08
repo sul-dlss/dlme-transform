@@ -38,9 +38,9 @@ to_field 'transform_timestamp', timestamp
 
 # File path
 to_field 'dlme_source_file', path_to_file
-to_field 'dlme_collection', literal('princeton-mss'), translation_map('dlme_collection_from_provider_id'), lang('en')
-to_field 'dlme_collection', literal('princeton-mss'), translation_map('dlme_collection_from_provider_id'), translation_map('dlme_collection_ar_from_en'), lang('ar-Arab')
-to_field 'dlme_collection_id', literal('princeton-mss')
+to_field 'agg_data_provider_collection', literal('princeton-mss'), translation_map('agg_collection_from_provider_id'), lang('en')
+to_field 'agg_data_provider_collection', literal('princeton-mss'), translation_map('agg_collection_from_provider_id'), translation_map('agg_collection_ar_from_en'), lang('ar-Arab')
+to_field 'agg_data_provider_collection_id', literal('princeton-mss')
 
 # Cho Required
 to_field 'id', extract_json('.identifier[0]'), split('alt='), first_only, strip, gsub("<a href='http://arks.princeton.edu/", ''), gsub("'", '')
@@ -83,7 +83,7 @@ to_field 'cho_type', extract_json('.type[1]'), lang('en')
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
 to_field 'agg_data_provider', data_provider_ar, lang('ar-Arab')
-to_field 'agg_data_provider_collection', collection
+
 to_field 'agg_data_provider_country', data_provider_country, lang('en')
 to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
@@ -130,7 +130,7 @@ each_record convert_to_language_hash(
   'cho_temporal',
   'cho_title',
   'cho_type',
-  'dlme_collection'
+  'agg_data_provider_collection'
 )
 
 # NOTE: call add_cho_type_facet AFTER calling convert_to_language_hash fields
