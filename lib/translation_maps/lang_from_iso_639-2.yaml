@@ -16,25 +16,35 @@ ger: German
 grc: Greek, Ancient (to 1453)
 guj: Gujarati
 heb: Hebrew
+hin: Hindi
 inc: Indic languages
 ind: Indonesian
 ita: Italian
 jpr: Judeo-Persian
 jrb: Judeo-Arabic
+kan: Kannada
 kur: Kurdish
 lad: Ladino
 lat: Latin
+mal: Malayalam
+mar: Marathi
 may: Malay
 ota: Turkish, Ottoman (1500-1928)
 pal: Pahlavi
 pan: Panjabi
 phi: Philippine languages
+pli: Pali
+por: Portuguese
 pus: Pashto
 per: Persian
+rus: Russian
 sam: Samaritan Aramaic
+snd: Sindhi
 spa: Spanish
+swe: Swedish
 syc: Classical Syriac
 syr: Syriac
+tam: Tamil
 tat: Tatar
 tgk: Tajik
 tur: Turkish
@@ -43,5 +53,6 @@ urd: Urdu
 uzb: Uzbek
 
 # ignore
+mis: ~
 und: ~
 zxx: ~

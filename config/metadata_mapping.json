@@ -703,6 +703,7 @@
   },
   {
     "trajects": [
+      "bodleian_common_config.rb",
       "bodleian_arabic_config.rb"
     ],
     "paths": [
@@ -743,6 +744,7 @@
   },
   {
     "trajects": [
+      "bodleian_common_config.rb",
       "bodleian_egypt_config.rb"
     ],
     "paths": [
@@ -763,6 +765,7 @@
   },
   {
     "trajects": [
+      "bodleian_common_config.rb",
       "bodleian_persian_config.rb"
     ],
     "paths": [
@@ -783,6 +786,7 @@
   },
   {
     "trajects": [
+      "bodleian_common_config.rb",
       "bodleian_turkish_config.rb"
     ],
     "paths": [
