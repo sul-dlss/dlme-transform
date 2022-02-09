@@ -4,6 +4,8 @@ aramaic: Aramaic
 aramaic, christian palestinian: Aramaic
 aratur: Aratur
 armenian: Armenian
+catalan: Catalan
+chagatai: Chagatai
 classical armenian: Armenian
 coptic: Coptic
 dutch: Dutch
@@ -30,6 +32,7 @@ latin: Latin
 old bulgarian: Old Bulgarian
 pahlavi: Pahlavi
 persian: Persian
+portuguese: Portuguese
 russian: Russian
 slavic languages: Slavic Languages
 spanish: Spanish
@@ -38,4 +41,8 @@ turkish, ottoman: Turkish, Ottoman (1500-1928)
 turkish, ottoman (1500-1928): Turkish, Ottoman (1500-1928)
 turkish: Turkish
 urdu: Urdu
+yiddish: Yiddish
 # "": "" # prevents empty strings from raising `not found` error
+
+# ignore
+no linguistic content: ~

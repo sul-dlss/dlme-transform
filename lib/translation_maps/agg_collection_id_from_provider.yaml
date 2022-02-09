@@ -1,0 +1,12 @@
+# Basic mapping from data provider identifier, plus collection identifier string
+# if needed, to dlme_collection value. Ensures dlme_collection is unique per
+# collection.
+
+Arabic Manuscripts and Maps at the Bodleian Library: bodleian_arabic_mss
+Bindings at the Bodleian Library: bodleian_bindings
+Hebrew Manuscripts and Printed Books at the Bodleian Library: bodleian_hebrew
+Incunabula and Blockbooks at the Bodleian Library: bodleian_incunabula
+Images from 35mm Slides and Filmstrips at the Bodleian Library: bodleian_slides_and_filmstrips
+Maps and Atlases at the Bodleian Library: bodleian_maps
+Persian Manuscripts at the Bodleian Library: bodleian_persian_mss
+Turkish Manuscripts at the Bodleian Library: bodleian_turkish_mss

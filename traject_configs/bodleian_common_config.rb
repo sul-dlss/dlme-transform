@@ -9,6 +9,7 @@ require 'macros/dlme'
 require 'macros/each_record'
 require 'macros/language_extraction'
 require 'macros/normalize_language'
+require 'macros/normalize_type'
 require 'macros/path_to_file'
 require 'macros/string_helper'
 require 'macros/timestamp'
@@ -21,6 +22,7 @@ extend Macros::DLME
 extend Macros::EachRecord
 extend Macros::LanguageExtraction
 extend Macros::NormalizeLanguage
+extend Macros::NormalizeType
 extend Macros::PathToFile
 extend Macros::StringHelper
 extend Macros::Timestamp
@@ -38,10 +40,6 @@ end
 to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
 
-to_field 'agg_data_provider_collection', column('collection'), append(' at the Bodleian Library'), lang('en')
-to_field 'agg_data_provider_collection', column('collection'), append(' at the Bodleian Library'), translation_map('agg_collection_ar_from_en'), lang('ar-Arab')
-to_field 'agg_data_provider_collection_id', column('collection'), append(' at the Bodleian Library'), translation_map('agg_collection_id_from_provider')
-
 # File path
 to_field 'dlme_source_file', path_to_file
 
@@ -50,20 +48,20 @@ to_field 'id', column('id'),
          strip,
          gsub('https://iiif.bodleian.ox.ac.uk/iiif/manifest/', ''),
          gsub('.json', '')
-to_field 'cho_title', column('title'), strip, hebrew_script_lang_or_default('he', 'und-Latn')
+to_field 'cho_title', column('title'), strip, arabic_script_lang_or_default('und-Arab', 'und-Latn'), default('Untitled', 'بدون عنوان')
 
 # Cho Other
-to_field 'cho_alternate', column('other-titles'), hebrew_script_lang_or_default('he', 'und-Latn')
-to_field 'cho_contributor', column('annotator'), strip, prepend('Annotator: '), hebrew_script_lang_or_default('he', 'und-Latn')
-to_field 'cho_contributor', column('commentators'), strip, prepend('Commentator: '), hebrew_script_lang_or_default('he', 'und-Latn')
-to_field 'cho_contributor', column('compiler'), strip, prepend('Compiler: '), hebrew_script_lang_or_default('he', 'und-Latn')
-to_field 'cho_contributor', column('contributor'), strip, hebrew_script_lang_or_default('he', 'und-Latn')
-to_field 'cho_contributor', column('editors'), strip, prepend('Editor: '), hebrew_script_lang_or_default('he', 'und-Latn')
-to_field 'cho_contributor', column('illustrator'), strip, append('Illustrator: '), hebrew_script_lang_or_default('he', 'und-Latn')
-to_field 'cho_contributor', column('printer'), strip, prepend('Printer: '), hebrew_script_lang_or_default('he', 'und-Latn')
-to_field 'cho_contributor', column('scribe'), strip, append('Scribe: '), hebrew_script_lang_or_default('he', 'und-Latn')
-to_field 'cho_contributor', column('translator'), strip, append('Translator: '), hebrew_script_lang_or_default('he', 'und-Latn')
-to_field 'cho_creator', column('author'), strip, hebrew_script_lang_or_default('he', 'und-Latn')
+to_field 'cho_alternate', column('other-titles'), arabic_script_lang_or_default('und-Arab', 'und-Latn')
+to_field 'cho_contributor', column('annotator'), strip, prepend('Annotator: '), arabic_script_lang_or_default('und-Arab', 'und-Latn')
+to_field 'cho_contributor', column('commentators'), strip, prepend('Commentator: '), arabic_script_lang_or_default('und-Arab', 'und-Latn')
+to_field 'cho_contributor', column('compiler'), strip, prepend('Compiler: '), arabic_script_lang_or_default('und-Arab', 'und-Latn')
+to_field 'cho_contributor', column('contributor'), strip, arabic_script_lang_or_default('und-Arab', 'und-Latn')
+to_field 'cho_contributor', column('editors'), strip, prepend('Editor: '), arabic_script_lang_or_default('und-Arab', 'und-Latn')
+to_field 'cho_contributor', column('illustrator'), strip, append('Illustrator: '), arabic_script_lang_or_default('und-Arab', 'und-Latn')
+to_field 'cho_contributor', column('printer'), strip, prepend('Printer: '), arabic_script_lang_or_default('und-Arab', 'und-Latn')
+to_field 'cho_contributor', column('scribe'), strip, append('Scribe: '), arabic_script_lang_or_default('und-Arab', 'und-Latn')
+to_field 'cho_contributor', column('translator'), strip, append('Translator: '), arabic_script_lang_or_default('und-Arab', 'und-Latn')
+to_field 'cho_creator', column('author'), strip, arabic_script_lang_or_default('und-Arab', 'und-Latn')
 to_field 'cho_date', column('date-statement'), strip, lang('en')
 to_field 'cho_date_range_norm', column('date-statement'), strip, gsub('/', '-'), parse_range
 to_field 'cho_date_range_hijri', column('date-statement'), strip, gsub('/', '-'), parse_range, hijri_range
@@ -73,7 +71,7 @@ to_field 'cho_description', column('binding'), strip, prepend('Binding: '), lang
 to_field 'cho_description', column('contents'), strip, prepend('Contents: '), lang('en')
 to_field 'cho_description', column('contents-note'), strip, prepend('Contents note: '), lang('en')
 to_field 'cho_description', column('decoration'), strip, prepend('Decoration: '), lang('en')
-to_field 'cho_description', column('description'), strip, hebrew_script_lang_or_default('he', 'und-Latn')
+to_field 'cho_description', column('description'), strip, arabic_script_lang_or_default('und-Arab', 'und-Latn')
 to_field 'cho_description', column('dimensions'), strip, prepend('Dimensions: '), lang('en')
 to_field 'cho_description', column('hand'), strip, prepend('Hand: '), lang('en')
 to_field 'cho_description', column('layout'), strip, prepend('Layout: '), lang('en')
@@ -82,8 +80,6 @@ to_field 'cho_description', column('record-origin'), strip, prepend('Record orig
 to_field 'cho_edm_type', literal('Text'), lang('en')
 to_field 'cho_edm_type', literal('Text'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_extent', column('extent'), strip, lang('en')
-to_field 'cho_has_type', literal('Manuscripts'), lang('en')
-to_field 'cho_has_type', literal('Manuscripts'), translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_identifier', column('catalogue-identifier'), strip
 to_field 'cho_is_part_of', column('collection'), strip, lang('en')
 to_field 'cho_language', column('language'), normalize_language, lang('en')
@@ -95,7 +91,6 @@ to_field 'cho_subject', column('subject'), strip, lang('en')
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
 to_field 'agg_data_provider', data_provider_ar, lang('ar-Arab')
-
 to_field 'agg_data_provider_country', data_provider_country, lang('en')
 to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
@@ -119,7 +114,6 @@ to_field 'agg_provider_country', provider_country_ar, lang('ar-Arab')
 
 each_record convert_to_language_hash(
   'agg_data_provider',
-  'agg_data_provider_collection',
   'agg_data_provider_country',
   'agg_provider',
   'agg_provider_country',
@@ -134,7 +128,6 @@ each_record convert_to_language_hash(
   'cho_extent',
   'cho_format',
   'cho_has_part',
-  'cho_has_type',
   'cho_is_part_of',
   'cho_language',
   'cho_medium',
@@ -147,7 +140,7 @@ each_record convert_to_language_hash(
   'cho_temporal',
   'cho_title',
   'cho_type',
-  'agg_data_provider_collection'
+  'dlme_collection'
 )
 
 # NOTE: call add_cho_type_facet AFTER calling convert_to_language_hash fields
