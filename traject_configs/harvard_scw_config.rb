@@ -86,6 +86,8 @@ to_field 'cho_spatial', extract_mods('/*/mods:subject/mods:geographic'), lang('e
 to_field 'cho_subject', extract_mods('/*/mods:subject/mods:topic'), lang('en')
 to_field 'cho_type', extract_mods('/*/mods:typeOfResource'), lang('en')
 to_field 'cho_type', extract_mods('/*/mods:genre'), lang('en')
+to_field 'cho_type_facet', scw_has_type, transform(&:downcase), translation_map('type_hierarchy_from_contributor'), lang('en')
+to_field 'cho_type_facet', scw_has_type, transform(&:downcase), translation_map('type_hierarchy_from_contributor'), split(':'), even_only, lang('en')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
@@ -114,6 +116,7 @@ to_field 'agg_provider_country', provider_country_ar, lang('ar-Arab')
 
 each_record convert_to_language_hash(
   'agg_data_provider',
+  'agg_data_provider_collection',
   'agg_data_provider_country',
   'agg_provider',
   'agg_provider_country',
@@ -141,8 +144,5 @@ each_record convert_to_language_hash(
   'cho_temporal',
   'cho_title',
   'cho_type',
-  'agg_data_provider_collection'
+  'cho_type_facet'
 )
-
-# NOTE: call add_cho_type_facet AFTER calling convert_to_language_hash fields
-each_record add_cho_type_facet

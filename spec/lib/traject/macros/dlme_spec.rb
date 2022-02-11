@@ -36,6 +36,20 @@ RSpec.describe Macros::DLME do
     end
   end
 
+  describe '#even_only' do
+    it 'returns a Proc' do
+      expect(instance.even_only).to be_a(Proc)
+    end
+
+    context 'with values in accumulator' do
+      it 'replaces accumulator with even values' do
+        accumulator_original = ['Text', 'Manuscript', 'Object', 'Stelae']
+        callable = instance.even_only
+        expect(callable.call(nil, accumulator_original)).to eq(['Text', 'Object'])
+      end
+    end
+  end
+
   describe '#filter_data_errors' do
     context 'with bad data values found in the accumulator' do
       it 'removes bad values from accumulator' do
