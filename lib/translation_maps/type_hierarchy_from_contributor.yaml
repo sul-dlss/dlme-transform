@@ -1,0 +1,1413 @@
+books: Text:Books
+musical instruments: Object:Musical Instruments
+scrolls: Text:Scrolls
+structures furnishings: Object:Furniture
+abbey churches: Object:Structures
+adornment: Object:Adornments
+adze: Object:Tools & Equipment
+alabastron: Object:Containers
+albumen prints: Image:Photographs
+altar (uncertain): Object:Other Objects
+amphora: Object:Containers
+amphora handle: Object:Containers
+amphorae: Object:Containers
+amulet: Object:Amulets
+amulet fragment: Object:Amulets
+amulet pendant: Object:Amulets
+amulet pendants: Object:Amulets
+amulet-pendant: Object:Amulets
+amulet-pendants: Object:Amulets
+amuletic plaque: Object:Other Objects
+amulets: Object:Amulets
+angle band: Object:Other Objects
+animal bone: Object:Other Objects
+animal figurine: Object:Sculptures
+animal figurine (uncertain): Object:Other Objects
+animal horn: Object:Other Objects
+animal mummy: Object:Other Objects
+animal remain: Object:Other Objects
+animal tooth: Object:Other Objects
+anklet: Object:Adornments
+anklets: Object:Adornments
+anthropomorphic vase: Object:Containers
+antoninianus: Object:Coins
+appendix: Text:Other Texts
+applique: Object:Other Objects
+"appliqu\xE9 (visual works)": Image:Other Images
+aquamaniles: Object:Containers
+archaeological sites: Image:Archaeological Sites
+archer's ring: Object:Armaments
+architectural: Object:Structures
+architectural relief: Object:Structures
+architecture: Object:Structures
+archival file: Text:Other Texts
+archival item: Text:Other Texts
+archivalfile: Text:Other Texts
+armlet: Object:Adornments
+armlet (uncertain): Object:Other Objects
+armor: Object:Armaments
+armor (protective devices): Object:Armaments
+armor (protective wear): Object:Armaments
+arms & armor: Object:Armaments
+arrow: Object:Armaments
+arrow straightener: Object:Armaments
+arrowhead: Object:Armaments
+arrowheads: Object:Armaments
+arrowshaft: Object:Armaments
+art (ritual objects, figurines): Object:Sculptures
+article: Text:Other Texts
+awl: Object:Tools & Equipment
+awl (uncertain): Object:Other Objects
+axe:
+- Object:Armaments
+- Object:Tools & Equipment
+axe blade:
+- Object:Armaments
+- Object:Tools & Equipment
+axe head:
+- Object:Armaments
+- Object:Tools & Equipment
+axe mold: Object:Tools & Equipment
+bactreate: Object:Adornments
+bag: Object:Other Objects
+bag (uncertain): Object:Other Objects
+bagpipe: Object:Musical Instruments
+balance scale: Object:Weights & Measures
+ball: Object:Other Objects
+balsamarium: Object:Funerary Objects
+balustrade: Object:Structures
+band: Object:Other Objects
+bandage: Object:Other Objects
+bank (container): Object:Containers
+bar: Object:Other Objects
+barrel cylinder:
+- Object:Other Objects
+- Text:Other Texts
+bas-reliefs (sculpture): Object:Sculptures
+base sherd: Object:Other Objects
+basilicas: Object:Structures
+basin (vessel): Object:Containers
+basins: Object:Other Objects
+basket: Object:Containers
+basket fragment: Object:Containers
+bead: Object:Other Objects
+bead (uncertain): Object:Other Objects
+bead fragment: Object:Other Objects
+bead network: Object:Other Objects
+bead spacer: Object:Other Objects
+bead spreader: Object:Other Objects
+bead string: Object:Other Objects
+bead terminal: Object:Other Objects
+beads: Object:Other Objects
+beads (pierced objects): Object:Other Objects
+beadwork: Object:Other Objects
+beaker: Object:Containers
+beakers (drinking vessels): Object:Containers
+bed leg: Object:Other Objects
+bell: Object:Other Objects
+belt: Object:Adornments
+belt bead: Object:Adornments
+belt buckle: Object:Adornments
+belt fragment: Object:Adornments
+bezels: Object:Adornments
+bibliography: Text:Books
+bident: Object:Armaments
+bilbil flask: Object:Containers
+bindings: Object:Other Objects
+bird: Object:Other Objects
+bird figurine: Object:Sculptures
+bird statuette: Object:Sculptures
+bit: Object:Other Objects
+blade: Object:Armaments
+blade (uncertain): Object:Other Objects
+blade fragment: Object:Armaments
+block: Object:Other Objects
+boat model: Object:Other Objects
+bodkin: Object:Other Objects
+body sherd: Object:Other Objects
+bolt: Object:Other Objects
+bone: Object:Other Objects
+book: Text:Books
+bookrolls: Text:Scrolls
+boot: Object:Adornments
+boot leather: Object:Other Objects
+boots: Object:Adornments
+borer: Object:Tools & Equipment
+borer (uncertain): Object:Other Objects
+boss: Object:Other Objects
+boss (uncertain): Object:Other Objects
+bosses: Object:Other Objects
+bottle: Object:Containers
+bottles: Object:Other Objects
+boundary stones: Object:Other Objects
+bow: Object:Armaments
+bowl: Object:Containers
+bowl (uncertain): Object:Other Objects
+bowl fragment: Object:Containers
+bowl sherd: Object:Containers
+bowls: Object:Containers
+bowls (vessels): Object:Containers
+box: Object:Containers
+box fragment: Object:Containers
+box lid: Object:Containers
+boxes: Object:Containers
+boxes (containers): Object:Containers
+bracelet: Object:Adornments
+bracelet (uncertain): Object:Other Objects
+bracelet fragment: Object:Adornments
+bracelet fragment (uncertain): Object:Other Objects
+brazier: Object:Other Objects
+braziers (heating equipment): Object:Other Objects
+bread: Object:Other Objects
+bread mold: Object:Other Objects
+breastplate: Object:Armaments
+breccia: Object:Other Objects
+brick: Object:Other Objects
+brick fragment: Object:Other Objects
+brick stamp: Object:Other Objects
+bridle: Object:Other Objects
+brim: Object:Other Objects
+brochure: Text:Other Texts
+bronze fragment: Object:Other Objects
+brooch: Object:Adornments
+bucket: Object:Containers
+buckets (vessels): Object:Containers
+buckle: Object:Other Objects
+building fragment: Object:Other Objects
+bull head: Object:Other Objects
+bulla:
+- Object:Adornments
+- Object:Amulets
+burial goods: Object:Funerary Objects
+burka: Object:Adornments
+bust: Object:Sculptures
+busts: Object:Sculptures
+button: Object:Other Objects
+button (uncertain): Object:Other Objects
+buttons: Object:Other Objects
+cabinet doors: Object:Other Objects
+calipers: Object:Weights & Measures
+calligraphy: Image:Calligraphy
+calligraphy (visual works): Image:Calligraphy
+cameo: Object:Other Objects
+candelabras: Object:Other Objects
+candle: Object:Other Objects
+candleholders: Object:Other Objects
+candlestick: Object:Other Objects
+candlesticks: Object:Other Objects
+canopic box: Object:Containers
+canopic jar: Object:Containers
+canopic jar lid: Object:Containers
+canopic jars: Object:Containers
+canteen: Object:Containers
+cap: Object:Other Objects
+cape (clothing): Object:Adornments
+capital: Object:Other Objects
+capital (uncertain): Object:Other Objects
+carpet: Object:Carpets
+carpet fragment: Object:Carpets
+carpets: Object:Carpets
+cartographic: Image:Maps
+cartonnage: Object:Funerary Objects
+cartouches: Object:Other Objects
+carving: Object:Other Objects
+case: Object:Containers
+cases (containers): Object:Containers
+casing block: Object:Other Objects
+casket lid: Object:Funerary Objects
+caskets (personal gear): Object:Funerary Objects
+cast: Object:Other Objects
+castanet: Object:Musical Instruments
+castanet fragment: Object:Musical Instruments
+castles: Object:Structures
+cat: Object:Other Objects
+catalogs: Text:Reference Books
+cauldron: Object:Other Objects
+ceiling: Object:Other Objects
+ceiling fragment: Object:Other Objects
+ceiling tiles: Object:Other Objects
+celt: Object:Armaments
+censer: Object:Other Objects
+censers: Object:Other Objects
+censor: Object:Other Objects
+ceramic tile: Object:Other Objects
+ceramics: Object:Other Objects
+ceramics (objects): Object:Other Objects
+ceremonial objects: Object:Other Objects
+certificate: Text:Other Texts
+chain: Object:Other Objects
+chain fragment: Object:Other Objects
+chair leg: Object:Furniture
+chalice: Object:Containers
+chalice (uncertain): Object:Other Objects
+chalices: Object:Containers
+cheekpiece: Object:Other Objects
+chest fragment: Object:Containers
+chisel: Object:Tools & Equipment
+chisel (uncertain): Object:Other Objects
+choker: Object:Other Objects
+cippi: Object:Other Objects
+cippus: Object:Other Objects
+clapper: Object:Musical Instruments
+clappers (percussion beaters): Object:Musical Instruments
+clavus: Object:Adornments
+clavus (uncertain): Object:Other Objects
+clavus pendant: Object:Adornments
+clay: Object:Other Objects
+cloak beads: Object:Other Objects
+cloak pin: Object:Adornments
+clogs: Object:Adornments
+cloth: Object:Other Objects
+cloth fragment: Object:Other Objects
+clothing: Object:Adornments
+clothing adornment: Object:Adornments
+club: Object:Other Objects
+coat: Object:Adornments
+coats (garments): Object:Adornments
+cockle shell (uncertain): Object:Other Objects
+coffin: Object:Funerary Objects
+coffin (uncertain): Object:Other Objects
+coffin board: Object:Funerary Objects
+coffin box: Object:Funerary Objects
+coffin fragment: Object:Funerary Objects
+coffin lid: Object:Funerary Objects
+coffins: Object:Funerary Objects
+coil: Object:Other Objects
+coin: Object:Coins
+coin (uncertain): Object:Other Objects
+coin impression: Object:Coins
+coin weight: Object:Weights & Measures
+coins, currency: Object:Coins
+colander: Object:Other Objects
+collar: Object:Adornments
+collars (neckwear): Object:Adornments
+column: Object:Structures
+column fragment: Object:Structures
+comb (hair - grooming tool): Object:Other Objects
+combination locks: Object:Other Objects
+combs: Object:Other Objects
+combs (grooming tools): Object:Other Objects
+commonplace books: Text:Books
+cone: Object:Other Objects
+cones: Object:Other Objects
+conical flask: Object:Containers
+container: Object:Containers
+container lid: Object:Containers
+containers: Object:Containers
+containers (baskets): Object:Containers
+containers (other): Object:Containers
+containers (pots, etc.): Object:Containers
+containers (sherds): Object:Containers
+content: Object:Other Objects
+cooking pot: Object:Other Objects
+copper fragment: Object:Other Objects
+cord: Object:Other Objects
+cord fragment: Object:Other Objects
+core: Object:Other Objects
+cornerstones: Object:Structures
+cornice: Object:Structures
+cornice fragment: Object:Structures
+cornice inlay: Object:Structures
+cosmetic box: Object:Containers
+cosmetic container: Object:Containers
+cosmetic kit: Object:Other Objects
+cosmetic palette: Object:Other Objects
+cosmetic shell: Object:Other Objects
+cosmetic spatula: Object:Other Objects
+cosmetic spoon: Object:Other Objects
+costume: Object:Adornments
+costume ornaments: Object:Adornments
+costumes: Object:Adornments
+cover: Object:Other Objects
+coverlet: Object:Other Objects
+covers: Object:Other Objects
+cradle: Object:Other Objects
+cradle hoods: Object:Other Objects
+crescent: Object:Other Objects
+crocodile: Object:Other Objects
+crocodile mandible: Object:Other Objects
+crucible: Object:Tools & Equipment
+cuff: Object:Other Objects
+cult object: Object:Other Objects
+cult objects: Object:Other Objects
+cult stand: Object:Other Objects
+cup: Object:Containers
+cup (uncertain): Object:Other Objects
+cup fragment: Object:Containers
+cups: Object:Other Objects
+cups (drinking vessels): Object:Containers
+currants: Object:Other Objects
+curtain: Object:Other Objects
+cylinder: Object:Other Objects
+cylinder seal: Object:Seals
+cylinder seal fragment: Object:Seals
+cylinder seal impression: Object:Seals
+cylinder seals: Object:Seals
+cymbal: Object:Musical Instruments
+dagger: Object:Armaments
+dagger hilt: Object:Armaments
+dagger pommel: Object:Armaments
+dagger sheath: Object:Armaments
+daggers: Object:Armaments
+daggers (weapons): Object:Armaments
+decanummus: Object:Coins
+'design drawings:': Image:Drawings
+devotional jewelry: Object:Adornments
+diadem: Object:Other Objects
+diagram: Text:Other Texts
+diary: Text:Other Texts
+dice: Object:Recreational Artifacts
+dictionaries: Text:Reference Books
+dictionary: Text:Reference Books
+die: Object:Recreational Artifacts
+dinar: Object:Coins
+dipper: Object:Other Objects
+dipper (uncertain): Object:Other Objects
+dipper juglet: Object:Containers
+dirham: Object:Coins
+disc: Object:Other Objects
+disc fragment: Object:Other Objects
+discs: Object:Other Objects
+dish: Object:Containers
+dish fragment: Object:Containers
+dish fragments: Object:Containers
+dishes: Object:Other Objects
+disk: Object:Other Objects
+disk (uncertain): Object:Other Objects
+dissertations: Text:Other Texts
+doll: Object:Recreational Artifacts
+doll (uncertain): Object:Other Objects
+dolphin aryballos: Object:Containers
+door: Object:Other Objects
+door frame: Object:Other Objects
+door handle: Object:Other Objects
+door jamb: Object:Other Objects
+door lintel: Object:Other Objects
+door socket: Object:Other Objects
+doors: Object:Other Objects
+double bowl: Object:Containers
+double jar: Object:Containers
+double ring: Object:Adornments
+double sleeve band: Object:Other Objects
+double vessel: Object:Containers
+drachm: Object:Coins
+drachma: Object:Coins
+drain: Object:Other Objects
+drain pipe: Object:Other Objects
+drain segment: Object:Other Objects
+drainpipe: Object:Other Objects
+drawing: Image:Drawings
+drawing fragment: Image:Drawings
+drawings: Image:Drawings
+drawings (visual works): Image:Drawings
+drawings-iran-17th century.: Image:Drawings
+drill (uncertain): Object:Other Objects
+drill butt: Object:Tools & Equipment
+drinking tube: Object:Other Objects
+drinking vessels: Object:Other Objects
+drum: Object:Musical Instruments
+duck weight: Object:Weights & Measures
+duck weight (uncertain): Object:Other Objects
+dulcimer: Object:Musical Instruments
+dung (uncertain): Object:Other Objects
+dyed fabrics: Object:Other Objects
+ear spoon: Object:Other Objects
+early maps: Image:Maps
+earring: Object:Adornments
+earring (uncertain): Object:Other Objects
+earrings: Object:Adornments
+earrings (jewelry): Object:Adornments
+earthenware: Object:Other Objects
+effigy jar: Object:Containers
+effigy vessel: Object:Containers
+egg shell: Object:Other Objects
+elephant tusks: Object:Other Objects
+embroidery: Object:Other Objects
+envelope: Object:Other Objects
+equestrian: Object:Other Objects
+equestrian figurine: Object:Sculptures
+'equipment for personal use: smoking and tobacco use': Object:Other Objects
+ewers: Object:Other Objects
+ewers (vessels): Object:Containers
+eye bead: Object:Other Objects
+eye-idol: Object:Other Objects
+faience: Object:Other Objects
+falcon: Object:Other Objects
+fals: Object:Coins
+false door: Object:Other Objects
+fans (costume accessories): Object:Other Objects
+fans (equipment): Object:Other Objects
+ferrule: Object:Other Objects
+ferrule (uncertain): Object:Other Objects
+fez (hat): Object:Adornments
+fibula (pin): Object:Other Objects
+fibula fragment: Object:Other Objects
+fiddle: Object:Musical Instruments
+fiddle bow: Object:Musical Instruments
+figures: ''
+'figures (illustrations):': Image:Drawings
+figurine: Object:Sculptures
+figurine (uncertain): Object:Other Objects
+figurine fragment: Object:Sculptures
+figurine head: Object:Sculptures
+figurine mold: Object:Sculptures
+figurines: Object:Sculptures
+figurinesp: Object:Sculptures
+finger bone: Object:Other Objects
+finger ring: Object:Adornments
+finger ring fragment: Object:Adornments
+finger rings: Object:Adornments
+finial: Object:Structures
+finials: Object:Other Objects
+fire making, fuel: Object:Other Objects
+firing tripod: Object:Armaments
+fish jaw: Object:Other Objects
+fishhook: Object:Other Objects
+flake: Object:Other Objects
+flask: Object:Containers
+flask (uncertain): Object:Other Objects
+flasks: Object:Containers
+flasks (bottles): Object:Containers
+flat base sherd: Object:Other Objects
+flower: Object:Other Objects
+flute: Object:Musical Instruments
+folio s (leaves): ''
+folios (leaves): ''
+folios (leves): ''
+follis: Object:Coins
+food: Object:Other Objects
+footed bowl: Object:Containers
+footed dish: Object:Containers
+footed jar: Object:Containers
+footed pot: Object:Containers
+fork: Object:Other Objects
+fork (uncertain): Object:Other Objects
+fortresses: Object:Structures
+foundation deposit: Object:Other Objects
+fountain: Object:Other Objects
+fountain fragment: Object:Other Objects
+fragment: Object:Other Objects
+fragment of copper chisel: Object:Tools & Equipment
+fragments: Object:Other Objects
+frame: Object:Other Objects
+frieze: Object:Structures
+frieze fragment: Object:Structures
+fritware: Object:Other Objects
+frock: Object:Adornments
+front: Object:Other Objects
+frontispieces (illustrations): Image:Drawings
+frontlet: Object:Other Objects
+frontlet ring: Object:Adornments
+fruit: Object:Other Objects
+frying pan: Object:Other Objects
+funerary cone: Object:Funerary Objects
+funerary jar: Object:Funerary Objects
+funerary sculpture:
+- Object:Funerary Objects
+- Object:Sculptures
+funerary stela: Object:Funerary Objects
+funnel: Object:Other Objects
+furniture: Object:Furniture
+furniture fragment: Object:Furniture
+furniture leg: Object:Furniture
+furniture model: Object:Other Objects
+game board: Object:Recreational Artifacts
+game piece: Object:Recreational Artifacts
+game piece (uncertain): Object:Other Objects
+game piece material: Object:Recreational Artifacts
+game pieces: Object:Recreational Artifacts
+gameboard: Object:Recreational Artifacts
+gameboards: Object:Recreational Artifacts
+garment pin: Object:Other Objects
+garments: Object:Adornments
+garter: Object:Adornments
+garters: Object:Adornments
+gateway: Object:Other Objects
+gem: Object:Other Objects
+gems: Object:Other Objects
+geode (uncertain): Object:Other Objects
+gilding: Object:Other Objects
+glass: Object:Other Objects
+glass fragment: Object:Other Objects
+glass plate negatives: Image:Photographs
+glasswares: Object:Other Objects
+glasswork: Object:Other Objects
+goblet: Object:Containers
+goblet fragment: Object:Containers
+gold, silver & jewelry: Object:Other Objects
+gourd: Object:Other Objects
+gown: Object:Adornments
+grain: Object:Other Objects
+graphics: ''
+grave marker: Object:Funerary Objects
+grinder: Object:Tools & Equipment
+grinding stone: Object:Tools & Equipment
+guard band: Object:Other Objects
+hair comb: Object:Other Objects
+hair pin: Object:Adornments
+hair pin (uncertain): Object:Other Objects
+hair pin fragment: Object:Adornments
+hair ribbon: Object:Adornments
+hair ring: Object:Adornments
+hairpin: Object:Adornments
+hairpin (uncertain): Object:Other Objects
+hairring: Object:Adornments
+half dirhem: Object:Coins
+hammer: Object:Tools & Equipment
+hammer (uncertain): Object:Other Objects
+hand axe: Object:Armaments
+hand warmers: Object:Adornments
+handle: Object:Other Objects
+handle (uncertain): Object:Other Objects
+handle sherd: Object:Other Objects
+handle sherds: Object:Other Objects
+handles: Object:Other Objects
+hanging: Object:Other Objects
+harp: Object:Musical Instruments
+harpoon: Object:Other Objects
+hawk (uncertain): Object:Other Objects
+head: Object:Other Objects
+head rest: Object:Other Objects
+headdress: Object:Adornments
+heart scarab: Object:Other Objects
+hebrew bowl: Object:Other Objects
+hebrew bowl sherd: Object:Other Objects
+hebrew bowl sherds: Object:Other Objects
+helmet: Object:Armaments
+helmet earflap: Object:Armaments
+helmets: Object:Armaments
+hemidrachma: Object:Coins
+hes vase: Object:Containers
+hilt: Object:Other Objects
+hinge (uncertain): Object:Other Objects
+hoe: Object:Tools & Equipment
+holder: Object:Other Objects
+holdfast: Object:Other Objects
+hook: Object:Other Objects
+horn (animal part): Object:Other Objects
+horse cloth: Object:Other Objects
+horse gear: Object:Other Objects
+horse gear fragment: Object:Other Objects
+hub: Object:Other Objects
+human figurine: Object:Sculptures
+human figurine (uncertain): Object:Other Objects
+human leg: Object:Other Objects
+human remains: Object:Other Objects
+human statuette: Object:Sculptures
+husking tray: Object:Other Objects
+hypocephalus: Object:Funerary Objects
+ibis: Object:Other Objects
+ibis (uncertain): Object:Other Objects
+ibis egg: Object:Other Objects
+ibis head: Object:Other Objects
+illuminated mansucripts: Image:Manuscript Illuminations
+illuminated manuscript: Image:Manuscript Illuminations
+illuminations (visual works|visual works|): Image:Manuscript Illuminations
+illuminations.: Image:Manuscript Illuminations
+illustrated book:
+- Text:Books
+- Image:Drawings
+illustration: Image:Drawings
+illustrations (layout features): Image:Drawings
+implement: Object:Tools & Equipment
+implement fragment: Object:Tools & Equipment
+implements: Object:Tools & Equipment
+impression: ''
+incense: Object:Other Objects
+incense burner: Object:Other Objects
+incense burner fragment: Object:Other Objects
+incense burners: Object:Other Objects
+ingot: Object:Other Objects
+inkwells: Object:Writing Accessories
+inlay: Object:Other Objects
+inlay (uncertain): Object:Other Objects
+inlay fragment: Object:Other Objects
+inlays: Object:Other Objects
+inscribed: Text:Inscriptions
+inscription: Text:Inscriptions
+intaglio: Object:Other Objects
+intaglios: Object:Other Objects
+intaglios (sculptural objects): Object:Sculptures
+iron fragment: Object:Other Objects
+iron fragments: Object:Other Objects
+ivories: Object:Other Objects
+ivory: Object:Other Objects
+ivory & bone: Object:Other Objects
+ivory fragment: Object:Other Objects
+ivory/bone: Object:Other Objects
+jambiya: Object:Armaments
+jar: Object:Containers
+jar (uncertain): Object:Other Objects
+jar cover: Object:Containers
+jar fragment: Object:Containers
+jar handle: Object:Containers
+jar handle fragment: Object:Containers
+jar lid: Object:Containers
+jar stand: Object:Other Objects
+jar stopper: Object:Containers
+jars: Object:Containers
+javelin: Object:Armaments
+jewelry: Object:Adornments
+jewelry fragment: Object:Adornments
+jewelry fragments: Object:Adornments
+jewelry mold: Object:Other Objects
+jewelry, personal ornaments: Object:Adornments
+journal: Text:Serials
+journal article: Text:Serials
+jug: Object:Containers
+jug (uncertain): Object:Other Objects
+jug spout: Object:Containers
+juglet: Object:Containers
+juglet (uncertain): Object:Other Objects
+jugs: Object:Containers
+kamancheh: Object:Musical Instruments
+kamancheh bow: Object:Musical Instruments
+kettledrum: Object:Musical Instruments
+key (uncertain): Object:Other Objects
+kilim: Object:Carpets
+knee drum: Object:Musical Instruments
+knee panel: Object:Other Objects
+knife: Object:Armaments
+knife blade: Object:Armaments
+knob: Object:Other Objects
+knobs: Object:Other Objects
+knocker: Object:Other Objects
+knucklebone: Object:Other Objects
+kohl box: Object:Containers
+kohl pot: Object:Containers
+kohl pot lid: Object:Other Objects
+kohl pot rim: Object:Other Objects
+kohl pot stopper: Object:Other Objects
+kohl stick: Object:Other Objects
+kohl tube: Object:Other Objects
+koran: Text:Other Texts
+koran stand: Object:Other Objects
+korans: Text:Other Texts
+kursi: Object:Other Objects
+label: Object:Other Objects
+lacquer & inlay: Object:Other Objects
+lacquerware: Object:Other Objects
+ladle: Object:Other Objects
+ladle fragment: Object:Other Objects
+lamp: Object:Other Objects
+lamp fragment: Object:Other Objects
+lamp handle: Object:Other Objects
+lamps: Object:Other Objects
+lamps (lighting devices): Object:Other Objects
+laver: Object:Other Objects
+leaf: Object:Other Objects
+leather: Object:Other Objects
+leather fragment: Object:Other Objects
+leatherwork: Object:Other Objects
+leggings: Object:Adornments
+lentoid flask: Object:Containers
+lentoid flask (uncertain): Object:Other Objects
+letter: Text:Letters
+letter book: Text:Letters
+lid: Object:Other Objects
+lid (uncertain): Object:Other Objects
+lid fragment: Object:Other Objects
+lids: Object:Other Objects
+limestone fragment: Object:Other Objects
+lintel: Object:Structures
+lintel fragment: Object:Structures
+lintels: Object:Structures
+lion pin: Object:Other Objects
+list: Text:Other Texts
+lithic: Object:Other Objects
+lithographs*: Text:Books
+lizard: Object:Other Objects
+lock: Object:Other Objects
+loom weight:
+- Object:Tools & Equipment
+- Object:Weights & Measures
+lusterware: Object:Other Objects
+lute: Object:Musical Instruments
+lyre fragment: Object:Musical Instruments
+lyres: Object:Musical Instruments
+mace: Object:Armaments
+mace head: Object:Armaments
+macehead: Object:Armaments
+madrasas: Object:Structures
+magazines (periodicals): Text:Serials
+male dress: Object:Adornments
+mallet: Object:Tools & Equipment
+mallet head: Object:Tools & Equipment
+manuscript: Text:Manuscripts
+manuscript fragment: Text:Manuscripts
+manuscript fragments: Text:Manuscripts
+manuscript illumination: Image:Manuscript Illuminations
+manuscript item: Text:Manuscripts
+manuscript/mixed material: Text:Manuscripts
+manuscripts: Text:Manuscripts
+manuscripts & rare books: Text:Manuscripts
+manuscripts (document genre): Text:Manuscripts
+manuscripts, malay.: Text:Manuscripts
+map: Image:Maps
+maps: Image:Maps
+'martial arms:': Object:Armaments
+mask: Object:Adornments
+masks: Object:Adornments
+mastaba: Object:Funerary Objects
+mat: Object:Other Objects
+mausoleums:
+- Object:Structures
+- Object:Funerary Objects
+measuring devices: Object:Weights & Measures
+medallion: Object:Adornments
+medallions: Object:Adornments
+menat: Object:Other Objects
+metal: Object:Other Objects
+metal fragment: Object:Other Objects
+metal fragments: Object:Other Objects
+metalwork: Object:Other Objects
+microlith: Object:Other Objects
+military maps: Image:Maps
+milk bowl: Object:Other Objects
+minarets: Object:Structures
+miniatures (paintings): Image:Paintings
+mirror: Object:Other Objects
+mirror handle: Object:Other Objects
+mirrors: Object:Other Objects
+model: Object:Other Objects
+model fragment: Object:Other Objects
+models (representations): Object:Other Objects
+mold: Object:Other Objects
+molding: Object:Other Objects
+molds: Object:Other Objects
+mortar: Object:Other Objects
+mortuary statue: Object:Sculptures
+mosaic: Object:Other Objects
+mosaic fragment: Object:Other Objects
+mosques: Object:Structures
+mummies: Object:Funerary Objects
+mummies & cartonnage: Object:Funerary Objects
+mummy: Object:Funerary Objects
+mummy case: Object:Funerary Objects
+mummy case lid: Object:Funerary Objects
+mummy cases: Object:Funerary Objects
+mummy cloth: Object:Funerary Objects
+mummy label: Object:Funerary Objects
+mummy mask: Object:Funerary Objects
+mummy masks: Object:Funerary Objects
+mummy wrapping: Object:Funerary Objects
+mural paintings: Image:Paintings
+murex shell: Object:Other Objects
+musical bow: Object:Musical Instruments
+musical pipe: Object:Musical Instruments
+nail: Object:Other Objects
+nail (uncertain): Object:Other Objects
+nails: Object:Other Objects
+neck band: Object:Adornments
+neck ring: Object:Adornments
+neck sherd: Object:Other Objects
+neck sherd (uncertain): Object:Other Objects
+necklace: Object:Adornments
+necklace (uncertain): Object:Other Objects
+necklaces: Object:Adornments
+necklet: Object:Adornments
+needle: Object:Other Objects
+needle (uncertain): Object:Other Objects
+needle fragment: Object:Other Objects
+net sinker (uncertain): Object:Other Objects
+nets (objects): Object:Other Objects
+newspaper article: Text:Serials
+newspaper clipping: Text:Serials
+newspapers: Text:Serials
+nodule: Object:Other Objects
+note: Text:Other Texts
+nummus: Object:Coins
+nut (plant): Object:Other Objects
+obelisk (uncertain): Object:Other Objects
+object: Object:Other Objects
+object fragment: Object:Other Objects
+object fragments: Object:Other Objects
+objects: Object:Other Objects
+oboe: Object:Musical Instruments
+observatories: Object:Structures
+offering basin: Object:Other Objects
+offering dish: Object:Other Objects
+offering stand: Object:Other Objects
+offering table: Object:Other Objects
+offering tray: Object:Other Objects
+oinochoai: Object:Containers
+oinochoe: Object:Containers
+omphalos bowl: Object:Containers
+onlays: Object:Containers
+openmouth bowl: Object:Containers
+oral histories (document genres):
+- Sound:Oral History
+- Video:Oral History
+organic material: Object:Containers
+ornament: Object:Adornments
+ornament (uncertain): Object:Other Objects
+ornaments: Object:Adornments
+ostracon: Object:Other Objects
+ostrich egg: Object:Other Objects
+overcoat: Object:Adornments
+overshoe: Object:Adornments
+paint palette: Object:Containers
+painted cloth: Image:Paintings
+painting: Image:Paintings
+painting & drawing: Image:Other Images
+paintings: Image:Paintings
+paintings (visual works): Image:Paintings
+palaces: Object:Structures
+palette: Object:Other Objects
+palette (uncertain): Object:Other Objects
+pan (object): Object:Other Objects
+panels: Object:Other Objects
+panels (surface components): Object:Other Objects
+panpipes: Object:Musical Instruments
+pantaloons: Object:Adornments
+paper: ''
+papyri: Text:Other Texts
+parchisi: Object:Recreational Artifacts
+patch box: Object:Containers
+patch box lid: Object:Containers
+patira: Object:Other Objects
+pavement: Object:Other Objects
+pavilions (buildings): Object:Structures
+pearl: Object:Other Objects
+pebble: Object:Other Objects
+pectoral: Object:Adornments
+pectoral (uncertain): Object:Other Objects
+pectoral shaped plaque: Object:Other Objects
+pectorals: Object:Adornments
+pedestal: Object:Other Objects
+pedestal bowl: Object:Other Objects
+peg: Object:Other Objects
+peg (uncertain): Object:Other Objects
+pen: Object:Writing Accessories
+pen case: Object:Writing Accessories
+pen case lid: Object:Writing Accessories
+pen-and-wash drawings: Image:Drawings
+pendant: Object:Adornments
+pendant (uncertain): Object:Other Objects
+pendant fragment: Object:Adornments
+pendants: Object:Adornments
+pendants (jewelry): Object:Adornments
+perfume bottles: Object:Other Objects
+periodical: Text:Serials
+periodicals: Text:Serials
+pestle: Object:Other Objects
+pestle (uncertain): Object:Other Objects
+pewter: Object:Other Objects
+phalium shell: Object:Other Objects
+phallus: Object:Other Objects
+photo, print, drawing: Image:Photographs
+photograph: Image:Photographs
+phylactery: Object:Containers
+pichhavais: Image:Paintings
+pick: Object:Tools & Equipment
+pigment: Object:Other Objects
+pigment fragment: Object:Other Objects
+pike: Object:Armaments
+pikes: Object:Armaments
+pilgrim flask: Object:Containers
+pillow: Object:Other Objects
+pin: Object:Other Objects
+pin (uncertain): Object:Other Objects
+pin fragment: Object:Other Objects
+pin fragment (uncertain): Object:Other Objects
+pin head: Object:Other Objects
+pin head (uncertain): Object:Other Objects
+pin shank: Object:Other Objects
+pincer: Object:Other Objects
+pine cone (uncertain): Object:Other Objects
+pinhead: Object:Other Objects
+pins: Object:Other Objects
+pipe: Object:Other Objects
+pipe bowl: Object:Other Objects
+pipes (smoking equipment): Object:Other Objects
+piriform juglet: Object:Containers
+pitcher: Object:Containers
+pithos: Object:Containers
+pivot stone: Object:Other Objects
+plan: Text:Other Texts
+plant material: Object:Other Objects
+plaque: Object:Other Objects
+plaque fragment: Object:Other Objects
+plaque mold: Object:Other Objects
+plaques: Object:Other Objects
+plaques (flat objects): Object:Other Objects
+plaquet inserts: Object:Other Objects
+plaster: Object:Other Objects
+plate: Object:Other Objects
+plater: Object:Other Objects
+plates: Object:Other Objects
+plates (dishes): Object:Other Objects
+platter: Object:Other Objects
+platter (uncertain): Object:Other Objects
+playing cards: Object:Recreational Artifacts
+points: Object:Other Objects
+pole top: Object:Other Objects
+polisher: Object:Other Objects
+polisher (uncertain): Object:Other Objects
+polycandela: Object:Other Objects
+pommel: Object:Other Objects
+pommel (uncertain): Object:Other Objects
+poniard: Object:Armaments
+portraits: Image:Other Images
+postcards: Image:Postcards
+poster: Image:Posters
+pot: Object:Containers
+pot (uncertain): Object:Other Objects
+pot fragment: Object:Containers
+pot lid: Object:Containers
+pot lid (uncertain): Object:Other Objects
+pot stand: Object:Other Objects
+pot stand (uncertain): Object:Other Objects
+pots: Object:Containers
+potsherd: Object:Containers
+pottery (object genre): Object:Other Objects
+pottery fragment: Object:Containers
+pouring vessel: Object:Containers
+powder flasks:
+- Object:Armaments
+- Object:Containers
+prayer cloth: Object:Other Objects
+prayer mat: Object:Other Objects
+prayer rug: Object:Other Objects
+prayer rugs: Object:Other Objects
+precious stones & gems: Object:Other Objects
+prick: ''
+print: Image:Other Images
+prism: Object:Other Objects
+psaltery: Object:Musical Instruments
+pulley: Object:Containers
+punch: Object:Tools & Equipment
+purse: Object:Containers
+pyxides: Object:Containers
+pyxis: Object:Containers
+pyxis (uncertain): Object:Other Objects
+pyxis lid: Object:Containers
+quarter dinar: Object:Coins
+quiver: Object:Armaments
+railings (balustrades): Object:Structures
+rattle: Object:Recreational Artifacts
+rattle (uncertain): Object:Other Objects
+raw material: Object:Other Objects
+raw materials: Object:Other Objects
+razor: Object:Other Objects
+rectangle: Object:Other Objects
+reed (plant): Object:Other Objects
+rein ring: Object:Adornments
+relief: Object:Structures
+relief (uncertain): Object:Other Objects
+relief fragment: Object:Structures
+reliefs: Object:Structures
+religious structures, temples, shrines: Object:Structures
+religious buildings: Object:Structures
+religious objects: Object:Other Objects
+religious paraphernalia: Object:Other Objects
+reliquary figures: Object:Other Objects
+report: Text:Other Texts
+reproduction: Object:Other Objects
+rhyton: Object:Containers
+rhyton fragment: Object:Containers
+ribbon: Object:Other Objects
+rim fragment: Object:Other Objects
+rim sherd: Object:Other Objects
+ring: Object:Adornments
+ring (uncertain): Object:Other Objects
+ring bezel: Object:Adornments
+ring fragment: Object:Adornments
+ring seal:
+- Object:Adornments
+- Object:Seals
+ring stand: Object:Other Objects
+ring stone: Object:Other Objects
+rings: Object:Adornments
+robe: Object:Adornments
+rod: Object:Other Objects
+rope: Object:Other Objects
+rosette: Object:Other Objects
+roundels (circular panels): Object:Other Objects
+royal palaces: Object:Structures
+royal shawabti: Object:Funerary Objects
+rubbing stone: Object:Other Objects
+rubbing stone (uncertain): Object:Other Objects
+rubbings: Image:Other Images
+rug: Object:Carpets
+rugs: Object:Carpets
+sabers: Object:Armaments
+salvers: Object:Other Objects
+sample: Object:Other Objects
+sandal: Object:Adornments
+sandal (uncertain): Object:Other Objects
+sandal fragment: Object:Adornments
+sandals: Object:Adornments
+santur: Object:Musical Instruments
+sarcophagus fragment: Object:Funerary Objects
+sarcophagus lid: Object:Funerary Objects
+sarcophagus lid fragment: Object:Funerary Objects
+sash: Object:Adornments
+saucer: Object:Other Objects
+saucers: Object:Other Objects
+saw: Object:Tools & Equipment
+scabbard fragments: Object:Armaments
+scabbards: Object:Armaments
+scale: Object:Weights & Measures
+scale pan: Object:Weights & Measures
+scarab: Object:Other Objects
+scarab seal: Object:Seals
+scarab seal impression: Object:Seals
+scaraboid: Object:Other Objects
+scarabs: Object:Other Objects
+scarf: Object:Adornments
+scent bottles: Object:Other Objects
+scepter: Object:Other Objects
+schist fragment: Object:Other Objects
+scimitar: Object:Armaments
+scimitars: Object:Armaments
+scissors: Object:Tools & Equipment
+scoop: Object:Other Objects
+scraper: Object:Other Objects
+scraper fragment: Object:Other Objects
+scribes palette: Object:Writing Accessories
+scroll: Text:Scrolls
+sculptor's model: Object:Sculptures
+sculpture: Object:Sculptures
+sculpture (visual works): Object:Sculptures
+scupture: Object:Sculptures
+seal: Object:Seals
+seal (cylinder): Object:Seals
+seal (object): Object:Seals
+seal (stamp): Object:Seals
+seal (uncertain): Object:Other Objects
+seal cap: Object:Seals
+seal impression: Object:Seals
+seal impressions: Object:Seals
+seal ring: Object:Seals
+sealing: Object:Seals
+sealings: Object:Seals
+seals (artifacts): Object:Seals
+seals (cylinder): Object:Seals
+seals (stamp): Object:Seals
+sediment: Object:Other Objects
+seed: Object:Other Objects
+sehtahr: Object:Musical Instruments
+serving stand: Object:Other Objects
+shabti: Object:Funerary Objects
+shadri: Object:Other Objects
+shaped collar: Object:Adornments
+shark teeth: Object:Other Objects
+shawabti: Object:Funerary Objects
+shawabti fragment: Object:Funerary Objects
+shawl: Object:Adornments
+shawls: Object:Adornments
+sheaths (cases): Object:Armaments
+shell: Object:Other Objects
+shell fragment: Object:Other Objects
+sherd: Object:Other Objects
+sherd (uncertain): Object:Other Objects
+sherds: Object:Other Objects
+shield (uncertain): Object:Other Objects
+shirt: Object:Adornments
+shoe: Object:Adornments
+shoe (uncertain): Object:Other Objects
+shoes: Object:Adornments
+shoes (footwear): Object:Adornments
+shoulder panel: Object:Other Objects
+shovel: Object:Tools & Equipment
+shrew: Object:Other Objects
+shrines: Object:Structures
+shroud: Object:Funerary Objects
+shroud fragment: Object:Funerary Objects
+sickle: Object:Tools & Equipment
+sieve: Object:Other Objects
+signet ring:
+- Object:Adornments
+- Object:Seals
+silverware: Object:Other Objects
+single page painting/drawing: Image:Other Images
+sistra: Object:Musical Instruments
+sistrum: Object:Musical Instruments
+sistrum handle: Object:Musical Instruments
+sitar (uncertain): Object:Other Objects
+situla: Object:Containers
+sketches: Image:Drawings
+skirt: Object:Adornments
+skull cap: Object:Adornments
+slab: Object:Other Objects
+slab fragment: Object:Other Objects
+slag: Object:Other Objects
+slag fragment: Object:Other Objects
+sleeve band: Object:Adornments
+sleeve drape: Object:Adornments
+sling stone: Object:Armaments
+slipper coffin: Object:Funerary Objects
+slippers: Object:Adornments
+slipware: Object:Adornments
+smoother: Object:Other Objects
+snake: Object:Other Objects
+sng convex scraper: Object:Tools & Equipment
+snuff bottle: Object:Containers
+sock: Object:Adornments
+socks: Object:Adornments
+soil sample: Object:Other Objects
+soul house: Object:Funerary Objects
+spacers: Object:Other Objects
+spade: Object:Tools & Equipment
+spandrel: Object:Structures
+spatula: Object:Other Objects
+spear: Object:Armaments
+spear butt: Object:Armaments
+spear shaft: Object:Armaments
+spearhead: Object:Armaments
+spearhead (uncertain): Object:Other Objects
+spearheads: Object:Armaments
+spike: Object:Other Objects
+spiked fiddle: Object:Musical Instruments
+spindle: Object:Tools & Equipment
+spindle whorl: Object:Tools & Equipment
+spindle whorl (uncertain): Object:Other Objects
+spinning wheel: Object:Tools & Equipment
+spoon: Object:Other Objects
+spoons: Object:Other Objects
+spout: Object:Other Objects
+spout (uncertain): Object:Other Objects
+spouted bowl: Object:Containers
+spouted cup: Object:Containers
+spouted jar: Object:Containers
+spouted jug: Object:Containers
+spouted pot: Object:Containers
+spouted vessel: Object:Containers
+square: Object:Other Objects
+staff: Object:Other Objects
+staff head: Object:Other Objects
+staffs & scepters: Object:Other Objects
+staffs (sticks, canes, etc.): Object:Other Objects
+stake: Object:Other Objects
+stamp: Object:Seals
+stamp seal: Object:Seals
+stamp seal impression: Object:Seals
+stamp seals: Object:Seals
+stamps: Object:Seals
+stamps (marks): Object:Seals
+stand: Object:Other Objects
+stands: Object:Other Objects
+stands (support furniture): Object:Furniture
+staple: Object:Other Objects
+statistical table: Text:Other Texts
+statuary: Object:Sculptures
+statuary groups: Object:Sculptures
+statue: Object:Sculptures
+statue base: Object:Sculptures
+statue fragment: Object:Sculptures
+statue fragments: Object:Sculptures
+statues: Object:Sculptures
+statues, sculpture: Object:Sculptures
+statuette: Object:Sculptures
+statuette fragment: Object:Sculptures
+statuettes: Object:Sculptures
+statuettes (statues): Object:Sculptures
+statute: Object:Sculptures
+statutes: Object:Sculptures
+statutettes: Object:Sculptures
+statuuettes: Object:Sculptures
+stave: Object:Other Objects
+stela: Object:Funerary Objects
+stela base: Object:Funerary Objects
+stela fragment: Object:Funerary Objects
+stelae: Object:Funerary Objects
+stemmed bowl: Object:Containers
+stick: Object:Other Objects
+stiletto: Object:Armaments
+still image: Image:Other Images
+stirrup jar: Object:Containers
+stirrup vase: Object:Containers
+stone: Object:Other Objects
+stone fragment: Object:Other Objects
+stones: Object:Other Objects
+stoneware (pottery): Object:Other Objects
+stonework: Object:Other Objects
+stopper: Object:Other Objects
+storage jar: Object:Containers
+strainer: Object:Other Objects
+strap fragment: Object:Other Objects
+string of beads: Object:Other Objects
+strt-convex scraper: Object:Tools & Equipment
+stucco: Object:Other Objects
+stud: Object:Other Objects
+stud (uncertain): Object:Other Objects
+studs: Object:Other Objects
+stylus: Object:Writing Accessories
+supports: Object:Structures
+sword: Object:Armaments
+sword (uncertain): Object:Other Objects
+sword sheath: Object:Armaments
+swords: Object:Armaments
+table: Object:Furniture
+tables: Object:Furniture
+tablet:
+- Object:Tablets
+- Text:Tablets
+tablets:
+- Object:Tablets
+- Text:Tablets
+tack: Object:Other Objects
+tag: Object:Other Objects
+talisman: Object:Amulets
+talismans: Object:Amulets
+tankards: Object:Containers
+tapestries: Object:Other Objects
+tar (uncertain): Object:Other Objects
+tear bottle: Object:Funerary Objects
+temples: Object:Structures
+tessera: Object:Other Objects
+tesserae: Object:Other Objects
+tetradrachm: Object:Coins
+tetradrachma: Object:Coins
+tetrapod vessel: Object:Containers
+text: Text:Other Texts
+textile: Object:Other Objects
+textile band: Object:Other Objects
+textile fragment: Object:Other Objects
+textile medalion: Object:Other Objects
+textile panel: Object:Other Objects
+textiles: Object:Other Objects
+textiles weaving equipment: Object:Tools & Equipment
+theriomorphic vessel: Object:Containers
+tibia: Object:Other Objects
+tile: Object:Other Objects
+tile fragment: Object:Other Objects
+tiles: Object:Other Objects
+toe ring: Object:Adornments
+toggle pin: Object:Other Objects
+toilet kit: Object:Other Objects
+token: Object:Coins
+token (uncertain): Object:Other Objects
+tomb model: Object:Funerary Objects
+tombs:
+- Object:Structures
+- Object:Funerary Objects
+tool: Object:Tools & Equipment
+tool (uncertain): Object:Other Objects
+tool handle: Object:Tools & Equipment
+tools & manufacturing equipment: Object:Tools & Equipment
+tools manufacturing equipment: Object:Tools & Equipment
+torque: Object:Other Objects
+towel: Object:Other Objects
+towers (single built works): Object:Structures
+toy: Object:Recreational Artifacts
+toys games: Object:Recreational Artifacts
+transportation: Object:Other Objects
+tray: Object:Other Objects
+tray (uncertain): Object:Other Objects
+tray fragment: Object:Other Objects
+trays: Object:Other Objects
+trial piece: Object:Other Objects
+trident: Object:Armaments
+trinket box: Object:Containers
+trinket box lid: Object:Containers
+triple kohl tube: Object:Other Objects
+tripod bowl: Object:Containers
+tripod stand: Object:Other Objects
+tripod vessel: Object:Other Objects
+trivet: Object:Other Objects
+trough: Object:Other Objects
+trousering: Object:Other Objects
+trousers: Object:Adornments
+trumpet: Object:Musical Instruments
+trumpet (uncertain): Object:Other Objects
+tube: Object:Other Objects
+tube fragment: Object:Other Objects
+tubes: Object:Other Objects
+tulwar: Object:Armaments
+tumbler: Object:Other Objects
+tunic: Object:Adornments
+tunic band: Object:Adornments
+tunic fragment: Object:Adornments
+tunic neck: Object:Adornments
+tunic panel: Object:Adornments
+tunics: Object:Adornments
+turban: Object:Adornments
+tusk: Object:Other Objects
+tweezer: Object:Other Objects
+tweezers: Object:Other Objects
+twine: Object:Other Objects
+unguentarium:
+- Object:Containers
+- Object:Funerary Objects
+ur-namu stele: Object:Stelae
+urn:
+- Object:Containers
+- Object:Funerary Objects
+ushabti: Object:Funerary Objects
+utilitarian objects: Object:Other Objects
+vase: Object:Containers
+vase fragment: Object:Containers
+vase sherd: Object:Containers
+vases: Object:Containers
+vat: Object:Containers
+veil: Object:Other Objects
+vessel: Object:Containers
+vessel (uncertain): Object:Containers
+vessel foot: Object:Containers
+vessel fragment: Object:Containers
+vessel fragment (uncertain): Object:Other Objects
+vessel handle: Object:Containers
+vessel lid: Object:Containers
+vessel lid (uncertain): Object:Other Objects
+vessel stand: Object:Other Objects
+vessels: Object:Containers
+vessels (containers): Object:Other Objects
+vest: Object:Adornments
+visual art: Image:Other Images
+volume: Text:Books
+votive: Object:Other Objects
+votive images: Object:Other Objects
+votive offerings: Object:Other Objects
+votive plaques: Object:Other Objects
+votive stela: Object:Stelae
+wall: Object:Structures
+wall cone: Object:Structures
+wall cone (uncertain): Object:Other Objects
+wall flower: Object:Other Objects
+wall fragment: Object:Other Objects
+wall hanging: Object:Other Objects
+wall knob: Object:Other Objects
+wall nail: Object:Other Objects
+wall painting: Image:Paintings
+wall panel: Object:Other Objects
+wall tile: Object:Other Objects
+walls: Object:Structures
+wand: Object:Other Objects
+wands: Object:Other Objects
+waster: Object:Armaments
+water pipe: Object:Other Objects
+watercolors: Image:Paintings
+watercolors (paintings): Image:Paintings
+weaponry food procurement: Object:Armaments
+weapons: Object:Armaments
+wedge: Object:Tools & Equipment
+weight: Object:Weights & Measures
+weight (uncertain): Object:Other Objects
+weights: Object:Weights & Measures
+wells: Object:Structures
+wheel: Object:Tools & Equipment
+whetstone: Object:Tools & Equipment
+whorl: Object:Tools & Equipment
+window: Object:Other Objects
+wine cups: Object:Other Objects
+wine jar: Object:Other Objects
+wire: Object:Other Objects
+wire band: Object:Other Objects
+wood: Object:Other Objects
+wood fragment: Object:Other Objects
+woodwork: Object:Other Objects
+wool comb: Object:Other Objects
+woven: Object:Other Objects
+wrap: Object:Other Objects
+wreath: Object:Other Objects
+writing & printing: Object:Writing Accessories
+writing boxes: Object:Writing Accessories
+writing instruments: Object:Writing Accessories
+writing printing: Object:Writing Accessories
+writing tablet: Object:Writing Accessories
+yoke-saddle pommel: Object:Tools & Equipment
+zither: Object:Musical Instruments
+zoomorphic object: Object:Other Objects
+zoomorphic vessel: Object:Containers

@@ -130,6 +130,19 @@ module Macros
       end
     end
 
+    # Returns only the even values from the accumulator
+    # @return [Proc] a proc that traject can call for each record
+    # @example
+    #  # when accumulator contains: ['Object', 'Stelae', 'Text', 'Manuscript']
+    #
+    #  even_only => ['Object', 'Text']
+    def even_only
+      lambda do |_rec, acc|
+        even = acc.values_at(* acc.each_index.select(&:even?))
+        acc.replace(even)
+      end
+    end
+
     # Returns the provider as specified in the ++agg_provider++ field of ++config/metadata_mapping.json++
     # @return [Proc] a proc that traject can call for each record
     # @example
