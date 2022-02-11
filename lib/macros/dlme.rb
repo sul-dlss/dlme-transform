@@ -143,6 +143,19 @@ module Macros
       end
     end
 
+    # Returns only the odd values from the accumulator
+    # @return [Proc] a proc that traject can call for each record
+    # @example
+    #  # when accumulator contains: ['Object', 'Stelae', 'Text', 'Manuscript']
+    #
+    #  even_only => ['Stelae', 'Manuscript']
+    def odd_only
+      lambda do |_rec, acc|
+        odd = acc.values_at(* acc.each_index.select(&:odd?))
+        acc.replace(odd)
+      end
+    end
+
     # Returns the provider as specified in the ++agg_provider++ field of ++config/metadata_mapping.json++
     # @return [Proc] a proc that traject can call for each record
     # @example

@@ -444,7 +444,7 @@ fibula (pin): Object:Other Objects
 fibula fragment: Object:Other Objects
 fiddle: Object:Musical Instruments
 fiddle bow: Object:Musical Instruments
-figures: ''
+figures: ~
 'figures (illustrations):': Image:Drawings
 figurine: Object:Sculptures
 figurine (uncertain): Object:Other Objects
@@ -471,9 +471,9 @@ flasks (bottles): Object:Containers
 flat base sherd: Object:Other Objects
 flower: Object:Other Objects
 flute: Object:Musical Instruments
-folio s (leaves): ''
-folios (leaves): ''
-folios (leves): ''
+folio s (leaves): ~
+folios (leaves): ~
+folios (leves): ~
 follis: Object:Coins
 food: Object:Other Objects
 footed bowl: Object:Containers
@@ -538,7 +538,7 @@ gold, silver & jewelry: Object:Other Objects
 gourd: Object:Other Objects
 gown: Object:Adornments
 grain: Object:Other Objects
-graphics: ''
+graphics: ~
 grave marker: Object:Funerary Objects
 grinder: Object:Tools & Equipment
 grinding stone: Object:Tools & Equipment
@@ -565,6 +565,7 @@ handles: Object:Other Objects
 hanging: Object:Other Objects
 harp: Object:Musical Instruments
 harpoon: Object:Other Objects
+hat: Object:Adornments
 hawk (uncertain): Object:Other Objects
 head: Object:Other Objects
 head rest: Object:Other Objects
@@ -612,7 +613,7 @@ illustrations (layout features): Image:Drawings
 implement: Object:Tools & Equipment
 implement fragment: Object:Tools & Equipment
 implements: Object:Tools & Equipment
-impression: ''
+impression: ~
 incense: Object:Other Objects
 incense burner: Object:Other Objects
 incense burner fragment: Object:Other Objects
@@ -860,7 +861,7 @@ panels: Object:Other Objects
 panels (surface components): Object:Other Objects
 panpipes: Object:Musical Instruments
 pantaloons: Object:Adornments
-paper: ''
+paper: ~
 papyri: Text:Other Texts
 parchisi: Object:Recreational Artifacts
 patch box: Object:Containers
@@ -971,7 +972,7 @@ prayer mat: Object:Other Objects
 prayer rug: Object:Other Objects
 prayer rugs: Object:Other Objects
 precious stones & gems: Object:Other Objects
-prick: ''
+prick: ~
 print: Image:Other Images
 prism: Object:Other Objects
 psaltery: Object:Musical Instruments
