@@ -603,16 +603,10 @@ RSpec.describe Macros::DateParsing do
 
       before do
         allow(ParseDate).to receive(:range_array).and_raise(ParseDate::Error)
-        allow(Honeybadger).to receive(:notify)
       end
 
       it 'returns an empty array' do
         expect(range_array).to eq([])
-      end
-
-      it 'notifies honeybadger of error' do
-        range_array
-        expect(Honeybadger).to have_received(:notify).with(error_msg)
       end
     end
   end
