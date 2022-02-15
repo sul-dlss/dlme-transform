@@ -13,7 +13,6 @@ module Macros
     rescue StandardError => e
       msg = "Error retrieving IIIF Manifest: #{e}"
       ::DLME::Utils.logger.error msg
-      Honeybadger.notify(msg)
       []
     end
 

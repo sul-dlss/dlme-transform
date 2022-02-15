@@ -339,7 +339,6 @@ module Macros
     # display, at the end of a transformation run
     def collect_exception!(context, exception)
       msg = "ERROR parsing dates in #{context.input_name}: #{exception.message}. Offending record: #{context.source_record}"
-      Honeybadger.notify(msg)
       Dlme::ExceptionCollector.instance << msg
     end
   end
