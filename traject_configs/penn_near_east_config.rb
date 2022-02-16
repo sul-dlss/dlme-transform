@@ -45,7 +45,7 @@ to_field 'cho_title', column('object_name'), split('|'), lang('en')
 # CHO Other
 to_field 'cho_coverage', column('culture'), split('|'), lang('en')
 to_field 'cho_creator', column('creator'), lang('en')
-# to_field 'cho_date', column('date_made'), lang('en')
+to_field 'cho_date', column('date_made'), lang('en')
 to_field 'cho_date', column('date_made_early'), lang('en')
 to_field 'cho_date', column('date_made_late'), lang('en')
 to_field 'cho_date_range_norm', csv_or_json_date_range('date_made_early', 'date_made_late')
