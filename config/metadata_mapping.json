@@ -807,6 +807,27 @@
   },
   {
     "trajects": [
+      "brooklyn_common_config.rb"
+    ],
+    "paths": [
+      "brooklyn-museum/islamic-art",
+      "brooklyn-museum/near-east-egyptian"
+    ],
+    "extension": ".json",
+    "settings": {
+      "agg_provider": "Brooklyn Museum",
+      "agg_provider_country": "United States of Americam",
+      "agg_data_provider": "Brooklyn Museum",
+      "agg_data_provider_country": "United States of America",
+      "agg_provider_ar": "متحف بروكلين",
+      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "agg_data_provider_ar": "متحف بروكلين",
+      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "inst_id": "brooklyn"
+    }
+  },
+  {
+    "trajects": [
       "cambridge_genizah_config.rb"
     ],
     "paths": [
