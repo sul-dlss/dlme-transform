@@ -38,7 +38,6 @@ settings do
   provide 'reader_class_name', 'TrajectPlus::CsvReader'
 end
 
-
 to_field 'agg_data_provider_collection', collection
 to_field 'dlme_collection', literal('aub-posters'), translation_map('dlme_collection_from_provider_id'), lang('en')
 to_field 'dlme_collection', literal('aub-posters'), translation_map('dlme_collection_from_provider_id'), translation_map('dlme_collection_ar_from_en'), lang('ar-Arab')
