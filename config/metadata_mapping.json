@@ -61,12 +61,12 @@
   },
   {
     "trajects": [
-      "aub_aco_config_csv.rb"
+      "aub_aco_config.rb"
     ],
     "paths": [
       "aub/aco"
     ],
-    "extension": ".csv",
+    "extension": ".xml",
     "settings": {
       "agg_provider": "American University of Beirut",
       "agg_provider_country": "Lebanon",
@@ -81,12 +81,12 @@
   },
   {
     "trajects": [
-      "aub_aladab_config_csv.rb"
+      "aub_aladab_config.rb"
     ],
     "paths": [
       "aub/aladab"
     ],
-    "extension": ".csv",
+    "extension": ".xml",
     "settings": {
       "agg_provider": "American University of Beirut",
       "agg_provider_country": "Lebanon",
@@ -101,12 +101,12 @@
   },
   {
     "trajects": [
-      "aub_poha_config_csv.rb"
+      "aub_poha_config.rb"
     ],
     "paths": [
       "aub/poha"
     ],
-    "extension": ".csv",
+    "extension": ".xml",
     "settings": {
       "agg_provider": "American University of Beirut",
       "agg_provider_country": "Lebanon",
@@ -121,12 +121,12 @@
   },
   {
     "trajects": [
-      "aub_postcards_config_csv.rb"
+      "aub_postcards_config.rb"
     ],
     "paths": [
       "aub/postcards"
     ],
-    "extension": ".csv",
+    "extension": ".xml",
     "settings": {
       "agg_provider": "American University of Beirut",
       "agg_provider_country": "Lebanon",
@@ -141,12 +141,12 @@
   },
   {
     "trajects": [
-      "aub_posters_config_csv.rb"
+      "aub_posters_config.rb"
     ],
     "paths": [
       "aub/posters"
     ],
-    "extension": ".csv",
+    "extension": ".xml",
     "settings": {
       "agg_provider": "American University of Beirut",
       "agg_provider_country": "Lebanon",
@@ -161,12 +161,12 @@
   },
   {
     "trajects": [
-      "aub_travelbooks_config_csv.rb"
+      "aub_travelbooks_config.rb"
     ],
     "paths": [
       "aub/travelbooks"
     ],
-    "extension": ".csv",
+    "extension": ".xml",
     "settings": {
       "agg_provider": "American University of Beirut",
       "agg_provider_country": "Lebanon",
@@ -984,6 +984,26 @@
       "agg_data_provider_ar": "جامعة هارفارد، مركز التحليل الجغرافي",
       "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
       "inst_id": "harvard"
+    }
+  },
+   {
+    "trajects": [
+      "ifpo_config.rb"
+    ],
+    "paths": [
+      "ifpo/photographs"
+    ],
+    "extension": ".csv",
+    "settings": {
+      "agg_provider": "Archives ouvertes de l’Institut français du Proche-Orient",
+      "agg_provider_country": "Lebanon",
+      "agg_data_provider": "Archives ouvertes de l’Institut français du Proche-Orient",
+      "agg_data_provider_country": "Lebanon",
+      "agg_provider_ar": "المحفوظات المفتوحة للمعهد الفرنسي للشرق الأدنى",
+      "agg_provider_country_ar": "لبنان",
+      "agg_data_provider_ar": "المحفوظات المفتوحة للمعهد الفرنسي للشرق الأدنى",
+      "agg_data_provider_country_ar": "لبنان",
+      "inst_id": "ifpo"
     }
   },
   {
