@@ -72,7 +72,7 @@ to_field 'cho_language', column('language'), normalize_language, translation_map
 to_field 'cho_language', column('language'), normalize_language, lang('en')
 to_field 'cho_publisher', column('publisher'), parse_csv, lang('en')
 to_field 'cho_source', column('source'), parse_csv, lang('en')
-to_field 'cho_subject', column('subject_ar'), parse_csv, lang('ar-Arab')
+to_field 'cho_subject', column('subject_ar'), parse_csv, arabic_script_lang_or_default('ar-Arab','und-Latn')
 to_field 'cho_subject', column('subject_en'), parse_csv, lang('en')
 to_field 'cho_subject', column('subject_fr'), parse_csv, lang('fr')
 to_field 'cho_type', column('type'), parse_csv, last, lang('en')
