@@ -1,5 +1,6 @@
 # type values from contributor mapped to cho_has_type
 abbey churches: Structures
+accessory: Other Objects
 adornment: Adornments
 adze: Tools & Equipment
 alabastron: Containers
@@ -20,6 +21,7 @@ angle band: Other Objects
 animal bone: Other Objects
 animal figurine: Sculptures
 animal figurine (uncertain): Other Objects
+animal gear: Other Objects
 animal horn: Other Objects
 animal mummy: Other Objects
 animal remain: Other Objects
@@ -35,6 +37,7 @@ aquamaniles: Containers
 archaeological sites: Archaeological Sites
 archer's ring: Armaments
 architectural: Structures
+architectural element: Structures
 architectural relief: Structures
 architecture: Structures
 archival file: Other Texts
@@ -45,6 +48,7 @@ armlet (uncertain): Other Objects
 armor: Armaments
 armor (protective devices): Armaments
 armor (protective wear): Armaments
+arms and armor: Armaments
 arms & armor: Armaments
 arrow: Armaments
 arrow straightener: Armaments
@@ -205,6 +209,7 @@ capital (uncertain): Other Objects
 carpet: Carpets
 carpet fragment: Carpets
 carpets: Carpets
+carrier: Containers
 cartographic: Maps
 cartonnage: Funerary Objects
 cartouches: Other Objects
@@ -229,8 +234,10 @@ censer: Other Objects
 censers: Other Objects
 censor: Other Objects
 ceramic tile: Other Objects
+ceramic: Other Objects
 ceramics: Other Objects
 ceramics (objects): Other Objects
+ceremonial: Other Objects
 ceremonial objects: Other Objects
 certificate: Other Texts
 chain: Other Objects
@@ -285,6 +292,7 @@ comb (hair - grooming tool): Other Objects
 combination locks: Other Objects
 combs: Other Objects
 combs (grooming tools): Other Objects
+commemorative: Other Objects
 commonplace books: Books
 cone: Other Objects
 cones: Other Objects
@@ -306,6 +314,7 @@ cornerstones: Structures
 cornice: Structures
 cornice fragment: Structures
 cornice inlay: Structures
+cosmetic: Other Objects
 cosmetic box: Containers
 cosmetic container: Containers
 cosmetic kit: Other Objects
@@ -334,6 +343,7 @@ cup (uncertain): Other Objects
 cup fragment: Containers
 cups: Other Objects
 cups (drinking vessels): Containers
+currency, coinage: Coins
 currants: Other Objects
 curtain: Other Objects
 cylinder: Other Objects
@@ -373,6 +383,7 @@ dishes: Other Objects
 disk: Other Objects
 disk (uncertain): Other Objects
 dissertations: Other Texts
+document: Other Texts
 doll: Recreational Artifacts
 doll (uncertain): Other Objects
 dolphin aryballos: Containers
@@ -457,6 +468,7 @@ finger ring fragment: Adornments
 finger rings: Adornments
 finial: Structures
 finials: Other Objects
+fire/heat: Other Objects
 fire making, fuel: Other Objects
 firing tripod: Armaments
 fish jaw: Other Objects
@@ -474,6 +486,7 @@ folios (leaves):
 folios (leves):
 follis: Coins
 food: Other Objects
+food/drink: Other Objects
 footed bowl: Containers
 footed dish: Containers
 footed jar: Containers
@@ -500,6 +513,8 @@ fruit: Other Objects
 frying pan: Other Objects
 funerary cone: Funerary Objects
 funerary jar: Funerary Objects
+funerary object: Funerary Objects
+funerary, marker: Funerary Objects
 funerary sculpture:
   - Funerary Objects
   - Sculptures
@@ -593,7 +608,9 @@ human figurine (uncertain): Other Objects
 human leg: Other Objects
 human remains: Other Objects
 human statuette: Sculptures
+hunting/fishing/trapping: Other Objects
 husking tray: Other Objects
+hygiene: Other Objects
 hypocephalus: Funerary Objects
 ibis: Other Objects
 ibis (uncertain): Other Objects
@@ -749,6 +766,7 @@ mask: Adornments
 masks: Adornments
 mastaba: Funerary Objects
 mat: Other Objects
+material: Other Objects
 mausoleums:
 - Structures
 - Funerary Objects
@@ -793,6 +811,7 @@ mummy wrapping: Funerary Objects
 mural paintings: Paintings
 murex shell: Other Objects
 musical bow: Musical Instruments
+musical instrument: Musical Instruments
 musical instruments: Musical Instruments
 musical pipe: Musical Instruments
 nail: Other Objects
@@ -1000,6 +1019,8 @@ religious objects: Other Objects
 religious paraphernalia: Other Objects
 religious structures, temples, shrines: Structures
 reliquary figures: Other Objects
+remains, animal: Other Objects
+remains, human: Other Objects
 report: Other Texts
 reproduction: Other Objects
 rhyton: Containers
@@ -1139,6 +1160,7 @@ sling stone: Armaments
 slipper coffin: Funerary Objects
 slippers: Adornments
 slipware: Adornments
+smoking/drugs: Other Objects
 smoother: Other Objects
 snake: Other Objects
 sng convex scraper: Tools & Equipment
@@ -1289,6 +1311,7 @@ towel: Other Objects
 towers (single built works): Structures
 toy: Recreational Artifacts
 toys games: Recreational Artifacts
+recreation, toys, games: Recreational Artifacts
 transportation: Other Objects
 tray: Other Objects
 tray (uncertain): Other Objects
@@ -1382,6 +1405,7 @@ wedge: Tools & Equipment
 weight: Weights & Measures
 weight (uncertain): Other Objects
 weights: Weights & Measures
+weights/measures: Weights & Measures
 wells: Structures
 wheel: Tools & Equipment
 whetstone: Tools & Equipment
@@ -1395,6 +1419,7 @@ wood: Other Objects
 wood fragment: Other Objects
 woodwork: Other Objects
 wool comb: Other Objects
+work on paper: Other Images
 woven: Other Objects
 wrap: Other Objects
 wreath: Other Objects

@@ -113,19 +113,4 @@ RSpec.describe Macros::IIIF do
       end
     end
   end
-
-  describe 'iiif_honeybadger_alert' do
-    let(:iiif_manifest) { 'https://stacks.stanford.edu/image/iiif/missing-manifest' }
-    let(:fetch_err_msg) { "IIIF Manifest not found: #{iiif_manifest}" }
-
-    before do
-      allow(Honeybadger).to receive(:notify)
-      allow(::DLME::Utils).to receive(:fetch_json).with(iiif_manifest).and_raise(fetch_err_msg)
-    end
-
-    it 'Honeybadger notified for missing IIIF Manifest' do
-      instance.grab_iiif_manifest(iiif_manifest)
-      expect(Honeybadger).to have_received(:notify).with("Error retrieving IIIF Manifest: #{fetch_err_msg}")
-    end
-  end
 end

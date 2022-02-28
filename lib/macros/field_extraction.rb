@@ -1,14 +1,38 @@
 # frozen_string_literal: true
 
+require 'traject_plus'
+
 module Macros
   # DLME helpers for traject mappings
   module FieldExtraction
+    extend TrajectPlus::Macros::JSON
     NS = {
       cdwalite: 'http://www.getty.edu/research/conducting_research/standards/cdwa/cdwalite',
       dc: 'http://purl.org/dc/elements/1.1/',
       mods: 'http://www.loc.gov/mods/v3'
     }.freeze
     private_constant :NS
+
+    # Extracts fields_to_extract from json_list
+    def extract_json_list(json_list, field_to_extract)
+      lambda do |record, accumulator|
+        values = []
+        list = record[json_list]
+        return unless list
+
+        list.each do |val|
+          values << val[field_to_extract]
+        end
+        accumulator.replace(values)
+      end
+    end
+
+    def extract_json_from_context(path)
+      lambda do |record, accumulator|
+        result = record[path]
+        accumulator.replace([result]) if result
+      end
+    end
 
     # Extracts values and returns them, seperated by commas, with
     # a single prepend string. Avoids duplicating the prepend string
