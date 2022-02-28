@@ -52,16 +52,16 @@ to_field 'cho_date_range_norm', csv_or_json_date_range('date_made_early', 'date_
 to_field 'cho_date_range_hijri', csv_or_json_date_range('date_made_early', 'date_made_late'), hijri_range
 to_field 'cho_description', column('description'), lang('en')
 to_field 'cho_description', column('technique'), split('|'), lang('en')
-to_field 'cho_edm_type', column('object_name'), normalize_has_type, normalize_edm_type, lang('en')
-to_field 'cho_edm_type', column('object_name'), normalize_has_type, normalize_edm_type, translation_map('edm_type_ar_from_en'), lang('ar-Arab')
+to_field 'cho_edm_type', column('object_name'), split('|'), transform(&:downcase), translation_map('type_hierarchy_from_contributor'), split(':'), even_only, lang('en')
+to_field 'cho_edm_type', column('object_name'), split('|'), transform(&:downcase), translation_map('type_hierarchy_from_contributor'), split(':'), even_only, translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_extent', column('measurement_height'), lang('en')
 to_field 'cho_extent', column('measurement_length'), lang('en')
 to_field 'cho_extent', column('measurement_outside_diameter'), lang('en')
 to_field 'cho_extent', column('measurement_tickness'), lang('en')
 to_field 'cho_extent', column('measurement_unit'), lang('en')
 to_field 'cho_extent', column('measurement_width'), lang('en')
-to_field 'cho_has_type', column('object_name'), normalize_has_type, lang('en')
-to_field 'cho_has_type', column('object_name'), normalize_has_type, translation_map('has_type_ar_from_en'), lang('ar-Arab')
+to_field 'cho_has_type', column('object_name'), split('|'), transform(&:downcase), translation_map('type_hierarchy_from_contributor'), split(':'), odd_only, lang('en')
+to_field 'cho_has_type', column('object_name'), split('|'), transform(&:downcase), translation_map('type_hierarchy_from_contributor'), split(':'), odd_only, translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_identifier', column('emuIRN')
 to_field 'cho_medium', column('material'), split('|'), lang('en')
 to_field 'cho_provenance', column('accession_credit_line'), lang('en')
@@ -71,6 +71,10 @@ to_field 'cho_spatial', column('provenience'), split('|'), lang('en')
 to_field 'cho_subject', column('iconography'), lang('en')
 to_field 'cho_temporal', column('period'), split('|'), lang('en')
 to_field 'cho_type', column('object_name'), split('|'), lang('en')
+to_field 'cho_type_facet', column('object_name'), split('|'), transform(&:downcase), translation_map('type_hierarchy_from_contributor'), lang('en')
+to_field 'cho_type_facet', column('object_name'), split('|'), transform(&:downcase), translation_map('type_hierarchy_from_contributor'), split(':'), even_only, lang('en')
+to_field 'cho_type_facet', column('object_name'), split('|'), transform(&:downcase), translation_map('type_hierarchy_from_contributor'), translation_map('type_hierarchy_ar_from_en'), lang('ar-Arab')
+to_field 'cho_type_facet', column('object_name'), split('|'), transform(&:downcase), translation_map('type_hierarchy_from_contributor'), split(':'), even_only, translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
@@ -92,6 +96,7 @@ to_field 'agg_provider_country', provider_country_ar, lang('ar-Arab')
 
 each_record convert_to_language_hash(
   'agg_data_provider',
+  'agg_data_provider_collection',
   'agg_data_provider_country',
   'agg_provider',
   'agg_provider_country',
@@ -119,8 +124,5 @@ each_record convert_to_language_hash(
   'cho_temporal',
   'cho_title',
   'cho_type',
-  'agg_data_provider_collection'
+  'cho_type_facet'
 )
-
-# NOTE: call add_cho_type_facet AFTER calling convert_to_language_hash fields
-each_record add_cho_type_facet
