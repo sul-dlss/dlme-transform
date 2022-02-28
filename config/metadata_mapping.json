@@ -66,7 +66,7 @@
     "paths": [
       "aub/aco"
     ],
-    "extension": ".xml",
+    "extension": ".csv",
     "settings": {
       "agg_provider": "American University of Beirut",
       "agg_provider_country": "Lebanon",
@@ -86,7 +86,7 @@
     "paths": [
       "aub/aladab"
     ],
-    "extension": ".xml",
+    "extension": ".csv",
     "settings": {
       "agg_provider": "American University of Beirut",
       "agg_provider_country": "Lebanon",
@@ -106,7 +106,7 @@
     "paths": [
       "aub/poha"
     ],
-    "extension": ".xml",
+    "extension": ".csv",
     "settings": {
       "agg_provider": "American University of Beirut",
       "agg_provider_country": "Lebanon",
@@ -126,7 +126,7 @@
     "paths": [
       "aub/postcards"
     ],
-    "extension": ".xml",
+    "extension": ".csv",
     "settings": {
       "agg_provider": "American University of Beirut",
       "agg_provider_country": "Lebanon",
@@ -146,7 +146,7 @@
     "paths": [
       "aub/posters"
     ],
-    "extension": ".xml",
+    "extension": ".csv",
     "settings": {
       "agg_provider": "American University of Beirut",
       "agg_provider_country": "Lebanon",
@@ -166,7 +166,7 @@
     "paths": [
       "aub/travelbooks"
     ],
-    "extension": ".xml",
+    "extension": ".csv",
     "settings": {
       "agg_provider": "American University of Beirut",
       "agg_provider_country": "Lebanon",
