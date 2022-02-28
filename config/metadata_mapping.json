@@ -986,6 +986,26 @@
       "inst_id": "harvard"
     }
   },
+   {
+    "trajects": [
+      "ifpo_config.rb"
+    ],
+    "paths": [
+      "ifpo/photographs"
+    ],
+    "extension": ".csv",
+    "settings": {
+      "agg_provider": "Archives ouvertes de l’Institut français du Proche-Orient",
+      "agg_provider_country": "Lebanon",
+      "agg_data_provider": "Archives ouvertes de l’Institut français du Proche-Orient",
+      "agg_data_provider_country": "Lebanon",
+      "agg_provider_ar": "المحفوظات المفتوحة للمعهد الفرنسي للشرق الأدنى",
+      "agg_provider_country_ar": "لبنان",
+      "agg_data_provider_ar": "المحفوظات المفتوحة للمعهد الفرنسي للشرق الأدنى",
+      "agg_data_provider_country_ar": "لبنان",
+      "inst_id": "ifpo"
+    }
+  },
   {
     "trajects": [
       "lausanne_ias_config.rb"
