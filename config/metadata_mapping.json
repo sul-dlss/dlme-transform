@@ -61,7 +61,7 @@
   },
   {
     "trajects": [
-      "aub_aco_config_csv.rb"
+      "aub_aco_config.rb"
     ],
     "paths": [
       "aub/aco"
@@ -81,7 +81,7 @@
   },
   {
     "trajects": [
-      "aub_aladab_config_csv.rb"
+      "aub_aladab_config.rb"
     ],
     "paths": [
       "aub/aladab"
@@ -101,7 +101,7 @@
   },
   {
     "trajects": [
-      "aub_poha_config_csv.rb"
+      "aub_poha_config.rb"
     ],
     "paths": [
       "aub/poha"
@@ -121,7 +121,7 @@
   },
   {
     "trajects": [
-      "aub_postcards_config_csv.rb"
+      "aub_postcards_config.rb"
     ],
     "paths": [
       "aub/postcards"
@@ -141,7 +141,7 @@
   },
   {
     "trajects": [
-      "aub_posters_config_csv.rb"
+      "aub_posters_config.rb"
     ],
     "paths": [
       "aub/posters"
@@ -161,7 +161,7 @@
   },
   {
     "trajects": [
-      "aub_travelbooks_config_csv.rb"
+      "aub_travelbooks_config.rb"
     ],
     "paths": [
       "aub/travelbooks"
@@ -831,7 +831,7 @@
       "cambridge_genizah_config.rb"
     ],
     "paths": [
-      "cambridge/genizah"
+      "cambridge/genizah-2"
     ],
     "extension": ".xml",
     "settings": {
