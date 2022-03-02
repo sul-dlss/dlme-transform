@@ -38,9 +38,9 @@ settings do
   provide 'reader_class_name', 'TrajectPlus::CsvReader'
 end
 
-to_field 'agg_data_provider_collection', collection
-to_field 'dlme_collection', literal('aub-travelbooks'), translation_map('dlme_collection_from_provider_id'), lang('en')
-to_field 'dlme_collection', literal('aub-travelbooks'), translation_map('dlme_collection_from_provider_id'), translation_map('dlme_collection_ar_from_en'), lang('ar-Arab')
+to_field 'agg_data_provider_collection', literal('aub-travelbooks')
+to_field 'agg_data_provider_collection', literal('aub-travelbooks'), translation_map('agg_collection_from_provider_id'), lang('en')
+to_field 'agg_data_provider_collection', literal('aub-travelbooks'), translation_map('agg_collection_from_provider_id'), translation_map('agg_collection_ar_from_en'), lang('ar-Arab')
 
 # Set Version & Timestamp on each record
 to_field 'transform_version', version
@@ -98,6 +98,7 @@ to_field 'agg_provider_country', provider_country_ar, lang('ar-Arab')
 
 each_record convert_to_language_hash(
   'agg_data_provider',
+  'agg_data_provider_collection',
   'agg_data_provider_country',
   'agg_provider',
   'agg_provider_country',
@@ -124,8 +125,7 @@ each_record convert_to_language_hash(
   'cho_subject',
   'cho_temporal',
   'cho_title',
-  'cho_type',
-  'dlme_collection'
+  'cho_type'
 )
 
 # NOTE: call add_cho_type_facet AFTER calling convert_to_language_hash fields
