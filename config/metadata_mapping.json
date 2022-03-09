@@ -106,7 +106,7 @@
     "paths": [
       "aub/poha"
     ],
-    "extension": ".csv",
+    "extension": ".xml",
     "settings": {
       "agg_provider": "American University of Beirut",
       "agg_provider_country": "Lebanon",
