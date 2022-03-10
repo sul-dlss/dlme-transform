@@ -1193,7 +1193,7 @@
     "paths": [
       "manchester/nashriyah"
     ],
-    "extension": ".xml",
+    "extension": ".csv",
     "settings": {
       "agg_provider": "University of Manchester Library",
       "agg_provider_country": "United Kingdom",
