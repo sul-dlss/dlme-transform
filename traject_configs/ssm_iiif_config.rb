@@ -38,7 +38,7 @@ to_field 'transform_timestamp', timestamp
 
 to_field 'agg_data_provider_collection', extract_json('.manifest'), gsub('https://cdm21044.contentdm.oclc.org/iiif/info/', ''), split('/'), first_only, transform(&:downcase), prepend('ssm-'), strip, translation_map('agg_collection_from_provider_id'), lang('en')
 to_field 'agg_data_provider_collection', extract_json('.manifest'), gsub('https://cdm21044.contentdm.oclc.org/iiif/info/', ''), split('/'), first_only, transform(&:downcase), prepend('ssm-'), strip, translation_map('agg_collection_from_provider_id'), translation_map('agg_collection_ar_from_en'), lang('ar-Arab')
-to_field 'agg_data_provider_collection_id', extract_json('.manifest')
+to_field 'agg_data_provider_collection_id', extract_json('.manifest'), gsub('https://cdm21044.contentdm.oclc.org/iiif/info/', ''), split('/'), first_only, transform(&:downcase), prepend('ssm-'), strip
 
 # File path
 to_field 'dlme_source_file', path_to_file
