@@ -123,6 +123,12 @@ module Macros
       end
     end
 
+    def at_index(i)
+      lambda do |_rec, acc|
+        acc.replace([acc[i]])
+      end
+    end
+
     # Take only the last value from the accumulator
     def last
       lambda do |_rec, acc|

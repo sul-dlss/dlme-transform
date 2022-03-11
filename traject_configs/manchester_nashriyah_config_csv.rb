@@ -48,9 +48,9 @@ to_field 'dlme_source_file', path_to_file
 
 # CHO Required
 to_field 'id', column('id'), parse_csv, gsub('oai:N/A:Manchester~', '')
-to_field 'cho_title', column('title'), parse_csv, first, lang('fa-Arab')
-to_field 'cho_title', column('title'), parse_csv, odd_only, lang('fa-Latn')
-to_field 'cho_title', column('title'), parse_csv, last, lang('en')
+to_field 'cho_title', column('title'), parse_csv, at_index(0), lang('und-Arab')
+to_field 'cho_title', column('title'), parse_csv, at_index(1), lang('fa-Latn')
+to_field 'cho_title', column('title'), parse_csv, at_index(2), lang('en')
 
 # CHO Other
 to_field 'cho_creator', column('creator'), parse_csv, lang('fa-Arab')
@@ -64,10 +64,11 @@ to_field 'cho_edm_type', column('type'), parse_csv, last, transform(&:downcase),
 to_field 'cho_format', column('format'), parse_csv, lang('en')
 to_field 'cho_has_type', column('type'), parse_csv, last, transform(&:downcase), translation_map('has_type_from_contributor'), lang('en') # English value
 to_field 'cho_has_type', column('type'), parse_csv, last, transform(&:downcase), translation_map('has_type_from_contributor'), translation_map('has_type_ar_from_en'), lang('ar-Arab') # Arabic value
-
 to_field 'cho_identifier', column('identifier'), parse_csv, last
 to_field 'cho_language', literal('Persian'), lang('en')
 to_field 'cho_language', literal('Persian'), translation_map('lang_ar_from_en'), lang('ar-Arab')
+to_field 'cho_spatial', literal('Iran'), lang('en')
+to_field 'cho_spatial', literal('إيران'), lang('ar-Arab')
 to_field 'cho_type', column('type'), parse_csv, last, lang('en')
 
 # Agg
@@ -84,14 +85,15 @@ to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
     'wr_edm_rights' => [literal('http://creativecommons.org/licenses/by-nc-sa/4.0')],
-    'wr_id' => [column('identifier'), gsub('oai:N/A:Manchester~', '')]
+    'wr_id' => [column('id'), strip, gsub('oai:N/A:', 'https://luna.manchester.ac.uk/luna/servlet/detail/')],
+    'wr_is_referenced_by' => [column('id'), strip, gsub('oai:N/A:', 'https://luna.manchester.ac.uk/luna/servlet/iiif/m/'), append('/manifest')]
   )
 end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
     'wr_edm_rights' => [literal('http://creativecommons.org/licenses/by-nc-sa/4.0')],
-    'wr_id' => [column('identifier'), parse_csv, odd_only],
+    'wr_id' => [column('identifier'), parse_csv, at_index(1)],
     'wr_is_referenced_by' => [column('id'), strip, gsub('oai:N/A:', 'https://luna.manchester.ac.uk/luna/servlet/iiif/m/'), append('/manifest')]
   )
 end
