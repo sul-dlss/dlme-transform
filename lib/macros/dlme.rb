@@ -123,9 +123,9 @@ module Macros
       end
     end
 
-    def at_index(i)
+    def at_index(index)
       lambda do |_rec, acc|
-        acc.replace([acc[i]])
+        acc.replace([acc[index]])
       end
     end
 
