@@ -88,7 +88,7 @@ to_field 'agg_edm_rights', literal('CC0: https://creativecommons.org/publicdomai
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(context,
                                   'wr_edm_rights' => literal('CC0: https://creativecommons.org/publicdomain/zero/1.0/'),
-                                  'wr_id' => [extract_json('.ResourceURL')])
+                                  'wr_id' => [extract_json('.ResourceURL'), gsub('http:', 'https:')])
 end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(context,
