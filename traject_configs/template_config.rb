@@ -23,11 +23,11 @@ extend Macros::PathToFile
 extend Macros::Timestamp
 extend Macros::Version
 extend TrajectPlus::Macros
-extend TrajectPlus::Macros::JSON
+extend TrajectPlus::Macros::Csv
 
 settings do
+  provide 'reader_class_name', 'TrajectPlus::CsvReader'
   provide 'writer_class_name', 'DlmeJsonResourceWriter'
-  provide 'reader_class_name', 'TrajectPlus::JsonReader'
 end
 
 # File path
@@ -37,10 +37,8 @@ to_field 'dlme_source_file', path_to_file
 to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
 
-to_field 'agg_data_provider_collection_id'
-# Arabic value
-to_field 'agg_data_provider_collection'
-# English value
+to_field 'agg_data_provider_collection_id' # Arabic value
+to_field 'agg_data_provider_collection' # English value
 to_field 'agg_data_provider_collection'
 
 # Cho Required
@@ -60,6 +58,7 @@ to_field 'cho_description'
 to_field 'cho_edm_type' # Arabic value
 to_field 'cho_edm_type' # English value
 to_field 'cho_extent'
+to_field 'cho_format'
 to_field 'cho_has_part'
 to_field 'cho_has_type' # Arabic value
 to_field 'cho_has_type' # English value
