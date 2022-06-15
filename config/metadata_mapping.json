@@ -928,6 +928,26 @@
   },
   {
     "trajects": [
+      "dasi_config.rb"
+    ],
+    "paths": [
+      "dasi/epigraphs"
+    ],
+    "extension": ".csv",
+    "settings": {
+      "agg_provider": "Digital Archive for the Study of pre-Islamic Arabian Inscriptions (DASI)",
+      "agg_provider_country": "Italy",
+      "agg_data_provider": "Consiglio Nazionale delle Ricerche, Rome",
+      "agg_data_provider_country": "Italy",
+      "agg_provider_ar": "الأرشيف الرقمي لدراسة النقوش العربية قبل الإسلام (DASI)",
+      "agg_provider_country_ar": "إيطاليا",
+      "agg_data_provider_ar": "المجلس القومي للبحوث ، روما",
+      "agg_data_provider_country_ar": "إيطاليا",
+      "inst_id": "dasi"
+    }
+  },
+  {
+    "trajects": [
       "harvard_ihp_config.rb"
     ],
     "paths": [

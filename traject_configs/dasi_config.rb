@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'traject_plus'
+require 'macros/csv'
 require 'dlme_json_resource_writer'
 require 'dlme_debug_writer'
 require 'macros/date_parsing'
@@ -13,6 +14,7 @@ require 'macros/path_to_file'
 require 'macros/timestamp'
 require 'macros/version'
 
+extend Macros::Csv
 extend Macros::DateParsing
 extend Macros::DLME
 extend Macros::EachRecord
@@ -37,45 +39,32 @@ to_field 'dlme_source_file', path_to_file
 to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
 
-to_field 'agg_data_provider_collection_id'
+to_field 'agg_data_provider_collection_id', literal('dasi-epigraphs')
 # Arabic value
-to_field 'agg_data_provider_collection'
+to_field 'agg_data_provider_collection', literal('dasi-epigraphs'), translation_map('agg_collection_from_provider_id'), translation_map('agg_collection_ar_from_en'), lang('ar-Arab')
 # English value
-to_field 'agg_data_provider_collection'
+to_field 'agg_data_provider_collection', literal('dasi-epigraphs'), translation_map('agg_collection_from_provider_id'), lang('en')
 
 # Cho Required
 to_field 'id', column('id')
 to_field 'cho_title', column('title'), parse_csv, at_index(0), lang('en')
 
 # Cho Other
-to_field 'cho_alternative'
-to_field 'cho_contributor'
-to_field 'cho_coverage'
-to_field 'cho_creator'
-to_field 'cho_date'
-to_field 'cho_date_range_norm'
-to_field 'cho_date_range_hijri'
+to_field 'cho_alternative', column('title'), parse_csv, at_index(1), lang('en')
+to_field 'cho_alternative', column('title'), parse_csv, at_index(2), lang('en')
+to_field 'cho_alternative', column('title'), parse_csv, at_index(3), lang('en')
 to_field 'cho_dc_rights', column('rights'), lang('en')
 to_field 'cho_description', column('type'), parse_csv, at_index(1), lang('en')
-to_field 'cho_edm_type' literal('Text'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')# Arabic value
+to_field 'cho_edm_type', literal('Text'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')# Arabic value
 to_field 'cho_edm_type', literal('Text'), lang('en') # English value
-to_field 'cho_extent'
 to_field 'cho_format', column('format'), lang('en')
-to_field 'cho_has_part'
-to_field 'cho_has_type' literal('Epigraph'), translation_map('has_type_ar_from_en'), lang('ar-Arab') # Arabic value
+to_field 'cho_has_type', literal('Epigraph'), translation_map('has_type_ar_from_en'), lang('ar-Arab') # Arabic value
 to_field 'cho_has_type', literal('Epigraph'), lang('en') # English value
-to_field 'cho_identifier'
-to_field 'cho_is_part_of'
-to_field 'cho_language' column('language'), normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab') # Arabic value
-to_field 'cho_language' column('language'), normalize_language, lang('en') # English value
-to_field 'cho_medium'
-to_field 'cho_publisher'
-to_field 'cho_provenance'
-to_field 'cho_relation', column('relation')
-to_field 'cho_source'
-to_field 'cho_spatial'
+to_field 'cho_identifier', column('identifier')
+to_field 'cho_language', column('language'), normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab') # Arabic value
+to_field 'cho_language', column('language'), normalize_language, lang('en') # English value
+to_field 'cho_relation', column('relation'), lang('en')
 to_field 'cho_subject', column('subject'), parse_csv, lang('en')
-to_field 'cho_temporal'
 to_field 'cho_type', column('type'), parse_csv, lang('en')
 
 # Agg
@@ -86,22 +75,15 @@ to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_dc_rights' => [],
-    'wr_edm_rights' => [],
-    'wr_format' => [column('identifier'), parse_csv, at_index(1)],
-    'wr_id' => [],
-    'wr_is_referenced_by' => []
+    'wr_dc_rights' => [column('rights')],
+    'wr_id' => [column('identifier'), parse_csv, at_index(1)]
   )
 end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_dc_rights' => [],
-    'wr_edm_rights' => [],
-    'wr_format' => [],
-    'wr_has_service' => [],
-    'wr_id' => [],
-    'wr_is_referenced_by' => []
+    'wr_dc_rights' => [column('rights')],
+    'wr_id' => [column('preview')]
   )
 end
 to_field 'agg_provider', provider, lang('en')
@@ -145,8 +127,3 @@ each_record convert_to_language_hash(
 # This may be used as an alternative to building 'cho_type_facet' directly,
 # Don't use both.
 each_record add_cho_type_facet
-
-# each_record convert_to_language_hash(
-#   'agg_data_provider_collection',
-#   'cho_has_type'
-# )

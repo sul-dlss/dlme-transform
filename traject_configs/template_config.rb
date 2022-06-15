@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'traject_plus'
+require 'macros/csv'
 require 'dlme_json_resource_writer'
 require 'dlme_debug_writer'
 require 'macros/date_parsing'
@@ -13,6 +14,7 @@ require 'macros/path_to_file'
 require 'macros/timestamp'
 require 'macros/version'
 
+extend Macros::Csv
 extend Macros::DateParsing
 extend Macros::DLME
 extend Macros::EachRecord
