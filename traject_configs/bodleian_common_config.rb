@@ -3,6 +3,7 @@
 require 'traject_plus'
 require 'dlme_json_resource_writer'
 require 'dlme_debug_writer'
+require 'macros/csv'
 require 'macros/collection'
 require 'macros/date_parsing'
 require 'macros/dlme'
@@ -16,6 +17,7 @@ require 'macros/timestamp'
 require 'macros/title_extraction'
 require 'macros/version'
 
+extend Macros::Csv
 extend Macros::Collection
 extend Macros::DateParsing
 extend Macros::DLME
@@ -82,8 +84,8 @@ to_field 'cho_edm_type', literal('Text'), translation_map('edm_type_ar_from_en')
 to_field 'cho_extent', column('extent'), strip, lang('en')
 to_field 'cho_identifier', column('catalogue-identifier'), strip
 to_field 'cho_is_part_of', column('collection'), strip, lang('en')
-to_field 'cho_language', column('language'), normalize_language, lang('en')
-to_field 'cho_language', column('language'), normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
+to_field 'cho_language', column('language'), parse_csv, normalize_language, lang('en')
+to_field 'cho_language', column('language'), parse_csv, normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
 to_field 'cho_medium', column('materials'), strip, lang('en')
 to_field 'cho_spatial', column('place-of-origin'), strip, lang('en')
 to_field 'cho_subject', column('subject'), strip, lang('en')
@@ -103,7 +105,7 @@ end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_id' => [column('thumbnail'), strip],
+    'wr_id' => [column('thumbnail'), parse_csv, at_index(0), strip],
     'wr_is_referenced_by' => [column('id')]
   )
 end
