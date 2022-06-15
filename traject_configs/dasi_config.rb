@@ -60,7 +60,7 @@ to_field 'cho_edm_type', literal('Text'), lang('en') # English value
 to_field 'cho_format', column('format'), lang('en')
 to_field 'cho_has_type', literal('Epigraph'), translation_map('has_type_ar_from_en'), lang('ar-Arab') # Arabic value
 to_field 'cho_has_type', literal('Epigraph'), lang('en') # English value
-to_field 'cho_identifier', column('identifier')
+to_field 'cho_identifier', column('identifier'), parse_csv
 to_field 'cho_language', column('language'), normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab') # Arabic value
 to_field 'cho_language', column('language'), normalize_language, lang('en') # English value
 to_field 'cho_relation', column('relation'), lang('en')
