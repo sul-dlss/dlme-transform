@@ -55,7 +55,7 @@ to_field 'cho_alternative', column('title'), parse_csv, at_index(2), lang('en')
 to_field 'cho_alternative', column('title'), parse_csv, at_index(3), lang('en')
 to_field 'cho_dc_rights', column('rights'), lang('en')
 to_field 'cho_description', column('type'), parse_csv, at_index(1), lang('en')
-to_field 'cho_edm_type', literal('Text'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')# Arabic value
+to_field 'cho_edm_type', literal('Text'), translation_map('edm_type_ar_from_en'), lang('ar-Arab') # Arabic value
 to_field 'cho_edm_type', literal('Text'), lang('en') # English value
 to_field 'cho_format', column('format'), lang('en')
 to_field 'cho_has_type', literal('Epigraph'), translation_map('has_type_ar_from_en'), lang('ar-Arab') # Arabic value
