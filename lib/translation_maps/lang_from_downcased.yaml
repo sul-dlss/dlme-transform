@@ -18,6 +18,7 @@ german: German
 greek: Greek
 greek, ancient: Greek, Ancient
 greek, ancient (to 1453): Greek, Ancient
+ḥaḍramitic: Ḥaḍramitic
 hebrew: Hebrew
 italian: Italian
 judeo arabic: Judeo-Arabic
@@ -29,17 +30,21 @@ judaeo-persian: Judeo-Persian
 judaeo-portuguese: Judeo-Portuguese
 judaeo-spanish: Ladino
 latin: Latin
+minaic: Minaic
 old bulgarian: Old Bulgarian
 pahlavi: Pahlavi
 persian: Persian
 portuguese: Portuguese
+qatabanic: Qatabanic
 russian: Russian
+sabaic: Sabaic
 slavic languages: Slavic Languages
 spanish: Spanish
 syriac: Syriac
 turkish, ottoman: Turkish, Ottoman (1500-1928)
 turkish, ottoman (1500-1928): Turkish, Ottoman (1500-1928)
 turkish: Turkish
+undefined ancient south arabian language: Undefined ancient south Arabian language
 urdu: Urdu
 yiddish: Yiddish
 # "": "" # prevents empty strings from raising `not found` error
