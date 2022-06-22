@@ -53,6 +53,7 @@ to_field 'cho_title', column('title'), parse_csv, at_index(0), lang('en')
 to_field 'cho_alternative', column('title'), parse_csv, at_index(1), lang('en')
 to_field 'cho_alternative', column('title'), parse_csv, at_index(2), lang('en')
 to_field 'cho_alternative', column('title'), parse_csv, at_index(3), lang('en')
+to_field 'cho_date', literal('-800 (or -1000?) / + 600')
 to_field 'cho_dc_rights', column('rights'), lang('en')
 to_field 'cho_description', column('type'), parse_csv, at_index(1), lang('en')
 to_field 'cho_edm_type', literal('Text'), translation_map('edm_type_ar_from_en'), lang('ar-Arab') # Arabic value
@@ -60,10 +61,10 @@ to_field 'cho_edm_type', literal('Text'), lang('en') # English value
 to_field 'cho_format', column('format'), lang('en')
 to_field 'cho_has_type', literal('Epigraph'), translation_map('has_type_ar_from_en'), lang('ar-Arab') # Arabic value
 to_field 'cho_has_type', literal('Epigraph'), lang('en') # English value
-to_field 'cho_identifier', column('identifier'), parse_csv
+to_field 'cho_identifier', column('identifier'), parse_csv, at_index(0), gsub('DASI:', 'http://dasi.cnr.it/csai-')
 to_field 'cho_language', column('language'), normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab') # Arabic value
 to_field 'cho_language', column('language'), normalize_language, lang('en') # English value
-to_field 'cho_relation', column('relation'), lang('en')
+to_field 'cho_relation', column('relation'), gsub('DASI:', 'http://dasi.cnr.it/csai-'), lang('en')
 to_field 'cho_subject', column('subject'), parse_csv, lang('en')
 to_field 'cho_type', column('type'), parse_csv, lang('en')
 
