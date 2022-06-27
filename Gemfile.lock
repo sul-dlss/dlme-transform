@@ -36,7 +36,7 @@ GEM
     dry-logic (1.2.0)
       concurrent-ruby (~> 1.0)
       dry-core (~> 0.5, >= 0.5)
-    dry-schema (1.9.2)
+    dry-schema (1.9.3)
       concurrent-ruby (~> 1.0)
       dry-configurable (~> 0.13, >= 0.13.0)
       dry-core (~> 0.5, >= 0.5)
@@ -109,7 +109,7 @@ GEM
       marc (~> 1.0)
     method_source (1.0.0)
     mini_portile2 (2.8.0)
-    minitest (5.16.0)
+    minitest (5.16.1)
     multi_json (1.15.0)
     multipart-post (2.2.3)
     nokogiri (1.13.6)
@@ -199,7 +199,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.8.2)
-    unicode-display_width (2.1.0)
+    unicode-display_width (2.2.0)
     yell (2.2.2)
     zeitwerk (2.6.0)
 
