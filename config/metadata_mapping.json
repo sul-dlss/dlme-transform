@@ -21,7 +21,7 @@
   },
   {
     "trajects": [
-      "numismatic_csv_config.rb"
+      "american_numismatic_config_csv.rb"
     ],
     "paths": [
       "american-numismatic-society"
