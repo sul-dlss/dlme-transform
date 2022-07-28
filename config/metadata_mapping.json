@@ -1713,12 +1713,12 @@
   },
   {
     "trajects": [
-      "texas_tech_config.rb"
+      "texas_tech_config_csv.rb"
     ],
     "paths": [
       "texas-tech"
     ],
-    "extension": ".xml",
+    "extension": ".csv",
     "settings": {
       "agg_provider": "Texas Tech University Libraries",
       "agg_provider_country": "United States of America",
