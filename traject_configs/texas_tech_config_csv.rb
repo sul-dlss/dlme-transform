@@ -76,7 +76,7 @@ to_field 'agg_is_shown_at' do |_record, accumulator, context|
     context,
     'wr_dc_rights' => [column('rights'), strip],
     'wr_format' => [literal('pdf')],
-    'wr_id' => [column('identifier'), strip],
+    'wr_id' => [column('identifier'), strip]
   )
 end
 to_field 'agg_provider', provider, lang('en')
