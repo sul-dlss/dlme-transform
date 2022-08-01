@@ -1590,12 +1590,12 @@
   },
   {
     "trajects": [
-      "ssm_abidindino_xml_config.rb"
+      "ssm_abidindino_config_csv.rb"
     ],
     "paths": [
-      "sakip-sabanci/abidindino-xml"
+      "sakip-sabanci/testing/abidindino"
     ],
-    "extension": ".xml",
+    "extension": ".csv",
     "settings": {
       "agg_provider": "Sakip Sabanci Museum",
       "agg_provider_country": "Turkey",
@@ -1610,15 +1610,52 @@
   },
   {
     "trajects": [
-      "ssm_iiif_config.rb"
+      "ssm_emirgan_config_csv.rb"
     ],
     "paths": [
-      "sakip-sabanci/abidindino-iiif",
-      "sakip-sabanci/emirgan",
-      "sakip-sabanci/kitap-vehat",
-      "sakip-sabanci/resim-klksyn"
+      "sakip-sabanci/testing/emirgan"
     ],
-    "extension": ".json",
+    "extension": ".csv",
+    "settings": {
+      "agg_provider": "Sakip Sabanci Museum",
+      "agg_provider_country": "Turkey",
+      "agg_data_provider": "Sakip Sabanci Museum",
+      "agg_data_provider_country": "Turkey",
+      "agg_provider_ar": "متحف صاقب صابونجي",
+      "agg_provider_country_ar": "تركيا",
+      "agg_data_provider_ar": "متحف صاقب صابونجي",
+      "agg_data_provider_country_ar": "تركيا",
+      "inst_id": "ssm"
+    }
+  },
+  {
+    "trajects": [
+      "ssm_kitap_vehat_config_csv.rb"
+    ],
+    "paths": [
+      "sakip-sabanci/testing/kitap-vehat"
+    ],
+    "extension": ".csv",
+    "settings": {
+      "agg_provider": "Sakip Sabanci Museum",
+      "agg_provider_country": "Turkey",
+      "agg_data_provider": "Sakip Sabanci Museum",
+      "agg_data_provider_country": "Turkey",
+      "agg_provider_ar": "متحف صاقب صابونجي",
+      "agg_provider_country_ar": "تركيا",
+      "agg_data_provider_ar": "متحف صاقب صابونجي",
+      "agg_data_provider_country_ar": "تركيا",
+      "inst_id": "ssm"
+    }
+  },
+  {
+    "trajects": [
+      "ssm_resim_klksyn_config_csv.rb"
+    ],
+    "paths": [
+      "sakip-sabanci/testing/resim-klksyn"
+    ],
+    "extension": ".csv",
     "settings": {
       "agg_provider": "Sakip Sabanci Museum",
       "agg_provider_country": "Turkey",
