@@ -81,10 +81,6 @@ to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(context,
                                   'wr_id' => [column('url')])
 end
-to_field 'agg_preview' do |_record, accumulator, context|
-  accumulator << transform_values(context,
-                                  'wr_id' => [column('thumbnail'), gsub('collections/assets/1600', 'collections/assets/300')])
-end
 to_field 'agg_provider', provider, lang('en')
 to_field 'agg_provider', provider_ar, lang('ar-Arab')
 to_field 'agg_provider_country', provider_country, lang('en')
