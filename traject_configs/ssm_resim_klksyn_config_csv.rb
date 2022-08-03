@@ -36,36 +36,37 @@ end
 to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
 
-to_field 'agg_data_provider_collection', literal('ssm-emirgan'), translation_map('agg_collection_from_provider_id'), lang('en')
-to_field 'agg_data_provider_collection', literal('ssm-emirgan'), translation_map('agg_collection_from_provider_id'), translation_map('agg_collection_ar_from_en'), lang('ar-Arab')
-to_field 'agg_data_provider_collection_id', literal('ssm-emirgan')
+to_field 'agg_data_provider_collection', literal('ssm-kitapvehat'), translation_map('agg_collection_from_provider_id'), lang('en')
+to_field 'agg_data_provider_collection', literal('ssm-kitapvehat'), translation_map('agg_collection_from_provider_id'), translation_map('agg_collection_ar_from_en'), lang('ar-Arab')
+to_field 'agg_data_provider_collection_id', literal('ssm-kitapvehat')
 
 # File path
 to_field 'dlme_source_file', path_to_file
 
 # Cho Required
-to_field 'id', column('id'), gsub('https://cdm21044.contentdm.oclc.org/iiif/2/', ''), gsub('/manifest.json', ''), gsub(':', '-')
+to_field 'id', column('id'), gsub('https://cdm21044.contentdm.oclc.org/iiif/2/', ''), gsub('/manifest.json', ''), gsub(':', '-'), transform(&:downcase)
 to_field 'cho_title', column('başlık-title'), parse_csv, lang('tr-Latn')
 
 # Cho Other
 to_field 'cho_alternative', column('diğer-başlık-title-alternative'), parse_csv, lang('tr-Latn')
+to_field 'cho_creator', column('sanatçı-artist'), parse_csv, prepend('Artist: '), lang('tr-Latn')
 to_field 'cho_date', column('tarih-date'), parse_csv, lang('tr-Latn')
 to_field 'cho_date_range_norm', column('tarih-date'), parse_range
 to_field 'cho_date_range_hijri', column('tarih-date'), parse_range, hijri_range
 to_field 'cho_dc_rights', column('telif-hakkı-copyright'), parse_csv, lang('tr-Latn')
-to_field 'cho_description', column('açıklama-description'), parse_csv, lang('tr-Latn')
+to_field 'cho_description', column('fiziksel-görünüm-physical-appearance'), parse_csv, prepend('Physical Appearance: '), lang('tr-Latn')
 to_field 'cho_description', column('kayıtlar-inscriptions/marks'), parse_csv, prepend('Inscriptions: '), lang('tr-Latn')
-to_field 'cho_description', column('transkripsiyon-transcription'), parse_csv, prepend('Transcription: '), lang('tr-Latn')
+to_field 'cho_description', column('teknik-materials/techniques'), parse_csv, prepend('Materials/Techniques: '), lang('tr-Latn')
+to_field 'cho_description', column('konservasyon-conservation'), parse_csv, prepend('Conservation: '), lang('tr-Latn')
 to_field 'cho_edm_type', column('tür-type'), parse_csv, normalize_has_type, normalize_edm_type, lang('en')
 to_field 'cho_edm_type', column('tür-type'), parse_csv, normalize_has_type, normalize_edm_type, translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_extent', column('boyutlar-measurements'), parse_csv, prepend('Measurements: '), lang('en')
 to_field 'cho_has_type', column('tür-type'), parse_csv, normalize_has_type, lang('en')
 to_field 'cho_has_type', column('tür-type'), parse_csv, normalize_has_type, translation_map('has_type_ar_from_en'), lang('ar-Arab')
-to_field 'cho_identifier', column('envanter-numarası-identifier'), parse_csv
+to_field 'cho_identifier', column('envanter-numarası-accession-number'), parse_csv
 to_field 'cho_language', column('dil-language'), parse_csv, normalize_language, lang('en')
-to_field 'cho_provenance', column('müzeye-geliş-şekli-provenance'), parse_csv, lang('tr-Latn')
-to_field 'cho_provenance', column('müzeye-geliş-şekli-provenance'), parse_csv, prepend('Provenance date: '), lang('tr-Latn')
-to_field 'cho_relation', column('ayrıca-bakınız-see-also'), parse_csv, lang('en')
+to_field 'cho_related', column('ayrıca-bakınız-see-also'), parse_csv, lang('en')
+to_field 'cho_temporal', column('dönem-object/work-culture'), parse_csv, lang('tr-Latn')
 to_field 'cho_type', column('tür-type'), parse_csv, lang('tr-Latn')
 
 # Agg

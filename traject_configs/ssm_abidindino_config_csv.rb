@@ -29,7 +29,7 @@ extend TrajectPlus::Macros::Csv
 
 settings do
   provide 'writer_class_name', 'DlmeJsonResourceWriter'
-  provide 'reader_class_name', 'TrajectPlus::JsonReader'
+  provide 'reader_class_name', 'TrajectPlus::CsvReader'
 end
 
 # Set Version & Timestamp on each record
