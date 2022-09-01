@@ -19,6 +19,7 @@ RSpec.describe Macros::DLME do
     end
   end
   let(:instance) { klass.new }
+  let(:mock_context) { Traject::Indexer::Context.new }
 
   describe '#default' do
     it 'returns a Proc' do

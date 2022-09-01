@@ -196,7 +196,8 @@ module Macros
       from_settings('agg_provider_country_ar')
     end
 
-    # Returns if no value in field, else prepends prepend string
+    # Returns if no value in field, else prepends prepend string in appropriate language
+    # For all csv files, use intelligent_prepend
     def return_or_prepend(xpath, prepend_string)
       lambda do |record, accumulator|
         field_value = record.xpath(xpath, NS).map(&:text).first
