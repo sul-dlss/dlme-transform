@@ -86,18 +86,7 @@ to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
     'wr_dc_rights' => [literal('To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu.')],
-    'wr_format' => [column('iiif_format'), parse_csv, at_index(0)],
-    'wr_id' => [column('resource'), parse_csv],
-    'wr_is_referenced_by' => [column('id'), parse_csv, at_index(0)]
-  )
-end
-to_field 'agg_preview' do |_record, accumulator, context|
-  accumulator << transform_values(
-    context,
-    'wr_dc_rights' => [literal('To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu.')],
-    'wr_format' => [column('iiif_format'), parse_csv, at_index(0)],
-    'wr_id' => [column('resource'), parse_csv, gsub('/full/full/0/default.jpg', '/full/400,400/0/default.jpg')],
-    'wr_is_referenced_by' => [column('id'), parse_csv, at_index(0)]
+    'wr_id' => [column('identifier'), parse_csv, at_index(-1)]
   )
 end
 to_field 'agg_provider_country', provider_country, lang('en')
