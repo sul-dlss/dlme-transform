@@ -3,23 +3,13 @@
 require 'macros/prepend'
 
 RSpec.describe Macros::Prepend do
-  subject(:indexer) do
-    Traject::Indexer.new.tap do |indexer|
-      indexer.instance_eval do
-        extend Macros::Prepend
-        extend TrajectPlus::Macros
-      end
-    end
-  end
-
   let(:klass) do
     Class.new do
-      include TrajectPlus::Macros
       include Macros::Prepend
+      include TrajectPlus::Macros
     end
   end
   let(:instance) { klass.new }
-  let(:mock_context) { Traject::Indexer::Context.new }
 
   describe '#intelligent_prepend' do
     context 'with en language code' do

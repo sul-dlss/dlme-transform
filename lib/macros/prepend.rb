@@ -11,7 +11,7 @@ module Macros
       lambda do |_record, accumulator|
         return if accumulator.empty?
 
-        accumulator.filter_map { |n| n[:values].map { |s|  n[:language] == 'en' ? s.prepend(prepend_string_en) : s.prepend(prepend_string_translation) } }
+        accumulator.filter_map { |n| n[:values].map { |s| n[:language] == 'en' ? s.prepend(prepend_string_en) : s.prepend(prepend_string_translation) } }
       end
     end
   end
