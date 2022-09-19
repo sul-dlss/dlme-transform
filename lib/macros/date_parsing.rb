@@ -183,9 +183,9 @@ module Macros
       end
     end
 
-    GREGORIAN_IN_BRACKET_REGEX = /\[(?<gregorian>.*\d{3,4}.*)\]/.freeze
-    HIJRI_IE_GREGORIAN_REGEX = /\d.*i\.?e\.?(?<gregorian>.*\d{3,4}.*)/.freeze
-    UU_TRAILING_HYPHEN_REGEX = /\d+uu-$/.freeze
+    GREGORIAN_IN_BRACKET_REGEX = /\[(?<gregorian>.*\d{3,4}.*)\]/
+    HIJRI_IE_GREGORIAN_REGEX = /\d.*i\.?e\.?(?<gregorian>.*\d{3,4}.*)/
+    UU_TRAILING_HYPHEN_REGEX = /\d+uu-$/
 
     # Extracts dates from slice of MARC 008 field
     #  to_field "date_range", extract_marc("008[06-14]"), marc_date_range
