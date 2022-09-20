@@ -49,7 +49,7 @@ module Dlme
 
       # Glob on whichever is longer
       glob_path = path.length > data_dir.length ? path : data_dir
-      files = Dir.glob("#{abs_dir(glob_path)}/**/*#{config.fetch('extension', '.xml')}").sort
+      files = Dir.glob("#{abs_dir(glob_path)}/**/*#{config.fetch('extension', '.xml')}")
       return files.take(Settings.number_of_configs_to_test) if sample
 
       files
