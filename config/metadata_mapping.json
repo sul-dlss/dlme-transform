@@ -1593,7 +1593,7 @@
       "ssm_abidindino_config_csv.rb"
     ],
     "paths": [
-      "sakip-sabanci/testing/abidindino"
+      "sakip-sabanci/abidindino"
     ],
     "extension": ".csv",
     "settings": {
@@ -1613,7 +1613,7 @@
       "ssm_emirgan_config_csv.rb"
     ],
     "paths": [
-      "sakip-sabanci/testing/emirgan"
+      "sakip-sabanci/emirgan"
     ],
     "extension": ".csv",
     "settings": {
@@ -1633,7 +1633,7 @@
       "ssm_kitap_vehat_config_csv.rb"
     ],
     "paths": [
-      "sakip-sabanci/testing/kitap-vehat"
+      "sakip-sabanci/kitap-vehat"
     ],
     "extension": ".csv",
     "settings": {
@@ -1653,7 +1653,7 @@
       "ssm_resim_klksyn_config_csv.rb"
     ],
     "paths": [
-      "sakip-sabanci/testing/resim-klksyn"
+      "sakip-sabanci/resim-klksyn"
     ],
     "extension": ".csv",
     "settings": {
