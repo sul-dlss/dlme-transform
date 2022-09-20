@@ -24,6 +24,7 @@ module Macros
       lambda do |_record, accumulator|
         accumulator.map!(&:downcase)
         translation_map = %w[has_type_from_contributor
+                             has_type_from_collection
                              has_type_from_fr
                              has_type_from_lausanne
                              has_type_from_tr].map do |spec|
