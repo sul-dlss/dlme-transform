@@ -6,7 +6,7 @@
     "paths": [
       "aims"
     ],
-    "extension": ".xml",
+    "extension": ".csv",
     "settings": {
       "agg_provider": "The American Institute for Maghrib Studies",
       "agg_provider_country": [
