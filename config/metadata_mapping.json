@@ -77,7 +77,7 @@
   },
   {
     "trajects": [
-      "aub_aco_config.rb"
+      "aub_aco_config_csv.rb"
     ],
     "paths": [
       "aub/aco"
@@ -97,7 +97,7 @@
   },
   {
     "trajects": [
-      "aub_aladab_config.rb"
+      "aub_aladab_config_csv.rb"
     ],
     "paths": [
       "aub/aladab"
@@ -117,7 +117,7 @@
   },
   {
     "trajects": [
-      "aub_poha_config.rb"
+      "aub_poha_config_csv.rb"
     ],
     "paths": [
       "aub/poha"
@@ -137,7 +137,7 @@
   },
   {
     "trajects": [
-      "aub_postcards_config.rb"
+      "aub_postcards_config_csv.rb"
     ],
     "paths": [
       "aub/postcards"
@@ -157,7 +157,7 @@
   },
   {
     "trajects": [
-      "aub_posters_config.rb"
+      "aub_posters_config_csv.rb"
     ],
     "paths": [
       "aub/posters"
@@ -177,7 +177,7 @@
   },
   {
     "trajects": [
-      "aub_travelbooks_config.rb"
+      "aub_travelbooks_config_csv.rb"
     ],
     "paths": [
       "aub/travelbooks"
