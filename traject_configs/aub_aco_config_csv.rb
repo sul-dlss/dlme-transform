@@ -11,6 +11,7 @@ require 'macros/each_record'
 require 'macros/language_extraction'
 require 'macros/normalize_language'
 require 'macros/normalize_type'
+require 'macros/path_to_file'
 require 'macros/string_helper'
 require 'macros/timestamp'
 require 'macros/title_extraction'
@@ -26,6 +27,7 @@ extend Macros::EachRecord
 extend Macros::LanguageExtraction
 extend Macros::NormalizeLanguage
 extend Macros::NormalizeType
+extend Macros::PathToFile
 extend Macros::StringHelper
 extend Macros::Timestamp
 extend Macros::TitleExtraction
@@ -45,6 +47,9 @@ to_field 'agg_data_provider_collection', literal('aub-aco'), translation_map('ag
 # Set Version & Timestamp on each record
 to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
+
+# File path
+to_field 'dlme_source_file', path_to_file
 
 # Cho Required
 to_field 'id', column('id'), strip, parse_csv
