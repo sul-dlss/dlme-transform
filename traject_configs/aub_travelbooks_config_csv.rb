@@ -40,7 +40,7 @@ settings do
   provide 'reader_class_name', 'TrajectPlus::CsvReader'
 end
 
-to_field 'agg_data_provider_collection', literal('aub-travelbooks')
+to_field 'agg_data_provider_collection_id', literal('aub-travelbooks')
 to_field 'agg_data_provider_collection', literal('aub-travelbooks'), translation_map('agg_collection_from_provider_id'), lang('en')
 to_field 'agg_data_provider_collection', literal('aub-travelbooks'), translation_map('agg_collection_from_provider_id'), translation_map('agg_collection_ar_from_en'), lang('ar-Arab')
 
