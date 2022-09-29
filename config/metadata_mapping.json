@@ -1,7 +1,7 @@
 [
   {
     "trajects": [
-      "aims_config.rb"
+      "aims.rb"
     ],
     "paths": [
       "aims"
@@ -37,10 +37,10 @@
   },
   {
     "trajects": [
-      "american_numismatic_config_csv.rb"
+      "american_numismatic_society.rb"
     ],
     "paths": [
-      "american-numismatic-society"
+      "american_numismatic_society"
     ],
     "extension": ".csv",
     "settings": {
@@ -57,27 +57,7 @@
   },
   {
     "trajects": [
-      "antiquities_coalition_config.rb"
-    ],
-    "paths": [
-      "antiquities-coalition"
-    ],
-    "extension": ".json",
-    "settings": {
-      "agg_provider": "Antiquities Coalition",
-      "agg_provider_country": "United States of America",
-      "agg_data_provider": "Antiquities Coalition",
-      "agg_data_provider_country": "United States of America",
-      "agg_provider_ar": "التحالف للاثار",
-      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "agg_data_provider_ar": "التحالف للاثار",
-      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "inst_id": "antiquities"
-    }
-  },
-  {
-    "trajects": [
-      "aub_aco_config_csv.rb"
+      "aub_aco.rb"
     ],
     "paths": [
       "aub/aco"
@@ -97,7 +77,7 @@
   },
   {
     "trajects": [
-      "aub_aladab_config_csv.rb"
+      "aub_aladab.rb"
     ],
     "paths": [
       "aub/aladab"
@@ -117,7 +97,7 @@
   },
   {
     "trajects": [
-      "aub_poha_config_csv.rb"
+      "aub_poha.rb"
     ],
     "paths": [
       "aub/poha"
@@ -137,7 +117,7 @@
   },
   {
     "trajects": [
-      "aub_postcards_config_csv.rb"
+      "aub_postcards.rb"
     ],
     "paths": [
       "aub/postcards"
@@ -157,7 +137,7 @@
   },
   {
     "trajects": [
-      "aub_posters_config_csv.rb"
+      "aub_posters.rb"
     ],
     "paths": [
       "aub/posters"
@@ -177,7 +157,7 @@
   },
   {
     "trajects": [
-      "aub_travelbooks_config_csv.rb"
+      "aub_travelbooks.rb"
     ],
     "paths": [
       "aub/travelbooks"
@@ -197,7 +177,7 @@
   },
   {
     "trajects": [
-      "auc_iiif_config_csv.rb"
+      "auc_iiif.rb"
     ],
     "paths": [
       "auc/iiif"
@@ -217,7 +197,7 @@
   },
   {
     "trajects": [
-      "auc_oai_config_csv.rb"
+      "auc_oai.rb"
     ],
     "paths": [
       "auc/oai"
@@ -237,8 +217,8 @@
   },
   {
     "trajects": [
-      "bnf_common_config.rb",
-      "bnf_ideo_config.rb"
+      "bnf_common.rb",
+      "bnf_ideo.rb"
     ],
     "paths": [
       "bnf/ideo"
@@ -258,8 +238,8 @@
   },
   {
     "trajects": [
-      "bnf_common_config.rb",
-      "bnf_ifao_config.rb"
+      "bnf_common.rb",
+      "bnf_ifao.rb"
     ],
     "paths": [
       "bnf/ifao"
@@ -279,8 +259,8 @@
   },
   {
     "trajects": [
-      "bodleian_common_config.rb",
-      "bodleian_arabic_config.rb"
+      "bodleian_common.rb",
+      "bodleian_arabic.rb"
     ],
     "paths": [
       "bodleian/arabic"
@@ -300,7 +280,7 @@
   },
   {
     "trajects": [
-      "bodleian_hebrew_config.rb"
+      "bodleian_hebrew.rb"
     ],
     "paths": [
       "bodleian/hebrew"
@@ -320,11 +300,11 @@
   },
   {
     "trajects": [
-      "bodleian_common_config.rb",
-      "bodleian_egypt_config.rb"
+      "bodleian_common.rb",
+      "bodleian_egypt.rb"
     ],
     "paths": [
-      "bodleian/exploring-egypt"
+      "bodleian/exploring_egypt"
     ],
     "extension": ".csv",
     "settings": {
@@ -341,8 +321,8 @@
   },
   {
     "trajects": [
-      "bodleian_common_config.rb",
-      "bodleian_persian_config.rb"
+      "bodleian_common.rb",
+      "bodleian_persian.rb"
     ],
     "paths": [
       "bodleian/persian"
@@ -362,8 +342,8 @@
   },
   {
     "trajects": [
-      "bodleian_common_config.rb",
-      "bodleian_turkish_config.rb"
+      "bodleian_common.rb",
+      "bodleian_turkish.rb"
     ],
     "paths": [
       "bodleian/turkish"
@@ -383,11 +363,11 @@
   },
   {
     "trajects": [
-      "brooklyn_common_config.rb"
+      "brooklyn_common.rb"
     ],
     "paths": [
-      "brooklyn-museum/islamic-art",
-      "brooklyn-museum/near-east-egyptian"
+      "brooklyn-museum/islamic_art",
+      "brooklyn-museum/near_east_egyptian"
     ],
     "extension": ".json",
     "settings": {
@@ -404,10 +384,10 @@
   },
   {
     "trajects": [
-      "cambridge_genizah_config.rb"
+      "cambridge_genizah.rb"
     ],
     "paths": [
-      "cambridge/genizah-2"
+      "cambridge/genizah"
     ],
     "extension": ".xml",
     "settings": {
@@ -424,7 +404,7 @@
   },
   {
     "trajects": [
-      "cambridge_hebrew_config.rb"
+      "cambridge_hebrew.rb"
     ],
     "paths": [
       "cambridge/hebrew"
@@ -444,7 +424,7 @@
   },
   {
     "trajects": [
-      "cambridge_islamic_config.rb"
+      "cambridge_islamic.rb"
     ],
     "paths": [
       "cambridge/islamic"
@@ -464,7 +444,7 @@
   },
   {
     "trajects": [
-      "cluster_config.rb"
+      "cluster.rb"
     ],
     "paths": [
       "cluster"
@@ -484,7 +464,7 @@
   },
   {
     "trajects": [
-      "csic_config.rb"
+      "csic.rb"
     ],
     "paths": [
       "csic"
@@ -504,7 +484,7 @@
   },
   {
     "trajects": [
-      "dasi_config.rb"
+      "dasi.rb"
     ],
     "paths": [
       "dasi/epigraphs"
@@ -524,10 +504,10 @@
   },
   {
     "trajects": [
-      "harvard_ihp_config.rb"
+      "harvard_islamic_heritage_project.rb"
     ],
     "paths": [
-      "harvard/islamic-heritage-project"
+      "harvard/islamic_heritage_project"
     ],
     "extension": ".xml",
     "settings": {
@@ -544,10 +524,10 @@
   },
   {
     "trajects": [
-      "harvard_scw_config.rb"
+      "harvard_suart_cary_welch.rb"
     ],
     "paths": [
-      "harvard/scw"
+      "harvard/stuart_cary_welch"
     ],
     "extension": ".xml",
     "settings": {
@@ -564,7 +544,7 @@
   },
   {
     "trajects": [
-      "fgdc_config.rb"
+      "fgdc.rb"
     ],
     "paths": [
       "harvard/maps"
@@ -584,7 +564,7 @@
   },
   {
     "trajects": [
-      "ifpo_config.rb"
+      "ifpo.rb"
     ],
     "paths": [
       "ifpo/photographs"
@@ -604,7 +584,7 @@
   },
   {
     "trajects": [
-      "lausanne_ias_config.rb"
+      "lausanne_ias.rb"
     ],
     "paths": [
       "lausanne/ias"
@@ -624,10 +604,10 @@
   },
   {
     "trajects": [
-      "loc_abdul_hamid_ii_books_config.rb"
+      "loc_abdul_hamid_ii_books.rb"
     ],
     "paths": [
-      "loc/abdul-hamid-ii-books"
+      "loc/abdul_hamid_ii_books"
     ],
     "extension": ".json",
     "settings": {
@@ -644,10 +624,10 @@
   },
   {
     "trajects": [
-      "loc_abdul_hamid_ii_photos_config.rb"
+      "loc_abdul_hamid_ii_photos.rb"
     ],
     "paths": [
-      "loc/abdul-hamid-ii-photos"
+      "loc/abdul_hamid_ii_photos"
     ],
     "extension": ".json",
     "settings": {
@@ -664,10 +644,10 @@
   },
   {
     "trajects": [
-      "loc_el_taher_config.rb"
+      "loc_el_taher.rb"
     ],
     "paths": [
-      "loc/el-taher"
+      "loc/el_taher"
     ],
     "extension": ".json",
     "settings": {
@@ -684,10 +664,10 @@
   },
   {
     "trajects": [
-      "loc_greek_and_armenian_patriarchates_config.rb"
+      "loc_greek_and_armenian_patriarchates.rb"
     ],
     "paths": [
-      "loc/greek-and-armenian-patriarchates"
+      "loc/greek_and_armenian_patriarchates"
     ],
     "extension": ".json",
     "settings": {
@@ -704,7 +684,7 @@
   },
   {
     "trajects": [
-      "loc_persian_config.rb"
+      "loc_persian.rb"
     ],
     "paths": [
       "loc/persian"
@@ -724,10 +704,10 @@
   },
   {
     "trajects": [
-      "loc_st_catherines_monastery_config.rb"
+      "loc_st_catherines_monastery.rb"
     ],
     "paths": [
-      "loc/st-catherines-monastery"
+      "loc/st_catherines_monastery"
     ],
     "extension": ".json",
     "settings": {
@@ -744,7 +724,7 @@
   },
   {
     "trajects": [
-      "manchester_nashriyah_config_csv.rb"
+      "manchester_nashriyah.rb"
     ],
     "paths": [
       "manchester/nashriyah"
@@ -764,10 +744,10 @@
   },
   {
     "trajects": [
-      "met_config.rb"
+      "met.rb"
     ],
     "paths": [
-      "met/ancient-near-east-art"
+      "met/ancient_near_east_art"
     ],
     "extension": ".json",
     "settings": {
@@ -784,7 +764,7 @@
   },
   {
     "trajects": [
-      "michigan_config.rb"
+      "michigan.rb"
     ],
     "paths": [
       "michigan"
@@ -804,10 +784,10 @@
   },
   {
     "trajects": [
-      "pppa_config.rb"
+      "palestine_posters_project_archive.rb"
     ],
     "paths": [
-      "palestine-posters"
+      "palestine_posters_project_archive"
     ],
     "extension": ".csv",
     "settings": {
@@ -824,10 +804,10 @@
   },
   {
     "trajects": [
-      "openn_genizah_0002_config.rb"
+      "openn_genizah_0002.rb"
     ],
     "paths": [
-      "penn/openn/genizah-0002"
+      "penn/openn/genizah_0002"
     ],
     "extension": ".xml",
     "settings": {
@@ -844,10 +824,10 @@
   },
   {
     "trajects": [
-      "openn_mmw_0001_config.rb"
+      "openn_mmw_0001.rb"
     ],
     "paths": [
-      "penn/openn/mmw-0001"
+      "penn/openn/mmw_0001"
     ],
     "extension": ".xml",
     "settings": {
@@ -864,10 +844,10 @@
   },
   {
     "trajects": [
-      "openn_mmw_0002_config.rb"
+      "openn_mmw_0002.rb"
     ],
     "paths": [
-      "penn/openn/mmw-0002"
+      "penn/openn/mmw_0002"
     ],
     "extension": ".xml",
     "settings": {
@@ -884,10 +864,10 @@
   },
   {
     "trajects": [
-      "openn_mmw_0003_config.rb"
+      "openn_mmw_0003.rb"
     ],
     "paths": [
-      "penn/openn/mmw-0003"
+      "penn/openn/mmw_0003"
     ],
     "extension": ".xml",
     "settings": {
@@ -904,10 +884,10 @@
   },
   {
     "trajects": [
-      "openn_mmw_0006_config.rb"
+      "openn_mmw_0006.rb"
     ],
     "paths": [
-      "penn/openn/mmw-0006"
+      "penn/openn/mmw_0006"
     ],
     "extension": ".xml",
     "settings": {
@@ -924,10 +904,10 @@
   },
   {
     "trajects": [
-      "openn_mmw_0012_config.rb"
+      "openn_mmw_0012.rb"
     ],
     "paths": [
-      "penn/openn/mmw-0012"
+      "penn/openn/mmw_0012"
     ],
     "extension": ".xml",
     "settings": {
@@ -944,10 +924,10 @@
   },
   {
     "trajects": [
-      "openn_mmw_0016_config.rb"
+      "openn_mmw_0016.rb"
     ],
     "paths": [
-      "penn/openn/mmw-0016"
+      "penn/openn/mmw_0016"
     ],
     "extension": ".xml",
     "settings": {
@@ -964,10 +944,10 @@
   },
   {
     "trajects": [
-      "openn_mmw_0023_config.rb"
+      "openn_mmw_0023.rb"
     ],
     "paths": [
-      "penn/openn/mmw-0023"
+      "penn/openn/mmw_0023"
     ],
     "extension": ".xml",
     "settings": {
@@ -984,10 +964,10 @@
   },
   {
     "trajects": [
-      "openn_mmw_0031_config.rb"
+      "openn_mmw_0031.rb"
     ],
     "paths": [
-      "penn/openn/mmw-0031"
+      "penn/openn/mmw_0031"
     ],
     "extension": ".xml",
     "settings": {
@@ -1004,10 +984,10 @@
   },
   {
     "trajects": [
-      "openn_mmw_0032_config.rb"
+      "openn_mmw_0032.rb"
     ],
     "paths": [
-      "penn/openn/mmw-0032"
+      "penn/openn/mmw_0032"
     ],
     "extension": ".xml",
     "settings": {
@@ -1024,10 +1004,10 @@
   },
   {
     "trajects": [
-      "openn_mmw_0033_config.rb"
+      "openn_mmw_0033.rb"
     ],
     "paths": [
-      "penn/openn/mmw-0033"
+      "penn/openn/mmw_0033"
     ],
     "extension": ".xml",
     "settings": {
@@ -1044,10 +1024,10 @@
   },
   {
     "trajects": [
-      "openn_mmw_0043_config.rb"
+      "openn_mmw_0043.rb"
     ],
     "paths": [
-      "penn/openn/mmw-0043"
+      "penn/openn/mmw_0043"
     ],
     "extension": ".xml",
     "settings": {
@@ -1064,10 +1044,10 @@
   },
   {
     "trajects": [
-      "penn_egyptian_config.rb"
+      "penn_egyptian.rb"
     ],
     "paths": [
-      "penn/egyptian-museum"
+      "penn/egyptian_museum"
     ],
     "extension": ".csv",
     "settings": {
@@ -1084,10 +1064,10 @@
   },
   {
     "trajects": [
-      "penn_near_east_config.rb"
+      "penn_near_east.rb"
     ],
     "paths": [
-      "penn/near-eastern"
+      "penn/near_eastern_museum"
     ],
     "extension": ".csv",
     "settings": {
@@ -1104,10 +1084,10 @@
   },
   {
     "trajects": [
-      "princeton_movie_config.rb"
+      "princeton_movie_posters.rb"
     ],
     "paths": [
-      "princeton/movie-posters"
+      "princeton/movie_posters"
     ],
     "extension": ".json",
     "settings": {
@@ -1124,12 +1104,12 @@
   },
   {
     "trajects": [
-      "princeton_mss_config.rb"
+      "princeton_mss.rb"
     ],
     "paths": [
-      "princeton/princeton-mss",
-      "princeton/princeton-ymdi",
-      "princeton/babi-bahai"
+      "princeton/princeton_mss",
+      "princeton/princeton_ymdi",
+      "princeton/babi_bahai"
     ],
     "extension": ".json",
     "settings": {
@@ -1146,10 +1126,10 @@
   },
   {
     "trajects": [
-      "qnl_config.rb"
+      "qnl.rb"
     ],
     "paths": [
-      "qnl/british-library-combined"
+      "qnl/british_library_combined"
     ],
     "extension": ".xml",
     "settings": {
@@ -1166,10 +1146,10 @@
   },
   {
     "trajects": [
-      "ssm_abidindino_config_csv.rb"
+      "ssm_abidindino.rb"
     ],
     "paths": [
-      "sakip-sabanci/abidindino"
+      "sakip_sabanci/abidin_dino"
     ],
     "extension": ".csv",
     "settings": {
@@ -1186,10 +1166,10 @@
   },
   {
     "trajects": [
-      "ssm_emirgan_config_csv.rb"
+      "ssm_emirgan.rb"
     ],
     "paths": [
-      "sakip-sabanci/emirgan"
+      "sakip_sabanci/emirgan"
     ],
     "extension": ".csv",
     "settings": {
@@ -1206,10 +1186,10 @@
   },
   {
     "trajects": [
-      "ssm_kitap_vehat_config_csv.rb"
+      "ssm_kitap_vehat.rb"
     ],
     "paths": [
-      "sakip-sabanci/kitap-vehat"
+      "sakip_sabanci/kitap_vehat"
     ],
     "extension": ".csv",
     "settings": {
@@ -1226,10 +1206,10 @@
   },
   {
     "trajects": [
-      "ssm_resim_klksyn_config_csv.rb"
+      "ssm_resim_klksyn.rb"
     ],
     "paths": [
-      "sakip-sabanci/resim-klksyn"
+      "sakip_sabanci/resim_klksyn"
     ],
     "extension": ".csv",
     "settings": {
@@ -1246,10 +1226,10 @@
   },
   {
     "trajects": [
-      "shahre_farang_persian_config.rb"
+      "shahre_farang_persian.rb"
     ],
     "paths": [
-      "shahre-farang/persian"
+      "shahre_farang/persian"
     ],
     "extension": ".json",
     "settings": {
@@ -1266,10 +1246,10 @@
   },
   {
     "trajects": [
-      "shahre_farang_english_config.rb"
+      "shahre_farang_english.rb"
     ],
     "paths": [
-      "shahre-farang/english"
+      "shahre_farang/english"
     ],
     "extension": ".json",
     "settings": {
@@ -1286,10 +1266,10 @@
   },
   {
     "trajects": [
-      "shahre_farang_arabic_config.rb"
+      "shahre_farang_arabic.rb"
     ],
     "paths": [
-      "shahre-farang/arabic"
+      "shahre_farang/arabic"
     ],
     "extension": ".json",
     "settings": {
@@ -1306,10 +1286,10 @@
   },
   {
     "trajects": [
-      "stanford_config.rb"
+      "stanford.rb"
     ],
     "paths": [
-      "stanford/rumsey-maps"
+      "stanford/rumsey_maps"
     ],
     "extension": ".json",
     "settings": {
@@ -1326,10 +1306,10 @@
   },
   {
     "trajects": [
-      "texas_tech_config_csv.rb"
+      "texas_tech.rb"
     ],
     "paths": [
-      "texas-tech"
+      "texas_tech"
     ],
     "extension": ".csv",
     "settings": {
@@ -1346,30 +1326,10 @@
   },
   {
     "trajects": [
-      "vatican_config.rb"
+      "walters.rb"
     ],
     "paths": [
-      "vatican"
-    ],
-    "extension": ".xml",
-    "settings": {
-      "agg_provider": "The Vatican Library",
-      "agg_provider_country": "Vatican City",
-      "agg_data_provider": "The Vatican Library",
-      "agg_data_provider_country": "Vatican City",
-      "agg_provider_ar": "مكتبة الفاتيكان",
-      "agg_provider_country_ar": "مدينة الفاتيكان",
-      "agg_data_provider_ar": "مكتبة الفاتيكان",
-      "agg_data_provider_country_ar": "مدينة الفاتيكان",
-      "inst_id": "vatican"
-    }
-  },
-  {
-    "trajects": [
-      "walters_config.rb"
-    ],
-    "paths": [
-      "walters-art-museum"
+      "walters"
     ],
     "extension": ".json",
     "settings": {
@@ -1386,7 +1346,7 @@
   },
   {
     "trajects": [
-      "yale_babylonian_config.rb"
+      "yale_babylonian.rb"
     ],
     "paths": [
       "yale/babylonian"
