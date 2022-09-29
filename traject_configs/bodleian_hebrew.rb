@@ -4,6 +4,7 @@ require 'traject_plus'
 require 'dlme_json_resource_writer'
 require 'dlme_debug_writer'
 require 'macros/collection'
+require 'macros/csv'
 require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
@@ -16,6 +17,7 @@ require 'macros/title_extraction'
 require 'macros/version'
 
 extend Macros::Collection
+extend Macros::Csv
 extend Macros::DateParsing
 extend Macros::DLME
 extend Macros::EachRecord
