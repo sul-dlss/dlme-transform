@@ -8,6 +8,7 @@ module Macros
                     lang_from_errors
                     lang_from_iso_639-1
                     lang_from_iso_639-2
+                    lang_from_french
                     lang_from_turkish].freeze
 
     # Maps extracted language values to a series of tranlation maps

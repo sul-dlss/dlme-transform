@@ -45,6 +45,10 @@ to_field 'transform_timestamp', timestamp
 # File path
 to_field 'dlme_source_file', path_to_file
 
+to_field 'agg_data_provider_collection', path_to_file, split('/'), at_index(2), gsub('_', '-'), prepend('bodleian-'), translation_map('agg_collection_from_provider_id'), lang('en')
+to_field 'agg_data_provider_collection', path_to_file, split('/'), at_index(2), gsub('_', '-'), prepend('bodleian-'), translation_map('agg_collection_from_provider_id'), translation_map('agg_collection_ar_from_en'), lang('ar-Arab')
+to_field 'agg_data_provider_collection_id', path_to_file, split('/'), at_index(2), gsub('_', '-'), prepend('bodleian-')
+
 # Cho Required
 to_field 'id', column('id'),
          strip,
@@ -70,6 +74,7 @@ to_field 'cho_date_range_hijri', column('date-statement'), strip, gsub('/', '-')
 to_field 'cho_dc_rights', literal('Photo: © Bodleian Libraries, University of Oxford, Terms of use: http://digital.bodleian.ox.ac.uk/terms.html'), lang('en')
 to_field 'cho_description', column('additional-information-sources'), strip, prepend('Additional sources: '), lang('en')
 to_field 'cho_description', column('binding'), strip, prepend('Binding: '), lang('en')
+to_field 'cho_description', column('catalogue-description'), strip, prepend('Additional sources: '), lang('en')
 to_field 'cho_description', column('contents'), strip, prepend('Contents: '), lang('en')
 to_field 'cho_description', column('contents-note'), strip, prepend('Contents note: '), lang('en')
 to_field 'cho_description', column('decoration'), strip, prepend('Decoration: '), lang('en')
@@ -83,10 +88,13 @@ to_field 'cho_edm_type', literal('Text'), lang('en')
 to_field 'cho_edm_type', literal('Text'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_extent', column('extent'), strip, lang('en')
 to_field 'cho_identifier', column('catalogue-identifier'), strip
+to_field 'cho_identifier', column('shelfmark'), strip
 to_field 'cho_is_part_of', column('collection'), strip, lang('en')
 to_field 'cho_language', column('language'), parse_csv, normalize_language, lang('en')
 to_field 'cho_language', column('language'), parse_csv, normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
 to_field 'cho_medium', column('materials'), strip, lang('en')
+to_field 'cho_provenance', column('former-owner'), strip, prepend('Former owner: '), lang('en')
+to_field 'cho_provenance', column('provenance'), strip, lang('en')
 to_field 'cho_spatial', column('place-of-origin'), strip, lang('en')
 to_field 'cho_subject', column('subject'), strip, lang('en')
 
