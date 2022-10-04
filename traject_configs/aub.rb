@@ -53,28 +53,30 @@ to_field 'dlme_source_file', path_to_file
 
 # Cho Required
 to_field 'id', column('id'), strip
-to_field 'cho_title', json_title_or('title', 'description'), arabic_script_lang_or_default('ar-Arab', 'und-Latn'), default('Untitled', 'بدون عنوان')
+to_field 'cho_title', column('title'), arabic_script_lang_or_default('ar-Arab', 'und-Latn'), default('Untitled', 'بدون عنوان')
 
 # Cho Other
-to_field 'cho_creator', column('creator'), strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
-to_field 'cho_date', column('date'), strip, lang('en')
-to_field 'cho_date_range_hijri', column('date'), strip, parse_range, hijri_range
-to_field 'cho_date_range_norm', column('date'), strip, parse_range
-to_field 'cho_dc_rights', column('rights'), lang('en')
+to_field 'cho_contributro', column('contributor'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
+to_field 'cho_creator', column('creator'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
+to_field 'cho_date', column('date'), parse_csv, strip, lang('en')
+to_field 'cho_date_range_hijri', column('date'), parse_csv, strip, parse_range, hijri_range
+to_field 'cho_date_range_norm', column('date'), parse_csv, strip, parse_range
+to_field 'cho_dc_rights', column('rights'), parse_csv, strip, lang('en')
 to_field 'cho_description', column('description'), strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
-to_field 'cho_edm_type', literal('Image'), lang('en')
-to_field 'cho_edm_type', literal('Image'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
-to_field 'cho_has_type', literal('Posters'), lang('en')
-to_field 'cho_has_type', literal('Posters'), translation_map('has_type_ar_from_en'), lang('ar-Arab')
-to_field 'cho_identifier', column('identifier'), strip
+to_field 'cho_edm_type', path_to_file, split('/'), at_index(2), gsub('_', '-'), prepend('aub-'), translation_map('has_type_from_collection_id'), translation_map('edm_type_from_has_type'), lang('en')
+to_field 'cho_edm_type', path_to_file, split('/'), at_index(2), gsub('_', '-'), prepend('aub-'), translation_map('has_type_from_collection_id'), translation_map('edm_type_from_has_type'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
+to_field 'cho_has_type', path_to_file, split('/'), at_index(2), gsub('_', '-'), prepend('aub-'), translation_map('has_type_from_collection_id'), lang('en')
+to_field 'cho_has_type', path_to_file, split('/'), at_index(2), gsub('_', '-'), prepend('aub-'), translation_map('has_type_from_collection_id'), translation_map('has_type_ar_from_en'), lang('ar-Arab')
+to_field 'cho_identifier', column('identifier'), parse_csv, strip
 to_field 'cho_language', column('language'), split(';'),
-         split(','), strip, normalize_language, lang('en')
+         split(','), parse_csv, strip, normalize_language, lang('en')
 to_field 'cho_language', column('language'), split(';'),
-         split(','), strip, normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
-to_field 'cho_publisher', column('publisher'), strip, lang('en')
-to_field 'cho_spatial', column('coverage'), lang('en')
-to_field 'cho_subject', column('subject'), strip, lang('en')
-to_field 'cho_type', column('type'), arabic_script_lang_or_default('ar-Arab', 'und-Latn')
+         split(','), parse_csv, strip, normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
+to_field 'cho_publisher', column('publisher'), parse_csv, strip, lang('en')
+to_field 'cho_source', column('source'), parse_csv, strip, lang('en')
+to_field 'cho_spatial', column('coverage'), parse_csv, strip, lang('en')
+to_field 'cho_subject', column('subject'), parse_csv, strip,  lang('en')
+to_field 'cho_type', column('type'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
@@ -94,7 +96,7 @@ to_field 'agg_preview' do |_record, accumulator, context|
     context,
     'wr_dc_rights' => [column('rights')],
     'wr_edm_rights' => [literal('CC BY-ND: https://creativecommons.org/licenses/by-nd/4.0/')],
-    'wr_id' => [column('id'), prepend('https://libraries.aub.edu.lb/xtf/data/posters/'), append('/thumb.jpg')]
+    'wr_id' => [column('description'), parse_csv, at_index(0), strip]
   )
 end
 to_field 'agg_provider', provider, lang('en')

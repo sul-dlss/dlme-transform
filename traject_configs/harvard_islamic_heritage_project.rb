@@ -3,92 +3,77 @@
 require 'dlme_json_resource_writer'
 require 'dlme_debug_writer'
 require 'macros/collection'
+require 'macros/csv'
 require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
-require 'macros/field_extraction'
-require 'macros/harvard_ihp'
 require 'macros/language_extraction'
-require 'macros/mods'
 require 'macros/normalize_language'
 require 'macros/normalize_type'
 require 'macros/path_to_file'
+require 'macros/prepend'
 require 'macros/string_helper'
 require 'macros/timestamp'
+require 'macros/title_extraction'
 require 'macros/version'
 require 'traject_plus'
 
 extend Macros::Collection
-extend Macros::DateParsing
+extend Macros::Csv
 extend Macros::DLME
+extend Macros::DateParsing
 extend Macros::EachRecord
-extend Macros::FieldExtraction
-extend Macros::HarvardIHP
 extend Macros::LanguageExtraction
-extend Macros::Mods
 extend Macros::NormalizeLanguage
 extend Macros::NormalizeType
 extend Macros::PathToFile
+extend Macros::Prepend
 extend Macros::StringHelper
 extend Macros::Timestamp
+extend Macros::TitleExtraction
 extend Macros::Version
 extend TrajectPlus::Macros
-extend TrajectPlus::Macros::Mods
-extend TrajectPlus::Macros::Xml
+extend TrajectPlus::Macros::Csv
 
 settings do
   provide 'writer_class_name', 'DlmeJsonResourceWriter'
-  provide 'reader_class_name', 'TrajectPlus::XmlReader'
+  provide 'reader_class_name', 'TrajectPlus::CsvReader'
 end
 
 # Set Version & Timestamp on each record
 to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
 
-to_field 'agg_data_provider_collection', literal('harvard-ihp'), translation_map('agg_collection_from_provider_id'), lang('en')
-to_field 'agg_data_provider_collection', literal('harvard-ihp'), translation_map('agg_collection_from_provider_id'), translation_map('agg_collection_ar_from_en'), lang('ar-Arab')
-to_field 'agg_data_provider_collection_id', literal('harvard-ihp')
+to_field 'agg_data_provider_collection', path_to_file, split('/'), at_index(2), gsub('_', '-'), prepend('harvard-'), translation_map('agg_collection_from_provider_id'), lang('en')
+to_field 'agg_data_provider_collection', path_to_file, split('/'), at_index(2), gsub('_', '-'), prepend('harvard-'), translation_map('agg_collection_from_provider_id'), translation_map('agg_collection_ar_from_en'), lang('ar-Arab')
+to_field 'agg_data_provider_collection_id', path_to_file, split('/'), at_index(2), gsub('_', '-'), prepend('harvard-')
 
 # File path
 to_field 'dlme_source_file', path_to_file
 
 # Cho Required
-to_field 'id', generate_mods_id
-to_field 'cho_title', ihp_uniform_title, strip, arabic_script_lang_or_default('und-Arab', 'und-Latn')
-to_field 'cho_title', extract_mods('//*/mods:titleInfo[@type="uniform"][2]/mods:title'), strip, arabic_script_lang_or_default('und-Arab', 'und-Latn')
+to_field 'id', column('id'), strip
+to_field 'cho_title', column('title'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'en')
 
 # Cho Other
-to_field 'cho_alternative', extract_mods('//*/mods:titleInfo[@type="alternative"]/mods:title'), strip, arabic_script_lang_or_default('und-Arab', 'und-Latn')
-to_field 'cho_contributor', extract_name('//*/mods:name[1][mods:role/mods:roleTerm/', role: 'copyist.'), gsub('copyist.', 'copyist'), strip, arabic_script_lang_or_default('und-Arab', 'und-Latn')
-to_field 'cho_contributor', extract_name('//*/mods:name[1][mods:role/mods:roleTerm/', role: 'scribe.'), gsub('scribe.', 'scribe'), strip, arabic_script_lang_or_default('und-Arab', 'und-Latn')
-to_field 'cho_creator', extract_name('//*/mods:name[1][mods:role/mods:roleTerm/', role: 'cre'), gsub('cre', 'creator'), strip, arabic_script_lang_or_default('und-Arab', 'und-Latn')
-to_field 'cho_creator', extract_name('//*/mods:name[1][mods:role/mods:roleTerm/', role: 'creator'), strip, arabic_script_lang_or_default('und-Arab', 'und-Latn')
-to_field 'cho_date', extract_mods('//*/mods:originInfo/mods:dateCreated'), prepend('Date Created: '), strip, lang('en')
-to_field 'cho_date', extract_mods('//*/mods:originInfo/mods:dateValid'), prepend('Date Valid: '), strip, lang('en')
-to_field 'cho_date', extract_mods('//*/mods:originInfo/mods:dateIssued[1]'), prepend('Date Issued: '), strip, lang('en')
-to_field 'cho_date_range_norm', ihp_date_range
-to_field 'cho_date_range_hijri', ihp_date_range, hijri_range
-to_field 'cho_description', extract_mods('//*/mods:abstract'), lang('und-Latn')
-to_field 'cho_description', extract_mods('//*/mods:note'), lang('und-Latn')
-to_field 'cho_description', extract_mods('//*/mods:tableOfContents'), prepend('Table of Contents: '), lang('und-Latn')
-to_field 'cho_edm_type', extract_mods('//*/mods:typeOfResource'), ihp_has_type, normalize_has_type, normalize_edm_type, lang('en')
-to_field 'cho_edm_type', extract_mods('//*/mods:typeOfResource'), ihp_has_type, normalize_has_type, normalize_edm_type, translation_map('edm_type_ar_from_en'), lang('ar-Arab')
-to_field 'cho_extent', extract_mods('//*/mods:physicalDescription/mods:extent'), lang('ar-Arab')
-to_field 'cho_has_type', extract_mods('//*/mods:typeOfResource[1]'), ihp_has_type, normalize_has_type, lang('en')
-to_field 'cho_has_type', extract_mods('//*/mods:typeOfResource[1]'), ihp_has_type, normalize_has_type, translation_map('has_type_ar_from_en'), lang('ar-Arab')
-to_field 'cho_is_part_of', extract_mods('//*/mods:relatedItem[@type="series"]/mods:titleInfo'), gsub('UniversityIslamic', 'University Islamic'), lang('en')
-to_field 'cho_identifier', extract_mods('//*/mods:recordInfo/mods:recordIdentifier')
-to_field 'cho_language', extract_mods('//*/mods:language/mods:languageTerm[1]'), normalize_language, lang('en')
-to_field 'cho_language', extract_mods('//*/mods:language/mods:languageTerm[1]'), normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
-to_field 'cho_provenance', extract_name('//*/mods:name[1][mods:role/mods:roleTerm/', role: 'former owner.'), gsub('former owner.', 'former owner'), arabic_script_lang_or_default('und-Arab', 'und-Latn')
-to_field 'cho_provenance', extract_name('//*/mods:name[2][mods:role/mods:roleTerm/', role: 'former owner.'), gsub('former owner.', 'former owner'), gsub('former owner', 'مالك سابق'), arabic_script_lang_or_default('und-Arab', 'und-Latn')
-to_field 'cho_publisher', extract_mods('//*/mods:originInfo/mods:publisher'), lang('en')
-to_field 'cho_spatial', xpath_multi_lingual_commas_with_prepend('//*/mods:originInfo/mods:place/mods:placeTerm', 'مكان الإنتاج: ', 'Place of Production: '), gsub(' :', ''), arabic_script_lang_or_default('und-Arab', 'en')
-to_field 'cho_spatial', extract_mods('//*/mods:subject/mods:geographic'), lang('en')
-to_field 'cho_subject', extract_mods('//*/mods:subject/mods:topic'), lang('en')
-to_field 'cho_temporal', extract_mods('//*/mods:subject/mods:temporal'), lang('en')
-to_field 'cho_type', extract_mods('//*/mods:typeOfResource'), lang('en')
-to_field 'cho_type', extract_mods('//*/mods:genre'), lang('en')
+to_field 'cho_contributor', column('contributor'), parse_csv, strip, prepend('Scribes: '), lang('en')
+to_field 'cho_creator', column('creator'), parse_csv, strip, lang('en')
+to_field 'cho_date', column('date'), parse_csv, strip, lang('en')
+to_field 'cho_date_range_norm', column('date'), parse_csv, strip, parse_range
+to_field 'cho_date_range_hijri', column('date'), parse_csv, strip, parse_range, hijri_range
+to_field 'cho_description', column('description'), parse_csv, split('/'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_edm_type', literal('Text'), lang('en')
+to_field 'cho_edm_type', literal('Text'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
+to_field 'cho_has_type', literal('Books'), lang('en')
+to_field 'cho_has_type', literal('Books'), translation_map('has_type_ar_from_en'), lang('ar-Arab')
+to_field 'cho_format', column('format'), parse_csv, strip, lang('fr')
+to_field 'cho_identifier', column('identifier'), parse_csv, strip
+to_field 'cho_language', column('language'), parse_csv, split(' '), at_index(0), normalize_language, lang('en')
+to_field 'cho_language', column('language'), parse_csv, split(' '), at_index(0), normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
+to_field 'cho_publisher', column('publisher'), parse_csv, strip, lang('en')
+to_field 'cho_relation', column('relation'), parse_csv, strip, lang('en')
+to_field 'cho_subject', column('subject'), parse_csv, strip, lang('en')
+to_field 'cho_type', column('type'), parse_csv, strip, lang('en')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
@@ -99,15 +84,15 @@ to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_id' => [extract_mods('//*/mods:location/mods:url[@access="raw object"]')],
-    'wr_is_referenced_by' => [extract_ihp_manifest]
+    'wr_id' => [column('identifier'), parse_csv, at_index(3)],
+    'wr_is_referenced_by' => [column('identifier'), parse_csv, at_index(2), split('/iiif/'), at_index(-1), split('/full/'), at_index(0), prepend('https://iiif.lib.harvard.edu/manifests/ids:')]
   )
 end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_id' => [extract_mods('//*/mods:location/mods:url[@access="preview"]'), gsub('full/,150/0', 'full/400,400/0'), strip],
-    'wr_is_referenced_by' => [extract_ihp_manifest]
+    'wr_id' => [column('identifier'), parse_csv, at_index(2), gsub('full/,150/0', 'full/,400/0'), strip],
+    'wr_is_referenced_by' => [column('identifier'), parse_csv, at_index(2), split('/iiif/'), at_index(-1), split('/full/'), at_index(0), prepend('https://iiif.lib.harvard.edu/manifests/ids:')]
   )
 end
 to_field 'agg_provider', provider, lang('en')
