@@ -97,7 +97,7 @@
   },
   {
     "trajects": [
-      "auc_iiif.rb"
+      "auc.rb"
     ],
     "paths": [
       "auc"
