@@ -48,7 +48,6 @@ to_field 'id', column('identifier'), split('alt='), first_only, parse_csv, strip
 to_field 'cho_title', column('title'), parse_csv, strip, arabic_script_lang_or_default('und-Arab', 'en')
 to_field 'cho_title', column('uniform-title'), parse_csv, strip, arabic_script_lang_or_default('und-Arab', 'en')
 
-
 # Cho Other
 to_field 'cho_alternative', column('alternative'), parse_csv, strip, arabic_script_lang_or_default('und-Arab', 'en')
 to_field 'cho_creator', column('author'), parse_csv, strip, arabic_script_lang_or_default('und-Arab', 'en')

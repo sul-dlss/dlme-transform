@@ -80,8 +80,8 @@ to_field 'cho_identifier', column('identifier'), parse_csv, strip
 to_field 'cho_identifier', column('recordInfo_recordIdentifier'), parse_csv, strip
 to_field 'cho_identifier', column('location_shelfLocator'), parse_csv, strip
 to_field 'cho_is_part_of', column('location_physicalLocation'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
-to_field 'cho_language', column('language_languageTerm'), parse_csv, at_index(0),normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
-to_field 'cho_language', column('language_languageTerm'), parse_csv, at_index(0),normalize_language, lang('en')
+to_field 'cho_language', column('language_languageTerm'), parse_csv, at_index(0), normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
+to_field 'cho_language', column('language_languageTerm'), parse_csv, at_index(0), normalize_language, lang('en')
 to_field 'cho_spatial', column('subject_geographic'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
 to_field 'cho_subject', column('subject_topic'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
 to_field 'cho_type', column('genre'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
@@ -103,19 +103,21 @@ to_field 'agg_is_shown_at' do |_record, accumulator, context|
   )
 end
 to_field 'agg_is_shown_by' do |_record, accumulator, context|
-    accumulator << transform_values(context,
-                                    'wr_edm_rights' => [column('accessCondition'), parse_csv, strip, translation_map('edm_rights_from_contributor'), translation_map('not_found')],
-                                    'wr_format' => literal('image/jpeg'),
-                                    'wr_id' => [column('location_url'), parse_csv, at_index(-1)],
-                                    'wr_is_referenced_by' => [column('id'), parse_csv, at_index(0), gsub('_ar', ''), gsub('_en', ''), prepend('https://www.qdl.qa/en/iiif/'), append('/manifest')]
+  accumulator << transform_values(
+    context,
+    'wr_edm_rights' => [column('accessCondition'), parse_csv, strip, translation_map('edm_rights_from_contributor'), translation_map('not_found')],
+    'wr_format' => literal('image/jpeg'),
+    'wr_id' => [column('location_url'), parse_csv, at_index(-1)],
+    'wr_is_referenced_by' => [column('id'), parse_csv, at_index(0), gsub('_ar', ''), gsub('_en', ''), prepend('https://www.qdl.qa/en/iiif/'), append('/manifest')]
   )
 end
 to_field 'agg_preview' do |_record, accumulator, context|
-  accumulator << transform_values(context,
-                                    'wr_edm_rights' => [column('accessCondition'), parse_csv, strip, translation_map('edm_rights_from_contributor')],
-                                    'wr_format' => [literal('image/jpeg')],
-                                    'wr_id' => [column('location_url'), parse_csv, at_index(-1)],
-                                    'wr_is_referenced_by' => [column('id'), parse_csv, at_index(0), gsub('_ar', ''), gsub('_en', ''), prepend('https://www.qdl.qa/en/iiif/'), append('/manifest')]
+  accumulator << transform_values(
+    context,
+    'wr_edm_rights' => [column('accessCondition'), parse_csv, strip, translation_map('edm_rights_from_contributor')],
+    'wr_format' => [literal('image/jpeg')],
+    'wr_id' => [column('location_url'), parse_csv, at_index(-1)],
+    'wr_is_referenced_by' => [column('id'), parse_csv, at_index(0), gsub('_ar', ''), gsub('_en', ''), prepend('https://www.qdl.qa/en/iiif/'), append('/manifest')]
   )
 end
 to_field 'agg_provider', provider, lang('en')
