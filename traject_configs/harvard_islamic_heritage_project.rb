@@ -66,7 +66,7 @@ to_field 'cho_edm_type', literal('Text'), lang('en')
 to_field 'cho_edm_type', literal('Text'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_has_type', literal('Books'), lang('en')
 to_field 'cho_has_type', literal('Books'), translation_map('has_type_ar_from_en'), lang('ar-Arab')
-to_field 'cho_format', column('format'), parse_csv, strip, lang('fr')
+to_field 'cho_format', column('format'), parse_csv, strip, lang('en')
 to_field 'cho_identifier', column('identifier'), parse_csv, strip
 to_field 'cho_language', column('language'), parse_csv, split(' '), at_index(0), normalize_language, lang('en')
 to_field 'cho_language', column('language'), parse_csv, split(' '), at_index(0), normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')

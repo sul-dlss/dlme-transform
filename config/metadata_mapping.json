@@ -182,7 +182,7 @@
     "paths": [
       "cambridge/genizah"
     ],
-    "extension": ".xml",
+    "extension": ".csv",
     "settings": {
       "agg_provider": "Cambridge University Library",
       "agg_provider_country": "United Kingdom",
@@ -202,7 +202,7 @@
     "paths": [
       "cambridge/hebrew"
     ],
-    "extension": ".xml",
+    "extension": ".csv",
     "settings": {
       "agg_provider": "Cambridge University Library",
       "agg_provider_country": "United Kingdom",
@@ -222,7 +222,7 @@
     "paths": [
       "cambridge/islamic"
     ],
-    "extension": ".xml",
+    "extension": ".csv",
     "settings": {
       "agg_provider": "Cambridge University Library",
       "agg_provider_country": "United Kingdom",
@@ -233,26 +233,6 @@
       "agg_data_provider_ar": "مكتبة جامعة كامبريدج",
       "agg_data_provider_country_ar": "المملكة المتحدة",
       "inst_id": "cambridge"
-    }
-  },
-  {
-    "trajects": [
-      "cluster.rb"
-    ],
-    "paths": [
-      "cluster"
-    ],
-    "extension": ".csv",
-    "settings": {
-      "agg_provider": "CLUSTER",
-      "agg_provider_country": "Egypt",
-      "agg_data_provider": "CLUSTER",
-      "agg_data_provider_country": "Egypt",
-      "agg_provider_ar": "مختبر عمران القاهرة للتصميم والدراسات",
-      "agg_provider_country_ar": "مصر",
-      "agg_data_provider_ar": "مختبر عمران القاهرة للتصميم والدراسات",
-      "agg_data_provider_country_ar": "مصر",
-      "inst_id": "cluster"
     }
   },
   {
@@ -902,7 +882,7 @@
     "paths": [
       "qnl/british_library_combined"
     ],
-    "extension": ".xml",
+    "extension": ".csv",
     "settings": {
       "agg_provider": "Qatar National Library",
       "agg_provider_country": "Qatar",
