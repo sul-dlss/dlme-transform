@@ -60,7 +60,11 @@
       "aub.rb"
     ],
     "paths": [
-      "aub"
+      "aub/aco",
+      "aub/aladab",
+      "aub/postcards",
+      "aub/posters",
+      "aub/travelbooks"
     ],
     "extension": ".csv",
     "settings": {
