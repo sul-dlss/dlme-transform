@@ -57,30 +57,14 @@
   },
   {
     "trajects": [
-      "aub_aco.rb"
+      "aub.rb"
     ],
     "paths": [
-      "aub/aco"
-    ],
-    "extension": ".csv",
-    "settings": {
-      "agg_provider": "American University of Beirut",
-      "agg_provider_country": "Lebanon",
-      "agg_data_provider": "American University of Beirut",
-      "agg_data_provider_country": "Lebanon",
-      "agg_provider_ar": "الجامعة الأمريكية في بيروت",
-      "agg_provider_country_ar": "لبنان",
-      "agg_data_provider_ar": "الجامعة الأمريكية في بيروت",
-      "agg_data_provider_country_ar": "لبنان",
-      "inst_id": "aub"
-    }
-  },
-  {
-    "trajects": [
-      "aub_aladab.rb"
-    ],
-    "paths": [
-      "aub/aladab"
+      "aub/aco",
+      "aub/aladab",
+      "aub/postcards",
+      "aub/posters",
+      "aub/travelbooks"
     ],
     "extension": ".csv",
     "settings": {
@@ -101,66 +85,6 @@
     ],
     "paths": [
       "aub/poha"
-    ],
-    "extension": ".csv",
-    "settings": {
-      "agg_provider": "American University of Beirut",
-      "agg_provider_country": "Lebanon",
-      "agg_data_provider": "American University of Beirut",
-      "agg_data_provider_country": "Lebanon",
-      "agg_provider_ar": "الجامعة الأمريكية في بيروت",
-      "agg_provider_country_ar": "لبنان",
-      "agg_data_provider_ar": "الجامعة الأمريكية في بيروت",
-      "agg_data_provider_country_ar": "لبنان",
-      "inst_id": "aub"
-    }
-  },
-  {
-    "trajects": [
-      "aub_postcards.rb"
-    ],
-    "paths": [
-      "aub/postcards"
-    ],
-    "extension": ".csv",
-    "settings": {
-      "agg_provider": "American University of Beirut",
-      "agg_provider_country": "Lebanon",
-      "agg_data_provider": "American University of Beirut",
-      "agg_data_provider_country": "Lebanon",
-      "agg_provider_ar": "الجامعة الأمريكية في بيروت",
-      "agg_provider_country_ar": "لبنان",
-      "agg_data_provider_ar": "الجامعة الأمريكية في بيروت",
-      "agg_data_provider_country_ar": "لبنان",
-      "inst_id": "aub"
-    }
-  },
-  {
-    "trajects": [
-      "aub_posters.rb"
-    ],
-    "paths": [
-      "aub/posters"
-    ],
-    "extension": ".csv",
-    "settings": {
-      "agg_provider": "American University of Beirut",
-      "agg_provider_country": "Lebanon",
-      "agg_data_provider": "American University of Beirut",
-      "agg_data_provider_country": "Lebanon",
-      "agg_provider_ar": "الجامعة الأمريكية في بيروت",
-      "agg_provider_country_ar": "لبنان",
-      "agg_data_provider_ar": "الجامعة الأمريكية في بيروت",
-      "agg_data_provider_country_ar": "لبنان",
-      "inst_id": "aub"
-    }
-  },
-  {
-    "trajects": [
-      "aub_travelbooks.rb"
-    ],
-    "paths": [
-      "aub/travelbooks"
     ],
     "extension": ".csv",
     "settings": {
@@ -262,7 +186,7 @@
     "paths": [
       "cambridge/genizah"
     ],
-    "extension": ".xml",
+    "extension": ".csv",
     "settings": {
       "agg_provider": "Cambridge University Library",
       "agg_provider_country": "United Kingdom",
@@ -282,7 +206,7 @@
     "paths": [
       "cambridge/hebrew"
     ],
-    "extension": ".xml",
+    "extension": ".csv",
     "settings": {
       "agg_provider": "Cambridge University Library",
       "agg_provider_country": "United Kingdom",
@@ -302,7 +226,7 @@
     "paths": [
       "cambridge/islamic"
     ],
-    "extension": ".xml",
+    "extension": ".csv",
     "settings": {
       "agg_provider": "Cambridge University Library",
       "agg_provider_country": "United Kingdom",
@@ -313,26 +237,6 @@
       "agg_data_provider_ar": "مكتبة جامعة كامبريدج",
       "agg_data_provider_country_ar": "المملكة المتحدة",
       "inst_id": "cambridge"
-    }
-  },
-  {
-    "trajects": [
-      "cluster.rb"
-    ],
-    "paths": [
-      "cluster"
-    ],
-    "extension": ".csv",
-    "settings": {
-      "agg_provider": "CLUSTER",
-      "agg_provider_country": "Egypt",
-      "agg_data_provider": "CLUSTER",
-      "agg_data_provider_country": "Egypt",
-      "agg_provider_ar": "مختبر عمران القاهرة للتصميم والدراسات",
-      "agg_provider_country_ar": "مصر",
-      "agg_data_provider_ar": "مختبر عمران القاهرة للتصميم والدراسات",
-      "agg_data_provider_country_ar": "مصر",
-      "inst_id": "cluster"
     }
   },
   {
@@ -382,7 +286,7 @@
     "paths": [
       "harvard/islamic_heritage_project"
     ],
-    "extension": ".xml",
+    "extension": ".csv",
     "settings": {
       "agg_provider": "Harvard University Library",
       "agg_provider_country": "United States of America",
@@ -957,34 +861,12 @@
   },
   {
     "trajects": [
-      "princeton_movie_posters.rb"
+      "princeton.rb"
     ],
     "paths": [
-      "princeton/movie_posters"
+      "princeton"
     ],
-    "extension": ".json",
-    "settings": {
-      "agg_provider": "Princeton University Library",
-      "agg_provider_country": "United States of America",
-      "agg_data_provider": "Princeton University Library",
-      "agg_data_provider_country": "United States of America",
-      "agg_provider_ar": "مكتبة جامعة برينستون",
-      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "agg_data_provider_ar": "مكتبة جامعة برينستون",
-      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "inst_id": "princeton"
-    }
-  },
-  {
-    "trajects": [
-      "princeton_mss.rb"
-    ],
-    "paths": [
-      "princeton/princeton_mss",
-      "princeton/princeton_ymdi",
-      "princeton/babi_bahai"
-    ],
-    "extension": ".json",
+    "extension": ".csv",
     "settings": {
       "agg_provider": "Princeton University Library",
       "agg_provider_country": "United States of America",
@@ -1004,7 +886,7 @@
     "paths": [
       "qnl/british_library_combined"
     ],
-    "extension": ".xml",
+    "extension": ".csv",
     "settings": {
       "agg_provider": "Qatar National Library",
       "agg_provider_country": "Qatar",

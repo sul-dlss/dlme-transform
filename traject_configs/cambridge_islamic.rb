@@ -2,138 +2,103 @@
 
 require 'dlme_json_resource_writer'
 require 'dlme_debug_writer'
-require 'macros/cambridge'
 require 'macros/collection'
+require 'macros/csv'
 require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
+require 'macros/language_extraction'
 require 'macros/normalize_language'
+require 'macros/normalize_type'
 require 'macros/path_to_file'
+require 'macros/prepend'
 require 'macros/string_helper'
-require 'macros/tei'
 require 'macros/timestamp'
 require 'macros/title_extraction'
 require 'macros/version'
 require 'traject_plus'
 
 extend Macros::Collection
-extend Macros::Cambridge
-extend Macros::DateParsing
+extend Macros::Csv
 extend Macros::DLME
+extend Macros::DateParsing
 extend Macros::EachRecord
+extend Macros::LanguageExtraction
 extend Macros::NormalizeLanguage
+extend Macros::NormalizeType
 extend Macros::PathToFile
+extend Macros::Prepend
 extend Macros::StringHelper
-extend Macros::Tei
 extend Macros::Timestamp
 extend Macros::TitleExtraction
 extend Macros::Version
 extend TrajectPlus::Macros
-extend TrajectPlus::Macros::Tei
-extend TrajectPlus::Macros::Xml
+extend TrajectPlus::Macros::Csv
 
 settings do
-  provide 'reader_class_name', 'TrajectPlus::XmlReader'
   provide 'writer_class_name', 'DlmeJsonResourceWriter'
+  provide 'reader_class_name', 'TrajectPlus::CsvReader'
 end
-
-each_record do |record, context|
-  context.clipboard[:id] = extract_record_id(record)
-end
-
-to_field 'agg_data_provider_collection', literal('cambridge-islamic'), translation_map('agg_collection_from_provider_id'), lang('en')
-to_field 'agg_data_provider_collection', literal('cambridge-islamic'), translation_map('agg_collection_from_provider_id'), translation_map('agg_collection_ar_from_en'), lang('ar-Arab')
-to_field 'agg_data_provider_collection_id', literal('cambridge-islamic')
-
-# File path
-to_field 'dlme_source_file', path_to_file
 
 # Set Version & Timestamp on each record
 to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
 
-# Cho Required
-to_field 'id', lambda { |_record, accumulator, context|
-  bare_id = default_identifier(context)
-  accumulator << identifier_with_prefix(context, bare_id)
-}
-to_field 'cho_title', xpath_title_or_desc("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:title[1]", "#{MS_DESC}/#{MS_CONTENTS}/tei:summary[1]"), squish, lang('en'), default('Untitled', 'بدون عنوان')
-to_field 'cho_title', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:title[@xml:lang='ara']"), squish, lang('ar-Arab')
-to_field 'cho_title', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:title[@xml:lang='per']"), squish, lang('fa-Arab')
+to_field 'agg_data_provider_collection', path_to_file, split('/'), at_index(2), gsub('_', '-'), prepend('bnf-'), translation_map('agg_collection_from_provider_id'), lang('en')
+to_field 'agg_data_provider_collection', path_to_file, split('/'), at_index(2), gsub('_', '-'), prepend('bnf-'), translation_map('agg_collection_from_provider_id'), translation_map('agg_collection_ar_from_en'), lang('ar-Arab')
+to_field 'agg_data_provider_collection_id', path_to_file, split('/'), at_index(2), gsub('_', '-'), prepend('bnf-')
 
-# Cho other
-to_field 'cho_alternative', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:title[@type='alt'][1]"), squish, lang('en')
-to_field 'cho_alternative', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:title[@type='alt'][2]"), squish, lang('ar-Arab')
-to_field 'cho_alternative', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:title[@type='desc']"), split('('), first_only, squish, lang('en')
-to_field 'cho_alternative', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:title[@type='desc']"), split('('), last, gsub(')', ''), squish, lang('ar-Arab')
-to_field 'cho_contributor', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:editor[@role='commentator']/tei:name/tei:persName[@type='standard']"), squish, strip, prepend('Commentator: '), lang('en')
-to_field 'cho_contributor', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:editor[@role='commentator']/tei:name/tei:persName[@type='display']/tei:foreign[@xml:lang='ara']"), squish, strip, prepend('المعلق:'), lang('ar-Arab')
-to_field 'cho_contributor', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:editor[@role='translator']/tei:name/tei:persName[@type='standard']"), squish, strip, prepend('Translator: '), lang('en')
-to_field 'cho_contributor', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:editor[@role='translator']/tei:name/tei:persName[@type='display']/tei:foreign[@xml:lang='ara']"), squish, strip, prepend('مترجم: '), lang('ar-Arab')
-to_field 'cho_creator', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:author/tei:name/tei:persName[@type='standard']"), squish, strip, lang('en')
-to_field 'cho_creator', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:author/tei:name/tei:persName[@xml:lang='ara']"), squish, strip, lang('ar-Arab')
-to_field 'cho_creator', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:author/tei:name/tei:persName[@xml:lang='per']"), squish, strip, lang('fa-Arab')
-to_field 'cho_date', extract_tei("#{MS_DESC}/#{MS_ORIGIN}/tei:origDate"), squish, strip, lang('en')
-to_field 'cho_date_range_norm', cambridge_gregorian_range
-to_field 'cho_date_range_hijri', cambridge_gregorian_range, hijri_range
-to_field 'cho_dc_rights', extract_tei("#{PUB_STMT}/tei:availability/tei:licence"), squish, strip, lang('en')
-to_field 'cho_description', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/tei:summary"), squish, strip, lang('en')
-to_field 'cho_description', return_or_prepend("#{MS_DESC}/#{OBJ_DESC}/#{SUPPORT_DESC}/tei:condition", 'Condition:'), squish, strip, lang('en')
-to_field 'cho_description', return_or_prepend("#{MS_DESC}/#{OBJ_DESC}/tei:layoutDesc/tei:layout", 'Layout:'), squish, strip, lang('en')
-to_field 'cho_description', return_or_prepend("#{MS_DESC}/tei:physDesc/tei:handDesc", 'Script:'), squish, strip, lang('en')
-to_field 'cho_description', return_or_prepend("#{MS_DESC}/tei:physDesc/tei:additions", 'Additions:'), squish, strip, lang('en')
-to_field 'cho_description', return_or_prepend("#{MS_DESC}/tei:physDesc/tei:bindingDesc", 'Binding:'), squish, strip, lang('en')
+# Cho Required
+to_field 'id', column('id'), strip
+to_field 'cho_title', column('title'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_title', column('uniform-title'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_title', column('descriptive-titles'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'en')
+
+# Cho Other
+to_field 'cho_alternative', column('alternative-titles'), parse_csv, strip, lang('en')
+to_field 'cho_date', column('date-of-creation'), parse_csv, strip, lang('en')
+to_field 'cho_date_range_norm', column('date-of-creation'), parse_csv, strip, parse_range
+to_field 'cho_date_range_hijri', column('date-of-creation'), parse_csv, strip, parse_range, hijri_range
+to_field 'cho_description', column('abstract'), parse_csv, strip, prepend('Abstract: '), arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_description', column('description'), parse_csv, split('/'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_description', column('material'), parse_csv, strip, prepend('Material: '), arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_description', column('notes'), parse_csv, strip, prepend('Notes: '), arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_description', column('script'), parse_csv, strip, prepend('Script: '), arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_description', column('layout'), parse_csv, strip, prepend('Layout: '), arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_dc_rights', column('attribution'), parse_csv, strip, lang('en')
 to_field 'cho_edm_type', literal('Text'), lang('en')
 to_field 'cho_edm_type', literal('Text'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
-to_field 'cho_extent', cambridge_dimensions, squish, lang('en')
-to_field 'cho_format', extract_tei("#{MS_DESC}/#{OBJ_DESC}/@form"), strip, titleize, lang('en')
-to_field 'cho_has_type', literal('Manuscripts'), strip, lang('en')
-to_field 'cho_has_type', literal('Manuscripts'), translation_map('has_type_ar_from_en'), strip, lang('ar-Arab')
-to_field 'cho_identifier', extract_tei("#{MS_DESC}/#{MS_ID}/tei:idno"), strip
-to_field 'cho_is_part_of', literal('Oriental Manuscrupts: Islamic Manuscripts Collection'), lang('en')
-to_field 'cho_language', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:textLang/@mainLang"), strip, split(' '), normalize_language, lang('en')
-to_field 'cho_language', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:textLang/@otherLangs"), strip, split(' '), normalize_language, lang('en')
-to_field 'cho_language', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:textLang/@mainLang"), strip, split(' '), normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
-to_field 'cho_language', extract_tei("#{MS_DESC}/#{MS_CONTENTS}/#{MS_ITEM}/tei:textLang/@otherLangs"), strip, split(' '), normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
-to_field 'cho_medium', extract_tei("#{MS_DESC}/#{OBJ_DESC}/#{SUPPORT_DESC}/tei:support"), strip, lang('en')
-to_field 'cho_provenance', extract_tei("#{MS_DESC}/tei:history/tei:provenance"), squish, strip, lang('en')
-to_field 'cho_publisher', extract_tei("#{PUB_STMT}/tei:publisher"), strip, lang('en')
-to_field 'cho_spatial', extract_tei("#{MS_DESC}/#{MS_ORIGIN}/tei:origPlace"), strip, lang('en')
-to_field 'cho_subject', extract_tei("#{PROFILE_DESC}/tei:keywords[@n='form/genre']/tei:term"), strip, lang('en')
-to_field 'cho_subject', extract_tei("#{PROFILE_DESC}/tei:keywords[@n='subjects']/tei:term"), strip, lang('en')
+to_field 'cho_format', column('extent'), parse_csv, strip, lang('en')
+to_field 'cho_has_type', literal('Books'), lang('en')
+to_field 'cho_has_type', literal('Books'), translation_map('has_type_ar_from_en'), lang('ar-Arab')
+to_field 'cho_format', column('format'), parse_csv, strip, lang('en')
+to_field 'cho_identifier', column('classmark'), parse_csv, strip
+to_field 'cho_language', column('languages'), parse_csv, split(';'), strip, normalize_language, lang('en')
+to_field 'cho_language', column('languages'), parse_csv, split(';'), strip, normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
+to_field 'cho_provenance', column('provenance'), parse_csv, strip, lang('en')
+to_field 'cho_provenance', column('former-owners'), parse_csv, strip, prepend('Former owners: '), lang('en')
+to_field 'cho_subject', column('subjects'), parse_csv, strip, lang('en')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
 to_field 'agg_data_provider', data_provider_ar, lang('ar-Arab')
-to_field 'agg_dc_rights', extract_tei("#{PUB_STMT}/tei:availability/tei:licence"), squish, strip
 to_field 'agg_data_provider_country', data_provider_country, lang('en')
 to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
-  accumulator << transform_values(context,
-                                  'wr_dc_rights' => [extract_tei("#{PUB_STMT}/tei:availability/tei:licence"), first_only, squish, strip],
-                                  'wr_edm_rights' => [literal('BY-NC-SA'), translation_map('edm_rights_from_contributor')],
-                                  'wr_id' => [literal(context.clipboard[:id]),
-                                              prepend('https://cudl.lib.cam.ac.uk/view/'),
-                                              append('/1')],
-                                  'wr_is_referenced_by' => [literal(context.clipboard[:id]),
-                                                            prepend('https://cudl.lib.cam.ac.uk/iiif/')])
+  accumulator << transform_values(
+    context,
+    'wr_id' => [column('id'), strip, gsub('https://cudl.lib.cam.ac.uk/iiif/', 'https://cudl.lib.cam.ac.uk/view/')]
+  )
 end
+
 to_field 'agg_preview' do |_record, accumulator, context|
-  accumulator << transform_values(context,
-                                  'wr_dc_rights' => [extract_tei("#{PUB_STMT}/tei:availability/tei:licence"), first_only, squish, strip],
-                                  'wr_edm_rights' => [literal('BY-NC-SA'), translation_map('edm_rights_from_contributor')],
-                                  'wr_id' => [extract_tei('//tei:facsimile/tei:graphic/@url'),
-                                              gsub('http://cudl.lib.cam.ac.uk/content/images/', ''),
-                                              gsub(%r{_files/8/0_0.jpg}, ''),
-                                              append('.jp2'),
-                                              prepend('https://images.lib.cam.ac.uk/iiif/'),
-                                              append('/full/!400,400/0/default.jpg')],
-                                  'wr_is_referenced_by' => [literal(context.clipboard[:id]),
-                                                            prepend('https://cudl.lib.cam.ac.uk/iiif/')])
+  accumulator << transform_values(
+    context,
+    'wr_id' => [column('preview'), parse_csv, strip]
+  )
 end
 to_field 'agg_provider', provider, lang('en')
 to_field 'agg_provider', provider_ar, lang('ar-Arab')
-
 to_field 'agg_provider_country', provider_country, lang('en')
 to_field 'agg_provider_country', provider_country_ar, lang('ar-Arab')
 
