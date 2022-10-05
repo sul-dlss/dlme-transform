@@ -101,7 +101,7 @@ to_field 'agg_is_shown_at' do |_record, accumulator, context|
 end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(context,
-                                  'wr_id' => [column('thumbnail'), split('/full/'), first_only, parse_csv, strip, append('/full/!400,400/0/default.jpg')],
+                                  'wr_id' => [column('thumbnail'), parse_csv, first_only, split('/full/'), strip, append('/full/!400,400/0/default.jpg')],
                                   'wr_is_referenced_by' => column('id'))
 end
 to_field 'agg_provider', provider, lang('en')
