@@ -68,10 +68,10 @@ to_field 'cho_edm_type', path_to_file, split('/'), at_index(2), gsub('_', '-'), 
 to_field 'cho_has_type', path_to_file, split('/'), at_index(2), gsub('_', '-'), prepend('aub-'), translation_map('has_type_from_collection_id'), lang('en')
 to_field 'cho_has_type', path_to_file, split('/'), at_index(2), gsub('_', '-'), prepend('aub-'), translation_map('has_type_from_collection_id'), translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_identifier', column('identifier'), parse_csv, strip
-to_field 'cho_language', column('language'), split(';'),
-         split(','), parse_csv, strip, normalize_language, lang('en')
-to_field 'cho_language', column('language'), split(';'),
-         split(','), parse_csv, strip, normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
+to_field 'cho_language', column('language'), parse_csv, split(';'),
+         split(','), strip, normalize_language, lang('en')
+to_field 'cho_language', column('language'), parse_csv,  split(';'),
+         split(','), strip, normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
 to_field 'cho_publisher', column('publisher'), parse_csv, strip, lang('en')
 to_field 'cho_source', column('source'), parse_csv, strip, lang('en')
 to_field 'cho_spatial', column('coverage'), parse_csv, strip, lang('en')
