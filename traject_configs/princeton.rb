@@ -76,17 +76,17 @@ to_field 'cho_identifier', column('identifier'), parse_csv, strip
 to_field 'cho_identifier', column('local-identifier'), parse_csv, strip
 to_field 'cho_identifier', column('replaces'), parse_csv, strip, prepend('Replaces: ')
 to_field 'cho_is_part_of', column('member-of-collections'), parse_csv, strip, lang('en')
-to_field 'cho_language', column('language'), parse_csv, strip, normalize_language, lang('en')
-to_field 'cho_language', column('language'), parse_csv, strip, normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
-to_field 'cho_language', column('text-language'), parse_csv, strip, normalize_language, lang('en')
-to_field 'cho_language', column('text-language'), parse_csv, strip, normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
+to_field 'cho_language', column('language'), parse_csv, gsub('.', ''), strip, normalize_language, lang('en')
+to_field 'cho_language', column('language'), parse_csv, gsub('.', ''), strip, normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
+to_field 'cho_language', column('text-language'), parse_csv, gsub('.', ''), strip, normalize_language, lang('en')
+to_field 'cho_language', column('text-language'), parse_csv, gsub('.', ''), strip, normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
 to_field 'cho_provenance', column('provenance'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_publisher', column('publisher'), parse_csv, strip, arabic_script_lang_or_default('und-Arab', 'en')
 to_field 'cho_spatial', column('geographic-origin'), parse_csv, strip, arabic_script_lang_or_default('und-Arab', 'en')
 to_field 'cho_subject', column('genre'), parse_csv, strip, arabic_script_lang_or_default('und-Arab', 'en')
 to_field 'cho_subject', column('subject'), parse_csv, strip, arabic_script_lang_or_default('und-Arab', 'en')
-to_field 'cho_type', column('resource-type'), arabic_script_lang_or_default('und-Arab', 'en')
-to_field 'cho_type', column('type'), arabic_script_lang_or_default('und-Arab', 'en')
+to_field 'cho_type', column('resource-type'), parse_csv, strip, arabic_script_lang_or_default('und-Arab', 'en')
+to_field 'cho_type', column('type'), parse_csv, strip, arabic_script_lang_or_default('und-Arab', 'en')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
