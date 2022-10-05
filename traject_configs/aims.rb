@@ -40,6 +40,9 @@ to_field 'agg_data_provider_collection_id', literal('aims')
 to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
 
+# File path
+to_field 'dlme_source_file', path_to_file
+
 # CHO Required
 to_field 'id', column('id'), strip
 to_field 'cho_title', column('title'), strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
