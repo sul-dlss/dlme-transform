@@ -56,7 +56,7 @@ to_field 'id', column('id'), strip
 to_field 'cho_title', column('title'), arabic_script_lang_or_default('ar-Arab', 'und-Latn'), default('Untitled', 'بدون عنوان')
 
 # Cho Other
-to_field 'cho_contributro', column('contributor'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
+to_field 'cho_contributor', column('contributor'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
 to_field 'cho_creator', column('creator'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
 to_field 'cho_date', column('date'), parse_csv, strip, lang('en')
 to_field 'cho_date_range_hijri', column('date'), parse_csv, strip, parse_range, hijri_range
