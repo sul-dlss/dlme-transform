@@ -48,24 +48,23 @@ to_field 'agg_data_provider_collection', literal('qnl'), translation_map('agg_co
 to_field 'agg_data_provider_collection', literal('qnl'), translation_map('agg_collection_from_provider_id'), translation_map('agg_collection_ar_from_en'), lang('ar-Arab')
 to_field 'agg_data_provider_collection_id', literal('qnl')
 
-each_record do |record, context|
-  context.clipboard[:id] = generate_qnl_iiif_id(record, context)
-  context.clipboard[:manifest] = "https:__www.qdl.qa_en_iiif_#{context.clipboard[:id]}_manifest"
-end
+# each_record do |record, context|
+#   context.clipboard[:id] = generate_qnl_iiif_id(record, context)
+#   context.clipboard[:manifest] = "https:__www.qdl.qa_en_iiif_#{context.clipboard[:id]}_manifest"
+# end
 
 # CHO Required
 to_field 'id', column('id'), parse_csv, at_index(0), gsub('_ar', '_dlme'), gsub('_en', '_dlme')
 # 'titleInfo_title' has mixed language content, don't use arabic_script_lang_or_default macro
-to_field 'cho_title', column('titleInfo_title'), parse_csv, at_index(0), strip, lang('ar-Arab')
-to_field 'cho_title', column('titleInfo_title'), parse_csv, at_index(1), strip, lang('und-Latn')
+to_field 'cho_title', column('title'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'en')
 
 # CHO Other
-to_field 'cho_contributor', column('en'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
-to_field 'cho_date', column('originInfo_dateIssued'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
+to_field 'cho_creator', column('author'), parse_csv, strip, gsub('NOT PROVIDED', ''), prepend('Author: '), arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_date', column('originInfo_dateIssued'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_date_range_norm', column('originInfo_dateIssued'), parse_csv, strip, gsub('_', '-'), parse_range
 to_field 'cho_date_range_hijri', column('originInfo_dateIssued'),
          parse_csv, strip, gsub('_', '-'), parse_range, hijri_range
-to_field 'cho_dc_rights', column('accessCondition'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
+to_field 'cho_dc_rights', column('accessCondition'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'en')
 # 'abstract' has mixed language content, don't use arabic_script_lang_or_default macro
 to_field 'cho_description', column('abstract'), parse_csv, at_index(0), strip, prepend('ملخص: '), lang('ar-Arab')
 to_field 'cho_description', column('abstract'), parse_csv, at_index(1), strip, prepend('Abstract: '), lang('en')
@@ -77,14 +76,14 @@ to_field 'cho_edm_type', column('genre'), parse_csv, at_index(1), normalize_has_
 to_field 'cho_has_type', column('genre'), parse_csv, at_index(1), normalize_has_type, lang('en')
 to_field 'cho_has_type', column('genre'), parse_csv, at_index(1), normalize_has_type, translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_identifier', column('identifier'), parse_csv, strip
-to_field 'cho_identifier', column('recordInfo_recordIdentifier'), parse_csv, strip
 to_field 'cho_identifier', column('location_shelfLocator'), parse_csv, strip
-to_field 'cho_is_part_of', column('location_physicalLocation'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
+to_field 'cho_is_part_of', column('location_physicalLocation'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_language', column('language_languageTerm'), parse_csv, at_index(0), normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
 to_field 'cho_language', column('language_languageTerm'), parse_csv, at_index(0), normalize_language, lang('en')
-to_field 'cho_spatial', column('subject_geographic'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
-to_field 'cho_subject', column('subject_topic'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
-to_field 'cho_type', column('genre'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
+to_field 'cho_spatial', column('subject_geographic'), parse_csv, strip, gsub('NOT PROVIDED', ''), arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_subject', column('subject_topic'), parse_csv, strip, gsub('NOT PROVIDED', ''), arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_subject', column('subject_name_namePart'), parse_csv, strip, gsub('NOT PROVIDED', ''), arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_type', column('genre'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'en')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
@@ -105,9 +104,9 @@ end
 to_field 'agg_is_shown_by' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_edm_rights' => [column('accessCondition'), parse_csv, strip, translation_map('edm_rights_from_contributor'), translation_map('not_found')],
+    'wr_edm_rights' => [column('accessCondition'), parse_csv, strip, translation_map('edm_rights_from_contributor')],
     'wr_format' => literal('image/jpeg'),
-    'wr_id' => [column('location_url'), parse_csv, at_index(-1)],
+    'wr_id' => [column('shown_at'), parse_csv, strip, at_index(0)],
     'wr_is_referenced_by' => [column('id'), parse_csv, at_index(0), gsub('_ar', ''), gsub('_en', ''), prepend('https://www.qdl.qa/en/iiif/'), append('/manifest')]
   )
 end
@@ -116,7 +115,7 @@ to_field 'agg_preview' do |_record, accumulator, context|
     context,
     'wr_edm_rights' => [column('accessCondition'), parse_csv, strip, translation_map('edm_rights_from_contributor')],
     'wr_format' => [literal('image/jpeg')],
-    'wr_id' => [column('location_url'), parse_csv, at_index(-1)],
+    'wr_id' => [column('preview'), parse_csv, strip, at_index(0)],
     'wr_is_referenced_by' => [column('id'), parse_csv, at_index(0), gsub('_ar', ''), gsub('_en', ''), prepend('https://www.qdl.qa/en/iiif/'), append('/manifest')]
   )
 end

@@ -53,27 +53,32 @@ to_field 'dlme_source_file', path_to_file
 
 # Cho Required
 to_field 'id', column('id'), strip
-to_field 'cho_title', column('title'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_title', column('title'), parse_csv, strip, arabic_script_lang_or_default('und-Arab', 'und-Latn')
 
 # Cho Other
-to_field 'cho_contributor', column('contributor'), parse_csv, strip, prepend('Scribes: '), lang('en')
-to_field 'cho_creator', column('creator'), parse_csv, strip, lang('en')
-to_field 'cho_date', column('date'), parse_csv, strip, lang('en')
-to_field 'cho_date_range_norm', column('date'), parse_csv, strip, parse_range
-to_field 'cho_date_range_hijri', column('date'), parse_csv, strip, parse_range, hijri_range
-to_field 'cho_description', column('description'), parse_csv, split('/'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_alternative', column('title_alternative'), parse_csv, strip, arabic_script_lang_or_default('und-Arab', 'und-Latn')
+to_field 'cho_creator', column('personal_name'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_date', column('originInfo_dateIssued'), parse_csv, strip, lang('en')
+to_field 'cho_date_range_norm', column('originInfo_dateIssued'), parse_csv, strip, parse_range
+to_field 'cho_date_range_hijri', column('originInfo_dateIssued'), parse_csv, strip, parse_range, hijri_range
+to_field 'cho_description', column('note'), parse_csv, split('/'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_edm_type', literal('Text'), lang('en')
 to_field 'cho_edm_type', literal('Text'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
+to_field 'cho_extent', column('physicalDescription_extent'), parse_csv, strip, lang('en')
 to_field 'cho_has_type', literal('Books'), lang('en')
 to_field 'cho_has_type', literal('Books'), translation_map('has_type_ar_from_en'), lang('ar-Arab')
-to_field 'cho_format', column('format'), parse_csv, strip, lang('en')
+to_field 'cho_format', column('physicalDescription_form'), parse_csv, strip, lang('en')
 to_field 'cho_identifier', column('identifier'), parse_csv, strip
-to_field 'cho_language', column('language'), parse_csv, split(' '), at_index(0), normalize_language, lang('en')
-to_field 'cho_language', column('language'), parse_csv, split(' '), at_index(0), normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
-to_field 'cho_publisher', column('publisher'), parse_csv, strip, lang('en')
-to_field 'cho_relation', column('relation'), parse_csv, strip, lang('en')
-to_field 'cho_subject', column('subject'), parse_csv, strip, lang('en')
-to_field 'cho_type', column('type'), parse_csv, strip, lang('en')
+to_field 'cho_identifier', column('location_shelfLocator'), parse_csv, strip
+to_field 'cho_language', column('language_languageTerm'), parse_csv, normalize_language, lang('en')
+to_field 'cho_language', column('language_languageTerm'), parse_csv, normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
+to_field 'cho_publisher', column('originInfo_publisher'), parse_csv, strip, lang('en')
+to_field 'cho_spatial', column('originInfo_place_placeTerm'), parse_csv, gsub(':', ''), gsub('[', ''), gsub(']', ''), strip, lang('en')
+to_field 'cho_spatial', column('subject_geographic'), parse_csv, strip, lang('en')
+to_field 'cho_spatial', column('subject_hierarchicalGeographic_country'), parse_csv, strip, lang('en')
+to_field 'cho_spatial', column('subject_hierarchicalGeographic_city'), parse_csv, strip, lang('en')
+to_field 'cho_subject', column('subject_topic'), parse_csv, strip, lang('en')
+to_field 'cho_type', column('typeOfResource'), parse_csv, strip, lang('en')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
@@ -84,15 +89,15 @@ to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_id' => [column('identifier'), parse_csv, at_index(3)],
-    'wr_is_referenced_by' => [column('identifier'), parse_csv, at_index(2), split('/iiif/'), at_index(-1), split('/full/'), at_index(0), prepend('https://iiif.lib.harvard.edu/manifests/ids:')]
+    'wr_id' => [column('shown_at'), parse_csv, at_index(0)],
+    'wr_is_referenced_by' => [column('shown_at'), parse_csv, at_index(0), split('/iiif/'), at_index(-1), split('/full/'), at_index(0), prepend('https://iiif.lib.harvard.edu/manifests/ids:')]
   )
 end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_id' => [column('identifier'), parse_csv, at_index(2), gsub('full/,150/0', 'full/,400/0'), strip],
-    'wr_is_referenced_by' => [column('identifier'), parse_csv, at_index(2), split('/iiif/'), at_index(-1), split('/full/'), at_index(0), prepend('https://iiif.lib.harvard.edu/manifests/ids:')]
+    'wr_id' => [column('preview'), parse_csv, gsub('full/,150/0', 'full/,400/0'), strip],
+    'wr_is_referenced_by' => [column('shown_at'), parse_csv, at_index(0), split('/iiif/'), at_index(-1), split('/full/'), at_index(0), prepend('https://iiif.lib.harvard.edu/manifests/ids:')]
   )
 end
 to_field 'agg_provider', provider, lang('en')
