@@ -35,8 +35,8 @@ RSpec.describe Macros::EachRecord do
 
       let(:output_hash) { { 'cho_title' => ['title1'] } }
       let(:missing_lang_err_msg) do
-        "each_record_spec.rb: key=cho_title; value=.*; 'none' not allowed as IR language key, "\
-        'language must be specified.  Check source data and/or traject config for errors'
+        "each_record_spec.rb: key=cho_title; value=.*; 'none' not allowed as IR language key, " \
+          'language must be specified.  Check source data and/or traject config for errors'
       end
 
       it 'logs an error indicating that the output is missing language' do
@@ -52,7 +52,7 @@ RSpec.describe Macros::EachRecord do
 
         it 'logs a warning indicating that duplicate values were found' do
           expect { macro.call(nil, mock_context) }.to raise_error(Macros::EachRecord::UnspecifiedLanguageError, /#{missing_lang_err_msg}/)
-          err_msg = Regexp.escape('each_record_spec.rb: key=cho_title; values=["title1", "title1"]; values array contains duplicates.  '\
+          err_msg = Regexp.escape('each_record_spec.rb: key=cho_title; values=["title1", "title1"]; values array contains duplicates.  ' \
                                   'Check source data and/or traject config for errors')
           expect(::DLME::Utils.logger).to have_received(:warn).with(a_string_matching(err_msg))
         end
@@ -80,7 +80,7 @@ RSpec.describe Macros::EachRecord do
 
         it 'logs a warning indicating that duplicate values were found' do
           macro.call(nil, mock_context)
-          err_msg = Regexp.escape('each_record_spec.rb: key=cho_title; sub_values=["title1", "title1"]; sub_values array contains duplicates.  '\
+          err_msg = Regexp.escape('each_record_spec.rb: key=cho_title; sub_values=["title1", "title1"]; sub_values array contains duplicates.  ' \
                                   'Check source data and/or traject config for errors.')
           expect(::DLME::Utils.logger).to have_received(:warn).with(a_string_matching(err_msg))
         end

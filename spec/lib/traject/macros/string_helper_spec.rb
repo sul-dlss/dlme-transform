@@ -32,8 +32,8 @@ RSpec.describe Macros::StringHelper do
         string = "Euchologion ad usum Melchitarum,    \n     partim arabice partim syriace,
         cum titulis et rubricis plerumque    \n     mere arabicis, prinicpio       et fine mutilum."
         callable = instance.squish
-        expect(callable.call(nil, [string])).to eq(['Euchologion ad usum Melchitarum, partim arabice partim '\
-                                                    'syriace, cum titulis et rubricis plerumque mere arabicis, '\
+        expect(callable.call(nil, [string])).to eq(['Euchologion ad usum Melchitarum, partim arabice partim ' \
+                                                    'syriace, cum titulis et rubricis plerumque mere arabicis, ' \
                                                     'prinicpio et fine mutilum.'])
       end
     end
@@ -70,16 +70,16 @@ RSpec.describe Macros::StringHelper do
 
     context 'when extracted string longer than 100 charachters' do
       it 'truncates string on first white space after character 100, adds ellipsis' do
-        arabic_string = 'تتعلق المراسلات وأوراق أخرى بزيارات قامت بها شخصيات أوروبية وأمريكية إلى '\
-        'المملكة العربية السعودية، وتحديدًا إلى الرياض:زيارة في سنة ١٩٣٧قام بها '\
-        'المقدم هارولد ريتشارد باتريك ديكسون، الوكيل السياسي السابق في الكويت'
+        arabic_string = 'تتعلق المراسلات وأوراق أخرى بزيارات قامت بها شخصيات أوروبية وأمريكية إلى ' \
+                        'المملكة العربية السعودية، وتحديدًا إلى الرياض:زيارة في سنة ١٩٣٧قام بها ' \
+                        'المقدم هارولد ريتشارد باتريك ديكسون، الوكيل السياسي السابق في الكويت'
         latin_string = 'Euchologion ad usum Melchitarum, partim arabice partim syriace, cum titulis et rubricis plerumque
         mere arabicis, prinicpio et fine mutilum. Codicem meorat Cyrillus Charon (Korolevski) apud Χρυσοστομικά,
         Romae, 1908, pp. 673 sq. Cf. cod. Vat. ar. 54 ; iisdem notis utimur ac in codice laudato.'
-        expect(instance.truncate(arabic_string)).to eq('تتعلق المراسلات وأوراق أخرى بزيارات قامت بها شخصيات '\
-          'أوروبية وأمريكية إلى المملكة العربية السعودية...')
-        expect(instance.truncate(latin_string)).to eq('Euchologion ad usum Melchitarum, partim arabice partim syriace, '\
-          'cum titulis et rubricis plerumque...')
+        expect(instance.truncate(arabic_string)).to eq('تتعلق المراسلات وأوراق أخرى بزيارات قامت بها شخصيات ' \
+                                                       'أوروبية وأمريكية إلى المملكة العربية السعودية...')
+        expect(instance.truncate(latin_string)).to eq('Euchologion ad usum Melchitarum, partim arabice partim syriace, ' \
+                                                      'cum titulis et rubricis plerumque...')
       end
     end
 

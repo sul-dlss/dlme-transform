@@ -10,7 +10,7 @@ RSpec.describe Macros::IIIF do
   end
   let(:instance) { klass.new }
   let(:fixture_file_path) { File.join('./spec/fixtures/fr426cg9537.json') }
-  let(:iiif_json) { JSON.parse(File.open(fixture_file_path).read) }
+  let(:iiif_json) { JSON.parse(File.read(fixture_file_path)) }
 
   describe '#iiif_thumbnail_id' do
     subject(:iiif_thumbnail_id) { instance.iiif_thumbnail_id(iiif_json) }

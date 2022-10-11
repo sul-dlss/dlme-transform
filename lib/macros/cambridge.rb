@@ -29,7 +29,7 @@ module Macros
     # @param [Nokogiri::Document] record from which to get dimension lists
     # @param [Integer] idx which set of dimensions to stringify
     def height_width_str(record, idx)
-      "#{meausured_object(record)[idx].capitalize}: "\
+      "#{meausured_object(record)[idx].capitalize}: " \
         "(height: #{height(record)[idx]} #{unit(record)[idx]}, width: #{width(record)[idx]} #{unit(record)[idx]})"
     end
 

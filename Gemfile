@@ -21,8 +21,8 @@ end
 group :test do
   gem 'rspec'
   gem 'rspec_junit_formatter'
-  gem 'rubocop', '~> 1.13.0'
-  gem 'rubocop-performance', '~> 1.11.0'
-  gem 'rubocop-rspec', '~> 2.3.0'
+  gem 'rubocop'
+  gem 'rubocop-performance'
+  gem 'rubocop-rspec'
   gem 'simplecov', '~> 0.21'
 end
