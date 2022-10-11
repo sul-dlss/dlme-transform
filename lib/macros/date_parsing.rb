@@ -126,7 +126,7 @@ module Macros
     TEI_NS = { tei: 'http://www.tei-c.org/ns/1.0' }.freeze
     TEI_MS_DESC = '//tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc'
     TEI_MS_ORIGIN = 'tei:history/tei:origin'
-    TEI_ORIG_DATE_PATH = "#{TEI_MS_DESC}/#{TEI_MS_ORIGIN}/tei:origDate"
+    TEI_ORIG_DATE_PATH = "#{TEI_MS_DESC}/#{TEI_MS_ORIGIN}/tei:origDate".freeze
 
     # extracts dates from TEI origDate element for Cambridge data
     # Best dates will be in notBefore/notAfter attributes, or from/to attributes
@@ -160,8 +160,8 @@ module Macros
 
     FGDC_NS = { fgdc: 'http://www.fgdc.gov/metadata/fgdc-std-001-1998.dtd' }.freeze
     FGDC_TIMEINFO_XPATH = '/metadata/idinfo/timeperd/timeinfo'
-    FGDC_SINGLE_DATE_XPATH = "#{FGDC_TIMEINFO_XPATH}/sngdate/caldate"
-    FGDC_DATE_RANGE_XPATH = "#{FGDC_TIMEINFO_XPATH}/rngdates"
+    FGDC_SINGLE_DATE_XPATH = "#{FGDC_TIMEINFO_XPATH}/sngdate/caldate".freeze
+    FGDC_DATE_RANGE_XPATH = "#{FGDC_TIMEINFO_XPATH}/rngdates".freeze
     # NOTE: saw no "#{FGDC_TIMEINFO_XPATH}/mdattim" multiple dates path data
 
     # Extracts dates from FGDC idinfo/timeperd to create a single date range value
@@ -238,7 +238,7 @@ module Macros
 
     TEI_MS_DESC_LOWER = '//tei:teiheader/tei:filedesc/tei:sourcedesc/tei:msdesc'
     TEI_MS_ORIGIN_LOWER = 'tei:history/tei:origin'
-    TEI_ORIG_DATE_PATH_LOWER = "#{TEI_MS_DESC_LOWER}/#{TEI_MS_ORIGIN_LOWER}/tei:origdate"
+    TEI_ORIG_DATE_PATH_LOWER = "#{TEI_MS_DESC_LOWER}/#{TEI_MS_ORIGIN_LOWER}/tei:origdate".freeze
     # extracts dates from TEI origDate element for Penn Openn data
     # Best dates will be in notBefore/notAfter attributes, or from/to attributes
     # 'when' attribute is usually a single date;

@@ -15,9 +15,9 @@ class DlmeDebugWriter < Traject::LineWriter
     return JSON.generate(adjusted).unicode_normalize if errors.empty?
 
     raise "Transform produced invalid data.\n\n" \
-      "The errors are: #{errors.messages}}\n\n" \
-      "The data looked like this:\n" \
-      "#{JSON.pretty_generate(adjusted)}"
+          "The errors are: #{errors.messages}}\n\n" \
+          "The data looked like this:\n" \
+          "#{JSON.pretty_generate(adjusted)}"
   end
 
   private

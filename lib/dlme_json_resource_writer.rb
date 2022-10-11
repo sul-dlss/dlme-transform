@@ -16,9 +16,9 @@ class DlmeJsonResourceWriter < Traject::LineWriter
     return JSON.generate(adjusted).unicode_normalize if errors.empty?
 
     ::DLME::Utils.logger.error "Transform produced invalid data.\n\n" \
-      "The errors are: #{errors.messages}}\n\n" \
-      "The data looked like this:\n" \
-      "The record id is: #{adjusted['id']}"
+                               "The errors are: #{errors.messages}}\n\n" \
+                               "The data looked like this:\n" \
+                               "The record id is: #{adjusted['id']}"
 
     nil
   end

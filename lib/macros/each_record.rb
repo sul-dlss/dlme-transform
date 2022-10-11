@@ -12,7 +12,7 @@ module Macros
     # @example
     #   convert_to_language_hash => lambda { ... }
     # @return [Proc] a proc that traject can call for each record
-    def convert_to_language_hash(*fields) # rubocop:disable Metrics/PerceivedComplexity
+    def convert_to_language_hash(*fields)
       # If needed for the log messages, getting caller info here is more helpful, because it'll
       # get us the calling config (invoking caller_locations from the lambda returns a call stack
       # entirely within the traject gem, besides this method).
@@ -32,7 +32,7 @@ module Macros
           unique_values.each do |value|
             case value
             when Hash
-              sub_values = value[:values].reject(&:nil?).reject(&:empty?)
+              sub_values = value[:values].compact.reject(&:empty?)
               html_cleaned = html_check(sub_values)
               sub_values = html_cleaned
               result[value[:language]] += sub_values.uniq.tap do |unique_sub_values|

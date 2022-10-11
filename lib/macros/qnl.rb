@@ -71,7 +71,7 @@ module Macros
         name_and_role = names.zip(roles)
         name_with_role = []
         name_and_role.each do |val|
-          name_with_role << val[0] + ' (' + val[1] + ')'
+          name_with_role << (val[0] + ' (' + val[1] + ')')
         end
         accumulator.replace(name_with_role)
       end

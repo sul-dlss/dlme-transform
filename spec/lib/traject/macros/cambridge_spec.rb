@@ -42,8 +42,8 @@ RSpec.describe Macros::Cambridge do
 
     context 'when all elements and attribute values present' do
       let(:extent) do
-        '<tei:extent> 368 ff.<tei:dimensions type="leaf" unit="cm"><tei:height>32.5</tei:height>'\
-        '<tei:width>23</tei:width></tei:dimensions></tei:extent>'
+        '<tei:extent> 368 ff.<tei:dimensions type="leaf" unit="cm"><tei:height>32.5</tei:height>' \
+          '<tei:width>23</tei:width></tei:dimensions></tei:extent>'
       end
 
       it 'returns values in a formatted string' do
@@ -53,14 +53,14 @@ RSpec.describe Macros::Cambridge do
 
     context 'when multiple instances and all elements and attribute values present' do
       let(:extent) do
-        '<tei:extent> 368 ff.<tei:dimensions type="leaf" unit="cm"><tei:height>32.5</tei:height>'\
-        '<tei:width>23</tei:width></tei:dimensions><tei:dimensions type="written" unit="cm">'\
-        '<tei:height>27</tei:height><tei:width>19</tei:width></tei:dimensions></tei:extent>'
+        '<tei:extent> 368 ff.<tei:dimensions type="leaf" unit="cm"><tei:height>32.5</tei:height>' \
+          '<tei:width>23</tei:width></tei:dimensions><tei:dimensions type="written" unit="cm">' \
+          '<tei:height>27</tei:height><tei:width>19</tei:width></tei:dimensions></tei:extent>'
       end
 
       it 'returns values in a formatted string' do
-        expect(indexer.map_record(ng_rec)).to eq('dimensions' => ['368 ff. Leaf: (height: 32.5 cm, width:'\
-                                                  ' 23 cm)', 'Written: (height: 27 cm, width: 19 cm)'])
+        expect(indexer.map_record(ng_rec)).to eq('dimensions' => ['368 ff. Leaf: (height: 32.5 cm, width: ' \
+                                                                  '23 cm)', 'Written: (height: 27 cm, width: 19 cm)'])
       end
     end
 
