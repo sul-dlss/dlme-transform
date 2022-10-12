@@ -20,12 +20,13 @@ module Macros
     # Determine if the value in the given column contains an array of values
     # return either the original value or the array value parsed into elements
     def parse_csv
-      lambda do |_row, accumulator|
+      lambda do |_row, accumulator, context|
         return [] if accumulator.empty?
         return accumulator unless accumulator.first.match?(/[\[\]]/)
 
-        values = accumulator.first.gsub("', '", "','")
-        accumulator.replace(CSV.parse(values.delete('[]'), liberal_parsing: true, quote_char: "'").first)
+        values = CSV.parse(accumulator.first.gsub("', '", "','").delete('[]'), liberal_parsing: true, quote_char: "'")
+        values.map!(&:compact)
+        accumulator.replace(values.first)
       end
     end
   end
