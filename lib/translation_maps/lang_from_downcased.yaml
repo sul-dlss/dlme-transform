@@ -1,3 +1,4 @@
+altaic languages: Altaic Languages
 amharic: Amharic
 arabic: Arabic
 aramaic: Aramaic
@@ -11,6 +12,7 @@ coptic: Coptic
 dutch: Dutch
 english: English
 en_us: English
+flemish: Flemish
 french: French
 geez: Ge'ez
 georgian: Georgian
@@ -18,10 +20,13 @@ german: German
 greek: Greek
 greek, ancient: Greek, Ancient
 greek, ancient (to 1453): Greek, Ancient
+gujarati: Gujarati
 ḥaḍramitic: Ḥaḍramitic
 hebrew: Hebrew
 hebrew (isolated tiberian vocalisation): Hebrew
 hebrew, occasional tiberian vocalisation (approx. 200 fully or partially vocalised forms): Hebrew
+indic languages: Indic Languages
+indonesian: Indonesian
 italian: Italian
 judeo arabic: Judeo-Arabic
 judaeo arabic: Judeo-Arabic
@@ -32,6 +37,7 @@ judaeo-persian: Judeo-Persian
 judaeo-portuguese: Judeo-Portuguese
 judaeo-spanish: Ladino
 latin: Latin
+malay: Malay
 minaic: Minaic
 old bulgarian: Old Bulgarian
 ottoman turkish: Turkish, Ottoman (1500-1928)
@@ -44,6 +50,7 @@ sabaic: Sabaic
 slavic languages: Slavic Languages
 spanish: Spanish
 syriac: Syriac
+tatar: Tatar
 turkish, ottoman: Turkish, Ottoman (1500-1928)
 turkish, ottoman (1500-1928): Turkish, Ottoman (1500-1928)
 turkish: Turkish
@@ -54,3 +61,4 @@ yiddish: Yiddish
 
 # ignore
 no linguistic content: ~
+undefined: ~
