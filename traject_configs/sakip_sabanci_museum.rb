@@ -88,7 +88,7 @@ to_field 'cho_has_type', column('tür-type'), parse_csv, normalize_has_type, lan
 to_field 'cho_has_type', column('tür-type'), parse_csv, normalize_has_type, translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_identifier', column('envanter-numarası-accession-number'), parse_csv, strip
 to_field 'cho_identifier', column('envanter-numarası-identifier'), parse_csv, strip
-to_field 'cho_language', column('dil-language'), parse_csv, normalize_language, lang('en')
+to_field 'cho_language', column('dil-language'), parse_csv, split(';'), strip, normalize_language, lang('en')
 to_field 'cho_publisher', column('yayıncı-publisher'), parse_csv, lang('en')
 to_field 'cho_related', column('ayrıca-bakınız-see-also'), parse_csv, lang('en')
 to_field 'cho_temporal', column('dönem-object/work-culture'), parse_csv, lang('tr-Latn')
