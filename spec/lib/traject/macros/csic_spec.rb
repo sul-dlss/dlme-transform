@@ -44,7 +44,7 @@ RSpec.describe Macros::Csic do
       let(:urls) { nil }
 
       it 'returns nil' do
-        expect(macro_result).to eq nil
+        expect(macro_result).to be_nil
       end
     end
   end

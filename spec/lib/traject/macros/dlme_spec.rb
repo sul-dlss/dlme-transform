@@ -128,7 +128,7 @@ RSpec.describe Macros::DLME do
       it 'leaves accumulator empty' do
         accumulator = []
         callable = instance.lang('en')
-        expect(callable.call(nil, accumulator, nil)).to eq nil
+        expect(callable.call(nil, accumulator, nil)).to be_nil
       end
     end
   end

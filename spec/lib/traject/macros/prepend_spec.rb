@@ -44,7 +44,7 @@ RSpec.describe Macros::Prepend do
 
       it 'returns nil' do
         callable = instance.intelligent_prepend('prepend string: ', 'السلسلة السابقة: ')
-        expect(callable.call(nil, output)).to eq(nil)
+        expect(callable.call(nil, output)).to be_nil
       end
     end
   end
