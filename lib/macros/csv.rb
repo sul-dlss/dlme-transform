@@ -20,7 +20,7 @@ module Macros
     # Determine if the value in the given column contains an array of values
     # return either the original value or the array value parsed into elements
     def parse_csv
-      lambda do |_row, accumulator, context|
+      lambda do |_row, accumulator|
         return [] if accumulator.empty?
         return accumulator unless accumulator.first.match?(/[\[\]]/)
 
