@@ -381,6 +381,26 @@
   },
   {
     "trajects": [
+      "lebanese_american_university.rb"
+    ],
+    "paths": [
+      "lebanese_american_university"
+    ],
+    "extension": ".csv",
+    "settings": {
+      "agg_provider": "Lebanese American University",
+      "agg_provider_country": "Lebanon",
+      "agg_data_provider": "Lebanese American University",
+      "agg_data_provider_country": "Lebanon",
+      "agg_provider_ar": "الجامعة اللبنانية الامريكية",
+      "agg_provider_country_ar": "لبنان",
+      "agg_data_provider_ar": "الجامعة اللبنانية الامريكية",
+      "agg_data_provider_country_ar": "لبنان",
+      "inst_id": "lebanese_american_university"
+    }
+  },
+  {
+    "trajects": [
       "loc_abdul_hamid_ii_books.rb"
     ],
     "paths": [
