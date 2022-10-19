@@ -44,14 +44,12 @@ end
 to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
 
+# File path
+to_field 'dlme_source_file', path_to_file
+
 to_field 'agg_data_provider_collection', literal('qnl'), translation_map('agg_collection_from_provider_id'), lang('en')
 to_field 'agg_data_provider_collection', literal('qnl'), translation_map('agg_collection_from_provider_id'), translation_map('agg_collection_ar_from_en'), lang('ar-Arab')
 to_field 'agg_data_provider_collection_id', literal('qnl')
-
-# each_record do |record, context|
-#   context.clipboard[:id] = generate_qnl_iiif_id(record, context)
-#   context.clipboard[:manifest] = "https:__www.qdl.qa_en_iiif_#{context.clipboard[:id]}_manifest"
-# end
 
 # CHO Required
 to_field 'id', column('id'), parse_csv, at_index(0), gsub('_ar', '_dlme'), gsub('_en', '_dlme')
