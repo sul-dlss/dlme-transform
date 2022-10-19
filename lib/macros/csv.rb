@@ -24,8 +24,9 @@ module Macros
         return [] if accumulator.empty?
         return accumulator unless accumulator.first.match?(/[\[\]]/)
 
-        values = accumulator.first.gsub("', '", "','")
-        accumulator.replace(CSV.parse(values.delete('[]'), liberal_parsing: true, quote_char: "'").first)
+        values = CSV.parse(accumulator.first.gsub("', '", "','").delete('[]'), liberal_parsing: true, quote_char: "'")
+        values.map!(&:compact)
+        accumulator.replace(values.first)
       end
     end
   end
