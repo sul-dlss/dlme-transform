@@ -62,7 +62,7 @@ to_field 'cho_date_range_hijri', column('date'), parse_csv, strip, auc_date_rang
 to_field 'cho_date_range_norm', column('date'), parse_csv, strip, auc_date_range
 to_field 'cho_description', column('description'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_edm_type', path_to_file, split('/'), at_index(2), gsub('_', '-'), prepend('lau-'), normalize_has_type, normalize_edm_type, lang('en')
-to_field 'cho_edm_type', path_to_file, split('/'), at_index(2), gsub('_', '-'), prepend('lau-'),  normalize_has_type, normalize_edm_type, translation_map('edm_type_ar_from_en'), lang('ar-Arab')
+to_field 'cho_edm_type', path_to_file, split('/'), at_index(2), gsub('_', '-'), prepend('lau-'), normalize_has_type, normalize_edm_type, translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_extent', column('dimension'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'en')
 # Using collection identifier to map to has type since type values are vague
 to_field 'cho_has_type', path_to_file, split('/'), at_index(2), gsub('_', '-'), prepend('lau-'), normalize_has_type, lang('en')
