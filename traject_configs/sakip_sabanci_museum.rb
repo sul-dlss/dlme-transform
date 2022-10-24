@@ -105,18 +105,18 @@ to_field 'agg_is_shown_at' do |_record, accumulator, context|
     context,
     'agg_edm_rights' => [literal('InC-EDU: http://rightsstatements.org/page/InC-EDU/1.0/')],
     'wr_edm_rights' => [literal('InC-EDU: http://rightsstatements.org/page/InC-EDU/1.0/')],
-    'wr_format' => [column('iiif_format'), strip],
-    'wr_id' => [column('id'), gsub('https://cdm21044.contentdm.oclc.org/iiif/2/emrigan:', ''), gsub('/manifest.json', ''), prepend('ttp://cdm21044.contentdm.oclc.org/cdm/ref/collection/emirgan/id/')],
-    'wr_is_referenced_by' => [column('id'), strip]
+    'wr_format' => [column('iiif_format'), parse_csv, strip],
+    'wr_id' => [column('id'), parse_csv, strip, gsub('https://cdm21044.contentdm.oclc.org/iiif/2/emrigan:', ''), gsub('/manifest.json', ''), prepend('ttp://cdm21044.contentdm.oclc.org/cdm/ref/collection/emirgan/id/')],
+    'wr_is_referenced_by' => [column('id'), parse_csv, strip]
   )
 end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
     'wr_edm_rights' => [literal('InC-EDU: http://rightsstatements.org/page/InC-EDU/1.0/')],
-    'wr_format' => [column('iiif_format'), strip],
-    'wr_id' => [column('resource'), strip, gsub('/full/full/0/default.jpg', '/full/400,400/0/default.jpg')],
-    'wr_is_referenced_by' => [column('id'), strip]
+    'wr_format' => [column('iiif_format'), parse_csv, strip],
+    'wr_id' => [column('resource'), parse_csv, at_index(0), strip, gsub('/full/full/0/default.jpg', '/full/400,400/0/default.jpg')],
+    'wr_is_referenced_by' => [column('id'), parse_csv, strip]
   )
 end
 to_field 'agg_provider_country', provider_country, lang('en')
