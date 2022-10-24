@@ -77,8 +77,8 @@ module Macros
 
     REGEX_OPTS = Regexp::IGNORECASE | Regexp::MULTILINE
     HIJRI_TAG = '(A.H.|AH|H)'
-    HIJRI_TAG_B4_REGEX = Regexp.new("#{HIJRI_TAG}\s+(?<hijri>[^\(\)\/]*)", REGEX_OPTS)
-    HIJRI_TAG_AFTER_REGEX = Regexp.new("(?<hijri>[^\(\)\/]*)\s+#{HIJRI_TAG}", REGEX_OPTS)
+    HIJRI_TAG_B4_REGEX = Regexp.new("#{HIJRI_TAG}\s+(?<hijri>[^()/]*)", REGEX_OPTS)
+    HIJRI_TAG_AFTER_REGEX = Regexp.new("(?<hijri>[^()/]*)\s+#{HIJRI_TAG}", REGEX_OPTS)
 
     # HELPER METHOD for other macros - NOT A MACRO
     # given a string with both hijri and gregorian date info (e.g. 'A.H. 986 (1578)'),
