@@ -14,7 +14,6 @@ require 'macros/normalize_type'
 require 'macros/string_helper'
 require 'macros/timestamp'
 require 'macros/title_extraction'
-require 'macros/qnl'
 require 'macros/version'
 require 'traject_plus'
 
@@ -27,7 +26,6 @@ extend Macros::IIIF
 extend Macros::LanguageExtraction
 extend Macros::NormalizeLanguage
 extend Macros::NormalizeType
-extend Macros::QNL
 extend Macros::StringHelper
 extend Macros::Timestamp
 extend Macros::TitleExtraction
