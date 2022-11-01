@@ -103,7 +103,7 @@ to_field 'agg_data_provider_country', data_provider_country, lang('en')
 to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(context,
-                                  'wr_id' => [column('identifier'), split("href='"), last, split("' alt='"), first_only, parse_csv, strip],
+                                  'wr_id' => [column('identifier'), split("Identifier'>"), last, split('</a>'), first_only, parse_csv, strip],
                                   'wr_is_referenced_by' => column('id'))
 end
 to_field 'agg_preview' do |_record, accumulator, context|
