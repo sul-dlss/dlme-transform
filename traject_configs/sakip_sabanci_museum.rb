@@ -106,7 +106,7 @@ to_field 'agg_is_shown_at' do |_record, accumulator, context|
     'agg_edm_rights' => [literal('InC-EDU: http://rightsstatements.org/page/InC-EDU/1.0/')],
     'wr_edm_rights' => [literal('InC-EDU: http://rightsstatements.org/page/InC-EDU/1.0/')],
     'wr_format' => [column('iiif_format'), parse_csv, strip],
-    'wr_id' => [column('id'), parse_csv, strip, gsub('https://cdm21044.contentdm.oclc.org/iiif/2/emrigan:', ''), gsub('/manifest.json', ''), prepend('ttp://cdm21044.contentdm.oclc.org/cdm/ref/collection/emirgan/id/')],
+    'wr_id' => [column('id'), parse_csv, strip, gsub('https://cdm21044.contentdm.oclc.org/iiif/', ''), gsub('/manifest.json', ''), gsub(':', '/id/'), prepend('https://cdm21044.contentdm.oclc.org/cdm/ref/collection/')],
     'wr_is_referenced_by' => [column('id'), parse_csv, strip]
   )
 end
