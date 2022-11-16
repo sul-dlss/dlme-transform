@@ -46,13 +46,13 @@ module Macros
       from_settings('agg_data_provider_country_ar')
     end
 
-    # Override the traject default method, passing two values-one English, one Arabic-instead of none
+    # Similar to the traject default method, passing two values-one English, one Arabic-instead of none
     # and adding language keys. Cannot use this method in conjunction with the lang method. Call them
     # on seperate lines.
     # @example
     #  # to_field 'cho_title', extract_tei("tei:title"), lang('en')
-    #  # to_field 'cho_title', extract_tei("tei:title"), default('Untitled', 'بدون عنوان')
-    def default(default_en, default_ar)
+    #  # to_field 'cho_title', extract_tei("tei:title"), default_multi_lang('Untitled', 'بدون عنوان')
+    def default_multi_lang(default_en, default_ar)
       lambda do |_rec, acc|
         if acc.all?(
           &:blank?

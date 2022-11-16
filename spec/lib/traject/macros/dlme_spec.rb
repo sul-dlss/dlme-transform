@@ -20,15 +20,15 @@ RSpec.describe Macros::DLME do
   end
   let(:instance) { klass.new }
 
-  describe '#default' do
+  describe '#default_multi_lang' do
     it 'returns a Proc' do
-      expect(instance.default('Untitled', 'بدون عنوان')).to be_a(Proc)
+      expect(instance.default_multi_lang('Untitled', 'بدون عنوان')).to be_a(Proc)
     end
 
     context 'with no values in accumulator' do
       it 'replaces accumulator with default value' do
         accumulator_original = []
-        callable = instance.default('Untitled', 'بدون عنوان')
+        callable = instance.default_multi_lang('Untitled', 'بدون عنوان')
         expect(callable.call(nil, accumulator_original)).to eq(
           [{ language: 'en', values: ['Untitled'] }, { language: 'ar-Arab', values: ['بدون عنوان'] }]
         )

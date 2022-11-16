@@ -1,6 +1,7 @@
 altaic languages: Altaic Languages
 amharic: Amharic
 arabic: Arabic
+arabic;: Arabic
 aramaic: Aramaic
 aramaic, christian palestinian: Aramaic
 aratur: Aratur
@@ -27,6 +28,9 @@ hebrew (isolated tiberian vocalisation): Hebrew
 hebrew, occasional tiberian vocalisation (approx. 200 fully or partially vocalised forms): Hebrew
 indic languages: Indic Languages
 indonesian: Indonesian
+in ottoman turkish: Turkish, Ottoman (1500-1928)
+in persian: Persian
+in urdu: Urdu
 italian: Italian
 judeo arabic: Judeo-Arabic
 judaeo arabic: Judeo-Arabic
@@ -37,10 +41,13 @@ judaeo-persian: Judeo-Persian
 judaeo-portuguese: Judeo-Portuguese
 judaeo-spanish: Ladino
 latin: Latin
+malay in arabic script: Malay
 malay: Malay
 minaic: Minaic
 old bulgarian: Old Bulgarian
+ottoman (1500-1928): Turkish, Ottoman (1500-1928)
 ottoman turkish: Turkish, Ottoman (1500-1928)
+ottoman turkish,: Turkish, Ottoman (1500-1928)
 pahlavi: Pahlavi
 persian: Persian
 portuguese: Portuguese
@@ -51,6 +58,7 @@ slavic languages: Slavic Languages
 spanish: Spanish
 syriac: Syriac
 tatar: Tatar
+turkish in arabic script: Turkish, Ottoman (1500-1928)
 turkish, ottoman: Turkish, Ottoman (1500-1928)
 turkish, ottoman (1500-1928): Turkish, Ottoman (1500-1928)
 turkish: Turkish

@@ -54,7 +54,7 @@ to_field 'id', column('id'),
          strip,
          gsub('https://iiif.bodleian.ox.ac.uk/iiif/manifest/', ''),
          gsub('.json', '')
-to_field 'cho_title', column('title'), strip, arabic_script_lang_or_default('und-Arab', 'und-Latn'), default('Untitled', 'بدون عنوان')
+to_field 'cho_title', column('title'), strip, arabic_script_lang_or_default('und-Arab', 'und-Latn'), default_multi_lang('Untitled', 'بدون عنوان')
 
 # Cho Other
 to_field 'cho_alternate', column('other-titles'), arabic_script_lang_or_default('und-Arab', 'und-Latn')
