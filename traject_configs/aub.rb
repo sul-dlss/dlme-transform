@@ -63,10 +63,10 @@ to_field 'cho_date_range_hijri', column('date'), parse_csv, strip, parse_range, 
 to_field 'cho_date_range_norm', column('date'), parse_csv, strip, parse_range
 to_field 'cho_dc_rights', column('rights'), parse_csv, strip, lang('en')
 to_field 'cho_description', column('description'), strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
-to_field 'cho_edm_type', path_to_file, split('/'), at_index(2), gsub('_', '-'), prepend('aub-'), translation_map('has_type_from_collection_id'), translation_map('edm_type_from_has_type'), lang('en')
-to_field 'cho_edm_type', path_to_file, split('/'), at_index(2), gsub('_', '-'), prepend('aub-'), translation_map('has_type_from_collection_id'), translation_map('edm_type_from_has_type'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
-to_field 'cho_has_type', path_to_file, split('/'), at_index(2), gsub('_', '-'), prepend('aub-'), translation_map('has_type_from_collection_id'), lang('en')
-to_field 'cho_has_type', path_to_file, split('/'), at_index(2), gsub('_', '-'), prepend('aub-'), translation_map('has_type_from_collection_id'), translation_map('has_type_ar_from_en'), lang('ar-Arab')
+to_field 'cho_edm_type', path_to_file, split('/'), at_index(2), gsub('_', '-'), prepend('aub-'), translation_map('has_type_from_collection'), translation_map('edm_type_from_has_type'), lang('en')
+to_field 'cho_edm_type', path_to_file, split('/'), at_index(2), gsub('_', '-'), prepend('aub-'), translation_map('has_type_from_collection'), translation_map('edm_type_from_has_type'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
+to_field 'cho_has_type', path_to_file, split('/'), at_index(2), gsub('_', '-'), prepend('aub-'), translation_map('has_type_from_collection'), lang('en')
+to_field 'cho_has_type', path_to_file, split('/'), at_index(2), gsub('_', '-'), prepend('aub-'), translation_map('has_type_from_collection'), translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_identifier', column('identifier'), parse_csv, strip
 to_field 'cho_language', column('language'), parse_csv, split(';'),
          split(','), strip, normalize_language, lang('en')

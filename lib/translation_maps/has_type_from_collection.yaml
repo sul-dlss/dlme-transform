@@ -1,4 +1,10 @@
 # Get cho_has_type values from Turkish strings
+aub-aco: Books
+aub-aladab: Serials
+aub-poha: Oral History
+aub-postcards: Postcards
+aub-posters: Posters
+aub-travelbooks: Books
 auc-bint-al-nil: Serials
 auc-coptic: Manuscripts
 auc-creswell: Photographs
@@ -10,3 +16,7 @@ auc-taxiphote-slides: Photographs
 auc-wassef: Drawings
 lau-lebanese-painters: Paintings
 lau-ottoman-embroidery: Embroidery
+princeton-babi-bahai: Manuscripts
+princeton-islamic-manuscripts: Manuscripts
+princeton-movie-posters: Posters
+princeton-ymdi: Manuscripts
