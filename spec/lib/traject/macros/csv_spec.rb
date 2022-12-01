@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'csv'
 require 'macros/csv'
 
 RSpec.describe Macros::Csv do
@@ -40,13 +41,12 @@ RSpec.describe Macros::Csv do
       end
     end
 
-    context 'with an array value with double quotes in accumulator' do
+    context 'with weird comma problem' do
       it 'parses ok' do
-        accumulator_original = [%Q("['""ﻡﺮﻔﻗﺎﺗ ﺏﺮﺳﺎﺌﻟ ﺱﺮﻳﺓ ﻢﻧ ﺏﻮﻤﺑﺎﻳ،"" ﺎﻠﻤﺠﻟﺩ ٣٦', ""'ENCLOSURES TO SECRET LETTERS FROM BOMBAY,' Vol 36""]")]
-        callable = instance.parse_csv
-        result = callable.call(nil, accumulator_original)
-        expect(result.length).to eq(2)
-     end
+        text = %q("'test,'")
+        result = CSV.parse(text, liberal_parsing: true, quote_char: "'")
+        expect(result.length).to eq(1)
+      end
     end
   end
 end
