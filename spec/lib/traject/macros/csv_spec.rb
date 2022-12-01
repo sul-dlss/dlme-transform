@@ -39,5 +39,14 @@ RSpec.describe Macros::Csv do
         expect(callable.call(nil, accumulator_original)).to eq(['this', 'is', 'my', 'dummy', 'string'])
       end
     end
+
+    context 'with an array value with double quotes in accumulator' do
+      it 'parses ok' do
+        accumulator_original = [%Q("['""ﻡﺮﻔﻗﺎﺗ ﺏﺮﺳﺎﺌﻟ ﺱﺮﻳﺓ ﻢﻧ ﺏﻮﻤﺑﺎﻳ،"" ﺎﻠﻤﺠﻟﺩ ٣٦', ""'ENCLOSURES TO SECRET LETTERS FROM BOMBAY,' Vol 36""]")]
+        callable = instance.parse_csv
+        result = callable.call(nil, accumulator_original)
+        expect(result.length).to eq(2)
+     end
+    end
   end
 end
