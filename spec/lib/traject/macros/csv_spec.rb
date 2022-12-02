@@ -43,9 +43,9 @@ RSpec.describe Macros::Csv do
 
     context 'with weird comma problem' do
       it 'parses ok' do
-        text = %q("'test,'")
-        result = CSV.parse(text, liberal_parsing: true, quote_char: "'")
-        expect(result.length).to eq(1)
+        text = [%q(['"مرفقات برسائل سرية من بومباي،" المجلد ٣٦', "'ENCLOSURES TO SECRET LETTERS FROM BOMBAY,' Vol 36"])]
+        result = instance.parse_csv.call(nil, text)
+        expect(result.length).to eq(2)
       end
     end
   end

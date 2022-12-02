@@ -3,6 +3,7 @@
 require 'active_support/inflector' # parameterize method is part of active support
 require 'byebug'
 require 'csv'
+require 'yaml'
 
 module Macros
   # Macros for extracting values from CSV rows
@@ -24,9 +25,8 @@ module Macros
         return [] if accumulator.empty?
         return accumulator unless accumulator.first.match?(/[\[\]]/)
 
-        values = CSV.parse(accumulator.first.gsub("', '", "','").delete('[]'), liberal_parsing: true, quote_char: "'")
-        values.map!(&:compact)
-        accumulator.replace(values.first)
+        values = YAML.safe_load(accumulator.first)
+        accumulator.replace(values)
       end
     end
   end
