@@ -25,6 +25,21 @@ module Macros
         return [] if accumulator.empty?
         return accumulator unless accumulator.first.match?(/[\[\]]/)
 
+        values = CSV.parse(accumulator.first.gsub("', '", "','").delete('[]'), liberal_parsing: true, quote_char: "'")
+        values.map!(&:compact)
+        accumulator.replace(values.first)
+      end
+    end
+
+    # Same as parse_csv but parses YAML instead of CSV.
+    # We ran into an issue when parsing titles that were serialized like: ["'example,']
+    # Assuming this works the goal is to move towards always parsing as YAML
+    # with a parse_list function and to retire parse_csv
+    def parse_yaml
+      lambda do |_row, accumulator|
+        return [] if accumulator.empty?
+        return accumulator unless accumulator.first.match?(/[\[\]]/)
+
         values = YAML.safe_load(accumulator.first)
         accumulator.replace(values)
       end

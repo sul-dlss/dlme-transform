@@ -41,10 +41,10 @@ RSpec.describe Macros::Csv do
       end
     end
 
-    context 'with weird comma problem' do
-      it 'parses ok' do
+    context 'with single quote comma problem' do
+      it 'parses ok as YAML' do
         text = [%q(['"مرفقات برسائل سرية من بومباي،" المجلد ٣٦', "'ENCLOSURES TO SECRET LETTERS FROM BOMBAY,' Vol 36"])]
-        result = instance.parse_csv.call(nil, text)
+        result = instance.parse_yaml.call(nil, text)
         expect(result.length).to eq(2)
       end
     end
