@@ -28,9 +28,9 @@ RSpec.describe DlmeJsonResourceWriter do
       end
 
       it 'logs an error' do
-        allow(::DLME::Utils.logger).to receive(:error)
+        allow(DLME::Utils.logger).to receive(:error)
         put
-        expect(::DLME::Utils.logger).to have_received(:error)
+        expect(DLME::Utils.logger).to have_received(:error)
       end
     end
   end
