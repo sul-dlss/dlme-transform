@@ -54,7 +54,7 @@ to_field 'agg_data_provider_collection_id', literal('qnl')
 # CHO Required
 to_field 'id', column('id'), parse_csv, at_index(0), gsub('_ar', '_dlme'), gsub('_en', '_dlme')
 # 'titleInfo_title' has mixed language content, don't use arabic_script_lang_or_default macro
-to_field 'cho_title', column('title'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_title', column('title'), parse_yaml, strip, arabic_script_lang_or_default('ar-Arab', 'en')
 
 # CHO Other
 to_field 'cho_creator', column('author'), parse_csv, strip, gsub('NOT PROVIDED', ''), prepend('Author: '), arabic_script_lang_or_default('ar-Arab', 'en')

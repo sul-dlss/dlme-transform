@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'csv'
 require 'macros/csv'
 
 RSpec.describe Macros::Csv do
@@ -37,6 +38,14 @@ RSpec.describe Macros::Csv do
         accumulator_original = ["['this', 'is', 'my', 'dummy', 'string']"]
         callable = instance.parse_csv
         expect(callable.call(nil, accumulator_original)).to eq(['this', 'is', 'my', 'dummy', 'string'])
+      end
+    end
+
+    context 'with single quote comma problem' do
+      it 'parses ok as YAML' do
+        text = [%q(['"مرفقات برسائل سرية من بومباي،" المجلد ٣٦', "'ENCLOSURES TO SECRET LETTERS FROM BOMBAY,' Vol 36"])]
+        result = instance.parse_yaml.call(nil, text)
+        expect(result.length).to eq(2)
       end
     end
   end
