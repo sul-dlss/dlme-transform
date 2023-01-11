@@ -58,9 +58,6 @@ to_field 'cho_title', column('title'), strip, arabic_script_lang_or_default('und
 
 # Cho Other
 to_field 'cho_alternate', column('other-titles'), arabic_script_lang_or_default('und-Arab', 'und-Latn')
-to_field 'cho_contributor', column('annotator'), strip, prepend('Annotator: '), arabic_script_lang_or_default('und-Arab', 'und-Latn')
-to_field 'cho_contributor', column('commentators'), strip, prepend('Commentator: '), arabic_script_lang_or_default('und-Arab', 'und-Latn')
-to_field 'cho_contributor', column('compiler'), strip, prepend('Compiler: '), arabic_script_lang_or_default('und-Arab', 'und-Latn')
 to_field 'cho_contributor', column('contributor'), strip, arabic_script_lang_or_default('und-Arab', 'und-Latn')
 to_field 'cho_contributor', column('editors'), strip, prepend('Editor: '), arabic_script_lang_or_default('und-Arab', 'und-Latn')
 to_field 'cho_contributor', column('illustrator'), strip, append('Illustrator: '), arabic_script_lang_or_default('und-Arab', 'und-Latn')
@@ -72,9 +69,8 @@ to_field 'cho_date', column('date-statement'), strip, lang('en')
 to_field 'cho_date_range_norm', column('date-statement'), strip, gsub('/', '-'), parse_range
 to_field 'cho_date_range_hijri', column('date-statement'), strip, gsub('/', '-'), parse_range, hijri_range
 to_field 'cho_dc_rights', literal('Photo: © Bodleian Libraries, University of Oxford, Terms of use: http://digital.bodleian.ox.ac.uk/terms.html'), lang('en')
-to_field 'cho_description', column('additional-information-sources'), strip, prepend('Additional sources: '), lang('en')
 to_field 'cho_description', column('binding'), strip, prepend('Binding: '), lang('en')
-to_field 'cho_description', column('catalogue-description'), strip, prepend('Additional sources: '), lang('en')
+to_field 'cho_description', column('catalogue-description'), strip, lang('en')
 to_field 'cho_description', column('contents'), strip, prepend('Contents: '), lang('en')
 to_field 'cho_description', column('contents-note'), strip, prepend('Contents note: '), lang('en')
 to_field 'cho_description', column('decoration'), strip, prepend('Decoration: '), lang('en')
@@ -87,6 +83,8 @@ to_field 'cho_description', column('record-origin'), strip, prepend('Record orig
 to_field 'cho_edm_type', literal('Text'), lang('en')
 to_field 'cho_edm_type', literal('Text'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_extent', column('extent'), strip, lang('en')
+to_field 'cho_has_type', literal('Manuscripts'), lang('en')
+to_field 'cho_has_type', literal('Manuscripts'), translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_identifier', column('catalogue-identifier'), strip
 to_field 'cho_identifier', column('shelfmark'), strip
 to_field 'cho_is_part_of', column('collection'), strip, lang('en')
@@ -96,7 +94,6 @@ to_field 'cho_medium', column('materials'), strip, lang('en')
 to_field 'cho_provenance', column('former-owner'), strip, prepend('Former owner: '), lang('en')
 to_field 'cho_provenance', column('provenance'), strip, lang('en')
 to_field 'cho_spatial', column('place-of-origin'), strip, lang('en')
-to_field 'cho_subject', column('subject'), strip, lang('en')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
