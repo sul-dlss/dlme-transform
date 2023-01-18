@@ -7,6 +7,7 @@ FROM ruby:2.7.1-alpine3.11
 
 # Create and set the working directory as /opt
 RUN mkdir -p /opt/traject/output
+
 WORKDIR /opt/traject
 
 ENV BUNDLER_VERSION 2.0.2
