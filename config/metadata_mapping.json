@@ -81,6 +81,26 @@
   },
   {
     "trajects": [
+      "aub_bl.rb"
+    ],
+    "paths": [
+      "aub/issa_iskandar_maaluf"
+    ],
+    "extension": ".csv",
+    "settings": {
+      "agg_provider": "American University of Beirut",
+      "agg_provider_country": "Lebanon",
+      "agg_data_provider": "The British Library",
+      "agg_data_provider_country": "United Kingdom",
+      "agg_provider_ar": "الجامعة الأمريكية في بيروت",
+      "agg_provider_country_ar": "لبنان",
+      "agg_data_provider_ar": "المكتبة البريطانية",
+      "agg_data_provider_country_ar": "المملكة المتحدة",
+      "inst_id": "aub"
+    }
+  },
+  {
+    "trajects": [
       "aub_poha.rb"
     ],
     "paths": [
