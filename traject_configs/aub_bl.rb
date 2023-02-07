@@ -52,31 +52,35 @@ to_field 'transform_timestamp', timestamp
 to_field 'dlme_source_file', path_to_file
 
 # Cho Required
-to_field 'id', column('id'), strip
-to_field 'cho_title', column('title'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn'), default_multi_lang('Untitled', 'بدون عنوان')
+to_field 'id', column('Reference'), strip
+to_field 'cho_title', column('Title (In Original Language/Script)'), lang('ar-Arab')
+to_field 'cho_title', column('Title (Transliterated)'), lang('ar-Latn')
 
 # Cho Other
-to_field 'cho_contributor', column('contributor'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
-to_field 'cho_creator', column('creator'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
-to_field 'cho_date', column('date'), parse_csv, strip, lang('en')
-to_field 'cho_date_range_hijri', column('date'), parse_csv, strip, parse_range, hijri_range
-to_field 'cho_date_range_norm', column('date'), parse_csv, strip, parse_range
-to_field 'cho_dc_rights', column('rights'), parse_csv, strip, lang('en')
-to_field 'cho_description', column('description'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
-to_field 'cho_edm_type', path_to_file, split('/'), at_index(2), gsub('_', '-'), prepend('aub-'), translation_map('has_type_from_collection'), translation_map('edm_type_from_has_type'), lang('en')
-to_field 'cho_edm_type', path_to_file, split('/'), at_index(2), gsub('_', '-'), prepend('aub-'), translation_map('has_type_from_collection'), translation_map('edm_type_from_has_type'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
-to_field 'cho_has_type', path_to_file, split('/'), at_index(2), gsub('_', '-'), prepend('aub-'), translation_map('has_type_from_collection'), lang('en')
-to_field 'cho_has_type', path_to_file, split('/'), at_index(2), gsub('_', '-'), prepend('aub-'), translation_map('has_type_from_collection'), translation_map('has_type_ar_from_en'), lang('ar-Arab')
-to_field 'cho_identifier', column('identifier'), parse_csv, strip
-to_field 'cho_language', column('language'), parse_csv, split(';'),
-         split(','), strip, normalize_language, lang('en')
-to_field 'cho_language', column('language'), parse_csv, split(';'),
-         split(','), strip, normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
-to_field 'cho_publisher', column('publisher'), parse_csv, strip, lang('en')
-to_field 'cho_source', column('source'), parse_csv, strip, lang('en')
-to_field 'cho_spatial', column('coverage'), parse_csv, strip, lang('en')
-to_field 'cho_subject', column('subject'), parse_csv, strip, lang('en')
-to_field 'cho_type', column('type'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
+to_field 'cho_contributor', column('Editor(s) of the Original Material'), prepend('Editor: '), strip, lang('en')
+to_field 'cho_contributor', column('Scribe(s) of the Original Material'), prepend('Scribe: '), strip, lang('en')
+to_field 'cho_creator', column('Author(s) / Creators of the Original Material'), parse_csv, strip, lang('en')
+to_field 'cho_date', column('Dates of Material (Gregorian Calendar)'), parse_csv, strip, lang('en')
+to_field 'cho_date_range_hijri', column('Dates of Material (Gregorian Calendar)'), parse_csv, strip, parse_range, hijri_range
+to_field 'cho_date_range_norm', column('Dates of Material (Gregorian Calendar)'), parse_csv, strip, parse_range
+to_field 'cho_dc_rights', literal('Public domain'), lang('en')
+to_field 'cho_description', column('Description'), strip, lang('en')
+to_field 'cho_description', column('Condition of Original Material'), prepend('Condition: '), strip, lang('en')
+to_field 'cho_edm_type', literal('Manuscripts'), translation_map('edm_type_from_has_type'), lang('en')
+to_field 'cho_edm_type', literal('Manuscripts'), translation_map('edm_type_from_has_type'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
+to_field 'cho_extent', column('Number and Type of Original Material'), strip, lang('en')
+to_field 'cho_extent', column('Size and Dimensions of Original Material'), strip, lang('en')
+to_field 'cho_has_type', literal('Manuscripts'), lang('en')
+to_field 'cho_has_type', literal('Manuscripts'), lang('en'), translation_map('has_type_ar_from_en'), lang('ar-Arab')
+to_field 'cho_identifier', column('Original Reference'), parse_csv, strip
+to_field 'cho_language', column('Languages of Material'), lang('en')
+to_field 'cho_language', column('Languages of Material'), translation_map('lang_ar_from_en'), lang('ar-Arab')
+to_field 'cho_publisher', column('Publisher(s) of the Original Material'), parse_csv, strip, lang('en')
+to_field 'cho_provenance', column('Custodial History'), parse_csv, strip, prepend('Custodial history: '), lang('en')
+to_field 'cho_spatial', column('Country of Origin'), parse_csv, split('|'), strip, lang('en')
+to_field 'cho_subject', column('Other Related Subjects'), parse_csv, split('|'), strip, lang('en')
+to_field 'cho_subject', column('Related Subjects'), parse_csv, split('|'), strip, lang('en')
+to_field 'cho_type', column('Content Type'), parse_csv, strip, lang('en')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
@@ -86,17 +90,15 @@ to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_dc_rights' => [column('rights')],
-    'wr_edm_rights' => [literal('CC BY-ND: https://creativecommons.org/licenses/by-nd/4.0/')],
-    'wr_id' => [column('identifier'), strip]
+    'wr_id' => [column('File Reference'), gsub('/', '-'), strip, prepend('https://eap.bl.uk/archive-file/')],
+    'wr_is_referenced_by' => [column('File Reference'), gsub('/', '-'), strip, prepend('https://eap.bl.uk/archive-file/'), append('/manifest')]
   )
 end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_dc_rights' => [column('rights')],
-    'wr_edm_rights' => [literal('CC BY-ND: https://creativecommons.org/licenses/by-nd/4.0/')],
-    'wr_id' => [column('description'), parse_csv, at_index(0), strip]
+    'wr_id' => [column('File Reference'), gsub('/', '_'), strip, prepend('https://images.eap.bl.uk/EAP1423/'), append('/11.jp2/full/!600,300/0/default.jpg')],
+    'wr_is_referenced_by' => [column('File Reference'), gsub('/', '-'), strip, prepend('https://eap.bl.uk/archive-file/'), append('/manifest')]
   )
 end
 to_field 'agg_provider', provider, lang('en')
