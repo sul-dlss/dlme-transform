@@ -78,8 +78,8 @@ to_field 'cho_language', column('Languages of Material'), translation_map('lang_
 to_field 'cho_publisher', column('Publisher(s) of the Original Material'), parse_csv, strip, lang('en')
 to_field 'cho_provenance', column('Custodial History'), parse_csv, strip, prepend('Custodial history: '), lang('en')
 to_field 'cho_spatial', column('Country of Origin'), parse_csv, split('|'), strip, lang('en')
-to_field 'cho_subject', column('Other Related Subjects'), parse_csv, split('|'), strip,  lang('en')
-to_field 'cho_subject', column('Related Subjects'), parse_csv, split('|'), strip,  lang('en')
+to_field 'cho_subject', column('Other Related Subjects'), parse_csv, split('|'), strip, lang('en')
+to_field 'cho_subject', column('Related Subjects'), parse_csv, split('|'), strip, lang('en')
 to_field 'cho_type', column('Content Type'), parse_csv, strip, lang('en')
 
 # Agg
@@ -91,14 +91,14 @@ to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
     'wr_id' => [column('File Reference'), gsub('/', '-'), strip, prepend('https://eap.bl.uk/archive-file/')],
-    'wr_is_referenced_by' => [column('File Reference'), gsub('/', '-'), strip, prepend("https://eap.bl.uk/archive-file/"), append('/manifest')]
+    'wr_is_referenced_by' => [column('File Reference'), gsub('/', '-'), strip, prepend('https://eap.bl.uk/archive-file/'), append('/manifest')]
   )
 end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
     'wr_id' => [column('File Reference'), gsub('/', '_'), strip, prepend('https://images.eap.bl.uk/EAP1423/'), append('/11.jp2/full/!600,300/0/default.jpg')],
-    'wr_is_referenced_by' => [column('File Reference'), gsub('/', '-'), strip, prepend("https://eap.bl.uk/archive-file/"), append('/manifest')]
+    'wr_is_referenced_by' => [column('File Reference'), gsub('/', '-'), strip, prepend('https://eap.bl.uk/archive-file/'), append('/manifest')]
   )
 end
 to_field 'agg_provider', provider, lang('en')

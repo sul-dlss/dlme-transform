@@ -53,7 +53,7 @@ to_field 'dlme_source_file', path_to_file
 
 # Cho Required
 to_field 'id', column('id'), strip
-to_field 'cho_title', column('title'), arabic_script_lang_or_default('ar-Arab', 'und-Latn'), default('Untitled', 'بدون عنوان')
+to_field 'cho_title', column('title'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn'), default_multi_lang('Untitled', 'بدون عنوان')
 
 # Cho Other
 to_field 'cho_contributor', column('contributor'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
@@ -62,7 +62,7 @@ to_field 'cho_date', column('date'), parse_csv, strip, lang('en')
 to_field 'cho_date_range_hijri', column('date'), parse_csv, strip, parse_range, hijri_range
 to_field 'cho_date_range_norm', column('date'), parse_csv, strip, parse_range
 to_field 'cho_dc_rights', column('rights'), parse_csv, strip, lang('en')
-to_field 'cho_description', column('description'), strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
+to_field 'cho_description', column('description'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
 to_field 'cho_edm_type', path_to_file, split('/'), at_index(2), gsub('_', '-'), prepend('aub-'), translation_map('has_type_from_collection'), translation_map('edm_type_from_has_type'), lang('en')
 to_field 'cho_edm_type', path_to_file, split('/'), at_index(2), gsub('_', '-'), prepend('aub-'), translation_map('has_type_from_collection'), translation_map('edm_type_from_has_type'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_has_type', path_to_file, split('/'), at_index(2), gsub('_', '-'), prepend('aub-'), translation_map('has_type_from_collection'), lang('en')
@@ -75,7 +75,7 @@ to_field 'cho_language', column('language'), parse_csv, split(';'),
 to_field 'cho_publisher', column('publisher'), parse_csv, strip, lang('en')
 to_field 'cho_source', column('source'), parse_csv, strip, lang('en')
 to_field 'cho_spatial', column('coverage'), parse_csv, strip, lang('en')
-to_field 'cho_subject', column('subject'), parse_csv, strip,  lang('en')
+to_field 'cho_subject', column('subject'), parse_csv, strip, lang('en')
 to_field 'cho_type', column('type'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
 
 # Agg
