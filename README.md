@@ -81,7 +81,7 @@ the specified data directory. See "Configuring transforms" below.
 ```shell
 docker run --rm -e SKIP_FETCH_DATA=true \
                 -v $(pwd)/.:/opt/traject \
-                -v $(pwd)/../dlme-metadata:/opt/traject/data \
+                -v $(pwd)/../dlme-metadata:/opt/airflow/working \
                 -v $(pwd)/output:/opt/traject/output \
                 suldlss/dlme-transform:latest \
                 stanford/maps/data/kj751hs0595.mods
@@ -101,7 +101,7 @@ The `-w` switch can be used to debug transformations. It will stop the transform
 ```shell
 docker run --rm -e SKIP_FETCH_DATA=true \
                 -v $(pwd)/.:/opt/traject \
-                -v $(pwd)/../dlme-metadata:/opt/traject/data \
+                -v $(pwd)/../dlme-metadata:/opt/airflow/working \
                 -v $(pwd)/output:/opt/traject/output \
                 suldlss/dlme-transform:latest \
                 stanford/maps/data/kj751hs0595.mods \
@@ -136,7 +136,7 @@ docker run --rm -e PUSH_TO_AWS=true \
                 -e SNS_TOPIC_ARN=arn:aws:sns:us-west-2:418214828013:dlme-status \
                 -e SKIP_FETCH_DATA=true \
                 -v $(pwd)/../dlme-transform:/opt/traject \
-                -v $(pwd)/../dlme-metadata:/opt/traject/data \
+                -v $(pwd)/../dlme-metadata:/opt/airflow/working \
                 -v $(pwd)/tmp/output:/opt/traject/output \
                 --network="host" \
                 suldlss/dlme-transform:latest \
