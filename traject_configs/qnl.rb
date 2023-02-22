@@ -68,13 +68,13 @@ to_field 'cho_description', column('abstract'), parse_csv, at_index(0), strip, p
 to_field 'cho_description', column('abstract'), parse_csv, at_index(1), strip, prepend('Abstract: '), lang('en')
 # 'physicalDescription_extent' has mixed language content, don't use arabic_script_lang_or_default macro
 to_field 'cho_description', column('physicalDescription_extent'), parse_csv, at_index(0), strip, prepend('الوصف المادي: '), lang('ar-Arab')
-to_field 'cho_description', column('physicalDescription_extent'), parse_csv, at_index(1), strip, prepend('Physical description: '), lang('ar-Arab')
+to_field 'cho_description', column('physicalDescription_extent'), parse_csv, at_index(1), strip, prepend('Physical description: '), lang('en')
 to_field 'cho_edm_type', column('genre'), parse_csv, at_index(1), normalize_has_type, normalize_edm_type, lang('en')
 to_field 'cho_edm_type', column('genre'), parse_csv, at_index(1), normalize_has_type, normalize_edm_type, translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_has_type', column('genre'), parse_csv, at_index(1), normalize_has_type, lang('en')
 to_field 'cho_has_type', column('genre'), parse_csv, at_index(1), normalize_has_type, translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_identifier', column('identifier'), parse_csv, strip
-to_field 'cho_identifier', column('location_shelfLocator'), parse_csv, strip
+to_field 'cho_identifier', column('location_shelfLocator'), parse_csv, at_index(0), strip
 to_field 'cho_is_part_of', column('location_physicalLocation'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_language', column('language_languageTerm'), parse_csv, at_index(0), normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
 to_field 'cho_language', column('language_languageTerm'), parse_csv, at_index(0), normalize_language, lang('en')
