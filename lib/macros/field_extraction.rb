@@ -13,6 +13,19 @@ module Macros
     }.freeze
     private_constant :NS
 
+    def column_or_other_column(header_or_index, second_header_or_index, options = {})
+        lambda do |row, accumulator, _context|
+          return if row[header_or_index].to_s.empty? && row[second_header_or_index].to_s.empty?
+          result = Array(row[header_or_index].to_s) unless row[header_or_index].to_s.empty?
+          result = Array(row[second_header_or_index].to_s) if row[header_or_index].to_s.empty?
+          unless options.empty?
+            Deprecation.warn(self, "passing options to column is deprecated and will be removed in the next major release. Use the Traject 3 pipeline instead")
+          end
+          result = TrajectPlus::Extraction.apply_extraction_options(result, options)
+          accumulator.concat(result)
+        end
+      end
+
     # Extracts fields_to_extract from json_list
     def extract_json_list(json_list, field_to_extract)
       lambda do |record, accumulator|
