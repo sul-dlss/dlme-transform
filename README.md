@@ -108,39 +108,20 @@ docker run --rm -e SKIP_FETCH_DATA=true \
                 -w
 ```
 
-Sending output to S3 bucket and publishing an SNS notification:
-```shell
-docker run --rm -e S3_BUCKET=dlme-metadata-development \
-                -e AWS_ACCESS_KEY_ID=AKIAIJIZROPT5GQ \
-                -e AWS_SECRET_ACCESS_KEY=oLNK4CF/5L/M6DXbM2JNmFrpGgbxcE5 \
-                -e SNS_TOPIC_ARN=arn:aws:sns:us-west-2:418214828013:dlme-development \
-                suldlss/dlme-transform:latest \
-                stanford/maps
-```
-Note that actual S3 credentials are available from `shared_configs`.
-
 For more information on traject, [read the documentation](https://github.com/traject/traject#Traject)
-
 
 Using dlme-transform in the deployed environments requires a DLME account with ? admin ? access so you can view the form here: https://spotlight.dev.dlmenetwork.org/transform .
 
-### Sending tranformation result to S3
+### Sending tranformation result to the local stage server
+
+This requires that you are configured to login to the server and have `kinit` setup properly. If you have any questions/issues with your `kinit` setup, please check with the
+ops team in the `#dlss-operations` slack channel.
+
+The intermediate representation is now stored in a shared `datashare` location between airflow and the web app. After you have `kinit`-ed your account, use `scp` to copy the file
+to the dlme-airflow-dev server:
 
 ```
-docker run --rm -e PUSH_TO_AWS=true \
-                -e S3_BUCKET=dlme-metadata-dev \
-                -e DEV_ROLE_ARN=[DEVELOPERS ROLE ARN] \
-                -e AWS_ACCESS_KEY_ID=[YOUR ACCESS KEY] \
-                -e AWS_SECRET_ACCESS_KEY=[YOUR SECRET ACCESS KEY] \
-                -e AWS_DEFAULT_REGION=us-west-2 \
-                -e SNS_TOPIC_ARN=arn:aws:sns:us-west-2:418214828013:dlme-status \
-                -e SKIP_FETCH_DATA=true \
-                -v $(pwd)/../dlme-transform:/opt/traject \
-                -v $(pwd)/../dlme-metadata:/opt/airflow/working \
-                -v $(pwd)/tmp/output:/opt/traject/output \
-                --network="host" \
-                suldlss/dlme-transform:latest \
-                stanford/rumsey-maps/data/rumsey-maps-1.json
+scp [~/Path/To/NDJson/File] dlme@dlme-airflow-dev.stanford.edu:/opt/app/dlme/datashare
 ```
 
 ## Configuring transforms
@@ -194,7 +175,7 @@ Note that this task modifies `config/metadata_mapping.json`, and you will need t
 dlme-transform is deployed by publishing an image to docker hub. CircleCI should automatically create a new latest image when new commits are pushed to main (i.e. merged PRs).   
 You can confirm this by looking for the successful "publish-latest" step completion https://circleci.com/gh/sul-dlss/dlme-transform or by looking for the timestamp on the latest image at Docker Hub:  https://hub.docker.com/r/suldlss/dlme-transform/tags.
 
-The terraform config tells AWS to use the `latest` docker image of dlme-transform. As dlme-transform is run as a task only and not as an ECS service, the tagged `suldlss/dlme-transform:latest` is always pulled from docker hub on launch.
+Airflow uses the `latest` docker image of dlme-transform. As dlme-transform is run as a docker-in-docker task only and not a standlone service, the tagged `suldlss/dlme-transform:latest` is always pulled from docker hub on launch.
 
 See the dlss Terraform README:  https://github.com/sul-dlss/terraform-aws
 
