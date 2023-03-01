@@ -50,7 +50,7 @@ to_field 'agg_data_provider_collection', path_to_file, split('/'), at_index(3), 
 to_field 'agg_data_provider_collection_id', path_to_file, split('/'), at_index(3), gsub('_', '-'), prepend('auc-')
 
 # File path
-to_field 'dlme_source_file', path_to_file
+to_field 'dlme_source_file', path_to_file, split('/'), at_index(3)
 
 # Cho Required
 to_field 'id', column('id'), parse_csv, strip, gsub('/manifest.json', ''), gsub('https://cdm15795.contentdm.oclc.org/iiif/', '')
@@ -115,6 +115,9 @@ to_field 'cho_edm_type', path_to_file, split('/'), at_index(3), gsub('_', '-'), 
 to_field 'cho_extent', column('extent'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_extent', column('size-in-cm'), parse_csv, strip, prepend('Size in cm: '), arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_format', column('format'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'en')
+# Using collection identifier to map to has type since type values are vague
+to_field 'cho_has_type', path_to_file, split('/'), at_index(3), gsub('_', '-'), prepend('auc-'), normalize_has_type, lang('en')
+to_field 'cho_has_type', path_to_file, split('/'), at_index(3), gsub('_', '-'), prepend('auc-'), normalize_has_type, translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_has_type', column('genre'), parse_csv, strip, normalize_has_type, lang('en')
 to_field 'cho_has_type', column('genre'), parse_csv, strip, normalize_has_type, translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_has_type', column('genre-aat'), parse_csv, strip, normalize_has_type, lang('en')
@@ -125,9 +128,6 @@ to_field 'cho_has_type', column('physical-format'), parse_csv, strip, normalize_
 to_field 'cho_has_type', column('physical-format'), parse_csv, strip, normalize_has_type, translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_has_type', column('type'), parse_csv, strip, normalize_has_type, lang('en')
 to_field 'cho_has_type', column('type'), parse_csv, strip, normalize_has_type, translation_map('has_type_ar_from_en'), lang('ar-Arab')
-# Using collection identifier to map to has type since type values are vague
-to_field 'cho_has_type', path_to_file, split('/'), at_index(3), gsub('_', '-'), prepend('auc-'), normalize_has_type, lang('en')
-to_field 'cho_has_type', path_to_file, split('/'), at_index(3), gsub('_', '-'), prepend('auc-'), normalize_has_type, translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_identifier', column('call-number'), parse_csv, strip
 to_field 'cho_identifier', column('identifier'), parse_csv, strip
 to_field 'cho_identifier', column('object-identifier'), parse_csv, strip
