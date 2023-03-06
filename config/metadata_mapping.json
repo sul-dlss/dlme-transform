@@ -926,7 +926,7 @@
     "paths": [
       "qnl/british_library_combined"
     ],
-    "extension": ".csv",
+    "extension": ".json",
     "settings": {
       "agg_provider": "Qatar National Library",
       "agg_provider_country": "Qatar",
