@@ -159,7 +159,6 @@ to_field 'cho_type', column('getty-aat'), parse_csv, strip, arabic_script_lang_o
 to_field 'cho_type', column('type'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_type', column('worktype-of-printed-material'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'en')
 
-
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
 to_field 'agg_data_provider', data_provider_ar, lang('ar-Arab')
