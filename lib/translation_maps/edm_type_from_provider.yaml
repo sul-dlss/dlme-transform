@@ -1,0 +1,3 @@
+# Basic mapping from has_type_values to edm_type_values
+audio: Sound
+video: Video

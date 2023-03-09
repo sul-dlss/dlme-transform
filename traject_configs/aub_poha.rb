@@ -4,7 +4,6 @@ require 'dlme_json_resource_writer'
 require 'dlme_debug_writer'
 require 'macros/aub'
 require 'macros/collection'
-require 'macros/csv'
 require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
@@ -20,7 +19,7 @@ require 'traject_plus'
 
 extend Macros::AUB
 extend Macros::Collection
-extend Macros::Csv
+# extend Macros::Xml
 extend Macros::DLME
 extend Macros::DateParsing
 extend Macros::EachRecord
@@ -33,16 +32,16 @@ extend Macros::Timestamp
 extend Macros::TitleExtraction
 extend Macros::Version
 extend TrajectPlus::Macros
-extend TrajectPlus::Macros::Csv
+extend TrajectPlus::Macros::Xml
 
 settings do
   provide 'writer_class_name', 'DlmeJsonResourceWriter'
-  provide 'reader_class_name', 'TrajectPlus::CsvReader'
+  provide 'reader_class_name', 'TrajectPlus::XmlReader'
 end
 
-to_field 'agg_data_provider_collection_id', literal('aub-poha')
-to_field 'agg_data_provider_collection', literal('aub-poha'), translation_map('agg_collection_from_provider_id'), lang('en')
-to_field 'agg_data_provider_collection', literal('aub-poha'), translation_map('agg_collection_from_provider_id'), translation_map('agg_collection_ar_from_en'), lang('ar-Arab')
+to_field 'agg_data_provider_collection', path_to_file, split('/'), at_index(3), gsub('_', '-'), prepend('aub-'), translation_map('agg_collection_from_provider_id'), lang('en')
+to_field 'agg_data_provider_collection', path_to_file, split('/'), at_index(3), gsub('_', '-'), prepend('aub-'), translation_map('agg_collection_from_provider_id'), translation_map('agg_collection_ar_from_en'), lang('ar-Arab')
+to_field 'agg_data_provider_collection_id', path_to_file, split('/'), at_index(3), gsub('_', '-'), prepend('aub-')
 
 # Set Version & Timestamp on each record
 to_field 'transform_version', version
@@ -52,29 +51,56 @@ to_field 'transform_timestamp', timestamp
 to_field 'dlme_source_file', path_to_file
 
 # Cho Required
-to_field 'id', column('id'), strip
-to_field 'cho_title', json_title_or('title', 'description'), arabic_script_lang_or_default('ar-Arab', 'und-Latn'), default('Untitled', 'بدون عنوان')
+to_field 'id', extract_poha('//identifier'), prepend('aub-'), strip
+to_field 'cho_title', extract_poha('//dc:title'), arabic_script_lang_or_default('ar-Arab', 'und-Latn'), default_multi_lang('Untitled', 'بدون عنوان')
 
 # Cho Other
-to_field 'cho_creator', column('creator'), strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
-to_field 'cho_date', column('date'), strip, lang('en')
-to_field 'cho_date_range_hijri', column('date'), strip, parse_range, hijri_range
-to_field 'cho_date_range_norm', column('date'), strip, parse_range
-to_field 'cho_dc_rights', column('rights'), lang('en')
-to_field 'cho_description', column('description'), strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
-to_field 'cho_edm_type', literal('Image'), lang('en')
-to_field 'cho_edm_type', literal('Image'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
-to_field 'cho_has_type', literal('Posters'), lang('en')
-to_field 'cho_has_type', literal('Posters'), translation_map('has_type_ar_from_en'), lang('ar-Arab')
-to_field 'cho_identifier', column('identifier'), strip
-to_field 'cho_language', column('language'), split(';'),
+to_field 'cho_creator', extract_poha('//dc:interviewee'), strip, prepend('Interviewee: '), lang('en')
+to_field 'cho_creator', extract_poha('//dc:interviewer'), strip, prepend('Interviewer: '), lang('en')
+to_field 'cho_creator', extract_poha('//dc:intervieweeAR'), strip, prepend('الذي تجري معه المقابلة: '), lang('ar-Arab')
+to_field 'cho_creator', extract_poha('//dc:interviewerAR'), strip, prepend('المحاور: '), lang('ar-Arab')
+to_field 'cho_contributor', extract_poha('//dc:contributor'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_date', extract_poha('//dc:date'), strip, lang('en')
+to_field 'cho_date_range_hijri', extract_poha('//dc:date'), strip, parse_range, hijri_range
+to_field 'cho_date_range_norm', extract_poha('//dc:date'), strip, parse_range
+to_field 'cho_dc_rights', extract_poha('//dc:rights'), lang('en')
+to_field 'cho_description', extract_poha('//dc:description'), strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
+to_field 'cho_description', extract_poha('//dc:biography'), strip, prepend('Biography: '), lang('en')
+to_field 'cho_description', extract_poha('//dc:biographyAR'), strip, prepend('سيرة شخصية: '), lang('ar-Arab')
+to_field 'cho_description', extract_poha('//dc:otherF'), strip, prepend('Families: '), lang('en')
+to_field 'cho_description', extract_poha('//dc:otherFAR'), strip, prepend('العائلات: '), lang('ar-Arab')
+to_field 'cho_description', extract_poha('//dc:otherLPBI'), strip, prepend('Landmarks-Public Institutions: '), lang('en')
+to_field 'cho_description', extract_poha('//dc:otherLPBIAR'), strip, prepend('معالم - مؤسسات عامة: '), lang('ar-Arab')
+to_field 'cho_description', extract_poha('//dc:otherLPRI'), strip, prepend('Landmarks-Private Institutions: '), lang('en')
+to_field 'cho_description', extract_poha('//dc:otherLPRIAR'), strip, prepend('المعالم - المؤسسات الخاصة: '), lang('ar-Arab')
+to_field 'cho_description', extract_poha('//dc:otherLPW'), strip, prepend('Landmarks-Places of Worship: '), lang('en')
+to_field 'cho_description', extract_poha('//dc:otherLPWAR'), strip, prepend('المعالم - دور العبادة: '), lang('ar-Arab')
+to_field 'cho_description', extract_poha('//dc:otherSF'), strip, prepend('Significant figures: '), lang('en')
+to_field 'cho_description', extract_poha('//dc:otherSFAR'), strip, prepend('الناس المهمين: '), lang('ar-Arab')
+to_field 'cho_description', extract_poha('//dc:toc'), strip, prepend('Table of contents: '), lang('en')
+to_field 'cho_description', extract_poha('//dc:tocAR'), strip, prepend('جدول المحتويات: '), lang('ar-Arab')
+# We are intentionally not mapping edm_type from has_type since has type is always 'Oral History'
+# and edm_type may be 'Video' or 'Sound'
+to_field 'cho_edm_type', extract_poha('//dc:format'), first_only, translation_map('edm_type_from_provider'), lang('en')
+to_field 'cho_edm_type', extract_poha('//dc:format'), first_only, translation_map('edm_type_from_provider'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
+to_field 'cho_extent', extract_poha('//dc:duration'), strip, prepend('Duration: '), lang('en')
+to_field 'cho_extent', extract_poha('//dc:duration'), strip, prepend('مدة: '), lang('ar-Arab')
+to_field 'cho_format', extract_poha('//dc:format'), strip, lang('en')
+to_field 'cho_has_type', literal('Oral History'), lang('en')
+to_field 'cho_has_type', literal('Oral History'), translation_map('has_type_ar_from_en'), lang('ar-Arab')
+to_field 'cho_identifier', extract_poha('//dc:identifier'), strip
+to_field 'cho_is_part_of', extract_poha('//dc:relation'), strip, lang('en')
+to_field 'cho_language', extract_poha('//dc:language'), split(';'),
          split(','), strip, normalize_language, lang('en')
-to_field 'cho_language', column('language'), split(';'),
+to_field 'cho_language', extract_poha('//dc:language'), split(';'),
          split(','), strip, normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
-to_field 'cho_publisher', column('publisher'), strip, lang('en')
-to_field 'cho_spatial', column('coverage'), lang('en')
-to_field 'cho_subject', column('subject'), strip, lang('en')
-to_field 'cho_type', column('type'), arabic_script_lang_or_default('ar-Arab', 'und-Latn')
+to_field 'cho_publisher', extract_poha('//dc:publisher'), strip, lang('en')
+to_field 'cho_spatial', extract_poha('//dc:village'), prepend('Village: '), lang('en')
+to_field 'cho_spatial', extract_poha('//dc:villageAR'), prepend('قرية: '), lang('ar-Arab')
+to_field 'cho_subject', extract_poha('//dc:otherSubject'), split(';'), strip, lang('en')
+to_field 'cho_subject', extract_poha('//dc:subject'), strip, lang('en')
+to_field 'cho_subject', extract_poha('//dc:subjectAR'), strip, lang('ar-Arab')
+to_field 'cho_type', extract_poha('//dc:type'), arabic_script_lang_or_default('ar-Arab', 'und-Latn')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
@@ -84,17 +110,17 @@ to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_dc_rights' => [column('rights')],
+    'wr_dc_rights' => [extract_poha('rights')],
     'wr_edm_rights' => [literal('CC BY-ND: https://creativecommons.org/licenses/by-nd/4.0/')],
-    'wr_id' => [column('identifier'), strip]
+    'wr_id' => [extract_poha('//dc:identifierURI'), strip]
   )
 end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_dc_rights' => [column('rights')],
+    'wr_dc_rights' => [extract_poha('rights')],
     'wr_edm_rights' => [literal('CC BY-ND: https://creativecommons.org/licenses/by-nd/4.0/')],
-    'wr_id' => [column('id'), prepend('https://libraries.aub.edu.lb/xtf/data/posters/'), append('/thumb.jpg')]
+    'wr_id' => [extract_poha('//dc:thumbnail')]
   )
 end
 to_field 'agg_provider', provider, lang('en')
