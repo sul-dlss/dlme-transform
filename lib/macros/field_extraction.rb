@@ -14,12 +14,11 @@ module Macros
     private_constant :NS
 
     # Extracts value from the first column if available, or the second column if the first is not available.
-    def column_or_other_column(column, second_column)
+    def column_or_other_column(column, second_column) # rubocop:disable Metrics/AbcSize
       lambda do |row, accumulator, _context|
         return if row[column].to_s.empty? && row[second_column].to_s.empty?
 
-        result = Array(row[column].to_s) unless row[column].to_s.empty? 
-        result = Array(row[second_column].to_s) if row[column].to_s.empty?
+        result = row[column].to_s.empty? ? Array(row[second_column].to_s) : Array(row[column].to_s)
         accumulator.concat(result)
       end
     end
