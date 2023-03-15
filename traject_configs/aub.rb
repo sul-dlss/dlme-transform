@@ -88,7 +88,7 @@ to_field 'agg_is_shown_at' do |_record, accumulator, context|
     context,
     'wr_dc_rights' => [column('rights')],
     'wr_edm_rights' => [literal('CC BY-ND: https://creativecommons.org/licenses/by-nd/4.0/')],
-    'wr_id' => [column('identifier'), strip]
+    'wr_id' => [column('identifier'), parse_csv, at_index(0), strip]
   )
 end
 to_field 'agg_preview' do |_record, accumulator, context|
