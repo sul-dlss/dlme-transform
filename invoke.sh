@@ -6,7 +6,7 @@ DATA_DIR=$DATA_PATH
 DATA_DIR=${DATA_DIR//\//-}
 DEBUG_FLAG=$2
 SOURCE_DATA="/opt/airflow/working"
-METADATA_PATH="/opt/airflow/metadata/$DATA_PATH"
+METADATA_PATH="/opt/airflow/metadata"
 mkdir -p ${METADATA_PATH}
 
 echo "Starting dlme-transform for: ${DATA_PATH}"
