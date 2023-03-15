@@ -14,12 +14,15 @@ module Macros
     private_constant :NS
 
     # Extracts value from the first column if available, or the second column if the first is not available.
-    def column_or_other_column(header_or_index, second_header_or_index)
+    def column_or_other_column(column, second_column)
       lambda do |row, accumulator, _context|
-        return if row[header_or_index].to_s.empty? && row[second_header_or_index].to_s.empty?
+        return if row[column].to_s.empty? && row[second_column].to_s.empty?
 
-        result = Array(row[header_or_index].to_s) unless row[header_or_index].to_s.empty?
-        result = Array(row[second_header_or_index].to_s) if row[header_or_index].to_s.empty?
+        if row[column].to_s.empty?
+          result = Array(row[second_column].to_s)
+        else
+          result = Array(row[column].to_s)
+        end
         accumulator.concat(result)
       end
     end
