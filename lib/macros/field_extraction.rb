@@ -18,11 +18,8 @@ module Macros
       lambda do |row, accumulator, _context|
         return if row[column].to_s.empty? && row[second_column].to_s.empty?
 
-        if row[column].to_s.empty?
-          result = Array(row[second_column].to_s)
-        else
-          result = Array(row[column].to_s)
-        end
+        result = Array(row[column].to_s) unless row[column].to_s.empty? 
+        result = Array(row[second_column].to_s) if row[column].to_s.empty?
         accumulator.concat(result)
       end
     end
