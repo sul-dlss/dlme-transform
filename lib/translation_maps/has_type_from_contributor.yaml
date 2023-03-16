@@ -37,6 +37,7 @@ aquamaniles: Containers
 archaeological sites: Archaeological Sites
 archer's ring: Armaments
 architectural: Structures
+architectural drawings (visual works): Drawings
 architectural element: Structures
 architectural relief: Structures
 architecture: Structures
@@ -169,6 +170,7 @@ brick fragment: Other Objects
 brick stamp: Other Objects
 bridle: Other Objects
 brim: Other Objects
+broadcast: Radio Program
 brochure: Other Texts
 bronze fragment: Other Objects
 brooch: Adornments
@@ -1003,6 +1005,7 @@ pyxis (uncertain): Other Objects
 pyxis lid: Containers
 quarter dinar: Coins
 quiver: Armaments
+radio program: Radio Program
 railings (balustrades): Structures
 rattle: Recreational Artifacts
 rattle (uncertain): Other Objects
@@ -1023,8 +1026,6 @@ religious structures, temples, shrines: Structures
 reliquary figures: Other Objects
 remains, animal: Other Objects
 remains, human: Other Objects
-report: Other Texts
-reproduction: Other Objects
 rhyton: Containers
 rhyton fragment: Containers
 ribbon: Other Objects
@@ -1238,7 +1239,7 @@ stelae: Funerary Objects
 stemmed bowl: Containers
 stick: Other Objects
 stiletto: Armaments
-still image: Other Images
+still image: Photographs
 stirrup jar: Containers
 stirrup vase: Containers
 stone: Other Objects
