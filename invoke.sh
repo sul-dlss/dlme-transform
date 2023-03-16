@@ -4,6 +4,7 @@ set -e
 DATA_PATH=${DATA_PATH:-$1} # Get the data dir from the environment first if it exists.
 DATA_DIR=$DATA_PATH
 DATA_DIR=${DATA_DIR//\//-}
+DATA_DIR=${DATA_DIR//_/-}
 DEBUG_FLAG=$2
 SOURCE_DATA="/opt/airflow/working"
 METADATA_PATH="/opt/airflow/metadata"
