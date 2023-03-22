@@ -52,7 +52,7 @@ to_field 'agg_data_provider_collection', literal('qnl'), translation_map('agg_co
 to_field 'agg_data_provider_collection_id', literal('qnl')
 
 # CHO Required
-to_field 'id', extract_json('.id[0]'), gsub('_ar', '_dlme'), gsub('_en', '_dlme')
+to_field 'id', extract_json('.id'), gsub('_ar', '_dlme'), gsub('_en', '_dlme')
 # 'titleInfo_title' has mixed language content, don't use arabic_script_lang_or_default macro
 to_field 'cho_title', extract_json('.title[0]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
 
@@ -72,15 +72,15 @@ to_field 'cho_edm_type', extract_json('.genre'), at_index(0), normalize_has_type
 to_field 'cho_edm_type', extract_json('.genre'), at_index(0), normalize_has_type, normalize_edm_type, translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_has_type', extract_json('.genre'), at_index(0), normalize_has_type, lang('en')
 to_field 'cho_has_type', extract_json('.genre'), at_index(0), normalize_has_type, translation_map('has_type_ar_from_en'), lang('ar-Arab')
-to_field 'cho_identifier', extract_json('.identifier'), at_index(0), strip
-to_field 'cho_identifier', extract_json('.location_shelfLocator'), at_index(0), strip
+to_field 'cho_identifier', extract_json('.identifier[0]'), at_index(0), strip
+to_field 'cho_identifier', extract_json('.location_shelfLocator[0]'), at_index(0), strip
 to_field 'cho_is_part_of', extract_json('.location_physicalLocation'), at_index(0), strip, arabic_script_lang_or_default('ar-Arab', 'en')
-to_field 'cho_language', extract_json('.language_languageTerm'), at_index(0), normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
-to_field 'cho_language', extract_json('.language_languageTerm'), at_index(0), normalize_language, lang('en')
-to_field 'cho_spatial', extract_json('.subject_geographic'), at_index(0), strip, gsub('NOT PROVIDED', ''), arabic_script_lang_or_default('ar-Arab', 'en')
-to_field 'cho_subject', extract_json('.subject_topic'), at_index(0), strip, gsub('NOT PROVIDED', ''), arabic_script_lang_or_default('ar-Arab', 'en')
-to_field 'cho_subject', extract_json('.subject_name_namePart'), at_index(0), strip, gsub('NOT PROVIDED', ''), arabic_script_lang_or_default('ar-Arab', 'en')
-to_field 'cho_type', extract_json('.genre'), at_index(0), strip, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_language', extract_json('.language_languageTerm[0]'), at_index(0), normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
+to_field 'cho_language', extract_json('.language_languageTerm[0]'), at_index(0), normalize_language, lang('en')
+to_field 'cho_spatial', extract_json('.subject_geographic[0]'), at_index(0), strip, gsub('NOT PROVIDED', ''), arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_subject', extract_json('.subject_topic[0]'), at_index(0), strip, gsub('NOT PROVIDED', ''), arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_subject', extract_json('.subject_name_namePart[0]'), at_index(0), strip, gsub('NOT PROVIDED', ''), arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_type', extract_json('.genre[0]'), at_index(0), strip, arabic_script_lang_or_default('ar-Arab', 'en')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
@@ -91,8 +91,8 @@ to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_dc_rights' => [extract_json('.accessCondition'), at_index(0), strip],
-    'wr_edm_rights' => [extract_json('.accessCondition'), at_index(0), strip, translation_map('edm_rights_from_contributor')],
+    'wr_dc_rights' => [extract_json('.accessCondition[0]'), at_index(0), strip],
+    'wr_edm_rights' => [extract_json('.accessCondition[0]'), at_index(0), strip, translation_map('edm_rights_from_contributor')],
     'wr_format' => [literal('image/jpeg')],
     'wr_id' => [extract_json('.id'), at_index(0), gsub('_ar', ''), gsub('_en', ''), prepend('https://www.qdl.qa/en/archive/')],
     'wr_is_referenced_by' => [extract_json('.id'), at_index(0), gsub('_ar', ''), gsub('_en', ''), prepend('https://www.qdl.qa/en/iiif/'), append('/manifest')]
@@ -101,18 +101,18 @@ end
 to_field 'agg_is_shown_by' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_edm_rights' => [extract_json('.accessCondition'), at_index(0), strip, translation_map('edm_rights_from_contributor')],
+    'wr_edm_rights' => [extract_json('.accessCondition[0]'), at_index(0), strip, translation_map('edm_rights_from_contributor')],
     'wr_format' => literal('image/jpeg'),
-    'wr_id' => [extract_json('.shown_at'), at_index(0), strip],
+    'wr_id' => [extract_json('.shown_at[0]'), at_index(0), strip],
     'wr_is_referenced_by' => [extract_json('.id'), at_index(0), gsub('_ar', ''), gsub('_en', ''), prepend('https://www.qdl.qa/en/iiif/'), append('/manifest')]
   )
 end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_edm_rights' => [extract_json('.accessCondition'), at_index(0), strip, translation_map('edm_rights_from_contributor')],
+    'wr_edm_rights' => [extract_json('.accessCondition[0]'), at_index(0), strip, translation_map('edm_rights_from_contributor')],
     'wr_format' => [literal('image/jpeg')],
-    'wr_id' => [extract_json('.preview'), at_index(0), strip],
+    'wr_id' => [extract_json('.preview[0]'), at_index(0), strip],
     'wr_is_referenced_by' => [extract_json('.id'), at_index(0), gsub('_ar', ''), gsub('_en', ''), prepend('https://www.qdl.qa/en/iiif/'), append('/manifest')]
   )
 end
