@@ -13,8 +13,10 @@ RSpec.describe Dlme::CLI::Transform do
       }
     end
     let(:metadata_mapping) { JSON.generate([config]) }
+    # rubocop:disable RSpec/IndexedLet
     let(:file1) { 'stanford/maps/obj1.mods' }
     let(:file2) { 'stanford/maps/obj2.mods' }
+    # rubocop:enable RSpec/IndexedLet
     let(:transform_map) do
       {
         file1 => config,

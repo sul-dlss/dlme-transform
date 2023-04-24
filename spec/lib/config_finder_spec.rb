@@ -29,9 +29,11 @@ RSpec.describe Dlme::ConfigFinder do
   end
   let(:mapping_file) { 'config/metadata_mapping.json' }
   let(:base_data_dir) { 'data' }
+  # rubocop:disable RSpec/IndexedLet
   let(:file1) { 'data/stanford/maps/dir1/file1.mods' }
   let(:file2) { 'data/stanford/maps/dir2/file2.mods' }
   let(:file3) { 'data/other/maps/file3.xml' }
+  # rubocop:enable RSpec/IndexedLet
   let(:sample) { false }
 
   before do
