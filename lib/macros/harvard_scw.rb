@@ -39,7 +39,7 @@ module Macros
         rejected_values = ['album', 'album leaf']
         genres = record.xpath('/*/mods:genre', NS)
         genres.each do |val|
-          type_values << val&.content&.strip&.downcase&.gsub('single page painting/drawing', 'manuscript illumination') if val&.content&.present?
+          type_values << val&.content&.strip&.downcase&.gsub('single page painting/drawing', 'manuscript illumination') if val&.content.present?
         end
         accumulator.replace(type_values - rejected_values)
       end
