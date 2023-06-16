@@ -902,10 +902,10 @@
   },
   {
     "trajects": [
-      "princeton.rb"
+      "princeton_saoa.rb"
     ],
     "paths": [
-      "princeton"
+      "princeton/saoa"
     ],
     "extension": ".csv",
     "settings": {
