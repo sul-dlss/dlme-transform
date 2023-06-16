@@ -129,6 +129,13 @@ If the need arises to transfer data to the dev environment, you can do so with:
 ```
 scp [~/Path/To/NDJson/File] dlme@dlme-airflow-dev.stanford.edu:/opt/app/dlme/datashare
 ```
+### Getting traject output files from server
+
+`scp dlme@dlme-review-prod-a.stanford.edu:/opt/app/dlme/datashare/output-qnl-british-library-combined.ndjson .`
+
+### Getting airflow harvest output files from server
+
+`scp dlme@dlme-airflow-dev.stanford.edu:/opt/app/dlme/dlme-airflow/shared/source_data/qnl/british_library_combined/data.json .`
 
 ## Configuring transforms
 
