@@ -112,7 +112,7 @@ to_field 'agg_preview' do |_record, accumulator, context|
     context,
     'wr_edm_rights' => [extract_json('.accessCondition[0]'), at_index(0), strip, translation_map('edm_rights_from_contributor')],
     'wr_format' => [literal('image/jpeg')],
-    'wr_id' => [extract_json('.preview[0]'), at_index(0), strip],
+    'wr_id' => [extract_json('.preview[0]'), at_index(0), strip, default('https://raw.githubusercontent.com/sul-dlss/dlme/main/app/assets/images/default.png')],
     'wr_is_referenced_by' => [extract_json('.id'), at_index(0), gsub('_ar', ''), gsub('_en', ''), prepend('https://www.qdl.qa/en/iiif/'), append('/manifest')]
   )
 end
