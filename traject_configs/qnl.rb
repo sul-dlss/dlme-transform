@@ -11,6 +11,7 @@ require 'macros/language_extraction'
 require 'macros/normalize_language'
 require 'macros/normalize_type'
 require 'macros/path_to_file'
+require 'macros/prepend'
 require 'macros/string_helper'
 require 'macros/timestamp'
 require 'macros/title_extraction'
@@ -27,6 +28,7 @@ extend Macros::LanguageExtraction
 extend Macros::NormalizeLanguage
 extend Macros::NormalizeType
 extend Macros::PathToFile
+extend Macros::Prepend
 extend Macros::QNL
 extend Macros::StringHelper
 extend Macros::Timestamp
@@ -53,34 +55,41 @@ to_field 'agg_data_provider_collection_id', literal('qnl')
 
 # CHO Required
 to_field 'id', extract_json('.id'), gsub('_ar', '_dlme'), gsub('_en', '_dlme')
-# 'titleInfo_title' has mixed language content, don't use arabic_script_lang_or_default macro
 to_field 'cho_title', extract_json('.title[0]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
 
 # CHO Other
-to_field 'cho_creator', extract_json('.author[0]'), prepend('Author: '), arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_creator', extract_json('.author[0]'), arabic_script_lang_or_default('ar-Arab', 'en'), intelligent_prepend('Author: ', 'مؤلف: ')
+to_field 'cho_creator', extract_json('.cartographer[0]'), arabic_script_lang_or_default('ar-Arab', 'en'), intelligent_prepend('Cartographer: ', 'رسام خرائط: ')
 to_field 'cho_date', extract_json('.originInfo_dateIssued[0]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_date_range_norm', extract_json('.originInfo_dateIssued[0]'), strip, gsub('_', '-'), parse_range
 to_field 'cho_date_range_hijri', extract_json('.originInfo_dateIssued[0]'), strip, gsub('_', '-'), parse_range, hijri_range
 to_field 'cho_dc_rights', extract_json('.accessCondition[0]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
-# 'abstract' has mixed language content, don't use arabic_script_lang_or_default macro
-to_field 'cho_description', extract_json('.abstract[0]'), prepend('Abstract: '), lang('en')
-to_field 'cho_description', extract_json('.abstract[1]'), prepend('ملخص: '), lang('ar-Arab')
-# 'physicalDescription_extent' has mixed language content, don't use arabic_script_lang_or_default macro
-to_field 'cho_description', extract_json('.physicalDescription_extent[0]'), prepend('Physical description: '), lang('en')
-to_field 'cho_description', extract_json('.physicalDescription_extent[1]'), prepend('الوصف المادي: '), lang('ar-Arab')
-to_field 'cho_edm_type', extract_json('.genre'), at_index(0), normalize_has_type, normalize_edm_type, lang('en')
-to_field 'cho_edm_type', extract_json('.genre'), at_index(0), normalize_has_type, normalize_edm_type, translation_map('edm_type_ar_from_en'), lang('ar-Arab')
-to_field 'cho_has_type', extract_json('.genre'), at_index(0), normalize_has_type, lang('en')
-to_field 'cho_has_type', extract_json('.genre'), at_index(0), normalize_has_type, translation_map('has_type_ar_from_en'), lang('ar-Arab')
-to_field 'cho_identifier', extract_json('.identifier[0]'), at_index(0), strip
-to_field 'cho_identifier', extract_json('.location_shelfLocator[0]'), at_index(0), strip
-to_field 'cho_is_part_of', extract_json('.location_physicalLocation'), at_index(0), strip, arabic_script_lang_or_default('ar-Arab', 'en')
-to_field 'cho_language', extract_json('.language_languageTerm[0]'), at_index(0), normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
-to_field 'cho_language', extract_json('.language_languageTerm[0]'), at_index(0), normalize_language, lang('en')
-to_field 'cho_spatial', extract_json('.subject_geographic[0]'), at_index(0), strip, gsub('NOT PROVIDED', ''), arabic_script_lang_or_default('ar-Arab', 'en')
-to_field 'cho_subject', extract_json('.subject_topic[0]'), at_index(0), strip, gsub('NOT PROVIDED', ''), arabic_script_lang_or_default('ar-Arab', 'en')
-to_field 'cho_subject', extract_json('.subject_name_namePart[0]'), at_index(0), strip, gsub('NOT PROVIDED', ''), arabic_script_lang_or_default('ar-Arab', 'en')
-to_field 'cho_type', extract_json('.genre[0]'), at_index(0), strip, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_description', extract_json('.abstract[0]'), arabic_script_lang_or_default('ar-Arab', 'en'), intelligent_prepend('Abstract: ', 'ملخص: ')
+to_field 'cho_description', extract_json('.abstract[1]'), arabic_script_lang_or_default('ar-Arab', 'en'), intelligent_prepend('Abstract: ', 'ملخص: ')
+to_field 'cho_description', extract_json('.physicalDescription_extent[0]'), arabic_script_lang_or_default('ar-Arab', 'en'), intelligent_prepend('Physical description: ', 'الوصف المادي: ')
+to_field 'cho_description', extract_json('.physicalDescription_extent[1]'), arabic_script_lang_or_default('ar-Arab', 'en'), intelligent_prepend('Physical description: ', 'الوصف المادي: ')
+to_field 'cho_edm_type', extract_json('.genre[0]'), normalize_has_type, normalize_edm_type, lang('en')
+to_field 'cho_edm_type', extract_json('.genre[0]'), normalize_has_type, normalize_edm_type, translation_map('edm_type_ar_from_en'), lang('ar-Arab')
+to_field 'cho_has_type', extract_json('.genre[0]'), normalize_has_type, lang('en')
+to_field 'cho_has_type', extract_json('.genre[0]'), normalize_has_type, translation_map('has_type_ar_from_en'), lang('ar-Arab')
+to_field 'cho_edm_type', extract_json('.genre[1]'), normalize_has_type, normalize_edm_type, lang('en')
+to_field 'cho_edm_type', extract_json('.genre[1]'), normalize_has_type, normalize_edm_type, translation_map('edm_type_ar_from_en'), lang('ar-Arab')
+to_field 'cho_has_type', extract_json('.genre[1]'), normalize_has_type, lang('en')
+to_field 'cho_has_type', extract_json('.genre[1]'), normalize_has_type, translation_map('has_type_ar_from_en'), lang('ar-Arab')
+to_field 'cho_identifier', extract_json('.identifier[0]'), strip
+to_field 'cho_identifier', extract_json('.location_shelfLocator[0]'), strip
+to_field 'cho_is_part_of', extract_json('.location_physicalLocation[0]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_language', extract_json('.language_languageTerm[0]'), normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
+to_field 'cho_language', extract_json('.language_languageTerm[0]'), normalize_language, lang('en')
+to_field 'cho_publisher', extract_json('.publisher[0]'), arabic_script_lang_or_default('ar-Arab', 'en'), intelligent_prepend('Publisher: ', 'الناشر: ')
+to_field 'cho_spatial', extract_json('.subject_geographic[0]'), strip, gsub('NOT PROVIDED', ''), arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_spatial', extract_json('.subject_geographic[1]'), strip, gsub('NOT PROVIDED', ''), arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_subject', extract_json('.subject_topic[0]'), strip, gsub('NOT PROVIDED', ''), arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_subject', extract_json('.subject_topic[1]'), strip, gsub('NOT PROVIDED', ''), arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_subject', extract_json('.subject_name_namePart[0]'), strip, gsub('NOT PROVIDED', ''), arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_subject', extract_json('.subject_name_namePart[1]'), strip, gsub('NOT PROVIDED', ''), arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_type', extract_json('.genre[0]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_type', extract_json('.genre[1]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
@@ -112,7 +121,7 @@ to_field 'agg_preview' do |_record, accumulator, context|
     context,
     'wr_edm_rights' => [extract_json('.accessCondition[0]'), at_index(0), strip, translation_map('edm_rights_from_contributor')],
     'wr_format' => [literal('image/jpeg')],
-    'wr_id' => [extract_json('.preview[0]'), at_index(0), strip],
+    'wr_id' => [extract_json('.preview[0]'), at_index(0), strip, default('https://raw.githubusercontent.com/sul-dlss/dlme/main/app/assets/images/default.png')],
     'wr_is_referenced_by' => [extract_json('.id'), at_index(0), gsub('_ar', ''), gsub('_en', ''), prepend('https://www.qdl.qa/en/iiif/'), append('/manifest')]
   )
 end
