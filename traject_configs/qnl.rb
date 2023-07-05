@@ -56,10 +56,15 @@ to_field 'agg_data_provider_collection_id', literal('qnl')
 # CHO Required
 to_field 'id', extract_json('.id'), gsub('_ar', '_dlme'), gsub('_en', '_dlme')
 to_field 'cho_title', extract_json('.title[0]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_title', extract_json('.title[1]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
 
 # CHO Other
+to_field 'cho_alternative', extract_json('.title_alternative[0]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_alternative', extract_json('.title_alternative[1]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_creator', extract_json('.author[0]'), arabic_script_lang_or_default('ar-Arab', 'en'), intelligent_prepend('Author: ', 'مؤلف: ')
+to_field 'cho_creator', extract_json('.author[1]'), arabic_script_lang_or_default('ar-Arab', 'en'), intelligent_prepend('Author: ', 'مؤلف: ')
 to_field 'cho_creator', extract_json('.cartographer[0]'), arabic_script_lang_or_default('ar-Arab', 'en'), intelligent_prepend('Cartographer: ', 'رسام خرائط: ')
+to_field 'cho_creator', extract_json('.cartographer[1]'), arabic_script_lang_or_default('ar-Arab', 'en'), intelligent_prepend('Cartographer: ', 'رسام خرائط: ')
 to_field 'cho_date', extract_json('.originInfo_dateIssued[0]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_date_range_norm', extract_json('.originInfo_dateIssued[0]'), strip, gsub('_', '-'), parse_range
 to_field 'cho_date_range_hijri', extract_json('.originInfo_dateIssued[0]'), strip, gsub('_', '-'), parse_range, hijri_range
@@ -82,6 +87,7 @@ to_field 'cho_is_part_of', extract_json('.location_physicalLocation[0]'), strip,
 to_field 'cho_language', extract_json('.language_languageTerm[0]'), normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
 to_field 'cho_language', extract_json('.language_languageTerm[0]'), normalize_language, lang('en')
 to_field 'cho_publisher', extract_json('.publisher[0]'), arabic_script_lang_or_default('ar-Arab', 'en'), intelligent_prepend('Publisher: ', 'الناشر: ')
+to_field 'cho_publisher', extract_json('.publisher[1]'), arabic_script_lang_or_default('ar-Arab', 'en'), intelligent_prepend('Publisher: ', 'الناشر: ')
 to_field 'cho_spatial', extract_json('.subject_geographic[0]'), strip, gsub('NOT PROVIDED', ''), arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_spatial', extract_json('.subject_geographic[1]'), strip, gsub('NOT PROVIDED', ''), arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_subject', extract_json('.subject_topic[0]'), strip, gsub('NOT PROVIDED', ''), arabic_script_lang_or_default('ar-Arab', 'en')
