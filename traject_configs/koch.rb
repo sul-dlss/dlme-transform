@@ -96,7 +96,7 @@ to_field 'agg_is_shown_at' do |_record, accumulator, context|
     context,
     'wr_dc_rights' => [column('telif-hakkı-ve-kullanım-/-copyright-and-usage'), parse_csv, at_index(0), strip],
     'wr_format' => [column('iiif_format'), parse_csv, at_index(0)],
-    'wr_id' => [column('source'), parse_csv,  at_index(0), split('<a href="'), at_index(-1), split('">'), at_index(0)],
+    'wr_id' => [column('source'), parse_csv, at_index(0), split('<a href="'), at_index(-1), split('">'), at_index(0)],
     'wr_is_referenced_by' => [column('id')]
   )
 end
