@@ -52,8 +52,9 @@ to_field 'dlme_source_file', path_to_file
 
 # Cho Required
 to_field 'id', column('id'), parse_csv, strip, gsub('/manifest.json', ''), gsub('https://cdm21054.contentdm.oclc.org/iiif/', '')
-to_field 'cho_title', column('başlık-/-title'), parse_csv, split(';'), strip, squish, gsub('\\r\\n', ''), lang('tr-Latn')
-to_field 'cho_title', column('başlık,-arap-alfabesiyle-/-title,-arabic-script'), parse_csv, split(';'), strip, squish, gsub('\\r\\n', ''), lang('ar-Arab')
+# Don't parse_csv on title; the combination of quotation marks and commas is resulting in unexpected behavior
+to_field 'cho_title', column('başlık-/-title'), split(';'), strip, squish, gsub('\\r\\n', ''), gsub('[', ''), gsub(']', ''), lang('tr-Latn')
+to_field 'cho_title', column('başlık,-arap-alfabesiyle-/-title,-arabic-script'), split(';'), strip, squish, gsub('\\r\\n', ''), gsub('[', ''), gsub(']', ''), lang('ar-Arab')
 
 # Cho Other
 to_field 'cho_contributor', column('müstensih-/-copyist'), parse_csv, split(';'), strip, squish, prepend('Copyist: '), gsub('\\r\\n', ''), lang('tr-Latn')
@@ -62,7 +63,7 @@ to_field 'cho_creator', column('müellif,-arap-alfabesiyle-/-author,-arabic-scri
 to_field 'cho_date', column('tarih-miladi-/-date-gregorian'), parse_csv, strip, squish, gsub('\\r\\n', ''), lang('en')
 to_field 'cho_date_range_hijri', column('tarih-miladi-/-date-gregorian'), parse_csv, strip, gsub('\\r\\n', ''), auc_date_range, hijri_range
 to_field 'cho_date_range_norm', column('tarih-miladi-/-date-gregorian'), parse_csv, strip, gsub('\\r\\n', ''), auc_date_range
-to_field 'cho_dc_rights', column('telif-hakkı-ve-kullanım-/-copyright-and-usage'), parse_csv, strip, squish, gsub('\\r\\n', ''), lang('tr-Latn')
+to_field 'cho_dc_rights', column('telif-hakkı-ve-kullanım-/-copyright-and-usage'), strip, squish, gsub('\\r\\n', ''), gsub('[', ''), gsub(']', ''), lang('tr-Latn')
 to_field 'cho_description', column('ciltleme-ve-tezhip-özellikleri-/-binding-and-script-features'), parse_csv, strip, squish, gsub('\\r\\n', ''), prepend('Binding and script features: '), lang('tr-Latn')
 to_field 'cho_description', column('fiziksel-tanımlama-/-physical-description'), parse_csv, strip, squish, gsub('\\r\\n', ''), prepend('Physical description: '), lang('tr-Latn')
 to_field 'cho_description', column('i̇çerik-/-content'), parse_csv, strip, squish, gsub('\\r\\n', ''), prepend('Contents: '), lang('tr-Latn')
