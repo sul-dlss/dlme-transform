@@ -68,7 +68,7 @@ to_field 'cho_contributor', column('director'), parse_csv, strip, unique, prepen
 to_field 'cho_contributor', column('rendered-actors'), parse_csv, strip, unique, prepend('Actor: '), arabic_script_lang_or_default('und-Arab', 'en')
 to_field 'cho_contributor', column('scribe'), parse_csv, strip, unique, prepend('Scribe: '), arabic_script_lang_or_default('und-Arab', 'en')
 to_field 'cho_contributor', column('translator'), parse_csv, strip, unique, prepend('Translator: '), arabic_script_lang_or_default('und-Arab', 'en')
-to_field 'cho_date', column('date'), parse_csv, strip, unique, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_date', column('date'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_date_range_norm', column('date'), parse_csv, strip, unique, parse_range
 to_field 'cho_date_range_hijri', column('date'), parse_csv, strip, unique, parse_range, hijri_range
 to_field 'cho_date', column('date-created'), parse_csv, strip, unique, arabic_script_lang_or_default('ar-Arab', 'en')
