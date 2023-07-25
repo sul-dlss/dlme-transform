@@ -50,7 +50,7 @@ to_field 'agg_data_provider_collection', path_to_file, split('/'), at_index(2), 
 to_field 'agg_data_provider_collection_id', path_to_file, split('/'), at_index(2), gsub('_', '-'), prepend('princeton-')
 
 # Cho Required
-to_field 'id', column('identifier'), split("' alt="), first_only, parse_csv, strip, unique, gsub("<a href='http://arks.princeton.edu/", '')
+to_field 'id', column('id'), split("/"), at_index(-2), strip, unique
 to_field 'cho_title', column('title'), parse_csv, strip, unique, arabic_script_lang_or_default('und-Arab', 'en')
 to_field 'cho_title', column('uniform-title'), parse_csv, strip, unique, arabic_script_lang_or_default('und-Arab', 'en')
 
