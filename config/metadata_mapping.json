@@ -927,7 +927,7 @@
     "paths": [
       "princeton"
     ],
-    "extension": ".csv",
+    "extension": ".json",
     "settings": {
       "agg_provider": "Princeton University Library",
       "agg_provider_country": "United States of America",
