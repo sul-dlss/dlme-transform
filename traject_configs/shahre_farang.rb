@@ -52,7 +52,7 @@ to_field 'agg_data_provider_collection', literal('shahre-farang'), translation_m
 to_field 'agg_data_provider_collection_id', literal('shahre-farang')
 
 # Cho Required
-to_field 'id', column('id'), parse_csv, strip, append('fa')
+to_field 'id', column('id'), parse_csv, strip, gsub('http://shahrefarang.com/?p=', 'shahre-farang-'), append('fa')
 to_field 'cho_title', column('title'), parse_csv, strip, arabic_script_lang_or_default('und-Arab', 'en')
 
 # Cho Other
