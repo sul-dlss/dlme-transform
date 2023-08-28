@@ -74,6 +74,7 @@ to_field 'cho_date', extract_json('.originInfo_dateIssued[0]'), strip, arabic_sc
 to_field 'cho_date_range_norm', extract_json('.originInfo_dateIssued[0]'), strip, gsub('_', '-'), parse_range
 to_field 'cho_date_range_hijri', extract_json('.originInfo_dateIssued[0]'), strip, gsub('_', '-'), parse_range, hijri_range
 to_field 'cho_dc_rights', extract_json('.accessCondition[0]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_dc_rights', extract_json('.accessCondition[1]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_description', extract_json('.abstract[0]'), arabic_script_lang_or_default('ar-Arab', 'en'), intelligent_prepend('Abstract: ', 'ملخص: ')
 to_field 'cho_description', extract_json('.abstract[1]'), arabic_script_lang_or_default('ar-Arab', 'en'), intelligent_prepend('Abstract: ', 'ملخص: ')
 to_field 'cho_description', extract_json('.physicalDescription_extent[0]'), arabic_script_lang_or_default('ar-Arab', 'en'), intelligent_prepend('Physical description: ', 'الوصف المادي: ')
