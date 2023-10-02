@@ -22,13 +22,13 @@ module Macros
     def extract_ihp_manifest
       lambda do |record, accumulator|
         url = record.xpath('//*/mods:extension/HarvardDRS:DRSMetadata/HarvardDRS:drsFileId', NS)&.first&.content&.strip
-                           &.prepend('https://iiif.lib.harvard.edu/manifests/view/drs:')&.gsub('/view/drs', '/ids') ||
+                    &.prepend('https://iiif.lib.harvard.edu/manifests/view/drs:')&.gsub('/view/drs', '/ids') ||
               record.xpath('//*/mods:extension/HarvardDRS:DRSMetadata/HarvardDRS:drsObjectId',
                            NS)&.first&.content&.strip
-                           &.prepend('https://iiif.lib.harvard.edu/manifests/view/drs:')&.gsub('/view/', '/') ||
+                    &.prepend('https://iiif.lib.harvard.edu/manifests/view/drs:')&.gsub('/view/', '/') ||
               record.xpath('//*/mods:location/mods:url[@access="preview"]', NS)&.first&.content
-                           &.gsub('https://ids.lib.harvard.edu/ids/iiif/', '')&.split('/')&.first
-                           &.prepend('https://iiif.lib.harvard.edu/manifests/ids:')
+                    &.gsub('https://ids.lib.harvard.edu/ids/iiif/', '')&.split('/')&.first
+                    &.prepend('https://iiif.lib.harvard.edu/manifests/ids:')
         accumulator << url if url
       end
     end
