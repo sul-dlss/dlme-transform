@@ -82,7 +82,7 @@ GEM
     faraday-retry (1.0.3)
     faraday_middleware (1.2.0)
       faraday (~> 1.0)
-    ffi (1.16.2)
+    ffi (1.16.3)
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
       rake
@@ -124,7 +124,7 @@ GEM
     parallel (1.23.0)
     parse_date (0.4.3)
       zeitwerk (~> 2.1)
-    parser (3.2.2.3)
+    parser (3.2.2.4)
       ast (~> 2.4.1)
       racc
     pry (0.14.2)
