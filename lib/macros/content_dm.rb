@@ -17,7 +17,7 @@ module Macros
     # @return [String] the CONTENTdm object URI
     def select_cdm_identifier(record, _context)
       uri = record.xpath(ID_XPATH, NS).map(&:text).reject(&:blank?)
-      return uri.first if uri.any?
+      uri.first if uri.any?
     end
 
     # Get a value for `agg_preview` from a record
@@ -40,7 +40,8 @@ module Macros
       return uri.gsub('cdm/ref', 'utils/getthumbnail') if uri.include?('cdm/ref')
       # if `digital` is in the URI it's already served in the responsive UI
       return cdm_responsive_thumb(uri) if uri.include?('digital/collection')
-      return cdm_old_style_thumb(uri) if uri.include?('u?')
+
+      cdm_old_style_thumb(uri) if uri.include?('u?')
     end
 
     def cdm_responsive_thumb(uri)

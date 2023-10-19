@@ -15,7 +15,6 @@ require 'macros/prepend'
 require 'macros/string_helper'
 require 'macros/timestamp'
 require 'macros/title_extraction'
-require 'macros/qnl'
 require 'macros/version'
 require 'traject_plus'
 
@@ -29,7 +28,6 @@ extend Macros::NormalizeLanguage
 extend Macros::NormalizeType
 extend Macros::PathToFile
 extend Macros::Prepend
-extend Macros::QNL
 extend Macros::StringHelper
 extend Macros::Timestamp
 extend Macros::TitleExtraction
@@ -63,8 +61,15 @@ to_field 'cho_alternative', extract_json('.title_alternative[0]'), strip, arabic
 to_field 'cho_alternative', extract_json('.title_alternative[1]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_creator', extract_json('.author[0]'), arabic_script_lang_or_default('ar-Arab', 'en'), intelligent_prepend('Author: ', 'مؤلف: ')
 to_field 'cho_creator', extract_json('.author[1]'), arabic_script_lang_or_default('ar-Arab', 'en'), intelligent_prepend('Author: ', 'مؤلف: ')
+to_field 'cho_creator', extract_json('.author[2]'), arabic_script_lang_or_default('ar-Arab', 'en'), intelligent_prepend('Author: ', 'مؤلف: ')
+to_field 'cho_creator', extract_json('.author[3]'), arabic_script_lang_or_default('ar-Arab', 'en'), intelligent_prepend('Author: ', 'مؤلف: ')
+to_field 'cho_creator', extract_json('.author[4]'), arabic_script_lang_or_default('ar-Arab', 'en'), intelligent_prepend('Author: ', 'مؤلف: ')
+to_field 'cho_creator', extract_json('.author[5]'), arabic_script_lang_or_default('ar-Arab', 'en'), intelligent_prepend('Author: ', 'مؤلف: ')
 to_field 'cho_creator', extract_json('.cartographer[0]'), arabic_script_lang_or_default('ar-Arab', 'en'), intelligent_prepend('Cartographer: ', 'رسام خرائط: ')
 to_field 'cho_creator', extract_json('.cartographer[1]'), arabic_script_lang_or_default('ar-Arab', 'en'), intelligent_prepend('Cartographer: ', 'رسام خرائط: ')
+to_field 'cho_creator', extract_json('.cartographer[2]'), arabic_script_lang_or_default('ar-Arab', 'en'), intelligent_prepend('Cartographer: ', 'رسام خرائط: ')
+to_field 'cho_creator', extract_json('.cartographer[3]'), arabic_script_lang_or_default('ar-Arab', 'en'), intelligent_prepend('Cartographer: ', 'رسام خرائط: ')
+to_field 'cho_creator', extract_json('.cartographer[4]'), arabic_script_lang_or_default('ar-Arab', 'en'), intelligent_prepend('Cartographer: ', 'رسام خرائط: ')
 to_field 'cho_date', extract_json('.originInfo_dateIssued[0]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_date_range_norm', extract_json('.originInfo_dateIssued[0]'), strip, gsub('_', '-'), parse_range
 to_field 'cho_date_range_hijri', extract_json('.originInfo_dateIssued[0]'), strip, gsub('_', '-'), parse_range, hijri_range
@@ -82,18 +87,39 @@ to_field 'cho_edm_type', extract_json('.genre[1]'), normalize_has_type, normaliz
 to_field 'cho_has_type', extract_json('.genre[1]'), normalize_has_type, lang('en')
 to_field 'cho_has_type', extract_json('.genre[1]'), normalize_has_type, translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_identifier', extract_json('.identifier[0]'), strip
+to_field 'cho_identifier', extract_json('.identifier[1]'), unique, strip
 to_field 'cho_identifier', extract_json('.location_shelfLocator[0]'), strip
+to_field 'cho_identifier', extract_json('.location_shelfLocator[1]'), unique, strip
 to_field 'cho_is_part_of', extract_json('.location_physicalLocation[0]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_is_part_of', extract_json('.location_physicalLocation[1]'), strip, unique, arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_language', extract_json('.language_languageTerm[0]'), normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
 to_field 'cho_language', extract_json('.language_languageTerm[0]'), normalize_language, lang('en')
-to_field 'cho_publisher', extract_json('.publisher[0]'), arabic_script_lang_or_default('ar-Arab', 'en'), intelligent_prepend('Publisher: ', 'الناشر: ')
-to_field 'cho_publisher', extract_json('.publisher[1]'), arabic_script_lang_or_default('ar-Arab', 'en'), intelligent_prepend('Publisher: ', 'الناشر: ')
-to_field 'cho_spatial', extract_json('.subject_geographic[0]'), strip, gsub('NOT PROVIDED', ''), arabic_script_lang_or_default('ar-Arab', 'en')
-to_field 'cho_spatial', extract_json('.subject_geographic[1]'), strip, gsub('NOT PROVIDED', ''), arabic_script_lang_or_default('ar-Arab', 'en')
-to_field 'cho_subject', extract_json('.subject_topic[0]'), strip, gsub('NOT PROVIDED', ''), arabic_script_lang_or_default('ar-Arab', 'en')
-to_field 'cho_subject', extract_json('.subject_topic[1]'), strip, gsub('NOT PROVIDED', ''), arabic_script_lang_or_default('ar-Arab', 'en')
-to_field 'cho_subject', extract_json('.subject_name_namePart[0]'), strip, gsub('NOT PROVIDED', ''), arabic_script_lang_or_default('ar-Arab', 'en')
-to_field 'cho_subject', extract_json('.subject_name_namePart[1]'), strip, gsub('NOT PROVIDED', ''), arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_publisher', extract_json('.publisher[0]'), strip, arabic_script_lang_or_default('ar-Arab', 'en'), intelligent_prepend('Publisher: ', 'الناشر: ')
+to_field 'cho_publisher', extract_json('.publisher[1]'), strip, arabic_script_lang_or_default('ar-Arab', 'en'), intelligent_prepend('Publisher: ', 'الناشر: ')
+to_field 'cho_publisher', extract_json('.publisher[2]'), strip, arabic_script_lang_or_default('ar-Arab', 'en'), intelligent_prepend('Publisher: ', 'الناشر: ')
+to_field 'cho_publisher', extract_json('.publisher[3]'), strip, unique, arabic_script_lang_or_default('ar-Arab', 'en'), intelligent_prepend('Publisher: ', 'الناشر: ')
+to_field 'cho_spatial', extract_json('.subject_geographic[0]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_spatial', extract_json('.subject_geographic[1]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_spatial', extract_json('.subject_geographic[2]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_spatial', extract_json('.subject_geographic[3]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_spatial', extract_json('.subject_geographic[4]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_spatial', extract_json('.subject_geographic[5]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_spatial', extract_json('.subject_geographic[6]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_spatial', extract_json('.subject_geographic[7]'), strip, unique, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_subject', extract_json('.subject_topic[0]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_subject', extract_json('.subject_topic[1]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_subject', extract_json('.subject_topic[2]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_subject', extract_json('.subject_topic[3]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_subject', extract_json('.subject_topic[4]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_subject', extract_json('.subject_topic[5]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_subject', extract_json('.subject_topic[6]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_subject', extract_json('.subject_topic[7]'), strip, unique, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_subject', extract_json('.subject_name_namePart[0]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_subject', extract_json('.subject_name_namePart[1]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_subject', extract_json('.subject_name_namePart[2]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_subject', extract_json('.subject_name_namePart[3]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_subject', extract_json('.subject_name_namePart[4]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_subject', extract_json('.subject_name_namePart[5]'), strip, unique, arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_type', extract_json('.genre[0]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_type', extract_json('.genre[1]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
 

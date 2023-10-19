@@ -35,7 +35,7 @@ to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
 
 # CHO Required
-to_field 'id', column('Resource_URL')
+to_field 'id', column('Resource_URL'), split('/poster/'), at_index(1), prepend('pppa-')
 to_field 'cho_title', column('Title'), strip, lang('en')
 
 # CHO Other

@@ -305,7 +305,7 @@ module Macros
         return ParseDate.parse_range(year_str) if year_str
       end
       plain_node_value = record.xpath("#{ORIGIN_INFO_PATH}/#{xpath_el_name}", MODS_NS)&.first&.content
-      return ParseDate.parse_range(plain_node_value) if plain_node_value
+      ParseDate.parse_range(plain_node_value) if plain_node_value
     end
 
     # sakip records with multiple dates tend to have earliest year as the 2nd occurence

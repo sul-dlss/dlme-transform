@@ -51,6 +51,36 @@ module Macros
     # rubocop:enable Metrics/PerceivedComplexity, Metrics/CyclomaticComplexity, Metrics/AbcSize, Metrics/MethodLength
 
     # Returns the value extracted by 'to_field' reformated as a hash with accompanying BCP47 language code.
+    # Should only be used to differentiate between an Armenian script language '-Armn' and a Latin script
+    # language '-Latn'.
+    # @return [Proc] a proc that traject can call for each record
+    # @example
+    # arabic_script_lang_or_default('hy-Armn', 'en') => {'hy-Armn': ["лист строительнои техники № 4"]}
+    # rubocop:disable Metrics/PerceivedComplexity, Metrics/CyclomaticComplexity, Metrics/AbcSize, Metrics/MethodLength
+    def armenian_script_lang_or_default(armenian_script_lang, default)
+      lambda do |_record, accumulator|
+        if accumulator
+          ar_values = []
+          default_values = []
+          accumulator.each do |val|
+            lang_code = val.match?(/[ձյխվէրդեըիոպչջփթլքճհկֆտսազցգւբնմշղծ]/) ? armenian_script_lang : default
+            ar_values << val if lang_code == armenian_script_lang
+            default_values << val if lang_code == default
+          end
+        end
+        if ar_values.present? && default_values.present?
+          accumulator.replace([{ language: armenian_script_lang, values: ar_values }])
+          accumulator << { language: default, values: default_values } if default_values.present?
+        elsif ar_values.present?
+          accumulator.replace([{ language: armenian_script_lang, values: ar_values }])
+        elsif default_values.present?
+          accumulator.replace([{ language: default, values: default_values }])
+        end
+      end
+    end
+    # rubocop:enable Metrics/PerceivedComplexity, Metrics/CyclomaticComplexity, Metrics/AbcSize, Metrics/MethodLength
+
+    # Returns the value extracted by 'to_field' reformated as a hash with accompanying BCP47 language code.
     # Should only be used to differentiate between an Hebrew script language and a Latin script
     # language '-Latn'.
     # @return [Proc] a proc that traject can call for each record

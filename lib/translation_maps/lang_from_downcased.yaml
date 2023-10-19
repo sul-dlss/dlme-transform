@@ -10,6 +10,8 @@ catalan: Catalan
 chagatai: Chagatai
 classical armenian: Armenian
 coptic: Coptic
+crimean tatar: Tatar, Crimean
+crimean turkish: Turkish, Crimean
 dutch: Dutch
 english: English
 en_us: English
@@ -51,6 +53,9 @@ ottoman turkish: Turkish, Ottoman (1500-1928)
 ottoman turkish,: Turkish, Ottoman (1500-1928)
 pahlavi: Pahlavi
 persian: Persian
+persian, and arabic:
+  - Arabic
+  - Persian
 portuguese: Portuguese
 qatabanic: Qatabanic
 russian: Russian
@@ -61,6 +66,7 @@ spanish: Spanish
 syriac: Syriac
 tatar: Tatar
 turkish in arabic script: Turkish, Ottoman (1500-1928)
+turkish (in greek alphabet): Turkish, Karamanli
 turkish, ottoman: Turkish, Ottoman (1500-1928)
 turkish, ottoman (1500-1928): Turkish, Ottoman (1500-1928)
 turkish: Turkish

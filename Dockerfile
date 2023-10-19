@@ -1,9 +1,4 @@
-FROM ruby:2.7.1-alpine3.11
-
-# Note: The base image is currently pinned to alpine3.11 in order to stick to a supported
-# version of python 2 (2.7.x). Currently alpine3.12 and greater requires specifying python3
-# and additionally uses python 3.8.3 which introduces a dependency incompatiblity with the
-# required awscli. This should be investigated separately.
+FROM ruby:3.0-alpine
 
 # Create and set the working directory as /opt
 RUN mkdir -p /opt/traject/output
@@ -15,7 +10,7 @@ ENV BUNDLER_VERSION 2.0.2
 RUN apk add --no-cache \
     curl \
     zip \
-    python \
+    python3 \
     libxml2-dev \
     libxslt-dev \
     jq \
@@ -24,7 +19,7 @@ RUN apk add --no-cache \
       build-base \
     && apk add --no-cache --virtual python-dependencies \
     py-pip \
-    python-dev \
+    python3-dev \
     && pip install awscli \
     && apk del python-dependencies \
     && gem install bundler

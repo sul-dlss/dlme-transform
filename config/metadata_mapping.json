@@ -382,6 +382,26 @@
   },
   {
     "trajects": [
+      "koch.rb"
+    ],
+    "paths": [
+      "koch"
+    ],
+    "extension": ".csv",
+    "settings": {
+      "agg_provider": "Koç University",
+      "agg_provider_country": "Turkey",
+      "agg_data_provider": "Koç University",
+      "agg_data_provider_country": "Turkey",
+      "agg_provider_ar": "جامعة كوتش",
+      "agg_provider_country_ar": "تركيا",
+      "agg_data_provider_ar": "جامعة كوتش",
+      "agg_data_provider_country_ar": "تركيا",
+      "inst_id": "koch"
+    }
+  },
+  {
+    "trajects": [
       "lausanne_ias.rb"
     ],
     "paths": [
@@ -907,7 +927,7 @@
     "paths": [
       "princeton"
     ],
-    "extension": ".csv",
+    "extension": ".json",
     "settings": {
       "agg_provider": "Princeton University Library",
       "agg_provider_country": "United States of America",
@@ -1038,6 +1058,86 @@
       "agg_data_provider_ar": "متحف والتر للفنون",
       "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
       "inst_id": "walters"
+    }
+  },
+  {
+    "trajects": [
+      "ucla_armenian.rb"
+    ],
+    "paths": [
+      "ucla/armenian"
+    ],
+    "extension": ".json",
+    "settings": {
+      "agg_provider": "University of California, Los Angeles",
+      "agg_provider_country": "United States of America",
+      "agg_data_provider": "University of California, Los Angeles",
+      "agg_data_provider_country": "United States of America",
+      "agg_provider_ar": "جامعة كاليفورنيا، لوس أنجلوس",
+      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "agg_data_provider_ar": "جامعة كاليفورنيا، لوس أنجلوس",
+      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "inst_id": "yale"
+    }
+  },
+  {
+    "trajects": [
+      "ucla_iiif_v2.rb"
+    ],
+    "paths": [
+      "ucla/iiif_v2"
+    ],
+    "extension": ".json",
+    "settings": {
+      "agg_provider": "University of California, Los Angeles",
+      "agg_provider_country": "United States of America",
+      "agg_data_provider": "University of California, Los Angeles",
+      "agg_data_provider_country": "United States of America",
+      "agg_provider_ar": "جامعة كاليفورنيا، لوس أنجلوس",
+      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "agg_data_provider_ar": "جامعة كاليفورنيا، لوس أنجلوس",
+      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "inst_id": "yale"
+    }
+  },
+  {
+    "trajects": [
+      "ucla_iiif_v3.rb"
+    ],
+    "paths": [
+      "ucla/iiif_v3"
+    ],
+    "extension": ".json",
+    "settings": {
+      "agg_provider": "University of California, Los Angeles",
+      "agg_provider_country": "United States of America",
+      "agg_data_provider": "University of California, Los Angeles",
+      "agg_data_provider_country": "United States of America",
+      "agg_provider_ar": "جامعة كاليفورنيا، لوس أنجلوس",
+      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "agg_data_provider_ar": "جامعة كاليفورنيا، لوس أنجلوس",
+      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "inst_id": "yale"
+    }
+  },
+  {
+    "trajects": [
+      "ucla_no_preview.rb"
+    ],
+    "paths": [
+      "ucla/no_preview"
+    ],
+    "extension": ".json",
+    "settings": {
+      "agg_provider": "University of California, Los Angeles",
+      "agg_provider_country": "United States of America",
+      "agg_data_provider": "University of California, Los Angeles",
+      "agg_data_provider_country": "United States of America",
+      "agg_provider_ar": "جامعة كاليفورنيا، لوس أنجلوس",
+      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "agg_data_provider_ar": "جامعة كاليفورنيا، لوس أنجلوس",
+      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "inst_id": "yale"
     }
   },
   {
