@@ -42,6 +42,31 @@ RSpec.describe Macros::LanguageExtraction do
     end
   end
 
+  describe 'armenian_script_lang_or_default' do
+    # Sample records
+    let(:hy_value) { { 'value' => 'վիճակախաղի շահումների խաղարկությունները կայանալու են' } }
+    let(:default_value) { { 'value' => 'value in default script' } }
+    let(:both_values) { { 'value' => 'վիճակախաղի շահումների խաղարկությունները կայանալու են|value in default script' } }
+
+    before do
+      indexer.instance_eval do
+        to_field 'field', extract_json('value'), split('|'), armenian_script_lang_or_default('hy-Armn', 'en')
+      end
+    end
+
+    it 'assigns hy value' do
+      expect(indexer.map_record(hy_value)).to eq({ 'field' => [{ language: 'hy-Armn', values: ['վիճակախաղի շահումների խաղարկությունները կայանալու են'] }] })
+    end
+
+    it 'assigns default value' do
+      expect(indexer.map_record(default_value)).to eq({ 'field' => [{ language: 'en', values: ['value in default script'] }] })
+    end
+
+    it 'assigns both value' do
+      expect(indexer.map_record(both_values)).to eq({ 'field' => [{ language: 'hy-Armn', values: ['վիճակախաղի շահումների խաղարկությունները կայանալու են'] }, { language: 'en', values: ['value in default script'] }] })
+    end
+  end
+
   describe 'hebrew_script_lang_or_default' do
     # Sample records
     let(:he_value) { { 'value' => 'ספר בחכמות הרפואות' } }
