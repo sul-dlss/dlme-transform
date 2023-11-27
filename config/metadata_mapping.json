@@ -622,6 +622,26 @@
   },
   {
     "trajects": [
+      "newcastle.rb"
+    ],
+    "paths": [
+      "newcastle"
+    ],
+    "extension": ".json",
+    "settings": {
+      "agg_provider": "Newcastle University",
+      "agg_provider_country": "United Kingdom",
+      "agg_data_provider": "Newcastle University",
+      "agg_data_provider_country": "United Kingdom",
+      "agg_provider_ar": "جامعة نيوكاسل",
+      "agg_provider_country_ar": "المملكة المتحدة",
+      "agg_data_provider_ar": "جامعة نيوكاسل",
+      "agg_data_provider_country_ar": "المملكة المتحدة",
+      "inst_id": "newcastle"
+    }
+  },
+  {
+    "trajects": [
       "palestine_posters_project_archive.rb"
     ],
     "paths": [
