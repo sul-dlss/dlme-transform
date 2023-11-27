@@ -12,7 +12,7 @@ RSpec.describe Macros::Newcastle do
   let(:instance) { klass.new }
 
   describe 'newcastle_thumbnail' do
-    subject(:macro) { instance.send(:get_newcastle_thumbnail).call(record, accumulator) }
+    subject(:macro) { instance.send(:newcastle_thumbnail).call(record, accumulator) }
 
     let(:accumulator) { [] }
 
