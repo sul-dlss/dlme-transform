@@ -1109,14 +1109,14 @@
     ],
     "extension": ".json",
     "settings": {
-      "agg_provider": "The Arab Image Foundation",
-      "agg_provider_country": "Lebanon",
-      "agg_data_provider": "University of California, Los Angeles",
-      "agg_data_provider_country": "United States of America",
-      "agg_provider_ar": "مؤسسة الصورة العربية",
-      "agg_provider_country_ar": "لبنان",
-      "agg_data_provider_ar": "جامعة كاليفورنيا، لوس أنجلوس",
-      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "agg_provider": "University of California, Los Angeles",
+      "agg_provider_country": "United States of America",
+      "agg_data_provider": "The Arab Image Foundation",
+      "agg_data_provider_country": "Lebanon",
+      "agg_provider_ar": "جامعة كاليفورنيا، لوس أنجلوس",
+      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "agg_data_provider_ar": "مؤسسة الصورة العربية",
+      "agg_data_provider_country_ar": "لبنان",
       "inst_id": "ucla"
     }
   },
