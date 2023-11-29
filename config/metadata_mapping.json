@@ -1062,26 +1062,6 @@
   },
   {
     "trajects": [
-      "walters.rb"
-    ],
-    "paths": [
-      "walters"
-    ],
-    "extension": ".json",
-    "settings": {
-      "agg_provider": "The Walters Art Museum",
-      "agg_provider_country": "United States of America",
-      "agg_data_provider": "The Walters Art Museum",
-      "agg_data_provider_country": "United States of America",
-      "agg_provider_ar": "متحف والتر للفنون",
-      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "agg_data_provider_ar": "متحف والتر للفنون",
-      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "inst_id": "walters"
-    }
-  },
-  {
-    "trajects": [
       "ucla_armenian.rb"
     ],
     "paths": [
@@ -1097,7 +1077,7 @@
       "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
       "agg_data_provider_ar": "جامعة كاليفورنيا، لوس أنجلوس",
       "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "inst_id": "yale"
+      "inst_id": "ucla"
     }
   },
   {
@@ -1117,7 +1097,7 @@
       "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
       "agg_data_provider_ar": "جامعة كاليفورنيا، لوس أنجلوس",
       "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "inst_id": "yale"
+      "inst_id": "ucla"
     }
   },
   {
@@ -1125,7 +1105,27 @@
       "ucla_iiif_v3.rb"
     ],
     "paths": [
-      "ucla/iiif_v3"
+      "ucla/iiif_v3/arab_image_foundation"
+    ],
+    "extension": ".json",
+    "settings": {
+      "agg_provider": "The Arab Image Foundation",
+      "agg_provider_country": "Lebanon",
+      "agg_data_provider": "University of California, Los Angeles",
+      "agg_data_provider_country": "United States of America",
+      "agg_provider_ar": "مؤسسة الصورة العربية",
+      "agg_provider_country_ar": "لبنان",
+      "agg_data_provider_ar": "جامعة كاليفورنيا، لوس أنجلوس",
+      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "inst_id": "ucla"
+    }
+  },
+  {
+    "trajects": [
+      "ucla_iiif_v3.rb"
+    ],
+    "paths": [
+      "ucla/iiif_v3/dupree"
     ],
     "extension": ".json",
     "settings": {
@@ -1137,7 +1137,7 @@
       "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
       "agg_data_provider_ar": "جامعة كاليفورنيا، لوس أنجلوس",
       "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "inst_id": "yale"
+      "inst_id": "ucla"
     }
   },
   {
@@ -1157,7 +1157,27 @@
       "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
       "agg_data_provider_ar": "جامعة كاليفورنيا، لوس أنجلوس",
       "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "inst_id": "yale"
+      "inst_id": "ucla"
+    }
+  },
+  {
+    "trajects": [
+      "walters.rb"
+    ],
+    "paths": [
+      "walters"
+    ],
+    "extension": ".json",
+    "settings": {
+      "agg_provider": "The Walters Art Museum",
+      "agg_provider_country": "United States of America",
+      "agg_data_provider": "The Walters Art Museum",
+      "agg_data_provider_country": "United States of America",
+      "agg_provider_ar": "متحف والتر للفنون",
+      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "agg_data_provider_ar": "متحف والتر للفنون",
+      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "inst_id": "walters"
     }
   },
   {
