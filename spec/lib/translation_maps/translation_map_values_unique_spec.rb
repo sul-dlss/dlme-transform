@@ -7,7 +7,7 @@ require 'yaml'
 # outcoming value.
 RSpec.shared_examples 'a set' do |translation_map_filename|
   all_values = []
-  YAML.load_file(translation_map_filename).each do |_key, values|
+  YAML.load_file(translation_map_filename).each_value do |values|
     all_values << values
   end
   it 'has only unique values' do

@@ -7,11 +7,11 @@ require 'yaml'
 # translation maps together
 RSpec.shared_examples 'a valid translation map chain' do |next_translation_map, preceding_translation_maps|
   keys_in_next_translation_map = []
-  YAML.load_file(next_translation_map).each do |key, _values|
+  YAML.load_file(next_translation_map).each_key do |key|
     keys_in_next_translation_map << key.downcase
   end
   preceding_translation_maps.each do |preceding_translation_map|
-    YAML.load_file(preceding_translation_map).each do |_key, values|
+    YAML.load_file(preceding_translation_map).each_value do |values|
       Array(values).each do |literal_value|
         context "with a value from #{preceding_translation_map}" do
           it "translates #{literal_value} using #{next_translation_map}" do
