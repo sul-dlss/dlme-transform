@@ -552,7 +552,7 @@
     "paths": [
       "openiti"
     ],
-    "extension": ".csv",
+    "extension": ".json",
     "settings": {
       "agg_provider": "Open Islamicate Texts Initiative",
       "agg_provider_country": "United States of America",
