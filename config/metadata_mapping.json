@@ -547,6 +547,26 @@
   },
   {
     "trajects": [
+      "openiti.rb"
+    ],
+    "paths": [
+      "openiti"
+    ],
+    "extension": ".json",
+    "settings": {
+      "agg_provider": "Open Islamicate Texts Initiative",
+      "agg_provider_country": "United States of America",
+      "agg_data_provider": "Open Islamicate Texts Initiative",
+      "agg_data_provider_country": "United States of America",
+      "agg_provider_ar": "مبادرة النصوص الإسلامية المفتوحة",
+      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "agg_data_provider_ar": "مبادرة النصوص الإسلامية المفتوحة",
+      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "inst_id": "openiti"
+    }
+  },
+  {
+    "trajects": [
       "palestine_posters_project_archive.rb"
     ],
     "paths": [
