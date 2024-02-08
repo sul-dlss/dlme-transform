@@ -442,121 +442,26 @@
   },
   {
     "trajects": [
-      "loc_abdul_hamid_ii_books.rb"
+      "loc.rb"
     ],
     "paths": [
-      "loc/abdul_hamid_ii_books"
-    ],
-    "extension": ".json",
-    "settings": {
-      "agg_provider": "Library of Congress",
-      "agg_provider_country": "United States of America",
-      "agg_data_provider": "Library of Congress",
-      "agg_data_provider_country": "United States of America",
-      "agg_provider_ar": "مكتبة الكونغرس",
-      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "agg_data_provider_ar": "مكتبة الكونغرس",
-      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "inst_id": "loc"
-    }
-  },
-  {
-    "trajects": [
-      "loc_abdul_hamid_ii_photos.rb"
-    ],
-    "paths": [
-      "loc/abdul_hamid_ii_photos"
-    ],
-    "extension": ".json",
-    "settings": {
-      "agg_provider": "Library of Congress",
-      "agg_provider_country": "United States of America",
-      "agg_data_provider": "Library of Congress",
-      "agg_data_provider_country": "United States of America",
-      "agg_provider_ar": "مكتبة الكونغرس",
-      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "agg_data_provider_ar": "مكتبة الكونغرس",
-      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "inst_id": "loc"
-    }
-  },
-  {
-    "trajects": [
-      "loc_el_taher.rb"
-    ],
-    "paths": [
-      "loc/el_taher"
-    ],
-    "extension": ".json",
-    "settings": {
-      "agg_provider": "Library of Congress",
-      "agg_provider_country": "United States of America",
-      "agg_data_provider": "Library of Congress",
-      "agg_data_provider_country": "United States of America",
-      "agg_provider_ar": "مكتبة الكونغرس",
-      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "agg_data_provider_ar": "مكتبة الكونغرس",
-      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "inst_id": "loc"
-    }
-  },
-  {
-    "trajects": [
-      "loc_greek_and_armenian_patriarchates.rb"
-    ],
-    "paths": [
-      "loc/greek_and_armenian_patriarchates"
-    ],
-    "extension": ".json",
-    "settings": {
-      "agg_provider": "Library of Congress",
-      "agg_provider_country": "United States of America",
-      "agg_data_provider": "Libraries of the Greek and Armenian Patriarchates in Jerusalem",
-      "agg_data_provider_country": "Palestine",
-      "agg_provider_ar": "مكتبة الكونغرس",
-      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "agg_data_provider_ar": "مكتبات البطريركية اليونانية والأرمنية في القدس",
-      "agg_data_provider_country_ar": "فلسطين",
-      "inst_id": "loc"
-    }
-  },
-  {
-    "trajects": [
-      "loc_persian.rb"
-    ],
-    "paths": [
-      "loc/persian"
-    ],
-    "extension": ".json",
-    "settings": {
-      "agg_provider": "Library of Congress",
-      "agg_provider_country": "United States of America",
-      "agg_data_provider": "Library of Congress",
-      "agg_data_provider_country": "United States of America",
-      "agg_provider_ar": "مكتبة الكونغرس",
-      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "agg_data_provider_ar": "مكتبة الكونغرس",
-      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "inst_id": "loc"
-    }
-  },
-  {
-    "trajects": [
-      "loc_st_catherines_monastery.rb"
-    ],
-    "paths": [
+      "loc/abdul_hamid_ii_books",
+      "loc/abdul_hamid_ii_photos",
+      "loc/el_taher",
+      "loc/greek_and_armenian_patriarchates",
+      "loc/persian",
       "loc/st_catherines_monastery"
     ],
     "extension": ".json",
     "settings": {
       "agg_provider": "Library of Congress",
       "agg_provider_country": "United States of America",
-      "agg_data_provider": "St. Catherine's Monastery, Mount Sinai",
-      "agg_data_provider_country": "Egypt",
+      "agg_data_provider": "Library of Congress",
+      "agg_data_provider_country": "United States of America",
       "agg_provider_ar": "مكتبة الكونغرس",
-      "agg_provider_country_ar": "دير سانت كاترين ، جبل سيناء",
+      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
       "agg_data_provider_ar": "مكتبة الكونغرس",
-      "agg_data_provider_country_ar": "مصر",
+      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
       "inst_id": "loc"
     }
   },
