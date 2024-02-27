@@ -11,6 +11,26 @@ RSpec.describe Macros::Prepend do
   end
   let(:instance) { klass.new }
 
+  describe '#dlme_prepend' do
+    context 'with no value' do
+      let(:output) { [] } # outputs nil
+
+      it 'prepends the prepend string' do
+        callable = instance.dlme_prepend('prepend string: ')
+        expect(callable.call(nil, output)).to be_nil
+      end
+    end
+
+    context 'with values present' do
+      let(:output) { ['value'] } # outputs nil
+
+      it 'prepends the prepend string' do
+        callable = instance.dlme_prepend('prepend string: ')
+        expect(callable.call(nil, output)).to eq(['prepend string: value'])
+      end
+    end
+  end
+
   describe '#intelligent_prepend' do
     context 'with en language code' do
       let(:output) { [language: 'en', values: [+'value']] } # outputs nil
