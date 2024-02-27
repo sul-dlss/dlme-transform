@@ -20,10 +20,11 @@ module Macros
     # @return [Proc] a proc that traject can call for each record
     def generate_has_type
       lambda do |record, accumulator, _context|
-        accumulator << record[CLASSIFICATION].split(';')[0].strip.downcase if record[CLASSIFICATION].present?
-        accumulator << record[OBJECT_NAME].split(';')[0].strip.downcase if record[CLASSIFICATION].blank? &&
-                                                                           record[OBJECT_NAME].present?
-        accumulator
+        if record[CLASSIFICATION].present?
+          accumulator << record[CLASSIFICATION].split(';')[0].strip.downcase
+        elsif record[OBJECT_NAME].present?
+          accumulator << record[OBJECT_NAME].split(';')[0].strip.downcase
+        end
       end
     end
 
@@ -51,7 +52,7 @@ module Macros
       lambda do |record, accumulator, _context|
         if record[THUMBNAIL_URL].present?
           accumulator << record[THUMBNAIL_URL]['Medium'].gsub('width=150', 'width=400')
-        else
+        elsif record[IMAGES].present?
           accumulator << record[IMAGES].split(',')[0].delete('.').gsub('jpg', '.jpg').prepend('https://art.thewalters.org/images/art/thumbnails/s_').downcase.gsub('width=150', 'width=400')
         end
       end

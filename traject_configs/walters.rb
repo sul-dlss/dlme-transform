@@ -6,11 +6,15 @@ require 'macros/collection'
 require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
+require 'macros/iiif'
 require 'macros/language_extraction'
 require 'macros/normalize_language'
 require 'macros/normalize_type'
 require 'macros/path_to_file'
+require 'macros/prepend'
+require 'macros/string_helper'
 require 'macros/timestamp'
+require 'macros/title_extraction'
 require 'macros/version'
 require 'macros/walters'
 require 'traject_plus'
@@ -19,19 +23,22 @@ extend Macros::Collection
 extend Macros::DLME
 extend Macros::DateParsing
 extend Macros::EachRecord
+extend Macros::IIIF
 extend Macros::LanguageExtraction
 extend Macros::NormalizeLanguage
 extend Macros::NormalizeType
 extend Macros::PathToFile
+extend Macros::Prepend
+extend Macros::StringHelper
 extend Macros::Timestamp
+extend Macros::TitleExtraction
 extend Macros::Version
 extend Macros::Walters
 extend TrajectPlus::Macros
 extend TrajectPlus::Macros::JSON
 
-require 'pathname'
-
 settings do
+  provide 'allow_duplicate_values', false
   provide 'writer_class_name', 'DlmeJsonResourceWriter'
   provide 'reader_class_name', 'TrajectPlus::JsonReader'
 end
@@ -40,48 +47,47 @@ end
 to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
 
-to_field 'agg_data_provider_collection', extract_json('.Collection'), transform(&:downcase), gsub(' ', '-'), prepend('walters-'), translation_map('agg_collection_from_provider_id'), lang('en')
-to_field 'agg_data_provider_collection', extract_json('.Collection'), transform(&:downcase), gsub(' ', '-'), prepend('walters-'), translation_map('agg_collection_from_provider_id'), translation_map('agg_collection_ar_from_en'), lang('ar-Arab')
-to_field 'agg_data_provider_collection_id', extract_json('.Collection'), transform(&:downcase), gsub(' ', '-'), prepend('walters-')
-
 # File path
 to_field 'dlme_source_file', path_to_file
 
-# Cho Required
-to_field 'id', extract_json('.ObjectNumber')
-to_field 'cho_title', extract_json('.Title'), lang('en')
+to_field 'agg_data_provider_collection', path_to_file, split('/'), at_index(3), gsub('_', '-'), dlme_prepend('walters-'), translation_map('agg_collection_from_provider_id'), lang('en')
+to_field 'agg_data_provider_collection', path_to_file, split('/'), at_index(3), gsub('_', '-'), dlme_prepend('walters-'), translation_map('agg_collection_from_provider_id'), translation_map('agg_collection_ar_from_en'), lang('ar-Arab')
+to_field 'agg_data_provider_collection_id', path_to_file, split('/'), at_index(3), gsub('_', '-'), dlme_prepend('walters-')
 
-# Cho Other
-to_field 'cho_creator', extract_json('.Creator'), lang('en')
+# CHO Required
+to_field 'id', extract_json('.ObjectID'), dlme_prepend('walters-')
+to_field 'cho_title', extract_json('.Title'), strip, lang('en')
+
+# CHO Other
+to_field 'cho_creator', extract_json('.Creators'), lang('en')
 to_field 'cho_date', extract_json('.DateText'), lang('en')
 to_field 'cho_date_range_norm', generate_object_date, parse_range
 to_field 'cho_date_range_hijri', generate_object_date, parse_range, hijri_range
 to_field 'cho_dc_rights', literal('Public Domain'), lang('en')
 to_field 'cho_description', extract_json('.Description'), lang('en')
-to_field 'cho_description', extract_json('.Dynasty'), prepend('Dynasty: '), lang('en')
-to_field 'cho_description', extract_json('.Inscriptions'), lang('en')
-to_field 'cho_description', extract_json('.Reign'), lang('en')
-to_field 'cho_description', extract_json('.Style'), lang('en')
+to_field 'cho_description', extract_json('.Dynasty'), dlme_prepend('Dynasty: '), lang('en')
+to_field 'cho_description', extract_json('.Inscriptions'), dlme_prepend('Inscriptions: '), lang('en')
+to_field 'cho_description', extract_json('.Reign'), dlme_prepend('Reign: '), lang('en')
+to_field 'cho_description', extract_json('.Style'), dlme_prepend('Style: '), lang('en')
 to_field 'cho_edm_type', generate_has_type, normalize_has_type, normalize_edm_type, lang('en')
 to_field 'cho_edm_type', generate_has_type, normalize_has_type, normalize_edm_type, translation_map('edm_type_ar_from_en'), lang('ar-Arab')
-to_field 'cho_extent', extract_json('.Dimensions'), prepend('Dimensions: '), lang('en')
+to_field 'cho_extent', extract_json('.Dimensions'), dlme_prepend('Dimensions: '), lang('en')
 to_field 'cho_has_type', generate_has_type, normalize_has_type, lang('en')
 to_field 'cho_has_type', generate_has_type, normalize_has_type, translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_identifier', extract_json('.ObjectNumber')
 to_field 'cho_identifier', extract_json('.SortNumber')
-to_field 'cho_is_part_of', extract_json('.Collection'), lang('en')
+to_field 'cho_is_part_of', extract_json('.CollectionID'), lang('en')
+to_field 'cho_is_part_of', extract_json('.CollectionName'), lang('en')
 to_field 'cho_medium', extract_json('.Medium'), lang('en')
 to_field 'cho_provenance', extract_json('.Provenance'), lang('en')
-to_field 'cho_subject', extract_json('.Culture'), prepend('Culture: '), lang('en')
-to_field 'cho_subject', extract_json('.Keywords'), lang('en')
+to_field 'cho_related', extract_json('.RelatedObjects'), lang('en')
+to_field 'cho_subject', extract_json('.Culture'), dlme_prepend('Culture: '), lang('en')
 to_field 'cho_temporal', extract_json('.Period'), lang('en')
-to_field 'cho_type', extract_json('.Classification'), lang('en')
-to_field 'cho_type', extract_json('.ObjectName'), split(';'), strip, lang('en')
+to_field 'cho_type', generate_has_type, lang('en')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
 to_field 'agg_data_provider', data_provider_ar, lang('ar-Arab')
-
 to_field 'agg_data_provider_country', data_provider_country, lang('en')
 to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_edm_rights', literal('CC0: https://creativecommons.org/publicdomain/zero/1.0/')

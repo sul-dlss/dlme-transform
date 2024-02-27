@@ -111,7 +111,9 @@ module Contracts
     rule(:agg_provider_country, &required_language_specific_rule)
     rule(:agg_is_shown_at, &web_resource_validation_rule)
     rule(:agg_is_shown_by, &web_resource_validation_rule)
-    rule(:agg_preview, &web_resource_validation_rule)
+    # Calling web_resource_validation_rule on agg_preview results in a validation
+    # error for objects without thumbnail ids. We don't want this to happen.
+    # rule(:agg_preview, &web_resource_validation_rule)
     rule(:agg_has_view).each(&web_resource_validation_rule)
 
     private
