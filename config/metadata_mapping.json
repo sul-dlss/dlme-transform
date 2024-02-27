@@ -445,12 +445,12 @@
       "loc.rb"
     ],
     "paths": [
-      "loc/abdul_hamid_ii_books",
-      "loc/abdul_hamid_ii_photos",
+      "loc/abdul_hamid_books",
+      "loc/abdul_hamid_photos",
       "loc/el_taher",
       "loc/greek_and_armenian_patriarchates",
       "loc/persian",
-      "loc/st_catherines_monastery"
+      "loc/st_catherines"
     ],
     "extension": ".json",
     "settings": {
