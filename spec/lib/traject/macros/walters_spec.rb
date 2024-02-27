@@ -20,7 +20,7 @@ RSpec.describe Macros::Walters do
     context 'when record is empty' do
       let(:record) { {} }
 
-      it 'returns empty array' do
+      it 'returns nil' do
         expect(macro).to be_nil
       end
     end
@@ -28,7 +28,7 @@ RSpec.describe Macros::Walters do
     context 'when classification & object name blank' do
       let(:record) { { 'Classification' => '', 'ObjectName' => '' } }
 
-      it 'returns empty array' do
+      it 'returns nil' do
         expect(macro).to be_nil
       end
     end
@@ -108,6 +108,14 @@ RSpec.describe Macros::Walters do
 
       it 'builds thumbnail url' do
         expect(macro).to eq(['https://art.thewalters.org/images/art/thumbnails/s_365.jpg'])
+      end
+    end
+
+    context 'thumbnail url and images blank' do
+      let(:record) { { 'PrimaryImage' => {}, 'Images' => {} } }
+
+      it 'returns nil' do
+        expect(macro).to be_nil
       end
     end
   end
