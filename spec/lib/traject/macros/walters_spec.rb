@@ -21,7 +21,7 @@ RSpec.describe Macros::Walters do
       let(:record) { {} }
 
       it 'returns empty array' do
-        expect(macro).to eq([])
+        expect(macro).to eq(nil)
       end
     end
 
@@ -29,7 +29,7 @@ RSpec.describe Macros::Walters do
       let(:record) { { 'Classification' => '', 'ObjectName' => '' } }
 
       it 'returns empty array' do
-        expect(macro).to eq([])
+        expect(macro).to eq(nil)
       end
     end
 

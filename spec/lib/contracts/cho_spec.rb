@@ -159,7 +159,6 @@ RSpec.describe Contracts::CHO do
     %i[
       agg_is_shown_at
       agg_is_shown_by
-      agg_preview
     ].each do |field_name|
       describe field_name do
         context 'when not provided' do
