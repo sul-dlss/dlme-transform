@@ -10,6 +10,7 @@ require 'macros/field_extraction'
 require 'macros/language_extraction'
 require 'macros/path_to_file'
 require 'macros/prepend'
+require 'macros/split'
 require 'macros/string_helper'
 require 'macros/timestamp'
 require 'macros/title_extraction'
@@ -24,6 +25,7 @@ extend Macros::FieldExtraction
 extend Macros::LanguageExtraction
 extend Macros::PathToFile
 extend Macros::Prepend
+extend Macros::Split
 extend Macros::StringHelper
 extend Macros::Timestamp
 extend Macros::TitleExtraction
@@ -33,6 +35,8 @@ extend TrajectPlus::Macros::JSON
 
 settings do
   provide 'allow_duplicate_values', false
+  provide "allow_nil_values", false
+  provide "allow_empty_fields", false
   provide 'writer_class_name', 'DlmeJsonResourceWriter'
   provide 'reader_class_name', 'TrajectPlus::JsonReader'
 end
@@ -54,28 +58,29 @@ to_field 'cho_title', extract_json('.title_ar'), lang('ar-Arab')
 to_field 'cho_title', extract_json('.title_lat'), lang('en')
 
 # CHO Other
-to_field 'cho_creator', extract_json('.author_ar'), lang('ar-Arab')
-to_field 'cho_creator', extract_json('.author_lat'), lang('en')
+to_field 'cho_creator', extract_json('.author_ar'), dlme_split('::'), at_index(0), lang('ar-Arab')
+to_field 'cho_creator', extract_json('.author_lat'), split('::'), at_index(0), lang('en')
 to_field 'cho_date', extract_json_from_context('.date'), append(' AH'), lang('ar-Arab')
 to_field 'cho_date', extract_json_from_context('.date'), append('هـ '), lang('en')
 to_field 'cho_date_range_hijri', extract_json_from_context('.date'), parse_range
-to_field 'cho_dc_rights', literal('المجال العام'), lang('ar-Arab')
-to_field 'cho_dc_rights', literal('Public Domain'), lang('en')
+to_field 'cho_dc_rights', literal('إسناد المشاع الإبداعي غير التجاري الحصة على حد سواء 4.0 الدولية'), lang('ar-Arab')
+to_field 'cho_dc_rights', literal('Creative Commons Attribution Non Commercial Share Alike 4.0 International'), lang('en')
 to_field 'cho_description', extract_json('.ed_info'), lang('en')
-to_field 'cho_description', literal('فيما يلي روابط لمجموعات بيانات إعادة استخدام النص التي توضح العلاقة بين العمل الحالي ومجموعة مبادرة النصوص الإسلامية المفتوحة بأكملها.'), lang('ar-Arab')
-to_field 'cho_description', literal('Below are links to text reuse datasets showing the relationship between the present work and the entire Open Islamicate Texts Initiative corpus.'), lang('en')
-to_field 'cho_description', extract_json('.one2all_data_url'), prepend('واحد لجميع الإحصائيات: '), lang('ar-Arab')
-to_field 'cho_description', extract_json('.one2all_data_url'), prepend('One to all data: '), lang('en')
-to_field 'cho_description', extract_json('.one2all_stats_url'), prepend('One to all statistics: '), lang('ar-Arab')
-to_field 'cho_description', extract_json('.one2all_stats_url'), prepend('One to all statistics: '), lang('en')
-to_field 'cho_description', extract_json('.one2all_vis_url'), prepend('واحد للجميع التصور: '), lang('ar-Arab')
-to_field 'cho_description', extract_json('.one2all_vis_url'), prepend('One to all visualization: '), lang('en')
-to_field 'cho_description', extract_json('.pairwise_data_url'), prepend('البيانات الزوجية: '), lang('ar-Arab')
-to_field 'cho_description', extract_json('.pairwise_data_url'), prepend('Pairwise data: '), lang('en')
+to_field 'cho_description', extract_json('.release_version'), prepend('Machine-readable text and text reuse datasets (from OpenITI release'), append(')'), lang('en')
+to_field 'cho_description', extract_json('.text_url'), prepend('Machine-readable text: '), lang('en')
+to_field 'cho_description', extract_json('.uncorrected_ocr'), translation_map('openiti'), lang('en')
+to_field 'cho_description', literal('The KITAB text reuse datasets (https://kitab-project.org/data#passim-text-reuse-data-sets) document the overlap between the present work and other texts in the Open Islamicate Texts Initiative corpus.'), lang('en')
+to_field 'cho_description', extract_json('.one2all_data_url'), prepend('Dataset documenting the overlap between the present text and the entire OpenITI corpus: '), lang('en')
+to_field 'cho_description', extract_json('.one2all_stats_url'), prepend('Statistics on the overlap between the present text and all other texts in the OpenITI corpus: '), lang('en')
+to_field 'cho_description', extract_json('.one2all_vis_url'), prepend('Visualization of the overlap between the present text and the entire OpenITI corpus: '), lang('en')
+to_field 'cho_description', extract_json('.pairwise_data_url'), prepend('Datasets documenting the overlap between the present text and a single other text (“pairwise”): '), lang('en')
+to_field 'cho_description', literal('For instructions on batch downloading all of the KITAB and OpenITI data, see https://kitab-project.org/data/download'), lang('en')
 to_field 'cho_edm_type', literal('Dataset'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_edm_type', literal('Dataset'), lang('en')
 to_field 'cho_has_type', literal('Text Reuse Data'), translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_has_type', literal('Text Reuse Data'), lang('en')
+to_field 'cho_has_type', literal('Machine-readable text'), translation_map('has_type_ar_from_en'), lang('ar-Arab')
+to_field 'cho_has_type', literal('Machine-readable text'), lang('en')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
@@ -85,7 +90,7 @@ to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_edm_rights', literal('https://creativecommons.org/share-your-work/public-domain/cc0/')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(context,
-                                  'wr_id' => [extract_json('.text_url')],
+                                  'wr_id' => [extract_json('.one2all_vis_url')],
                                   'wr_dc_rights' => [literal('Public Domain')])
 end
 to_field 'agg_preview' do |_record, accumulator, context|

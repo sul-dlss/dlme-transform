@@ -554,13 +554,13 @@
     ],
     "extension": ".json",
     "settings": {
-      "agg_provider": "Open Islamicate Texts Initiative",
+      "agg_provider": "Open Islamicate Texts Initiative / KITAB project",
       "agg_provider_country": "United States of America",
-      "agg_data_provider": "Open Islamicate Texts Initiative",
+      "agg_data_provider": "Open Islamicate Texts Initiative / KITAB project",
       "agg_data_provider_country": "United States of America",
-      "agg_provider_ar": "مبادرة النصوص الإسلامية المفتوحة",
+      "agg_provider_ar": "مبادرة النصوص الإسلامية المفتوحة / مشروع KITAB",
       "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "agg_data_provider_ar": "مبادرة النصوص الإسلامية المفتوحة",
+      "agg_data_provider_ar": "مبادرة النصوص الإسلامية المفتوحة / مشروع KITAB",
       "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
       "inst_id": "openiti"
     }
