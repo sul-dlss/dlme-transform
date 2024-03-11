@@ -190,4 +190,12 @@ RSpec.describe Macros::EachRecord do
       expect(values).to eq(['ab', 'cd', 'homer'])
     end
   end
+
+  describe '#flatten_array' do
+    it 'flattens an array of arrays' do
+      accumulator = [[1, 2], [3, 4]]
+      instance.flatten_array.call(nil, accumulator, nil)
+      expect(accumulator).to eq([1, 2, 3, 4])
+    end
+  end
 end
