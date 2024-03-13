@@ -92,5 +92,12 @@ module Macros
       end
       cleaned_values
     end
+
+    # helper method to flatten an array of arrays
+    def flatten_array
+      lambda do |_record, accumulator, _context|
+        accumulator.flatten!
+      end
+    end
   end
 end
