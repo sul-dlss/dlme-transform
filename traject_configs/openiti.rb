@@ -58,7 +58,7 @@ to_field 'cho_title', extract_json('.title_ar'), lang('ar-Arab')
 to_field 'cho_title', extract_json('.title_lat'), lang('en')
 
 # CHO Other
-to_field 'cho_creator', extract_json('.author_ar'), dlme_split('::'), at_index(0), lang('ar-Arab')
+to_field 'cho_creator', extract_json('.author_ar'), split('::'), at_index(0), lang('ar-Arab')
 to_field 'cho_creator', extract_json('.author_lat'), split('::'), at_index(0), lang('en')
 to_field 'cho_date', extract_json_from_context('.date'), append(' AH'), lang('ar-Arab')
 to_field 'cho_date', extract_json_from_context('.date'), append('هـ '), lang('en')
@@ -68,7 +68,8 @@ to_field 'cho_dc_rights', literal('Creative Commons Attribution Non Commercial S
 to_field 'cho_description', extract_json('.ed_info'), lang('en')
 to_field 'cho_description', extract_json('.release_version'), prepend('Machine-readable text and text reuse datasets (from OpenITI release'), append(')'), lang('en')
 to_field 'cho_description', extract_json('.text_url'), prepend('Machine-readable text: '), lang('en')
-to_field 'cho_description', extract_json('.uncorrected_ocr'), translation_map('openiti'), lang('en')
+to_field 'cho_description', extract_json('.uncorrected_ocr_en'), lang('en')
+to_field 'cho_description', extract_json('.uncorrected_ocr_ar'), lang('ar-Arab')
 to_field 'cho_description', literal('The KITAB text reuse datasets (https://kitab-project.org/data#passim-text-reuse-data-sets) document the overlap between the present work and other texts in the Open Islamicate Texts Initiative corpus.'), lang('en')
 to_field 'cho_description', extract_json('.one2all_data_url'), prepend('Dataset documenting the overlap between the present text and the entire OpenITI corpus: '), lang('en')
 to_field 'cho_description', extract_json('.one2all_stats_url'), prepend('Statistics on the overlap between the present text and all other texts in the OpenITI corpus: '), lang('en')
