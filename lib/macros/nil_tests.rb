@@ -12,7 +12,7 @@ module Macros
       lambda do |_record, accumulator|
         return if accumulator.compact.blank?
 
-        accumulator << accumulator.map{|s|s.split(split_string)}
+        accumulator.replace(accumulator.map { |s| s.split(split_string) }.flatten)
       end
     end
   end
