@@ -43,7 +43,6 @@ to_field 'transform_timestamp', timestamp
 # File path
 to_field 'dlme_source_file', path_to_file
 
-
 ### Tests
 # test-null: calling split on null values raises an error
 # to_field 'cho_creator', extract_json('..creator'), flatten_array, split('::'), strip, unique, arabic_script_lang_or_default('und-Arab', 'en')

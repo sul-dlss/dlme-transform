@@ -28,10 +28,12 @@ module Macros
     # rubocop:disable Metrics/PerceivedComplexity, Metrics/CyclomaticComplexity, Metrics/AbcSize, Metrics/MethodLength
     def arabic_script_lang_or_default(arabic_script_lang, default)
       lambda do |_record, accumulator|
+        return if accumulator.compact.empty?
+
         if accumulator
           ar_values = []
           default_values = []
-          accumulator.each do |val|
+          accumulator.compact.each do |val|
             val = translate_role_to_ar(val)
             lang_code = val.match?(/[ضصثقفغعهخحمنتالبيسشظطذدزرو]/) ? arabic_script_lang : default
             ar_values << val if lang_code == arabic_script_lang
