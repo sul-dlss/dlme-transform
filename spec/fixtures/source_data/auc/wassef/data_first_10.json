@@ -1,0 +1,741 @@
+[
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll5:117/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:111/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:112/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:113/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:114/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:115/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:116/full/full/0/default.jpg"
+    ],
+    "acknowledgements": [
+      "The Creating a Center for Architectural Archives in Egypt: Preservation and Access for the Papers of Hassan Fathy and Ramses Wissa Wassef project was made possible with funding from Grants to Preserve and Create Access to Humanities Collections of the National Endowment for the Humanities."
+    ],
+    "collection": [
+      "Ramses Wissa Wassef Architectural Drawings"
+    ],
+    "location": [
+      "Miṣr al Jadīdah; Al-Qāhirah governorate; Egypt; Africa"
+    ],
+    "architect": [
+      "Wissa Wassef, Ramses"
+    ],
+    "date-created": [
+      "1936"
+    ],
+    "extent": [
+      "188 sheets"
+    ],
+    "medium": [
+      "architectural drawings (visual works)"
+    ],
+    "identifier": [
+      "WW-1936-02"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Regional Architecture Collection Department in Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.2923, +20.2.2615.3094, or rbscl-rac@aucegypt.edu."
+    ],
+    "license": [
+      "Copyright 2013, American University in Cairo. All rights reserved."
+    ],
+    "source": [
+      "French Egyptian Boarding School in Heliopolis; Ramses Wissa Wassef papers; Rare Books and Special Collections Library; The American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll5/id/117\">French Egyptian Boarding School in Heliopolis</a></span>"
+    ],
+    "subject-lcsh": [
+      "Architecture--Designs and plans; Dormitories; School buildings"
+    ],
+    "title": [
+      "French Egyptian Boarding School in Heliopolis"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "format": null,
+    "original-identifier": null,
+    "type": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll5:123/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:118/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:119/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:120/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:121/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:122/full/full/0/default.jpg"
+    ],
+    "acknowledgements": [
+      "The Creating a Center for Architectural Archives in Egypt: Preservation and Access for the Papers of Hassan Fathy and Ramses Wissa Wassef project was made possible with funding from Grants to Preserve and Create Access to Humanities Collections of the National Endowment for the Humanities."
+    ],
+    "collection": [
+      "Ramses Wissa Wassef Architectural Drawings"
+    ],
+    "location": [
+      "Cairo; Al-Qāhirah governorate; Egypt; Africa"
+    ],
+    "architect": [
+      "Wissa Wassef, Ramses"
+    ],
+    "date-created": [
+      "1940"
+    ],
+    "extent": [
+      "50 sheets"
+    ],
+    "medium": [
+      "architectural drawings (visual works)"
+    ],
+    "identifier": [
+      "WW-1940-01"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Regional Architecture Collection Department in Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.2923, +20.2.2615.3094, or rbscl-rac@aucegypt.edu."
+    ],
+    "license": [
+      "Copyright 2013, American University in Cairo. All rights reserved."
+    ],
+    "source": [
+      "Evangelical Presbyterian Church; Ramses Wissa Wassef papers; Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll5/id/123\">Evangelical Presbyterian Church</a></span>"
+    ],
+    "subject-lcsh": [
+      "Church architecture"
+    ],
+    "title": [
+      "Evangelical Presbyterian Church"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "format": null,
+    "original-identifier": null,
+    "type": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll5:131/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:124/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:125/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:126/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:127/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:128/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:129/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:130/full/full/0/default.jpg"
+    ],
+    "acknowledgements": [
+      "The Creating a Center for Architectural Archives in Egypt: Preservation and Access for the Papers of Hassan Fathy and Ramses Wissa Wassef project was made possible with funding from Grants to Preserve and Create Access to Humanities Collections of the National Endowment for the Humanities."
+    ],
+    "collection": [
+      "Ramses Wissa Wassef Architectural Drawings"
+    ],
+    "location": [
+      "Cairo; Al-Qāhirah governorate; Egypt; Africa"
+    ],
+    "architect": [
+      "Wissa Wassef, Ramses"
+    ],
+    "date-created": [
+      "1937"
+    ],
+    "extent": [
+      "13 sheets"
+    ],
+    "medium": [
+      "architectural drawings (visual works)"
+    ],
+    "identifier": [
+      "WW-1937-01"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Regional Architecture Collection Department in Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.2923, +20.2.2615.3094, or rbscl-rac@aucegypt.edu."
+    ],
+    "license": [
+      "Copyright 2013, American University in Cairo. All rights reserved."
+    ],
+    "source": [
+      "Bank Misr Building and Hotel at Opera Square; Ramses Wissa Wassef papers; Rare Books and Special Collections Library; The American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll5/id/131\">Bank Misr Building and Hotel at Opera Square</a></span>"
+    ],
+    "subject-lcsh": [
+      "Architecture--Designs and plans; Bank buildings; Hotels"
+    ],
+    "title": [
+      "Bank Misr Building and Hotel at Opera Square"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "format": null,
+    "original-identifier": null,
+    "type": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll5:134/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:132/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:133/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:21/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:22/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:23/full/full/0/default.jpg"
+    ],
+    "acknowledgements": [
+      "The Creating a Center for Architectural Archives in Egypt: Preservation and Access for the Papers of Hassan Fathy and Ramses Wissa Wassef project was made possible with funding from Grants to Preserve and Create Access to Humanities Collections of the National Endowment for the Humanities."
+    ],
+    "collection": [
+      "Ramses Wissa Wassef Architectural Drawings"
+    ],
+    "location": [
+      "Cairo; Al-Qāhirah governorate; Egypt; Africa"
+    ],
+    "architect": [
+      "Wissa Wassef, Ramses"
+    ],
+    "date-created": [
+      "1939"
+    ],
+    "extent": [
+      "3 sheets"
+    ],
+    "medium": [
+      "architectural drawings (visual works)"
+    ],
+    "identifier": [
+      "WW-1939-01"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Regional Architecture Collection Department in Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.2923, +20.2.2615.3094, or rbscl-rac@aucegypt.edu."
+    ],
+    "license": [
+      "Copyright 2013, American University in Cairo. All rights reserved."
+    ],
+    "source": [
+      "French College of Daher; Ramses Wissa Wassef papers; Rare Books and Special Collections Library; The American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll5/id/134\">French College of Daher</a></span>"
+    ],
+    "subject-lcsh": [
+      "Architecture--Designs and plans; School buildings"
+    ],
+    "title": [
+      "French College of Daher"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "format": null,
+    "original-identifier": null,
+    "type": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll5:137/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:135/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:136/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:14/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:12/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:13/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:16/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:18/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:19/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:11/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:15/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:10/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:17/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:20/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:8/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:7/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:9/full/full/0/default.jpg"
+    ],
+    "acknowledgements": [
+      "The Creating a Center for Architectural Archives in Egypt: Preservation and Access for the Papers of Hassan Fathy and Ramses Wissa Wassef project was made possible with funding from Grants to Preserve and Create Access to Humanities Collections of the National Endowment for the Humanities."
+    ],
+    "collection": [
+      "Ramses Wissa Wassef Architectural Drawings"
+    ],
+    "location": [
+      "Al Maʻādī; Al-Qāhirah governorate; Egypt; Africa"
+    ],
+    "architect": [
+      "Wissa Wassef, Ramses"
+    ],
+    "date-created": [
+      "1936"
+    ],
+    "extent": [
+      "14 sheets"
+    ],
+    "medium": [
+      "architectural drawings (visual works)"
+    ],
+    "identifier": [
+      "WW-1936-01"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Regional Architecture Collection Department in Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.2923, +20.2.2615.3094, or rbscl-rac@aucegypt.edu."
+    ],
+    "license": [
+      "Copyright 2013, American University in Cairo. All rights reserved."
+    ],
+    "source": [
+      "French School of Cairo; Ramses Wissa Wassef papers; Rare Books and Special Collections Library; The American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll5/id/137\">French School of Cairo</a></span>"
+    ],
+    "subject-lcsh": [
+      "Architecture--Designs and plans; School buildings"
+    ],
+    "title": [
+      "French School of Cairo"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "format": null,
+    "original-identifier": null,
+    "type": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll5:141/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:138/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:139/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:140/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:0/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:3/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:1/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:2/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:5/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:6/full/full/0/default.jpg"
+    ],
+    "acknowledgements": [
+      "The Creating a Center for Architectural Archives in Egypt: Preservation and Access for the Papers of Hassan Fathy and Ramses Wissa Wassef project was made possible with funding from Grants to Preserve and Create Access to Humanities Collections of the National Endowment for the Humanities."
+    ],
+    "collection": [
+      "Ramses Wissa Wassef Architectural Drawings"
+    ],
+    "location": [
+      "Old Cairo; Cairo; Al-Qāhirah governorate; Egypt; Africa"
+    ],
+    "architect": [
+      "Wissa Wassef, Ramses"
+    ],
+    "date-created": [
+      "1935"
+    ],
+    "extent": [
+      "7 sheets"
+    ],
+    "medium": [
+      "architectural drawings (visual works)"
+    ],
+    "identifier": [
+      "WW-1935-01"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Regional Architecture Collection Department in Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.2923, +20.2.2615.3094, or rbscl-rac@aucegypt.edu."
+    ],
+    "license": [
+      "Copyright 2013, American University in Cairo. All rights reserved."
+    ],
+    "source": [
+      "Graduation Project - Old Cairo Potter's House; Ramses Wissa Wassef papers; Rare Books and Special Collections Library; The American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll5/id/141\">Old Cairo Potter's House</a></span>"
+    ],
+    "subject-lcsh": [
+      "Architecture--Designs and plans; Architect-designed houses; Pottery"
+    ],
+    "title": [
+      "Old Cairo Potter's House"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "format": null,
+    "original-identifier": null,
+    "type": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll5:147/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:142/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:143/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:144/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:145/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:146/full/full/0/default.jpg"
+    ],
+    "acknowledgements": [
+      "The Creating a Center for Architectural Archives in Egypt: Preservation and Access for the Papers of Hassan Fathy and Ramses Wissa Wassef project was made possible with funding from Grants to Preserve and Create Access to Humanities Collections of the National Endowment for the Humanities."
+    ],
+    "collection": [
+      "Ramses Wissa Wassef Architectural Drawings"
+    ],
+    "location": [
+      "Cairo; Al-Qāhirah governorate; Egypt; Africa"
+    ],
+    "architect": [
+      "Wissa Wassef, Ramses"
+    ],
+    "date-created": [
+      "1944"
+    ],
+    "extent": [
+      "35 sheets"
+    ],
+    "medium": [
+      "architectural drawings (visual works)"
+    ],
+    "identifier": null,
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Regional Architecture Collection Department in Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.2923, +20.2.2615.3094, or rbscl-rac@aucegypt.edu."
+    ],
+    "license": [
+      "Copyright 2013, American University in Cairo. All rights reserved."
+    ],
+    "source": [
+      "Al-Sharq Insurance Company Building; Ramses Wissa Wassef papers; Rare Books and Special Collections Library; The American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll5/id/147\">Al-Sharq Insurance Company Building</a></span>"
+    ],
+    "subject-lcsh": [
+      "Architecture--Designs and plans; Insurance companies"
+    ],
+    "title": [
+      "Al-Sharq Insurance Company Building"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "format": null,
+    "original-identifier": null,
+    "type": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll5:151/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:148/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:149/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:150/full/full/0/default.jpg"
+    ],
+    "acknowledgements": [
+      "The Creating a Center for Architectural Archives in Egypt: Preservation and Access for the Papers of Hassan Fathy and Ramses Wissa Wassef project was made possible with funding from Grants to Preserve and Create Access to Humanities Collections of the National Endowment for the Humanities."
+    ],
+    "collection": [
+      "Ramses Wissa Wassef Architectural Drawings"
+    ],
+    "location": [
+      "Cairo; Al-Qāhirah governorate; Egypt; Africa"
+    ],
+    "architect": [
+      "Wissa Wassef, Ramses"
+    ],
+    "date-created": [
+      "1947"
+    ],
+    "extent": [
+      "10 sheets"
+    ],
+    "medium": [
+      "architectural drawings (visual works)"
+    ],
+    "identifier": [
+      "WW-1947-01"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Regional Architecture Collection Department in Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.2923, +20.2.2615.3094, or rbscl-rac@aucegypt.edu."
+    ],
+    "license": [
+      "Copyright 2013, American University in Cairo. All rights reserved."
+    ],
+    "source": [
+      "Handicrafts School; Ramses Wissa Wassef papers; Rare Books and Special Collections Library; The American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll5/id/151\">Handicrafts School</a></span>"
+    ],
+    "subject-lcsh": [
+      "Architecture--Designs and plans; Handicraft; School buildings"
+    ],
+    "title": [
+      "Handicrafts School"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "format": null,
+    "original-identifier": null,
+    "type": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll5:152/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:152/full/full/0/default.jpg",
+    "acknowledgements": [
+      "The Creating a Center for Architectural Archives in Egypt: Preservation and Access for the Papers of Hassan Fathy and Ramses Wissa Wassef project was made possible with funding from Grants to Preserve and Create Access to Humanities Collections of the National Endowment for the Humanities."
+    ],
+    "collection": [
+      "Ramses Wissa Wassef Architectural Drawings"
+    ],
+    "location": [
+      "Giza; Cairo; Egypt"
+    ],
+    "architect": [
+      "Wissa Wassef, Ramses"
+    ],
+    "date-created": [
+      "1945"
+    ],
+    "extent": [
+      "1 sheet"
+    ],
+    "medium": [
+      "architectural drawings (visual works)"
+    ],
+    "identifier": null,
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Regional Architecture Collection Department in Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.2923, +20.2.2615.3094, or rbscl-rac@aucegypt.edu."
+    ],
+    "license": [
+      "Copyright 2013, American University in Cairo. All rights reserved."
+    ],
+    "source": [
+      "Faruk 1 University Dormitory; Ramses Wissa Wassef papers; Rare Books and Special Collections Library; The American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll5/id/152\">Farouk I University Dormitory</a></span>"
+    ],
+    "subject-lcsh": [
+      "College campuses; Dormitories; School buildings"
+    ],
+    "title": [
+      "Farouk I University Dormitory"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "format": [
+      "image/jpeg"
+    ],
+    "original-identifier": [
+      "WW-1945-01"
+    ],
+    "type": [
+      "Still Image"
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll5:157/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:153/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:154/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:155/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll5:156/full/full/0/default.jpg"
+    ],
+    "acknowledgements": [
+      "The Creating a Center for Architectural Archives in Egypt: Preservation and Access for the Papers of Hassan Fathy and Ramses Wissa Wassef project was made possible with funding from Grants to Preserve and Create Access to Humanities Collections of the National Endowment for the Humanities."
+    ],
+    "collection": [
+      "Ramses Wissa Wassef Architectural Drawings"
+    ],
+    "location": [
+      "Manshīyat al Bakrī; Al-Qāhirah governorate; Egypt; Africa"
+    ],
+    "architect": [
+      "Wissa Wassef, Ramses"
+    ],
+    "date-created": [
+      "1947"
+    ],
+    "extent": [
+      "29 sheets"
+    ],
+    "medium": [
+      "architectural drawings (visual works)"
+    ],
+    "identifier": [
+      "WW-1947-02"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Regional Architecture Collection Department in Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.2923, +20.2.2615.3094, or rbscl-rac@aucegypt.edu."
+    ],
+    "license": [
+      "Copyright 2013, American University in Cairo. All rights reserved."
+    ],
+    "source": [
+      "Fikri Boutrus Villa in Manshiat al-Bakri; Ramses Wissa Wassef papers; Rare Books and Special Collections Library; The American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll5/id/157\">Fikri Boutrus Villa in Manshiat al-Bakri</a></span>"
+    ],
+    "subject-lcsh": [
+      "Architect-designed houses"
+    ],
+    "title": [
+      "Fikri Boutrus Villa in Manshiat al-Bakri"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "format": null,
+    "original-identifier": null,
+    "type": null
+  }
+]

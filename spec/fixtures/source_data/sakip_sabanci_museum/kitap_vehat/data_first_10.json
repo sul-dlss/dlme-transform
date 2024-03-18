@@ -1,0 +1,968 @@
+[
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm21044.contentdm.oclc.org/iiif/Kitapvehat:103901/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:103891/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:103892/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:103893/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:103894/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:103895/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:103896/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:103897/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:103898/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:103899/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:103900/full/full/0/default.jpg"
+    ],
+    "hattat-calligrapher": [
+      "Sîrâc"
+    ],
+    "tarih-date": [
+      "887 H (1482 M)"
+    ],
+    "açıklama-description": [
+      "Sultan II. Bayezid'in (h. 1481-1512) altın tuğrasını taşıyan Arapça kaleme alınmış vakfiye, Kemal el-Gûrânî el-Muftî'nin oğlu Mevlana Şemseddin'in Bursa ve Kostantiniyye'deki taşınır ve taşınmaz vakıflarıyla ilgilidir. Burs kalesi içinde bahçe, Kostantiniyye'de okullar ve konaklar ile Galata'da on odalı konak, okul ve bir ev vakfedilen taşınmazların bazılarıdır. Mevlana Şemseddin ayrıca Bursa'da Bursa ve merhum Emir Seyyid camilerine, Ayasofya'ya, merhum Mahmud Paşa imaretine, Büyük Yeni Cami'ye Kuran ve rahle koydurmuştur. Vakfedilenler listesinin sonuna mülklerden elde edilecek gelirin nasıl ve hangi şartlarda kullanılacağı belirtilmiş ve 21 şahidin ismi yazılmıştır. "
+    ],
+    "envanter-numarası-identifier": [
+      "190-0413"
+    ],
+    "mühürler-ve-diğer-kayıtlar-inscriptions": [
+      "Vakfiyenin sonuna 1302/1884-1885 tarihli bir mahkeme kaydı yazılmış, silik olduğu için okunamayan bir de mühür basılmıştır."
+    ],
+    "ketebe-ve-zehebe-kaydı-inscriptions": [
+      "Şahitler arasında vakfıyeyi kaleme alan kâtibin ismi Kâtibü'l-hurûf Sîrâc el-Hakîr olarak kaydedilmiştir."
+    ],
+    "dil-language": [
+      "Arapça"
+    ],
+    "malzemeler-materials": [
+      "Âharlı kâğıt üzerine siyah mürekkep ve altın"
+    ],
+    "boyutlar-measurements": [
+      "5,48 x 28,5 cm; 195 satır"
+    ],
+    "tür-type": [
+      "Hat"
+    ],
+    "telif-hakkı-copyright": [
+      "© Sabancı Üniversitesi Sakıp Sabancı Müzesi. Tüm hakları saklıdır."
+    ],
+    "başlık-title": [
+      "Sultan II. Bayezid tuğralı vakfiye"
+    ],
+    "yazı-cinsi-script": [
+      "Tevki"
+    ],
+    "repository": [
+      "digitalSSM"
+    ],
+    "source": [
+      "<span>From: <a href=\"https://digitalssm.org/digital/collection/Kitapvehat/id/103901\">Sultan II. Bayezid tuğralı vakfiye</a></span>"
+    ],
+    "cilt-binding": null,
+    "dönem-object/work-culture": null,
+    "kopya-tarihi-date": null,
+    "tezhipler-illuminations": null,
+    "müzehhip-illuminator": null,
+    "atıf-notu-cited": null,
+    "yer-creation-place": null,
+    "tuğrakeş-contributors": null,
+    "tasvirler-ve-şekiller-illustrations": null,
+    "yazar-creator": null,
+    "diğer-başlık-title-alternative": null,
+    "usta-contributors": null,
+    "ayrıca-bakınız-see-also": null,
+    "mücellid-binder": null,
+    "sanatçı-artist": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm21044.contentdm.oclc.org/iiif/Kitapvehat:103928/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:103902/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:103903/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:103904/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:103905/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:103906/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:103907/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:103908/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:103909/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:103910/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:103911/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:103912/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:103913/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:103914/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:103915/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:103916/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:103917/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:103918/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:103919/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:103920/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:103921/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:103922/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:103923/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:103924/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:103925/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:103926/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:103927/full/full/0/default.jpg"
+    ],
+    "hattat-calligrapher": [
+      "Suyolcuzade Mustafa Eyyubi"
+    ],
+    "tarih-date": [
+      "1085 H (1674 M)"
+    ],
+    "açıklama-description": [
+      "Her sayfada 9 satır nesih hatla yazılmıştır. Yazı etrafları boş, cedvel ve duraklar altındır."
+    ],
+    "envanter-numarası-identifier": [
+      "120-0415"
+    ],
+    "mühürler-ve-diğer-kayıtlar-inscriptions": null,
+    "ketebe-ve-zehebe-kaydı-inscriptions": null,
+    "dil-language": [
+      "Arapça"
+    ],
+    "malzemeler-materials": null,
+    "boyutlar-measurements": [
+      "15.6 x 20.7 x 0.8 cm"
+    ],
+    "tür-type": [
+      "Hat"
+    ],
+    "telif-hakkı-copyright": [
+      "© Sabancı Üniversitesi Sakıp Sabancı Müzesi. Tüm hakları saklıdır."
+    ],
+    "başlık-title": [
+      "Murakka"
+    ],
+    "yazı-cinsi-script": null,
+    "repository": [
+      "digitalSSM"
+    ],
+    "source": [
+      "<span>From: <a href=\"https://digitalssm.org/digital/collection/Kitapvehat/id/103928\">Murakka</a></span>"
+    ],
+    "cilt-binding": [
+      "Ortasında gömme şemse bulunan cild siyah renkli deriden yapılmıştır."
+    ],
+    "dönem-object/work-culture": [
+      "17. yüzyıl"
+    ],
+    "kopya-tarihi-date": null,
+    "tezhipler-illuminations": null,
+    "müzehhip-illuminator": null,
+    "atıf-notu-cited": null,
+    "yer-creation-place": null,
+    "tuğrakeş-contributors": null,
+    "tasvirler-ve-şekiller-illustrations": null,
+    "yazar-creator": null,
+    "diğer-başlık-title-alternative": null,
+    "usta-contributors": null,
+    "ayrıca-bakınız-see-also": null,
+    "mücellid-binder": null,
+    "sanatçı-artist": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm21044.contentdm.oclc.org/iiif/Kitapvehat:127434/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:127434/full/full/0/default.jpg",
+    "hattat-calligrapher": [
+      "Hattatı bilinmiyor"
+    ],
+    "tarih-date": [
+      "18. yüzyıl"
+    ],
+    "açıklama-description": null,
+    "envanter-numarası-identifier": [
+      "190-0467"
+    ],
+    "mühürler-ve-diğer-kayıtlar-inscriptions": null,
+    "ketebe-ve-zehebe-kaydı-inscriptions": null,
+    "dil-language": null,
+    "malzemeler-materials": null,
+    "boyutlar-measurements": [
+      "14 x 22.2 cm"
+    ],
+    "tür-type": [
+      "Hat"
+    ],
+    "telif-hakkı-copyright": [
+      "© Sabancı Üniversitesi Sakıp Sabancı Müzesi. Tüm hakları saklıdır."
+    ],
+    "başlık-title": [
+      "Meşk"
+    ],
+    "yazı-cinsi-script": null,
+    "repository": [
+      "digitalSSM"
+    ],
+    "source": [
+      "<span>From: <a href=\"https://digitalssm.org/digital/collection/Kitapvehat/id/127434\">Meşk</a></span>"
+    ],
+    "cilt-binding": null,
+    "dönem-object/work-culture": null,
+    "kopya-tarihi-date": null,
+    "tezhipler-illuminations": null,
+    "müzehhip-illuminator": null,
+    "atıf-notu-cited": null,
+    "yer-creation-place": null,
+    "tuğrakeş-contributors": null,
+    "tasvirler-ve-şekiller-illustrations": null,
+    "yazar-creator": null,
+    "diğer-başlık-title-alternative": null,
+    "usta-contributors": null,
+    "ayrıca-bakınız-see-also": null,
+    "mücellid-binder": null,
+    "sanatçı-artist": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm21044.contentdm.oclc.org/iiif/Kitapvehat:127435/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:127435/full/full/0/default.jpg",
+    "hattat-calligrapher": [
+      "Darüssaade Müderrisi Es'ad Efendi"
+    ],
+    "tarih-date": null,
+    "açıklama-description": [
+      "Tek satır sülüs hatla beyaz kağıt üzerine is mürekkebiyle yazılmıştır. İç pervaz bulunmayan yazıda dış pervaz kahverengi boyalı olup tezhipsiz bırakılmıştır. Pervazla yazı arasına cedvel çekilmiştir."
+    ],
+    "envanter-numarası-identifier": [
+      "130-0473"
+    ],
+    "mühürler-ve-diğer-kayıtlar-inscriptions": null,
+    "ketebe-ve-zehebe-kaydı-inscriptions": null,
+    "dil-language": null,
+    "malzemeler-materials": [
+      "Beyaz kâğıt, is mürekkebi"
+    ],
+    "boyutlar-measurements": [
+      "30 x 14.3 cm"
+    ],
+    "tür-type": [
+      "Hat"
+    ],
+    "telif-hakkı-copyright": [
+      "© Sabancı Üniversitesi Sakıp Sabancı Müzesi. Tüm hakları saklıdır."
+    ],
+    "başlık-title": [
+      "Levha"
+    ],
+    "yazı-cinsi-script": [
+      "Sülüs"
+    ],
+    "repository": [
+      "digitalSSM"
+    ],
+    "source": [
+      "<span>From: <a href=\"https://digitalssm.org/digital/collection/Kitapvehat/id/127435\">Levha</a></span>"
+    ],
+    "cilt-binding": null,
+    "dönem-object/work-culture": null,
+    "kopya-tarihi-date": null,
+    "tezhipler-illuminations": null,
+    "müzehhip-illuminator": null,
+    "atıf-notu-cited": null,
+    "yer-creation-place": null,
+    "tuğrakeş-contributors": null,
+    "tasvirler-ve-şekiller-illustrations": null,
+    "yazar-creator": null,
+    "diğer-başlık-title-alternative": null,
+    "usta-contributors": null,
+    "ayrıca-bakınız-see-also": null,
+    "mücellid-binder": null,
+    "sanatçı-artist": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm21044.contentdm.oclc.org/iiif/Kitapvehat:133173/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:133171/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:133172/full/full/0/default.jpg"
+    ],
+    "hattat-calligrapher": [
+      "Mehmed Hulusi Efendi"
+    ],
+    "tarih-date": [
+      "1288 H (1871 M)"
+    ],
+    "açıklama-description": [
+      "Tek sayfada üç satır sülüs hatla Arapça beyitler yazılmıştır. Sarı renkli âharlı kağıt üzerine kaleme alınmıştır. Sülüs satırların altında tek satır nesih hatla ketebe yer alır. Hiçbir süsleme görülmemektedir."
+    ],
+    "envanter-numarası-identifier": [
+      "190-0497"
+    ],
+    "mühürler-ve-diğer-kayıtlar-inscriptions": null,
+    "ketebe-ve-zehebe-kaydı-inscriptions": null,
+    "dil-language": [
+      "Arapça"
+    ],
+    "malzemeler-materials": [
+      "Âharlı kâğıt, mürekkep"
+    ],
+    "boyutlar-measurements": [
+      "23 x 14 cm"
+    ],
+    "tür-type": [
+      "Hat"
+    ],
+    "telif-hakkı-copyright": [
+      "© Sabancı Üniversitesi Sakıp Sabancı Müzesi. Tüm hakları saklıdır."
+    ],
+    "başlık-title": [
+      "Yazı"
+    ],
+    "yazı-cinsi-script": [
+      "Sülüs"
+    ],
+    "repository": [
+      "digitalSSM"
+    ],
+    "source": [
+      "<span>From: <a href=\"https://digitalssm.org/digital/collection/Kitapvehat/id/133173\">Yazı</a></span>"
+    ],
+    "cilt-binding": null,
+    "dönem-object/work-culture": null,
+    "kopya-tarihi-date": null,
+    "tezhipler-illuminations": null,
+    "müzehhip-illuminator": null,
+    "atıf-notu-cited": null,
+    "yer-creation-place": null,
+    "tuğrakeş-contributors": null,
+    "tasvirler-ve-şekiller-illustrations": null,
+    "yazar-creator": null,
+    "diğer-başlık-title-alternative": null,
+    "usta-contributors": null,
+    "ayrıca-bakınız-see-also": null,
+    "mücellid-binder": null,
+    "sanatçı-artist": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm21044.contentdm.oclc.org/iiif/Kitapvehat:133194/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:133174/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:133175/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:133176/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:133177/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:133178/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:133179/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:133180/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:133181/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:133182/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:133183/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:133184/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:133185/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:133186/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:133187/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:133188/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:133189/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:133190/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:133191/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:133192/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:133193/full/full/0/default.jpg"
+    ],
+    "hattat-calligrapher": [
+      "Şeyh Hamdullah, -1520"
+    ],
+    "tarih-date": null,
+    "açıklama-description": [
+      "Sultan II. Bayezid  (s.1481-1512) Amasya'daki şehzadeliği sırasında Şeyh Hamdullah'tan hüsnühat dersleri almış, tahta çıktıktan sonra hattat İstanbul'a gelmiş ve Saray'da hat hocalığı yapmıştır. Şeyh Hamdullah'ın kıta ve meşkleri özenle bir araya getirilerek murakkalar içinde korunmuştur. Şeyh Hamdullah, bu murakkayı oluşturan, kimi bir satır sülüs, beş satır nesih ve bir satır sülüs halinde, kimi bir satır sülüs ve mailen yedi satır nesih halinde, kimi ise bir satır sülüs ve yedi satır nesih halindeki kıt'alara Hz.Muhammed'in ilmin fazileti, aklın olgunluğu, kibirin ve böbürlenmenin kötülüğü, sükûnet ve vakarın erdemi, alın terinin önemi, namazın sünneti konularındaki hadislerini yazmıştır."
+    ],
+    "envanter-numarası-identifier": [
+      "120-0243"
+    ],
+    "mühürler-ve-diğer-kayıtlar-inscriptions": null,
+    "ketebe-ve-zehebe-kaydı-inscriptions": [
+      "Hattat, son kıt'ada, nesih satırların yanına mailen \"fakir İbnü'ş-şeyh tarafından Allah'a hamd ve Peygamberine salât ederek yazılmıştır\" anlamına gelen Arapça ketebesini düşmüştür."
+    ],
+    "dil-language": [
+      "Arapça"
+    ],
+    "malzemeler-materials": [
+      "Âharlı kâğıt üzerine siyah mürekkep, boya, altın ve ebrulu kâğıt"
+    ],
+    "boyutlar-measurements": [
+      "30 x 21,7 cm"
+    ],
+    "tür-type": [
+      "Hat"
+    ],
+    "telif-hakkı-copyright": [
+      "© Sabancı Üniversitesi Sakıp Sabancı Müzesi. Tüm hakları saklıdır."
+    ],
+    "başlık-title": [
+      "Murakka"
+    ],
+    "yazı-cinsi-script": [
+      "Sülüs; Nesih"
+    ],
+    "repository": [
+      "digitalSSM"
+    ],
+    "source": [
+      "<span>From: <a href=\"https://digitalssm.org/digital/collection/Kitapvehat/id/133194\">Murakka</a></span>"
+    ],
+    "cilt-binding": null,
+    "dönem-object/work-culture": null,
+    "kopya-tarihi-date": [
+      "16. yüzyıl"
+    ],
+    "tezhipler-illuminations": [
+      "Şeyh'in yazdığı tek yaprak halindeki yazılar, 18. yüzyılda renkli ve ebrulu kâğıtlar ile vassalelenmiş ve tezhiplenmiştir."
+    ],
+    "müzehhip-illuminator": null,
+    "atıf-notu-cited": null,
+    "yer-creation-place": null,
+    "tuğrakeş-contributors": null,
+    "tasvirler-ve-şekiller-illustrations": null,
+    "yazar-creator": null,
+    "diğer-başlık-title-alternative": null,
+    "usta-contributors": null,
+    "ayrıca-bakınız-see-also": null,
+    "mücellid-binder": null,
+    "sanatçı-artist": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm21044.contentdm.oclc.org/iiif/Kitapvehat:133298/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:133296/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:133297/full/full/0/default.jpg"
+    ],
+    "hattat-calligrapher": [
+      "Hattatı bilinmiyor"
+    ],
+    "tarih-date": null,
+    "açıklama-description": [
+      "Oniki satır halinde her satırda iki mısra olmak üzere nesih hatla yazılmıştır. Sayfa açık mavi renkli kâğıda yapıştırılmıştır. Altın cedvel çekilmiştir."
+    ],
+    "envanter-numarası-identifier": [
+      "190-0479"
+    ],
+    "mühürler-ve-diğer-kayıtlar-inscriptions": null,
+    "ketebe-ve-zehebe-kaydı-inscriptions": null,
+    "dil-language": [
+      "Arapça"
+    ],
+    "malzemeler-materials": null,
+    "boyutlar-measurements": [
+      "20.5 x 27 cm"
+    ],
+    "tür-type": [
+      "Hat"
+    ],
+    "telif-hakkı-copyright": [
+      "© Sabancı Üniversitesi Sakıp Sabancı Müzesi. Tüm hakları saklıdır."
+    ],
+    "başlık-title": [
+      "Yazı"
+    ],
+    "yazı-cinsi-script": [
+      "Nesih"
+    ],
+    "repository": [
+      "digitalSSM"
+    ],
+    "source": [
+      "<span>From: <a href=\"https://digitalssm.org/digital/collection/Kitapvehat/id/133298\">Yazı</a></span>"
+    ],
+    "cilt-binding": null,
+    "dönem-object/work-culture": null,
+    "kopya-tarihi-date": null,
+    "tezhipler-illuminations": null,
+    "müzehhip-illuminator": null,
+    "atıf-notu-cited": null,
+    "yer-creation-place": null,
+    "tuğrakeş-contributors": null,
+    "tasvirler-ve-şekiller-illustrations": null,
+    "yazar-creator": null,
+    "diğer-başlık-title-alternative": null,
+    "usta-contributors": null,
+    "ayrıca-bakınız-see-also": null,
+    "mücellid-binder": null,
+    "sanatçı-artist": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm21044.contentdm.oclc.org/iiif/Kitapvehat:133301/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:133299/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:133300/full/full/0/default.jpg"
+    ],
+    "hattat-calligrapher": [
+      "Hattatı bilinmiyor"
+    ],
+    "tarih-date": null,
+    "açıklama-description": [
+      "On satır tek yaprak üzerine harekeli nesih hatla Hadis-i Şerif yazılmıştır."
+    ],
+    "envanter-numarası-identifier": [
+      "190-0460"
+    ],
+    "mühürler-ve-diğer-kayıtlar-inscriptions": null,
+    "ketebe-ve-zehebe-kaydı-inscriptions": null,
+    "dil-language": [
+      "Arapça"
+    ],
+    "malzemeler-materials": null,
+    "boyutlar-measurements": [
+      "13,5 x 19 cm"
+    ],
+    "tür-type": [
+      "Hat"
+    ],
+    "telif-hakkı-copyright": [
+      "© Sabancı Üniversitesi Sakıp Sabancı Müzesi. Tüm hakları saklıdır."
+    ],
+    "başlık-title": [
+      "Yazı"
+    ],
+    "yazı-cinsi-script": [
+      "Nesih"
+    ],
+    "repository": [
+      "digitalSSM"
+    ],
+    "source": [
+      "<span>From: <a href=\"https://digitalssm.org/digital/collection/Kitapvehat/id/133301\">Yazı</a></span>"
+    ],
+    "cilt-binding": null,
+    "dönem-object/work-culture": null,
+    "kopya-tarihi-date": null,
+    "tezhipler-illuminations": [
+      "Satır araları beyresüttur tarzda süslenmiştir. Duraklar altındır. Sayfanın üst sağ ve solunda ve alt solunda birer pembe-mor çiçek motifi bulunmaktadır."
+    ],
+    "müzehhip-illuminator": null,
+    "atıf-notu-cited": null,
+    "yer-creation-place": null,
+    "tuğrakeş-contributors": null,
+    "tasvirler-ve-şekiller-illustrations": null,
+    "yazar-creator": null,
+    "diğer-başlık-title-alternative": null,
+    "usta-contributors": null,
+    "ayrıca-bakınız-see-also": null,
+    "mücellid-binder": null,
+    "sanatçı-artist": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm21044.contentdm.oclc.org/iiif/Kitapvehat:134075/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:134063/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:134064/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:134065/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:134066/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:134067/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:134068/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:134069/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:134070/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:134071/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:134072/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:134073/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:134074/full/full/0/default.jpg"
+    ],
+    "hattat-calligrapher": [
+      "Şeyh Hamdullah, -1520"
+    ],
+    "tarih-date": null,
+    "açıklama-description": [
+      "Amasyalı Şeyh Hamdullah, hüsnühattı Hayreddin Mar'aşî'den (ö. 1471) öğrenmiştir. Şehzadeliğinde meşk dersi verdiği Sultan II. Bayezid'in (s.1481-1512) tahta çıkması üzerine, onun isteğiyle İstanbul'a gelmiş ve sarayın hat hocası olmuştur. Şeyh'in tek sayfa yazıları ve kıt'aları, yazıldıkları dönemden itibaren murakkaalar içinde özenle korunmuştur. Bu körüklü murakkaanın üç kıtası bir satır sülüs ve üç satır nesih, son kıtası bir satır sülüs ve dört satır nesih düzenindedir. Şeyh Hamdullah, dört kıt'asına, Hz. Muhammed'in ahiret, iyilik ve kötülük ile ilgili hadislerini yazmıştır."
+    ],
+    "envanter-numarası-identifier": [
+      "120-0045"
+    ],
+    "mühürler-ve-diğer-kayıtlar-inscriptions": null,
+    "ketebe-ve-zehebe-kaydı-inscriptions": [
+      "Hattat, son kıtanın dördüncü nesih satırına \"bunu fakir İbnü-ş Şeyh yazdı\" anlamına gelen ketebe kaydını düşmüştür."
+    ],
+    "dil-language": [
+      "Arapça"
+    ],
+    "malzemeler-materials": [
+      "Âharlı kâğıt üzerine siyah mürekkep, renkli boyalar, altın ve ebrulu kâğıt"
+    ],
+    "boyutlar-measurements": [
+      "21,6 x 14,6 cm"
+    ],
+    "tür-type": [
+      "Hat"
+    ],
+    "telif-hakkı-copyright": [
+      "© Sabancı Üniversitesi Sakıp Sabancı Müzesi. Tüm hakları saklıdır."
+    ],
+    "başlık-title": [
+      "Murakka"
+    ],
+    "yazı-cinsi-script": [
+      "Sülüs; Nesih"
+    ],
+    "repository": [
+      "digitalSSM"
+    ],
+    "source": [
+      "<span>From: <a href=\"https://digitalssm.org/digital/collection/Kitapvehat/id/134075\">Murakka</a></span>"
+    ],
+    "cilt-binding": null,
+    "dönem-object/work-culture": null,
+    "kopya-tarihi-date": [
+      "16. yüzyıl"
+    ],
+    "tezhipler-illuminations": [
+      "Kıt'alar, ebrulu kâğıtlar ile vassalelenmiştir."
+    ],
+    "müzehhip-illuminator": null,
+    "atıf-notu-cited": null,
+    "yer-creation-place": null,
+    "tuğrakeş-contributors": null,
+    "tasvirler-ve-şekiller-illustrations": null,
+    "yazar-creator": null,
+    "diğer-başlık-title-alternative": null,
+    "usta-contributors": null,
+    "ayrıca-bakınız-see-also": null,
+    "mücellid-binder": null,
+    "sanatçı-artist": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm21044.contentdm.oclc.org/iiif/Kitapvehat:134186/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:134154/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:134155/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:134156/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:134157/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:134158/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:134159/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:134160/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:134161/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:134162/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:134163/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:134164/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:134165/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:134166/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:134167/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:134168/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:134169/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:134170/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:134171/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:134172/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:134173/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:134174/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:134175/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:134176/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:134177/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:134178/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:134179/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:134180/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:134181/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:134182/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:134183/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:134184/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/Kitapvehat:134185/full/full/0/default.jpg"
+    ],
+    "hattat-calligrapher": [
+      "Hattatı bilinmiyor"
+    ],
+    "tarih-date": [
+      "17. yüzyıl"
+    ],
+    "açıklama-description": null,
+    "envanter-numarası-identifier": [
+      "120-0320"
+    ],
+    "mühürler-ve-diğer-kayıtlar-inscriptions": null,
+    "ketebe-ve-zehebe-kaydı-inscriptions": null,
+    "dil-language": [
+      "Arapça"
+    ],
+    "malzemeler-materials": [
+      "Âharlı kâğıt, altın ve siyah mürekkep"
+    ],
+    "boyutlar-measurements": [
+      "23.1 x 16.4 x 2 cm"
+    ],
+    "tür-type": [
+      "Hat"
+    ],
+    "telif-hakkı-copyright": [
+      "© Sabancı Üniversitesi Sakıp Sabancı Müzesi. Tüm hakları saklıdır."
+    ],
+    "başlık-title": [
+      "Murakka"
+    ],
+    "yazı-cinsi-script": [
+      "Rıka; Nesih"
+    ],
+    "repository": [
+      "digitalSSM"
+    ],
+    "source": [
+      "<span>From: <a href=\"https://digitalssm.org/digital/collection/Kitapvehat/id/134186\">Murakka</a></span>"
+    ],
+    "cilt-binding": [
+      "Kahverengi deri cilt"
+    ],
+    "dönem-object/work-culture": null,
+    "kopya-tarihi-date": null,
+    "tezhipler-illuminations": null,
+    "müzehhip-illuminator": null,
+    "atıf-notu-cited": null,
+    "yer-creation-place": null,
+    "tuğrakeş-contributors": null,
+    "tasvirler-ve-şekiller-illustrations": null,
+    "yazar-creator": null,
+    "diğer-başlık-title-alternative": null,
+    "usta-contributors": null,
+    "ayrıca-bakınız-see-also": null,
+    "mücellid-binder": null,
+    "sanatçı-artist": null
+  }
+]

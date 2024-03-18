@@ -1,0 +1,620 @@
+[
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll31:0/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll31:0/full/full/0/default.jpg",
+    "location-governorate-english": [
+      "Cairo, governorate"
+    ],
+    "creator": [
+      "Parker, Richard B. (Richard Bordeaux), 1923-2011"
+    ],
+    "date": [
+      "1965-1967?"
+    ],
+    "format": [
+      "image/jpeg"
+    ],
+    "medium": [
+      "color photographs"
+    ],
+    "identifier": [
+      "2014_01_050"
+    ],
+    "license": [
+      "Copyright 2018, American University in Cairo. All rights reserved."
+    ],
+    "location-country-english": [
+      "Egypt"
+    ],
+    "location-country-arabic": [
+      "مصر"
+    ],
+    "location-governorate-arabic": [
+      "محافظة القاهرة"
+    ],
+    "collection": [
+      "Richard B. Parker Nile Watercraft Photograph Collection"
+    ],
+    "rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll31/id/0\">Moored feluccas</a></span>"
+    ],
+    "subject": [
+      "Boats"
+    ],
+    "title-english": [
+      "Moored feluccas"
+    ],
+    "title-arabic": [
+      "قوارب شراعية راسية"
+    ],
+    "type": [
+      "Still image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll31:1/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll31:1/full/full/0/default.jpg",
+    "location-governorate-english": [
+      "Cairo, governorate"
+    ],
+    "creator": [
+      "Parker, Richard B. (Richard Bordeaux), 1923-2011"
+    ],
+    "date": [
+      "1965-1967?"
+    ],
+    "format": [
+      "image/jpeg"
+    ],
+    "medium": [
+      "color photographs"
+    ],
+    "identifier": [
+      "2014_01_053"
+    ],
+    "license": [
+      "Copyright 2018, American University in Cairo. All rights reserved."
+    ],
+    "location-country-english": [
+      "Egypt"
+    ],
+    "location-country-arabic": [
+      "مصر"
+    ],
+    "location-governorate-arabic": [
+      "محافظة القاهرة"
+    ],
+    "collection": [
+      "Richard B. Parker Nile Watercraft Photograph Collection"
+    ],
+    "rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll31/id/1\">Docked boat</a></span>"
+    ],
+    "subject": [
+      "Boats"
+    ],
+    "title-english": [
+      "Docked boat"
+    ],
+    "title-arabic": [
+      "قارب شراعي راسي"
+    ],
+    "type": [
+      "Still image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll31:2/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll31:2/full/full/0/default.jpg",
+    "location-governorate-english": [
+      "Cairo, governorate"
+    ],
+    "creator": [
+      "Parker, Richard B. (Richard Bordeaux), 1923-2011"
+    ],
+    "date": [
+      "1965-1967?"
+    ],
+    "format": [
+      "image/jpeg"
+    ],
+    "medium": [
+      "color photographs"
+    ],
+    "identifier": [
+      "2014_01_005"
+    ],
+    "license": [
+      "Copyright 2018, American University in Cairo. All rights reserved."
+    ],
+    "location-country-english": [
+      "Egypt"
+    ],
+    "location-country-arabic": [
+      "مصر"
+    ],
+    "location-governorate-arabic": [
+      "محافظة القاهرة"
+    ],
+    "collection": [
+      "Richard B. Parker Nile Watercraft Photograph Collection"
+    ],
+    "rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll31/id/2\">Canal with feluccas and town</a></span>"
+    ],
+    "subject": [
+      "Boats"
+    ],
+    "title-english": [
+      "Canal with feluccas and town"
+    ],
+    "title-arabic": [
+      "ترعة مع قارب شراعي والمدينة"
+    ],
+    "type": [
+      "Still image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll31:3/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll31:3/full/full/0/default.jpg",
+    "location-governorate-english": [
+      "Cairo, governorate"
+    ],
+    "creator": [
+      "Parker, Richard B. (Richard Bordeaux), 1923-2011"
+    ],
+    "date": [
+      "1965-1967?"
+    ],
+    "format": [
+      "image/jpeg"
+    ],
+    "medium": [
+      "color photographs"
+    ],
+    "identifier": [
+      "2014_01_063"
+    ],
+    "license": [
+      "Copyright 2018, American University in Cairo. All rights reserved."
+    ],
+    "location-country-english": [
+      "Egypt"
+    ],
+    "location-country-arabic": [
+      "مصر"
+    ],
+    "location-governorate-arabic": [
+      "محافظة القاهرة"
+    ],
+    "collection": [
+      "Richard B. Parker Nile Watercraft Photograph Collection"
+    ],
+    "rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll31/id/3\">Felucca</a></span>"
+    ],
+    "subject": [
+      "Boats"
+    ],
+    "title-english": [
+      "Felucca"
+    ],
+    "title-arabic": [
+      "قارب شراعي"
+    ],
+    "type": [
+      "Still image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll31:4/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll31:4/full/full/0/default.jpg",
+    "location-governorate-english": [
+      "Cairo, governorate"
+    ],
+    "creator": [
+      "Parker, Richard B. (Richard Bordeaux), 1923-2011"
+    ],
+    "date": [
+      "1965-1967?"
+    ],
+    "format": [
+      "image/jpeg"
+    ],
+    "medium": [
+      "color photographs"
+    ],
+    "identifier": [
+      "2014_01_023"
+    ],
+    "license": [
+      "Copyright 2018, American University in Cairo. All rights reserved."
+    ],
+    "location-country-english": [
+      "Egypt"
+    ],
+    "location-country-arabic": [
+      "مصر"
+    ],
+    "location-governorate-arabic": [
+      "محافظة القاهرة"
+    ],
+    "collection": [
+      "Richard B. Parker Nile Watercraft Photograph Collection"
+    ],
+    "rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll31/id/4\">Nile River with bridge in Cairo</a></span>"
+    ],
+    "subject": [
+      "Bridges--Egypt--Cairo; Boats"
+    ],
+    "title-english": [
+      "Nile River with bridge in Cairo"
+    ],
+    "title-arabic": [
+      "نهر النيل مع الكوبرى فى القاهرة"
+    ],
+    "type": [
+      "Still image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll31:5/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll31:5/full/full/0/default.jpg",
+    "location-governorate-english": [
+      "Cairo, governorate"
+    ],
+    "creator": [
+      "Parker, Richard B. (Richard Bordeaux), 1923-2011"
+    ],
+    "date": [
+      "1965-1967?"
+    ],
+    "format": [
+      "image/jpeg"
+    ],
+    "medium": [
+      "color photographs"
+    ],
+    "identifier": [
+      "2014_01_025"
+    ],
+    "license": [
+      "Copyright 2018, American University in Cairo. All rights reserved."
+    ],
+    "location-country-english": [
+      "Egypt"
+    ],
+    "location-country-arabic": [
+      "مصر"
+    ],
+    "location-governorate-arabic": [
+      "محافظة القاهرة"
+    ],
+    "collection": [
+      "Richard B. Parker Nile Watercraft Photograph Collection"
+    ],
+    "rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll31/id/5\">Nile River in Cairo</a></span>"
+    ],
+    "subject": [
+      "Nile River"
+    ],
+    "title-english": [
+      "Nile River in Cairo"
+    ],
+    "title-arabic": [
+      "نهر النيل فى القاهرة"
+    ],
+    "type": [
+      "Still image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll31:6/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll31:6/full/full/0/default.jpg",
+    "location-governorate-english": [
+      "Not identified"
+    ],
+    "creator": [
+      "Parker, Richard B. (Richard Bordeaux), 1923-2011"
+    ],
+    "date": [
+      "1965-1967?"
+    ],
+    "format": [
+      "image/jpeg"
+    ],
+    "medium": [
+      "color photographs"
+    ],
+    "identifier": [
+      "2014_01_016"
+    ],
+    "license": [
+      "Copyright 2018, American University in Cairo. All rights reserved."
+    ],
+    "location-country-english": [
+      "Egypt"
+    ],
+    "location-country-arabic": [
+      "مصر"
+    ],
+    "location-governorate-arabic": null,
+    "collection": [
+      "Richard B. Parker Nile Watercraft Photograph Collection"
+    ],
+    "rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll31/id/6\">Boat builders sawing lumber</a></span>"
+    ],
+    "subject": [
+      "Boats"
+    ],
+    "title-english": [
+      "Boat builders sawing lumber"
+    ],
+    "title-arabic": [
+      "بناة القوارب ينشرون الخشب "
+    ],
+    "type": [
+      "Still image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll31:7/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll31:7/full/full/0/default.jpg",
+    "location-governorate-english": [
+      "\"Markaz Kom Ombo, Aswan Governorate; Āthār Madīnat Ambūs\r\nAswān\""
+    ],
+    "creator": [
+      "Parker, Richard B. (Richard Bordeaux), 1923-2011"
+    ],
+    "date": [
+      "1965-1967?"
+    ],
+    "format": [
+      "image/jpeg"
+    ],
+    "medium": [
+      "color photographs"
+    ],
+    "identifier": [
+      "2014_01_007"
+    ],
+    "license": [
+      "Copyright 2018, American University in Cairo. All rights reserved."
+    ],
+    "location-country-english": [
+      "Egypt"
+    ],
+    "location-country-arabic": [
+      "مصر"
+    ],
+    "location-governorate-arabic": [
+      "مركز كوم امبو، محافظة أسوان ؛ آثار مدينة امبوس أسوان"
+    ],
+    "collection": [
+      "Richard B. Parker Nile Watercraft Photograph Collection"
+    ],
+    "rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll31/id/7\">Temple of Kom Ombo</a></span>"
+    ],
+    "subject": [
+      "Temple of Sobek and Haroeris (Ombos); Temples -- Egypt; Egypt -- Antiquities"
+    ],
+    "title-english": [
+      "Temple of Kom Ombo"
+    ],
+    "title-arabic": [
+      "معبد كوم امبو "
+    ],
+    "type": [
+      "Still image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll31:8/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll31:8/full/full/0/default.jpg",
+    "location-governorate-english": [
+      "Cairo, governorate"
+    ],
+    "creator": [
+      "Parker, Richard B. (Richard Bordeaux), 1923-2011"
+    ],
+    "date": [
+      "1965-1967?"
+    ],
+    "format": [
+      "image/jpeg"
+    ],
+    "medium": [
+      "color photographs"
+    ],
+    "identifier": [
+      "2014_01_015"
+    ],
+    "license": [
+      "Copyright 2018, American University in Cairo. All rights reserved."
+    ],
+    "location-country-english": [
+      "Egypt"
+    ],
+    "location-country-arabic": [
+      "مصر"
+    ],
+    "location-governorate-arabic": [
+      "محافظة القاهرة"
+    ],
+    "collection": [
+      "Richard B. Parker Nile Watercraft Photograph Collection"
+    ],
+    "rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll31/id/8\">Felucca</a></span>"
+    ],
+    "subject": [
+      "Boats"
+    ],
+    "title-english": [
+      "Felucca"
+    ],
+    "title-arabic": [
+      "قارب شراعي"
+    ],
+    "type": [
+      "Still image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll31:9/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll31:9/full/full/0/default.jpg",
+    "location-governorate-english": [
+      "South Sinai Governorate "
+    ],
+    "creator": [
+      "Parker, Richard B. (Richard Bordeaux), 1923-2011"
+    ],
+    "date": [
+      "1965-1967?"
+    ],
+    "format": [
+      "image/jpeg"
+    ],
+    "medium": [
+      "color photographs"
+    ],
+    "identifier": [
+      "2014_01_009"
+    ],
+    "license": [
+      "Copyright 2018, American University in Cairo. All rights reserved."
+    ],
+    "location-country-english": [
+      "Egypt"
+    ],
+    "location-country-arabic": [
+      "مصر"
+    ],
+    "location-governorate-arabic": [
+      "محافظة جنوب سيناء"
+    ],
+    "collection": [
+      "Richard B. Parker Nile Watercraft Photograph Collection"
+    ],
+    "rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll31/id/9\">Saint Catherine's Monastery</a></span>"
+    ],
+    "subject": [
+      "Saint Catherine (Monastery : Mount Sinai)"
+    ],
+    "title-english": [
+      "Saint Catherine's Monastery"
+    ],
+    "title-arabic": [
+      "دير القدّيسة كاترين أو دير سانت كاترين"
+    ],
+    "type": [
+      "Still image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ]
+  }
+]

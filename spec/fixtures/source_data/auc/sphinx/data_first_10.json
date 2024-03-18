@@ -1,0 +1,1594 @@
+[
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/sphinx:34379/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34343/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34344/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34345/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34346/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34347/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34348/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34349/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34350/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34351/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34352/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34353/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34354/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34355/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34356/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34357/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34358/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34359/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34360/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34361/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34362/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34363/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34364/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34365/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34366/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34367/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34368/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34369/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34370/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34371/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34372/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34373/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34374/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34375/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34376/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34377/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34378/full/full/0/default.jpg"
+    ],
+    "genre": [
+      "newspapers"
+    ],
+    "coverage": [
+      "Egypt"
+    ],
+    "date": [
+      "5 May 1945"
+    ],
+    "format": [
+      "pdf"
+    ],
+    "language": [
+      "English"
+    ],
+    "publisher": [
+      "Cairo : Societe Orientale de Publicite, 1892-"
+    ],
+    "access": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "rights": [
+      "Copyright 2019, American University in Cairo. All rights reserved."
+    ],
+    "source": [
+      "Archives; Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/sphinx/id/34379\">The Sphinx, Vol. 52, No.1657, 1945</a></span>"
+    ],
+    "subject": [
+      "Egypt - Periodicals"
+    ],
+    "title": [
+      "The Sphinx, Vol. 52, No.1657, 1945"
+    ],
+    "type": [
+      "text"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/sphinx:34416/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34380/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34381/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34382/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34383/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34384/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34385/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34386/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34387/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34388/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34389/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34390/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34391/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34392/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34393/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34394/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34395/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34396/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34397/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34398/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34399/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34400/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34401/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34402/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34403/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34404/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34405/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34406/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34407/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34408/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34409/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34410/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34411/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34412/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34413/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34414/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34415/full/full/0/default.jpg"
+    ],
+    "genre": [
+      "newspapers"
+    ],
+    "coverage": [
+      "Egypt"
+    ],
+    "date": [
+      "7 July 1946"
+    ],
+    "format": [
+      "pdf"
+    ],
+    "language": [
+      "English"
+    ],
+    "publisher": [
+      "Cairo : Societe Orientale de Publicite, 1892-"
+    ],
+    "access": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "rights": [
+      "Copyright 2019, American University in Cairo. All rights reserved."
+    ],
+    "source": [
+      "Archives; Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/sphinx/id/34416\">The Sphinx, Vol. 52, No.1666, 1945</a></span>"
+    ],
+    "subject": [
+      "Egypt - Periodicals"
+    ],
+    "title": [
+      "The Sphinx, Vol. 52, No.1666, 1945"
+    ],
+    "type": [
+      "text"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/sphinx:34453/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34417/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34418/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34419/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34420/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34421/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34422/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34423/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34424/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34425/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34426/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34427/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34428/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34429/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34430/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34431/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34432/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34433/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34434/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34435/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34436/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34437/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34438/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34439/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34440/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34441/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34442/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34443/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34444/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34445/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34446/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34447/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34448/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34449/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34450/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34451/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34452/full/full/0/default.jpg"
+    ],
+    "genre": [
+      "newspapers"
+    ],
+    "coverage": [
+      "Egypt"
+    ],
+    "date": [
+      "17 March 1945"
+    ],
+    "format": [
+      "pdf"
+    ],
+    "language": [
+      "English"
+    ],
+    "publisher": [
+      "Cairo : Societe Orientale de Publicite, 1892-"
+    ],
+    "access": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "rights": [
+      "Copyright 2019, American University in Cairo. All rights reserved."
+    ],
+    "source": [
+      "Archives; Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/sphinx/id/34453\">The Sphinx, Vol. 52, No.1650, 1945</a></span>"
+    ],
+    "subject": [
+      "Egypt - Periodicals"
+    ],
+    "title": [
+      "The Sphinx, Vol. 52, No.1650, 1945"
+    ],
+    "type": [
+      "text"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/sphinx:34490/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34454/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34455/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34456/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34457/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34458/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34459/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34460/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34461/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34462/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34463/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34464/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34465/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34466/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34467/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34468/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34469/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34470/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34471/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34472/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34473/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34474/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34475/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34476/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34477/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34478/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34479/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34480/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34481/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34482/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34483/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34484/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34485/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34486/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34487/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34488/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34489/full/full/0/default.jpg"
+    ],
+    "genre": [
+      "newspapers"
+    ],
+    "coverage": [
+      "Egypt"
+    ],
+    "date": [
+      "28 July 1946"
+    ],
+    "format": [
+      "pdf"
+    ],
+    "language": [
+      "English"
+    ],
+    "publisher": [
+      "Cairo : Societe Orientale de Publicite, 1892-"
+    ],
+    "access": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "rights": [
+      "Copyright 2019, American University in Cairo. All rights reserved."
+    ],
+    "source": [
+      "Archives; Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/sphinx/id/34490\">The Sphinx, Vol. 52, No.1669, 1945</a></span>"
+    ],
+    "subject": [
+      "Egypt - Periodicals"
+    ],
+    "title": [
+      "The Sphinx, Vol. 52, No.1669, 1945"
+    ],
+    "type": [
+      "text"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/sphinx:34527/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34491/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34492/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34493/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34494/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34495/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34496/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34497/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34498/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34499/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34500/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34501/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34502/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34503/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34504/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34505/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34506/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34507/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34508/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34509/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34510/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34511/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34512/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34513/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34514/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34515/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34516/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34517/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34518/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34519/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34520/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34521/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34522/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34523/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34524/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34525/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34526/full/full/0/default.jpg"
+    ],
+    "genre": [
+      "newspapers"
+    ],
+    "coverage": [
+      "Egypt"
+    ],
+    "date": [
+      "9 June 1946"
+    ],
+    "format": [
+      "pdf"
+    ],
+    "language": [
+      "English"
+    ],
+    "publisher": [
+      "Cairo : Societe Orientale de Publicite, 1892-"
+    ],
+    "access": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "rights": [
+      "Copyright 2019, American University in Cairo. All rights reserved."
+    ],
+    "source": [
+      "Archives; Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/sphinx/id/34527\">The Sphinx, Vol. 52, No.1662, 1945</a></span>"
+    ],
+    "subject": [
+      "Egypt - Periodicals"
+    ],
+    "title": [
+      "The Sphinx, Vol. 52, No.1662, 1945"
+    ],
+    "type": [
+      "text"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/sphinx:34568/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34528/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34529/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34530/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34531/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34532/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34533/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34534/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34535/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34536/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34537/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34538/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34539/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34540/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34541/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34542/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34543/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34544/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34545/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34546/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34547/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34548/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34549/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34550/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34551/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34552/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34553/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34554/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34555/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34556/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34557/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34558/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34559/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34560/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34561/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34562/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34563/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34564/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34565/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34566/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34567/full/full/0/default.jpg"
+    ],
+    "genre": [
+      "newspapers"
+    ],
+    "coverage": [
+      "Egypt"
+    ],
+    "date": [
+      "10 March 1945"
+    ],
+    "format": [
+      "pdf"
+    ],
+    "language": [
+      "English"
+    ],
+    "publisher": [
+      "Cairo : Societe Orientale de Publicite, 1892-"
+    ],
+    "access": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "rights": [
+      "Copyright 2019, American University in Cairo. All rights reserved."
+    ],
+    "source": [
+      "Archives; Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/sphinx/id/34568\">The Sphinx, Vol. 52, No.1649, 1945</a></span>"
+    ],
+    "subject": [
+      "Egypt - Periodicals"
+    ],
+    "title": [
+      "The Sphinx, Vol. 52, No.1649, 1945"
+    ],
+    "type": [
+      "text"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/sphinx:34605/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34569/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34570/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34571/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34572/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34573/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34574/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34575/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34576/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34577/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34578/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34579/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34580/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34581/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34582/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34583/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34584/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34585/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34586/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34587/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34588/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34589/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34590/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34591/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34592/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34593/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34594/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34595/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34596/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34597/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34598/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34599/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34600/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34601/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34602/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34603/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34604/full/full/0/default.jpg"
+    ],
+    "genre": [
+      "newspapers"
+    ],
+    "coverage": [
+      "Egypt"
+    ],
+    "date": [
+      "4 August 1946"
+    ],
+    "format": [
+      "pdf"
+    ],
+    "language": [
+      "English"
+    ],
+    "publisher": [
+      "Cairo : Societe Orientale de Publicite, 1892-"
+    ],
+    "access": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "rights": [
+      "Copyright 2019, American University in Cairo. All rights reserved."
+    ],
+    "source": [
+      "Archives; Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/sphinx/id/34605\">The Sphinx, Vol. 52, No.1670, 1945</a></span>"
+    ],
+    "subject": [
+      "Egypt - Periodicals"
+    ],
+    "title": [
+      "The Sphinx, Vol. 52, No.1670, 1945"
+    ],
+    "type": [
+      "text"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/sphinx:34642/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34606/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34607/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34608/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34609/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34610/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34611/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34612/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34613/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34614/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34615/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34616/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34617/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34618/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34619/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34620/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34621/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34622/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34623/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34624/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34625/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34626/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34627/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34628/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34629/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34630/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34631/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34632/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34633/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34634/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34635/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34636/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34637/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34638/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34639/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34640/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34641/full/full/0/default.jpg"
+    ],
+    "genre": [
+      "newspapers"
+    ],
+    "coverage": [
+      "Egypt"
+    ],
+    "date": [
+      "11 August 1946"
+    ],
+    "format": [
+      "pdf"
+    ],
+    "language": [
+      "English"
+    ],
+    "publisher": [
+      "Cairo : Societe Orientale de Publicite, 1892-"
+    ],
+    "access": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "rights": [
+      "Copyright 2019, American University in Cairo. All rights reserved."
+    ],
+    "source": [
+      "Archives; Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/sphinx/id/34642\">The Sphinx, Vol. 52, No.1671, 1945</a></span>"
+    ],
+    "subject": [
+      "Egypt - Periodicals"
+    ],
+    "title": [
+      "The Sphinx, Vol. 52, No.1671, 1945"
+    ],
+    "type": [
+      "text"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/sphinx:34679/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34643/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34644/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34645/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34646/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34647/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34648/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34649/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34650/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34651/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34652/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34653/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34654/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34655/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34656/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34657/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34658/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34659/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34660/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34661/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34662/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34663/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34664/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34665/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34666/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34667/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34668/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34669/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34670/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34671/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34672/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34673/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34674/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34675/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34676/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34677/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34678/full/full/0/default.jpg"
+    ],
+    "genre": [
+      "newspapers"
+    ],
+    "coverage": [
+      "Egypt"
+    ],
+    "date": [
+      "18 August 1946"
+    ],
+    "format": [
+      "pdf"
+    ],
+    "language": [
+      "English"
+    ],
+    "publisher": [
+      "Cairo : Societe Orientale de Publicite, 1892-"
+    ],
+    "access": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "rights": [
+      "Copyright 2019, American University in Cairo. All rights reserved."
+    ],
+    "source": [
+      "Archives; Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/sphinx/id/34679\">The Sphinx, Vol. 52, No.1672, 1945</a></span>"
+    ],
+    "subject": [
+      "Egypt - Periodicals"
+    ],
+    "title": [
+      "The Sphinx, Vol. 52, No.1672, 1945"
+    ],
+    "type": [
+      "text"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/sphinx:34716/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34680/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34681/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34682/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34683/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34684/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34685/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34686/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34687/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34688/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34689/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34690/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34691/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34692/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34693/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34694/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34695/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34696/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34697/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34698/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34699/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34700/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34701/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34702/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34703/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34704/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34705/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34706/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34707/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34708/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34709/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34710/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34711/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34712/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34713/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34714/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/sphinx:34715/full/full/0/default.jpg"
+    ],
+    "genre": [
+      "newspapers"
+    ],
+    "coverage": [
+      "Egypt"
+    ],
+    "date": [
+      "25 August 1946"
+    ],
+    "format": [
+      "pdf"
+    ],
+    "language": [
+      "English"
+    ],
+    "publisher": [
+      "Cairo : Societe Orientale de Publicite, 1892-"
+    ],
+    "access": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "rights": [
+      "Copyright 2019, American University in Cairo. All rights reserved."
+    ],
+    "source": [
+      "Archives; Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/sphinx/id/34716\">The Sphinx, Vol. 52, No.1673, 1945</a></span>"
+    ],
+    "subject": [
+      "Egypt - Periodicals"
+    ],
+    "title": [
+      "The Sphinx, Vol. 52, No.1673, 1945"
+    ],
+    "type": [
+      "text"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ]
+  }
+]

@@ -1,0 +1,696 @@
+[
+  {
+    "id": "https://figgy.princeton.edu/concern/scanned_resources/15d18812-be85-4510-9f33-120a38adc4e8/manifest",
+    "thumbnail": [
+      "https://iiif-cloud.princeton.edu/iiif/2/b2%2F93%2F2e%2Fb2932e3fbe7c44dc8a0f5d0c392086a3%2Fintermediate_file/full/!200,150/0/default.jpg",
+      "https://iiif-cloud.princeton.edu/iiif/2/b2%2F93%2F2e%2Fb2932e3fbe7c44dc8a0f5d0c392086a3%2Fintermediate_file"
+    ],
+    "director": [
+      "يوسف معلوف"
+    ],
+    "date-created": [
+      "1964"
+    ],
+    "extent": [
+      "6 pieces ; approximately 50 x 37 cm."
+    ],
+    "genre": [
+      "Lobby Cards"
+    ],
+    "identifier": [
+      "ark:/88435/qn59q4745"
+    ],
+    "resource-type": [
+      "still image"
+    ],
+    "title": [
+      "عقد اللؤلؤ"
+    ],
+    "language": [
+      "ara"
+    ],
+    "local-identifier": [
+      "egx-0035"
+    ],
+    "geographic-origin": [
+      "Egypt"
+    ],
+    "location": [
+      "ReCAP – Graphic Arts Off-Site Storage, GC191"
+    ],
+    "member-of-collections": [
+      "Middle Eastern Film Posters Digitization Initiative",
+      "Selections from the Near East Collections"
+    ],
+    "rendered-actors": [
+      "Laḥḥām, Durayd, 1934-",
+      "دريد لحام",
+      "نهاد قلعي",
+      "Ṣabāḥ",
+      "صباح"
+    ],
+    "description": null,
+    "author": null,
+    "donor": null,
+    "scribe": null,
+    "abstract": null,
+    "uniform-title": null,
+    "content-type": null,
+    "provenance": null,
+    "contributor": null,
+    "creator": null,
+    "date": null,
+    "publisher": null,
+    "subject": null,
+    "binding-note": null,
+    "source-acquisition": null,
+    "call-number": null,
+    "electronic-locations": null,
+    "claimed-by": null,
+    "embargo-date": null,
+    "type": null
+  },
+  {
+    "id": "https://figgy.princeton.edu/concern/scanned_resources/87c12636-2e9e-46c1-936f-a9a0e6c00591/manifest",
+    "thumbnail": [
+      "https://iiif-cloud.princeton.edu/iiif/2/67%2F3b%2F0b%2F673b0bc6c2cc4732a70400c0aca5fd58%2Fintermediate_file/full/!200,150/0/default.jpg",
+      "https://iiif-cloud.princeton.edu/iiif/2/67%2F3b%2F0b%2F673b0bc6c2cc4732a70400c0aca5fd58%2Fintermediate_file"
+    ],
+    "director": [
+      "بركات"
+    ],
+    "date-created": null,
+    "extent": [
+      "4 pieces ; approximately 50 x 37 cm."
+    ],
+    "genre": [
+      "Lobby Cards"
+    ],
+    "identifier": [
+      "ark:/88435/n296wz89w"
+    ],
+    "resource-type": [
+      "still image"
+    ],
+    "title": [
+      "الحرام"
+    ],
+    "language": [
+      "ara"
+    ],
+    "local-identifier": [
+      "eg1-0212"
+    ],
+    "geographic-origin": [
+      "Egypt"
+    ],
+    "location": [
+      "ReCAP – Graphic Arts Off-Site Storage, GC191"
+    ],
+    "member-of-collections": [
+      "Middle Eastern Film Posters Digitization Initiative",
+      "Selections from the Near East Collections"
+    ],
+    "rendered-actors": [
+      "Ḥamāmah, Fātin",
+      "فاتن حمامة",
+      "Rustum, Zakī",
+      "زكي رستم",
+      "Ghayth, ʻAbd Allāh",
+      "عبد الله غيث"
+    ],
+    "description": null,
+    "author": null,
+    "donor": null,
+    "scribe": null,
+    "abstract": null,
+    "uniform-title": null,
+    "content-type": null,
+    "provenance": null,
+    "contributor": null,
+    "creator": null,
+    "date": null,
+    "publisher": null,
+    "subject": null,
+    "binding-note": null,
+    "source-acquisition": null,
+    "call-number": null,
+    "electronic-locations": null,
+    "claimed-by": null,
+    "embargo-date": null,
+    "type": null
+  },
+  {
+    "id": "https://figgy.princeton.edu/concern/scanned_resources/5c58af2c-1b02-492f-bffc-b1cb17ac2164/manifest",
+    "thumbnail": [
+      "https://iiif-cloud.princeton.edu/iiif/2/a3%2Ffb%2F65%2Fa3fb6593f8db4145a768a8a5b1e579c3%2Fintermediate_file/full/!200,150/0/default.jpg",
+      "https://iiif-cloud.princeton.edu/iiif/2/a3%2Ffb%2F65%2Fa3fb6593f8db4145a768a8a5b1e579c3%2Fintermediate_file"
+    ],
+    "director": [
+      "حسين كمال"
+    ],
+    "date-created": null,
+    "extent": [
+      "4 pieces ; approximately 50 x 37 cm."
+    ],
+    "genre": [
+      "Lobby Cards"
+    ],
+    "identifier": [
+      "ark:/88435/xd07gt44q"
+    ],
+    "resource-type": [
+      "still image"
+    ],
+    "title": [
+      "المستحيل"
+    ],
+    "language": [
+      "ara"
+    ],
+    "local-identifier": [
+      "eg1-0438"
+    ],
+    "geographic-origin": [
+      "Egypt"
+    ],
+    "location": [
+      "ReCAP – Graphic Arts Off-Site Storage, GC191"
+    ],
+    "member-of-collections": [
+      "Middle Eastern Film Posters Digitization Initiative",
+      "Selections from the Near East Collections"
+    ],
+    "rendered-actors": [
+      "نادية لطفي",
+      "Shinnāwī, Kamāl, 1921-",
+      "كمال الشناوي",
+      "Manṣūr, Ṣalāḥ",
+      "صلاح منصور"
+    ],
+    "description": null,
+    "author": null,
+    "donor": null,
+    "scribe": null,
+    "abstract": null,
+    "uniform-title": null,
+    "content-type": null,
+    "provenance": null,
+    "contributor": null,
+    "creator": null,
+    "date": null,
+    "publisher": null,
+    "subject": null,
+    "binding-note": null,
+    "source-acquisition": null,
+    "call-number": null,
+    "electronic-locations": null,
+    "claimed-by": null,
+    "embargo-date": null,
+    "type": null
+  },
+  {
+    "id": "https://figgy.princeton.edu/concern/scanned_resources/7f1842c5-7cc0-4ed3-b19a-341fbb5a9d0e/manifest",
+    "thumbnail": [
+      "https://iiif-cloud.princeton.edu/iiif/2/9c%2F3d%2Fbe%2F9c3dbefd88f54190b8011a88559efd9e%2Fintermediate_file/full/!200,150/0/default.jpg",
+      "https://iiif-cloud.princeton.edu/iiif/2/9c%2F3d%2Fbe%2F9c3dbefd88f54190b8011a88559efd9e%2Fintermediate_file"
+    ],
+    "director": [
+      "حسن الامام"
+    ],
+    "date-created": null,
+    "extent": [
+      "8 pieces ; approximately 50 x 37 cm."
+    ],
+    "genre": [
+      "Lobby Cards"
+    ],
+    "identifier": [
+      "ark:/88435/ns064678h"
+    ],
+    "resource-type": [
+      "still image"
+    ],
+    "title": [
+      "اميرة حبي انا"
+    ],
+    "language": [
+      "ara"
+    ],
+    "local-identifier": [
+      "eg1-0519"
+    ],
+    "geographic-origin": [
+      "Egypt"
+    ],
+    "location": [
+      "ReCAP – Graphic Arts Off-Site Storage, GC191"
+    ],
+    "member-of-collections": [
+      "Middle Eastern Film Posters Digitization Initiative",
+      "Selections from the Near East Collections"
+    ],
+    "rendered-actors": [
+      "Ḥusnī, Suʻād",
+      "سعاد حسني",
+      "Fahmī, Ḥusayn, 1940-",
+      "حسين فهمي",
+      "سهير البابلي"
+    ],
+    "description": null,
+    "author": null,
+    "donor": null,
+    "scribe": null,
+    "abstract": null,
+    "uniform-title": null,
+    "content-type": null,
+    "provenance": null,
+    "contributor": null,
+    "creator": null,
+    "date": null,
+    "publisher": null,
+    "subject": null,
+    "binding-note": null,
+    "source-acquisition": null,
+    "call-number": null,
+    "electronic-locations": null,
+    "claimed-by": null,
+    "embargo-date": null,
+    "type": null
+  },
+  {
+    "id": "https://figgy.princeton.edu/concern/scanned_resources/b7167a7c-4d5f-4c6f-9ced-9c5786239612/manifest",
+    "thumbnail": [
+      "https://iiif-cloud.princeton.edu/iiif/2/38%2Fda%2F36%2F38da368fdaad4118b6499fb8a3fb9332%2Fintermediate_file/full/!200,150/0/default.jpg",
+      "https://iiif-cloud.princeton.edu/iiif/2/38%2Fda%2F36%2F38da368fdaad4118b6499fb8a3fb9332%2Fintermediate_file"
+    ],
+    "director": [
+      "محمود فريد"
+    ],
+    "date-created": null,
+    "extent": [
+      "8 pieces ; approximately 50 x 37 cm."
+    ],
+    "genre": [
+      "Lobby Cards"
+    ],
+    "identifier": [
+      "ark:/88435/r494vk933"
+    ],
+    "resource-type": [
+      "still image"
+    ],
+    "title": [
+      "البحث عن المتاعب"
+    ],
+    "language": [
+      "ara"
+    ],
+    "local-identifier": [
+      "eg1-0142"
+    ],
+    "geographic-origin": [
+      "Egypt"
+    ],
+    "location": [
+      "ReCAP – Graphic Arts Off-Site Storage, GC191"
+    ],
+    "member-of-collections": [
+      "Middle Eastern Film Posters Digitization Initiative",
+      "Selections from the Near East Collections"
+    ],
+    "rendered-actors": [
+      "Sharīf, Nāhid",
+      "ناهد شريف",
+      "Imām, ʻĀdil, 1940-",
+      "عادل امام",
+      "صفاء ابو السعود"
+    ],
+    "description": null,
+    "author": null,
+    "donor": null,
+    "scribe": null,
+    "abstract": null,
+    "uniform-title": null,
+    "content-type": null,
+    "provenance": null,
+    "contributor": null,
+    "creator": null,
+    "date": null,
+    "publisher": null,
+    "subject": null,
+    "binding-note": null,
+    "source-acquisition": null,
+    "call-number": null,
+    "electronic-locations": null,
+    "claimed-by": null,
+    "embargo-date": null,
+    "type": null
+  },
+  {
+    "id": "https://figgy.princeton.edu/concern/scanned_resources/8eab3b11-d432-419c-9298-01a3f7fc3f57/manifest",
+    "thumbnail": [
+      "https://iiif-cloud.princeton.edu/iiif/2/f3%2Fcd%2F16%2Ff3cd161071d4465fa8e1633d7a102bea%2Fintermediate_file/full/!200,150/0/default.jpg",
+      "https://iiif-cloud.princeton.edu/iiif/2/f3%2Fcd%2F16%2Ff3cd161071d4465fa8e1633d7a102bea%2Fintermediate_file"
+    ],
+    "director": [
+      "نبيل مالح"
+    ],
+    "date-created": null,
+    "extent": [
+      "8 pieces ; approximately 50 x 37 cm."
+    ],
+    "genre": [
+      "Lobby Cards"
+    ],
+    "identifier": [
+      "ark:/88435/3197xm800"
+    ],
+    "resource-type": [
+      "still image"
+    ],
+    "title": [
+      "غوار جيمس بوند"
+    ],
+    "language": [
+      "ara"
+    ],
+    "local-identifier": [
+      "sy1-0093_0094"
+    ],
+    "geographic-origin": [
+      "Syria"
+    ],
+    "location": [
+      "ReCAP – Graphic Arts Off-Site Storage, GC191"
+    ],
+    "member-of-collections": [
+      "Middle Eastern Film Posters Digitization Initiative",
+      "Selections from the Near East Collections"
+    ],
+    "rendered-actors": [
+      "Laḥḥām, Durayd, 1934-",
+      "دريد لحام",
+      "نهاد قلعي"
+    ],
+    "description": null,
+    "author": null,
+    "donor": null,
+    "scribe": null,
+    "abstract": null,
+    "uniform-title": null,
+    "content-type": null,
+    "provenance": null,
+    "contributor": null,
+    "creator": null,
+    "date": null,
+    "publisher": null,
+    "subject": null,
+    "binding-note": null,
+    "source-acquisition": null,
+    "call-number": null,
+    "electronic-locations": null,
+    "claimed-by": null,
+    "embargo-date": null,
+    "type": null
+  },
+  {
+    "id": "https://figgy.princeton.edu/concern/scanned_resources/4b40dc1c-9a65-481f-b592-912a0adb00a6/manifest",
+    "thumbnail": [
+      "https://iiif-cloud.princeton.edu/iiif/2/89%2F86%2F4b%2F89864b3235da4731b37f6bee92ca60d5%2Fintermediate_file/full/!200,150/0/default.jpg",
+      "https://iiif-cloud.princeton.edu/iiif/2/89%2F86%2F4b%2F89864b3235da4731b37f6bee92ca60d5%2Fintermediate_file"
+    ],
+    "director": [
+      "نيازي مصطفى"
+    ],
+    "date-created": null,
+    "extent": [
+      "8 pieces ; approximately 50 x 37 cm."
+    ],
+    "genre": [
+      "Lobby Cards"
+    ],
+    "identifier": [
+      "ark:/88435/jm214p904"
+    ],
+    "resource-type": [
+      "still image"
+    ],
+    "title": [
+      "اميرة العرب"
+    ],
+    "language": [
+      "ara"
+    ],
+    "local-identifier": [
+      "eg1-0518"
+    ],
+    "geographic-origin": [
+      "Egypt"
+    ],
+    "location": [
+      "ReCAP – Graphic Arts Off-Site Storage, GC191"
+    ],
+    "member-of-collections": [
+      "Middle Eastern Film Posters Digitization Initiative",
+      "Selections from the Near East Collections"
+    ],
+    "rendered-actors": [
+      "Wardah",
+      "وردة الجزائرية",
+      "Abāẓah, Rushdī",
+      "رشدي اباظة",
+      "Muhandis, Fuʼād, 1924-2006",
+      "فؤاد المهندس"
+    ],
+    "description": null,
+    "author": null,
+    "donor": null,
+    "scribe": null,
+    "abstract": null,
+    "uniform-title": null,
+    "content-type": null,
+    "provenance": null,
+    "contributor": null,
+    "creator": null,
+    "date": null,
+    "publisher": null,
+    "subject": null,
+    "binding-note": null,
+    "source-acquisition": null,
+    "call-number": null,
+    "electronic-locations": null,
+    "claimed-by": null,
+    "embargo-date": null,
+    "type": null
+  },
+  {
+    "id": "https://figgy.princeton.edu/concern/scanned_resources/24d44e23-8059-4786-b5a1-b67583bc7d6c/manifest",
+    "thumbnail": [
+      "https://iiif-cloud.princeton.edu/iiif/2/b1%2F46%2F4f%2Fb1464ff05bcd4b6f8aef7f5aa7a4003a%2Fintermediate_file/full/!200,150/0/default.jpg",
+      "https://iiif-cloud.princeton.edu/iiif/2/b1%2F46%2F4f%2Fb1464ff05bcd4b6f8aef7f5aa7a4003a%2Fintermediate_file"
+    ],
+    "director": [
+      "رضا ميسر"
+    ],
+    "date-created": null,
+    "extent": [
+      "7 pieces ; approximately 50 x 37 cm."
+    ],
+    "genre": [
+      "Lobby Cards"
+    ],
+    "identifier": [
+      "ark:/88435/5138jf619"
+    ],
+    "resource-type": [
+      "still image"
+    ],
+    "title": [
+      "الغجرية العاشقة"
+    ],
+    "language": [
+      "ara"
+    ],
+    "local-identifier": [
+      "le1-0031"
+    ],
+    "geographic-origin": [
+      "Lebanon"
+    ],
+    "location": [
+      "ReCAP – Graphic Arts Off-Site Storage, GC191"
+    ],
+    "member-of-collections": [
+      "Middle Eastern Film Posters Digitization Initiative",
+      "Selections from the Near East Collections"
+    ],
+    "rendered-actors": [
+      "Tawfīq, Samīrah",
+      "سميرة توفيق",
+      "Fuʼād, Najwá",
+      "نجوى فؤاد",
+      "زياد مولوي",
+      "محمود جبر"
+    ],
+    "description": null,
+    "author": null,
+    "donor": null,
+    "scribe": null,
+    "abstract": null,
+    "uniform-title": null,
+    "content-type": null,
+    "provenance": null,
+    "contributor": null,
+    "creator": null,
+    "date": null,
+    "publisher": null,
+    "subject": null,
+    "binding-note": null,
+    "source-acquisition": null,
+    "call-number": null,
+    "electronic-locations": null,
+    "claimed-by": null,
+    "embargo-date": null,
+    "type": null
+  },
+  {
+    "id": "https://figgy.princeton.edu/concern/scanned_resources/8583e4b6-804f-4f73-a942-e6bdcd398c49/manifest",
+    "thumbnail": [
+      "https://iiif-cloud.princeton.edu/iiif/2/88%2F6b%2Fe4%2F886be4b1b1d34ee6883c78897bd8736a%2Fintermediate_file/full/!200,150/0/default.jpg",
+      "https://iiif-cloud.princeton.edu/iiif/2/88%2F6b%2Fe4%2F886be4b1b1d34ee6883c78897bd8736a%2Fintermediate_file"
+    ],
+    "director": [
+      "عاطف سالم"
+    ],
+    "date-created": null,
+    "extent": [
+      "8 pieces ; approximately 50 x 37 cm."
+    ],
+    "genre": [
+      "Lobby Cards"
+    ],
+    "identifier": [
+      "ark:/88435/2n49t245q"
+    ],
+    "resource-type": [
+      "still image"
+    ],
+    "title": [
+      "العاشقه"
+    ],
+    "language": [
+      "ara"
+    ],
+    "local-identifier": [
+      "eg1-0326"
+    ],
+    "geographic-origin": [
+      "Egypt"
+    ],
+    "location": [
+      "ReCAP – Graphic Arts Off-Site Storage, GC191"
+    ],
+    "member-of-collections": [
+      "Middle Eastern Film Posters Digitization Initiative",
+      "Selections from the Near East Collections"
+    ],
+    "rendered-actors": [
+      "Fuʼād, Najwá",
+      "نجوى فؤاد",
+      "Khūrshīd, ʻUmar",
+      "عمر خو رشيد",
+      "نيللي",
+      "مصطفى فهمي"
+    ],
+    "description": null,
+    "author": null,
+    "donor": null,
+    "scribe": null,
+    "abstract": null,
+    "uniform-title": null,
+    "content-type": null,
+    "provenance": null,
+    "contributor": null,
+    "creator": null,
+    "date": null,
+    "publisher": null,
+    "subject": null,
+    "binding-note": null,
+    "source-acquisition": null,
+    "call-number": null,
+    "electronic-locations": null,
+    "claimed-by": null,
+    "embargo-date": null,
+    "type": null
+  },
+  {
+    "id": "https://figgy.princeton.edu/concern/scanned_resources/6bbc5f2e-d92c-4596-b412-616abc79a524/manifest",
+    "thumbnail": [
+      "https://iiif-cloud.princeton.edu/iiif/2/44%2F80%2F77%2F4480773ec63048ec90387d8dcddb588c%2Fintermediate_file/full/!200,150/0/default.jpg",
+      "https://iiif-cloud.princeton.edu/iiif/2/44%2F80%2F77%2F4480773ec63048ec90387d8dcddb588c%2Fintermediate_file"
+    ],
+    "director": [
+      "عز الدين ذو الفقار"
+    ],
+    "date-created": null,
+    "extent": [
+      "8 pieces ; approximately 50 x 37 cm."
+    ],
+    "genre": [
+      "Lobby Cards"
+    ],
+    "identifier": [
+      "ark:/88435/0g354f96v"
+    ],
+    "resource-type": [
+      "still image"
+    ],
+    "title": [
+      "بين الاطلال"
+    ],
+    "language": [
+      "ara"
+    ],
+    "local-identifier": [
+      "eg1-0611"
+    ],
+    "geographic-origin": [
+      "Egypt"
+    ],
+    "location": [
+      "ReCAP – Graphic Arts Off-Site Storage, GC191"
+    ],
+    "member-of-collections": [
+      "Middle Eastern Film Posters Digitization Initiative",
+      "Selections from the Near East Collections"
+    ],
+    "rendered-actors": [
+      "Ḥamdī, ʻImād, d. 1984",
+      "عماد حمدي",
+      "Ḥamāmah, Fātin",
+      "فاتن حمامة",
+      "صلاح ذو الفقار"
+    ],
+    "description": null,
+    "author": null,
+    "donor": null,
+    "scribe": null,
+    "abstract": null,
+    "uniform-title": null,
+    "content-type": null,
+    "provenance": null,
+    "contributor": null,
+    "creator": null,
+    "date": null,
+    "publisher": null,
+    "subject": null,
+    "binding-note": null,
+    "source-acquisition": null,
+    "call-number": null,
+    "electronic-locations": null,
+    "claimed-by": null,
+    "embargo-date": null,
+    "type": null
+  }
+]

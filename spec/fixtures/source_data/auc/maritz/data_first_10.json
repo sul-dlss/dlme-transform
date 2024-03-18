@@ -1,0 +1,622 @@
+[
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll16:0/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll16:0/full/full/0/default.jpg",
+    "acknowledgments": [
+      "The Rare Books and Special Collections Library would like to thank Philip Maritz for donating digital surrogates of Émile Béchard's Oriental Studies Photographs."
+    ],
+    "alternative-title": [
+      "Darabouka player"
+    ],
+    "access-rights": [
+      "Access to high-resolution master file restricted to RBSCL staff only. Please contact the RBSCL at rbscl-ref@aucegypt.edu or 2615-3676 to request access to master files."
+    ],
+    "extent": [
+      "27.2 x 20 cm"
+    ],
+    "location": [
+      "Cairo, Egypt"
+    ],
+    "photographer": [
+      "Béchard, Émile"
+    ],
+    "date": [
+      "1870s"
+    ],
+    "format": [
+      "image/jpeg"
+    ],
+    "identifier": [
+      "SC-2016-09"
+    ],
+    "language": [
+      "French"
+    ],
+    "getty-aat": [
+      "albumen prints"
+    ],
+    "collection": [
+      "Philip Maritz Collection of Émile Béchard's Photographs of Egypt"
+    ],
+    "license": [
+      "This item is in the public domain"
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll16/id/0\">No. 31, Joueuse de Darabouka</a></span>"
+    ],
+    "subject": [
+      "Ethnology -- Egypt; Egypt -- Social life and customs -- 19th century -- Pictorial works; Photography -- Egypt -- History; Games"
+    ],
+    "title": [
+      "No. 31, Joueuse de Darabouka"
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll16:1/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll16:1/full/full/0/default.jpg",
+    "acknowledgments": [
+      "The Rare Books and Special Collections Library would like to thank Philip Maritz for donating digital surrogates of Émile Béchard's Oriental Studies Photographs."
+    ],
+    "alternative-title": [
+      "Group of whirling dervishes"
+    ],
+    "access-rights": [
+      "Access to high-resolution master file restricted to RBSCL staff only. Please contact the RBSCL at rbscl-ref@aucegypt.edu or 2615-3676 to request access to master files."
+    ],
+    "extent": [
+      "27.2 x 20 cm"
+    ],
+    "location": [
+      "Cairo, Egypt"
+    ],
+    "photographer": [
+      "Béchard, Émile"
+    ],
+    "date": [
+      "1870s"
+    ],
+    "format": [
+      "image/jpeg"
+    ],
+    "identifier": [
+      "SC-2016-09"
+    ],
+    "language": [
+      "French"
+    ],
+    "getty-aat": [
+      "albumen prints"
+    ],
+    "collection": [
+      "Philip Maritz Collection of Émile Béchard's Photographs of Egypt"
+    ],
+    "license": [
+      "This item is in the public domain"
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll16/id/1\">No. 33, Derwiches tourneurs (Groupe)</a></span>"
+    ],
+    "subject": [
+      "Ethnology -- Egypt; Egypt -- Social life and customs -- 19th century -- Pictorial works; Photography -- Egypt -- History; Performers"
+    ],
+    "title": [
+      "No. 33, Derwiches tourneurs (Groupe)"
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll16:2/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll16:2/full/full/0/default.jpg",
+    "acknowledgments": [
+      "The Rare Books and Special Collections Library would like to thank Philip Maritz for donating digital surrogates of Émile Béchard's Oriental Studies Photographs."
+    ],
+    "alternative-title": [
+      "Arab women going to the washroom"
+    ],
+    "access-rights": [
+      "Access to high-resolution master file restricted to RBSCL staff only. Please contact the RBSCL at rbscl-ref@aucegypt.edu or 2615-3676 to request access to master files."
+    ],
+    "extent": [
+      "27.2 x 20 cm"
+    ],
+    "location": [
+      "Cairo, Egypt"
+    ],
+    "photographer": [
+      "Béchard, Émile"
+    ],
+    "date": [
+      "1870s"
+    ],
+    "format": [
+      "image/jpeg"
+    ],
+    "identifier": [
+      "SC-2016-09"
+    ],
+    "language": [
+      "French"
+    ],
+    "getty-aat": [
+      "albumen prints"
+    ],
+    "collection": [
+      "Philip Maritz Collection of Émile Béchard's Photographs of Egypt"
+    ],
+    "license": [
+      "This item is in the public domain"
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll16/id/2\">No. 65, Femmes arabes allant au bain</a></span>"
+    ],
+    "subject": [
+      "Ethnology -- Egypt; Egypt -- Social life and customs -- 19th century -- Pictorial works; Photography -- Egypt -- History"
+    ],
+    "title": [
+      "No. 65, Femmes arabes allant au bain"
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll16:3/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll16:3/full/full/0/default.jpg",
+    "acknowledgments": [
+      "The Rare Books and Special Collections Library would like to thank Philip Maritz for donating digital surrogates of Émile Béchard's Oriental Studies Photographs."
+    ],
+    "alternative-title": [
+      "Sais (A Stable Groom)"
+    ],
+    "access-rights": [
+      "Access to high-resolution master file restricted to RBSCL staff only. Please contact the RBSCL at rbscl-ref@aucegypt.edu or 2615-3676 to request access to master files."
+    ],
+    "extent": [
+      "27.2 x 20 cm"
+    ],
+    "location": [
+      "Cairo, Egypt"
+    ],
+    "photographer": [
+      "Béchard, Émile"
+    ],
+    "date": [
+      "1870s"
+    ],
+    "format": [
+      "image/jpeg"
+    ],
+    "identifier": [
+      "SC-2016-09"
+    ],
+    "language": [
+      "French"
+    ],
+    "getty-aat": [
+      "albumen prints"
+    ],
+    "collection": [
+      "Philip Maritz Collection of Émile Béchard's Photographs of Egypt"
+    ],
+    "license": [
+      "This item is in the public domain"
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll16/id/3\">No. 21, Sais (Palfrenier)</a></span>"
+    ],
+    "subject": [
+      "Ethnology -- Egypt; Egypt -- Social life and customs -- 19th century -- Pictorial works; Photography -- Egypt -- History"
+    ],
+    "title": [
+      "No. 21, Sais (Palfrenier)"
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll16:4/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll16:4/full/full/0/default.jpg",
+    "acknowledgments": [
+      "The Rare Books and Special Collections Library would like to thank Philip Maritz for donating digital surrogates of Émile Béchard's Oriental Studies Photographs."
+    ],
+    "alternative-title": [
+      "[Scribes]"
+    ],
+    "access-rights": [
+      "Access to high-resolution master file restricted to RBSCL staff only. Please contact the RBSCL at rbscl-ref@aucegypt.edu or 2615-3676 to request access to master files."
+    ],
+    "extent": [
+      "27.2 x 20 cm"
+    ],
+    "location": [
+      "Cairo, Egypt"
+    ],
+    "photographer": [
+      "Béchard, Émile"
+    ],
+    "date": [
+      "1870s"
+    ],
+    "format": [
+      "image/jpeg"
+    ],
+    "identifier": [
+      "SC-2016-09"
+    ],
+    "language": [
+      "French"
+    ],
+    "getty-aat": [
+      "albumen prints"
+    ],
+    "collection": [
+      "Philip Maritz Collection of Émile Béchard's Photographs of Egypt"
+    ],
+    "license": [
+      "This item is in the public domain"
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll16/id/4\">No. 1, [illegible]</a></span>"
+    ],
+    "subject": [
+      "Ethnology -- Egypt; Egypt -- Social life and customs -- 19th century -- Pictorial works; Photography -- Egypt -- History"
+    ],
+    "title": [
+      "No. 1, [illegible]"
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll16:5/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll16:5/full/full/0/default.jpg",
+    "acknowledgments": [
+      "The Rare Books and Special Collections Library would like to thank Philip Maritz for donating digital surrogates of Émile Béchard's Oriental Studies Photographs."
+    ],
+    "alternative-title": [
+      "Jewerly merchant"
+    ],
+    "access-rights": [
+      "Access to high-resolution master file restricted to RBSCL staff only. Please contact the RBSCL at rbscl-ref@aucegypt.edu or 2615-3676 to request access to master files."
+    ],
+    "extent": [
+      "27.2 x 20 cm"
+    ],
+    "location": [
+      "Cairo, Egypt"
+    ],
+    "photographer": [
+      "Béchard, Émile"
+    ],
+    "date": [
+      "1870s"
+    ],
+    "format": [
+      "image/jpeg"
+    ],
+    "identifier": [
+      "SC-2016-09"
+    ],
+    "language": [
+      "French"
+    ],
+    "getty-aat": [
+      "albumen prints"
+    ],
+    "collection": [
+      "Philip Maritz Collection of Émile Béchard's Photographs of Egypt"
+    ],
+    "license": [
+      "This item is in the public domain"
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll16/id/5\">No. 56, Marchande de Verroteries</a></span>"
+    ],
+    "subject": [
+      "Ethnology -- Egypt; Egypt -- Social life and customs -- 19th century -- Pictorial works; Photography -- Egypt -- History; Merchants -- Egypt"
+    ],
+    "title": [
+      "No. 56, Marchande de Verroteries"
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll16:6/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll16:6/full/full/0/default.jpg",
+    "acknowledgments": [
+      "The Rare Books and Special Collections Library would like to thank Philip Maritz for donating digital surrogates of Émile Béchard's Oriental Studies Photographs."
+    ],
+    "alternative-title": [
+      "Whirling Dervish"
+    ],
+    "access-rights": [
+      "Access to high-resolution master file restricted to RBSCL staff only. Please contact the RBSCL at rbscl-ref@aucegypt.edu or 2615-3676 to request access to master files."
+    ],
+    "extent": [
+      "27.2 x 20 cm"
+    ],
+    "location": [
+      "Cairo, Egypt"
+    ],
+    "photographer": [
+      "Béchard, Émile"
+    ],
+    "date": [
+      "1870s"
+    ],
+    "format": [
+      "image/jpeg"
+    ],
+    "identifier": [
+      "SC-2016-09"
+    ],
+    "language": [
+      "French"
+    ],
+    "getty-aat": [
+      "albumen prints"
+    ],
+    "collection": [
+      "Philip Maritz Collection of Émile Béchard's Photographs of Egypt"
+    ],
+    "license": [
+      "This item is in the public domain"
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll16/id/6\">No. 7, Derwishe tourneur</a></span>"
+    ],
+    "subject": [
+      "Ethnology -- Egypt; Egypt -- Social life and customs -- 19th century -- Pictorial works; Photography -- Egypt -- History; Performers"
+    ],
+    "title": [
+      "No. 7, Derwishe tourneur"
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll16:8/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll16:8/full/full/0/default.jpg",
+    "acknowledgments": [
+      "The Rare Books and Special Collections Library would like to thank Philip Maritz for donating digital surrogates of Émile Béchard's Oriental Studies Photographs."
+    ],
+    "alternative-title": [
+      "Dervish"
+    ],
+    "access-rights": [
+      "Access to high-resolution master file restricted to RBSCL staff only. Please contact the RBSCL at rbscl-ref@aucegypt.edu or 2615-3676 to request access to master files."
+    ],
+    "extent": [
+      "27.2 x 20 cm"
+    ],
+    "location": [
+      "Cairo, Egypt"
+    ],
+    "photographer": [
+      "Béchard, Émile"
+    ],
+    "date": [
+      "1870s"
+    ],
+    "format": [
+      "image/jpeg"
+    ],
+    "identifier": [
+      "SC-2016-09"
+    ],
+    "language": [
+      "French"
+    ],
+    "getty-aat": [
+      "albumen prints"
+    ],
+    "collection": [
+      "Philip Maritz Collection of Émile Béchard's Photographs of Egypt"
+    ],
+    "license": [
+      "This item is in the public domain"
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll16/id/8\">No. 10, Derwishe [illegible]</a></span>"
+    ],
+    "subject": [
+      "Ethnology -- Egypt; Egypt -- Social life and customs -- 19th century -- Pictorial works; Photography -- Egypt -- History; Performers"
+    ],
+    "title": [
+      "No. 10, Derwishe [illegible]"
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll16:9/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll16:9/full/full/0/default.jpg",
+    "acknowledgments": [
+      "The Rare Books and Special Collections Library would like to thank Philip Maritz for donating digital surrogates of Émile Béchard's Oriental Studies Photographs."
+    ],
+    "alternative-title": [
+      "Beggar"
+    ],
+    "access-rights": [
+      "Access to high-resolution master file restricted to RBSCL staff only. Please contact the RBSCL at rbscl-ref@aucegypt.edu or 2615-3676 to request access to master files."
+    ],
+    "extent": [
+      "27.2 x 20 cm"
+    ],
+    "location": [
+      "Cairo, Egypt"
+    ],
+    "photographer": [
+      "Béchard, Émile"
+    ],
+    "date": [
+      "1870s"
+    ],
+    "format": [
+      "image/jpeg"
+    ],
+    "identifier": [
+      "SC-2016-09"
+    ],
+    "language": [
+      "French"
+    ],
+    "getty-aat": [
+      "albumen prints"
+    ],
+    "collection": [
+      "Philip Maritz Collection of Émile Béchard's Photographs of Egypt"
+    ],
+    "license": [
+      "This item is in the public domain"
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll16/id/9\">No. 41, Mandiant [mendiant]</a></span>"
+    ],
+    "subject": [
+      "Ethnology -- Egypt; Egypt -- Social life and customs -- 19th century -- Pictorial works; Photography -- Egypt -- History; Beggars -- Egypt"
+    ],
+    "title": [
+      "No. 41, Mandiant [mendiant]"
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll16:10/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll16:10/full/full/0/default.jpg",
+    "acknowledgments": [
+      "The Rare Books and Special Collections Library would like to thank Philip Maritz for donating digital surrogates of Émile Béchard's Oriental Studies Photographs."
+    ],
+    "alternative-title": [
+      "[Water carrier]"
+    ],
+    "access-rights": [
+      "Access to high-resolution master file restricted to RBSCL staff only. Please contact the RBSCL at rbscl-ref@aucegypt.edu or 2615-3676 to request access to master files."
+    ],
+    "extent": [
+      "27.2 x 20 cm"
+    ],
+    "location": [
+      "Cairo, Egypt"
+    ],
+    "photographer": [
+      "Béchard, Émile"
+    ],
+    "date": [
+      "1870s"
+    ],
+    "format": [
+      "image/jpeg"
+    ],
+    "identifier": [
+      "SC-2016-09"
+    ],
+    "language": [
+      "French"
+    ],
+    "getty-aat": [
+      "albumen prints"
+    ],
+    "collection": [
+      "Philip Maritz Collection of Émile Béchard's Photographs of Egypt"
+    ],
+    "license": [
+      "This item is in the public domain"
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll16/id/10\">No. 32, Hemeli'l</a></span>"
+    ],
+    "subject": [
+      "Ethnology -- Egypt; Egypt -- Social life and customs -- 19th century -- Pictorial works; Photography -- Egypt -- History; Water carriers -- Egypt -- Cairo"
+    ],
+    "title": [
+      "No. 32, Hemeli'l"
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ]
+  }
+]

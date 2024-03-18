@@ -1,0 +1,422 @@
+[
+  {
+    "id": "oai:library.ucla.edu:ark:/21198/z1dz4cw0",
+    "source": [
+      "Historic Cairo Architectural Mapping"
+    ],
+    "title": [
+      "Historic Cairo Architectural Mapping: Original Proposal"
+    ],
+    "creator": [
+      "Warner, Nicholas"
+    ],
+    "type": [
+      "http://id.loc.gov/vocabulary/resourceTypes/txt"
+    ],
+    "date": [
+      "1995",
+      "1995"
+    ],
+    "language": [
+      "eng"
+    ],
+    "identifier": [
+      "https://iiif.library.ucla.edu/iiif/2/ark%3A%2F21198%2Fz1992bk9/full/!200,200/0/default.jpg",
+      "https://digital.library.ucla.edu/catalog/ark:/21198/z1dz4cw0"
+    ],
+    "subject": null,
+    "description": null
+  },
+  {
+    "id": "oai:library.ucla.edu:ark:/21198/z1hq83hs",
+    "source": [
+      "Historic Cairo Architectural Mapping"
+    ],
+    "title": [
+      "Historic Cairo Architectural Mapping: Report"
+    ],
+    "creator": [
+      "Warner, Nicholas"
+    ],
+    "type": [
+      "http://id.loc.gov/vocabulary/resourceTypes/txt"
+    ],
+    "date": [
+      "1997",
+      "1997"
+    ],
+    "language": [
+      "eng"
+    ],
+    "identifier": [
+      "https://iiif.library.ucla.edu/iiif/2/ark%3A%2F21198%2Fz1d2627j/full/!200,200/0/default.jpg",
+      "https://digital.library.ucla.edu/catalog/ark:/21198/z1hq83hs"
+    ],
+    "subject": null,
+    "description": null
+  },
+  {
+    "id": "oai:library.ucla.edu:ark:/21198/z1mh1t2v",
+    "source": [
+      "Historic Cairo Architectural Mapping"
+    ],
+    "title": [
+      "Map Column 1"
+    ],
+    "creator": [
+      "Warner, Nicholas"
+    ],
+    "type": [
+      "http://id.loc.gov/vocabulary/resourceTypes/car"
+    ],
+    "date": [
+      "2005",
+      "2005"
+    ],
+    "language": null,
+    "identifier": [
+      "https://iiif.library.ucla.edu/iiif/2/ark%3A%2F21198%2Fz1gt9rrw/full/!200,200/0/default.jpg",
+      "https://digital.library.ucla.edu/catalog/ark:/21198/z1mh1t2v"
+    ],
+    "subject": [
+      "Wikalas",
+      "City walls",
+      "Tomb",
+      "Architecture, Egyptian",
+      "Islamic architecture",
+      "Religious architecture",
+      "Mausoleums",
+      "Gates",
+      "Mosques",
+      "Kuttabs",
+      "Facades",
+      "Architecture",
+      "Public baths"
+    ],
+    "description": [
+      "https://digital.library.ucla.edu/catalog/ark:/21198/z11k4b15",
+      "https://digital.library.ucla.edu/catalog/ark:/21198/z1h1826f",
+      "https://digital.library.ucla.edu/catalog/ark:/21198/z1w71m1n",
+      "https://digital.library.ucla.edu/catalog/ark:/21198/z1bc8zr8"
+    ]
+  },
+  {
+    "id": "oai:library.ucla.edu:ark:/21198/z1zs712g",
+    "source": [
+      "Historic Cairo Architectural Mapping"
+    ],
+    "title": [
+      "Map Column 2"
+    ],
+    "creator": [
+      "Warner, Nicholas"
+    ],
+    "type": [
+      "http://id.loc.gov/vocabulary/resourceTypes/car"
+    ],
+    "date": [
+      "2005",
+      "2005"
+    ],
+    "language": null,
+    "identifier": [
+      "https://iiif.library.ucla.edu/iiif/2/ark%3A%2F21198%2Fz1v168ch/full/!200,200/0/default.jpg",
+      "https://digital.library.ucla.edu/catalog/ark:/21198/z1zs712g"
+    ],
+    "subject": [
+      "Wikalas",
+      "Churches",
+      "Madrasahs",
+      "Architecture, Egyptian",
+      "Mihrabs",
+      "Islamic architecture",
+      "Religious architecture",
+      "Mausoleums",
+      "Synagogues",
+      "Jewish Architecture",
+      "Mosques",
+      "Kuttabs",
+      "Facades",
+      "City walls",
+      "Architecture",
+      "Public baths",
+      "Palaces",
+      "Gates"
+    ],
+    "description": [
+      "https://digital.library.ucla.edu/catalog/ark:/21198/z11k4b15",
+      "https://digital.library.ucla.edu/catalog/ark:/21198/z1h1826f",
+      "https://digital.library.ucla.edu/catalog/ark:/21198/z1w71m1n",
+      "https://digital.library.ucla.edu/catalog/ark:/21198/z1bc8zr8"
+    ]
+  },
+  {
+    "id": "oai:library.ucla.edu:ark:/21198/z1b31zv6",
+    "source": [
+      "Historic Cairo Architectural Mapping"
+    ],
+    "title": [
+      "Map Column 3"
+    ],
+    "creator": [
+      "Warner, Nicholas"
+    ],
+    "type": [
+      "http://id.loc.gov/vocabulary/resourceTypes/car"
+    ],
+    "date": [
+      "2005",
+      "2005"
+    ],
+    "language": null,
+    "identifier": [
+      "https://iiif.library.ucla.edu/iiif/2/ark%3A%2F21198%2Fz16b173t/full/!200,200/0/default.jpg",
+      "https://digital.library.ucla.edu/catalog/ark:/21198/z1b31zv6"
+    ],
+    "subject": [
+      "Wikalas",
+      "Churches",
+      "Madrasahs",
+      "Minarets",
+      "Architecture, Egyptian",
+      "Islamic architecture",
+      "Religious architecture",
+      "Palaces",
+      "Gates",
+      "Mosques",
+      "Kuttabs",
+      "Mausoluems",
+      "Facades",
+      "Architecture",
+      "Public baths",
+      "Cathedrals"
+    ],
+    "description": [
+      "https://digital.library.ucla.edu/catalog/ark:/21198/z11k4b15",
+      "https://digital.library.ucla.edu/catalog/ark:/21198/z1h1826f",
+      "https://digital.library.ucla.edu/catalog/ark:/21198/z1w71m1n",
+      "https://digital.library.ucla.edu/catalog/ark:/21198/z1bc8zr8"
+    ]
+  },
+  {
+    "id": "oai:library.ucla.edu:ark:/21198/z1pc75z5",
+    "source": [
+      "Historic Cairo Architectural Mapping"
+    ],
+    "title": [
+      "Map Column 4"
+    ],
+    "creator": [
+      "Warner, Nicholas"
+    ],
+    "type": [
+      "http://id.loc.gov/vocabulary/resourceTypes/car"
+    ],
+    "date": [
+      "2005",
+      "2005"
+    ],
+    "language": null,
+    "identifier": [
+      "https://iiif.library.ucla.edu/iiif/2/ark%3A%2F21198%2Fz1jm6f7v/full/!200,200/0/default.jpg",
+      "https://digital.library.ucla.edu/catalog/ark:/21198/z1pc75z5"
+    ],
+    "subject": [
+      "Wikalas",
+      "City walls",
+      "Minarets",
+      "Architecture, Egyptian",
+      "Islamic architecture",
+      "Tombs",
+      "Religious architecture",
+      "Palaces",
+      "Gates",
+      "Mosques",
+      "Mausoleum",
+      "Kuttabs",
+      "Facades",
+      "Museums",
+      "Architecture",
+      "Public baths"
+    ],
+    "description": [
+      "https://digital.library.ucla.edu/catalog/ark:/21198/z11k4b15",
+      "https://digital.library.ucla.edu/catalog/ark:/21198/z1h1826f",
+      "https://digital.library.ucla.edu/catalog/ark:/21198/z1w71m1n",
+      "https://digital.library.ucla.edu/catalog/ark:/21198/z1bc8zr8"
+    ]
+  },
+  {
+    "id": "oai:library.ucla.edu:ark:/21198/z11k3fb2",
+    "source": [
+      "Historic Cairo Architectural Mapping"
+    ],
+    "title": [
+      "Map Column 5"
+    ],
+    "creator": [
+      "Warner, Nicholas"
+    ],
+    "type": [
+      "http://id.loc.gov/vocabulary/resourceTypes/car"
+    ],
+    "date": [
+      "2005",
+      "2005"
+    ],
+    "language": null,
+    "identifier": [
+      "https://iiif.library.ucla.edu/iiif/2/ark%3A%2F21198%2Fz1wt2xsg/full/!200,200/0/default.jpg",
+      "https://digital.library.ucla.edu/catalog/ark:/21198/z11k3fb2"
+    ],
+    "subject": [
+      "Wikalas",
+      "Wells",
+      "Madrasahs",
+      "Minarets",
+      "Architecture, Egyptian",
+      "Architecture",
+      "Tombs",
+      "Religious architecture",
+      "Palaces",
+      "Citadels",
+      "Mosques",
+      "Gates",
+      "Islamic architecture",
+      "Public baths",
+      "Mausoleums",
+      "Kuttabs"
+    ],
+    "description": [
+      "https://digital.library.ucla.edu/catalog/ark:/21198/z11k4b15",
+      "https://digital.library.ucla.edu/catalog/ark:/21198/z1h1826f",
+      "https://digital.library.ucla.edu/catalog/ark:/21198/z1w71m1n",
+      "https://digital.library.ucla.edu/catalog/ark:/21198/z1bc8zr8"
+    ]
+  },
+  {
+    "id": "oai:library.ucla.edu:ark:/21198/z1kh5nht",
+    "source": [
+      "Historic Cairo Architectural Mapping"
+    ],
+    "title": [
+      "Map Column 6"
+    ],
+    "creator": [
+      "Warner, Nicholas"
+    ],
+    "type": [
+      "http://id.loc.gov/vocabulary/resourceTypes/car"
+    ],
+    "date": [
+      "2005",
+      "2005"
+    ],
+    "language": null,
+    "identifier": [
+      "https://iiif.library.ucla.edu/iiif/2/ark%3A%2F21198%2Fz1fr4wtj/full/!200,200/0/default.jpg",
+      "https://digital.library.ucla.edu/catalog/ark:/21198/z1kh5nht"
+    ],
+    "subject": [
+      "Wells",
+      "City walls",
+      "Minarets",
+      "Architecture, Egyptian",
+      "Architecture",
+      "Tombs",
+      "Animals, Mythical",
+      "Religious architecture",
+      "Palaces",
+      "Citadel (Cairo, Egypt)",
+      "Mosques",
+      "Kuttabs",
+      "Facades",
+      "Madrasahs",
+      "Baths, public",
+      "Islamic architecture",
+      "Mausoleums",
+      "Gates"
+    ],
+    "description": [
+      "https://digital.library.ucla.edu/catalog/ark:/21198/z11k4b15",
+      "https://digital.library.ucla.edu/catalog/ark:/21198/z1h1826f",
+      "https://digital.library.ucla.edu/catalog/ark:/21198/z1w71m1n",
+      "https://digital.library.ucla.edu/catalog/ark:/21198/z1bc8zr8"
+    ]
+  },
+  {
+    "id": "oai:library.ucla.edu:ark:/21198/z1t203xc",
+    "source": [
+      "Historic Cairo Architectural Mapping"
+    ],
+    "title": [
+      "Map Column 7"
+    ],
+    "creator": [
+      "Warner, Nicholas"
+    ],
+    "type": [
+      "http://id.loc.gov/vocabulary/resourceTypes/car"
+    ],
+    "date": [
+      "2005",
+      "2005"
+    ],
+    "language": null,
+    "identifier": [
+      "https://iiif.library.ucla.edu/iiif/2/ark%3A%2F21198%2Fz1p89c35/full/!200,200/0/default.jpg",
+      "https://digital.library.ucla.edu/catalog/ark:/21198/z1t203xc"
+    ],
+    "subject": [
+      "Facades",
+      "City walls",
+      "Minarets",
+      "Baths, public",
+      "Architecture",
+      "Tombs",
+      "Water-wheels",
+      "Religious architecture",
+      "Palaces",
+      "Gates",
+      "Mosques",
+      "Kuttabs",
+      "Architecture, Egyptian",
+      "Islamic architecture",
+      "Mausoleums"
+    ],
+    "description": [
+      "https://digital.library.ucla.edu/catalog/ark:/21198/z11k4b15",
+      "https://digital.library.ucla.edu/catalog/ark:/21198/z1h1826f",
+      "https://digital.library.ucla.edu/catalog/ark:/21198/z1w71m1n",
+      "https://digital.library.ucla.edu/catalog/ark:/21198/z1bc8zr8"
+    ]
+  },
+  {
+    "id": "oai:library.ucla.edu:ark:/21198/z11k4b15",
+    "source": [
+      "Historic Cairo Architectural Mapping"
+    ],
+    "title": [
+      "Historic Cairo Architectural Mapping: Descriptive Catalogue"
+    ],
+    "creator": [
+      "Warner, Nicholas"
+    ],
+    "type": [
+      "http://id.loc.gov/vocabulary/resourceTypes/txt"
+    ],
+    "date": [
+      "2005",
+      "2005"
+    ],
+    "language": [
+      "eng"
+    ],
+    "identifier": [
+      "https://iiif.library.ucla.edu/iiif/2/ark%3A%2F21198%2Fz1wt3tgk/full/!200,200/0/default.jpg",
+      "https://digital.library.ucla.edu/catalog/ark:/21198/z11k4b15"
+    ],
+    "subject": null,
+    "description": null
+  }
+]

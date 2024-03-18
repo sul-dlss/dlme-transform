@@ -1,0 +1,1193 @@
+[
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll28:18/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:0/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:1/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:2/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:3/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:4/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:5/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:6/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:7/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:8/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:9/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:10/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:11/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:12/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:13/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:14/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:15/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:16/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:17/full/full/0/default.jpg"
+    ],
+    "genre": [
+      "Periodicals"
+    ],
+    "call-number": [
+      "AP95.A6 A73"
+    ],
+    "coverage": [
+      "Cairo; Egypt"
+    ],
+    "date": [
+      "1927-12-07"
+    ],
+    "format": [
+      "pdf"
+    ],
+    "language": [
+      "Arabic"
+    ],
+    "publisher": [
+      "al-Qāhirah: Dār al-Laṭāʼif al-Muṣawwarah, 1925-"
+    ],
+    "license": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "rights": [
+      "RBSCL believes this item is in the public domain."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll28/id/18\">Al Aroussa No.149 Vol.3 1927</a></span>"
+    ],
+    "subject": [
+      "Arabic literature -- Egypt -- Periodicals; Women -- Periodicals. \r\nComic books, strips, etc. -- Egypt -- Periodicals."
+    ],
+    "title": [
+      "Al Aroussa No.149 Vol.3 1927"
+    ],
+    "title-arabic": [
+      "العروسة"
+    ],
+    "title-alternative": [
+      "al-ʻArūsah"
+    ],
+    "type": [
+      "Still Image; Text"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "note": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll28:39/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:19/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:20/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:21/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:22/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:23/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:24/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:25/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:26/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:27/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:28/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:29/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:30/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:31/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:32/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:33/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:34/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:35/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:36/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:37/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:38/full/full/0/default.jpg"
+    ],
+    "genre": [
+      "Periodicals"
+    ],
+    "call-number": [
+      "AP95.A6 A73"
+    ],
+    "coverage": [
+      "Cairo; Egypt"
+    ],
+    "date": [
+      "1927-05-18"
+    ],
+    "format": [
+      "pdf"
+    ],
+    "language": [
+      "Arabic"
+    ],
+    "publisher": [
+      "al-Qāhirah: Dār al-Laṭāʼif al-Muṣawwarah, 1925-"
+    ],
+    "license": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "rights": [
+      "RBSCL believes this item is in the public domain."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll28/id/39\">Al Aroussa No.120 Vol.3 1927</a></span>"
+    ],
+    "subject": [
+      "Arabic literature -- Egypt -- Periodicals; Women -- Periodicals. \r\nComic books, strips, etc. -- Egypt -- Periodicals."
+    ],
+    "title": [
+      "Al Aroussa No.120 Vol.3 1927"
+    ],
+    "title-arabic": [
+      "العروسة"
+    ],
+    "title-alternative": [
+      "al-ʻArūsah"
+    ],
+    "type": [
+      "Still Image; Text"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "note": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll28:59/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:40/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:41/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:42/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:43/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:44/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:45/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:46/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:47/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:48/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:49/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:50/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:51/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:52/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:53/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:54/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:55/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:56/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:57/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:58/full/full/0/default.jpg"
+    ],
+    "genre": [
+      "Periodicals"
+    ],
+    "call-number": [
+      "AP95.A6 A73"
+    ],
+    "coverage": [
+      "Cairo; Egypt"
+    ],
+    "date": [
+      "1927-12-14"
+    ],
+    "format": [
+      "pdf"
+    ],
+    "language": [
+      "Arabic"
+    ],
+    "publisher": [
+      "al-Qāhirah: Dār al-Laṭāʼif al-Muṣawwarah, 1925-"
+    ],
+    "license": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "rights": [
+      "RBSCL believes this item is in the public domain."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll28/id/59\">Al Aroussa No.150 Vol.3 1927</a></span>"
+    ],
+    "subject": [
+      "Arabic literature -- Egypt -- Periodicals; Women -- Periodicals. \r\nComic books, strips, etc. -- Egypt -- Periodicals."
+    ],
+    "title": [
+      "Al Aroussa No.150 Vol.3 1927"
+    ],
+    "title-arabic": [
+      "العروسة"
+    ],
+    "title-alternative": [
+      "al-ʻArūsah"
+    ],
+    "type": [
+      "Still Image; Text"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "note": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll28:80/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:60/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:61/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:62/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:63/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:64/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:65/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:66/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:67/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:68/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:69/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:70/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:71/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:72/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:73/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:74/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:75/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:76/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:77/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:78/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:79/full/full/0/default.jpg"
+    ],
+    "genre": [
+      "Periodicals"
+    ],
+    "call-number": [
+      "AP95.A6 A73"
+    ],
+    "coverage": [
+      "Cairo; Egypt"
+    ],
+    "date": [
+      "1927-07-06"
+    ],
+    "format": [
+      "pdf"
+    ],
+    "language": [
+      "Arabic"
+    ],
+    "publisher": [
+      "al-Qāhirah: Dār al-Laṭāʼif al-Muṣawwarah, 1925-"
+    ],
+    "license": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "rights": [
+      "RBSCL believes this item is in the public domain."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll28/id/80\">Al Aroussa No.127 Vol.3 1927</a></span>"
+    ],
+    "subject": [
+      "Arabic literature -- Egypt -- Periodicals; Women -- Periodicals. \r\nComic books, strips, etc. -- Egypt -- Periodicals."
+    ],
+    "title": [
+      "Al Aroussa No.127 Vol.3 1927"
+    ],
+    "title-arabic": [
+      "العروسة"
+    ],
+    "title-alternative": [
+      "al-ʻArūsah"
+    ],
+    "type": [
+      "Still Image; Text"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "note": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll28:101/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:81/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:82/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:83/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:84/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:85/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:86/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:87/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:88/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:89/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:90/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:91/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:92/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:93/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:94/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:95/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:96/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:97/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:98/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:99/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:100/full/full/0/default.jpg"
+    ],
+    "genre": [
+      "Periodicals"
+    ],
+    "call-number": [
+      "AP95.A6 A73"
+    ],
+    "coverage": [
+      "Cairo; Egypt"
+    ],
+    "date": [
+      "1927-08-17"
+    ],
+    "format": [
+      "pdf"
+    ],
+    "language": [
+      "Arabic"
+    ],
+    "publisher": [
+      "al-Qāhirah: Dār al-Laṭāʼif al-Muṣawwarah, 1925-"
+    ],
+    "license": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "rights": [
+      "RBSCL believes this item is in the public domain."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll28/id/101\">Al Aroussa No.133 Vol.3 1927</a></span>"
+    ],
+    "subject": [
+      "Arabic literature -- Egypt -- Periodicals; Women -- Periodicals. \r\nComic books, strips, etc. -- Egypt -- Periodicals."
+    ],
+    "title": [
+      "Al Aroussa No.133 Vol.3 1927"
+    ],
+    "title-arabic": [
+      "العروسة"
+    ],
+    "title-alternative": [
+      "al-ʻArūsah"
+    ],
+    "type": [
+      "Still Image; Text"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "note": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll28:122/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:102/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:103/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:104/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:105/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:106/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:107/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:108/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:109/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:110/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:111/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:112/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:113/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:114/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:115/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:116/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:117/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:118/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:119/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:120/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:121/full/full/0/default.jpg"
+    ],
+    "genre": [
+      "Periodicals"
+    ],
+    "call-number": [
+      "AP95.A6 A73"
+    ],
+    "coverage": [
+      "Cairo; Egypt"
+    ],
+    "date": [
+      "1927-08-31"
+    ],
+    "format": [
+      "pdf"
+    ],
+    "language": [
+      "Arabic"
+    ],
+    "publisher": [
+      "al-Qāhirah: Dār al-Laṭāʼif al-Muṣawwarah, 1925-"
+    ],
+    "license": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "rights": [
+      "RBSCL believes this item is in the public domain."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll28/id/122\">Al Aroussa No.135 Vol.3 1927</a></span>"
+    ],
+    "subject": [
+      "Arabic literature -- Egypt -- Periodicals; Women -- Periodicals. \r\nComic books, strips, etc. -- Egypt -- Periodicals."
+    ],
+    "title": [
+      "Al Aroussa No.135 Vol.3 1927"
+    ],
+    "title-arabic": [
+      "العروسة"
+    ],
+    "title-alternative": [
+      "al-ʻArūsah"
+    ],
+    "type": [
+      "Still Image; Text"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "note": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll28:143/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:123/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:124/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:125/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:126/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:127/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:128/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:129/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:130/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:131/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:132/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:133/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:134/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:135/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:136/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:137/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:138/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:139/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:140/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:141/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:142/full/full/0/default.jpg"
+    ],
+    "genre": [
+      "Periodicals"
+    ],
+    "call-number": [
+      "AP95.A6 A73"
+    ],
+    "coverage": [
+      "Cairo; Egypt"
+    ],
+    "date": [
+      "1927-10-12"
+    ],
+    "format": [
+      "pdf"
+    ],
+    "language": [
+      "Arabic"
+    ],
+    "publisher": [
+      "al-Qāhirah: Dār al-Laṭāʼif al-Muṣawwarah, 1925-"
+    ],
+    "license": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "rights": [
+      "RBSCL believes this item is in the public domain."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll28/id/143\">Al Aroussa No.141 Vol.3 1927</a></span>"
+    ],
+    "subject": [
+      "Arabic literature -- Egypt -- Periodicals; Women -- Periodicals. \r\nComic books, strips, etc. -- Egypt -- Periodicals."
+    ],
+    "title": [
+      "Al Aroussa No.141 Vol.3 1927"
+    ],
+    "title-arabic": [
+      "العروسة"
+    ],
+    "title-alternative": [
+      "al-ʻArūsah"
+    ],
+    "type": [
+      "Still Image; Text"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "note": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll28:164/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:144/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:145/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:146/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:147/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:148/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:149/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:150/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:151/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:152/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:153/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:154/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:155/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:156/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:157/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:158/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:159/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:160/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:161/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:162/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:163/full/full/0/default.jpg"
+    ],
+    "genre": [
+      "Periodicals"
+    ],
+    "call-number": [
+      "AP95.A6 A73"
+    ],
+    "coverage": [
+      "Cairo; Egypt"
+    ],
+    "date": [
+      "1927-08-10"
+    ],
+    "format": [
+      "pdf"
+    ],
+    "language": [
+      "Arabic"
+    ],
+    "publisher": [
+      "al-Qāhirah: Dār al-Laṭāʼif al-Muṣawwarah, 1925-"
+    ],
+    "license": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "rights": [
+      "RBSCL believes this item is in the public domain."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll28/id/164\">Al Aroussa No.132 Vol.3 1927</a></span>"
+    ],
+    "subject": [
+      "Arabic literature -- Egypt -- Periodicals; Women -- Periodicals. \r\nComic books, strips, etc. -- Egypt -- Periodicals."
+    ],
+    "title": [
+      "Al Aroussa No.132 Vol.3 1927"
+    ],
+    "title-arabic": [
+      "العروسة"
+    ],
+    "title-alternative": [
+      "al-ʻArūsah"
+    ],
+    "type": [
+      "Still Image; Text"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "note": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll28:185/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:165/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:166/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:167/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:168/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:169/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:170/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:171/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:172/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:173/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:174/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:175/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:176/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:177/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:178/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:179/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:180/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:181/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:182/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:183/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:184/full/full/0/default.jpg"
+    ],
+    "genre": [
+      "Periodicals"
+    ],
+    "call-number": [
+      "AP95.A6 A73"
+    ],
+    "coverage": [
+      "Cairo; Egypt"
+    ],
+    "date": [
+      "1927-10-19"
+    ],
+    "format": [
+      "pdf"
+    ],
+    "language": [
+      "Arabic"
+    ],
+    "publisher": [
+      "al-Qāhirah: Dār al-Laṭāʼif al-Muṣawwarah, 1925-"
+    ],
+    "license": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "rights": [
+      "RBSCL believes this item is in the public domain."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll28/id/185\">Al Aroussa No.142 Vol.3 1927</a></span>"
+    ],
+    "subject": [
+      "Arabic literature -- Egypt -- Periodicals; Women -- Periodicals. \r\nComic books, strips, etc. -- Egypt -- Periodicals."
+    ],
+    "title": [
+      "Al Aroussa No.142 Vol.3 1927"
+    ],
+    "title-arabic": [
+      "العروسة"
+    ],
+    "title-alternative": [
+      "al-ʻArūsah"
+    ],
+    "type": [
+      "Still Image; Text"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "note": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll28:206/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:186/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:187/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:188/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:189/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:190/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:191/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:192/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:193/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:194/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:195/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:196/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:197/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:198/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:199/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:200/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:201/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:202/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:203/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:204/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll28:205/full/full/0/default.jpg"
+    ],
+    "genre": [
+      "Periodicals"
+    ],
+    "call-number": [
+      "AP95.A6 A73"
+    ],
+    "coverage": [
+      "Cairo; Egypt"
+    ],
+    "date": [
+      "1927-10-26"
+    ],
+    "format": [
+      "pdf"
+    ],
+    "language": [
+      "Arabic"
+    ],
+    "publisher": [
+      "al-Qāhirah: Dār al-Laṭāʼif al-Muṣawwarah, 1925-"
+    ],
+    "license": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "rights": [
+      "RBSCL believes this item is in the public domain."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll28/id/206\">Al Aroussa No.143 Vol.3 1927</a></span>"
+    ],
+    "subject": [
+      "Arabic literature -- Egypt -- Periodicals; Women -- Periodicals. \r\nComic books, strips, etc. -- Egypt -- Periodicals."
+    ],
+    "title": [
+      "Al Aroussa No.143 Vol.3 1927"
+    ],
+    "title-arabic": [
+      "العروسة"
+    ],
+    "title-alternative": [
+      "al-ʻArūsah"
+    ],
+    "type": [
+      "Still Image; Text"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "note": null
+  }
+]

@@ -1,0 +1,448 @@
+[
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm21044.contentdm.oclc.org/iiif/ResimKlksyn:572/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm21044.contentdm.oclc.org/iiif/2/ResimKlksyn:572/full/full/0/default.jpg",
+    "boyutlar-measurements": [
+      "55.5 x 39 cm"
+    ],
+    "tarih-date": [
+      "Tarihsiz"
+    ],
+    "envanter-numarası-accession-number": [
+      "220-0158-SBO"
+    ],
+    "teknik-materials/techniques": [
+      "Kağıt üzerine suluboya"
+    ],
+    "telif-hakkı-copyright": [
+      "© Sabancı Üniversitesi Sakıp Sabancı Müzesi. Tüm hakları saklıdır."
+    ],
+    "başlık-title": [
+      "Cami Girişi"
+    ],
+    "tür-type": [
+      "Resim"
+    ],
+    "sanatçı-artist": [
+      "Boyar, Ali Sami, 1880-1967"
+    ],
+    "repository": [
+      "digitalSSM"
+    ],
+    "source": [
+      "<span>From: <a href=\"https://digitalssm.org/digital/collection/ResimKlksyn/id/572\">Cami Girişi</a></span>"
+    ],
+    "kayıtlar-inscriptions/marks": null,
+    "dönem-object/work-culture": null,
+    "başlık-alternatif-title-alternative": null,
+    "açıklama-description": null,
+    "konservasyon-conservation": null,
+    "ayrıca-bakınız-see-also": null,
+    "fiziksel-görünüm-physical-appearance": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm21044.contentdm.oclc.org/iiif/ResimKlksyn:573/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm21044.contentdm.oclc.org/iiif/2/ResimKlksyn:573/full/full/0/default.jpg",
+    "boyutlar-measurements": [
+      "68.5 x 44 cm"
+    ],
+    "tarih-date": [
+      "1917"
+    ],
+    "envanter-numarası-accession-number": [
+      "200-0160-LM"
+    ],
+    "teknik-materials/techniques": [
+      "Tuval üzerine yağlıboya"
+    ],
+    "telif-hakkı-copyright": [
+      "Fotoğraf © Sabancı Üniversitesi Sakıp Sabancı Müzesi. Tüm hakları saklıdır."
+    ],
+    "başlık-title": [
+      "Balık Tutan Çocuk"
+    ],
+    "tür-type": [
+      "Resim"
+    ],
+    "sanatçı-artist": [
+      "De Mango, Leonardo, 1843-1930"
+    ],
+    "repository": [
+      "digitalSSM"
+    ],
+    "source": [
+      "<span>From: <a href=\"https://digitalssm.org/digital/collection/ResimKlksyn/id/573\">Balık Tutan Çocuk</a></span>"
+    ],
+    "kayıtlar-inscriptions/marks": null,
+    "dönem-object/work-culture": null,
+    "başlık-alternatif-title-alternative": null,
+    "açıklama-description": null,
+    "konservasyon-conservation": null,
+    "ayrıca-bakınız-see-also": null,
+    "fiziksel-görünüm-physical-appearance": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm21044.contentdm.oclc.org/iiif/ResimKlksyn:574/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm21044.contentdm.oclc.org/iiif/2/ResimKlksyn:574/full/full/0/default.jpg",
+    "boyutlar-measurements": [
+      "72.5 x 58 cm"
+    ],
+    "tarih-date": [
+      "Tarihsiz"
+    ],
+    "envanter-numarası-accession-number": [
+      "200-0059-H"
+    ],
+    "teknik-materials/techniques": [
+      "Tuval üzerine yağlıboya"
+    ],
+    "telif-hakkı-copyright": [
+      "Fotoğraf © Sabancı Üniversitesi Sakıp Sabancı Müzesi. Tüm hakları saklıdır."
+    ],
+    "başlık-title": [
+      "Vazoda Çiçekler"
+    ],
+    "tür-type": [
+      "Resim"
+    ],
+    "sanatçı-artist": [
+      "Halil"
+    ],
+    "repository": [
+      "digitalSSM"
+    ],
+    "source": [
+      "<span>From: <a href=\"https://digitalssm.org/digital/collection/ResimKlksyn/id/574\">Vazoda Çiçekler</a></span>"
+    ],
+    "kayıtlar-inscriptions/marks": null,
+    "dönem-object/work-culture": null,
+    "başlık-alternatif-title-alternative": null,
+    "açıklama-description": null,
+    "konservasyon-conservation": null,
+    "ayrıca-bakınız-see-also": null,
+    "fiziksel-görünüm-physical-appearance": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm21044.contentdm.oclc.org/iiif/ResimKlksyn:575/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm21044.contentdm.oclc.org/iiif/2/ResimKlksyn:575/full/full/0/default.jpg",
+    "boyutlar-measurements": [
+      "56 x 67 cm"
+    ],
+    "tarih-date": [
+      "Tarihsiz"
+    ],
+    "envanter-numarası-accession-number": [
+      "200-0061-AAC"
+    ],
+    "teknik-materials/techniques": [
+      "Duralit üzerine yağlıboya"
+    ],
+    "telif-hakkı-copyright": [
+      "Fotoğraf © Sabancı Üniversitesi Sakıp Sabancı Müzesi. Tüm hakları saklıdır."
+    ],
+    "başlık-title": [
+      "Muradiye Camii"
+    ],
+    "tür-type": [
+      "Resim"
+    ],
+    "sanatçı-artist": [
+      "Ali Avni Çelebi (1904-1993)"
+    ],
+    "repository": [
+      "digitalSSM"
+    ],
+    "source": [
+      "<span>From: <a href=\"https://digitalssm.org/digital/collection/ResimKlksyn/id/575\">Muradiye Camii</a></span>"
+    ],
+    "kayıtlar-inscriptions/marks": null,
+    "dönem-object/work-culture": null,
+    "başlık-alternatif-title-alternative": null,
+    "açıklama-description": null,
+    "konservasyon-conservation": null,
+    "ayrıca-bakınız-see-also": null,
+    "fiziksel-görünüm-physical-appearance": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm21044.contentdm.oclc.org/iiif/ResimKlksyn:576/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm21044.contentdm.oclc.org/iiif/2/ResimKlksyn:576/full/full/0/default.jpg",
+    "boyutlar-measurements": [
+      "60 x 73 cm"
+    ],
+    "tarih-date": [
+      "1931"
+    ],
+    "envanter-numarası-accession-number": [
+      "200-0060-FD"
+    ],
+    "teknik-materials/techniques": [
+      "Tuval üzerine yağlıboya"
+    ],
+    "telif-hakkı-copyright": [
+      "© Sabancı Üniversitesi Sakıp Sabancı Müzesi. Tüm hakları saklıdır."
+    ],
+    "başlık-title": [
+      "Portakallı Natürmort"
+    ],
+    "tür-type": [
+      "Resim"
+    ],
+    "sanatçı-artist": [
+      "Feyhaman Duran (1886-1970)"
+    ],
+    "repository": [
+      "digitalSSM"
+    ],
+    "source": [
+      "<span>From: <a href=\"https://digitalssm.org/digital/collection/ResimKlksyn/id/576\">Portakallı Natürmort</a></span>"
+    ],
+    "kayıtlar-inscriptions/marks": null,
+    "dönem-object/work-culture": null,
+    "başlık-alternatif-title-alternative": null,
+    "açıklama-description": null,
+    "konservasyon-conservation": null,
+    "ayrıca-bakınız-see-also": null,
+    "fiziksel-görünüm-physical-appearance": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm21044.contentdm.oclc.org/iiif/ResimKlksyn:577/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm21044.contentdm.oclc.org/iiif/2/ResimKlksyn:577/full/full/0/default.jpg",
+    "boyutlar-measurements": [
+      "73 x 60 cm"
+    ],
+    "tarih-date": [
+      "1912-1913"
+    ],
+    "envanter-numarası-accession-number": [
+      "200-0159-GS"
+    ],
+    "teknik-materials/techniques": [
+      "Tuval üzerine yağlıboya"
+    ],
+    "telif-hakkı-copyright": [
+      "Fotoğraf © Sabancı Üniversitesi Sakıp Sabancı Müzesi. Tüm hakları saklıdır."
+    ],
+    "başlık-title": [
+      "Manzara"
+    ],
+    "tür-type": [
+      "Resim"
+    ],
+    "sanatçı-artist": [
+      "Gelibolulu Süleyman"
+    ],
+    "repository": [
+      "digitalSSM"
+    ],
+    "source": [
+      "<span>From: <a href=\"https://digitalssm.org/digital/collection/ResimKlksyn/id/577\">Manzara</a></span>"
+    ],
+    "kayıtlar-inscriptions/marks": [
+      "Sol altta Osmanlıca imzalı ve tarihli: Süleyman Gelibolu / r. 1328"
+    ],
+    "dönem-object/work-culture": null,
+    "başlık-alternatif-title-alternative": null,
+    "açıklama-description": null,
+    "konservasyon-conservation": null,
+    "ayrıca-bakınız-see-also": null,
+    "fiziksel-görünüm-physical-appearance": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm21044.contentdm.oclc.org/iiif/ResimKlksyn:578/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm21044.contentdm.oclc.org/iiif/2/ResimKlksyn:578/full/full/0/default.jpg",
+    "boyutlar-measurements": [
+      "56.5 x 76 cm"
+    ],
+    "tarih-date": [
+      "1953"
+    ],
+    "envanter-numarası-accession-number": [
+      "200-0063-SA"
+    ],
+    "teknik-materials/techniques": [
+      "Duralit üzerine yağlıboya"
+    ],
+    "telif-hakkı-copyright": [
+      "Fotoğraf © Sabancı Üniversitesi Sakıp Sabancı Müzesi. Tüm hakları saklıdır."
+    ],
+    "başlık-title": [
+      "Masa Etrafı Sohbet"
+    ],
+    "tür-type": [
+      "Resim"
+    ],
+    "sanatçı-artist": [
+      "Sirun Adın (1926-2003)"
+    ],
+    "repository": [
+      "digitalSSM"
+    ],
+    "source": [
+      "<span>From: <a href=\"https://digitalssm.org/digital/collection/ResimKlksyn/id/578\">Masa Etrafı Sohbet</a></span>"
+    ],
+    "kayıtlar-inscriptions/marks": [
+      "Sol altta imzalı ve tarihli: S. Adın / 1953"
+    ],
+    "dönem-object/work-culture": null,
+    "başlık-alternatif-title-alternative": null,
+    "açıklama-description": null,
+    "konservasyon-conservation": null,
+    "ayrıca-bakınız-see-also": null,
+    "fiziksel-görünüm-physical-appearance": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm21044.contentdm.oclc.org/iiif/ResimKlksyn:579/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm21044.contentdm.oclc.org/iiif/2/ResimKlksyn:579/full/full/0/default.jpg",
+    "boyutlar-measurements": [
+      "48.5 x 64 cm"
+    ],
+    "tarih-date": [
+      "1932"
+    ],
+    "envanter-numarası-accession-number": [
+      "210-0161-M"
+    ],
+    "teknik-materials/techniques": [
+      "Kağıt üzerine guaj"
+    ],
+    "telif-hakkı-copyright": [
+      "© Sabancı Üniversitesi Sakıp Sabancı Müzesi. Tüm hakları saklıdır."
+    ],
+    "başlık-title": [
+      "Orta Oyunu"
+    ],
+    "tür-type": [
+      "Resim"
+    ],
+    "sanatçı-artist": [
+      "Özduygu, Muazzez, 1871-1956"
+    ],
+    "repository": [
+      "digitalSSM"
+    ],
+    "source": [
+      "<span>From: <a href=\"https://digitalssm.org/digital/collection/ResimKlksyn/id/579\">Orta Oyunu</a></span>"
+    ],
+    "kayıtlar-inscriptions/marks": null,
+    "dönem-object/work-culture": null,
+    "başlık-alternatif-title-alternative": null,
+    "açıklama-description": null,
+    "konservasyon-conservation": null,
+    "ayrıca-bakınız-see-also": null,
+    "fiziksel-görünüm-physical-appearance": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm21044.contentdm.oclc.org/iiif/ResimKlksyn:580/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm21044.contentdm.oclc.org/iiif/2/ResimKlksyn:580/full/full/0/default.jpg",
+    "boyutlar-measurements": [
+      "60.5 x 41.5 cm"
+    ],
+    "tarih-date": [
+      "Tarihsiz"
+    ],
+    "envanter-numarası-accession-number": [
+      "200-0062-HA"
+    ],
+    "teknik-materials/techniques": [
+      "Tuval üzerine yağlıboya"
+    ],
+    "telif-hakkı-copyright": [
+      "Fotoğraf © Sabancı Üniversitesi Sakıp Sabancı Müzesi. Tüm hakları saklıdır."
+    ],
+    "başlık-title": [
+      "Bursa"
+    ],
+    "tür-type": [
+      "Resim"
+    ],
+    "sanatçı-artist": [
+      "Hale Asaf, 1905-1938"
+    ],
+    "repository": [
+      "digitalSSM"
+    ],
+    "source": [
+      "<span>From: <a href=\"https://digitalssm.org/digital/collection/ResimKlksyn/id/580\">Bursa</a></span>"
+    ],
+    "kayıtlar-inscriptions/marks": null,
+    "dönem-object/work-culture": [
+      "Müstakiller"
+    ],
+    "başlık-alternatif-title-alternative": null,
+    "açıklama-description": null,
+    "konservasyon-conservation": null,
+    "ayrıca-bakınız-see-also": null,
+    "fiziksel-görünüm-physical-appearance": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm21044.contentdm.oclc.org/iiif/ResimKlksyn:581/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm21044.contentdm.oclc.org/iiif/2/ResimKlksyn:581/full/full/0/default.jpg",
+    "boyutlar-measurements": [
+      "50.5 x 40 cm"
+    ],
+    "tarih-date": [
+      "Tarihsiz"
+    ],
+    "envanter-numarası-accession-number": [
+      "200-0162-OE"
+    ],
+    "teknik-materials/techniques": [
+      "Tuval üzerine yağlıboya"
+    ],
+    "telif-hakkı-copyright": [
+      "Fotoğraf © Sabancı Üniversitesi Sakıp Sabancı Müzesi. Tüm hakları saklıdır."
+    ],
+    "başlık-title": [
+      "Vazoda Çiçekler"
+    ],
+    "tür-type": [
+      "Resim"
+    ],
+    "sanatçı-artist": [
+      "Ersoy, Orhan, 1928-"
+    ],
+    "repository": [
+      "digitalSSM"
+    ],
+    "source": [
+      "<span>From: <a href=\"https://digitalssm.org/digital/collection/ResimKlksyn/id/581\">Vazoda Çiçekler</a></span>"
+    ],
+    "kayıtlar-inscriptions/marks": null,
+    "dönem-object/work-culture": null,
+    "başlık-alternatif-title-alternative": null,
+    "açıklama-description": null,
+    "konservasyon-conservation": null,
+    "ayrıca-bakınız-see-also": null,
+    "fiziksel-görünüm-physical-appearance": null
+  }
+]

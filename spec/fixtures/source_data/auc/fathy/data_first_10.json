@@ -1,0 +1,777 @@
+[
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll13:11/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll13:6/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll13:7/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll13:8/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll13:9/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll13:10/full/full/0/default.jpg"
+    ],
+    "collection": [
+      "Hassan Fathy Architectural Archives"
+    ],
+    "coordinated-longitude": [
+      "31.2218"
+    ],
+    "coordinates-latitude": [
+      "31.1742"
+    ],
+    "date": [
+      "1934"
+    ],
+    "location-getty-thesaurus-of-geographic-names-tgn": [
+      "Biyala, Kafr ash Shaykh, Egypt"
+    ],
+    "location-english-name": [
+      "Biyala, Kafr al-Shaykh, Kafr El Sheikh, Egypt."
+    ],
+    "location-arabic": [
+      "بيلة، كفر الشيخ، مصر"
+    ],
+    "object-identifier": [
+      "HF 34.02"
+    ],
+    "project-type": [
+      "Residence, House, Villa"
+    ],
+    "creator": [
+      "Fathy, Hassan"
+    ],
+    "access-rights": [
+      "Access to high-resolution master file restricted to RBSCL staff only. Please contact the RBSCL at rbscl-ref@aucegypt.edu or 2615-3676 to request access to master files."
+    ],
+    "license": [
+      "Copyright 2015, American University in Cairo. All rights reserved."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library, The American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll13/id/11\">Abd al-Halim al-Biyali House</a></span>"
+    ],
+    "subject-aat": [
+      "Houses, Dwelling"
+    ],
+    "title-english": [
+      "Abd al-Halim al-Biyali House"
+    ],
+    "title-arabic": [
+      "منزل سعادة عبد الحليم البيلي بك"
+    ],
+    "title-inscribed": [
+      "منزل سعادة عبد الحليم البيلي بك ببيلة مسقط عمومى للأرض وتوقيع المنزل"
+    ],
+    "title-alternative": [
+      "Abdel Halim al-Biyali House"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll13:19/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll13:18/full/full/0/default.jpg",
+    "collection": [
+      "Hassan Fathy Architectural Archives"
+    ],
+    "coordinated-longitude": [
+      "31.27113003"
+    ],
+    "coordinates-latitude": [
+      "30.04498281"
+    ],
+    "date": [
+      "1946"
+    ],
+    "location-getty-thesaurus-of-geographic-names-tgn": [
+      "Salah Salem Street, Cairo, Egypt"
+    ],
+    "location-english-name": [
+      "Shari Salah Salim"
+    ],
+    "location-arabic": [
+      "شارع صلاح سالم، القاهرة، مصر"
+    ],
+    "object-identifier": [
+      "HF 46.01"
+    ],
+    "project-type": [
+      "Mausoleum"
+    ],
+    "creator": [
+      "Fathy, Hassan"
+    ],
+    "access-rights": [
+      "Access to high-resolution master file restricted to RBSCL staff only. Please contact the RBSCL at rbscl-ref@aucegypt.edu or 2615-3676 to request access to master files."
+    ],
+    "license": [
+      "Copyright 2015, American University in Cairo. All rights reserved."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library, The American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll13/id/19\">Ahmad Hassanein Mausoleum</a></span>"
+    ],
+    "subject-aat": [
+      "Tombs & sepulchral monuments"
+    ],
+    "title-english": [
+      "Ahmad Hassanein Mausoleum"
+    ],
+    "title-arabic": [
+      "مدفن احمد حسانين باشا"
+    ],
+    "title-inscribed": [
+      "مدفن المغفور له احمد حسنين باشا"
+    ],
+    "title-alternative": [
+      "Ahmed Hasanayn Mausoleum"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll13:21/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll13:20/full/full/0/default.jpg",
+    "collection": [
+      "Hassan Fathy Architectural Archives"
+    ],
+    "coordinated-longitude": [
+      "31.1667"
+    ],
+    "coordinates-latitude": [
+      "29.9667"
+    ],
+    "date": [
+      "Undated, 1940s"
+    ],
+    "location-getty-thesaurus-of-geographic-names-tgn": [
+      "Al Ḩarrānīyah, Giza, Egypt"
+    ],
+    "location-english-name": [
+      "Al- Haraneyah, Jīzah "
+    ],
+    "location-arabic": [
+      "الحرانية، الجيزة، مصر"
+    ],
+    "object-identifier": [
+      "HF 4-.07"
+    ],
+    "project-type": [
+      "Town"
+    ],
+    "creator": [
+      "Fathy, Hassan"
+    ],
+    "access-rights": [
+      "Access to high-resolution master file restricted to RBSCL staff only. Please contact the RBSCL at rbscl-ref@aucegypt.edu or 2615-3676 to request access to master files."
+    ],
+    "license": [
+      "Copyright 2015, American University in Cairo. All rights reserved."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library, The American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll13/id/21\">al-Harraniyah Village</a></span>"
+    ],
+    "subject-aat": [
+      "Villages"
+    ],
+    "title-english": [
+      "al-Harraniyah Village"
+    ],
+    "title-arabic": [
+      "مشروع قرية الحرانية"
+    ],
+    "title-inscribed": [
+      "مشروع قرية الحرانية"
+    ],
+    "title-alternative": [
+      "Harania,al-Harraniya"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll13:29/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll13:26/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll13:27/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll13:28/full/full/0/default.jpg"
+    ],
+    "collection": [
+      "Hassan Fathy Architectural Archives"
+    ],
+    "coordinated-longitude": [
+      "31.23127611"
+    ],
+    "coordinates-latitude": [
+      "30.02319774"
+    ],
+    "date": [
+      "Undated, 1930s"
+    ],
+    "location-getty-thesaurus-of-geographic-names-tgn": [
+      "Fomm el-Khalig, Cairo, Egypt‬"
+    ],
+    "location-english-name": [
+      "Fam al Khalij, Fom al Khalig"
+    ],
+    "location-arabic": [
+      "فم الخليج، القاهرة، مصر"
+    ],
+    "object-identifier": [
+      "HF 3-.01"
+    ],
+    "project-type": [
+      "Residence, House, Villa, Multiple Dwellings, Apartment House"
+    ],
+    "creator": [
+      "Fathy, Hassan"
+    ],
+    "access-rights": [
+      "Access to high-resolution master file restricted to RBSCL staff only. Please contact the RBSCL at rbscl-ref@aucegypt.edu or 2615-3676 to request access to master files."
+    ],
+    "license": [
+      "Copyright 2015, American University in Cairo. All rights reserved."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library, The American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll13/id/29\">al-Sada al-Bakriyya Villa-Apartment House House </a></span>"
+    ],
+    "subject-aat": [
+      "Apartment houses, Villas, Dwellings"
+    ],
+    "title-english": [
+      "al-Sada al-Bakriyya Villa-Apartment House House "
+    ],
+    "title-arabic": [
+      "منزل السادة البكرية"
+    ],
+    "title-inscribed": [
+      "Villa- Apartment House At Fomm El-Kalig For The Sada El Bakreya"
+    ],
+    "title-alternative": [
+      "Al-Sadah al-Bakriyya Villa-Apartment House "
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll13:31/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll13:30/full/full/0/default.jpg",
+    "collection": [
+      "Hassan Fathy Architectural Archives"
+    ],
+    "coordinated-longitude": [
+      "30.85"
+    ],
+    "coordinates-latitude": [
+      "30"
+    ],
+    "date": [
+      "Undated,\r\n1960s"
+    ],
+    "location-getty-thesaurus-of-geographic-names-tgn": [
+      "Giza, Egypt"
+    ],
+    "location-english-name": [
+      "Jīzah"
+    ],
+    "location-arabic": [
+      "الجيزة، مصر"
+    ],
+    "object-identifier": [
+      "HF 6-.02"
+    ],
+    "project-type": [
+      "Apartment, Residence"
+    ],
+    "creator": [
+      "Fathy, Hassan"
+    ],
+    "access-rights": [
+      "Access to high-resolution master file restricted to RBSCL staff only. Please contact the RBSCL at rbscl-ref@aucegypt.edu or 2615-3676 to request access to master files."
+    ],
+    "license": [
+      "Copyright 2015, American University in Cairo. All rights reserved."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library, The American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll13/id/31\">Ali Fathy Apartment</a></span>"
+    ],
+    "subject-aat": [
+      "Apartments, Dwellings"
+    ],
+    "title-english": [
+      "Ali Fathy Apartment"
+    ],
+    "title-arabic": [
+      "شقة علي فتحي"
+    ],
+    "title-inscribed": [
+      "----"
+    ],
+    "title-alternative": [
+      "Aly/'Ali"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll13:34/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll13:32/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll13:33/full/full/0/default.jpg"
+    ],
+    "collection": [
+      "Hassan Fathy Architectural Archives"
+    ],
+    "coordinated-longitude": null,
+    "coordinates-latitude": null,
+    "date": [
+      "1963"
+    ],
+    "location-getty-thesaurus-of-geographic-names-tgn": [
+      "Unidentified Location"
+    ],
+    "location-english-name": null,
+    "location-arabic": [
+      "الموقع غير معروف"
+    ],
+    "object-identifier": [
+      "HF 63.05"
+    ],
+    "project-type": [
+      "Residence, Multiple Dwellings, Apartment Houses"
+    ],
+    "creator": [
+      "Fathy, Hassan"
+    ],
+    "access-rights": [
+      "Access to high-resolution master file restricted to RBSCL staff only. Please contact the RBSCL at rbscl-ref@aucegypt.edu or 2615-3676 to request access to master files."
+    ],
+    "license": [
+      "Copyright 2015, American University in Cairo. All rights reserved."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library, The American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll13/id/34\">Duplex Building</a></span>"
+    ],
+    "subject-aat": [
+      "Duplexes, Dwellings"
+    ],
+    "title-english": [
+      "Duplex Building"
+    ],
+    "title-arabic": [
+      "مبني دوبلكس"
+    ],
+    "title-inscribed": null,
+    "title-alternative": null,
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll13:36/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll13:35/full/full/0/default.jpg",
+    "collection": [
+      "Hassan Fathy Architectural Archives"
+    ],
+    "coordinated-longitude": [
+      "31.20868323"
+    ],
+    "coordinates-latitude": [
+      "30.02989165"
+    ],
+    "date": [
+      "1947"
+    ],
+    "location-getty-thesaurus-of-geographic-names-tgn": [
+      "Giza, Egypt"
+    ],
+    "location-english-name": [
+      "Jīzah"
+    ],
+    "location-arabic": [
+      "الجيزة، القاهرة"
+    ],
+    "object-identifier": [
+      "HF 45.03"
+    ],
+    "project-type": [
+      "Student Housing, Dormitory, Multiple Dwellings"
+    ],
+    "creator": [
+      "Fathy, Hassan"
+    ],
+    "access-rights": [
+      "Access to high-resolution master file restricted to RBSCL staff only. Please contact the RBSCL at rbscl-ref@aucegypt.edu or 2615-3676 to request access to master files."
+    ],
+    "license": [
+      "Copyright 2015, American University in Cairo. All rights reserved."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library, The American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll13/id/36\">Cairo University Hostel</a></span>"
+    ],
+    "subject-aat": [
+      "Dormitories; Dwellings"
+    ],
+    "title-english": [
+      "Cairo University Hostel"
+    ],
+    "title-arabic": [
+      "مدينة فاروق الأول الجامعية (جامعة القاهرة)"
+    ],
+    "title-inscribed": [
+      "مدينة فاروق الأول الجامعية"
+    ],
+    "title-alternative": null,
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll13:48/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll13:37/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll13:38/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll13:39/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll13:40/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll13:41/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll13:42/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll13:43/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll13:44/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll13:45/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll13:46/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll13:47/full/full/0/default.jpg"
+    ],
+    "collection": [
+      "Hassan Fathy Architectural Archives"
+    ],
+    "coordinated-longitude": [
+      "31.25"
+    ],
+    "coordinates-latitude": [
+      "29.9667"
+    ],
+    "date": [
+      "1949"
+    ],
+    "location-getty-thesaurus-of-geographic-names-tgn": [
+      "Ma'adi, Cairo, Egypt"
+    ],
+    "location-english-name": [
+      "Maadi, Qahirah"
+    ],
+    "location-arabic": [
+      "المعادي، القاهرة، مصر"
+    ],
+    "object-identifier": [
+      "HF 49.02"
+    ],
+    "project-type": [
+      "Villa, House, Residence"
+    ],
+    "creator": [
+      "Fathy, Hassan"
+    ],
+    "access-rights": [
+      "Access to high-resolution master file restricted to RBSCL staff only. Please contact the RBSCL at rbscl-ref@aucegypt.edu or 2615-3676 to request access to master files."
+    ],
+    "license": [
+      "Copyright 2015, American University in Cairo. All rights reserved."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library, The American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll13/id/48\">Aziza Hassanein Villa ‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬</a></span>"
+    ],
+    "subject-aat": [
+      "Villas, Dwellings"
+    ],
+    "title-english": [
+      "Aziza Hassanein Villa ‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬"
+    ],
+    "title-arabic": [
+      "فيلا عزيزة هانم حسانين"
+    ],
+    "title-inscribed": [
+      "فيلا حضرة صاحبة العصمة عزيزة هانم حسانين بناحية المعادي علي النيل"
+    ],
+    "title-alternative": [
+      "‘Aziza, Azizah Hasaniyn/ Hassanen/ Hassanayn"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll13:59/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll13:49/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll13:50/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll13:51/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll13:52/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll13:53/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll13:54/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll13:55/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll13:56/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll13:57/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll13:58/full/full/0/default.jpg"
+    ],
+    "collection": [
+      "Hassan Fathy Architectural Archives"
+    ],
+    "coordinated-longitude": [
+      "31.24158117"
+    ],
+    "coordinates-latitude": [
+      "30.04115662"
+    ],
+    "date": [
+      "1933"
+    ],
+    "location-getty-thesaurus-of-geographic-names-tgn": [
+      "al-Dakhliah Street (Shaikh Rihan),  Abidin,  Cairo, Egypt‬‬‬"
+    ],
+    "location-english-name": [
+      "Shari al-Dakhiliyah, El-Shaikh Rihan street, al-Shaykh Rayhan, Abdeen, Qahirah"
+    ],
+    "location-arabic": [
+      "شارع الداخلية (الشيخ ريحان)، القاهرة، مصر"
+    ],
+    "object-identifier": [
+      "HF 33.01"
+    ],
+    "project-type": [
+      "Commercial Building, Print Shop"
+    ],
+    "creator": [
+      "Fathy, Hassan"
+    ],
+    "access-rights": [
+      "Access to high-resolution master file restricted to RBSCL staff only. Please contact the RBSCL at rbscl-ref@aucegypt.edu or 2615-3676 to request access to master files."
+    ],
+    "license": [
+      "Copyright 2015, American University in Cairo. All rights reserved."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library, The American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll13/id/59\">El Sabah Newspaper Print House</a></span>"
+    ],
+    "subject-aat": null,
+    "title-english": [
+      "El Sabah Newspaper Print House"
+    ],
+    "title-arabic": [
+      "مطبعة جريدة الصباح"
+    ],
+    "title-inscribed": [
+      "Proprieté de Mustafa Bey el-Kachachi, Imprimerie Aboul-Hol & El Sabah, Rue El Dakhlieh Caire"
+    ],
+    "title-alternative": [
+      "Al-Sabah Newspaper Print House"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll13:70/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll13:60/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll13:61/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll13:62/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll13:63/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll13:64/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll13:65/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll13:66/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll13:67/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll13:68/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll13:69/full/full/0/default.jpg"
+    ],
+    "collection": [
+      "Hassan Fathy Architectural Archives"
+    ],
+    "coordinated-longitude": [
+      "31.24787947"
+    ],
+    "coordinates-latitude": [
+      "30.06128377"
+    ],
+    "date": [
+      "1932"
+    ],
+    "location-getty-thesaurus-of-geographic-names-tgn": [
+      "Bab al-Hadid, Ramsis, ‬‬‬Cairo, Egypt‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬"
+    ],
+    "location-english-name": [
+      "Ramsis Square, Maydan Ramsis, al-Qahirah"
+    ],
+    "location-arabic": [
+      "باب الحديد (ميدان رمسيس حالياً)، القاهرة، مصر"
+    ],
+    "object-identifier": [
+      "HF 32.01"
+    ],
+    "project-type": [
+      "Commercial Building, Restaurant"
+    ],
+    "creator": [
+      "Fathy, Hassan"
+    ],
+    "access-rights": [
+      "Access to high-resolution master file restricted to RBSCL staff only. Please contact the RBSCL at rbscl-ref@aucegypt.edu or 2615-3676 to request access to master files."
+    ],
+    "license": [
+      "Copyright 2015, American University in Cairo. All rights reserved."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library, The American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll13/id/70\">Bosphore Casino</a></span>"
+    ],
+    "subject-aat": [
+      "Casinos"
+    ],
+    "title-english": [
+      "Bosphore Casino"
+    ],
+    "title-arabic": [
+      "كازينو البسفور"
+    ],
+    "title-inscribed": [
+      "Projet Du Casino Bosphore, Propriete des Mesrs Koudsy Freres, Place Bab El-Hadid"
+    ],
+    "title-alternative": null,
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ]
+  }
+]

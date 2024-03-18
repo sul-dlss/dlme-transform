@@ -1,0 +1,1308 @@
+[
+  {
+    "id": "990019984110203941",
+    "personal_name": [
+      "Sukkarī, Muḥammad Amīn Ṣūfī.",
+      "سكري، محمد أمين صوفي."
+    ],
+    "shown_at": [
+      "https://id.lib.harvard.edu/curiosity/islamic-heritage-project/40-990019984110203941",
+      "https://id.lib.harvard.edu/digital_collections/990019984110203941"
+    ],
+    "preview": [
+      "https://ids.lib.harvard.edu/ids/iiif/11404183/full/,150/0/default.jpg"
+    ],
+    "raw_object": [
+      "https://nrs.harvard.edu/urn-3:FHCL:2303067"
+    ],
+    "title": [
+      "Kitāb Samīr al-layālī",
+      "Samīr al-layālī",
+      "سمير الليالي",
+      "كتاب سمير الليالي"
+    ],
+    "titleInfo_title": [
+      "Kitāb Samīr al-layālī",
+      "Samīr al-layālī",
+      "سمير الليالي",
+      "كتاب سمير الليالي"
+    ],
+    "name_namePart": [
+      "Sukkarī, Muḥammad Amīn Ṣūfī.",
+      "سكري، محمد أمين صوفي."
+    ],
+    "typeOfResource": [
+      "text"
+    ],
+    "genre": [
+      "handbook"
+    ],
+    "originInfo_place_placeTerm": [
+      "Ṭarābulus al-Shām",
+      "طرابلس الشام :"
+    ],
+    "language_languageTerm": [
+      "Arabic"
+    ],
+    "physicalDescription_form": [
+      "print"
+    ],
+    "note": [
+      "li-Muḥammad Amīn Ṣūfī al-Sukkarī.",
+      "With (in pocket) 7 p. descriptive advertisement for 2nd ed. of 1327 AH [1909 AD].",
+      "لمحمد أمين صوفي السكري."
+    ],
+    "subject_geographicCode": [
+      "aw-----"
+    ],
+    "subject_topic": [
+      "Handbooks, vade-mecums, etc"
+    ],
+    "subject_geographic": [
+      "Middle East",
+      "Turkey"
+    ],
+    "subject_hierarchicalGeographic_country": [
+      "Lebanon"
+    ],
+    "relatedItem_titleInfo_title": [
+      "Open Collections Program at Harvard University"
+    ],
+    "identifier": [
+      "9240348"
+    ],
+    "relatedItem_location_url": [
+      "https://id.lib.harvard.edu/alma/990019984110203941/catalog"
+    ],
+    "location_url": [
+      "https://id.lib.harvard.edu/digital_collections/990019984110203941"
+    ],
+    "location_physicalLocation": [
+      "Widener Library, Harvard University"
+    ],
+    "extension_DRSMetadata_inDRS": [
+      "true"
+    ],
+    "extension_librarycloud_availableTo": [
+      "Everyone"
+    ],
+    "extension_sets_set_systemId": [
+      "7"
+    ],
+    "recordInfo_descriptionStandard": [
+      "aacr"
+    ],
+    "title_alternative": null,
+    "classification": null,
+    "subject_name_namePart": null,
+    "recordInfo_recordCreationDate": null,
+    "titleInfo_nonSort": null,
+    "recordInfo_recordContentSource": null,
+    "tableOfContents": null,
+    "physicalDescription_reformattingQuality": null,
+    "abstract": null,
+    "extension_librarycloud_HarvardRepositories_HarvardRepository": null,
+    "subject_temporal": null,
+    "physicalDescription_extent": null,
+    "subject_cartographics_scale": null,
+    "relatedItem_identifier": null,
+    "subject_titleInfo_title": null,
+    "accessCondition": null,
+    "extension_librarycloud_originalDocument": null
+  },
+  {
+    "id": "990020388870203941",
+    "personal_name": [
+      "Fanārī, Muḥammad ibn Ḥamzah",
+      "فناري، محمد بن حمزة."
+    ],
+    "shown_at": [
+      "https://id.lib.harvard.edu/curiosity/islamic-heritage-project/40-990020388870203941",
+      "https://id.lib.harvard.edu/digital_collections/990020388870203941"
+    ],
+    "preview": [
+      "https://ids.lib.harvard.edu/ids/iiif/11090852/full/,150/0/default.jpg"
+    ],
+    "raw_object": [
+      "https://nrs.harvard.edu/urn-3:FHCL:2175614",
+      "https://hdl.handle.net/2027/hvd.HW57MT"
+    ],
+    "title": [
+      "Kitāb Fuṣūl al-badāʼiʻ fī uṣūl al-sharāʼiʻ",
+      "Fuṣūl al-badāʼiʻ fī uṣūl al-sharāʼiʻ",
+      "Fuṣūl al-badāʼiʻ fī uṣūl al-sharāʼiʻ",
+      "فصول البدائع في أصول الشرائع",
+      "كتاب فصول البدايع في أصول الشرايع",
+      "فصول البدائع في أصول الشرائع"
+    ],
+    "titleInfo_title": [
+      "Kitāb Fuṣūl al-badāʼiʻ fī uṣūl al-sharāʼiʻ",
+      "Fuṣūl al-badāʼiʻ fī uṣūl al-sharāʼiʻ",
+      "Fuṣūl al-badāʼiʻ fī uṣūl al-sharāʼiʻ",
+      "فصول البدائع في أصول الشرائع",
+      "كتاب فصول البدايع في أصول الشرايع",
+      "فصول البدائع في أصول الشرائع"
+    ],
+    "name_namePart": [
+      "1350 or 1351-1430 or 1431",
+      "1350 or 1351-1430 or 1431"
+    ],
+    "typeOfResource": [
+      "text"
+    ],
+    "genre": [
+      "bibliography",
+      "Lithographs."
+    ],
+    "originInfo_place_placeTerm": [
+      "[Istanbul",
+      "[استانبول :"
+    ],
+    "language_languageTerm": [
+      "Arabic"
+    ],
+    "physicalDescription_form": [
+      "print"
+    ],
+    "note": [
+      "muʻallifuhu Shams al-Dīn Muḥammad ibn Ḥamzah ibn Muḥammad al-Fanārī.",
+      "Lithograph.",
+      "Title embedded in text.",
+      "مؤلفه شمس الدين محمد بن حمزة بن محمد الفناري."
+    ],
+    "subject_geographicCode": null,
+    "subject_topic": [
+      "Interpretation and construction",
+      "Hanafites"
+    ],
+    "subject_geographic": null,
+    "subject_hierarchicalGeographic_country": [
+      "Turkey"
+    ],
+    "relatedItem_titleInfo_title": [
+      "Open Collections Program at Harvard University"
+    ],
+    "identifier": [
+      "48160953"
+    ],
+    "relatedItem_location_url": [
+      "https://id.lib.harvard.edu/alma/990020388870203941/catalog"
+    ],
+    "location_url": [
+      "https://id.lib.harvard.edu/digital_collections/990020388870203941",
+      "https://hdl.handle.net/2027/hvd.HW57MT"
+    ],
+    "location_physicalLocation": [
+      "Widener Library, Harvard University"
+    ],
+    "extension_DRSMetadata_inDRS": [
+      "true"
+    ],
+    "extension_librarycloud_availableTo": [
+      "Everyone"
+    ],
+    "extension_sets_set_systemId": [
+      "7"
+    ],
+    "recordInfo_descriptionStandard": [
+      "aacr"
+    ],
+    "title_alternative": [
+      "Fuṣūl al-badāʼiʻ fī uṣūl al-sharāʼiʻ",
+      "فصول البدائع في أصول الشرائع"
+    ],
+    "classification": [
+      "BP175.J5 S56"
+    ],
+    "subject_name_namePart": null,
+    "recordInfo_recordCreationDate": null,
+    "titleInfo_nonSort": null,
+    "recordInfo_recordContentSource": null,
+    "tableOfContents": null,
+    "physicalDescription_reformattingQuality": null,
+    "abstract": null,
+    "extension_librarycloud_HarvardRepositories_HarvardRepository": null,
+    "subject_temporal": null,
+    "physicalDescription_extent": null,
+    "subject_cartographics_scale": null,
+    "relatedItem_identifier": null,
+    "subject_titleInfo_title": null,
+    "accessCondition": null,
+    "extension_librarycloud_originalDocument": null
+  },
+  {
+    "id": "990020392720203941",
+    "personal_name": [
+      "Sīrūzī, Muṣṭafá al-Quṭb al-Rīzawī.",
+      "Kalanbawī, Ismāʻīl ibn Muṣṭafá",
+      "Kalanbawī, Ismāʻīl ibn Muṣṭafá,",
+      "سيروزي، مصطفى القطب الريزوي.",
+      "كلنبوي، إسماعيل بن مصطفى،",
+      "كلنبوي، إسماعيل بن مصطفى،"
+    ],
+    "shown_at": [
+      "https://id.lib.harvard.edu/curiosity/islamic-heritage-project/40-990020392720203941",
+      "https://id.lib.harvard.edu/digital_collections/990020392720203941"
+    ],
+    "preview": [
+      "https://ids.lib.harvard.edu/ids/iiif/11234165/full/,150/0/default.jpg"
+    ],
+    "raw_object": [
+      "https://nrs.harvard.edu/urn-3:FHCL:2232054",
+      "https://hdl.handle.net/2027/hvd.32044106136559"
+    ],
+    "title": [
+      "Sharḥ al-Burhān",
+      "Burhān fī ʻilm al-mīzān",
+      "شرح البرهان",
+      "برهان في علم الميزان"
+    ],
+    "titleInfo_title": [
+      "Sharḥ al-Burhān",
+      "شرح البرهان"
+    ],
+    "name_namePart": [
+      "Sīrūzī, Muṣṭafá al-Quṭb al-Rīzawī.",
+      "سيروزي، مصطفى القطب الريزوي.",
+      "-1790 or 1791"
+    ],
+    "typeOfResource": [
+      "text"
+    ],
+    "genre": [
+      "bibliography"
+    ],
+    "originInfo_place_placeTerm": [
+      "[Istanbul",
+      "[استانبول :"
+    ],
+    "language_languageTerm": [
+      "Arabic"
+    ],
+    "physicalDescription_form": [
+      "print"
+    ],
+    "note": [
+      "[Muṣṭafá al-Quṭb al-Rīzawī al-Sīrūzī].",
+      "[مصطفى القطب الريزوي السيروزي]."
+    ],
+    "subject_geographicCode": null,
+    "subject_topic": [
+      "Logic",
+      "Logic"
+    ],
+    "subject_geographic": null,
+    "subject_hierarchicalGeographic_country": [
+      "Turkey"
+    ],
+    "relatedItem_titleInfo_title": [
+      "Burhān fī ʻilm al-mīzān. 1880",
+      "Open Collections Program at Harvard University"
+    ],
+    "identifier": [
+      "426325910"
+    ],
+    "relatedItem_location_url": [
+      "https://id.lib.harvard.edu/alma/990020392720203941/catalog"
+    ],
+    "location_url": [
+      "https://id.lib.harvard.edu/digital_collections/990020392720203941",
+      "https://hdl.handle.net/2027/hvd.32044106136559"
+    ],
+    "location_physicalLocation": [
+      "Widener Library, Harvard University",
+      "Widener Library, Harvard University"
+    ],
+    "extension_DRSMetadata_inDRS": [
+      "true"
+    ],
+    "extension_librarycloud_availableTo": [
+      "Everyone"
+    ],
+    "extension_sets_set_systemId": [
+      "7"
+    ],
+    "recordInfo_descriptionStandard": [
+      "aacr"
+    ],
+    "title_alternative": null,
+    "classification": null,
+    "subject_name_namePart": [
+      "-1790 or 1791",
+      "-1790 or 1791"
+    ],
+    "recordInfo_recordCreationDate": null,
+    "titleInfo_nonSort": null,
+    "recordInfo_recordContentSource": null,
+    "tableOfContents": null,
+    "physicalDescription_reformattingQuality": null,
+    "abstract": null,
+    "extension_librarycloud_HarvardRepositories_HarvardRepository": null,
+    "subject_temporal": null,
+    "physicalDescription_extent": null,
+    "subject_cartographics_scale": null,
+    "relatedItem_identifier": null,
+    "subject_titleInfo_title": null,
+    "accessCondition": null,
+    "extension_librarycloud_originalDocument": null
+  },
+  {
+    "id": "990020411910203941",
+    "personal_name": [
+      "Qarah Khalīl",
+      "Fanārī, Muḥammad ibn Ḥamzah",
+      "،قره خليل",
+      "فناري، محمد بن حمزة،"
+    ],
+    "shown_at": [
+      "https://id.lib.harvard.edu/curiosity/islamic-heritage-project/40-990020411910203941",
+      "https://id.lib.harvard.edu/digital_collections/990020411910203941"
+    ],
+    "preview": [
+      "https://ids.lib.harvard.edu/ids/iiif/11219767/full/,150/0/default.jpg"
+    ],
+    "raw_object": [
+      "https://nrs.harvard.edu/urn-3:FHCL:2225242",
+      "https://catalog.hathitrust.org/Record/102744087"
+    ],
+    "title": [
+      "Ḥāshiyat Qarah Khalīl ʻalá al-Fanārī",
+      "Ḥāshiyah-ʼi Qarah Khalīl ʻalá al-Fanārī",
+      "Haşiye-yi Kara Halil ale'l-Fenari",
+      "Khalāʼ al-anẓār fī ḥall ʻawīṣāt al-afkār",
+      "Fawāʼid al-Fanārīyah",
+      "خلاء الأنظار في حل عويصة الأفكار",
+      "حاشية قره خليل على الفناري",
+      "حاشيه قره خليل على الفناري",
+      "حاشيه قره خليل على الفناري",
+      "فوائد الفنارية"
+    ],
+    "titleInfo_title": [
+      "Ḥāshiyat Qarah Khalīl ʻalá al-Fanārī",
+      "Ḥāshiyah-ʼi Qarah Khalīl ʻalá al-Fanārī",
+      "Haşiye-yi Kara Halil ale'l-Fenari",
+      "Khalāʼ al-anẓār fī ḥall ʻawīṣāt al-afkār",
+      "خلاء الأنظار في حل عويصة الأفكار",
+      "حاشية قره خليل على الفناري",
+      "حاشيه قره خليل على الفناري",
+      "حاشيه قره خليل على الفناري"
+    ],
+    "name_namePart": [
+      "-1711 or 1712",
+      "-1711 or 1712"
+    ],
+    "typeOfResource": [
+      "text"
+    ],
+    "genre": [
+      "bibliography",
+      "Early works"
+    ],
+    "originInfo_place_placeTerm": [
+      "[Istanbul]",
+      "[استانبول] :"
+    ],
+    "language_languageTerm": [
+      "Arabic"
+    ],
+    "physicalDescription_form": [
+      "print"
+    ],
+    "note": null,
+    "subject_geographicCode": null,
+    "subject_topic": [
+      "Logic"
+    ],
+    "subject_geographic": null,
+    "subject_hierarchicalGeographic_country": [
+      "Turkey"
+    ],
+    "relatedItem_titleInfo_title": [
+      "Khalāʼ al-anẓār fī ḥall ʻawīṣāt al-afkār",
+      "Open Collections Program at Harvard University"
+    ],
+    "identifier": [
+      "33855304"
+    ],
+    "relatedItem_location_url": [
+      "https://id.lib.harvard.edu/alma/990020411910203941/catalog"
+    ],
+    "location_url": [
+      "https://id.lib.harvard.edu/digital_collections/990020411910203941",
+      "https://catalog.hathitrust.org/Record/102744087"
+    ],
+    "location_physicalLocation": [
+      "Widener Library, Harvard University"
+    ],
+    "extension_DRSMetadata_inDRS": [
+      "true"
+    ],
+    "extension_librarycloud_availableTo": [
+      "Everyone"
+    ],
+    "extension_sets_set_systemId": [
+      "7"
+    ],
+    "recordInfo_descriptionStandard": [
+      "aacr"
+    ],
+    "title_alternative": [
+      "Ḥāshiyah-ʼi Qarah Khalīl ʻalá al-Fanārī",
+      "Haşiye-yi Kara Halil ale'l-Fenari",
+      "حاشيه قره خليل على الفناري",
+      "حاشيه قره خليل على الفناري"
+    ],
+    "classification": null,
+    "subject_name_namePart": [
+      "1350 or 1351-1430 or 1431",
+      "1350 or 1351-1430 or 1431"
+    ],
+    "recordInfo_recordCreationDate": null,
+    "titleInfo_nonSort": null,
+    "recordInfo_recordContentSource": null,
+    "tableOfContents": null,
+    "physicalDescription_reformattingQuality": null,
+    "abstract": null,
+    "extension_librarycloud_HarvardRepositories_HarvardRepository": null,
+    "subject_temporal": null,
+    "physicalDescription_extent": null,
+    "subject_cartographics_scale": null,
+    "relatedItem_identifier": null,
+    "subject_titleInfo_title": null,
+    "accessCondition": null,
+    "extension_librarycloud_originalDocument": null
+  },
+  {
+    "id": "990020493890203941",
+    "personal_name": [
+      "Ḥamzah, Maḥmūd ibn Muḥammad Nasīb",
+      "Muḥammad",
+      "Prophet",
+      "Dāghistānī, ʻAlī ibn Ṣādiq,",
+      "حمزة، محمود بن محمد نسيب،",
+      "داغستاني، علي بن صادق،"
+    ],
+    "shown_at": [
+      "https://id.lib.harvard.edu/curiosity/islamic-heritage-project/40-990020493890203941",
+      "https://id.lib.harvard.edu/digital_collections/990020493890203941"
+    ],
+    "preview": [
+      "https://ids.lib.harvard.edu/ids/iiif/11304300/full/,150/0/default.jpg"
+    ],
+    "raw_object": [
+      "https://nrs.harvard.edu/urn-3:FHCL:2252630",
+      "https://hdl.handle.net/2027/hvd.HW580Z"
+    ],
+    "title": [
+      "[Majmūʻat rasāʼil]",
+      "Tafāwuḍ fī al-tanāquḍ",
+      "Risālah fī khalal al-muḥāḍir wa-al-sijillāt",
+      "Risālat Rafʻ al-ghishāwah ʻan jawāz akhdh al-ujrah ʻalá al-tilāwah",
+      "Nūr al-lāmiʻ fī uṣūl al-jāmiʻ",
+      "Īḍāḥ al-maqāl fī al-dirham wa-al-mithqāl",
+      "Kashf al-sutūr ʻan ṣiḥḥat al-mihāyah fī al-maʼjūr",
+      "Urjūzah fī fann al-firāsah",
+      "Maṣāliḥ al-dirāyah fī iṣṭilāḥ al-hidāyah",
+      "Taṣḥīḥ al-nuqūl fī samāʻ daʻwá al-marʼah bi-kull al-miʻjāl baʻd al-dukhūl",
+      "Tanbīh al-khawāṣṣ ʻalá an al-imḍāʼ min al-qaḍaʼ fī al-ḥudūd lā fī al-qiṣāṣ",
+      "Risālat Kashf al-majānah ʻan al-ghasl fī al-ijānah",
+      "Fatwá al-khawāṣṣ fī ḥill mā ṣīda bi-al-raṣāṣ",
+      "Taḥrīr fī ḍamān al-maʼmūr wa-al-āmir wa-al-ajīr",
+      "Risālah fī ithbāt al-najāh wa-al-imān",
+      "[مجموعة رسائل]",
+      "تفاوض في التناقض",
+      "رسالة في خلل المحاضر والسجلات",
+      "رسالة رفع الغشاوة عن جواز أخذ الأجرة على التلاوة",
+      "نور اللامع في أصول الجامع",
+      "إيضاح المقال في الدرهم والمثقال",
+      "كشف الستور عن صحة المهاية في المأجور",
+      "أرجوزة في فن الفراسة",
+      "مصالح الدراية في اصطلاح الهداية",
+      "تصحيح النقول في سماع دعوى المرأة بكل المعجال بعد الدخول",
+      "تنبيه الخواص على أن الامضاء من القضاء في الحدود لا في القصاص",
+      "رسالة كشف المجانة عن الغسل في الاجانة",
+      "فتوى الخواص في حل ما صيد بالرصاص",
+      "تحرير في ضمان المأمور والآمر والاجير",
+      "رسالة في اثبات النجاة والإيمان"
+    ],
+    "titleInfo_title": [
+      "[Majmūʻat rasāʼil]",
+      "Tafāwuḍ fī al-tanāquḍ",
+      "Risālah fī khalal al-muḥāḍir wa-al-sijillāt",
+      "Risālat Rafʻ al-ghishāwah ʻan jawāz akhdh al-ujrah ʻalá al-tilāwah",
+      "Nūr al-lāmiʻ fī uṣūl al-jāmiʻ",
+      "Īḍāḥ al-maqāl fī al-dirham wa-al-mithqāl",
+      "Kashf al-sutūr ʻan ṣiḥḥat al-mihāyah fī al-maʼjūr",
+      "Urjūzah fī fann al-firāsah",
+      "Maṣāliḥ al-dirāyah fī iṣṭilāḥ al-hidāyah",
+      "Taṣḥīḥ al-nuqūl fī samāʻ daʻwá al-marʼah bi-kull al-miʻjāl baʻd al-dukhūl",
+      "Tanbīh al-khawāṣṣ ʻalá an al-imḍāʼ min al-qaḍaʼ fī al-ḥudūd lā fī al-qiṣāṣ",
+      "Risālat Kashf al-majānah ʻan al-ghasl fī al-ijānah",
+      "Fatwá al-khawāṣṣ fī ḥill mā ṣīda bi-al-raṣāṣ",
+      "Taḥrīr fī ḍamān al-maʼmūr wa-al-āmir wa-al-ajīr",
+      "Risālah fī ithbāt al-najāh wa-al-imān",
+      "[مجموعة رسائل]",
+      "تفاوض في التناقض",
+      "رسالة في خلل المحاضر والسجلات",
+      "رسالة رفع الغشاوة عن جواز أخذ الأجرة على التلاوة",
+      "نور اللامع في أصول الجامع",
+      "إيضاح المقال في الدرهم والمثقال",
+      "كشف الستور عن صحة المهاية في المأجور",
+      "أرجوزة في فن الفراسة",
+      "مصالح الدراية في اصطلاح الهداية",
+      "تصحيح النقول في سماع دعوى المرأة بكل المعجال بعد الدخول",
+      "تنبيه الخواص على أن الامضاء من القضاء في الحدود لا في القصاص",
+      "رسالة كشف المجانة عن الغسل في الاجانة",
+      "فتوى الخواص في حل ما صيد بالرصاص",
+      "تحرير في ضمان المأمور والآمر والاجير",
+      "رسالة في اثبات النجاة والإيمان"
+    ],
+    "name_namePart": [
+      "1820 or 1821-1887 or 1888",
+      "1820 or 1821-1887 or 1888",
+      "1713 or 1714-1784 or 1785"
+    ],
+    "typeOfResource": [
+      "text"
+    ],
+    "genre": [
+      "bibliography"
+    ],
+    "originInfo_place_placeTerm": [
+      "[Damascus]",
+      "[دمشق] :"
+    ],
+    "language_languageTerm": [
+      "Arabic"
+    ],
+    "physicalDescription_form": [
+      "print"
+    ],
+    "note": [
+      "li-Maḥmūd Afandī al-Ḥamzāwī.",
+      "Total pages : 163.",
+      "\"Risālah fī ithbāt al-najāh wa-al-imān\" by ʻAlī al-Dāghistānī: 8 p. at end.",
+      "لمحمود افندي الحمزاوي."
+    ],
+    "subject_geographicCode": null,
+    "subject_topic": [
+      "Interpretation and construction",
+      "Functionaries",
+      "Characters and characteristics",
+      "Dowry (Islamic law)",
+      "Marriage (Islamic law)",
+      "Dietary laws",
+      "Liability (Islamic law)",
+      "Judicial process (Islamic law)",
+      "Fatwas",
+      "Legal instruments (Islamic law)"
+    ],
+    "subject_geographic": null,
+    "subject_hierarchicalGeographic_country": [
+      "Syria"
+    ],
+    "relatedItem_titleInfo_title": [
+      "Risālah fī ithbāt al-najāh wa-al-imān",
+      "Tafāwuḍ fī al-tanāquḍ",
+      "Risālah fī khalal al-muḥāḍir wa-al-sijillāt",
+      "Risālat Rafʻ al-ghishāwah ʻan jawāz akhdh al-ujrah ʻalá al-tilāwah",
+      "Nūr al-lāmiʻ fī uṣūl al-jāmiʻ",
+      "Īḍāḥ al-maqāl fī al-dirham wa-al-mithqāl",
+      "Kashf al-sutūr ʻan ṣiḥḥat al-mihāyah fī al-maʼjūr",
+      "Urjūzah fī fann al-firāsah",
+      "Maṣāliḥ al-dirāyah fī iṣṭilāḥ al-hidāyah",
+      "Taṣḥīḥ al-nuqūl fī samāʻ daʻwá al-marʼah bi-kull al-miʻjāl baʻd al-dukhūl",
+      "Tanbīh al-khawāṣṣ ʻalá an al-imḍāʼ min al-qaḍaʼ fī al-ḥudūd lā fī al-qiṣāṣ",
+      "Risālat Kashf al-majānah ʻan al-ghasl fī al-ijānah",
+      "Fatwá al-khawāṣṣ fī ḥill mā ṣīda bi-al-raṣāṣ",
+      "Taḥrīr fī ḍamān al-maʼmūr wa-al-āmir wa-al-ajīr",
+      "Risālah fī ithbāt al-najāh wa-al-imān",
+      "Open Collections Program at Harvard University"
+    ],
+    "identifier": [
+      "78363817"
+    ],
+    "relatedItem_location_url": [
+      "https://id.lib.harvard.edu/alma/990020493890203941/catalog"
+    ],
+    "location_url": [
+      "https://id.lib.harvard.edu/digital_collections/990020493890203941",
+      "https://hdl.handle.net/2027/hvd.HW580Z"
+    ],
+    "location_physicalLocation": [
+      "Widener Library, Harvard University"
+    ],
+    "extension_DRSMetadata_inDRS": [
+      "true"
+    ],
+    "extension_librarycloud_availableTo": [
+      "Everyone"
+    ],
+    "extension_sets_set_systemId": [
+      "7"
+    ],
+    "recordInfo_descriptionStandard": [
+      "aacr"
+    ],
+    "title_alternative": [
+      "Tafāwuḍ fī al-tanāquḍ",
+      "Risālah fī khalal al-muḥāḍir wa-al-sijillāt",
+      "Risālat Rafʻ al-ghishāwah ʻan jawāz akhdh al-ujrah ʻalá al-tilāwah",
+      "Nūr al-lāmiʻ fī uṣūl al-jāmiʻ",
+      "Īḍāḥ al-maqāl fī al-dirham wa-al-mithqāl",
+      "Kashf al-sutūr ʻan ṣiḥḥat al-mihāyah fī al-maʼjūr",
+      "Urjūzah fī fann al-firāsah",
+      "Maṣāliḥ al-dirāyah fī iṣṭilāḥ al-hidāyah",
+      "Taṣḥīḥ al-nuqūl fī samāʻ daʻwá al-marʼah bi-kull al-miʻjāl baʻd al-dukhūl",
+      "Tanbīh al-khawāṣṣ ʻalá an al-imḍāʼ min al-qaḍaʼ fī al-ḥudūd lā fī al-qiṣāṣ",
+      "Risālat Kashf al-majānah ʻan al-ghasl fī al-ijānah",
+      "Fatwá al-khawāṣṣ fī ḥill mā ṣīda bi-al-raṣāṣ",
+      "Taḥrīr fī ḍamān al-maʼmūr wa-al-āmir wa-al-ajīr",
+      "Risālah fī ithbāt al-najāh wa-al-imān",
+      "تفاوض في التناقض",
+      "رسالة في خلل المحاضر والسجلات",
+      "رسالة رفع الغشاوة عن جواز أخذ الأجرة على التلاوة",
+      "نور اللامع في أصول الجامع",
+      "إيضاح المقال في الدرهم والمثقال",
+      "كشف الستور عن صحة المهاية في المأجور",
+      "أرجوزة في فن الفراسة",
+      "مصالح الدراية في اصطلاح الهداية",
+      "تصحيح النقول في سماع دعوى المرأة بكل المعجال بعد الدخول",
+      "تنبيه الخواص على أن الامضاء من القضاء في الحدود لا في القصاص",
+      "رسالة كشف المجانة عن الغسل في الاجانة",
+      "فتوى الخواص في حل ما صيد بالرصاص",
+      "تحرير في ضمان المأمور والآمر والاجير",
+      "رسالة في اثبات النجاة والإيمان"
+    ],
+    "classification": null,
+    "subject_name_namePart": [
+      "-632"
+    ],
+    "recordInfo_recordCreationDate": null,
+    "titleInfo_nonSort": null,
+    "recordInfo_recordContentSource": null,
+    "tableOfContents": null,
+    "physicalDescription_reformattingQuality": null,
+    "abstract": null,
+    "extension_librarycloud_HarvardRepositories_HarvardRepository": null,
+    "subject_temporal": null,
+    "physicalDescription_extent": null,
+    "subject_cartographics_scale": null,
+    "relatedItem_identifier": null,
+    "subject_titleInfo_title": null,
+    "accessCondition": null,
+    "extension_librarycloud_originalDocument": null
+  },
+  {
+    "id": "990020540170203941",
+    "personal_name": [
+      "Sarı Abdullah",
+      "صاري عبد الله،"
+    ],
+    "shown_at": [
+      "https://id.lib.harvard.edu/curiosity/islamic-heritage-project/40-990020540170203941",
+      "https://id.lib.harvard.edu/digital_collections/990020540170203941"
+    ],
+    "preview": [
+      "https://ids.lib.harvard.edu/ids/iiif/11290675/full/,150/0/default.jpg"
+    ],
+    "raw_object": [
+      "https://nrs.harvard.edu/urn-3:FHCL:2251909"
+    ],
+    "title": [
+      "Semerat ül-fuad fi 'l-mebde ve 'l-me'ad",
+      "Semeratü'l-fuâd fi'l-mebde ve'l-meâd",
+      "Thamarāt al-fuʼād fī al-mabdaʼ wa-al-maʻād",
+      "Semeratü'l-fuâd fi'l-mebde ve'l-meâd",
+      "Thamarāt al-fuʼād fī al-mabdaʼ wa-al-maʻād",
+      "ثمرات الفؤاد في المبدأ والمعاد",
+      "ثمرات الفؤاد في المبدأ والمعاد",
+      "ثمرات الفؤاد في المبدأ والمعاد"
+    ],
+    "titleInfo_title": [
+      "Semerat ül-fuad fi 'l-mebde ve 'l-me'ad",
+      "Semeratü'l-fuâd fi'l-mebde ve'l-meâd",
+      "Thamarāt al-fuʼād fī al-mabdaʼ wa-al-maʻād",
+      "Semeratü'l-fuâd fi'l-mebde ve'l-meâd",
+      "Thamarāt al-fuʼād fī al-mabdaʼ wa-al-maʻād",
+      "ثمرات الفؤاد في المبدأ والمعاد",
+      "ثمرات الفؤاد في المبدأ والمعاد",
+      "ثمرات الفؤاد في المبدأ والمعاد"
+    ],
+    "name_namePart": [
+      "1584-1660 or 1661",
+      "1584-1660 or 1661"
+    ],
+    "typeOfResource": [
+      "text"
+    ],
+    "genre": [
+      "bibliography",
+      "Biographies",
+      "Biographies"
+    ],
+    "originInfo_place_placeTerm": [
+      "[Istanbul]",
+      "[استانبول] :"
+    ],
+    "language_languageTerm": [
+      "Turkish, Ottoman (1500-1928)"
+    ],
+    "physicalDescription_form": [
+      "print"
+    ],
+    "note": [
+      "li-şarih il-Mesnevi Abdullah Efendi.",
+      "Imprint and date taken from colophon.",
+      "In Ottoman Turkish.",
+      "لشارح المثنوي عبد الله افندى."
+    ],
+    "subject_geographicCode": null,
+    "subject_topic": [
+      "Turkish poetry",
+      "Mysticism in literature",
+      "Muslim saints",
+      "Sufis"
+    ],
+    "subject_geographic": null,
+    "subject_hierarchicalGeographic_country": [
+      "Turkey"
+    ],
+    "relatedItem_titleInfo_title": [
+      "Semerat ül-fuad fi 'l-mebde ve 'l-me'ad",
+      "Open Collections Program at Harvard University"
+    ],
+    "identifier": [
+      "4068435"
+    ],
+    "relatedItem_location_url": [
+      "https://id.lib.harvard.edu/alma/990020540170203941/catalog"
+    ],
+    "location_url": [
+      "https://id.lib.harvard.edu/digital_collections/990020540170203941"
+    ],
+    "location_physicalLocation": [
+      "Widener Library, Harvard University"
+    ],
+    "extension_DRSMetadata_inDRS": [
+      "true"
+    ],
+    "extension_librarycloud_availableTo": [
+      "Everyone"
+    ],
+    "extension_sets_set_systemId": [
+      "7"
+    ],
+    "recordInfo_descriptionStandard": [
+      "aacr"
+    ],
+    "title_alternative": [
+      "Semeratü'l-fuâd fi'l-mebde ve'l-meâd",
+      "Thamarāt al-fuʼād fī al-mabdaʼ wa-al-maʻād",
+      "Semeratü'l-fuâd fi'l-mebde ve'l-meâd",
+      "Thamarāt al-fuʼād fī al-mabdaʼ wa-al-maʻād",
+      "ثمرات الفؤاد في المبدأ والمعاد",
+      "ثمرات الفؤاد في المبدأ والمعاد"
+    ],
+    "classification": [
+      "PL248 S245s, 1871"
+    ],
+    "subject_name_namePart": null,
+    "recordInfo_recordCreationDate": null,
+    "titleInfo_nonSort": null,
+    "recordInfo_recordContentSource": null,
+    "tableOfContents": null,
+    "physicalDescription_reformattingQuality": null,
+    "abstract": null,
+    "extension_librarycloud_HarvardRepositories_HarvardRepository": null,
+    "subject_temporal": null,
+    "physicalDescription_extent": null,
+    "subject_cartographics_scale": null,
+    "relatedItem_identifier": null,
+    "subject_titleInfo_title": null,
+    "accessCondition": null,
+    "extension_librarycloud_originalDocument": null
+  },
+  {
+    "id": "990020546770203941",
+    "personal_name": [
+      "Nuri Mehmet Şemseddin",
+      "Müstakimzade Süleyman Sadeddin,",
+      "نوري محمد شمس الدين،",
+      "مستقيم زاده سليمان سعد الدين،"
+    ],
+    "shown_at": [
+      "https://id.lib.harvard.edu/curiosity/islamic-heritage-project/40-990020546770203941",
+      "https://id.lib.harvard.edu/digital_collections/990020546770203941"
+    ],
+    "preview": [
+      "https://ids.lib.harvard.edu/ids/iiif/11305785/full/,150/0/default.jpg"
+    ],
+    "raw_object": [
+      "https://hdl.handle.net/2027/hvd.HWR5WY",
+      "https://nrs.harvard.edu/urn-3:FHCL:2252639"
+    ],
+    "title": [
+      "Vasiyetname",
+      "Şerh-i evrad-i Kadiri",
+      "Waṣīyatnāmah",
+      "Şerh-i evrad-i Kadiri",
+      "وصيتنامه",
+      "شرح اوراد قادري",
+      "وصيتنامه",
+      "شرح اوراد قادري"
+    ],
+    "titleInfo_title": [
+      "Vasiyetname",
+      "Şerh-i evrad-i Kadiri",
+      "Waṣīyatnāmah",
+      "Şerh-i evrad-i Kadiri",
+      "وصيتنامه",
+      "شرح اوراد قادري",
+      "وصيتنامه",
+      "شرح اوراد قادري"
+    ],
+    "name_namePart": [
+      "-approximately 1863",
+      "-approximately 1863",
+      "1718-1787"
+    ],
+    "typeOfResource": [
+      "text"
+    ],
+    "genre": [
+      "bibliography"
+    ],
+    "originInfo_place_placeTerm": [
+      "İstanbul",
+      "استانبول :"
+    ],
+    "language_languageTerm": [
+      "Turkish, Ottoman (1500-1928)"
+    ],
+    "physicalDescription_form": [
+      "print"
+    ],
+    "note": [
+      "Şeyh Şemseddin Mehmet en-Nuri.",
+      "No collective t.p.; titles transcribed from individual title pages (p. [2] et p. [18]).",
+      "In Ottoman Turkish.",
+      "شيخ شمس الدين محمد النوري."
+    ],
+    "subject_geographicCode": null,
+    "subject_topic": [
+      "Doctrines",
+      "Sufism",
+      "Qādirīyah"
+    ],
+    "subject_geographic": null,
+    "subject_hierarchicalGeographic_country": [
+      "Turkey"
+    ],
+    "relatedItem_titleInfo_title": [
+      "Şerh-i evrad-i Kadiri",
+      "Şerh-i evrad-i Kadiri",
+      "Open Collections Program at Harvard University"
+    ],
+    "identifier": [
+      "34049540"
+    ],
+    "relatedItem_location_url": [
+      "https://id.lib.harvard.edu/alma/990020546770203941/catalog"
+    ],
+    "location_url": [
+      "https://id.lib.harvard.edu/digital_collections/990020546770203941",
+      "https://ids.lib.harvard.edu/ids/iiif/11305785/full/,150/0/default.jpg"
+    ],
+    "location_physicalLocation": [
+      "Widener Library, Harvard University"
+    ],
+    "extension_DRSMetadata_inDRS": [
+      "true"
+    ],
+    "extension_librarycloud_availableTo": [
+      "Everyone"
+    ],
+    "extension_sets_set_systemId": [
+      "7"
+    ],
+    "recordInfo_descriptionStandard": [
+      "aacr"
+    ],
+    "title_alternative": [
+      "Şerh-i evrad-i Kadiri",
+      "Waṣīyatnāmah",
+      "Şerh-i evrad-i Kadiri",
+      "شرح اوراد قادري",
+      "وصيتنامه",
+      "شرح اوراد قادري"
+    ],
+    "classification": null,
+    "subject_name_namePart": null,
+    "recordInfo_recordCreationDate": null,
+    "titleInfo_nonSort": null,
+    "recordInfo_recordContentSource": null,
+    "tableOfContents": null,
+    "physicalDescription_reformattingQuality": null,
+    "abstract": null,
+    "extension_librarycloud_HarvardRepositories_HarvardRepository": null,
+    "subject_temporal": null,
+    "physicalDescription_extent": null,
+    "subject_cartographics_scale": null,
+    "relatedItem_identifier": null,
+    "subject_titleInfo_title": null,
+    "accessCondition": null,
+    "extension_librarycloud_originalDocument": null
+  },
+  {
+    "id": "990020890050203941",
+    "personal_name": [
+      "Ḥamzah, Maḥmūd ibn Muḥammad Nasīb",
+      "Muʻaẓẓam, Muḥammad Nasīb.",
+      "حمزة، محمود بن محمد نسيب،",
+      "معظم، محمد نسيب."
+    ],
+    "shown_at": [
+      "https://id.lib.harvard.edu/curiosity/islamic-heritage-project/40-990020890050203941",
+      "https://id.lib.harvard.edu/digital_collections/990020890050203941"
+    ],
+    "preview": [
+      "https://ids.lib.harvard.edu/ids/iiif/11500194/full/,150/0/default.jpg"
+    ],
+    "raw_object": [
+      "https://nrs.harvard.edu/urn-3:FHCL:2350191",
+      "https://hdl.handle.net/2027/hvd.HW59EL"
+    ],
+    "title": [
+      "Kitāb al-Fatāwá al-naẓm",
+      "كتاب الفتاوى النظم"
+    ],
+    "titleInfo_title": [
+      "Kitāb al-Fatāwá al-naẓm",
+      "كتاب الفتاوى النظم"
+    ],
+    "name_namePart": [
+      "1820 or 1821-1887 or 1888",
+      "Muʻaẓẓam, Muḥammad Nasīb.",
+      "1820 or 1821-1887 or 1888",
+      "معظم، محمد نسيب."
+    ],
+    "typeOfResource": [
+      "text"
+    ],
+    "genre": [
+      "bibliography"
+    ],
+    "originInfo_place_placeTerm": [
+      "Dimashq",
+      "دمشق :"
+    ],
+    "language_languageTerm": [
+      "Arabic"
+    ],
+    "physicalDescription_form": [
+      "print"
+    ],
+    "note": [
+      "li-Maḥmūd Afandī al-Ḥamzāwī.",
+      "In verse.",
+      "\"Ḥuqūq al-ṭabʻ maḥfūẓah li-Muḥammad Naṣīb al-Muʻaẓẓam\"--Cover.",
+      "لمحمود افندي الحمزاوي."
+    ],
+    "subject_geographicCode": null,
+    "subject_topic": [
+      "Islamic law",
+      "Fatwas"
+    ],
+    "subject_geographic": null,
+    "subject_hierarchicalGeographic_country": [
+      "Syria"
+    ],
+    "relatedItem_titleInfo_title": [
+      "Kitāb al-fatāwá al-naẓm",
+      "Open Collections Program at Harvard University"
+    ],
+    "identifier": [
+      "48805731"
+    ],
+    "relatedItem_location_url": [
+      "https://id.lib.harvard.edu/alma/990020890050203941/catalog"
+    ],
+    "location_url": [
+      "https://id.lib.harvard.edu/digital_collections/990020890050203941",
+      "https://hdl.handle.net/2027/hvd.HW59EL"
+    ],
+    "location_physicalLocation": [
+      "Widener Library, Harvard University",
+      "Widener Library, Harvard University"
+    ],
+    "extension_DRSMetadata_inDRS": [
+      "true"
+    ],
+    "extension_librarycloud_availableTo": [
+      "Everyone"
+    ],
+    "extension_sets_set_systemId": [
+      "7"
+    ],
+    "recordInfo_descriptionStandard": [
+      "aacr"
+    ],
+    "title_alternative": null,
+    "classification": [
+      "BP144 .H36 1908"
+    ],
+    "subject_name_namePart": null,
+    "recordInfo_recordCreationDate": null,
+    "titleInfo_nonSort": null,
+    "recordInfo_recordContentSource": null,
+    "tableOfContents": null,
+    "physicalDescription_reformattingQuality": null,
+    "abstract": null,
+    "extension_librarycloud_HarvardRepositories_HarvardRepository": null,
+    "subject_temporal": null,
+    "physicalDescription_extent": null,
+    "subject_cartographics_scale": null,
+    "relatedItem_identifier": null,
+    "subject_titleInfo_title": null,
+    "accessCondition": null,
+    "extension_librarycloud_originalDocument": null
+  },
+  {
+    "id": "990021017680203941",
+    "personal_name": [
+      "Dimashqī, Maḥmūd Maḥfūẓ.",
+      "Muḥammad",
+      "Prophet",
+      "دمشقي، محمود محفوظ."
+    ],
+    "shown_at": [
+      "https://id.lib.harvard.edu/curiosity/islamic-heritage-project/40-990021017680203941",
+      "https://id.lib.harvard.edu/digital_collections/990021017680203941"
+    ],
+    "preview": [
+      "https://ids.lib.harvard.edu/ids/iiif/11548374/full/,150/0/default.jpg"
+    ],
+    "raw_object": [
+      "https://nrs.harvard.edu/urn-3:FHCL:2380010"
+    ],
+    "title": [
+      "Hādhā Mawlid al-Nabī",
+      "Mawlid al-Nabī",
+      "مولد النبي",
+      "هذا مولد النبي"
+    ],
+    "titleInfo_title": [
+      "Hādhā Mawlid al-Nabī",
+      "Mawlid al-Nabī",
+      "مولد النبي",
+      "هذا مولد النبي"
+    ],
+    "name_namePart": [
+      "Dimashqī, Maḥmūd Maḥfūẓ.",
+      "دمشقي، محمود محفوظ."
+    ],
+    "typeOfResource": [
+      "text"
+    ],
+    "genre": [
+      "bibliography"
+    ],
+    "originInfo_place_placeTerm": [
+      "Miṣr [Cairo]",
+      "مصر [القاهرة] :"
+    ],
+    "language_languageTerm": [
+      "Arabic"
+    ],
+    "physicalDescription_form": [
+      "print"
+    ],
+    "note": [
+      "li-Maḥmūd Maḥfūẓ al-Dimashqī al-Shāfiʻī.",
+      "لمحمود محفوظ الدمشقي الشافعي."
+    ],
+    "subject_geographicCode": null,
+    "subject_topic": [
+      "Mawlid al-Nabī"
+    ],
+    "subject_geographic": null,
+    "subject_hierarchicalGeographic_country": [
+      "Egypt"
+    ],
+    "relatedItem_titleInfo_title": [
+      "Open Collections Program at Harvard University"
+    ],
+    "identifier": [
+      "741445410"
+    ],
+    "relatedItem_location_url": [
+      "https://id.lib.harvard.edu/alma/990021017680203941/catalog"
+    ],
+    "location_url": [
+      "https://id.lib.harvard.edu/digital_collections/990021017680203941"
+    ],
+    "location_physicalLocation": [
+      "Widener Library, Harvard University"
+    ],
+    "extension_DRSMetadata_inDRS": [
+      "true"
+    ],
+    "extension_librarycloud_availableTo": [
+      "Everyone"
+    ],
+    "extension_sets_set_systemId": [
+      "7"
+    ],
+    "recordInfo_descriptionStandard": [
+      "aacr"
+    ],
+    "title_alternative": null,
+    "classification": null,
+    "subject_name_namePart": [
+      "-632"
+    ],
+    "recordInfo_recordCreationDate": null,
+    "titleInfo_nonSort": null,
+    "recordInfo_recordContentSource": null,
+    "tableOfContents": null,
+    "physicalDescription_reformattingQuality": null,
+    "abstract": null,
+    "extension_librarycloud_HarvardRepositories_HarvardRepository": null,
+    "subject_temporal": null,
+    "physicalDescription_extent": null,
+    "subject_cartographics_scale": null,
+    "relatedItem_identifier": null,
+    "subject_titleInfo_title": null,
+    "accessCondition": null,
+    "extension_librarycloud_originalDocument": null
+  },
+  {
+    "id": "990021024670203941",
+    "personal_name": [
+      "Zaydān, Jirjī",
+      "Ṣāliḥ, Ilyās",
+      "Ḥalawānī, Amīn ibn Ḥasan",
+      "Zaydān, Jirjī",
+      "زيدان، جرجي،",
+      "حلواني، امين بن حسن،",
+      "زيدان، جرجي،",
+      "صالح، إلياس،"
+    ],
+    "shown_at": [
+      "https://id.lib.harvard.edu/digital_collections/990021024670203941",
+      "https://id.lib.harvard.edu/curiosity/islamic-heritage-project/40-990021024670203941"
+    ],
+    "preview": [
+      "https://ids.lib.harvard.edu/ids/iiif/13153412/full/,150/0/default.jpg"
+    ],
+    "raw_object": [
+      "https://nrs.harvard.edu/urn-3:FHCL:2958481",
+      "https://hdl.handle.net/2027/hvd.HXFZ9E"
+    ],
+    "title": [
+      "Radd rannān ʻalá Nabsh al-hadhayān",
+      "Raddun rannān ʻalá Nabsh al-hadhayān",
+      "Nabsh al-hadhayān min tārīkh Jirjī Zaydān",
+      "Tārīkh Miṣr al-ḥadīth",
+      "رد رنان على نبش الهذيان",
+      "نبش الهديان من تاريخ جرجي زيدان",
+      "تاريخ مصر الحديث"
+    ],
+    "titleInfo_title": [
+      "Radd rannān ʻalá Nabsh al-hadhayān",
+      "Raddun rannān ʻalá Nabsh al-hadhayān",
+      "رد رنان على نبش الهذيان"
+    ],
+    "name_namePart": [
+      "1861-1914",
+      "1839-1885",
+      "1861-1914",
+      "1839-1885"
+    ],
+    "typeOfResource": [
+      "text"
+    ],
+    "genre": null,
+    "originInfo_place_placeTerm": [
+      "Miṣr",
+      "مصر :"
+    ],
+    "language_languageTerm": [
+      "Arabic"
+    ],
+    "physicalDescription_form": [
+      "print"
+    ],
+    "note": [
+      "[Jurjī Zaydān].",
+      "Ilyās Ṣāliḥ wrote the introduction.",
+      "Zaydan's answer to the criticism of his Tārīkh Miṣr al-ḥadīth made by Ḥalawānī in his \"Nabsh al-hadhayān min tārīkh Jirjī Zaydān\".",
+      "[جرجي زيدان]."
+    ],
+    "subject_geographicCode": [
+      "f-ua---"
+    ],
+    "subject_topic": null,
+    "subject_geographic": [
+      "Egypt",
+      "Islamic Empire"
+    ],
+    "subject_hierarchicalGeographic_country": [
+      "Egypt"
+    ],
+    "relatedItem_titleInfo_title": [
+      "Open Collections Program at Harvard University"
+    ],
+    "identifier": [
+      "33857083"
+    ],
+    "relatedItem_location_url": [
+      "https://id.lib.harvard.edu/alma/990021024670203941/catalog"
+    ],
+    "location_url": [
+      "https://id.lib.harvard.edu/curiosity/islamic-heritage-project/40-990021024670203941",
+      "https://hdl.handle.net/2027/hvd.HXFZ9E"
+    ],
+    "location_physicalLocation": [
+      "Widener Library, Harvard University",
+      "Widener Library, Harvard University"
+    ],
+    "extension_DRSMetadata_inDRS": [
+      "true"
+    ],
+    "extension_librarycloud_availableTo": [
+      "Everyone"
+    ],
+    "extension_sets_set_systemId": [
+      "7"
+    ],
+    "recordInfo_descriptionStandard": null,
+    "title_alternative": [
+      "Raddun rannān ʻalá Nabsh al-hadhayān"
+    ],
+    "classification": null,
+    "subject_name_namePart": [
+      "-1898",
+      "1861-1914",
+      "-1898",
+      "1861-1914"
+    ],
+    "recordInfo_recordCreationDate": [
+      "910124"
+    ],
+    "titleInfo_nonSort": null,
+    "recordInfo_recordContentSource": null,
+    "tableOfContents": null,
+    "physicalDescription_reformattingQuality": null,
+    "abstract": null,
+    "extension_librarycloud_HarvardRepositories_HarvardRepository": null,
+    "subject_temporal": null,
+    "physicalDescription_extent": null,
+    "subject_cartographics_scale": null,
+    "relatedItem_identifier": null,
+    "subject_titleInfo_title": null,
+    "accessCondition": null,
+    "extension_librarycloud_originalDocument": null
+  }
+]

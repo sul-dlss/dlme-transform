@@ -1,0 +1,632 @@
+[
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll47:0/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll47:0/full/full/0/default.jpg",
+    "rights": [
+      "Copyright 2015, American University in Cairo. All rights reserved.; To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "subject": [
+      "Egyptian; Editorial cartoonists; Egypt; Intellectual life."
+    ],
+    "collection": [
+      "Ahmed Toghan Collection"
+    ],
+    "creator-english": [
+      "Ahmed Toughan\r\n"
+    ],
+    "creator-alternative": [
+      "Aḥmad Ṭūghān\r\n"
+    ],
+    "creator-arabic": [
+      "أحمد طوغان\r\n"
+    ],
+    "date": [
+      "not identified"
+    ],
+    "description-arabic": [
+      "مسؤول يسأل عرافة عن المستقبل\r\n"
+    ],
+    "description-english": [
+      "A man asking an astrologer about the future"
+    ],
+    "size-h-x-w-cm": [
+      "45 x 35"
+    ],
+    "languages": [
+      "Arabic"
+    ],
+    "physical-format": [
+      "drawing"
+    ],
+    "type": [
+      "image"
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll47/id/0\">[Horoscope reading]</a></span>"
+    ],
+    "title-arabic": [
+      "[قراءة الطالع]\r\n"
+    ],
+    "title-english": [
+      "[Horoscope reading]"
+    ],
+    "medium": [
+      "Sketch, some color, text in pencil \"فيه لجنه واسمك قدامها..! بيتكلموا عليك في لجنه\", drawing on the back in pencil, hand written note by Ṭūghān in blue ink 13,5 cm. p.5.\r\n"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "published-in": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll47:1/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll47:1/full/full/0/default.jpg",
+    "rights": [
+      "Copyright 2015, American University in Cairo. All rights reserved.; To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "subject": [
+      "Egyptian; Editorial cartoonists; Egypt"
+    ],
+    "collection": [
+      "Ahmed Toghan Collection"
+    ],
+    "creator-english": [
+      "Ahmed Toughan\r\n"
+    ],
+    "creator-alternative": [
+      "Aḥmad Ṭūghān\r\n"
+    ],
+    "creator-arabic": [
+      "أحمد طوغان\r\n"
+    ],
+    "date": [
+      "not identified"
+    ],
+    "description-arabic": [
+      "حصان عربي يعبر فجوة هائلة بين جبلين"
+    ],
+    "description-english": [
+      "The sketch shows an Arabian horse crossing the gap between two mountains"
+    ],
+    "size-h-x-w-cm": [
+      "42 x 32"
+    ],
+    "languages": [
+      "Arabic"
+    ],
+    "physical-format": [
+      "drawing"
+    ],
+    "type": [
+      "image"
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll47/id/1\">[Arabian Horse]</a></span>"
+    ],
+    "title-arabic": [
+      "[الحصان العربي]"
+    ],
+    "title-english": [
+      "[Arabian Horse]"
+    ],
+    "medium": [
+      "Color sketch, hand drawing, inscribed by Ṭūghān in Arabic black ink, right lower\r\n"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "published-in": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll47:2/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll47:2/full/full/0/default.jpg",
+    "rights": [
+      "Copyright 2015, American University in Cairo. All rights reserved.; To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "subject": [
+      "Police; Social conditions; Egyptian; Editorial cartoonists; Egypt."
+    ],
+    "collection": [
+      "Ahmed Toghan Collection"
+    ],
+    "creator-english": [
+      "Ahmed Toughan\r\n"
+    ],
+    "creator-alternative": [
+      "Aḥmad Ṭūghān\r\n"
+    ],
+    "creator-arabic": [
+      "أحمد طوغان\r\n"
+    ],
+    "date": [
+      "2000"
+    ],
+    "description-arabic": [
+      "شرطي يطلب من رجل تحديد الموظف الذى طلب الرشوة\r\n"
+    ],
+    "description-english": [
+      "A policeman asks a man to determine who requests a bribe"
+    ],
+    "size-h-x-w-cm": [
+      "47 x 39"
+    ],
+    "languages": [
+      "Arabic"
+    ],
+    "physical-format": [
+      "drawing"
+    ],
+    "type": [
+      "image"
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll47/id/2\">Look good. Who among them asked you for a bribe!!</a></span>"
+    ],
+    "title-arabic": [
+      "بص كويس. مين فيهم اللي طلب منك الرشوه!!\r\n"
+    ],
+    "title-english": [
+      "Look good. Who among them asked you for a bribe!!"
+    ],
+    "medium": [
+      "Mounted color sketch on white cardboard, hand drawing in black ink, title in Arabic black ink, dated inscription by Ṭūghān in Arabic black ink left lower\r\n"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "published-in": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll47:3/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll47:3/full/full/0/default.jpg",
+    "rights": [
+      "Copyright 2015, American University in Cairo. All rights reserved.; To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "subject": [
+      "Egypt; Officials and employees; History; Egyptian; Editorial cartoonists; Social conditions."
+    ],
+    "collection": [
+      "Ahmed Toghan Collection"
+    ],
+    "creator-english": [
+      "Ahmed Toughan\r\n"
+    ],
+    "creator-alternative": [
+      "Aḥmad Ṭūghān\r\n"
+    ],
+    "creator-arabic": [
+      "أحمد طوغان\r\n"
+    ],
+    "date": [
+      "not identified"
+    ],
+    "description-arabic": [
+      "مدير يصرخ فى وجه زميله علي الشاطئ\r\n"
+    ],
+    "description-english": [
+      "The manager screams at one of his colleagues on the beach"
+    ],
+    "size-h-x-w-cm": [
+      "32 x 36"
+    ],
+    "languages": [
+      "Arabic"
+    ],
+    "physical-format": [
+      "drawing"
+    ],
+    "type": [
+      "image"
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll47/id/3\">Administrative Control in Egypt</a></span>"
+    ],
+    "title-arabic": [
+      "[الرقابة الإدارية بمصر]\r\n"
+    ],
+    "title-english": [
+      "Administrative Control in Egypt"
+    ],
+    "medium": [
+      "Sketch, hand drawing in black ink, black and white, text in Arabic blue ink\"مدير المؤسسة لزميله- اطلع يا محمود بية اطلع.. فية واحد من الرقابة الإدارية بيعوم جنبك؟\", note in pencil P.5, size 13,5 cm., hand drawing in pencil on the back of sketch, note in blue ink 4.\r\n"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "published-in": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll47:4/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll47:4/full/full/0/default.jpg",
+    "rights": [
+      "Copyright 2015, American University in Cairo. All rights reserved.; To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "subject": [
+      "Economic conditions; Social conditions; Egyptian; Editorial cartoonists; Egypt"
+    ],
+    "collection": [
+      "Ahmed Toghan Collection"
+    ],
+    "creator-english": [
+      "Ahmed Toughan\r\n"
+    ],
+    "creator-alternative": [
+      "Aḥmad Ṭūghān\r\n"
+    ],
+    "creator-arabic": [
+      "أحمد طوغان\r\n"
+    ],
+    "date": [
+      "not identified"
+    ],
+    "description-arabic": [
+      "رجل مكتئب يجلس على الأريكية ويلوم أسرتة الكبيرة عند استلامة فاتورة الكهرباء"
+    ],
+    "description-english": [
+      "The sketch shows a depressed man sitting on the chair and blaming his big family after receiving an electricity bill"
+    ],
+    "size-h-x-w-cm": [
+      "43 x 31"
+    ],
+    "languages": [
+      "Arabic"
+    ],
+    "physical-format": [
+      "drawing"
+    ],
+    "type": [
+      "image"
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll47/id/4\">[Electricity bill]</a></span>"
+    ],
+    "title-arabic": [
+      "فاتورة الكهرباء\r\n"
+    ],
+    "title-english": [
+      "[Electricity bill]"
+    ],
+    "medium": [
+      "Color sketch, hand drawing in black ink, text in Arabic in black ink, number on back in black ink."
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "published-in": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll47:5/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll47:5/full/full/0/default.jpg",
+    "rights": [
+      "Copyright 2015, American University in Cairo. All rights reserved.; To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "subject": [
+      "Egypt; Families; Economic aspects; Economic conditions; Egyptian; Editorial cartoonists."
+    ],
+    "collection": [
+      "Ahmed Toghan Collection"
+    ],
+    "creator-english": [
+      "Ahmed Toughan\r\n"
+    ],
+    "creator-alternative": [
+      "Aḥmad Ṭūghān\r\n"
+    ],
+    "creator-arabic": [
+      "أحمد طوغان\r\n"
+    ],
+    "date": [
+      "not identified"
+    ],
+    "description-arabic": [
+      "الأب يعطي تعليمات لترشيد الكهرباء لطفله\r\n"
+    ],
+    "description-english": [
+      "A father gives instructions about electricity to his child"
+    ],
+    "size-h-x-w-cm": [
+      "46 x 32"
+    ],
+    "languages": [
+      "Arabic"
+    ],
+    "physical-format": [
+      "drawing"
+    ],
+    "type": [
+      "image"
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll47/id/5\">[Egyptian family]</a></span>"
+    ],
+    "title-arabic": [
+      "[الاسرة المصريه]\r\n"
+    ],
+    "title-english": [
+      "[Egyptian family]"
+    ],
+    "medium": [
+      "Color sketch, text in bArabic black ink, inscribed by Ṭūghān in Arabic black ink, left lower\r\n"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "published-in": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll47:6/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll47:6/full/full/0/default.jpg",
+    "rights": [
+      "Copyright 2015, American University in Cairo. All rights reserved.; To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "subject": [
+      "Israel; Arab War; Egypt; Egyptian; Editorial cartoonists; Politics and government."
+    ],
+    "collection": [
+      "Ahmed Toghan Collection"
+    ],
+    "creator-english": [
+      "Ahmed Toughan\r\n"
+    ],
+    "creator-alternative": [
+      "Aḥmad Ṭūghān\r\n"
+    ],
+    "creator-arabic": [
+      "أحمد طوغان\r\n"
+    ],
+    "date": [
+      "6-Oct-67"
+    ],
+    "description-arabic": [
+      "رجلان من المستشفي يحملان مصارع فاز على نقاله"
+    ],
+    "description-english": [
+      "The sketch shows an injured boxer on the stretcher hold by two hospital men "
+    ],
+    "size-h-x-w-cm": [
+      "43 x 35"
+    ],
+    "languages": [
+      "Arabic"
+    ],
+    "physical-format": [
+      "drawing"
+    ],
+    "type": [
+      "image"
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll47/id/6\">[Winner]</a></span>"
+    ],
+    "title-arabic": [
+      "[الفائز]"
+    ],
+    "title-english": [
+      "[Winner]"
+    ],
+    "medium": [
+      "2 Hand drawing on 1 Skech, drawing in black ink, back drawing in pencil, notes in Arabic pencil, size 12 black, inscribed by Ṭūghān, left, lower, numbers written in white ink \"1,2,3\" , date on the back of sketch 6/10/1967, drawing in pencil, notes in blue ink, \"clumn 3 x heigh\"\r\n"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "published-in": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll47:7/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll47:7/full/full/0/default.jpg",
+    "rights": [
+      "Copyright 2015, American University in Cairo. All rights reserved.; To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "subject": [
+      "Animals in art; Egyptian; Editorial cartoonists; Egypt."
+    ],
+    "collection": [
+      "Ahmed Toghan Collection"
+    ],
+    "creator-english": [
+      "Ahmed Toughan\r\n"
+    ],
+    "creator-alternative": [
+      "Aḥmad Ṭūghān\r\n"
+    ],
+    "creator-arabic": [
+      "أحمد طوغان\r\n"
+    ],
+    "date": [
+      "not identified"
+    ],
+    "description-arabic": [
+      "حمار يمشي فى الحقل ويحمل بعض العشب\r\n"
+    ],
+    "description-english": [
+      "A donkey walks on the field carrying grass"
+    ],
+    "size-h-x-w-cm": [
+      "31 x 26"
+    ],
+    "languages": [
+      "Arabic"
+    ],
+    "physical-format": [
+      "drawing"
+    ],
+    "type": [
+      "image"
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll47/id/7\">[Donkey]</a></span>"
+    ],
+    "title-arabic": [
+      "[الحمار]\r\n"
+    ],
+    "title-english": [
+      "[Donkey]"
+    ],
+    "medium": [
+      "Sketch, hand drawing in black ink, black and white, white background, some in pencil"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "published-in": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll47:8/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll47:8/full/full/0/default.jpg",
+    "rights": [
+      "Copyright 2015, American University in Cairo. All rights reserved.; To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "subject": [
+      "Egyptian; Editorial cartoonists; Egypt; Social conditions; Social life and customs."
+    ],
+    "collection": [
+      "Ahmed Toghan Collection"
+    ],
+    "creator-english": [
+      "Ahmed Toughan\r\n"
+    ],
+    "creator-alternative": [
+      "Aḥmad Ṭūghān\r\n"
+    ],
+    "creator-arabic": [
+      "أحمد طوغان\r\n"
+    ],
+    "date": [
+      "not identified"
+    ],
+    "description-arabic": [
+      "أربعة أسود يأكلون واحداً منهم في قفص السيرك، مثل البني ادامين بينما ينظر إليهم الحارس مندهشًا\r\n"
+    ],
+    "description-english": [
+      "Four lions eat another lion and a human in a circus cage, while a guard looks "
+    ],
+    "size-h-x-w-cm": [
+      "35 x 44"
+    ],
+    "languages": [
+      "Arabic"
+    ],
+    "physical-format": [
+      "drawing"
+    ],
+    "type": [
+      "image"
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll47/id/8\">Newspapers say circus lions ate each other</a></span>"
+    ],
+    "title-arabic": [
+      "الصحف تقول ان أسود السيرك أكلت بعضها\r\n"
+    ],
+    "title-english": [
+      "Newspapers say circus lions ate each other"
+    ],
+    "medium": [
+      "Sketch, hand drawing, black and white, title and text in Arabic black ink\" - اية بنحاول نبقي بني ادمين...!\", inscribed by Ṭūghān in black ink, left, lower.\r\n"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "published-in": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll47:9/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll47:9/full/full/0/default.jpg",
+    "rights": [
+      "Copyright 2015, American University in Cairo. All rights reserved.; To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "subject": [
+      "Officials and employees; History; Editorial cartoonists; Egypt; Social conditions."
+    ],
+    "collection": [
+      "Ahmed Toghan Collection"
+    ],
+    "creator-english": [
+      "Ahmed Toughan\r\n"
+    ],
+    "creator-alternative": [
+      "Aḥmad Ṭūghān\r\n"
+    ],
+    "creator-arabic": [
+      "أحمد طوغان\r\n"
+    ],
+    "date": [
+      "not identified"
+    ],
+    "description-arabic": [
+      "رجل يقدم رشوة لموظف فى منزلة\r\n"
+    ],
+    "description-english": [
+      "A man offers bribe to the employee at his home"
+    ],
+    "size-h-x-w-cm": [
+      "21 x 26 on 35 x 44"
+    ],
+    "languages": [
+      "Arabic"
+    ],
+    "physical-format": [
+      "drawing"
+    ],
+    "type": [
+      "image"
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll47/id/9\">[Bribery]</a></span>"
+    ],
+    "title-arabic": [
+      "الرشوه"
+    ],
+    "title-english": [
+      "[Bribery]"
+    ],
+    "medium": [
+      "Mounted color sketch on white cardboard, hand drawing in black ink, text in Arabic black ink, inscribed by Ṭūghān in Arabic black ink, right lower.\r\n"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "published-in": null
+  }
+]

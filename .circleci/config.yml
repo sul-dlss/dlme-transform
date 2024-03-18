@@ -45,13 +45,6 @@ jobs:
             ./cc-test-reporter before-build
 
       - run:
-          name: Copy data files over for integration tests
-          command: |
-            curl -L https://github.com/sul-dlss/dlme-metadata/archive/main.zip > main.zip
-            unzip -q main.zip
-            mv dlme-metadata-main/* data/
-
-      - run:
           name: Run Rubocop and RSpec tests
           command: bundle exec rake
 

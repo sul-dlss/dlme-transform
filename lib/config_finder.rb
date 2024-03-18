@@ -23,7 +23,7 @@ module Dlme
       paths = build_paths
       return paths unless paths.empty?
 
-      raise "File not found: #{data_dir}"
+      raise "File not found: #{data_dir} in #{base_data_dir}"
     end
 
     private

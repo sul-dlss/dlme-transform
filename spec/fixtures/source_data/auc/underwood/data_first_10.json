@@ -1,0 +1,800 @@
+[
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll8:2/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll8:0/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll8:1/full/full/0/default.jpg"
+    ],
+    "acknowledgements": [
+      "The Underwood & Underwood Egypt Stereoviews collection was donated by American University in Cairo President Richard F. Pedersen."
+    ],
+    "location": [
+      "Port Said; Port Said governorate; Egypt; Africa"
+    ],
+    "date-created": [
+      "1897"
+    ],
+    "description": [
+      "Suez Canal"
+    ],
+    "format": [
+      "image/jp2"
+    ],
+    "extent": [
+      "17.7 x 9 cm."
+    ],
+    "medium": [
+      "stereoscopic photographs; albumen prints"
+    ],
+    "identifier": [
+      "SC-1985-01-02-001"
+    ],
+    "language": [
+      "English"
+    ],
+    "original-identifier": [
+      "1"
+    ],
+    "collection": [
+      "Underwood & Underwood Egypt Stereoviews"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "license": [
+      "This item is in the public domain. "
+    ],
+    "source": [
+      "Underwood & Underwood Egypt Stereoviews; Stereoscopic Photographs Collection; Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll8/id/2\">The Suez Canal at Port Said, Egypt.</a></span>"
+    ],
+    "subject": [
+      "Boats; Canals"
+    ],
+    "topic": [
+      "Commerce"
+    ],
+    "title": [
+      "The Suez Canal at Port Said, Egypt."
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "publisher": [
+      "Underwood & Underwood Publishers"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "architectural-detail": null,
+    "name": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll8:5/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll8:3/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll8:4/full/full/0/default.jpg"
+    ],
+    "acknowledgements": [
+      "The Underwood & Underwood Egypt Stereoviews collection was donated by American University in Cairo President Richard F. Pedersen."
+    ],
+    "location": [
+      "Az-Zaqāzīq; Ash Sharqīyah governorate; Egypt; Africa"
+    ],
+    "date-created": [
+      "1896"
+    ],
+    "description": [
+      "Ali Kaka dancers"
+    ],
+    "format": [
+      "image/jp2"
+    ],
+    "extent": [
+      "17.7 x 9 cm."
+    ],
+    "medium": [
+      "stereoscopic photographs; albumen prints"
+    ],
+    "identifier": [
+      "SC-1985-01-02-002"
+    ],
+    "language": [
+      "English"
+    ],
+    "original-identifier": [
+      "2"
+    ],
+    "collection": [
+      "Underwood & Underwood Egypt Stereoviews"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "license": [
+      "This item is in the public domain. "
+    ],
+    "source": [
+      "Underwood & Underwood Egypt Stereoviews; Stereoscopic Photographs Collection; Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll8/id/5\">Ali Kaka Dancers at the Arab Market, Zakazik, Egypt.</a></span>"
+    ],
+    "subject": [
+      "Dancers; Markets; Musicians; Spectators"
+    ],
+    "topic": [
+      "Performing arts"
+    ],
+    "title": [
+      "Ali Kaka Dancers at the Arab Market, Zakazik, Egypt."
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "publisher": [
+      "Underwood & Underwood Publishers"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "architectural-detail": null,
+    "name": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll8:8/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll8:6/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll8:7/full/full/0/default.jpg"
+    ],
+    "acknowledgements": [
+      "The Underwood & Underwood Egypt Stereoviews collection was donated by American University in Cairo President Richard F. Pedersen."
+    ],
+    "location": [
+      "Pyramids of Giza; Al-Jīzah governorate; Egypt; Africa"
+    ],
+    "date-created": [
+      "1896"
+    ],
+    "description": [
+      "Women herding goats"
+    ],
+    "format": [
+      "image/jp2"
+    ],
+    "extent": [
+      "17.7 x 9 cm."
+    ],
+    "medium": [
+      "stereoscopic photographs; albumen prints"
+    ],
+    "identifier": [
+      "SC-1985-01-02-004"
+    ],
+    "language": [
+      "English"
+    ],
+    "original-identifier": [
+      "4"
+    ],
+    "collection": [
+      "Underwood & Underwood Egypt Stereoviews"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "license": [
+      "This item is in the public domain. "
+    ],
+    "source": [
+      "Underwood & Underwood Egypt Stereoviews; Stereoscopic Photographs Collection; Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll8/id/8\">The road to the pyramids, Egypt.</a></span>"
+    ],
+    "subject": [
+      "Donkeys; Goats; Herders; Pitchers; Pyramids; Tombs & sepulchral monuments"
+    ],
+    "topic": [
+      "Antiquities; Herding"
+    ],
+    "title": [
+      "The road to the pyramids, Egypt."
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "publisher": [
+      "Underwood & Underwood Publishers"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "architectural-detail": null,
+    "name": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll8:11/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll8:9/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll8:10/full/full/0/default.jpg"
+    ],
+    "acknowledgements": [
+      "The Underwood & Underwood Egypt Stereoviews collection was donated by American University in Cairo President Richard F. Pedersen."
+    ],
+    "location": [
+      "Pyramids of Giza; Al-Jīzah governorate; Egypt; Africa"
+    ],
+    "date-created": [
+      "1896"
+    ],
+    "description": [
+      "Man seated on a camel"
+    ],
+    "format": [
+      "image/jp2"
+    ],
+    "extent": [
+      "17.7 x 9 cm."
+    ],
+    "medium": [
+      "stereoscopic photographs; albumen prints"
+    ],
+    "identifier": [
+      "SC-1985-01-02-005"
+    ],
+    "language": [
+      "English"
+    ],
+    "original-identifier": [
+      "5"
+    ],
+    "collection": [
+      "Underwood & Underwood Egypt Stereoviews"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "license": [
+      "This item is in the public domain. "
+    ],
+    "source": [
+      "Underwood & Underwood Egypt Stereoviews; Stereoscopic Photographs Collection; Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll8/id/11\">The Farewell Offering-Leaving for the Desert-Egypt.</a></span>"
+    ],
+    "subject": [
+      "Camels; Men; Pyramids; Flood; Tombs & sepulchral monuments; Puddles"
+    ],
+    "topic": [
+      "Antiquities; Transportation"
+    ],
+    "title": [
+      "The Farewell Offering-Leaving for the Desert-Egypt."
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "publisher": [
+      "Underwood & Underwood Publishers"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "architectural-detail": null,
+    "name": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll8:14/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll8:12/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll8:13/full/full/0/default.jpg"
+    ],
+    "acknowledgements": [
+      "The Underwood & Underwood Egypt Stereoviews collection was donated by American University in Cairo President Richard F. Pedersen."
+    ],
+    "location": [
+      "Ad Darb al Aḩmar; Al Khalīfah;  Muqaţţam, Jabal al; Al-Qāhirah governorate; Egypt; Africa"
+    ],
+    "date-created": [
+      "1897"
+    ],
+    "description": [
+      "Birds-eye view of Cairo; the photograph is taken from the hills of Muqaţţam."
+    ],
+    "format": [
+      "image/jp2"
+    ],
+    "extent": [
+      "17.7 x 9 cm."
+    ],
+    "medium": [
+      "stereoscopic photographs; albumen prints"
+    ],
+    "identifier": [
+      "SC-1985-01-02-003"
+    ],
+    "language": [
+      "English"
+    ],
+    "original-identifier": [
+      "3"
+    ],
+    "collection": [
+      "Underwood & Underwood Egypt Stereoviews"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "license": [
+      "This item is in the public domain. "
+    ],
+    "source": [
+      "Underwood & Underwood Egypt Stereoviews; Stereoscopic Photographs Collection; Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll8/id/14\">Cairo, Egypt--The City of the Khalifs.</a></span>"
+    ],
+    "subject": [
+      "Donkeys; Men; Mosques"
+    ],
+    "topic": [
+      "Architecture, Islamic"
+    ],
+    "title": [
+      "Cairo, Egypt--The City of the Khalifs."
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "publisher": [
+      "Underwood & Underwood Publishers"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "architectural-detail": [
+      "minarets"
+    ],
+    "name": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll8:17/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll8:15/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll8:16/full/full/0/default.jpg"
+    ],
+    "acknowledgements": [
+      "The Underwood & Underwood Egypt Stereoviews collection was donated by American University in Cairo President Richard F. Pedersen."
+    ],
+    "location": [
+      "Pyramids of Giza; Al-Jīzah governorate; Egypt; Africa"
+    ],
+    "date-created": [
+      "1896"
+    ],
+    "description": [
+      "Sphinx and pyramids at Giza"
+    ],
+    "format": [
+      "image/jp2"
+    ],
+    "extent": [
+      "17.7 x 9 cm."
+    ],
+    "medium": [
+      "stereoscopic photographs; albumen prints"
+    ],
+    "identifier": [
+      "SC-1985-01-02-006"
+    ],
+    "language": [
+      "English"
+    ],
+    "original-identifier": [
+      "6"
+    ],
+    "collection": [
+      "Underwood & Underwood Egypt Stereoviews"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "license": [
+      "This item is in the public domain. "
+    ],
+    "source": [
+      "Underwood & Underwood Egypt Stereoviews; Stereoscopic Photographs Collection; Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll8/id/17\">Ruins of the Temple, Sphinx and Great Pyramid, Egypt.</a></span>"
+    ],
+    "subject": [
+      "Camels; Men; Pyramids; Sphinx; Tombs & sepulchral monuments"
+    ],
+    "topic": [
+      "Antiquities; Excavations (Archaeology)"
+    ],
+    "title": [
+      "Ruins of the Temple, Sphinx and Great Pyramid, Egypt."
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "publisher": [
+      "Underwood & Underwood Publishers"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "architectural-detail": null,
+    "name": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll8:20/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll8:18/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll8:19/full/full/0/default.jpg"
+    ],
+    "acknowledgements": [
+      "The Underwood & Underwood Egypt Stereoviews collection was donated by American University in Cairo President Richard F. Pedersen."
+    ],
+    "location": [
+      "Pyramids of Giza; Al-Jīzah governorate; Egypt; Africa"
+    ],
+    "date-created": [
+      "1896"
+    ],
+    "description": [
+      "Men standing on the Sphinx; Pyramid complex of Khafre is visible in the background."
+    ],
+    "format": [
+      "image/jp2"
+    ],
+    "extent": [
+      "17.7 x 9 cm."
+    ],
+    "medium": [
+      "stereoscopic photographs; albumen prints"
+    ],
+    "identifier": [
+      "SC-1985-01-02-007"
+    ],
+    "language": [
+      "English"
+    ],
+    "original-identifier": [
+      "7"
+    ],
+    "collection": [
+      "Underwood & Underwood Egypt Stereoviews"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "license": [
+      "This item is in the public domain. "
+    ],
+    "source": [
+      "Underwood & Underwood Egypt Stereoviews; Stereoscopic Photographs Collection; Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll8/id/20\">The Sphinx and Pyramid of Chefren, Egypt.</a></span>"
+    ],
+    "subject": [
+      "Camels; Men; Pyramids; Sphinx; Tombs & sepulchral monuments"
+    ],
+    "topic": [
+      "Antiquities"
+    ],
+    "title": [
+      "The Sphinx and Pyramid of Chefren, Egypt."
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "publisher": [
+      "Underwood & Underwood Publishers"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "architectural-detail": null,
+    "name": [
+      "Chefren, King of Egypt"
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll8:23/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll8:21/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll8:22/full/full/0/default.jpg"
+    ],
+    "acknowledgements": [
+      "The Underwood & Underwood Egypt Stereoviews collection was donated by American University in Cairo President Richard F. Pedersen."
+    ],
+    "location": [
+      "Pyramids of Giza; Al-Jīzah governorate; Egypt; Africa"
+    ],
+    "date-created": [
+      "1896"
+    ],
+    "description": [
+      "Men climbing the Great Pyramid"
+    ],
+    "format": [
+      "image/jp2"
+    ],
+    "extent": [
+      "17.7 x 9 cm."
+    ],
+    "medium": [
+      "stereoscopic photographs; albumen prints"
+    ],
+    "identifier": [
+      "SC-1985-01-02-009"
+    ],
+    "language": [
+      "English"
+    ],
+    "original-identifier": [
+      "9"
+    ],
+    "collection": [
+      "Underwood & Underwood Egypt Stereoviews"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "license": [
+      "This item is in the public domain. "
+    ],
+    "source": [
+      "Underwood & Underwood Egypt Stereoviews; Stereoscopic Photographs Collection; Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll8/id/23\">Climbing Cheops, the greatest of the Pyramids, Egypt.</a></span>"
+    ],
+    "subject": [
+      "Men; Pyramids; Tombs & sepulchral monuments"
+    ],
+    "topic": [
+      "Antiquities"
+    ],
+    "title": [
+      "Climbing Cheops, the greatest of the Pyramids, Egypt."
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "publisher": [
+      "Underwood & Underwood Publishers"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "architectural-detail": null,
+    "name": [
+      "Cheops, King of Egypt"
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll8:26/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll8:24/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll8:25/full/full/0/default.jpg"
+    ],
+    "acknowledgements": [
+      "The Underwood & Underwood Egypt Stereoviews collection was donated by American University in Cairo President Richard F. Pedersen."
+    ],
+    "location": [
+      "Pyramids of Giza; Al-Jīzah governorate; Egypt; Africa"
+    ],
+    "date-created": [
+      "1897"
+    ],
+    "description": [
+      "Mena House hotel dining room"
+    ],
+    "format": [
+      "image/jp2"
+    ],
+    "extent": [
+      "17.7 x 9 cm."
+    ],
+    "medium": [
+      "stereoscopic photographs; albumen prints"
+    ],
+    "identifier": [
+      "SC-1985-01-02-010"
+    ],
+    "language": [
+      "English"
+    ],
+    "original-identifier": [
+      "10"
+    ],
+    "collection": [
+      "Underwood & Underwood Egypt Stereoviews"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "license": [
+      "This item is in the public domain. "
+    ],
+    "source": [
+      "Underwood & Underwood Egypt Stereoviews; Stereoscopic Photographs Collection; Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll8/id/26\">The Mena House Dining Room, at the Gizeh Pyramids, Egypt.</a></span>"
+    ],
+    "subject": [
+      "Dining rooms; Hotels; Waiters"
+    ],
+    "topic": [
+      "Architecture, Islamic"
+    ],
+    "title": [
+      "The Mena House Dining Room, at the Gizeh Pyramids, Egypt."
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "publisher": [
+      "Underwood & Underwood Publishers"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "architectural-detail": null,
+    "name": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll8:29/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll8:27/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll8:28/full/full/0/default.jpg"
+    ],
+    "acknowledgements": [
+      "The Underwood & Underwood Egypt Stereoviews collection was donated by American University in Cairo President Richard F. Pedersen."
+    ],
+    "location": [
+      "Pyramids of Giza; Al-Jīzah governorate; Egypt; Africa"
+    ],
+    "date-created": [
+      "1897"
+    ],
+    "description": [
+      "Great Pyramid in Giza"
+    ],
+    "format": [
+      "image/jp2"
+    ],
+    "extent": [
+      "17.7 x 9 cm."
+    ],
+    "medium": [
+      "stereoscopic photographs; albumen prints"
+    ],
+    "identifier": [
+      "SC-1985-01-02-008"
+    ],
+    "language": [
+      "English"
+    ],
+    "original-identifier": [
+      "8"
+    ],
+    "collection": [
+      "Underwood & Underwood Egypt Stereoviews"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "license": [
+      "This item is in the public domain. "
+    ],
+    "source": [
+      "Underwood & Underwood Egypt Stereoviews; Stereoscopic Photographs Collection; Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll8/id/29\">Cheops, the Greatest of the Pyramids, Egypt.</a></span>"
+    ],
+    "subject": [
+      "Camels; Men; Pyramids; Tombs & sepulchral monuments"
+    ],
+    "topic": [
+      "Antiquities"
+    ],
+    "title": [
+      "Cheops, the Greatest of the Pyramids, Egypt."
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "publisher": [
+      "Underwood & Underwood Publishers"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "architectural-detail": null,
+    "name": [
+      "Cheops, King of Egypt"
+    ]
+  }
+]

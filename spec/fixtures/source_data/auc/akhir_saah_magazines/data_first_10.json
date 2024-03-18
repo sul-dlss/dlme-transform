@@ -1,0 +1,1432 @@
+[
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll32:44995/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:44967/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:44968/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:44969/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:44970/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:44971/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:44972/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:44973/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:44974/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:44975/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:44976/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:44977/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:44978/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:44979/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:44980/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:44981/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:44982/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:44983/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:44984/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:44985/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:44986/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:44987/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:44988/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:44989/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:44990/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:44991/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:44992/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:44993/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:44994/full/full/0/default.jpg"
+    ],
+    "call-number": [
+      "AP95.A6 A31"
+    ],
+    "genre": [
+      "Periodicals"
+    ],
+    "coverage": [
+      "Cairo; Egypt"
+    ],
+    "subject": [
+      "Arabic-language weekly consumer magazine published in Egypt. The magazine presents social events, women's interests and sports, also political, economic news."
+    ],
+    "date": [
+      "1952-02-06"
+    ],
+    "title-english": [
+      "Akher-Saa"
+    ],
+    "format": [
+      "pdf"
+    ],
+    "language": [
+      "Arabic"
+    ],
+    "publisher": [
+      "Before 1944: The owner: Muhammad Al-Tabi'i The editor-in-Chief: Mustafa Amin. Since 1944: Akhbar El Yom, founded by the Amin brothers, Mustafa Amin and Ali Amin. \r\n"
+    ],
+    "license": [
+      "RBSCL believes this item is in the public domain."
+    ],
+    "rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll32/id/44995\">Ākhir sāʼah no.902 1952</a></span>"
+    ],
+    "title-arabic": [
+      "آخر ساعة"
+    ],
+    "title": [
+      "Ākhir sāʼah no.902 1952"
+    ],
+    "type": [
+      "Still Image; Text"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll32:45024/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:44996/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:44997/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:44998/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:44999/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45000/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45001/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45002/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45003/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45004/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45005/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45006/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45007/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45008/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45009/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45010/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45011/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45012/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45013/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45014/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45015/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45016/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45017/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45018/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45019/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45020/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45021/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45022/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45023/full/full/0/default.jpg"
+    ],
+    "call-number": [
+      "AP95.A6 A31"
+    ],
+    "genre": [
+      "Periodicals"
+    ],
+    "coverage": [
+      "Cairo; Egypt"
+    ],
+    "subject": [
+      "Arabic-language weekly consumer magazine published in Egypt. The magazine presents social events, women's interests and sports, also political, economic news."
+    ],
+    "date": [
+      "1952-02-20"
+    ],
+    "title-english": [
+      "Akher-Saa"
+    ],
+    "format": [
+      "pdf"
+    ],
+    "language": [
+      "Arabic"
+    ],
+    "publisher": [
+      "Before 1944: The owner: Muhammad Al-Tabi'i The editor-in-Chief: Mustafa Amin. Since 1944: Akhbar El Yom, founded by the Amin brothers, Mustafa Amin and Ali Amin. \r\n"
+    ],
+    "license": [
+      "RBSCL believes this item is in the public domain."
+    ],
+    "rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll32/id/45024\">Ākhir sāʼah no.904 1952</a></span>"
+    ],
+    "title-arabic": [
+      "آخر ساعة"
+    ],
+    "title": [
+      "Ākhir sāʼah no.904 1952"
+    ],
+    "type": [
+      "Still Image; Text"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll32:45053/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45025/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45026/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45027/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45028/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45029/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45030/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45031/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45032/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45033/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45034/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45035/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45036/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45037/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45038/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45039/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45040/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45041/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45042/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45043/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45044/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45045/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45046/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45047/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45048/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45049/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45050/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45051/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45052/full/full/0/default.jpg"
+    ],
+    "call-number": [
+      "AP95.A6 A31"
+    ],
+    "genre": [
+      "Periodicals"
+    ],
+    "coverage": [
+      "Cairo; Egypt"
+    ],
+    "subject": [
+      "Arabic-language weekly consumer magazine published in Egypt. The magazine presents social events, women's interests and sports, also political, economic news."
+    ],
+    "date": [
+      "1952-02-13"
+    ],
+    "title-english": [
+      "Akher-Saa"
+    ],
+    "format": [
+      "pdf"
+    ],
+    "language": [
+      "Arabic"
+    ],
+    "publisher": [
+      "Before 1944: The owner: Muhammad Al-Tabi'i The editor-in-Chief: Mustafa Amin. Since 1944: Akhbar El Yom, founded by the Amin brothers, Mustafa Amin and Ali Amin. \r\n"
+    ],
+    "license": [
+      "RBSCL believes this item is in the public domain."
+    ],
+    "rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll32/id/45053\">Ākhir sāʼah no.903 1952</a></span>"
+    ],
+    "title-arabic": [
+      "آخر ساعة"
+    ],
+    "title": [
+      "Ākhir sāʼah no.903 1952"
+    ],
+    "type": [
+      "Still Image; Text"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll32:45082/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45054/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45055/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45056/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45057/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45058/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45059/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45060/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45061/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45062/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45063/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45064/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45065/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45066/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45067/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45068/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45069/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45070/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45071/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45072/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45073/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45074/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45075/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45076/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45077/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45078/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45079/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45080/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45081/full/full/0/default.jpg"
+    ],
+    "call-number": [
+      "AP95.A6 A31"
+    ],
+    "genre": [
+      "Periodicals"
+    ],
+    "coverage": [
+      "Cairo; Egypt"
+    ],
+    "subject": [
+      "Arabic-language weekly consumer magazine published in Egypt. The magazine presents social events, women's interests and sports, also political, economic news."
+    ],
+    "date": [
+      "1952-03-05"
+    ],
+    "title-english": [
+      "Akher-Saa"
+    ],
+    "format": [
+      "pdf"
+    ],
+    "language": [
+      "Arabic"
+    ],
+    "publisher": [
+      "Before 1944: The owner: Muhammad Al-Tabi'i The editor-in-Chief: Mustafa Amin. Since 1944: Akhbar El Yom, founded by the Amin brothers, Mustafa Amin and Ali Amin. \r\n"
+    ],
+    "license": [
+      "RBSCL believes this item is in the public domain."
+    ],
+    "rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll32/id/45082\">Ākhir sāʼah no.906 1952</a></span>"
+    ],
+    "title-arabic": [
+      "آخر ساعة"
+    ],
+    "title": [
+      "Ākhir sāʼah no.906 1952"
+    ],
+    "type": [
+      "Still Image; Text"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll32:45111/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45083/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45084/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45085/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45086/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45087/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45088/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45089/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45090/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45091/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45092/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45093/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45094/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45095/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45096/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45097/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45098/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45099/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45100/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45101/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45102/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45103/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45104/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45105/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45106/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45107/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45108/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45109/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45110/full/full/0/default.jpg"
+    ],
+    "call-number": [
+      "AP95.A6 A31"
+    ],
+    "genre": [
+      "Periodicals"
+    ],
+    "coverage": [
+      "Cairo; Egypt"
+    ],
+    "subject": [
+      "Arabic-language weekly consumer magazine published in Egypt. The magazine presents social events, women's interests and sports, also political, economic news."
+    ],
+    "date": [
+      "1952-01-16"
+    ],
+    "title-english": [
+      "Akher-Saa"
+    ],
+    "format": [
+      "pdf"
+    ],
+    "language": [
+      "Arabic"
+    ],
+    "publisher": [
+      "Before 1944: The owner: Muhammad Al-Tabi'i The editor-in-Chief: Mustafa Amin. Since 1944: Akhbar El Yom, founded by the Amin brothers, Mustafa Amin and Ali Amin. \r\n"
+    ],
+    "license": [
+      "RBSCL believes this item is in the public domain."
+    ],
+    "rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll32/id/45111\">Ākhir sāʼah no.899 1952</a></span>"
+    ],
+    "title-arabic": [
+      "آخر ساعة"
+    ],
+    "title": [
+      "Ākhir sāʼah no.899 1952"
+    ],
+    "type": [
+      "Still Image; Text"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll32:45140/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45112/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45113/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45114/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45115/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45116/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45117/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45118/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45119/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45120/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45121/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45122/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45123/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45124/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45125/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45126/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45127/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45128/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45129/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45130/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45131/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45132/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45133/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45134/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45135/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45136/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45137/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45138/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45139/full/full/0/default.jpg"
+    ],
+    "call-number": [
+      "AP95.A6 A31"
+    ],
+    "genre": [
+      "Periodicals"
+    ],
+    "coverage": [
+      "Cairo; Egypt"
+    ],
+    "subject": [
+      "Arabic-language weekly consumer magazine published in Egypt. The magazine presents social events, women's interests and sports, also political, economic news."
+    ],
+    "date": [
+      "1952-01-23"
+    ],
+    "title-english": [
+      "Akher-Saa"
+    ],
+    "format": [
+      "pdf"
+    ],
+    "language": [
+      "Arabic"
+    ],
+    "publisher": [
+      "Before 1944: The owner: Muhammad Al-Tabi'i The editor-in-Chief: Mustafa Amin. Since 1944: Akhbar El Yom, founded by the Amin brothers, Mustafa Amin and Ali Amin. \r\n"
+    ],
+    "license": [
+      "RBSCL believes this item is in the public domain."
+    ],
+    "rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll32/id/45140\">Ākhir sāʼah no.900 1952</a></span>"
+    ],
+    "title-arabic": [
+      "آخر ساعة"
+    ],
+    "title": [
+      "Ākhir sāʼah no.900 1952"
+    ],
+    "type": [
+      "Still Image; Text"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll32:45169/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45141/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45142/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45143/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45144/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45145/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45146/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45147/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45148/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45149/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45150/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45151/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45152/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45153/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45154/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45155/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45156/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45157/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45158/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45159/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45160/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45161/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45162/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45163/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45164/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45165/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45166/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45167/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45168/full/full/0/default.jpg"
+    ],
+    "call-number": [
+      "AP95.A6 A31"
+    ],
+    "genre": [
+      "Periodicals"
+    ],
+    "coverage": [
+      "Cairo; Egypt"
+    ],
+    "subject": [
+      "Arabic-language weekly consumer magazine published in Egypt. The magazine presents social events, women's interests and sports, also political, economic news."
+    ],
+    "date": [
+      "1952-02-27"
+    ],
+    "title-english": [
+      "Akher-Saa"
+    ],
+    "format": [
+      "pdf"
+    ],
+    "language": [
+      "Arabic"
+    ],
+    "publisher": [
+      "Before 1944: The owner: Muhammad Al-Tabi'i The editor-in-Chief: Mustafa Amin. Since 1944: Akhbar El Yom, founded by the Amin brothers, Mustafa Amin and Ali Amin. \r\n"
+    ],
+    "license": [
+      "RBSCL believes this item is in the public domain."
+    ],
+    "rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll32/id/45169\">Ākhir sāʼah no.905 1952</a></span>"
+    ],
+    "title-arabic": [
+      "آخر ساعة"
+    ],
+    "title": [
+      "Ākhir sāʼah no.905 1952"
+    ],
+    "type": [
+      "Still Image; Text"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll32:45198/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45170/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45171/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45172/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45173/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45174/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45175/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45176/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45177/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45178/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45179/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45180/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45181/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45182/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45183/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45184/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45185/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45186/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45187/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45188/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45189/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45190/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45191/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45192/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45193/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45194/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45195/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45196/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45197/full/full/0/default.jpg"
+    ],
+    "call-number": [
+      "AP95.A6 A31"
+    ],
+    "genre": [
+      "Periodicals"
+    ],
+    "coverage": [
+      "Cairo; Egypt"
+    ],
+    "subject": [
+      "Arabic-language weekly consumer magazine published in Egypt. The magazine presents social events, women's interests and sports, also political, economic news."
+    ],
+    "date": [
+      "1952-03-19"
+    ],
+    "title-english": [
+      "Akher-Saa"
+    ],
+    "format": [
+      "pdf"
+    ],
+    "language": [
+      "Arabic"
+    ],
+    "publisher": [
+      "Before 1944: The owner: Muhammad Al-Tabi'i The editor-in-Chief: Mustafa Amin. Since 1944: Akhbar El Yom, founded by the Amin brothers, Mustafa Amin and Ali Amin. \r\n"
+    ],
+    "license": [
+      "RBSCL believes this item is in the public domain."
+    ],
+    "rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll32/id/45198\">Ākhir sāʼah no.908 1952</a></span>"
+    ],
+    "title-arabic": [
+      "آخر ساعة"
+    ],
+    "title": [
+      "Ākhir sāʼah no.908 1952"
+    ],
+    "type": [
+      "Still Image; Text"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll32:45227/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45199/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45200/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45201/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45202/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45203/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45204/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45205/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45206/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45207/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45208/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45209/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45210/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45211/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45212/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45213/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45214/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45215/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45216/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45217/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45218/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45219/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45220/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45221/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45222/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45223/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45224/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45225/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45226/full/full/0/default.jpg"
+    ],
+    "call-number": [
+      "AP95.A6 A31"
+    ],
+    "genre": [
+      "Periodicals"
+    ],
+    "coverage": [
+      "Cairo; Egypt"
+    ],
+    "subject": [
+      "Arabic-language weekly consumer magazine published in Egypt. The magazine presents social events, women's interests and sports, also political, economic news."
+    ],
+    "date": [
+      "1952-11-12"
+    ],
+    "title-english": [
+      "Akher-Saa"
+    ],
+    "format": [
+      "pdf"
+    ],
+    "language": [
+      "Arabic"
+    ],
+    "publisher": [
+      "Before 1944: The owner: Muhammad Al-Tabi'i The editor-in-Chief: Mustafa Amin. Since 1944: Akhbar El Yom, founded by the Amin brothers, Mustafa Amin and Ali Amin."
+    ],
+    "license": [
+      "RBSCL believes this item is in the public domain."
+    ],
+    "rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll32/id/45227\">Ākhir sāʼah no.942 1952</a></span>"
+    ],
+    "title-arabic": [
+      "آخر ساعة"
+    ],
+    "title": [
+      "Ākhir sāʼah no.942 1952"
+    ],
+    "type": [
+      "Still Image; Text"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll32:45256/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45228/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45229/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45230/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45231/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45232/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45233/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45234/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45235/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45236/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45237/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45238/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45239/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45240/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45241/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45242/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45243/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45244/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45245/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45246/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45247/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45248/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45249/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45250/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45251/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45252/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45253/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45254/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll32:45255/full/full/0/default.jpg"
+    ],
+    "call-number": [
+      "AP95.A6 A31"
+    ],
+    "genre": [
+      "Periodicals"
+    ],
+    "coverage": [
+      "Cairo; Egypt"
+    ],
+    "subject": [
+      "Arabic-language weekly consumer magazine published in Egypt. The magazine presents social events, women's interests and sports, also political, economic news."
+    ],
+    "date": [
+      "1952-11-19"
+    ],
+    "title-english": [
+      "Akher-Saa"
+    ],
+    "format": [
+      "pdf"
+    ],
+    "language": [
+      "Arabic"
+    ],
+    "publisher": [
+      "Before 1944: The owner: Muhammad Al-Tabi'i The editor-in-Chief: Mustafa Amin. Since 1944: Akhbar El Yom, founded by the Amin brothers, Mustafa Amin and Ali Amin."
+    ],
+    "license": [
+      "RBSCL believes this item is in the public domain."
+    ],
+    "rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll32/id/45256\">Ākhir sāʼah no.943 1952</a></span>"
+    ],
+    "title-arabic": [
+      "آخر ساعة"
+    ],
+    "title": [
+      "Ākhir sāʼah no.943 1952"
+    ],
+    "type": [
+      "Still Image; Text"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ]
+  }
+]
