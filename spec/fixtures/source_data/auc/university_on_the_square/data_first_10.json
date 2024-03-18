@@ -1,0 +1,740 @@
+[
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll7:0/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll7:0/full/full/0/default.jpg",
+    "acknowledgements": [
+      "The University on the Square: Documenting Egypt's 21st Century Revolution project was made possible by a grant from the Andrew W. Mellon Foundation."
+    ],
+    "creator": [
+      "Ahmad"
+    ],
+    "location": [
+      "Cairo; Al-Qāhirah governorate; Egypt; Africa"
+    ],
+    "date": [
+      "2011"
+    ],
+    "date-submitted": [
+      "2011-04-08"
+    ],
+    "description": [
+      "The photographer provided his first name only."
+    ],
+    "format": [
+      "image/jp2"
+    ],
+    "extent": [
+      "15152 x 3543 px."
+    ],
+    "medium": [
+      "digital images"
+    ],
+    "object-identifier": [
+      "UOTS_Photos_Ahmad_0001"
+    ],
+    "collection": [
+      "University on the Square: Documenting Egypt's 21st Century Revolution"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "license": [
+      "Copyright 2011, American University in Cairo. All rights reserved."
+    ],
+    "source": [
+      "University on the Square: Documenting Egypt's 21st Century Revolution Photographs; Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll7/id/0\">Panoramic view of demonstrators in Mīdān al-Taḥrīr</a></span>"
+    ],
+    "subject-tgm": [
+      "Crowds; Flags; Protest posters"
+    ],
+    "subject-lcsh": [
+      "Demonstrations; Egypt; Protest movements; Revolutions; Revolutions"
+    ],
+    "title": [
+      "Panoramic view of demonstrators in Mīdān al-Taḥrīr"
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "language": null,
+    "name": null,
+    "contributor": null,
+    "artist": null,
+    "age": null,
+    "egyptian-national?": null,
+    "gender": null,
+    "occupation": null,
+    "relationship-to-auc": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll7:1/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll7:1/full/full/0/default.jpg",
+    "acknowledgements": [
+      "The University on the Square: Documenting Egypt's 21st Century Revolution project was made possible by a grant from the Andrew W. Mellon Foundation."
+    ],
+    "creator": [
+      "Eldiwany, Ahmed"
+    ],
+    "location": [
+      "Cairo; Al-Qāhirah governorate; Egypt; Africa"
+    ],
+    "date": [
+      "2011-02-11"
+    ],
+    "date-submitted": null,
+    "description": [
+      "Photographer's description: Pictures taken during the Egyptian Revolution. Text in image: كرامة حرية عدالة اجتماعية. Translation of Text in image: Dignity, freedom, and social justice."
+    ],
+    "format": [
+      "image/jp2"
+    ],
+    "extent": [
+      "720 x 540 px."
+    ],
+    "medium": [
+      "digital images"
+    ],
+    "object-identifier": [
+      "UOTS_Photos_Ahmed-Eldiwany_0001"
+    ],
+    "collection": [
+      "University on the Square: Documenting Egypt's 21st Century Revolution"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "license": [
+      "Copyright 2011, American University in Cairo. All rights reserved."
+    ],
+    "source": [
+      "University on the Square: Documenting Egypt's 21st Century Revolution Photographs; Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll7/id/1\">Dignity, freedom, and social justice' banner</a></span>"
+    ],
+    "subject-tgm": [
+      "Protest posters; Women"
+    ],
+    "subject-lcsh": [
+      "Demonstrations; Egypt; Human rights; Protest movements; Revolutions"
+    ],
+    "title": [
+      "Dignity, freedom, and social justice' banner"
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "language": [
+      "Arabic"
+    ],
+    "name": null,
+    "contributor": null,
+    "artist": null,
+    "age": null,
+    "egyptian-national?": null,
+    "gender": null,
+    "occupation": null,
+    "relationship-to-auc": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll7:2/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll7:2/full/full/0/default.jpg",
+    "acknowledgements": [
+      "The University on the Square: Documenting Egypt's 21st Century Revolution project was made possible by a grant from the Andrew W. Mellon Foundation."
+    ],
+    "creator": [
+      "Eldiwany, Ahmed"
+    ],
+    "location": [
+      "Cairo; Al-Qāhirah governorate; Egypt; Africa"
+    ],
+    "date": [
+      "2011-02-11"
+    ],
+    "date-submitted": null,
+    "description": [
+      "Photographer's description: Pictures taken during the Egyptian Revolution."
+    ],
+    "format": [
+      "image/jp2"
+    ],
+    "extent": [
+      "540 x 720 px."
+    ],
+    "medium": [
+      "digital images"
+    ],
+    "object-identifier": [
+      "UOTS_Photos_Ahmed-Eldiwany_0002"
+    ],
+    "collection": [
+      "University on the Square: Documenting Egypt's 21st Century Revolution"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "license": [
+      "Copyright 2011, American University in Cairo. All rights reserved."
+    ],
+    "source": [
+      "University on the Square: Documenting Egypt's 21st Century Revolution Photographs; Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll7/id/2\">Hanging effigy of Ḥusnī Mubārak</a></span>"
+    ],
+    "subject-tgm": [
+      "Executions in effigy"
+    ],
+    "subject-lcsh": [
+      "Demonstrations; Egypt; Protest movements; Revolutions; Revolutions"
+    ],
+    "title": [
+      "Hanging effigy of Ḥusnī Mubārak"
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "language": null,
+    "name": [
+      "Mubārak, Muḥammad Ḥusnī, 1928-"
+    ],
+    "contributor": null,
+    "artist": null,
+    "age": null,
+    "egyptian-national?": null,
+    "gender": null,
+    "occupation": null,
+    "relationship-to-auc": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll7:3/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll7:3/full/full/0/default.jpg",
+    "acknowledgements": [
+      "The University on the Square: Documenting Egypt's 21st Century Revolution project was made possible by a grant from the Andrew W. Mellon Foundation."
+    ],
+    "creator": [
+      "Eldiwany, Ahmed"
+    ],
+    "location": [
+      "Cairo; Al-Qāhirah governorate; Egypt; Africa"
+    ],
+    "date": [
+      "2011-02-11"
+    ],
+    "date-submitted": null,
+    "description": [
+      "Photographer's description: Pictures taken during the Egyptian Revolution."
+    ],
+    "format": [
+      "image/jp2"
+    ],
+    "extent": [
+      "720 x 540 px."
+    ],
+    "medium": [
+      "digital images"
+    ],
+    "object-identifier": [
+      "UOTS_Photos_Ahmed-Eldiwany_0003"
+    ],
+    "collection": [
+      "University on the Square: Documenting Egypt's 21st Century Revolution"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "license": [
+      "Copyright 2011, American University in Cairo. All rights reserved."
+    ],
+    "source": [
+      "University on the Square: Documenting Egypt's 21st Century Revolution Photographs; Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll7/id/3\">Overturned burned out car</a></span>"
+    ],
+    "subject-tgm": [
+      "Fires; Vehicles"
+    ],
+    "subject-lcsh": [
+      "Demonstrations; Egypt; Protest movements; Revolutions; Revolutions"
+    ],
+    "title": [
+      "Overturned burned out car"
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "language": null,
+    "name": null,
+    "contributor": null,
+    "artist": null,
+    "age": null,
+    "egyptian-national?": null,
+    "gender": null,
+    "occupation": null,
+    "relationship-to-auc": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll7:4/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll7:4/full/full/0/default.jpg",
+    "acknowledgements": [
+      "The University on the Square: Documenting Egypt's 21st Century Revolution project was made possible by a grant from the Andrew W. Mellon Foundation."
+    ],
+    "creator": [
+      "Eldiwany, Ahmed"
+    ],
+    "location": [
+      "Cairo; Al-Qāhirah governorate; Egypt; Africa"
+    ],
+    "date": [
+      "2011-02-11"
+    ],
+    "date-submitted": null,
+    "description": [
+      "The demonstrators are standing on a balcony. Photographer's description: Pictures taken during the Egyptian Revolution. Text in image: أمن الدولة خرجوا المساجين بس احنا مش خايفين. Translation of Text in image: State security released the prisoners but we are not scared."
+    ],
+    "format": [
+      "image/jp2"
+    ],
+    "extent": [
+      "540 x 720 px."
+    ],
+    "medium": [
+      "digital images"
+    ],
+    "object-identifier": [
+      "UOTS_Photos_Ahmed-Eldiwany_0004"
+    ],
+    "collection": [
+      "University on the Square: Documenting Egypt's 21st Century Revolution"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "license": [
+      "Copyright 2011, American University in Cairo. All rights reserved."
+    ],
+    "source": [
+      "University on the Square: Documenting Egypt's 21st Century Revolution Photographs; Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll7/id/4\">Prisoner release banner</a></span>"
+    ],
+    "subject-tgm": [
+      "Buildings; People; Protest posters"
+    ],
+    "subject-lcsh": [
+      "Demonstrations; Egypt; Protest movements; Revolutions; Revolutions"
+    ],
+    "title": [
+      "Prisoner release banner"
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "language": [
+      "Arabic"
+    ],
+    "name": null,
+    "contributor": null,
+    "artist": null,
+    "age": null,
+    "egyptian-national?": null,
+    "gender": null,
+    "occupation": null,
+    "relationship-to-auc": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll7:5/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll7:5/full/full/0/default.jpg",
+    "acknowledgements": [
+      "The University on the Square: Documenting Egypt's 21st Century Revolution project was made possible by a grant from the Andrew W. Mellon Foundation."
+    ],
+    "creator": [
+      "Eldiwany, Ahmed"
+    ],
+    "location": [
+      "Cairo; Al-Qāhirah governorate; Egypt; Africa"
+    ],
+    "date": [
+      "2011-02-11"
+    ],
+    "date-submitted": null,
+    "description": [
+      "Photographer's description: Pictures taken during the Egyptian Revolution. Text in image:  مبارك SHIFT DEL. Translation of Text in image: Mubārak SHIFT DEL."
+    ],
+    "format": [
+      "image/jp2"
+    ],
+    "extent": [
+      "720 x 540 px."
+    ],
+    "medium": [
+      "digital images"
+    ],
+    "object-identifier": [
+      "UOTS_Photos_Ahmed-Eldiwany_0005"
+    ],
+    "collection": [
+      "University on the Square: Documenting Egypt's 21st Century Revolution"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "license": [
+      "Copyright 2011, American University in Cairo. All rights reserved."
+    ],
+    "source": [
+      "University on the Square: Documenting Egypt's 21st Century Revolution Photographs; Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll7/id/5\">Shift Delete Mubārak' banner</a></span>"
+    ],
+    "subject-tgm": [
+      "Protest posters"
+    ],
+    "subject-lcsh": [
+      "Demonstrations; Egypt; Protest movements; Revolutions"
+    ],
+    "title": [
+      "Shift Delete Mubārak' banner"
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "language": [
+      "Arabic; English"
+    ],
+    "name": [
+      "Mubārak, Muḥammad Ḥusnī, 1928-"
+    ],
+    "contributor": null,
+    "artist": null,
+    "age": null,
+    "egyptian-national?": null,
+    "gender": null,
+    "occupation": null,
+    "relationship-to-auc": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll7:6/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll7:6/full/full/0/default.jpg",
+    "acknowledgements": [
+      "The University on the Square: Documenting Egypt's 21st Century Revolution project was made possible by a grant from the Andrew W. Mellon Foundation."
+    ],
+    "creator": [
+      "Eldiwany, Ahmed"
+    ],
+    "location": [
+      "Cairo; Al-Qāhirah governorate; Egypt; Africa"
+    ],
+    "date": [
+      "2011-02-11"
+    ],
+    "date-submitted": null,
+    "description": [
+      "The tanks and soldiers are blocking the entrance to the bridge. Photographer's description: Pictures taken during the Egyptian Revolution."
+    ],
+    "format": [
+      "image/jp2"
+    ],
+    "extent": [
+      "720 x 540 px."
+    ],
+    "medium": [
+      "digital images"
+    ],
+    "object-identifier": [
+      "UOTS_Photos_Ahmed-Eldiwany_0007"
+    ],
+    "collection": [
+      "University on the Square: Documenting Egypt's 21st Century Revolution"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "license": [
+      "Copyright 2011, American University in Cairo. All rights reserved."
+    ],
+    "source": [
+      "University on the Square: Documenting Egypt's 21st Century Revolution Photographs; Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll7/id/6\">Tanks on the Qaşr al-Nīl Bridge</a></span>"
+    ],
+    "subject-tgm": [
+      "People; Soldiers; Tanks (Military science)"
+    ],
+    "subject-lcsh": [
+      "Demonstrations; Egypt; Protest movements; Revolutions; Riot control"
+    ],
+    "title": [
+      "Tanks on the Qaşr al-Nīl Bridge"
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "language": null,
+    "name": null,
+    "contributor": null,
+    "artist": null,
+    "age": null,
+    "egyptian-national?": null,
+    "gender": null,
+    "occupation": null,
+    "relationship-to-auc": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll7:7/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll7:7/full/full/0/default.jpg",
+    "acknowledgements": [
+      "The University on the Square: Documenting Egypt's 21st Century Revolution project was made possible by a grant from the Andrew W. Mellon Foundation."
+    ],
+    "creator": [
+      "Eldiwany, Ahmed"
+    ],
+    "location": [
+      "Cairo; Al-Qāhirah governorate; Egypt; Africa"
+    ],
+    "date": [
+      "2011-02-11"
+    ],
+    "date-submitted": null,
+    "description": [
+      "The statue is located in Mīdān Ṭalʻat Ḥarb. Photographer's description: Pictures taken during the Egyptian Revolution. Text in image: انتهى الدرس يا غبى ارحل يا عديم الدم, Mubarak out, Game over Mr. Mubarak, Get the fuck out of Egypt!!, Stupid Mubarakstupid, No to Mubarak. Translation of Text in image: End of lesson idiot, Leave you bloodless man."
+    ],
+    "format": [
+      "image/jp2"
+    ],
+    "extent": [
+      "540 x 720 px."
+    ],
+    "medium": [
+      "digital images"
+    ],
+    "object-identifier": [
+      "UOTS_Photos_Ahmed-Eldiwany_0008"
+    ],
+    "collection": [
+      "University on the Square: Documenting Egypt's 21st Century Revolution"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "license": [
+      "Copyright 2011, American University in Cairo. All rights reserved."
+    ],
+    "source": [
+      "University on the Square: Documenting Egypt's 21st Century Revolution Photographs; Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll7/id/7\">Graffiti on base of Ṭalʻat Ḥarb monument</a></span>"
+    ],
+    "subject-tgm": [
+      "Graffiti; Monuments and memorials"
+    ],
+    "subject-lcsh": [
+      "Demonstrations; Egypt; Protest movements; Revolutions"
+    ],
+    "title": [
+      "Graffiti on base of Ṭalʻat Ḥarb monument"
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "language": [
+      "Arabic; English"
+    ],
+    "name": [
+      "Mubārak, Muḥammad Ḥusnī, 1928-"
+    ],
+    "contributor": null,
+    "artist": null,
+    "age": null,
+    "egyptian-national?": null,
+    "gender": null,
+    "occupation": null,
+    "relationship-to-auc": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll7:8/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll7:8/full/full/0/default.jpg",
+    "acknowledgements": [
+      "The University on the Square: Documenting Egypt's 21st Century Revolution project was made possible by a grant from the Andrew W. Mellon Foundation."
+    ],
+    "creator": [
+      "Eldiwany, Ahmed"
+    ],
+    "location": [
+      "Cairo; Al-Qāhirah governorate; Egypt; Africa"
+    ],
+    "date": [
+      "2011-02-11"
+    ],
+    "date-submitted": null,
+    "description": [
+      "Photographer's description: Pictures taken during the Egyptian Revolution. Text in image: عيش يتاكل - حرية - كرامة - انسانية. Translation of Text in image: Bread(edible)- Liberty- Human Dignity. Text in image on reverse: DEMOCRACY."
+    ],
+    "format": [
+      "image/jp2"
+    ],
+    "extent": [
+      "720 x 540 px."
+    ],
+    "medium": [
+      "digital images"
+    ],
+    "object-identifier": [
+      "UOTS_Photos_Ahmed-Eldiwany_0009"
+    ],
+    "collection": [
+      "University on the Square: Documenting Egypt's 21st Century Revolution"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "license": [
+      "Copyright 2011, American University in Cairo. All rights reserved."
+    ],
+    "source": [
+      "University on the Square: Documenting Egypt's 21st Century Revolution Photographs; Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll7/id/8\">Liberty, human dignity, democracy' banner</a></span>"
+    ],
+    "subject-tgm": [
+      "Crowds; Protest posters; Women"
+    ],
+    "subject-lcsh": [
+      "Demonstrations; Democracy; Egypt; Human rights; Protest movements; Revolutions"
+    ],
+    "title": [
+      "Liberty, human dignity, democracy' banner"
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "language": [
+      "Arabic; English"
+    ],
+    "name": null,
+    "contributor": null,
+    "artist": null,
+    "age": null,
+    "egyptian-national?": null,
+    "gender": null,
+    "occupation": null,
+    "relationship-to-auc": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll7:9/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll7:9/full/full/0/default.jpg",
+    "acknowledgements": [
+      "The University on the Square: Documenting Egypt's 21st Century Revolution project was made possible by a grant from the Andrew W. Mellon Foundation."
+    ],
+    "creator": [
+      "Eldiwany, Ahmed"
+    ],
+    "location": [
+      "Cairo; Al-Qāhirah governorate; Egypt; Africa"
+    ],
+    "date": [
+      "2011-02-11"
+    ],
+    "date-submitted": null,
+    "description": [
+      "Photographer's description: Pictures taken during the Egyptian Revolution."
+    ],
+    "format": [
+      "image/jp2"
+    ],
+    "extent": [
+      "720 x 540 px."
+    ],
+    "medium": [
+      "digital images"
+    ],
+    "object-identifier": [
+      "UOTS_Photos_Ahmed-Eldiwany_0012"
+    ],
+    "collection": [
+      "University on the Square: Documenting Egypt's 21st Century Revolution"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "license": [
+      "Copyright 2011, American University in Cairo. All rights reserved."
+    ],
+    "source": [
+      "University on the Square: Documenting Egypt's 21st Century Revolution Photographs; Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll7/id/9\">Interior of a burned out car</a></span>"
+    ],
+    "subject-tgm": [
+      "Fires; Vehicles"
+    ],
+    "subject-lcsh": [
+      "Demonstrations; Egypt; Protest movements; Revolutions"
+    ],
+    "title": [
+      "Interior of a burned out car"
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "language": null,
+    "name": null,
+    "contributor": null,
+    "artist": null,
+    "age": null,
+    "egyptian-national?": null,
+    "gender": null,
+    "occupation": null,
+    "relationship-to-auc": null
+  }
+]

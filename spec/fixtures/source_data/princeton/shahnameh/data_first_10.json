@@ -1,0 +1,348 @@
+[
+  {
+    "id": "https://figgy.princeton.edu/concern/scanned_resources/d917e0d6-2894-4d1e-939b-93fdc0796c96/manifest",
+    "description": [
+      "Ms. codex.",
+      "Title supplied by cataloger.",
+      "The album consists of 55 folios measuring 485 x 280 mm.",
+      "Origin: The signed paintings and calligraphies are attributed to Mīr ʻAlī, Sulṭān ʻAlī al-Mashhadī, Muḥammad ʻAẓīm al-Ikthīr, ʻImād al-Ḥusaynī, Muḥammad Muʻīn ʻAlī Tajallī (= Shāh Muḥammad Muʻīn ʻAlī Tajallī Chishtī, fol. 32a), Muḥammad Ibrāhīm, ʻAbd Allāh, Muḥammad ʻAlī, Muḥammad Badīʻ al-Iṣfahānī, Tajallī ʻAlī Shāh, Muḥammad Karīm, Anūp Chator (Chatar, Chitor: see Titley), Mīr Muḥammad Māh Ḥusaynī, Zayn al-Ḥaqq, Zarrīn Raqam, Muḥammad Afḍal, Ghulām Muṣṭafá Khān, Muḥammad Aṭhar, Asad Allāh, Mughalkhān, Ghulām Jamāl Allāh Khān, Sayyid ʻAlī Būkhārī Rūshan Raqam, Jawāhir Raqam-i Thānī, Muḥammad Ḥusayn, Muḥammad ʻAlī Gawhar, Muḥammad al-Fakhkhār, Abū al-Baqāʼ al-Mūsawī, Kifāyat Khān, Ismāʻīl, Ilyās Bahādur, Aḥmad Shāh, Muḥammad Dalīr, and date from 1014H. [1630 or 31] to 1189 [1775]. Other undated paintings can be dated to 18th-19th century India and 16th or early 17th century Central Asia. One piece is dated Awrangābād, [1]203 [1788 or 9] (fol. 22a)."
+    ],
+    "thumbnail": [
+      "https://iiif-cloud.princeton.edu/iiif/2/5e%2F26%2F9e%2F5e269edd605a48f6baeccb446e35da81%2Fintermediate_file/full/!200,150/0/default.jpg",
+      "https://iiif-cloud.princeton.edu/iiif/2/5e%2F26%2F9e%2F5e269edd605a48f6baeccb446e35da81%2Fintermediate_file"
+    ],
+    "artist": [
+      "Anup Chittaur, 17th cent",
+      "Ilyās Bahādur, 17th cent"
+    ],
+    "calligrapher": [
+      "Mashhadī, Sulṭān ʻAlī.",
+      "Ḥusaynī, ʻImād, active 17th century",
+      "Mīr ʻAlī, 17th cent",
+      "Muḥammad Muʻīn ʻAlī, 18th cent",
+      "Muḥammad ʻAlī, fl. 1719",
+      "Muḥammad Ibrāhīm, 17th cent",
+      "Iṣfahānī, Muḥammad Badīʻ, fl. 1710",
+      "Tajallī ʻAlī Shāh, active 1775",
+      "Ḥusaynī, Muḥammad ʻĀbid",
+      "Muḥammad Karīm, fl. 1672",
+      "Zayn al-Ḥaqq, active 18th century",
+      "Zarrīn Raqam, active 18th century",
+      "Asad Allāh, active 18th century",
+      "Muḥammad Afḍal, 18th cent",
+      "Muṣṭafá Khān.",
+      "ʻAbd Allāh, active 17th century",
+      "Aṭhar, Muḥammad",
+      "Mughalkhān.",
+      "Jamāl Allāh Khān.",
+      "Dalīr, Muḥammad, 18th cent",
+      "Rūshan Raqam, 18th cent",
+      "Javāhir Raqam-i Thānī.",
+      "Muḥammad ʻAlī Gawhar, 18th cent",
+      "Fakhkhār, Muḥammad",
+      "Mūsawī, Abū al-Baqāʼ, 17th cent",
+      "Kifāyat Khān, 18th cent",
+      "Ismāʻīl, active 18th century",
+      "Aḥmad Shāh, active 18th century",
+      "Iksīr, Muḥammad ʻAẓīm, active 18th century"
+    ],
+    "former-owner": [
+      "Malcolm, John, 1769-1833"
+    ],
+    "abstract": [
+      "Album of miniatures and specimens of calligraphy of Indian origin. Described by Mika Natif."
+    ],
+    "extent": [
+      "55 leaves : paper, col. ill. ; 485 x 280 mm."
+    ],
+    "identifier": [
+      "<a href='http://arks.princeton.edu/ark:/88435/bg257f113' alt='Identifier'>http://arks.princeton.edu/ark:/88435/bg257f113</a>"
+    ],
+    "replaces": [
+      "pudl0032/102g"
+    ],
+    "title": [
+      "[Album of miniatures and specimens of calligraphy of Indian origin]."
+    ],
+    "type": [
+      "Composite portraits",
+      "Portraits",
+      "Art",
+      "Illustrations",
+      "Pictorial works"
+    ],
+    "provenance": [
+      "A letter attached to the album mentions that this was made for the Portuguese governor of India, but this is a late attribution. The document further indicates that the book belonged to the Delaney family who sold it to Sir John Malcolm (1769-1833) from the East India Company. It was then sold to Rowland Jones Esq. (1772-1856), Broom Hall, Carnarvonshire, Wales. The album was then auctioned in an estate sale between Feb. 24 and March 8, 1857 at Carnarvonshire and was purchased by William Stewart Esq. (1798-1874) of Aldenham Abbey, Hertfordshire. Stewart sold the book at Christie's auction in London in 1875. There was probably another owner after Stewart from whom Robert Garrett (1875-1961) purchased the album."
+    ],
+    "contributor": [
+      "مشهدي، سلطان علي",
+      "حسيني، عماد",
+      "مير علي",
+      "محمد معين علي",
+      "محمد علي",
+      "محمد ابراهيم",
+      "اصفهاني، محمد بديع",
+      "تجلي علي شاه",
+      "حسيني، محمد عابد",
+      "محمد كريم",
+      "انوپ چتر",
+      "زين الحق",
+      "زرين رقم",
+      "اسد الله",
+      "محمد افضل",
+      "مصطفى خان",
+      "عبد الله",
+      "اطهر، محمد",
+      "مغلخان",
+      "جمال الله خان",
+      "دلير، محمد",
+      "روشن رقم",
+      "جواهر رقم ثاني",
+      "محمد علي گوهر",
+      "فخار، محمد",
+      "موسوي، ابو البقاء",
+      "كفايت خان",
+      "اسماعيل",
+      "الياس بهادر",
+      "احمد شاه",
+      "اكسير، محمد عظيم"
+    ],
+    "date": [
+      "1600-1899"
+    ],
+    "language": [
+      "Persian"
+    ],
+    "local-identifier": [
+      "pmc87qv19t"
+    ],
+    "publisher": [
+      "[between 16-- and 18--]"
+    ],
+    "subject": [
+      "Manuscripts, Persian—New Jersey—Princeton"
+    ],
+    "source-acquisition": [
+      "Gift ; Robert Garrett, Class of 1897 ; 1942."
+    ],
+    "call-number": [
+      "Islamic Manuscripts, Garrett no. 102G",
+      "Electronic Resource"
+    ],
+    "location": [
+      "HSVM Islamic Manuscripts, Garrett no. 102G",
+      "HSVM Electronic Resource",
+      "ELF1 Islamic Manuscripts, Garrett no. 102G",
+      "ELF1 Electronic Resource"
+    ],
+    "electronic-locations": [
+      null
+    ],
+    "embargo-date": [
+      ""
+    ],
+    "member-of-collections": [
+      "Robert Garrett",
+      "Princeton Digital Library of Islamic Manuscripts",
+      "Collections Donated to Princeton University Library",
+      "Capturing Feathers",
+      "Shahnamah"
+    ],
+    "author": null,
+    "collector": null,
+    "alternative": null,
+    "uniform-title": null,
+    "content-type": null,
+    "creator": null,
+    "text-language": null,
+    "binding-note": null,
+    "contents": null
+  },
+  {
+    "id": "https://figgy.princeton.edu/concern/scanned_resources/72507ee3-850b-4ad6-9098-141257cb319f/manifest",
+    "description": [
+      "Ms. codex.",
+      "Text begins on fol. 12b.",
+      "Includes 51 miniatures; handlist of their description by Louise Marlow on file.",
+      "Physical description: 29 lines per page, in four columns; written in nastaʻliq on glazed paper. Volume measures 47.6 x 33.5 cm; written surface, 30 x 16.5 cm. Catchwords; some marginal notations. Some leaves have been repaired at edges. In excellent condition.",
+      "Decoration: Text framed in silver, red, gold, black and orange; columns separated by gold bands containing floral pattern. Text on gilt is in white; some marginal notes in red. Illuminated caption bands throughout text. Title page, following page and first page of text are elaborately illuminated. 51 miniatures by an artist of the Shīrāz school illustrate famous events of the epic. Six of these appear on opposing pages at the beginning, middle (222b-223a) and end. The margins are illuminated with gilt floral and animal motifs.",
+      "Origin: Copied by Qiwām ibn Muḥammad Shīrāzī in 998 H [1589 or 90] (fol. 474a); likely produced in Shīrāz."
+    ],
+    "thumbnail": [
+      "https://iiif-cloud.princeton.edu/iiif/2/25%2F6a%2Fd5%2F256ad5ad21d140598eda5ef259e110cb%2Fintermediate_file/full/!200,150/0/default.jpg",
+      "https://iiif-cloud.princeton.edu/iiif/2/25%2F6a%2Fd5%2F256ad5ad21d140598eda5ef259e110cb%2Fintermediate_file"
+    ],
+    "artist": null,
+    "calligrapher": null,
+    "former-owner": null,
+    "abstract": [
+      "Lavishly illuminated copy of the Shāhnāmah, containing 45 high quality full-page miniatures and three double-page compositions of the Shīrāz school dated 998 H [1589 or 90]. Likely produced in Shīrāz for the Safavid royal family. Bequeathed to the Princeton University Library in 1983 by Clara S. Peck, sister of Fremont C. Peck, Class of 1920."
+    ],
+    "extent": [
+      "475 leaves : paper, col. ill. ; 476 x 335 mm."
+    ],
+    "identifier": [
+      "<a href='http://arks.princeton.edu/ark:/88435/bg257f817' alt='Identifier'>http://arks.princeton.edu/ark:/88435/bg257f817</a>"
+    ],
+    "replaces": null,
+    "title": [
+      "کتاب شاهنامه / فردوسى التوسى"
+    ],
+    "type": [
+      "Headpieces (layout features)",
+      "Illuminated manuscripts",
+      "Poetry"
+    ],
+    "provenance": [
+      "Inscription of ownership on f. 475b of Khayrāt Khān, envoy from ʻAbd Allāh Quṭbshāh to Iṣfahān, who purchased the ms. from the daughter of Khān Aḥmad Khān of Gīlān and widow of Shāh ʻAbbās in Rajab 1040H (February 1631). The ms. was later owned by Sir George Holford, equerry to George V, and likely purchased by A. S. W. Rosenbach in 1925. The ms. was subsequently sold to Clara Peck by Rosenbach in 1946 (Marlow, 214)."
+    ],
+    "contributor": null,
+    "date": [
+      "1589-1590"
+    ],
+    "language": [
+      "Persian"
+    ],
+    "local-identifier": null,
+    "publisher": [
+      "[Shīrāz, 1589 or 90]"
+    ],
+    "subject": [
+      "Headpieces (layout features)—Iran—Shīrāz—16th century"
+    ],
+    "source-acquisition": [
+      "Gift; Clara S. Peck, 5/20/1983 (AM 83-173 541)."
+    ],
+    "call-number": null,
+    "location": null,
+    "electronic-locations": [
+      null
+    ],
+    "embargo-date": [
+      ""
+    ],
+    "member-of-collections": [
+      "Digitized Manuscripts",
+      "Patron Requests",
+      "Shahnamah"
+    ],
+    "author": [
+      "Firdawsī"
+    ],
+    "collector": [
+      "Holford, George Lindsay, 1860-1926"
+    ],
+    "alternative": [
+      "Shahnama with paintings."
+    ],
+    "uniform-title": [
+      "Shāhnāmah",
+      "شاهنامه"
+    ],
+    "content-type": [
+      "Manuscript",
+      "Book"
+    ],
+    "creator": [
+      "Firdawsī",
+      "فردوسى"
+    ],
+    "text-language": [
+      "Persian."
+    ],
+    "binding-note": [
+      "Binding is red moroccan leather inlaid with blue and green bands and stamped in gold with floral and geometric designs. Doublures and end leaves are leather borders similar to the covers but with centers of white satin. Silk endbands in alternating stripes of blue, white and red. Violet silk bookmark with gold tassel."
+    ],
+    "contents": null
+  },
+  {
+    "id": "https://figgy.princeton.edu/concern/scanned_resources/6b6dbd85-c985-4ae9-a239-457f5ef62817/manifest",
+    "description": [
+      "Ms. codex.",
+      "Title from fol. 567b.",
+      "Physical description: 25 lines per page, in four columns; written in nastaʻliq in black on glazed, laid Arabic paper. Headings in red; catchwords. Text framed in blue, gold, and red with outer marginal border in gold. Occasional staining and smudging; some paper repairs, particularly to reinforce miniatures. Some corrosion of paper due to verdirgris used in borders. Fol. 258-259 bound in reverse order; fol. 307 should be bound after fol. 310. Otherwise in excellent condition.",
+      "Decoration: On fol. 1b-2a, 277b-278a (beginning of book 3), 442b-443a (beginning of book 4), lavishly illuminated ʻunwāns and borders, primarily in gold and blue, with text set within clouds on gold ground. With 36 high-quality Indian miniatures.",
+      "Origin: Copy completed 1065 H [1654 or 5] (fol. 569a)."
+    ],
+    "thumbnail": [
+      "https://iiif-cloud.princeton.edu/iiif/2/3c%2Fd2%2Fc2%2F3cd2c2879d664799b6c88f083860e719%2Fintermediate_file/full/!200,150/0/default.jpg",
+      "https://iiif-cloud.princeton.edu/iiif/2/3c%2Fd2%2Fc2%2F3cd2c2879d664799b6c88f083860e719%2Fintermediate_file"
+    ],
+    "artist": null,
+    "calligrapher": null,
+    "former-owner": null,
+    "abstract": [
+      "Elegant illuminated copy of the Shāhnāmah, without introduction, illustrated with 36 high-quality Indian miniatures."
+    ],
+    "extent": [
+      "ii, 569, ii leaves : paper, col. ill. ; 393 x 240 (286 x 165) mm. bound to 399 x 250 mm."
+    ],
+    "identifier": [
+      "ark:/88435/dcfx719z13h"
+    ],
+    "replaces": null,
+    "title": [
+      "کتاب شاهنامه / من الکلام فردوسى طوسى"
+    ],
+    "type": [
+      "Headpieces (layout features)",
+      "Illuminated manuscripts"
+    ],
+    "provenance": [
+      "Acquired from Kalebdjian Frères, 1924."
+    ],
+    "contributor": null,
+    "date": [
+      "1654-1655"
+    ],
+    "language": [
+      "Persian"
+    ],
+    "local-identifier": null,
+    "publisher": [
+      "[1654 or 5]"
+    ],
+    "subject": [
+      "Headpieces (layout features)—Islamic countries—17th century"
+    ],
+    "source-acquisition": [
+      "Gift; Robert Garrett (Class of 1897), 1942."
+    ],
+    "call-number": null,
+    "location": null,
+    "electronic-locations": null,
+    "embargo-date": [
+      ""
+    ],
+    "member-of-collections": [
+      "Shahnamah"
+    ],
+    "author": [
+      "Firdawsī"
+    ],
+    "collector": null,
+    "alternative": null,
+    "uniform-title": [
+      "Shāhnāmah",
+      "شاهنامه"
+    ],
+    "content-type": [
+      "Manuscript",
+      "Book"
+    ],
+    "creator": [
+      "Firdawsī",
+      "فردوسى"
+    ],
+    "text-language": [
+      "Persian."
+    ],
+    "binding-note": [
+      "Binding repaired; original covers are maroon leather with panel stamp and stamped borders painted gold and blue. Doublures, now detached, are brown leather with gold-stamped central mandorla with pendants."
+    ],
+    "contents": [
+      "Miniatures: fol. 4b: [Kayumars instructs son to destroy divs] -- fol. 8a: [Jamshid halved before Zahhak] -- fol. 19a: [Iraj with brothers Tur, Sakila just before murder] -- fol. 41b: [Rustam's birth] -- fol. 43a: [Rustam slays White Elephant] -- fol. 52a: [Rustam catches Rakhsh] -- fol. 59b: [Rustam slays dragon] -- fol. 62a: [Rustam slays White Div] -- fol. 84a: [Rustam mourns Suhrab] -- fol. 92a: [Fire ordeal: Siyavash] -- fol. 110b: [Siyavash taken prisoner] -- fol. 112a: [Guruy executes Siyavash] -- fol. 162a: [Rustam slays Ashkabus, horse] -- fol. 171a: [Rustam pulls Khaqan of China from elephant by lasso] -- fol. 179b: [Akvan Div flings Rustam into sea] -- fol. 192b: [Rustam rescues Bizhan from pit] -- fol. 194b: [Rustam fights Afrasiyab] -- fol. 224a: [Battle scene] -- fol. 229a: [Battle scene].",
+      "fol. 232b: [Battle scene] -- fol. 243b: [Battle scene] -- fol. 274b: [Kay Khusraw slays Afrasiyab while Garsivaz looks on] -- fol. 308b: [Isfandiyar's first exploit: Fights wolves] -- fol. 309b: [Isfandiyar's third exploit: Battles dragon] --fol. 310b: [Isfandiyar's fifth exploit: Kills Simah Barzin] -- fol. 321a: [Bahram Gur hunts lions] -- fol. 323a: [Bahram Gur kills dragon which devoured youth] -- fol. 331a: [Bahram Gur kills wolf] -- fol. 354b: [Shapur cuts off nose, ears of King Rum] -- fol. 361b: [Sea monster kills Yazdigird] -- fol. 387a: [Rustam shoots double-pointed arrow in Isfandiyar eyes] -- fol. 392a: [Rustam slays Shaghad then dies] -- fol. 404b: [Sikandar attends dying Dara] -- fol. 415a: [Sikandar before Qaydafah who holds portrait] -- fol. 420b: [Sikandar, Khidr seek fountain of life] -- fol 421b: [Sikandar encounters Israfil] -- fol. 443a: [Kasra Anushirvan enthroned]."
+    ]
+  }
+]

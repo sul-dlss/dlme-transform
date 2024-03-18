@@ -1,0 +1,495 @@
+[
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll35:3/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll35:0/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll35:1/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll35:2/full/full/0/default.jpg"
+    ],
+    "acknowledgements": [
+      "The Rare Books and Special Collections Library would like to thank Professor Saleh Lamei for his generous donation and work preserving the architectural heritage of Egypt."
+    ],
+    "site": [
+      "Sabil wa-Kuttab wa-Wakala al-Sultan Qaytbay"
+    ],
+    "sheet-scale": [
+      "Cairo; Egypt"
+    ],
+    "creator": [
+      "Lamei, Saleh"
+    ],
+    "size": [
+      "3 drawings"
+    ],
+    "license": [
+      "architectural drawings (visual works)"
+    ],
+    "access-rights": [
+      "Copyright Saleh Lamei"
+    ],
+    "source": [
+      "Saleh Lamei Collection; Regional Architecture Center; Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll35/id/3\">Sabil Qaitbay - Saliba</a></span>"
+    ],
+    "subject": [
+      "Architecture, Mameluk; Islamic architecture -- Egypt -- Cairo"
+    ],
+    "title": [
+      "Sabil Qaitbay - Saliba"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "date": null,
+    "location": null,
+    "object-identifier": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll35:5/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll35:4/full/full/0/default.jpg",
+    "acknowledgements": [
+      "The Rare Books and Special Collections Library would like to thank Professor Saleh Lamei for his generous donation and work preserving the architectural heritage of Egypt."
+    ],
+    "site": [
+      "Saray al-Musafir khana"
+    ],
+    "sheet-scale": [
+      "Cairo; Egypt"
+    ],
+    "creator": [
+      "Lamei. Saleh"
+    ],
+    "size": null,
+    "license": [
+      "architectural drawings (visual works)"
+    ],
+    "access-rights": [
+      "Copyright Saleh Lamei"
+    ],
+    "source": [
+      "Saleh Lamei Collection; Regional Architecture Center; Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll35/id/5\">Saray al Musafirkana</a></span>"
+    ],
+    "subject": [
+      "Achitecture, Ottoman"
+    ],
+    "title": [
+      "Saray al Musafirkana"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "date": [
+      "1987-11"
+    ],
+    "location": [
+      "Ink on claque"
+    ],
+    "object-identifier": [
+      "SL.1987.03.244"
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll35:8/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll35:6/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll35:7/full/full/0/default.jpg"
+    ],
+    "acknowledgements": [
+      "The Rare Books and Special Collections Library would like to thank Professor Saleh Lamei for his generous donation and work preserving the architectural heritage of Egypt."
+    ],
+    "site": [
+      "Mosque of Al-Zahir Baybars"
+    ],
+    "sheet-scale": [
+      "Cairo; Egypt"
+    ],
+    "creator": [
+      "Lamei. Saleh"
+    ],
+    "size": null,
+    "license": [
+      "architectural drawings (visual works)"
+    ],
+    "access-rights": [
+      "Copyright Saleh Lamei"
+    ],
+    "source": [
+      "Saleh Lamei Collection; Regional Architecture Center; Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll35/id/8\">Mosque of al Zahir Baybars</a></span>"
+    ],
+    "subject": [
+      "Mosques -- Egypt -- Cairo; Islamic architecture; Architecture, Mameluk"
+    ],
+    "title": [
+      "Mosque of al Zahir Baybars"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "date": [
+      "1987-11"
+    ],
+    "location": null,
+    "object-identifier": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll35:11/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll35:9/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll35:10/full/full/0/default.jpg"
+    ],
+    "acknowledgements": [
+      "The Rare Books and Special Collections Library would like to thank Professor Saleh Lamei for his generous donation and work preserving the architectural heritage of Egypt."
+    ],
+    "site": [
+      "Manzil Qaytbay"
+    ],
+    "sheet-scale": [
+      "Cairo; Egypt"
+    ],
+    "creator": [
+      "Lamei. Saleh"
+    ],
+    "size": null,
+    "license": [
+      "architectural drawings (visual works)"
+    ],
+    "access-rights": [
+      "Copyright Saleh Lamei"
+    ],
+    "source": [
+      "Saleh Lamei Collection; Regional Architecture Center; Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll35/id/11\">Manzil Qaitbay</a></span>"
+    ],
+    "subject": [
+      "Architecture, Mameluk; Islamic architecture -- Egypt -- Cairo; Domestic architecture"
+    ],
+    "title": [
+      "Manzil Qaitbay"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "date": [
+      "1987-11"
+    ],
+    "location": null,
+    "object-identifier": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll35:13/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll35:12/full/full/0/default.jpg",
+    "acknowledgements": [
+      "The Rare Books and Special Collections Library would like to thank Professor Saleh Lamei for his generous donation and work preserving the architectural heritage of Egypt."
+    ],
+    "site": [
+      "Tomb of Gani bey al-Ashrafi"
+    ],
+    "sheet-scale": [
+      "Cairo; Egypt"
+    ],
+    "creator": [
+      "Lamei. Saleh"
+    ],
+    "size": null,
+    "license": [
+      "architectural drawings (visual works)"
+    ],
+    "access-rights": [
+      "Copyright Saleh Lamei"
+    ],
+    "source": [
+      "Saleh Lamei Collection; Regional Architecture Center; Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll35/id/13\">Dome of Gani bey Al Ashrafi</a></span>"
+    ],
+    "subject": [
+      "Architecture, Mameluk; Islamic architecture -- Egypt -- Cairo; Mausoleums -- Egypt -- Cairo"
+    ],
+    "title": [
+      "Dome of Gani bey Al Ashrafi"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "date": [
+      "1987-11"
+    ],
+    "location": [
+      "Ink on claque"
+    ],
+    "object-identifier": [
+      "SL.1987.03.179"
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll35:15/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll35:14/full/full/0/default.jpg",
+    "acknowledgements": [
+      "The Rare Books and Special Collections Library would like to thank Professor Saleh Lamei for his generous donation and work preserving the architectural heritage of Egypt."
+    ],
+    "site": [
+      "Ali Badr al-Din al-Qarafi Mausoleum"
+    ],
+    "sheet-scale": [
+      "Cairo; Egypt"
+    ],
+    "creator": [
+      "Lamei. Saleh"
+    ],
+    "size": null,
+    "license": [
+      "architectural drawings (visual works)"
+    ],
+    "access-rights": [
+      "Copyright Saleh Lamei"
+    ],
+    "source": [
+      "Saleh Lamei Collection; Regional Architecture Center; Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll35/id/15\">Dome of Badr Al Qarafi</a></span>"
+    ],
+    "subject": [
+      "Architecture, Mameluk; Islamic architecture -- Egypt -- Cairo; Mausoleums -- Egypt -- Cairo"
+    ],
+    "title": [
+      "Dome of Badr Al Qarafi"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "date": [
+      "1987-11"
+    ],
+    "location": [
+      "Ink on claque"
+    ],
+    "object-identifier": [
+      "SL.1987.03.181"
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll35:17/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll35:16/full/full/0/default.jpg",
+    "acknowledgements": [
+      "The Rare Books and Special Collections Library would like to thank Professor Saleh Lamei for his generous donation and work preserving the architectural heritage of Egypt."
+    ],
+    "site": [
+      "Mausoleum of Anas (Yunus al-Dawadar)"
+    ],
+    "sheet-scale": [
+      "Cairo; Egypt"
+    ],
+    "creator": [
+      "Lamei. Saleh"
+    ],
+    "size": null,
+    "license": [
+      "architectural drawings (visual works)"
+    ],
+    "access-rights": [
+      "Copyright Saleh Lamei"
+    ],
+    "source": [
+      "Saleh Lamei Collection; Regional Architecture Center; Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll35/id/17\">Yunus al Dawadar Dome</a></span>"
+    ],
+    "subject": [
+      "Architecture, Mameluk; Islamic architecture -- Egypt -- Cairo; Mausoleums -- Egypt -- Cairo"
+    ],
+    "title": [
+      "Yunus al Dawadar Dome"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "date": [
+      "1987-11"
+    ],
+    "location": [
+      "Ink on claque"
+    ],
+    "object-identifier": [
+      "SL.1987.03.180"
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll35:20/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll35:18/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll35:19/full/full/0/default.jpg"
+    ],
+    "acknowledgements": [
+      "The Rare Books and Special Collections Library would like to thank Professor Saleh Lamei for his generous donation and work preserving the architectural heritage of Egypt."
+    ],
+    "site": [
+      "Mohamed Ali's Palace, Shubra"
+    ],
+    "sheet-scale": [
+      "Cairo; Egypt"
+    ],
+    "creator": [
+      "Lamei. Saleh"
+    ],
+    "size": null,
+    "license": [
+      "architectural drawings (visual works)"
+    ],
+    "access-rights": [
+      "Copyright Saleh Lamei"
+    ],
+    "source": [
+      "Saleh Lamei Collection; Regional Architecture Center; Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll35/id/20\">Saray Muhammad Ali Shubra</a></span>"
+    ],
+    "subject": [
+      "Architecture, Ottoman"
+    ],
+    "title": [
+      "Saray Muhammad Ali Shubra"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "date": [
+      "1987-11"
+    ],
+    "location": null,
+    "object-identifier": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll35:22/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll35:21/full/full/0/default.jpg",
+    "acknowledgements": [
+      "The Rare Books and Special Collections Library would like to thank Professor Saleh Lamei for his generous donation and work preserving the architectural heritage of Egypt."
+    ],
+    "site": null,
+    "sheet-scale": [
+      "Cairo; Egypt"
+    ],
+    "creator": [
+      "Lamei. Saleh"
+    ],
+    "size": null,
+    "license": [
+      "architectural drawings (visual works)"
+    ],
+    "access-rights": [
+      "Copyright Saleh Lamei"
+    ],
+    "source": [
+      "Saleh Lamei Collection; Regional Architecture Center; Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll35/id/22\">Wakala Qaitbay - Azhar</a></span>"
+    ],
+    "subject": [
+      "Architecture, Mameluk; Islamic architecture -- Egypt -- Cairo; Domestic architecture"
+    ],
+    "title": [
+      "Wakala Qaitbay - Azhar"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "date": [
+      "1987-11"
+    ],
+    "location": null,
+    "object-identifier": [
+      "SL.1987.03.106"
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll35:24/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll35:23/full/full/0/default.jpg",
+    "acknowledgements": [
+      "The Rare Books and Special Collections Library would like to thank Professor Saleh Lamei for his generous donation and work preserving the architectural heritage of Egypt."
+    ],
+    "site": null,
+    "sheet-scale": [
+      "Cairo; Egypt"
+    ],
+    "creator": [
+      "Lamei. Saleh"
+    ],
+    "size": null,
+    "license": [
+      "architectural drawings (visual works)"
+    ],
+    "access-rights": [
+      "Copyright Saleh Lamei"
+    ],
+    "source": [
+      "Saleh Lamei Collection; Regional Architecture Center; Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll35/id/24\">Kamiliya - Madrasa</a></span>"
+    ],
+    "subject": null,
+    "title": [
+      "Kamiliya - Madrasa"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "date": [
+      "1987-11"
+    ],
+    "location": null,
+    "object-identifier": [
+      "SL.1987.03.109"
+    ]
+  }
+]

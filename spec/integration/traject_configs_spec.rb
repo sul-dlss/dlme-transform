@@ -3,7 +3,7 @@
 RSpec.describe 'integration with Traject configs' do
   let!(:configs) do
     Dlme::ConfigFinder.for(
-      base_data_dir: Settings.defaults.base_data_dir,
+      base_data_dir: 'spec/fixtures/source_data',
       data_dir: Settings.defaults.data_dir,
       mapping_file: Settings.defaults.mapping_file,
       sample: true

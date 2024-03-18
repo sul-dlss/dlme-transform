@@ -1,0 +1,728 @@
+[
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll1:5/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll1:3/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll1:4/full/full/0/default.jpg"
+    ],
+    "alternative-title": [
+      "Kraus-Meyerhof Offprints volume 1 index"
+    ],
+    "collector": [
+      "Kraus, Paul, 1904-1944"
+    ],
+    "location": [
+      "Africa"
+    ],
+    "date-created": [
+      "1960; 1961; 1962; 1963; 1964; 1965; 1966; 1967; 1968; 1969; 1970; 1971; 1972; 1973; 1974; 1975; 1976; 1977; 1978; 1979; 1980; 1981; 1982; 1983; 1984; 1985; 1986; 1987; 1988; 1989"
+    ],
+    "description": [
+      "Index of offprints related to the study of Africa."
+    ],
+    "format": [
+      "application/pdf"
+    ],
+    "extent": [
+      "16.6 x 21 cm.; 2 p."
+    ],
+    "medium": [
+      "indexes (reference sources)"
+    ],
+    "identifier": [
+      "SC-1000-01-Volume-001-Index"
+    ],
+    "language": [
+      "German; English; French"
+    ],
+    "collection": [
+      "Kraus-Meyerhof Offprints"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "license": [
+      "Copyright 2012, American University in Cairo. All rights reserved."
+    ],
+    "source": [
+      "Kraus-Meyerhof Offprints Collection; Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll1/id/5\">Afrique</a></span>"
+    ],
+    "subject-lcsh": [
+      "Africa"
+    ],
+    "title": [
+      "Afrique"
+    ],
+    "type": [
+      "Still Image; Text"
+    ],
+    "compiler": [
+      "American University in Cairo. Rare Books and Special Collections Library"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "name": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll1:7/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll1:6/full/full/0/default.jpg",
+    "alternative-title": [
+      "Kraus-Meyerhof Offprints volume 2 index"
+    ],
+    "collector": [
+      "Kraus, Paul, 1904-1944"
+    ],
+    "location": null,
+    "date-created": [
+      "1960; 1961; 1962; 1963; 1964; 1965; 1966; 1967; 1968; 1969; 1970; 1971; 1972; 1973; 1974; 1975; 1976; 1977; 1978; 1979; 1980; 1981; 1982; 1983; 1984; 1985; 1986; 1987; 1988; 1989"
+    ],
+    "description": [
+      "Index of offprints related to the study of alchemy."
+    ],
+    "format": [
+      "application/pdf"
+    ],
+    "extent": [
+      "16.6 x 21 cm.; 1 p."
+    ],
+    "medium": [
+      "indexes (reference sources)"
+    ],
+    "identifier": [
+      "SC-1000-01-Volume-002-Index"
+    ],
+    "language": [
+      "German; English; French"
+    ],
+    "collection": [
+      "Kraus-Meyerhof Offprints"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "license": [
+      "Copyright 2012, American University in Cairo. All rights reserved."
+    ],
+    "source": [
+      "Kraus-Meyerhof Offprints Collection; Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll1/id/7\">Alchime Antique</a></span>"
+    ],
+    "subject-lcsh": [
+      "Alchemy"
+    ],
+    "title": [
+      "Alchime Antique"
+    ],
+    "type": [
+      "Still Image; Text"
+    ],
+    "compiler": [
+      "American University in Cairo. Rare Books and Special Collections Library"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "name": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll1:9/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll1:8/full/full/0/default.jpg",
+    "alternative-title": [
+      "Kraus-Meyerhof Offprints volume 3 part 1 index"
+    ],
+    "collector": [
+      "Kraus, Paul, 1904-1944"
+    ],
+    "location": [
+      "Greece; Europe; Syria; Asia"
+    ],
+    "date-created": [
+      "1960; 1961; 1962; 1963; 1964; 1965; 1966; 1967; 1968; 1969; 1970; 1971; 1972; 1973; 1974; 1975; 1976; 1977; 1978; 1979; 1980; 1981; 1982; 1983; 1984; 1985; 1986; 1987; 1988; 1989"
+    ],
+    "description": [
+      "Index of offprints related to the study of Assyrian-Greek civilizations."
+    ],
+    "format": [
+      "application/pdf"
+    ],
+    "extent": [
+      "16.6 x 21 cm.; 1 p."
+    ],
+    "medium": [
+      "indexes (reference sources)"
+    ],
+    "identifier": [
+      "SC-1000-01-Volume-003-Index"
+    ],
+    "language": [
+      "German; English; French; Italian; Latin"
+    ],
+    "collection": [
+      "Kraus-Meyerhof Offprints"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "license": [
+      "Copyright 2012, American University in Cairo. All rights reserved."
+    ],
+    "source": [
+      "Kraus-Meyerhof Offprints Collection; Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll1/id/9\">Analecta, Syro-Graeca</a></span>"
+    ],
+    "subject-lcsh": [
+      "Greece; Syria"
+    ],
+    "title": [
+      "Analecta, Syro-Graeca"
+    ],
+    "type": [
+      "Still Image; Text"
+    ],
+    "compiler": [
+      "American University in Cairo. Rare Books and Special Collections Library"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "name": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll1:13/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll1:10/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll1:11/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll1:12/full/full/0/default.jpg"
+    ],
+    "alternative-title": [
+      "Kraus-Meyerhof Offprints volume 4 Part 2 index"
+    ],
+    "collector": [
+      "Kraus, Paul, 1904-1944"
+    ],
+    "location": [
+      "Greece; Europe; Syria; Asia"
+    ],
+    "date-created": [
+      "1960; 1961; 1962; 1963; 1964; 1965; 1966; 1967; 1968; 1969; 1970; 1971; 1972; 1973; 1974; 1975; 1976; 1977; 1978; 1979; 1980; 1981; 1982; 1983; 1984; 1985; 1986; 1987; 1988; 1989"
+    ],
+    "description": [
+      "Index of offprints related to the study of Assyrian-Greek civilizations."
+    ],
+    "format": [
+      "application/pdf"
+    ],
+    "extent": [
+      "16.6 x 21 cm.; 3 p."
+    ],
+    "medium": [
+      "indexes (reference sources)"
+    ],
+    "identifier": [
+      "SC-1000-01-Volume-004-Index"
+    ],
+    "language": [
+      "German; Italian; Latin"
+    ],
+    "collection": [
+      "Kraus-Meyerhof Offprints"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "license": [
+      "Copyright 2012, American University in Cairo. All rights reserved."
+    ],
+    "source": [
+      "Kraus-Meyerhof Offprints Collection; Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll1/id/13\">Analecta, Syro-Graeca</a></span>"
+    ],
+    "subject-lcsh": [
+      "Greece; Syria"
+    ],
+    "title": [
+      "Analecta, Syro-Graeca"
+    ],
+    "type": [
+      "Still Image; Text"
+    ],
+    "compiler": [
+      "American University in Cairo. Rare Books and Special Collections Library"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "name": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll1:16/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll1:14/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll1:15/full/full/0/default.jpg"
+    ],
+    "alternative-title": [
+      "Kraus-Meyerhof Offprints volume 5 part 1 index"
+    ],
+    "collector": [
+      "Kraus, Paul, 1904-1944"
+    ],
+    "location": null,
+    "date-created": [
+      "1960; 1961; 1962; 1963; 1964; 1965; 1966; 1967; 1968; 1969; 1970; 1971; 1972; 1973; 1974; 1975; 1976; 1977; 1978; 1979; 1980; 1981; 1982; 1983; 1984; 1985; 1986; 1987; 1988; 1989"
+    ],
+    "description": [
+      "Index of offprints related to the study of the Old Testament."
+    ],
+    "format": [
+      "application/pdf"
+    ],
+    "extent": [
+      "16.6 x 21 cm.; 2 p."
+    ],
+    "medium": [
+      "indexes (reference sources)"
+    ],
+    "identifier": [
+      "SC-1000-01-Volume-005-Index"
+    ],
+    "language": [
+      "German; English; French"
+    ],
+    "collection": [
+      "Kraus-Meyerhof Offprints"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "license": [
+      "Copyright 2012, American University in Cairo. All rights reserved."
+    ],
+    "source": [
+      "Kraus-Meyerhof Offprints Collection; Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll1/id/16\">Ancien Testament</a></span>"
+    ],
+    "subject-lcsh": [
+      "Apocryphal books (Old Testament)"
+    ],
+    "title": [
+      "Ancien Testament"
+    ],
+    "type": [
+      "Still Image; Text"
+    ],
+    "compiler": [
+      "American University in Cairo. Rare Books and Special Collections Library"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "name": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll1:19/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll1:17/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll1:18/full/full/0/default.jpg"
+    ],
+    "alternative-title": [
+      "Kraus-Meyerhof Offprints volume 7 index"
+    ],
+    "collector": [
+      "Kraus, Paul, 1904-1944"
+    ],
+    "location": null,
+    "date-created": [
+      "1960; 1961; 1962; 1963; 1964; 1965; 1966; 1967; 1968; 1969; 1970; 1971; 1972; 1973; 1974; 1975; 1976; 1977; 1978; 1979; 1980; 1981; 1982; 1983; 1984; 1985; 1986; 1987; 1988; 1989"
+    ],
+    "description": [
+      "Index of offprints related to the study of the Middle East and Islam."
+    ],
+    "format": [
+      "application/pdf"
+    ],
+    "extent": [
+      "16.6 x 21 cm.; 2 p."
+    ],
+    "medium": [
+      "indexes (reference sources)"
+    ],
+    "identifier": [
+      "SC-1000-01-Volume-007-Index"
+    ],
+    "language": [
+      "German; French; Italian; Latin"
+    ],
+    "collection": [
+      "Kraus-Meyerhof Offprints"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "license": [
+      "Copyright 2012, American University in Cairo. All rights reserved."
+    ],
+    "source": [
+      "Kraus-Meyerhof Offprints Collection; Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll1/id/19\">Arabica et Islamica</a></span>"
+    ],
+    "subject-lcsh": [
+      "Islam; Middle East"
+    ],
+    "title": [
+      "Arabica et Islamica"
+    ],
+    "type": [
+      "Still Image; Text"
+    ],
+    "compiler": [
+      "American University in Cairo. Rare Books and Special Collections Library"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "name": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll1:23/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll1:20/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll1:21/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll1:22/full/full/0/default.jpg"
+    ],
+    "alternative-title": [
+      "Kraus-Meyerhof Offprints volume 8 index"
+    ],
+    "collector": [
+      "Kraus, Paul, 1904-1944"
+    ],
+    "location": null,
+    "date-created": [
+      "1960; 1961; 1962; 1963; 1964; 1965; 1966; 1967; 1968; 1969; 1970; 1971; 1972; 1973; 1974; 1975; 1976; 1977; 1978; 1979; 1980; 1981; 1982; 1983; 1984; 1985; 1986; 1987; 1988; 1989"
+    ],
+    "description": [
+      "Index of offprints related to the study of Islamic art."
+    ],
+    "format": [
+      "application/pdf"
+    ],
+    "extent": [
+      "16.6 x 21 cm.; 3 p."
+    ],
+    "medium": [
+      "indexes (reference sources)"
+    ],
+    "identifier": [
+      "SC-1000-01-Volume-008-Index"
+    ],
+    "language": [
+      "Arabic; German; English; French; Italian; Latin"
+    ],
+    "collection": [
+      "Kraus-Meyerhof Offprints"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "license": [
+      "Copyright 2012, American University in Cairo. All rights reserved."
+    ],
+    "source": [
+      "Kraus-Meyerhof Offprints Collection; Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll1/id/23\">Art Musulman</a></span>"
+    ],
+    "subject-lcsh": [
+      "Islamic art"
+    ],
+    "title": [
+      "Art Musulman"
+    ],
+    "type": [
+      "Still Image; Text"
+    ],
+    "compiler": [
+      "American University in Cairo. Rare Books and Special Collections Library"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "name": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll1:26/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll1:24/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll1:25/full/full/0/default.jpg"
+    ],
+    "alternative-title": [
+      "Kraus-Meyerhof Offprints volume 9 index"
+    ],
+    "collector": [
+      "Kraus, Paul, 1904-1944"
+    ],
+    "location": null,
+    "date-created": [
+      "1960; 1961; 1962; 1963; 1964; 1965; 1966; 1967; 1968; 1969; 1970; 1971; 1972; 1973; 1974; 1975; 1976; 1977; 1978; 1979; 1980; 1981; 1982; 1983; 1984; 1985; 1986; 1987; 1988; 1989"
+    ],
+    "description": [
+      "Index of offprints related to the study of Muslim scholar, Avicenna."
+    ],
+    "format": [
+      "application/pdf"
+    ],
+    "extent": [
+      "16.6 x 21 cm.; 2 p."
+    ],
+    "medium": [
+      "indexes (reference sources)"
+    ],
+    "identifier": [
+      "SC-1000-01-Volume-009-Index"
+    ],
+    "language": [
+      "Arabic; German; French"
+    ],
+    "collection": [
+      "Kraus-Meyerhof Offprints"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "license": [
+      "Copyright 2012, American University in Cairo. All rights reserved."
+    ],
+    "source": [
+      "Kraus-Meyerhof Offprints Collection; Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll1/id/26\">Avicenne</a></span>"
+    ],
+    "subject-lcsh": [
+      "Muslim scholars"
+    ],
+    "title": [
+      "Avicenne"
+    ],
+    "type": [
+      "Still Image; Text"
+    ],
+    "compiler": [
+      "American University in Cairo. Rare Books and Special Collections Library"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "name": [
+      "Avicenna, 980-1037"
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll1:29/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll1:27/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll1:28/full/full/0/default.jpg"
+    ],
+    "alternative-title": [
+      "Kraus-Meyerhof Offprints volume 10"
+    ],
+    "collector": [
+      "Kraus, Paul, 1904-1944"
+    ],
+    "location": null,
+    "date-created": [
+      "1960; 1961; 1962; 1963; 1964; 1965; 1966; 1967; 1968; 1969; 1970; 1971; 1972; 1973; 1974; 1975; 1976; 1977; 1978; 1979; 1980; 1981; 1982; 1983; 1984; 1985; 1986; 1987; 1988; 1989"
+    ],
+    "description": [
+      "Index of offprints related to the study of botany and pharmacology."
+    ],
+    "format": [
+      "application/pdf"
+    ],
+    "extent": [
+      "16.6 x 21 cm.; 2 p."
+    ],
+    "medium": [
+      "indexes (reference sources)"
+    ],
+    "identifier": [
+      "SC-1000-01-Volume-010-Index"
+    ],
+    "language": [
+      "German; English; French; Latin"
+    ],
+    "collection": [
+      "Kraus-Meyerhof Offprints"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "license": [
+      "Copyright 2012, American University in Cairo. All rights reserved."
+    ],
+    "source": [
+      "Kraus-Meyerhof Offprints Collection; Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll1/id/29\">Botanique et Pharmacetique</a></span>"
+    ],
+    "subject-lcsh": [
+      "Botany; Pharmacology"
+    ],
+    "title": [
+      "Botanique et Pharmacetique"
+    ],
+    "type": [
+      "Still Image; Text"
+    ],
+    "compiler": [
+      "American University in Cairo. Rare Books and Special Collections Library"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "name": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll1:32/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll1:30/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll1:31/full/full/0/default.jpg"
+    ],
+    "alternative-title": [
+      "Kraus-Meyerhof Offprints volume 12"
+    ],
+    "collector": [
+      "Kraus, Paul, 1904-1944"
+    ],
+    "location": null,
+    "date-created": [
+      "1960; 1961; 1962; 1963; 1964; 1965; 1966; 1967; 1968; 1969; 1970; 1971; 1972; 1973; 1974; 1975; 1976; 1977; 1978; 1979; 1980; 1981; 1982; 1983; 1984; 1985; 1986; 1987; 1988; 1989"
+    ],
+    "description": [
+      "Index of offprints related to the study of Arabic dialects."
+    ],
+    "format": [
+      "application/pdf"
+    ],
+    "extent": [
+      "16.6 x 21 cm.; 2 p."
+    ],
+    "medium": [
+      "indexes (reference sources)"
+    ],
+    "identifier": [
+      "SC-1000-01-Volume-012-Index"
+    ],
+    "language": [
+      "German; English; French; Italian"
+    ],
+    "collection": [
+      "Kraus-Meyerhof Offprints"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "license": [
+      "Copyright 2012, American University in Cairo. All rights reserved."
+    ],
+    "source": [
+      "Kraus-Meyerhof Offprints Collection; Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll1/id/32\">Dialects Arabes</a></span>"
+    ],
+    "subject-lcsh": [
+      "Arabic language; Dialects"
+    ],
+    "title": [
+      "Dialects Arabes"
+    ],
+    "type": [
+      "Still Image; Text"
+    ],
+    "compiler": [
+      "American University in Cairo. Rare Books and Special Collections Library"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "name": null
+  }
+]

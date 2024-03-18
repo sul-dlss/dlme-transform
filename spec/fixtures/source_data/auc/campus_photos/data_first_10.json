@@ -1,0 +1,692 @@
+[
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll37:129/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll37:129/full/full/0/default.jpg",
+    "medium": [
+      "color photographs"
+    ],
+    "subseries-english": [
+      "Tahrir Campus"
+    ],
+    "location-english": [
+      "Cairo, Egypt"
+    ],
+    "date": [
+      "1990-2000"
+    ],
+    "format": [
+      "image/jpg"
+    ],
+    "identifier": [
+      "AUCPH_Campus_B2_0007"
+    ],
+    "annotation": [
+      " "
+    ],
+    "location-arabic": [
+      "القاهرة، مصر"
+    ],
+    "license": [
+      "Copyright the American University in Cairo"
+    ],
+    "rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "source": [
+      "AUC Photographs Collection; Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll37/id/129\">Art in the Greek Campus</a></span>"
+    ],
+    "subject-lcsh": [
+      "American University at Cairo; Universities and colleges—Egypt—History; Buildings—Details—Drawings"
+    ],
+    "subject-lchs-arabic": [
+      "الجامعة الأمريكية بالقاهرة؛ الجامعات والكليات--مصر--تاريخ؛ المباني--التفاصيل--الرسومات"
+    ],
+    "subject-english": [
+      "Campus & Buildings"
+    ],
+    "subseries-arabic": [
+      "الحرم الجامعي بالتحرير"
+    ],
+    "title-english": [
+      "Art in the Greek Campus"
+    ],
+    "title-arabic": [
+      "الفن فى الحرم الجامعي اليوناني"
+    ],
+    "type": [
+      "Still image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "title-alternative": null,
+    "creator": null,
+    "description": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll37:130/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll37:130/full/full/0/default.jpg",
+    "medium": [
+      "black-and-white photographs"
+    ],
+    "subseries-english": [
+      "Greek Campus; Tahrir Campus"
+    ],
+    "location-english": [
+      "Cairo, Egypt"
+    ],
+    "date": [
+      "1980s-1990s"
+    ],
+    "format": [
+      "image/jpg"
+    ],
+    "identifier": [
+      "AUCPH_Campus_B2_0029"
+    ],
+    "annotation": [
+      " "
+    ],
+    "location-arabic": [
+      "القاهرة، مصر"
+    ],
+    "license": [
+      "Copyright the American University in Cairo"
+    ],
+    "rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "source": [
+      "AUC Photographs Collection; Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll37/id/130\">Architectural detail of Main Library</a></span>"
+    ],
+    "subject-lcsh": [
+      "American University at Cairo; Libraries—Design and construction; Architectural design--Egypt; Universities and colleges—Egypt—History; Buildings—Details—Drawings"
+    ],
+    "subject-lchs-arabic": [
+      "الجامعة الأمريكية بالقاهرة؛ المكتبات--التصميم والبناء؛ التصميم المعماري--مصر؛ الجامعات والكليات--مصر--تاريخ؛ المباني--التفاصيل--الرسومات"
+    ],
+    "subject-english": [
+      "Campus & Buildings"
+    ],
+    "subseries-arabic": [
+      "المبنى اليوناني، الحرم الجامعي بالتحرير"
+    ],
+    "title-english": [
+      "Architectural detail of Main Library"
+    ],
+    "title-arabic": [
+      "التفاصيل المعمارية للمكتبة الرئيسة"
+    ],
+    "type": [
+      "Still image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "title-alternative": [
+      "Decoration of the main library"
+    ],
+    "creator": null,
+    "description": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll37:131/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll37:131/full/full/0/default.jpg",
+    "medium": [
+      "drawing"
+    ],
+    "subseries-english": [
+      "Zamalek dormitory"
+    ],
+    "location-english": [
+      "Cairo, Egypt"
+    ],
+    "date": [
+      "1980-1990"
+    ],
+    "format": [
+      "image/jpg"
+    ],
+    "identifier": [
+      "Zam_dorm_0006"
+    ],
+    "annotation": [
+      " "
+    ],
+    "location-arabic": [
+      "القاهرة، مصر"
+    ],
+    "license": [
+      "Copyright the American University in Cairo"
+    ],
+    "rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "source": [
+      "AUC Photographs Collection; Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll37/id/131\">The A. U. C. Dormitory</a></span>"
+    ],
+    "subject-lcsh": [
+      "Dormitories—Designs and plans; American University at Cairo"
+    ],
+    "subject-lchs-arabic": [
+      "مساكن الطلبة  الجامعية--التصميمات والخطط؛ الجامعة الأمريكية بالقاهرة"
+    ],
+    "subject-english": [
+      "Campus & Buildings"
+    ],
+    "subseries-arabic": [
+      "مدينة الطلبة الجامعية بالزمالك"
+    ],
+    "title-english": [
+      "The A. U. C. Dormitory"
+    ],
+    "title-arabic": [
+      "مدينة الطلبة للجامعة الأمريكية"
+    ],
+    "type": [
+      "Still image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "title-alternative": [
+      "AUC university's housing"
+    ],
+    "creator": [
+      "El Alfy, Amr"
+    ],
+    "description": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll37:132/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll37:132/full/full/0/default.jpg",
+    "medium": [
+      "black-and-white photographs"
+    ],
+    "subseries-english": [
+      "Greek Campus; Tahrir Square"
+    ],
+    "location-english": [
+      "Cairo, Egypt"
+    ],
+    "date": [
+      "1920-2000"
+    ],
+    "format": [
+      "image/jpg"
+    ],
+    "identifier": [
+      "Main_Int_0033"
+    ],
+    "annotation": [
+      " "
+    ],
+    "location-arabic": [
+      "القاهرة، مصر"
+    ],
+    "license": [
+      "Copyright the American University in Cairo"
+    ],
+    "rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "source": [
+      "AUC Photographs Collection; Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll37/id/132\">Ceiling design in Main Building</a></span>"
+    ],
+    "subject-lcsh": [
+      "American University at Cairo; Architectural design--Egypt; Universities and colleges—Egypt—History; Buildings—Details—Drawings"
+    ],
+    "subject-lchs-arabic": [
+      "الجامعة الأمريكية بالقاهرة؛ التصميم المعماري--مصر؛ الجامعات والكليات--مصر--تاريخ؛ المباني--التفاصيل--الرسومات"
+    ],
+    "subject-english": [
+      "Campus & Buildings"
+    ],
+    "subseries-arabic": [
+      "المبنى اليوناني، ميدان التحرير"
+    ],
+    "title-english": [
+      "Ceiling design in Main Building"
+    ],
+    "title-arabic": [
+      "تصميم السقف في المبنى الرئيسي"
+    ],
+    "type": [
+      "Still image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "title-alternative": [
+      "Decorated ceilings in Main building"
+    ],
+    "creator": null,
+    "description": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll37:133/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll37:133/full/full/0/default.jpg",
+    "medium": [
+      "color photographs"
+    ],
+    "subseries-english": [
+      "School of Oriental Studies; Tahrir Campus"
+    ],
+    "location-english": [
+      "Cairo, Egypt"
+    ],
+    "date": [
+      "1920-1990"
+    ],
+    "format": [
+      "image/jpg"
+    ],
+    "identifier": [
+      "Orient_St_0001"
+    ],
+    "annotation": [
+      " "
+    ],
+    "location-arabic": [
+      "القاهرة، مصر"
+    ],
+    "license": [
+      "Copyright the American University in Cairo"
+    ],
+    "rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "source": [
+      "AUC Photographs Collection; Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll37/id/133\">School of Oriental Studies exterior</a></span>"
+    ],
+    "subject-lcsh": [
+      "American University at Cairo. Center for Arabic Studies; Architectural design--Egypt; Universities and colleges—Egypt—History; Buildings—Details—Drawings"
+    ],
+    "subject-lchs-arabic": [
+      "الجامعة الأمريكية بالقاهرة . مركز الدراسات العربية؛ التصميم المعماري--مصر؛ الجامعات والكليات--مصر--تاريخ؛ المباني--التفاصيل--الرسومات"
+    ],
+    "subject-english": [
+      "Campus & Buildings"
+    ],
+    "subseries-arabic": [
+      "كلية الدراسات الشرقية، الحرم الجامعي بالتحرير"
+    ],
+    "title-english": [
+      "School of Oriental Studies exterior"
+    ],
+    "title-arabic": [
+      "كلية الدراسات الشرقية الخارجية "
+    ],
+    "type": [
+      "Still image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "title-alternative": null,
+    "creator": null,
+    "description": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll37:135/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll37:135/full/full/0/default.jpg",
+    "medium": [
+      "color photographs"
+    ],
+    "subseries-english": [
+      "Main Library; Greek Campus"
+    ],
+    "location-english": [
+      "Cairo, Egypt"
+    ],
+    "date": [
+      "1980s-1990s"
+    ],
+    "format": [
+      "image/jpg"
+    ],
+    "identifier": [
+      "AUCPH_Campus_B2_0034"
+    ],
+    "annotation": [
+      " "
+    ],
+    "location-arabic": [
+      "القاهرة، مصر"
+    ],
+    "license": [
+      "Copyright the American University in Cairo"
+    ],
+    "rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "source": [
+      "AUC Photographs Collection; Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll37/id/135\">Students outside Main Library</a></span>"
+    ],
+    "subject-lcsh": [
+      "American University at Cairo; Students—Egypt; Libraries—Egypt—Cairo; Universities and colleges—Egypt—History"
+    ],
+    "subject-lchs-arabic": [
+      "الجامعة الأمريكية بالقاهرة؛ الطلبة -- مصر؛ المكتبات--مصر-- القاهرة؛ الجامعات والكليات--مصر--تاريخ"
+    ],
+    "subject-english": [
+      "Campus & Buildings"
+    ],
+    "subseries-arabic": [
+      "المكتبة الرئيسة؛  الحرم الجامعي اليوناني "
+    ],
+    "title-english": [
+      "Students outside Main Library"
+    ],
+    "title-arabic": [
+      "الطلبة خارج المكتبة الرئيسة"
+    ],
+    "type": [
+      "Still image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "title-alternative": null,
+    "creator": null,
+    "description": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll37:136/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll37:136/full/full/0/default.jpg",
+    "medium": [
+      "black-and-white photographs"
+    ],
+    "subseries-english": [
+      "Main Library; Greek Campus"
+    ],
+    "location-english": [
+      "Cairo, Egypt"
+    ],
+    "date": [
+      "1920-2000"
+    ],
+    "format": [
+      "image/jpg"
+    ],
+    "identifier": [
+      "Main_Int_0008"
+    ],
+    "annotation": [
+      " "
+    ],
+    "location-arabic": [
+      "القاهرة، مصر"
+    ],
+    "license": [
+      "Copyright the American University in Cairo"
+    ],
+    "rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "source": [
+      "AUC Photographs Collection; Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll37/id/136\">Architectural detail of Main Building</a></span>"
+    ],
+    "subject-lcsh": [
+      "American University at Cairo; Architectural design--Egypt; Universities and colleges—Egypt—History; Buildings—Details—Drawings"
+    ],
+    "subject-lchs-arabic": [
+      "الجامعة الأمريكية بالقاهرة؛ التصميم المعماري--مصر؛ الجامعات والكليات--مصر--تاريخ؛ المباني--التفاصيل--الرسومات"
+    ],
+    "subject-english": [
+      "Campus & Buildings"
+    ],
+    "subseries-arabic": [
+      "المكتبة الرئيسة؛  الحرم الجامعي اليوناني "
+    ],
+    "title-english": [
+      "Architectural detail of Main Building"
+    ],
+    "title-arabic": [
+      "التفاصيل المعمارية للمبنى الرئيسي"
+    ],
+    "type": [
+      "Still image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "title-alternative": [
+      "Decoration and design of Main Building "
+    ],
+    "creator": null,
+    "description": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll37:137/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll37:137/full/full/0/default.jpg",
+    "medium": [
+      "color photographs"
+    ],
+    "subseries-english": [
+      "Jameel Management Center; Greek Campus"
+    ],
+    "location-english": [
+      "Cairo, Egypt"
+    ],
+    "date": [
+      "1990-2000"
+    ],
+    "format": [
+      "image/jpg"
+    ],
+    "identifier": [
+      "AUCPH_Campus_B2_0001"
+    ],
+    "annotation": [
+      " "
+    ],
+    "location-arabic": [
+      "القاهرة، مصر"
+    ],
+    "license": [
+      "Copyright the American University in Cairo"
+    ],
+    "rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "source": [
+      "AUC Photographs Collection; Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll37/id/137\">Greek Campus lamp</a></span>"
+    ],
+    "subject-lcsh": [
+      "Lamps--Egypt; American University at Cairo; Architectural design--Egypt; Universities and colleges—Egypt—History; Buildings—Details—Drawings"
+    ],
+    "subject-lchs-arabic": [
+      "المصابيح--مصر؛ الجامعة الأمريكية بالقاهرة؛ التصميم المعماري--مصر؛ الجامعات والكليات--مصر--تاريخ؛ المباني--التفاصيل--الرسومات"
+    ],
+    "subject-english": [
+      "Campus & Buildings"
+    ],
+    "subseries-arabic": [
+      "مركز إدارة الجميل؛ الحرم الجامعي اليوناني"
+    ],
+    "title-english": [
+      "Greek Campus lamp"
+    ],
+    "title-arabic": [
+      "مصباح الحرم الجامعي اليوناني"
+    ],
+    "type": [
+      "Still image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "title-alternative": null,
+    "creator": null,
+    "description": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll37:138/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll37:138/full/full/0/default.jpg",
+    "medium": [
+      "color photographs"
+    ],
+    "subseries-english": [
+      "Main Building; Tahrir Campus"
+    ],
+    "location-english": [
+      "Cairo, Egypt"
+    ],
+    "date": [
+      "1980-1990"
+    ],
+    "format": [
+      "image/jpg"
+    ],
+    "identifier": [
+      "Zam_dorm_0003"
+    ],
+    "annotation": [
+      " "
+    ],
+    "location-arabic": [
+      "القاهرة، مصر"
+    ],
+    "license": [
+      "Copyright the American University in Cairo"
+    ],
+    "rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "source": [
+      "AUC Photographs Collection; Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll37/id/138\">Entrance to the Main Building</a></span>"
+    ],
+    "subject-lcsh": [
+      "Gates--Egypt; Doors—Egypt—Design and construction; American University at Cairo; Architectural design--Egypt; Universities and colleges—Egypt—History; Buildings—Details—Drawings"
+    ],
+    "subject-lchs-arabic": [
+      "بوابات--مصر؛ أبواب--مصر--تصميم وبناء؛ الجامعة الأمريكية بالقاهرة؛ التصميم المعماري--مصر؛ الجامعات والكليات--مصر--تاريخ؛ المباني--التفاصيل--الرسومات"
+    ],
+    "subject-english": [
+      "Campus & Buildings"
+    ],
+    "subseries-arabic": [
+      "المبنى الرئيسي؛ الحرم الجامعي بالتحرير"
+    ],
+    "title-english": [
+      "Entrance to the Main Building"
+    ],
+    "title-arabic": [
+      "مدخل للمبنى الرئيسي"
+    ],
+    "type": [
+      "Still image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "title-alternative": null,
+    "creator": null,
+    "description": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll37:139/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll37:139/full/full/0/default.jpg",
+    "medium": [
+      "black-and-white photographs"
+    ],
+    "subseries-english": [
+      "Main Library; Greek Campus"
+    ],
+    "location-english": [
+      "Cairo, Egypt"
+    ],
+    "date": [
+      "1920-2000"
+    ],
+    "format": [
+      "image/jpg"
+    ],
+    "identifier": [
+      "Main_Int_0036"
+    ],
+    "annotation": [
+      " "
+    ],
+    "location-arabic": [
+      "القاهرة، مصر"
+    ],
+    "license": [
+      "Copyright the American University in Cairo"
+    ],
+    "rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "source": [
+      "AUC Photographs Collection; Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll37/id/139\">Door detail in main building</a></span>"
+    ],
+    "subject-lcsh": [
+      "Gates--Egypt; Doors—Egypt—Design and construction; American University at Cairo; Architectural design--Egypt; Universities and colleges—Egypt—History; Buildings—Details—Drawings"
+    ],
+    "subject-lchs-arabic": [
+      "بوابات--مصر؛ أبواب--مصر--تصميم وبناء؛ الجامعة الأمريكية بالقاهرة؛ التصميم المعماري--مصر؛ الجامعات والكليات--مصر--تاريخ؛ المباني--التفاصيل--الرسومات"
+    ],
+    "subject-english": [
+      "Campus & Buildings"
+    ],
+    "subseries-arabic": [
+      "المكتبة الرئيسة؛  الحرم الجامعي اليوناني "
+    ],
+    "title-english": [
+      "Door detail in main building"
+    ],
+    "title-arabic": [
+      "تفاصيل الباب في المبنى الرئيسي"
+    ],
+    "type": [
+      "Still image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "title-alternative": null,
+    "creator": null,
+    "description": null
+  }
+]

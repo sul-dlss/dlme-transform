@@ -1,0 +1,492 @@
+[
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll38:48/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll38:48/full/full/0/default.jpg",
+    "substance": [
+      "Albumin"
+    ],
+    "creator": [
+      "Abdullah Frères"
+    ],
+    "date": [
+      "1890-1899"
+    ],
+    "description": [
+      "Commencement de la 1er Cataracte N. 161A"
+    ],
+    "format": [
+      "image/jpg"
+    ],
+    "collection": [
+      "19th Century photographs"
+    ],
+    "size-in-cm": [
+      "26.6 x 20.6"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "medium": [
+      "photographic prints"
+    ],
+    "keyword": [
+      "Officers; Nile river; cataract"
+    ],
+    "title": [
+      "The first cataract"
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "source": [
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll38/id/48\">The first cataract</a></span>"
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll38:49/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll38:49/full/full/0/default.jpg",
+    "substance": [
+      "Albumin"
+    ],
+    "creator": [
+      "Abdullah Frères"
+    ],
+    "date": [
+      "1890-1899"
+    ],
+    "description": [
+      "no. 36? Vues Generales des tombeaux"
+    ],
+    "format": [
+      "image/jpg"
+    ],
+    "collection": [
+      "19th Century photographs"
+    ],
+    "size-in-cm": [
+      "26 x 20.7"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "medium": [
+      "photographic prints"
+    ],
+    "keyword": [
+      "minarets; domes; Citadel; stones; rubble"
+    ],
+    "title": [
+      "General view of the Citadel from the cemetery"
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "source": [
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll38/id/49\">General view of the Citadel from the cemetery</a></span>"
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll38:50/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll38:50/full/full/0/default.jpg",
+    "substance": [
+      "Albumin"
+    ],
+    "creator": [
+      "Abdullah Frères"
+    ],
+    "date": [
+      "1890-1899"
+    ],
+    "description": [
+      "Porte precedant le sanctuaire d'Edfu, 45A"
+    ],
+    "format": [
+      "image/jpg"
+    ],
+    "collection": [
+      "19th Century photographs"
+    ],
+    "size-in-cm": [
+      "26.8 x 21"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "medium": [
+      "photographic prints"
+    ],
+    "keyword": [
+      "temples; columns"
+    ],
+    "title": [
+      "Door leading to the sanctuary of Edfu Temple"
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "source": [
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll38/id/50\">Door leading to the sanctuary of Edfu Temple</a></span>"
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll38:51/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll38:51/full/full/0/default.jpg",
+    "substance": [
+      "Albumin"
+    ],
+    "creator": [
+      "Abdullah Frères"
+    ],
+    "date": [
+      "1890-1899"
+    ],
+    "description": [
+      "Partie posterieure du temple d'Edfou, 47A"
+    ],
+    "format": [
+      "image/jpg"
+    ],
+    "collection": [
+      "19th Century photographs"
+    ],
+    "size-in-cm": [
+      "27 x 21.1"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "medium": [
+      "photographic prints"
+    ],
+    "keyword": [
+      "walls; temples"
+    ],
+    "title": [
+      "Edfu Temple"
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "source": [
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll38/id/51\">Edfu Temple</a></span>"
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll38:52/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll38:52/full/full/0/default.jpg",
+    "substance": [
+      "Albumin"
+    ],
+    "creator": [
+      "Abdullah Frères"
+    ],
+    "date": [
+      "1890-1899"
+    ],
+    "description": [
+      "Partie posterieure du temple d'Edfou, 46A"
+    ],
+    "format": [
+      "image/jpg"
+    ],
+    "collection": [
+      "19th Century photographs"
+    ],
+    "size-in-cm": [
+      "27 x 21.2"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "medium": [
+      "photographic prints"
+    ],
+    "keyword": [
+      "walls; temples"
+    ],
+    "title": [
+      "Wall in Edfu Temple"
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "source": [
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll38/id/52\">Wall in Edfu Temple</a></span>"
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll38:53/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll38:53/full/full/0/default.jpg",
+    "substance": [
+      "Albumin"
+    ],
+    "creator": [
+      "Abdullah Frères"
+    ],
+    "date": [
+      "1890-1899"
+    ],
+    "description": [
+      "Les villageois attendant S.A. le Khedive Korosko, 75A"
+    ],
+    "format": [
+      "image/jpg"
+    ],
+    "collection": [
+      "19th Century photographs"
+    ],
+    "size-in-cm": [
+      "26.4 x 20.6"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "medium": [
+      "photographic prints"
+    ],
+    "keyword": [
+      "Nubia: tennts; camels"
+    ],
+    "title": [
+      "Nubians waiting for the arrival of the Khedive"
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "source": [
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll38/id/53\">Nubians waiting for the arrival of the Khedive</a></span>"
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll38:54/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll38:54/full/full/0/default.jpg",
+    "substance": [
+      "Albumin"
+    ],
+    "creator": [
+      "Abdullah Frères"
+    ],
+    "date": [
+      "1890-1899"
+    ],
+    "description": [
+      "Le temple d'Hathor, Denderah, 34A"
+    ],
+    "format": [
+      "image/jpg"
+    ],
+    "collection": [
+      "19th Century photographs"
+    ],
+    "size-in-cm": [
+      "26.8 x 21"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "medium": [
+      "photographic prints"
+    ],
+    "keyword": [
+      "facades; temples; columns"
+    ],
+    "title": [
+      "Hathor Temple in Dandara"
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "source": [
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll38/id/54\">Hathor Temple in Dandara</a></span>"
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll38:55/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll38:55/full/full/0/default.jpg",
+    "substance": [
+      "Albumin"
+    ],
+    "creator": [
+      "Abdullah Frères"
+    ],
+    "date": [
+      "1890-1899"
+    ],
+    "description": [
+      "Chapiteaux du grand temple d'Hathor, 35A"
+    ],
+    "format": [
+      "image/jpg"
+    ],
+    "collection": [
+      "19th Century photographs"
+    ],
+    "size-in-cm": [
+      "27 x 21"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "medium": [
+      "photographic prints"
+    ],
+    "keyword": [
+      "columns; capitals; temples"
+    ],
+    "title": [
+      "Capitals in Hathor's Temple in Dandara"
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "source": [
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll38/id/55\">Capitals in Hathor's Temple in Dandara</a></span>"
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll38:56/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll38:56/full/full/0/default.jpg",
+    "substance": [
+      "Albumin"
+    ],
+    "creator": [
+      "Abdullah Frères"
+    ],
+    "date": [
+      "1890-1899"
+    ],
+    "description": [
+      "La cour du temple d'Edfou. 43A"
+    ],
+    "format": [
+      "image/jpg"
+    ],
+    "collection": [
+      "19th Century photographs"
+    ],
+    "size-in-cm": [
+      "27 x 21.4"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "medium": [
+      "photographic prints"
+    ],
+    "keyword": [
+      "temples; columns"
+    ],
+    "title": [
+      "His Majesty Khedive Tewfik at the inner court of Edfu Temple."
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "source": [
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll38/id/56\">His Majesty Khedive Tewfik at the inner court of Edfu Temple.</a></span>"
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll38:57/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll38:57/full/full/0/default.jpg",
+    "substance": [
+      "Albumin"
+    ],
+    "creator": [
+      "Abdullah Frères"
+    ],
+    "date": [
+      "1890-1899"
+    ],
+    "description": [
+      "Interieure du temple d'Edfou, 44A"
+    ],
+    "format": [
+      "image/jpg"
+    ],
+    "collection": [
+      "19th Century photographs"
+    ],
+    "size-in-cm": [
+      "27.1 x 21"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "medium": [
+      "photographic prints"
+    ],
+    "keyword": [
+      "temples; columns"
+    ],
+    "title": [
+      "Interior of Edfu Temple"
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "source": [
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll38/id/57\">Interior of Edfu Temple</a></span>"
+    ]
+  }
+]

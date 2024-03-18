@@ -1,0 +1,549 @@
+[
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm21044.contentdm.oclc.org/iiif/emirgan:692/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm21044.contentdm.oclc.org/iiif/2/emirgan:690/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/emirgan:691/full/full/0/default.jpg"
+    ],
+    "ayrıca-bakınız-see-also": [
+      "E-F 099; E-F 106"
+    ],
+    "bulunduğu-yer-current-repository": [
+      "Sabancı Üniversitesi Sakıp Sabancı Müzesi (Emirgan, İstanbul, Türkiye)"
+    ],
+    "boyutlar-measurements": [
+      "8,7 x 13,7 cm"
+    ],
+    "tarih-date": [
+      "1913"
+    ],
+    "açıklama-description": [
+      "19 Teşrinievvel 1329 Rumi takvim, 1 Kasım 1913 Miladi takvimin karşılığıdır."
+    ],
+    "dil-language": [
+      "Türkçe-Osmanlıca"
+    ],
+    "telif-hakkı-copyright": [
+      "© Sabancı Üniversitesi Sakıp Sabancı Müzesi. Tüm hakları saklıdır."
+    ],
+    "envanter-numarası-identifier": [
+      "E-F 105"
+    ],
+    "başlık-title": [
+      "Portre"
+    ],
+    "transkripsiyon-transcription": [
+      "Arka: Yadigar olsun dimem, zira unutamassın beni. Görmek ister daimâ tasvirini, rûhum seni; Fi 19 Teşrinievvel sene [1]329.\r"
+    ],
+    "tür-type": [
+      "Fotoğraf"
+    ],
+    "repository": [
+      "digitalSSM"
+    ],
+    "source": [
+      "<span>From: <a href=\"https://digitalssm.org/digital/collection/emirgan/id/692\">Portre</a></span>"
+    ],
+    "kayıtlar-inscriptions/marks": null,
+    "diğer-başlık-title-alternative": null,
+    "müzeye-geliş-şekli-provenance": null,
+    "müzeye-geliş-tarihi-provenance-date": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm21044.contentdm.oclc.org/iiif/emirgan:695/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm21044.contentdm.oclc.org/iiif/2/emirgan:693/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/emirgan:694/full/full/0/default.jpg"
+    ],
+    "ayrıca-bakınız-see-also": null,
+    "bulunduğu-yer-current-repository": [
+      "Sabancı Üniversitesi Sakıp Sabancı Müzesi (Emirgan, İstanbul, Türkiye)"
+    ],
+    "boyutlar-measurements": [
+      "9,7 x 14,9 cm"
+    ],
+    "tarih-date": null,
+    "açıklama-description": null,
+    "dil-language": [
+      "Türkçe"
+    ],
+    "telif-hakkı-copyright": [
+      "© Sabancı Üniversitesi Sakıp Sabancı Müzesi. Tüm hakları saklıdır."
+    ],
+    "envanter-numarası-identifier": [
+      "E-F 082"
+    ],
+    "başlık-title": [
+      "Emirgan Sahili'nde"
+    ],
+    "transkripsiyon-transcription": null,
+    "tür-type": [
+      "Fotoğraf"
+    ],
+    "repository": [
+      "digitalSSM"
+    ],
+    "source": [
+      "<span>From: <a href=\"https://digitalssm.org/digital/collection/emirgan/id/695\">Emirgan Sahili'nde</a></span>"
+    ],
+    "kayıtlar-inscriptions/marks": [
+      "Arka: \"Neşe Ablam\""
+    ],
+    "diğer-başlık-title-alternative": null,
+    "müzeye-geliş-şekli-provenance": null,
+    "müzeye-geliş-tarihi-provenance-date": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm21044.contentdm.oclc.org/iiif/emirgan:698/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm21044.contentdm.oclc.org/iiif/2/emirgan:696/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/emirgan:697/full/full/0/default.jpg"
+    ],
+    "ayrıca-bakınız-see-also": null,
+    "bulunduğu-yer-current-repository": [
+      "Sabancı Üniversitesi Sakıp Sabancı Müzesi (Emirgan, İstanbul, Türkiye)"
+    ],
+    "boyutlar-measurements": [
+      "8,7 x 13,7 cm"
+    ],
+    "tarih-date": [
+      "1923"
+    ],
+    "açıklama-description": [
+      "15 Mayıs 1339 Rumi takvim, 15 Mayıs 1923 Miladi takviminin karşılığıdır."
+    ],
+    "dil-language": [
+      "Türkçe-Osmanlıca"
+    ],
+    "telif-hakkı-copyright": [
+      "© Sabancı Üniversitesi Sakıp Sabancı Müzesi. Tüm hakları saklıdır."
+    ],
+    "envanter-numarası-identifier": [
+      "E-F 113"
+    ],
+    "başlık-title": [
+      "Emirgan Korusu'nda"
+    ],
+    "transkripsiyon-transcription": [
+      "Arka: Emirgan Korusu: Bayramın 1.günü saat altı, Fi 15 Mayıs sene 39"
+    ],
+    "tür-type": [
+      "Fotoğraf"
+    ],
+    "repository": [
+      "digitalSSM"
+    ],
+    "source": [
+      "<span>From: <a href=\"https://digitalssm.org/digital/collection/emirgan/id/698\">Emirgan Korusu'nda</a></span>"
+    ],
+    "kayıtlar-inscriptions/marks": null,
+    "diğer-başlık-title-alternative": null,
+    "müzeye-geliş-şekli-provenance": null,
+    "müzeye-geliş-tarihi-provenance-date": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm21044.contentdm.oclc.org/iiif/emirgan:701/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm21044.contentdm.oclc.org/iiif/2/emirgan:699/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/emirgan:700/full/full/0/default.jpg"
+    ],
+    "ayrıca-bakınız-see-also": null,
+    "bulunduğu-yer-current-repository": [
+      "Sabancı Üniversitesi Sakıp Sabancı Müzesi (Emirgan, İstanbul, Türkiye)"
+    ],
+    "boyutlar-measurements": [
+      "12 x 17 cm"
+    ],
+    "tarih-date": null,
+    "açıklama-description": null,
+    "dil-language": null,
+    "telif-hakkı-copyright": [
+      "© Sabancı Üniversitesi Sakıp Sabancı Müzesi. Tüm hakları saklıdır."
+    ],
+    "envanter-numarası-identifier": [
+      "E-F 092"
+    ],
+    "başlık-title": [
+      "Baltalimanı"
+    ],
+    "transkripsiyon-transcription": null,
+    "tür-type": [
+      "Fotoğraf"
+    ],
+    "repository": [
+      "digitalSSM"
+    ],
+    "source": [
+      "<span>From: <a href=\"https://digitalssm.org/digital/collection/emirgan/id/701\">Baltalimanı</a></span>"
+    ],
+    "kayıtlar-inscriptions/marks": null,
+    "diğer-başlık-title-alternative": null,
+    "müzeye-geliş-şekli-provenance": null,
+    "müzeye-geliş-tarihi-provenance-date": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm21044.contentdm.oclc.org/iiif/emirgan:704/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm21044.contentdm.oclc.org/iiif/2/emirgan:702/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/emirgan:703/full/full/0/default.jpg"
+    ],
+    "ayrıca-bakınız-see-also": null,
+    "bulunduğu-yer-current-repository": [
+      "Sabancı Üniversitesi Sakıp Sabancı Müzesi (Emirgan, İstanbul, Türkiye)"
+    ],
+    "boyutlar-measurements": [
+      "10 x 6 cm"
+    ],
+    "tarih-date": null,
+    "açıklama-description": null,
+    "dil-language": null,
+    "telif-hakkı-copyright": [
+      "© Sabancı Üniversitesi Sakıp Sabancı Müzesi. Tüm hakları saklıdır."
+    ],
+    "envanter-numarası-identifier": [
+      "E-F 096"
+    ],
+    "başlık-title": [
+      "Portre"
+    ],
+    "transkripsiyon-transcription": null,
+    "tür-type": [
+      "Fotoğraf"
+    ],
+    "repository": [
+      "digitalSSM"
+    ],
+    "source": [
+      "<span>From: <a href=\"https://digitalssm.org/digital/collection/emirgan/id/704\">Portre</a></span>"
+    ],
+    "kayıtlar-inscriptions/marks": null,
+    "diğer-başlık-title-alternative": null,
+    "müzeye-geliş-şekli-provenance": null,
+    "müzeye-geliş-tarihi-provenance-date": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm21044.contentdm.oclc.org/iiif/emirgan:707/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm21044.contentdm.oclc.org/iiif/2/emirgan:705/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/emirgan:706/full/full/0/default.jpg"
+    ],
+    "ayrıca-bakınız-see-also": null,
+    "bulunduğu-yer-current-repository": [
+      "Sabancı Üniversitesi Sakıp Sabancı Müzesi (Emirgan, İstanbul, Türkiye)"
+    ],
+    "boyutlar-measurements": [
+      "18 x 24 cm"
+    ],
+    "tarih-date": [
+      "1954"
+    ],
+    "açıklama-description": null,
+    "dil-language": [
+      "İngilizce; Fransızca"
+    ],
+    "telif-hakkı-copyright": [
+      "© Sabancı Üniversitesi Sakıp Sabancı Müzesi. Tüm hakları saklıdır."
+    ],
+    "envanter-numarası-identifier": [
+      "E-F 095"
+    ],
+    "başlık-title": [
+      "Emirgan'da buz kütleleri"
+    ],
+    "transkripsiyon-transcription": [
+      "Boğaz 1000 yılda ilk kez dondu. Buz kütleleri Boğaz'da Avrupa ve Asya yakaları arasında sürükleniyor. İstanbul'da 1000 yılda ilk kez Boğaz'ın donduğu bir zaman. 3 Mart 1954."
+    ],
+    "tür-type": [
+      "Fotoğraf"
+    ],
+    "repository": [
+      "digitalSSM"
+    ],
+    "source": [
+      "<span>From: <a href=\"https://digitalssm.org/digital/collection/emirgan/id/707\">Emirgan'da buz kütleleri</a></span>"
+    ],
+    "kayıtlar-inscriptions/marks": [
+      "Arka: \"Photo Keystone\" damgası; \"Bosphorus Freezes First Time For 1000 Years. Ice Floes Floating In The Bosphorus Between The European And Asiatic Coasts. This Is The First Time In 1000 Years The Boshorus Froze At Istanbul. March 3rd/54.\""
+    ],
+    "diğer-başlık-title-alternative": null,
+    "müzeye-geliş-şekli-provenance": null,
+    "müzeye-geliş-tarihi-provenance-date": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm21044.contentdm.oclc.org/iiif/emirgan:711/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm21044.contentdm.oclc.org/iiif/2/emirgan:708/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/emirgan:709/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/emirgan:710/full/full/0/default.jpg"
+    ],
+    "ayrıca-bakınız-see-also": [
+      "E-F 165"
+    ],
+    "bulunduğu-yer-current-repository": [
+      "Sabancı Üniversitesi Sakıp Sabancı Müzesi (Emirgan, İstanbul, Türkiye)"
+    ],
+    "boyutlar-measurements": [
+      "16,8 x 21,5 cm"
+    ],
+    "tarih-date": null,
+    "açıklama-description": null,
+    "dil-language": [
+      "İngilizce"
+    ],
+    "telif-hakkı-copyright": [
+      "© Sabancı Üniversitesi Sakıp Sabancı Müzesi. Tüm hakları saklıdır."
+    ],
+    "envanter-numarası-identifier": [
+      "E-F 094"
+    ],
+    "başlık-title": [
+      "Boğaz'da savaş gemileri"
+    ],
+    "transkripsiyon-transcription": null,
+    "tür-type": [
+      "Fotoğraf"
+    ],
+    "repository": [
+      "digitalSSM"
+    ],
+    "source": [
+      "<span>From: <a href=\"https://digitalssm.org/digital/collection/emirgan/id/711\">Boğaz'da savaş gemileri</a></span>"
+    ],
+    "kayıtlar-inscriptions/marks": [
+      "Arka:\"International News Photo\" şirketinin damgası; Arka-ek: \"Will These Turkish Ships Stand Against German U-Boats?\" başlıklı haber yazısı"
+    ],
+    "diğer-başlık-title-alternative": null,
+    "müzeye-geliş-şekli-provenance": null,
+    "müzeye-geliş-tarihi-provenance-date": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm21044.contentdm.oclc.org/iiif/emirgan:714/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm21044.contentdm.oclc.org/iiif/2/emirgan:712/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/emirgan:713/full/full/0/default.jpg"
+    ],
+    "ayrıca-bakınız-see-also": null,
+    "bulunduğu-yer-current-repository": [
+      "Sabancı Üniversitesi Sakıp Sabancı Müzesi (Emirgan, İstanbul, Türkiye)"
+    ],
+    "boyutlar-measurements": [
+      "8,7 x 12,6 cm"
+    ],
+    "tarih-date": null,
+    "açıklama-description": null,
+    "dil-language": [
+      "Türkçe"
+    ],
+    "telif-hakkı-copyright": [
+      "© Sabancı Üniversitesi Sakıp Sabancı Müzesi. Tüm hakları saklıdır."
+    ],
+    "envanter-numarası-identifier": [
+      "E-F 044"
+    ],
+    "başlık-title": [
+      "İmadettin Bey Yalısı"
+    ],
+    "transkripsiyon-transcription": null,
+    "tür-type": [
+      "Fotoğraf"
+    ],
+    "repository": [
+      "digitalSSM"
+    ],
+    "source": [
+      "<span>From: <a href=\"https://digitalssm.org/digital/collection/emirgan/id/714\">İmadettin Bey Yalısı</a></span>"
+    ],
+    "kayıtlar-inscriptions/marks": [
+      "Arka: \"İmadettin Bey Yalısı\""
+    ],
+    "diğer-başlık-title-alternative": null,
+    "müzeye-geliş-şekli-provenance": null,
+    "müzeye-geliş-tarihi-provenance-date": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm21044.contentdm.oclc.org/iiif/emirgan:717/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm21044.contentdm.oclc.org/iiif/2/emirgan:715/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/emirgan:716/full/full/0/default.jpg"
+    ],
+    "ayrıca-bakınız-see-also": null,
+    "bulunduğu-yer-current-repository": [
+      "Sabancı Üniversitesi Sakıp Sabancı Müzesi (Emirgan, İstanbul, Türkiye)"
+    ],
+    "boyutlar-measurements": [
+      "9 x 13,8 cm"
+    ],
+    "tarih-date": [
+      "1974"
+    ],
+    "açıklama-description": null,
+    "dil-language": [
+      "Türkçe"
+    ],
+    "telif-hakkı-copyright": [
+      "© Sabancı Üniversitesi Sakıp Sabancı Müzesi. Tüm hakları saklıdır."
+    ],
+    "envanter-numarası-identifier": [
+      "E-F 080"
+    ],
+    "başlık-title": [
+      "Emirgan"
+    ],
+    "transkripsiyon-transcription": null,
+    "tür-type": [
+      "Fotoğraf"
+    ],
+    "repository": [
+      "digitalSSM"
+    ],
+    "source": [
+      "<span>From: <a href=\"https://digitalssm.org/digital/collection/emirgan/id/717\">Emirgan</a></span>"
+    ],
+    "kayıtlar-inscriptions/marks": [
+      "Arka: \"6 Ekim 1974 Pazar\"; \"Emirgan\""
+    ],
+    "diğer-başlık-title-alternative": null,
+    "müzeye-geliş-şekli-provenance": null,
+    "müzeye-geliş-tarihi-provenance-date": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm21044.contentdm.oclc.org/iiif/emirgan:723/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm21044.contentdm.oclc.org/iiif/2/emirgan:721/full/full/0/default.jpg",
+      "https://cdm21044.contentdm.oclc.org/iiif/2/emirgan:722/full/full/0/default.jpg"
+    ],
+    "ayrıca-bakınız-see-also": null,
+    "bulunduğu-yer-current-repository": [
+      "Sabancı Üniversitesi Sakıp Sabancı Müzesi (Emirgan, İstanbul, Türkiye)"
+    ],
+    "boyutlar-measurements": [
+      "8,8 x 13,9 cm"
+    ],
+    "tarih-date": [
+      "1929"
+    ],
+    "açıklama-description": [
+      "Kabataş'taki Şemsülmekatip adlı özel okulun  Baltalimanı'na yaptığı okul gezisinden fotoğraf."
+    ],
+    "dil-language": [
+      "Türkçe"
+    ],
+    "telif-hakkı-copyright": [
+      "© Sabancı Üniversitesi Sakıp Sabancı Müzesi. Tüm hakları saklıdır."
+    ],
+    "envanter-numarası-identifier": [
+      "E-F 034"
+    ],
+    "başlık-title": [
+      "Şemsülmekatip'in Baltalimanı gezisi"
+    ],
+    "transkripsiyon-transcription": null,
+    "tür-type": [
+      "Fotoğraf"
+    ],
+    "repository": [
+      "digitalSSM"
+    ],
+    "source": [
+      "<span>From: <a href=\"https://digitalssm.org/digital/collection/emirgan/id/723\">Şemsülmekatip'in Baltalimanı gezisi</a></span>"
+    ],
+    "kayıtlar-inscriptions/marks": [
+      "Arka: \"Şemsülmekatip 11-6-929 Baltalimanı\""
+    ],
+    "diğer-başlık-title-alternative": null,
+    "müzeye-geliş-şekli-provenance": null,
+    "müzeye-geliş-tarihi-provenance-date": null
+  }
+]

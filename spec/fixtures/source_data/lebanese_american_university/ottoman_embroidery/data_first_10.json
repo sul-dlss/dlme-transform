@@ -1,0 +1,252 @@
+[
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm16366.contentdm.oclc.org/iiif/p15255coll1:0/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm16366.contentdm.oclc.org/iiif/2/p15255coll1:0/full/full/0/default.jpg",
+    "date": [
+      "Late 16th/early 17th century"
+    ],
+    "description": [
+      "Bohja, silk twill embroidered with colored silk"
+    ],
+    "dimension": [
+      "126 x 112cm"
+    ],
+    "title": [
+      "Plate 01"
+    ],
+    "repository": [
+      "Library Digital Collections"
+    ],
+    "source": [
+      "<span>From: <a href=\"http://contentdm.lau.edu.lb/digital/collection/p15255coll1/id/0\">Plate 01</a></span>"
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm16366.contentdm.oclc.org/iiif/p15255coll1:1/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm16366.contentdm.oclc.org/iiif/2/p15255coll1:1/full/full/0/default.jpg",
+    "date": [
+      "Early 20th century"
+    ],
+    "description": [
+      "Towel, linen embroidered with colored silk and metal thread"
+    ],
+    "dimension": [
+      "140 x 47cm"
+    ],
+    "title": [
+      "Plate 49"
+    ],
+    "repository": [
+      "Library Digital Collections"
+    ],
+    "source": [
+      "<span>From: <a href=\"http://contentdm.lau.edu.lb/digital/collection/p15255coll1/id/1\">Plate 49</a></span>"
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm16366.contentdm.oclc.org/iiif/p15255coll1:2/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm16366.contentdm.oclc.org/iiif/2/p15255coll1:2/full/full/0/default.jpg",
+    "date": [
+      "Early 20th century"
+    ],
+    "description": [
+      "Kilim, wool and linen embroidered with colored silk and metal thread (flat gold wire, called plate)"
+    ],
+    "dimension": [
+      "214 x 138cm"
+    ],
+    "title": [
+      "Plate 50"
+    ],
+    "repository": [
+      "Library Digital Collections"
+    ],
+    "source": [
+      "<span>From: <a href=\"http://contentdm.lau.edu.lb/digital/collection/p15255coll1/id/2\">Plate 50</a></span>"
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm16366.contentdm.oclc.org/iiif/p15255coll1:3/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm16366.contentdm.oclc.org/iiif/2/p15255coll1:3/full/full/0/default.jpg",
+    "date": [
+      "Early 20th century"
+    ],
+    "description": [
+      "Towel, linen embroidered with colored silk and metal thread (with Oya border)"
+    ],
+    "dimension": [
+      "145 x 26.5cm"
+    ],
+    "title": [
+      "Plate 57"
+    ],
+    "repository": [
+      "Library Digital Collections"
+    ],
+    "source": [
+      "<span>From: <a href=\"http://contentdm.lau.edu.lb/digital/collection/p15255coll1/id/3\">Plate 57</a></span>"
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm16366.contentdm.oclc.org/iiif/p15255coll1:4/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm16366.contentdm.oclc.org/iiif/2/p15255coll1:4/full/full/0/default.jpg",
+    "date": [
+      "Early 20th century"
+    ],
+    "description": [
+      "Kilim, wool and linen embroidered with colored silk and metal thread (flat gold wire, called plate)"
+    ],
+    "dimension": [
+      "192 x 134cm"
+    ],
+    "title": [
+      "Plate 51"
+    ],
+    "repository": [
+      "Library Digital Collections"
+    ],
+    "source": [
+      "<span>From: <a href=\"http://contentdm.lau.edu.lb/digital/collection/p15255coll1/id/4\">Plate 51</a></span>"
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm16366.contentdm.oclc.org/iiif/p15255coll1:5/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm16366.contentdm.oclc.org/iiif/2/p15255coll1:5/full/full/0/default.jpg",
+    "date": [
+      "Early 20th century"
+    ],
+    "description": [
+      "Towel, linen embroidered with colored silk and metal thread (silver)"
+    ],
+    "dimension": [
+      "154 x 46cm"
+    ],
+    "title": [
+      "Plate 52"
+    ],
+    "repository": [
+      "Library Digital Collections"
+    ],
+    "source": [
+      "<span>From: <a href=\"http://contentdm.lau.edu.lb/digital/collection/p15255coll1/id/5\">Plate 52</a></span>"
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm16366.contentdm.oclc.org/iiif/p15255coll1:6/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm16366.contentdm.oclc.org/iiif/2/p15255coll1:6/full/full/0/default.jpg",
+    "date": [
+      "Early 20th century"
+    ],
+    "description": [
+      "Towel, linen embroidered with colored silk and metal thread (silver)"
+    ],
+    "dimension": [
+      "159 x 44cm"
+    ],
+    "title": [
+      "Plate 53"
+    ],
+    "repository": [
+      "Library Digital Collections"
+    ],
+    "source": [
+      "<span>From: <a href=\"http://contentdm.lau.edu.lb/digital/collection/p15255coll1/id/6\">Plate 53</a></span>"
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm16366.contentdm.oclc.org/iiif/p15255coll1:7/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm16366.contentdm.oclc.org/iiif/2/p15255coll1:7/full/full/0/default.jpg",
+    "date": [
+      "Early 20th century"
+    ],
+    "description": [
+      "Towel, linen embroidered with colored silk and metal thread (silver)"
+    ],
+    "dimension": [
+      "158 x 44 cm"
+    ],
+    "title": [
+      "Plate 54"
+    ],
+    "repository": [
+      "Library Digital Collections"
+    ],
+    "source": [
+      "<span>From: <a href=\"http://contentdm.lau.edu.lb/digital/collection/p15255coll1/id/7\">Plate 54</a></span>"
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm16366.contentdm.oclc.org/iiif/p15255coll1:8/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm16366.contentdm.oclc.org/iiif/2/p15255coll1:8/full/full/0/default.jpg",
+    "date": [
+      "Early 20th century"
+    ],
+    "description": [
+      "Cushion, fuchsia pink satin, embroidered with cotton thread in the Aghabani technique"
+    ],
+    "dimension": [
+      "48 x 45cm"
+    ],
+    "title": [
+      "Plate 55"
+    ],
+    "repository": [
+      "Library Digital Collections"
+    ],
+    "source": [
+      "<span>From: <a href=\"http://contentdm.lau.edu.lb/digital/collection/p15255coll1/id/8\">Plate 55</a></span>"
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm16366.contentdm.oclc.org/iiif/p15255coll1:9/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm16366.contentdm.oclc.org/iiif/2/p15255coll1:9/full/full/0/default.jpg",
+    "date": [
+      "Early 20th century"
+    ],
+    "description": [
+      "Towel, linen embroidered with colored silk and metal thread (with Oya border)"
+    ],
+    "dimension": [
+      "145 x 26.5cm"
+    ],
+    "title": [
+      "Plate 56"
+    ],
+    "repository": [
+      "Library Digital Collections"
+    ],
+    "source": [
+      "<span>From: <a href=\"http://contentdm.lau.edu.lb/digital/collection/p15255coll1/id/9\">Plate 56</a></span>"
+    ]
+  }
+]

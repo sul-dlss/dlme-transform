@@ -1,0 +1,359 @@
+[
+  {
+    "id": "http://www.loc.gov/item/2017498321/",
+    "description": [
+      "A scholar's collection of bits of text, mostly in Persian with some Arabic, accompanied by extensive comments."
+    ],
+    "date": "18??",
+    "identifier": "AG110.P47 M35 1800z",
+    "language": [
+      "arabic",
+      "persian"
+    ],
+    "location_country": [
+      "india",
+      "uzbekistan",
+      "tajikistan"
+    ],
+    "format": [
+      "manuscript/mixed material"
+    ],
+    "preview": [
+      "https://tile.loc.gov/image-services/iiif/service:amed:plmp:m154:0334/full/pct:6.25/0/default.jpg",
+      "https://tile.loc.gov/image-services/iiif/service:amed:plmp:m154:0334/full/pct:6.25/0/default.jpg#h=389&w=271",
+      "https://tile.loc.gov/image-services/iiif/service:amed:plmp:m154:0334/full/pct:12.5/0/default.jpg#h=778&w=542",
+      "https://tile.loc.gov/image-services/iiif/service:amed:plmp:m154:0334/full/pct:25/0/default.jpg#h=1556&w=1084",
+      "https://tile.loc.gov/image-services/iiif/service:amed:plmp:m154:0334/full/pct:50/0/default.jpg#h=3113&w=2168",
+      "https://tile.loc.gov/image-services/iiif/service:amed:plmp:m154:0334/full/pct:100/0/default.jpg#h=6227&w=4337"
+    ],
+    "shown_at": "https://www.loc.gov/item/2017498321/",
+    "subject": [
+      "washington (d.c.)",
+      "manuscripts, persian",
+      "india",
+      "uzbekistan",
+      "manuscripts, arabic",
+      "handbooks, vade-mecums, etc",
+      "tajikistan"
+    ],
+    "title": "[Majmuʻah, or, Collection]",
+    "type": [
+      "manuscript"
+    ]
+  },
+  {
+    "id": "http://www.loc.gov/item/2001310742/",
+    "description": [
+      "Short biographical sketches of philosophers, B.C."
+    ],
+    "date": "1923-01-01",
+    "identifier": "B104 .K38 1923",
+    "language": [
+      "persian"
+    ],
+    "location_country": [
+      "afghanistan"
+    ],
+    "format": [
+      "book"
+    ],
+    "preview": [
+      "https://tile.loc.gov/image-services/iiif/service:amed:amedpllc:00406681713:0005/full/pct:12.5/0/default.jpg",
+      "https://tile.loc.gov/image-services/iiif/service:amed:amedpllc:00406681713:0005/full/pct:12.5/0/default.jpg#h=502&w=345",
+      "https://tile.loc.gov/image-services/iiif/service:amed:amedpllc:00406681713:0005/full/pct:25/0/default.jpg#h=1005&w=690",
+      "https://tile.loc.gov/image-services/iiif/service:amed:amedpllc:00406681713:0005/full/pct:50/0/default.jpg#h=2011&w=1380",
+      "https://tile.loc.gov/image-services/iiif/service:amed:amedpllc:00406681713:0005/full/pct:100/0/default.jpg#h=4022&w=2760"
+    ],
+    "shown_at": "https://www.loc.gov/item/2001310742/",
+    "subject": [
+      "philosophers",
+      "afghanistan",
+      "biography"
+    ],
+    "title": "Tārīkh-i ḥukamā-yi mutaqaddimīn az hubūṭ-i Ḥaz̤rat Ādam tā bi-vujūd-i āmadan-i Ḥaz̤rat ʻĪsá",
+    "type": [
+      "text"
+    ]
+  },
+  {
+    "id": "http://www.loc.gov/item/2007432450/",
+    "description": [
+      "Lithographed. In Persian."
+    ],
+    "date": "1891-01-01",
+    "identifier": "B751 .D34 1891",
+    "language": [
+      "persian"
+    ],
+    "location_country": [
+      "india"
+    ],
+    "format": [
+      "book"
+    ],
+    "preview": [
+      "https://tile.loc.gov/image-services/iiif/service:amed:amedpllc:00406537389:0005/full/pct:6.25/0/default.jpg",
+      "https://tile.loc.gov/image-services/iiif/service:amed:amedpllc:00406537389:0005/full/pct:6.25/0/default.jpg#h=376&w=262",
+      "https://tile.loc.gov/image-services/iiif/service:amed:amedpllc:00406537389:0005/full/pct:12.5/0/default.jpg#h=752&w=525",
+      "https://tile.loc.gov/image-services/iiif/service:amed:amedpllc:00406537389:0005/full/pct:25/0/default.jpg#h=1505&w=1051",
+      "https://tile.loc.gov/image-services/iiif/service:amed:amedpllc:00406537389:0005/full/pct:50/0/default.jpg#h=3010&w=2102",
+      "https://tile.loc.gov/image-services/iiif/service:amed:amedpllc:00406537389:0005/full/pct:100/0/default.jpg#h=6021&w=4204"
+    ],
+    "shown_at": "https://www.loc.gov/item/2007432450/",
+    "subject": [
+      "medicine, arab",
+      "science",
+      "india",
+      "early works to 1800",
+      "islamic philosophy",
+      "logic"
+    ],
+    "title": "Māyah-ʼi Dānish-i ʻAlāʼī mashhūr bi-Ḥikmat al-ʻAlāy",
+    "type": [
+      "text"
+    ]
+  },
+  {
+    "id": "http://www.loc.gov/item/2019418758/",
+    "description": [
+      "Treatise on astrology."
+    ],
+    "date": "1876",
+    "identifier": "BF1714.A6 B39 1876",
+    "language": [
+      "persian"
+    ],
+    "location_country": [
+      "iran"
+    ],
+    "format": [
+      "manuscript/mixed material"
+    ],
+    "preview": [
+      "https://tile.loc.gov/image-services/iiif/service:amed:plmp:m401:0515/full/pct:6.25/0/default.jpg",
+      "https://tile.loc.gov/image-services/iiif/service:amed:plmp:m401:0515/full/pct:6.25/0/default.jpg#h=264&w=169",
+      "https://tile.loc.gov/image-services/iiif/service:amed:plmp:m401:0515/full/pct:12.5/0/default.jpg#h=528&w=338",
+      "https://tile.loc.gov/image-services/iiif/service:amed:plmp:m401:0515/full/pct:25/0/default.jpg#h=1057&w=677",
+      "https://tile.loc.gov/image-services/iiif/service:amed:plmp:m401:0515/full/pct:50/0/default.jpg#h=2115&w=1355",
+      "https://tile.loc.gov/image-services/iiif/service:amed:plmp:m401:0515/full/pct:100/0/default.jpg#h=4231&w=2711"
+    ],
+    "shown_at": "https://www.loc.gov/item/2019418758/",
+    "subject": [
+      "astrology, arab",
+      "early works to 1800",
+      "iran",
+      "washington (d.c.)",
+      "manuscripts, persian"
+    ],
+    "title": "Kitāb Javāmiʻ al-aḥkām",
+    "type": [
+      "manuscript"
+    ]
+  },
+  {
+    "id": "http://www.loc.gov/item/2004439314/",
+    "description": [
+      "Treatise on geomancy, the science of foretelling the future from lines and diagrams drawn on the ground."
+    ],
+    "date": "1886-01-01",
+    "identifier": "BF1758.P47 L34 1886",
+    "language": [
+      "persian"
+    ],
+    "location_country": [
+      "india"
+    ],
+    "format": [
+      "book"
+    ],
+    "preview": [
+      "https://tile.loc.gov/image-services/iiif/service:amed:amedpllc:00406680824:0005/full/pct:6.25/0/default.jpg",
+      "https://tile.loc.gov/image-services/iiif/service:amed:amedpllc:00406680824:0005/full/pct:6.25/0/default.jpg#h=384&w=234",
+      "https://tile.loc.gov/image-services/iiif/service:amed:amedpllc:00406680824:0005/full/pct:12.5/0/default.jpg#h=769&w=468",
+      "https://tile.loc.gov/image-services/iiif/service:amed:amedpllc:00406680824:0005/full/pct:25/0/default.jpg#h=1538&w=937",
+      "https://tile.loc.gov/image-services/iiif/service:amed:amedpllc:00406680824:0005/full/pct:50/0/default.jpg#h=3076&w=1875",
+      "https://tile.loc.gov/image-services/iiif/service:amed:amedpllc:00406680824:0005/full/pct:100/0/default.jpg#h=6153&w=3751"
+    ],
+    "shown_at": "https://www.loc.gov/item/2004439314/",
+    "subject": [
+      "india",
+      "geomancy",
+      "astrological geomancy",
+      "divination"
+    ],
+    "title": "Miṣdāq al-raml",
+    "type": [
+      "text"
+    ]
+  },
+  {
+    "id": "http://www.loc.gov/item/2004439313/",
+    "description": [
+      "Lithographed. In Persian."
+    ],
+    "date": "1881-01-01",
+    "identifier": "BF1758.P47 S55 1881",
+    "language": [
+      "persian"
+    ],
+    "location_country": [
+      "india"
+    ],
+    "format": [
+      "book"
+    ],
+    "preview": [
+      "https://tile.loc.gov/image-services/iiif/service:amed:amedpllc:00406682602:0007/full/pct:6.25/0/default.jpg",
+      "https://tile.loc.gov/image-services/iiif/service:amed:amedpllc:00406682602:0007/full/pct:6.25/0/default.jpg#h=392&w=292",
+      "https://tile.loc.gov/image-services/iiif/service:amed:amedpllc:00406682602:0007/full/pct:12.5/0/default.jpg#h=785&w=584",
+      "https://tile.loc.gov/image-services/iiif/service:amed:amedpllc:00406682602:0007/full/pct:25/0/default.jpg#h=1570&w=1169",
+      "https://tile.loc.gov/image-services/iiif/service:amed:amedpllc:00406682602:0007/full/pct:50/0/default.jpg#h=3141&w=2339",
+      "https://tile.loc.gov/image-services/iiif/service:amed:amedpllc:00406682602:0007/full/pct:100/0/default.jpg#h=6283&w=4679"
+    ],
+    "shown_at": "https://www.loc.gov/item/2004439313/",
+    "subject": [
+      "india",
+      "geomancy",
+      "astrological geomancy",
+      "divination"
+    ],
+    "title": "Anvār al-raml",
+    "type": [
+      "text"
+    ]
+  },
+  {
+    "id": "http://www.loc.gov/item/2001289670/",
+    "description": [
+      "In Persian."
+    ],
+    "date": "1927",
+    "identifier": "BJ1291 .A28114 1927",
+    "language": [
+      "persian"
+    ],
+    "location_country": null,
+    "format": [
+      "book"
+    ],
+    "preview": [
+      "https://tile.loc.gov/image-services/iiif/service:amed:amedpllc:00406686231:0005/full/pct:6.25/0/default.jpg",
+      "https://tile.loc.gov/image-services/iiif/service:amed:amedpllc:00406686231:0005/full/pct:6.25/0/default.jpg#h=362&w=237",
+      "https://tile.loc.gov/image-services/iiif/service:amed:amedpllc:00406686231:0005/full/pct:12.5/0/default.jpg#h=725&w=475",
+      "https://tile.loc.gov/image-services/iiif/service:amed:amedpllc:00406686231:0005/full/pct:25/0/default.jpg#h=1450&w=951",
+      "https://tile.loc.gov/image-services/iiif/service:amed:amedpllc:00406686231:0005/full/pct:50/0/default.jpg#h=2900&w=1903",
+      "https://tile.loc.gov/image-services/iiif/service:amed:amedpllc:00406686231:0005/full/pct:100/0/default.jpg#h=5800&w=3807"
+    ],
+    "shown_at": "https://www.loc.gov/item/2001289670/",
+    "subject": [
+      "islamic ethics"
+    ],
+    "title": "Muṣāḥabah-ʼi akhlāqīyah",
+    "type": [
+      "text"
+    ]
+  },
+  {
+    "id": "http://www.loc.gov/item/2007432443/",
+    "description": [
+      "Lithographed. In Persian; translated from Arabic."
+    ],
+    "date": "1859",
+    "identifier": "BJ1291 .D54 1859 BJ1291 .D54 1859 Copy 2",
+    "language": [
+      "persian"
+    ],
+    "location_country": null,
+    "format": [
+      "book"
+    ],
+    "preview": [
+      "https://tile.loc.gov/image-services/iiif/service:amed:amedpllc:00406537286:0005/full/pct:6.25/0/default.jpg",
+      "https://tile.loc.gov/image-services/iiif/service:amed:amedpllc:00406537286:0005/full/pct:6.25/0/default.jpg#h=383&w=270",
+      "https://tile.loc.gov/image-services/iiif/service:amed:amedpllc:00406537286:0005/full/pct:12.5/0/default.jpg#h=767&w=540",
+      "https://tile.loc.gov/image-services/iiif/service:amed:amedpllc:00406537286:0005/full/pct:25/0/default.jpg#h=1535&w=1080",
+      "https://tile.loc.gov/image-services/iiif/service:amed:amedpllc:00406537286:0005/full/pct:50/0/default.jpg#h=3070&w=2160",
+      "https://tile.loc.gov/image-services/iiif/service:amed:amedpllc:00406537286:0005/full/pct:100/0/default.jpg#h=6141&w=4320"
+    ],
+    "shown_at": "https://www.loc.gov/item/2007432443/",
+    "subject": [
+      "islamic ethics",
+      "early works to 1800"
+    ],
+    "title": "Faraj baʻd al-shiddah",
+    "type": [
+      "text"
+    ]
+  },
+  {
+    "id": "http://www.loc.gov/item/2003340555/",
+    "description": [
+      "Lithographed. In Persian."
+    ],
+    "date": "1908",
+    "identifier": "BJ1291 .F323 1908",
+    "language": [
+      "persian"
+    ],
+    "location_country": null,
+    "format": [
+      "book"
+    ],
+    "preview": [
+      "https://tile.loc.gov/image-services/iiif/service:amed:amedpllc:00406537754:0017/full/pct:6.25/0/default.jpg",
+      "https://tile.loc.gov/image-services/iiif/service:amed:amedpllc:00406537754:0017/full/pct:6.25/0/default.jpg#h=397&w=278",
+      "https://tile.loc.gov/image-services/iiif/service:amed:amedpllc:00406537754:0017/full/pct:12.5/0/default.jpg#h=795&w=557",
+      "https://tile.loc.gov/image-services/iiif/service:amed:amedpllc:00406537754:0017/full/pct:25/0/default.jpg#h=1591&w=1115",
+      "https://tile.loc.gov/image-services/iiif/service:amed:amedpllc:00406537754:0017/full/pct:50/0/default.jpg#h=3183&w=2231",
+      "https://tile.loc.gov/image-services/iiif/service:amed:amedpllc:00406537754:0017/full/pct:100/0/default.jpg#h=6366&w=4463"
+    ],
+    "shown_at": "https://www.loc.gov/item/2003340555/",
+    "subject": [
+      "islamic ethics",
+      "early works to 1800",
+      "muslims",
+      "conduct of life"
+    ],
+    "title": "Kitāb-i mustaṭāb-i Maḥbūb al-qulūb mashhūr bi-Shamsah va qahqahah",
+    "type": [
+      "text"
+    ]
+  },
+  {
+    "id": "http://www.loc.gov/item/2016397149/",
+    "description": [
+      "Treatis on Islamic ethics and religious life."
+    ],
+    "date": "17??",
+    "identifier": "BJ1291 .K3 1700z",
+    "language": [
+      "arabic"
+    ],
+    "location_country": [
+      "iran",
+      "india"
+    ],
+    "format": [
+      "manuscript/mixed material"
+    ],
+    "preview": [
+      "https://tile.loc.gov/image-services/iiif/service:amed:plmp:m045:0126/full/pct:6.25/0/default.jpg",
+      "https://tile.loc.gov/image-services/iiif/service:amed:plmp:m045:0126/full/pct:6.25/0/default.jpg#h=309&w=196",
+      "https://tile.loc.gov/image-services/iiif/service:amed:plmp:m045:0126/full/pct:12.5/0/default.jpg#h=619&w=392",
+      "https://tile.loc.gov/image-services/iiif/service:amed:plmp:m045:0126/full/pct:25/0/default.jpg#h=1238&w=785",
+      "https://tile.loc.gov/image-services/iiif/service:amed:plmp:m045:0126/full/pct:50/0/default.jpg#h=2477&w=1571",
+      "https://tile.loc.gov/image-services/iiif/service:amed:plmp:m045:0126/full/pct:100/0/default.jpg#h=4955&w=3142"
+    ],
+    "shown_at": "https://www.loc.gov/item/2016397149/",
+    "subject": [
+      "manuscripts, persian",
+      "india",
+      "iran",
+      "washington (d.c.)"
+    ],
+    "title": "Kitāb-i akhlāq-i muḥsinī",
+    "type": [
+      "manuscript"
+    ]
+  }
+]

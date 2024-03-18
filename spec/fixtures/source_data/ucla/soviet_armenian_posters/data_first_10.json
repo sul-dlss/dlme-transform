@@ -1,0 +1,363 @@
+[
+  {
+    "id": "oai:library.ucla.edu:ark:/21198/z1m927t0",
+    "source": [
+      "Soviet Armenian Posters",
+      "Armenia Collections"
+    ],
+    "title": [
+      "1985 թվականի փետրվարի 24-ին բոլորս դեպի Հայկական ՍՍՀ Գերագույն սովետի և ժողովրդական դեպուտատների տեղական սովետների ընտրությունները"
+    ],
+    "creator": [
+      "Mkrtchyan, S. S.",
+      "Մկրտչյան, Ս. Ս.",
+      "Baghdasaryan, M. M."
+    ],
+    "publisher": [
+      "Երևան",
+      "\"Հայաստան\" հրատարակչություն (\"Hayastan” Hratarakchʻutʻyun)"
+    ],
+    "type": [
+      "http://id.loc.gov/vocabulary/resourceTypes/img"
+    ],
+    "subject": [
+      "Armenia (Republic)",
+      "Elections"
+    ],
+    "date": [
+      "1985",
+      "1985"
+    ],
+    "language": [
+      "arm"
+    ],
+    "identifier": [
+      "https://iiif.library.ucla.edu/iiif/2/ark%3A%2F21198%2Fz1m927t0/full/!200,200/0/default.jpg",
+      "https://digital.library.ucla.edu/catalog/ark:/21198/z1m927t0"
+    ]
+  },
+  {
+    "id": "oai:library.ucla.edu:ark:/21198/z1q25zfd",
+    "source": [
+      "Soviet Armenian Posters",
+      "Armenia Collections"
+    ],
+    "title": [
+      "վիճակախաղի շահումների խաղարկությունները կայանալու են"
+    ],
+    "creator": [
+      "State Department of Public Savings and Loan Armenian SSR",
+      "Պետաշխխնայդրամարկղների եւ պետվարկի Հայկական ՍՍՌ վարչություն"
+    ],
+    "publisher": [
+      "Ереван",
+      "Полиграфкомбинат (Poligrafkombinat)"
+    ],
+    "type": [
+      "http://id.loc.gov/vocabulary/resourceTypes/img"
+    ],
+    "subject": [
+      "Armenia (Republic)",
+      "Lotteries"
+    ],
+    "date": [
+      "1963",
+      "1963"
+    ],
+    "language": [
+      "arm"
+    ],
+    "identifier": [
+      "https://iiif.library.ucla.edu/iiif/2/ark%3A%2F21198%2Fz1q25zfd/full/!200,200/0/default.jpg",
+      "https://digital.library.ucla.edu/catalog/ark:/21198/z1q25zfd"
+    ]
+  },
+  {
+    "id": "oai:library.ucla.edu:ark:/21198/z1q54nst",
+    "source": [
+      "Soviet Armenian Posters",
+      "Armenia Collections"
+    ],
+    "title": [
+      "все нации придут к социализму..."
+    ],
+    "creator": [
+      "Բեգլարյան Վլադիմիր Արկադիի",
+      "Beglaryan, Vladimir Arkadi"
+    ],
+    "publisher": [
+      "Ереван",
+      "Издательство \"Айастан\" (\"Hayastan” Hratarakchʻutʻyun)"
+    ],
+    "type": [
+      "http://id.loc.gov/vocabulary/resourceTypes/img"
+    ],
+    "subject": [
+      "Propaganda, Communist",
+      "Lenin, Vladimir Ilʹich, 1870-1924"
+    ],
+    "date": [
+      "1965",
+      "1965"
+    ],
+    "language": [
+      "rus"
+    ],
+    "identifier": [
+      "https://iiif.library.ucla.edu/iiif/2/ark%3A%2F21198%2Fz1q54nst/full/!200,200/0/default.jpg",
+      "https://digital.library.ucla.edu/catalog/ark:/21198/z1q54nst"
+    ]
+  },
+  {
+    "id": "oai:library.ucla.edu:ark:/21198/z1zp65b9",
+    "source": [
+      "Soviet Armenian Posters",
+      "Armenia Collections"
+    ],
+    "title": [
+      "Голосуите за Виктора Васильевича Жворостяна"
+    ],
+    "creator": null,
+    "publisher": [
+      "[Լենինական]",
+      "Լենտեղարդի տպարան"
+    ],
+    "type": [
+      "http://id.loc.gov/vocabulary/resourceTypes/img"
+    ],
+    "subject": [
+      "Armenia (Republic)",
+      "Elections",
+      "Khvorostyan, Viktor Vasily"
+    ],
+    "date": null,
+    "language": [
+      "rus"
+    ],
+    "identifier": [
+      "https://iiif.library.ucla.edu/iiif/2/ark%3A%2F21198%2Fz1zp65b9/full/!200,200/0/default.jpg",
+      "https://digital.library.ucla.edu/catalog/ark:/21198/z1zp65b9"
+    ]
+  },
+  {
+    "id": "oai:library.ucla.edu:ark:/21198/z1jm48x0",
+    "source": [
+      "Soviet Armenian Posters",
+      "Armenia Collections"
+    ],
+    "title": [
+      "Առաջավորների փորձը – թեթև արդյունաբերության բոլոր աշխատողներին /  Ֆրունզիկ Գրիգորյանի շարժական հոլովակը"
+    ],
+    "creator": [
+      "Կենտրոնական նորմատիվա-հետազոտական կայան",
+      "Հայկական ՍՍՀ Մինիստրների սովետի պետպլան"
+    ],
+    "publisher": [
+      "Երևան",
+      "Հայկական ՍՍՀ Մինիստրների սովետի մամուլի պետական կոմիտեի պոլիգրաֆարդյունաբերության գլխավոր վարչություն"
+    ],
+    "type": [
+      "http://id.loc.gov/vocabulary/resourceTypes/img"
+    ],
+    "subject": [
+      "Գրիգորյան Ֆրունզիկ Արամի"
+    ],
+    "date": null,
+    "language": [
+      "arm"
+    ],
+    "identifier": [
+      "https://iiif.library.ucla.edu/iiif/2/ark%3A%2F21198%2Fz1jm48x0/full/!200,200/0/default.jpg",
+      "https://digital.library.ucla.edu/catalog/ark:/21198/z1jm48x0"
+    ]
+  },
+  {
+    "id": "oai:library.ucla.edu:ark:/21198/z1dr4tpm",
+    "source": [
+      "Soviet Armenian Posters",
+      "Armenia Collections"
+    ],
+    "title": [
+      "Ընդմիշտ դարձրեք սովորություն հանգցնել ծխախոտը, հանգցնել լուցկին"
+    ],
+    "creator": [
+      "The Volunteer fire company of  the Armenian SSR",
+      "Հայկական ՍՍՌ Հրշեջ ընկերություն"
+    ],
+    "publisher": [
+      "Երևան",
+      "Պոլիգրաֆկոմբինատ (Poligrafkombinat)"
+    ],
+    "type": [
+      "http://id.loc.gov/vocabulary/resourceTypes/img"
+    ],
+    "subject": [
+      "Armenia (Republic)",
+      "Public safety",
+      "Fire prevention"
+    ],
+    "date": [
+      "1954/1961",
+      "1954/1961"
+    ],
+    "language": [
+      "arm"
+    ],
+    "identifier": [
+      "https://iiif.library.ucla.edu/iiif/2/ark%3A%2F21198%2Fz1dr4tpm/full/!200,200/0/default.jpg",
+      "https://digital.library.ucla.edu/catalog/ark:/21198/z1dr4tpm"
+    ]
+  },
+  {
+    "id": "oai:library.ucla.edu:ark:/21198/z18s6p36",
+    "source": [
+      "Soviet Armenian Posters",
+      "Armenia Collections"
+    ],
+    "title": [
+      "Մի՛ ավելացրու 60 արագությունը, վտանգավոր է"
+    ],
+    "creator": [
+      "The Technical Security Committee of The Ministry of Transport Arm. SSR",
+      "ՀՍՍՀ Ավտոտրանսպորտի մինիստրության տեխնիկական անվտանգության կոմիտե"
+    ],
+    "publisher": [
+      "Երևան",
+      "Պոլիգրաֆկոմբինատ (Poligrafkombinat)"
+    ],
+    "type": [
+      "http://id.loc.gov/vocabulary/resourceTypes/img"
+    ],
+    "subject": [
+      "Armenia (Republic)",
+      "Traffic safety",
+      "Public safety",
+      "Ararat, Mount (Turkey)"
+    ],
+    "date": [
+      "1946/1953",
+      "1946/1953"
+    ],
+    "language": [
+      "arm"
+    ],
+    "identifier": [
+      "https://iiif.library.ucla.edu/iiif/2/ark%3A%2F21198%2Fz18s6p36/full/!200,200/0/default.jpg",
+      "https://digital.library.ucla.edu/catalog/ark:/21198/z18s6p36"
+    ]
+  },
+  {
+    "id": "oai:library.ucla.edu:ark:/21198/z1zd024b",
+    "source": [
+      "Soviet Armenian Posters",
+      "Armenia Collections"
+    ],
+    "title": [
+      "Պահպանեցեք աչքերը տրախոմայից"
+    ],
+    "creator": [
+      "Sargsyan, G.",
+      "Central Red Cross Committee of the Armenian SSR",
+      "Սարգսյան, Գ.",
+      "Հայկական ՍՍՌ կարմիր խաչի ընկերության կենտրոնական կոմիտե",
+      "Հայկական ՍՍՌ Առողջապահության մինիստրություն",
+      "Ministry of Health of the Armenian SSR"
+    ],
+    "publisher": [
+      "Երևան",
+      "Հայպետհրատ (Haypethrat)"
+    ],
+    "type": [
+      "http://id.loc.gov/vocabulary/resourceTypes/img"
+    ],
+    "subject": [
+      "Diseases",
+      "Armenia (Republic)"
+    ],
+    "date": [
+      "1958/1961",
+      "1958/1961"
+    ],
+    "language": [
+      "arm"
+    ],
+    "identifier": [
+      "https://iiif.library.ucla.edu/iiif/2/ark%3A%2F21198%2Fz1zd024b/full/!200,200/0/default.jpg",
+      "https://digital.library.ucla.edu/catalog/ark:/21198/z1zd024b"
+    ]
+  },
+  {
+    "id": "oai:library.ucla.edu:ark:/21198/z1573b8q",
+    "source": [
+      "Soviet Armenian Posters",
+      "Armenia Collections"
+    ],
+    "title": [
+      "Կանգնի՛ր,  ես կարմիր լույսն եմ"
+    ],
+    "creator": [
+      "The Technical Security Committee of The Ministry of Transport Arm. SSR",
+      "ՀՍՍՀ Ավտոտրանսպորտի մինիստրության տեխնիկական անվտանգության կոմիտե"
+    ],
+    "publisher": [
+      "Երևան",
+      "Պոլիգրաֆկոմբինատ (Poligrafkombinat)"
+    ],
+    "type": [
+      "http://id.loc.gov/vocabulary/resourceTypes/img"
+    ],
+    "subject": [
+      "Armenia (Republic)",
+      "Traffic safety",
+      "Public safety"
+    ],
+    "date": [
+      "1946/1953",
+      "1946/1953"
+    ],
+    "language": [
+      "arm"
+    ],
+    "identifier": [
+      "https://iiif.library.ucla.edu/iiif/2/ark%3A%2F21198%2Fz1573b8q/full/!200,200/0/default.jpg",
+      "https://digital.library.ucla.edu/catalog/ark:/21198/z1573b8q"
+    ]
+  },
+  {
+    "id": "oai:library.ucla.edu:ark:/21198/z14x771f",
+    "source": [
+      "Soviet Armenian Posters",
+      "Armenia Collections"
+    ],
+    "title": [
+      "Հայկական ՍՍՌ 1966 թվականի բնագիծը"
+    ],
+    "creator": [
+      "Գաբրիելյան, Վազրիկ Ծերունի",
+      "Gabrielyan, Vazrik Tseruni"
+    ],
+    "publisher": [
+      "Երևան",
+      "\"Հայաստան\" հրատարակչություն (\"Hayastan” Hratarakchʻutʻyun)"
+    ],
+    "type": [
+      "http://id.loc.gov/vocabulary/resourceTypes/img"
+    ],
+    "subject": [
+      "Armenia (Republic)",
+      "Yerevan (Armenia)",
+      "Economic policy"
+    ],
+    "date": [
+      "1966",
+      "1966"
+    ],
+    "language": [
+      "arm"
+    ],
+    "identifier": [
+      "https://iiif.library.ucla.edu/iiif/2/ark%3A%2F21198%2Fz14x771f/full/!200,200/0/default.jpg",
+      "https://digital.library.ucla.edu/catalog/ark:/21198/z14x771f"
+    ]
+  }
+]

@@ -1,0 +1,824 @@
+[
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll6:6/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:0/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:1/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:2/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:3/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:4/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:5/full/full/0/default.jpg"
+    ],
+    "creator": [
+      "Figari Bey, Antonio."
+    ],
+    "date": [
+      "1864"
+    ],
+    "description": [
+      "Relief shown by hachures; Cross sections inset on sheets 1, 2, and 6; Inset on sheet 6: Vue perspective du Versant occidental de la Chaîne des Montagnes de toute la Région du Sinaï."
+    ],
+    "digital-collection": [
+      "Historic Maps Digital Collection"
+    ],
+    "call-number": [
+      "G8301.C5 .F5 1864  (https://lib.aucegypt.edu/record=b2290877)"
+    ],
+    "language": [
+      "French"
+    ],
+    "license": [
+      "This item is in the public domain."
+    ],
+    "publisher": [
+      "Paris : V. Janson."
+    ],
+    "rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "scale": [
+      "1:510,000"
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll6/id/6\">Etudes géographiques et géologiques de l'Egypte, de la Péninsule de l'Arabie Petrée et de la Palestine </a></span>"
+    ],
+    "subject": [
+      "Geology -- Egypt -- Maps; Geology -- Arabian Peninsula -- Maps; Geology -- Palestine -- Maps"
+    ],
+    "title": [
+      "Etudes géographiques et géologiques de l'Egypte, de la Péninsule de l'Arabie Petrée et de la Palestine "
+    ],
+    "genre-aat": [
+      "maps"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "coverage-spatial/note": null,
+    "format": null,
+    "identifier": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll6:11/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:7/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:8/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:9/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:10/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:212/full/full/0/default.jpg"
+    ],
+    "creator": [
+      "Grand, Pierre Bey"
+    ],
+    "date": [
+      "1874"
+    ],
+    "description": [
+      "The map includes avenues or  Percements through the fabric of the old city. The important religious monuments of the city, Islamic and Christian, were differentiated both by color (red for mosques, and blue for churches and synagogues) and notation (numbers for the mosques, and letters for churches and synagogues). The map identified a total of 282 mosques on it, of which nine were unnamed. . . . close examination of the 1874 map reveals that this document was a project and not the actual description of the place.  --- Arnaud (1993, p. 82).Arnaud, Jean-Luc.  Maps of Cairo and the Development of the City at the End of the 19th Century.  Environmental design: Journal of the Islamic Environmental Design Research Centre 1-2 (1993): 82-91.  In Archnet - http://archnet.org/publications/3273"
+    ],
+    "digital-collection": [
+      "Historic Maps Digital Collection"
+    ],
+    "call-number": [
+      "G8304.C2E644 G73 1874 (https://lib.aucegypt.edu/record=b2198425)"
+    ],
+    "language": [
+      "French"
+    ],
+    "license": [
+      "This item is in the public domain."
+    ],
+    "publisher": [
+      "Le Caire, Égypte : Ebner et Cie"
+    ],
+    "rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "scale": [
+      "approx. 1:4,000"
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll6/id/11\">Plan général de la Ville du Caire </a></span>"
+    ],
+    "subject": [
+      "Religious architecture -- Egypt -- Cairo -- Maps; Monuments -- Egypt -- Cairo -- Maps; Cairo (Egypt) -- Buildings, structures, etc. -- Maps"
+    ],
+    "title": [
+      "Plan général de la Ville du Caire "
+    ],
+    "genre-aat": [
+      "maps"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "coverage-spatial/note": [
+      "Cairo; Egypt"
+    ],
+    "format": [
+      "jpg"
+    ],
+    "identifier": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll6:98/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:70/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:71/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:72/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:73/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:74/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:75/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:76/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:77/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:78/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:79/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:80/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:81/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:82/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:83/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:84/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:85/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:86/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:87/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:88/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:89/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:90/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:91/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:92/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:93/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:94/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:95/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:96/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:97/full/full/0/default.jpg"
+    ],
+    "creator": [
+      "Goad, Charles E."
+    ],
+    "date": [
+      "1898-1905"
+    ],
+    "description": [
+      "Key plan (v. 1) includes water supply, fire appliances and notes about materials for walls, roofs, stone piers, dwellingd and cotton in bales. V. 1. Insurance plan of Alexandria Egypt, June 1898 (sheet. 1. Key plan, June 1898 (scale 500 feet = 1 inch) -- sheets. 2-3,5-13,17. Minet El Bassal, June 1898 (scale 50 feet = 1 inch) -- sheet. 4. Minet El Bassal, April 1910 (scale 50 feet = 1inch) -- sheets. 14-15. [Alexandria Harbor], June 1898 (scale 100 feet = 1 inch) -- sheet. 16. [Alexandria Harbor, Mahmoudien Canal and Gabbari Ralway Station Yard], June 1898 (scale 50 feet = 1 inch) -- sheet. 18. Gabbari, April 1910 (scale 50 feet = 1inch) -- Index to insurance plan of Alexandria, surveyed April to June, 1898. revised to February, 1905) -- v. 2. Insurance plan of Alexandria (city), May 1905 (sheet. [30]. Key plan, May 1905 (scale 500 feet = 1 inch) -- sheet. 31. City, 1905 (scale 120 feet = 1 inch) -- sheets. 32-37. 1905 (scale 120 = 1 inch) -- Index to insurance plan of Alexandria (city), May 1905"
+    ],
+    "digital-collection": [
+      "Historic Maps Digital Collection"
+    ],
+    "call-number": [
+      "G8304.A4G475 .G6 1898 (https://lib.aucegypt.edu/search~S2?/cG8304.A4G475+.G6+1898/cg++8304+a4+g475+g6+1898/1%2C2%2C2%2CE/frameset&FF=cg++8304+a4+g475+g6+1898&1%2C1%2C)"
+    ],
+    "language": [
+      "English"
+    ],
+    "license": [
+      "This item is in the public domain."
+    ],
+    "publisher": [
+      "London : Chas. E. Goad"
+    ],
+    "rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "scale": [
+      "Range from 1:60 to 1:600"
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll6/id/98\">Insurance plan of Alexandria, Egypt</a></span>"
+    ],
+    "subject": [
+      "Fire risk assessment -- Egypt -- Alexandria -- Maps; Alexandria (Egypt) -- Maps"
+    ],
+    "title": [
+      "Insurance plan of Alexandria, Egypt"
+    ],
+    "genre-aat": [
+      "Fire insurance maps"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "coverage-spatial/note": [
+      "Alexandria; Egypt"
+    ],
+    "format": [
+      "26 maps (in 2 vols.) : col. ; each sheet 64 x 53 cm. + 2 sheets (indexes)"
+    ],
+    "identifier": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll6:113/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:99/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:100/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:101/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:102/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:103/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:104/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:105/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:106/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:107/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:108/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:109/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:110/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:111/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:112/full/full/0/default.jpg"
+    ],
+    "creator": [
+      "Goad, Charles E."
+    ],
+    "date": [
+      "1905"
+    ],
+    "description": [
+      "Sheets. [1]. A-B. Key plan, March 1905 (scale 200 feet = 1 inch) -- sheet. 2. Tariff districta Tewfikieh. Cairo, March 1905 (scale 50 feet = 1 inch) -- sheet. 3. Tariff districta Ismailieh. Cairo, March 1905 (scale 50 feet = 1 inch) -- sheet. 4. Tariff districts A-B. Ismailieh, Abdine. Cairo, March 1905 (scale 50 feet = 1 inch) -- sheet. 5. Tariff districts A.B Ezbekieh. Cairo, March 1905 (scale 50 feet = 1 inch) -- sheet. 6. Tariff district A.B.C. Ezbekieh, Jardin Roseyyi. Cairo, March 1905 (scale 50 feet = 1 inch) -- sheet. 7. Tariff districts A.B.C. Jardin Rosetti, Mousky. Cairo, March 1905 (scale 50 feet = 1 inch) -- sheet. 8. Tariff districts A.B. Mousky, Abdine. (scale 50 feet = 1 inch) -- sheet. 9. Tariff districts B.C. Mohamed Aly, Mousky. Cairo, March 1905 (scale 50 feet = 1 inch) -- sheet. 10. Tariff districts B.C. Jardin Roseyyi, Mousky. Cairo, March 1905 (scale 50 feet = 1 inch) -- sheet. 11-13. Tariff district C. Mousky. Cairo, March 1905 (scale 50 feet = 1 inch) -- Index to insurance plan of Cairo (Egypt), March 1905."
+    ],
+    "digital-collection": [
+      "Historic Maps Digital Collection"
+    ],
+    "call-number": [
+      "G8304.C2G475 .G6 1905 (https://lib.aucegypt.edu/search~S2/?searchtype=c&searcharg=G8304.C2G475+.G6+1905&searchscope=2&sortdropdown=-&SORT=D&extended=1&SUBMIT=Search&searchlimits=&searchorigarg=cDT45+.E4+1909)"
+    ],
+    "language": [
+      "English"
+    ],
+    "license": [
+      "This item is in the public domain."
+    ],
+    "publisher": [
+      "London : Chas. E. Goad"
+    ],
+    "rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "scale": [
+      "Scales range from 1:2400 to 1:60"
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll6/id/113\">Insurance plan of Cairo, Egypt </a></span>"
+    ],
+    "subject": [
+      "Fire risk assessment -- Egypt -- Cairo -- Maps; Cairo (Egypt) -- Maps"
+    ],
+    "title": [
+      "Insurance plan of Cairo, Egypt "
+    ],
+    "genre-aat": [
+      "Fire insurance maps"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "coverage-spatial/note": [
+      "Cairo; Egypt"
+    ],
+    "format": [
+      "13 maps on 14 sheets : col. ; 64 x 54 cm. + index (1 sheet)"
+    ],
+    "identifier": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll6:114/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:114/full/full/0/default.jpg",
+    "creator": [
+      "Egypt. Maṣlaḥat al-Misāḥah"
+    ],
+    "date": [
+      "1947"
+    ],
+    "description": [
+      "Shows also the eastern portion of al-Jīzah Province adjoining Cairo."
+    ],
+    "digital-collection": [
+      "Historic Maps Digital Collection"
+    ],
+    "call-number": [
+      "G8304.C2 .E3 1947 (https://lib.aucegypt.edu/search~S2/?searchtype=c&searcharg=%09G8304.C2+.E3+1947&searchscope=2&sortdropdown=-&SORT=D&extended=1&SUBMIT=Search&searchlimits=&searchorigarg=cHE7336+E4x+1934b)"
+    ],
+    "language": [
+      "English"
+    ],
+    "license": [
+      "This item is in the public domain."
+    ],
+    "publisher": [
+      "[al-Jīzah] : Survey of Egypt"
+    ],
+    "rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "scale": [
+      "Scale 1:15,000."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll6/id/114\">Outline map of Cairo </a></span>"
+    ],
+    "subject": [
+      "Cairo (Egypt) -- Maps"
+    ],
+    "title": [
+      "Outline map of Cairo "
+    ],
+    "genre-aat": [
+      "maps"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "coverage-spatial/note": [
+      "Cairo; Egypt; Giza; Egypt"
+    ],
+    "format": [
+      "1 map : mounted on linen, col. ; 49 x 73 cm"
+    ],
+    "identifier": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll6:115/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:115/full/full/0/default.jpg",
+    "creator": [
+      "Egypt. Maṣlaḥat al-Misāḥah"
+    ],
+    "date": [
+      "1932"
+    ],
+    "description": [
+      "Includes index to principal buildings and places of interest. Insets: Gîza Pyramids. Scale 1:25,000 -- Ḥelwân. Scale 1:25,000 -- Central Cairo. Scale 1:12,000."
+    ],
+    "digital-collection": [
+      "Historic Maps Digital Collection"
+    ],
+    "call-number": [
+      "G8304.C2 .E3 1932 (https://digitalcollections.aucegypt.edu/digital/collection/p15795coll6/id/115/rec/1)"
+    ],
+    "language": [
+      "English"
+    ],
+    "license": [
+      "This item is in the public domain."
+    ],
+    "publisher": [
+      "[Cairo] : Survey of Egypt"
+    ],
+    "rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "scale": [
+      "Scale 1:25,000."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll6/id/115\">Guide plan of Cairo and district.</a></span>"
+    ],
+    "subject": [
+      "Cairo (Egypt) -- Maps"
+    ],
+    "title": [
+      "Guide plan of Cairo and district."
+    ],
+    "genre-aat": [
+      "maps"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "coverage-spatial/note": [
+      "Cairo; Egypt; Giza; Egypt; Heliopolis; Egypt"
+    ],
+    "format": [
+      "1 map : col. ; 46 x 62 cm., on sheet 52 x 76 cm"
+    ],
+    "identifier": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll6:116/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:116/full/full/0/default.jpg",
+    "creator": [
+      "Egypt. Maṣlaḥat al-Misāḥah"
+    ],
+    "date": [
+      "1937"
+    ],
+    "description": [
+      "Includes reference and index of streets and buildings."
+    ],
+    "digital-collection": [
+      "Historic Maps Digital Collection"
+    ],
+    "call-number": [
+      "G8304.C2:2Z3A8 .E3 1937  (https://lib.aucegypt.edu/search~S2/?searchtype=c&searcharg=%09G8304.C2%3A2Z3A8+.E3+1937&searchscope=2&sortdropdown=-&SORT=D&extended=1&SUBMIT=Search&searchlimits=&searchorigarg=cG8304.C2+.E3+1932)"
+    ],
+    "language": [
+      "English"
+    ],
+    "license": [
+      "This item is in the public domain."
+    ],
+    "publisher": [
+      "[Cairo] : [Dept. of Survey and Mines]"
+    ],
+    "rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "scale": [
+      "Scale 1:5,000."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll6/id/116\">Residential map of Gezîra: (Zamâlik area).</a></span>"
+    ],
+    "subject": [
+      "Cairo (Egypt) -- Maps"
+    ],
+    "title": [
+      "Residential map of Gezîra: (Zamâlik area)."
+    ],
+    "genre-aat": [
+      "maps"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "coverage-spatial/note": [
+      "Az Zamālik; Egypt"
+    ],
+    "format": [
+      "1 map : col. ; 45 x 30 cm"
+    ],
+    "identifier": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll6:128/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:117/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:118/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:119/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:120/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:121/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:122/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:123/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:124/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:125/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:126/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:127/full/full/0/default.jpg"
+    ],
+    "creator": [
+      "United States. Army Map Service."
+    ],
+    "date": [
+      "1953"
+    ],
+    "description": [
+      "Incomplete selection of maps from the U. S. Map Service; Series P502; Edition 1"
+    ],
+    "digital-collection": [
+      "Historic Maps Digital Collection"
+    ],
+    "call-number": [
+      "U. S. Army Map Service, Series P502"
+    ],
+    "language": [
+      "English"
+    ],
+    "license": [
+      "This item is in the public domain."
+    ],
+    "publisher": [
+      "Washington, D.C. : Army Map Service"
+    ],
+    "rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "scale": null,
+    "source": [
+      "Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll6/id/128\">U.S. Army Map Service, Series P502</a></span>"
+    ],
+    "subject": [
+      "Egypt -- Maps"
+    ],
+    "title": [
+      "U.S. Army Map Service, Series P502"
+    ],
+    "genre-aat": [
+      "Maps"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "coverage-spatial/note": [
+      "Egypt"
+    ],
+    "format": null,
+    "identifier": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll6:133/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:129/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:130/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:131/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:132/full/full/0/default.jpg"
+    ],
+    "creator": [
+      "Egypt. Maṣlaḥat al-Misāḥah"
+    ],
+    "date": [
+      "1948"
+    ],
+    "description": [
+      "Shows mosque locations, names of streets, government and tourist buildings, and other points of interest. Appears in: Masājid Miṣr min sanat 21 ilá sanat 1365 H (sanat 641 ilá sanat 1946 M) : majmūʻah min al-manāẓir al-mulawwanah wa-ghayr al-mulawwanah li-ahamm al-masājid fī Miṣr maʻa nubdhah tārīkhīyah li-kull minhā maṣḥūbah bi-masāqiṭ wa-qiṭāʻāt handasīyah. [Cairo] : al-Mamlakah al-Miṣrīyah, Wizārat al-Awqāf ; al-Jīzah : Taṣmīm wa-ṭabʻ Maṣlaḥat al-Misāḥah al-Miṣrīyah, [1954?] Index title: Fihris al-Athār al-Islāmīyah bi-madīnat al-Qāhirah."
+    ],
+    "digital-collection": [
+      "Historic Maps Digital Collection"
+    ],
+    "call-number": [
+      "G8304.C2E644 .E313 1948 (https://lib.aucegypt.edu/search~S2/?searchtype=c&searcharg=G8304.C2E644+.E313+1948&searchscope=2&sortdropdown=-&SORT=D&extended=1&SUBMIT=Search&searchlimits=&searchorigarg=cDT104+.M52+1823)"
+    ],
+    "language": null,
+    "license": [
+      "This item is out of copyright."
+    ],
+    "publisher": [
+      "Cairo : Maṣlaḥat al-Misāḥah"
+    ],
+    "rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "scale": [
+      "1:5,000"
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll6/id/133\">Cairo Muhammadan Monuments</a></span>"
+    ],
+    "subject": [
+      "Cairo (Egypt) -- Maps.\r\nEgypt -- Antiquities -- Maps.\r\nIslamic antiquities -- Egypt -- Cairo -- Maps.\r\nMaps."
+    ],
+    "title": [
+      "Cairo Muhammadan Monuments"
+    ],
+    "genre-aat": [
+      "maps"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "coverage-spatial/note": [
+      "Cairo; Egypt"
+    ],
+    "format": [
+      "maps : col. ; 78 x 105 cm ; each sheet 83 x 113 cm or smaller"
+    ],
+    "identifier": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll6:137/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:134/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:135/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll6:136/full/full/0/default.jpg"
+    ],
+    "creator": [
+      "Great Britain. War Office. Intelligence Division."
+    ],
+    "date": [
+      "1883-1891"
+    ],
+    "description": [
+      "Maps of Egypt created by the Intelligence Department in the War Office of Great Britain. Includes maps numbered 435, 437, and 584."
+    ],
+    "digital-collection": [
+      "Historic Maps Digital Collection"
+    ],
+    "call-number": [
+      "G8303.I8 .G7 1884 (https://lib.aucegypt.edu/search~S2/?searchtype=c&searcharg=G8303.I8+.G7+1884&searchscope=2&sortdropdown=-&SORT=D&extended=1&SUBMIT=Search&searchlimits=&searchorigarg=c%09G2491.C3+A84+1949)"
+    ],
+    "language": [
+      "English"
+    ],
+    "license": [
+      "This item is in the public domain."
+    ],
+    "publisher": [
+      "[London] : Intelligence Division"
+    ],
+    "rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "scale": null,
+    "source": [
+      "Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll6/id/137\">Great Britain War Office - Maps of Egypt</a></span>"
+    ],
+    "subject": [
+      "Ismailia Canal (Egypt) -- Maps.\r\nRailroads -- Egypt -- Maps.\r\nAnglo-Egyptian War, 1882 -- Maps.\r\nEgypt -- Maps.\r\nMilitary maps.\r\nTopographic maps."
+    ],
+    "title": [
+      "Great Britain War Office - Maps of Egypt"
+    ],
+    "genre-aat": [
+      "Military maps; topographic mapss; Maps"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "coverage-spatial/note": [
+      "Egypt"
+    ],
+    "format": [
+      "1 map on 3 sheets : color ; 62 x 81 on sheets 69 x 93-95 cm"
+    ],
+    "identifier": null
+  }
+]

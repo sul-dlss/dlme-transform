@@ -1,0 +1,510 @@
+[
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll26:9602/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll26:9602/full/full/0/default.jpg",
+    "genre": [
+      "newspapers"
+    ],
+    "coverage": [
+      "Cairo, Egypt"
+    ],
+    "date": [
+      "2017-10-10"
+    ],
+    "format": [
+      "pdf"
+    ],
+    "language": [
+      "Arabic"
+    ],
+    "publisher": [
+      "American University in Cairo. College of Arts and Sciences"
+    ],
+    "access": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "rights": [
+      "Copyright 2017, American University in Cairo. All rights reserved."
+    ],
+    "subject": [
+      "College student newspapers and periodicals; Cairo (Egypt)--Newspapers; American University in Cairo -- Periodicals"
+    ],
+    "title": [
+      "Caravan Vol 99, Issue 3"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "source": [
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll26/id/9602\">Caravan Vol 99, Issue 3</a></span>"
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll26:9603/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll26:9603/full/full/0/default.jpg",
+    "genre": [
+      "newspapers"
+    ],
+    "coverage": [
+      "Cairo, Egypt"
+    ],
+    "date": [
+      "2016-03-20"
+    ],
+    "format": [
+      "pdf"
+    ],
+    "language": [
+      "English"
+    ],
+    "publisher": [
+      "American University in Cairo. College of Arts and Sciences"
+    ],
+    "access": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "rights": [
+      "Copyright 2017, American University in Cairo. All rights reserved."
+    ],
+    "subject": [
+      "College student newspapers and periodicals; Cairo (Egypt)--Newspapers; American University in Cairo -- Periodicals"
+    ],
+    "title": [
+      "Caravan Vol 97 Issue 11"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "source": [
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll26/id/9603\">Caravan Vol 97 Issue 11</a></span>"
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll26:9604/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll26:9604/full/full/0/default.jpg",
+    "genre": [
+      "newspapers"
+    ],
+    "coverage": [
+      "Cairo, Egypt"
+    ],
+    "date": [
+      "2016-04-17"
+    ],
+    "format": [
+      "pdf"
+    ],
+    "language": [
+      "English"
+    ],
+    "publisher": [
+      "American University in Cairo. College of Arts and Sciences"
+    ],
+    "access": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "rights": [
+      "Copyright 2017, American University in Cairo. All rights reserved."
+    ],
+    "subject": [
+      "College student newspapers and periodicals; Cairo (Egypt)--Newspapers; American University in Cairo -- Periodicals"
+    ],
+    "title": [
+      "Caravan Vol 97 Issue 13"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "source": [
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll26/id/9604\">Caravan Vol 97 Issue 13</a></span>"
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll26:9605/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll26:9605/full/full/0/default.jpg",
+    "genre": [
+      "newspapers"
+    ],
+    "coverage": [
+      "Cairo, Egypt"
+    ],
+    "date": [
+      "2016-11-20"
+    ],
+    "format": [
+      "pdf"
+    ],
+    "language": [
+      "English"
+    ],
+    "publisher": [
+      "American University in Cairo. College of Arts and Sciences"
+    ],
+    "access": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "rights": [
+      "Copyright 2017, American University in Cairo. All rights reserved."
+    ],
+    "subject": [
+      "College student newspapers and periodicals; Cairo (Egypt)--Newspapers; American University in Cairo -- Periodicals"
+    ],
+    "title": [
+      "Caravan, Vol. 98, Issue 5"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "source": [
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll26/id/9605\">Caravan, Vol. 98, Issue 5</a></span>"
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll26:9606/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll26:9606/full/full/0/default.jpg",
+    "genre": [
+      "newspapers"
+    ],
+    "coverage": [
+      "Cairo, Egypt"
+    ],
+    "date": [
+      "2016-02-28"
+    ],
+    "format": [
+      "pdf"
+    ],
+    "language": [
+      "English"
+    ],
+    "publisher": [
+      "American University in Cairo. College of Arts and Sciences"
+    ],
+    "access": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "rights": [
+      "Copyright 2017, American University in Cairo. All rights reserved."
+    ],
+    "subject": [
+      "College student newspapers and periodicals; Cairo (Egypt)--Newspapers; American University in Cairo -- Periodicals"
+    ],
+    "title": [
+      "Caravan Vol 97 Issue 8"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "source": [
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll26/id/9606\">Caravan Vol 97 Issue 8</a></span>"
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll26:9607/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll26:9607/full/full/0/default.jpg",
+    "genre": [
+      "newspapers"
+    ],
+    "coverage": [
+      "Cairo, Egypt"
+    ],
+    "date": [
+      "2015-10-25"
+    ],
+    "format": [
+      "pdf"
+    ],
+    "language": [
+      "English"
+    ],
+    "publisher": [
+      "American University in Cairo. College of Arts and Sciences"
+    ],
+    "access": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "rights": [
+      "Copyright 2017, American University in Cairo. All rights reserved."
+    ],
+    "subject": [
+      "College student newspapers and periodicals; Cairo (Egypt)--Newspapers; American University in Cairo -- Periodicals"
+    ],
+    "title": [
+      "Caravan Vol 97 Issue 3"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "source": [
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll26/id/9607\">Caravan Vol 97 Issue 3</a></span>"
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll26:9608/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll26:9608/full/full/0/default.jpg",
+    "genre": [
+      "newspapers"
+    ],
+    "coverage": [
+      "Cairo, Egypt"
+    ],
+    "date": [
+      "2012-11-25"
+    ],
+    "format": [
+      "pdf"
+    ],
+    "language": [
+      "English"
+    ],
+    "publisher": [
+      "American University in Cairo. College of Arts and Sciences"
+    ],
+    "access": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "rights": [
+      "Copyright 2017, American University in Cairo. All rights reserved."
+    ],
+    "subject": [
+      "College student newspapers and periodicals; Cairo (Egypt)--Newspapers; American University in Cairo -- Periodicals"
+    ],
+    "title": [
+      "Caravan Vol 93 Issue 5"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "source": [
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll26/id/9608\">Caravan Vol 93 Issue 5</a></span>"
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll26:9609/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll26:9609/full/full/0/default.jpg",
+    "genre": [
+      "newspapers"
+    ],
+    "coverage": [
+      "Cairo, Egypt"
+    ],
+    "date": [
+      "2018-11-18"
+    ],
+    "format": [
+      "pdf"
+    ],
+    "language": [
+      "English"
+    ],
+    "publisher": [
+      "American University in Cairo. College of Arts and Sciences"
+    ],
+    "access": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "rights": [
+      "Copyright 2017, American University in Cairo. All rights reserved."
+    ],
+    "subject": [
+      "College student newspapers and periodicals; Cairo (Egypt)--Newspapers; American University in Cairo -- Periodicals"
+    ],
+    "title": [
+      "Caravan Vol 100, Issue 7"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "source": [
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll26/id/9609\">Caravan Vol 100, Issue 7</a></span>"
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll26:9622/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll26:9610/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll26:9611/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll26:9612/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll26:9613/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll26:9614/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll26:9615/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll26:9616/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll26:9617/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll26:9618/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll26:9619/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll26:9620/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll26:9621/full/full/0/default.jpg"
+    ],
+    "genre": [
+      "newspapers"
+    ],
+    "coverage": [
+      "Cairo, Egypt"
+    ],
+    "date": [
+      "1994-11-06"
+    ],
+    "format": [
+      "image/jpg"
+    ],
+    "language": [
+      "English; Arabic"
+    ],
+    "publisher": [
+      "American University in Cairo. College of Arts and Sciences"
+    ],
+    "access": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "rights": [
+      "Copyright 2017, American University in Cairo. All rights reserved."
+    ],
+    "subject": [
+      "College student newspapers and periodicals; Cairo (Egypt)--Newspapers; American University in Cairo -- Periodicals"
+    ],
+    "title": [
+      "Caravan Vol 75 No 5"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "source": [
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll26/id/9622\">Caravan Vol 75 No 5</a></span>"
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll26:9635/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll26:9623/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll26:9624/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll26:9625/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll26:9626/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll26:9627/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll26:9628/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll26:9629/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll26:9630/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll26:9631/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll26:9632/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll26:9633/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll26:9634/full/full/0/default.jpg"
+    ],
+    "genre": [
+      "newspapers"
+    ],
+    "coverage": [
+      "Cairo, Egypt"
+    ],
+    "date": [
+      "1994-12-04"
+    ],
+    "format": [
+      "image/jpg"
+    ],
+    "language": [
+      "English; Arabic"
+    ],
+    "publisher": [
+      "American University in Cairo. College of Arts and Sciences"
+    ],
+    "access": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "rights": [
+      "Copyright 2017, American University in Cairo. All rights reserved."
+    ],
+    "subject": [
+      "College student newspapers and periodicals; Cairo (Egypt)--Newspapers; American University in Cairo -- Periodicals"
+    ],
+    "title": [
+      "Caravan Vol 75 No 9"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "source": [
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll26/id/9635\">Caravan Vol 75 No 9</a></span>"
+    ]
+  }
+]

@@ -1,0 +1,662 @@
+[
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll12:296/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll12:296/full/full/0/default.jpg",
+    "location-governorate-transliteration": [
+      "Asyūţ governate; Egypt"
+    ],
+    "creator": [
+      "Hopkins, Nicholas S."
+    ],
+    "date": [
+      "1980"
+    ],
+    "format": [
+      "image/jpeg"
+    ],
+    "medium": [
+      "color photographs"
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll12/id/296\">Loading and gleaning wheat</a></span>"
+    ],
+    "location-governorate-english": [
+      "Assuit governate"
+    ],
+    "location-governorate-arabic": [
+      "محافظة أسيوط"
+    ],
+    "location-country-english": [
+      "Egypt"
+    ],
+    "location-country-arabic": [
+      "مصر"
+    ],
+    "location-governorate-alternative": [
+      "As'jut, Assiout, Assiut, Assuit, Asyut, Asyūţ, Licopolis, Likupulis, Lycopolis, Līkūpūlīs, Siut, asywt, Асьют"
+    ],
+    "identifier": [
+      "Hopkins_061"
+    ],
+    "rights": [
+      "Copyright 2015, American University in Cairo. All rights reserved.; To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "collection": [
+      "Nicholas S. Hopkins Personal Papers"
+    ],
+    "subject-lc": [
+      "Egypt--Rural conditions; Agriculture -- Egypt."
+    ],
+    "title-by-creator": [
+      "Loading and gleaning wheat"
+    ],
+    "title-arabic": [
+      "تحميل القمح وجمعة"
+    ],
+    "type": [
+      "still image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "titles-new": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll12:297/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll12:297/full/full/0/default.jpg",
+    "location-governorate-transliteration": [
+      "Asyūţ governate; Egypt"
+    ],
+    "creator": [
+      "Hopkins, Nicholas S."
+    ],
+    "date": [
+      "1980"
+    ],
+    "format": [
+      "image/jpeg"
+    ],
+    "medium": [
+      "color photographs"
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll12/id/297\">Jehan and Zeinab</a></span>"
+    ],
+    "location-governorate-english": [
+      "Assuit governate"
+    ],
+    "location-governorate-arabic": [
+      "محافظة أسيوط"
+    ],
+    "location-country-english": [
+      "Egypt"
+    ],
+    "location-country-arabic": [
+      "مصر"
+    ],
+    "location-governorate-alternative": [
+      "As'jut, Assiout, Assiut, Assuit, Asyut, Asyūţ, Licopolis, Likupulis, Lycopolis, Līkūpūlīs, Siut, asywt, Асьют"
+    ],
+    "identifier": [
+      "Hopkins_032"
+    ],
+    "rights": [
+      "Copyright 2015, American University in Cairo. All rights reserved.; To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "collection": [
+      "Nicholas S. Hopkins Personal Papers"
+    ],
+    "subject-lc": [
+      "Egypt--Rural conditions; "
+    ],
+    "title-by-creator": [
+      "Jehan and Zeinab"
+    ],
+    "title-arabic": [
+      "جيهان وزينب"
+    ],
+    "type": [
+      "still image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "titles-new": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll12:298/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll12:298/full/full/0/default.jpg",
+    "location-governorate-transliteration": [
+      "Asyūţ governate; Egypt"
+    ],
+    "creator": [
+      "Hopkins, Nicholas S."
+    ],
+    "date": [
+      "1980"
+    ],
+    "format": [
+      "image/jpeg"
+    ],
+    "medium": [
+      "color photographs"
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll12/id/298\">Threshing wheat, clearing</a></span>"
+    ],
+    "location-governorate-english": [
+      "Assuit governate"
+    ],
+    "location-governorate-arabic": [
+      "محافظة أسيوط"
+    ],
+    "location-country-english": [
+      "Egypt"
+    ],
+    "location-country-arabic": [
+      "مصر"
+    ],
+    "location-governorate-alternative": [
+      "As'jut, Assiout, Assiut, Assuit, Asyut, Asyūţ, Licopolis, Likupulis, Lycopolis, Līkūpūlīs, Siut, asywt, Асьют"
+    ],
+    "identifier": [
+      "Hopkins_087"
+    ],
+    "rights": [
+      "Copyright 2015, American University in Cairo. All rights reserved.; To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "collection": [
+      "Nicholas S. Hopkins Personal Papers"
+    ],
+    "subject-lc": [
+      "Egypt--Rural conditions; Agriculture -- Egypt."
+    ],
+    "title-by-creator": [
+      "Threshing wheat, clearing"
+    ],
+    "title-arabic": [
+      "درس القمح، والتطهير"
+    ],
+    "type": [
+      "still image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "titles-new": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll12:299/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll12:299/full/full/0/default.jpg",
+    "location-governorate-transliteration": [
+      "Asyūţ governate; Egypt"
+    ],
+    "creator": [
+      "Hopkins, Nicholas S."
+    ],
+    "date": [
+      "1980"
+    ],
+    "format": [
+      "image/jpeg"
+    ],
+    "medium": [
+      "color photographs"
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll12/id/299\">Releasing straw</a></span>"
+    ],
+    "location-governorate-english": [
+      "Assuit governate"
+    ],
+    "location-governorate-arabic": [
+      "محافظة أسيوط"
+    ],
+    "location-country-english": [
+      "Egypt"
+    ],
+    "location-country-arabic": [
+      "مصر"
+    ],
+    "location-governorate-alternative": [
+      "As'jut, Assiout, Assiut, Assuit, Asyut, Asyūţ, Licopolis, Likupulis, Lycopolis, Līkūpūlīs, Siut, asywt, Асьют"
+    ],
+    "identifier": [
+      "Hopkins_136"
+    ],
+    "rights": [
+      "Copyright 2015, American University in Cairo. All rights reserved.; To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "collection": [
+      "Nicholas S. Hopkins Personal Papers"
+    ],
+    "subject-lc": [
+      "Egypt--Rural conditions; Agriculture -- Egypt."
+    ],
+    "title-by-creator": [
+      "Releasing straw"
+    ],
+    "title-arabic": [
+      "فصل القش"
+    ],
+    "type": [
+      "still image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "titles-new": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll12:300/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll12:300/full/full/0/default.jpg",
+    "location-governorate-transliteration": [
+      "Asyūţ governate; Egypt"
+    ],
+    "creator": [
+      "Hopkins, Nicholas S."
+    ],
+    "date": [
+      "1980"
+    ],
+    "format": [
+      "image/jpeg"
+    ],
+    "medium": [
+      "color photographs"
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll12/id/300\">Pump house and dog</a></span>"
+    ],
+    "location-governorate-english": [
+      "Assuit governate"
+    ],
+    "location-governorate-arabic": [
+      "محافظة أسيوط"
+    ],
+    "location-country-english": [
+      "Egypt"
+    ],
+    "location-country-arabic": [
+      "مصر"
+    ],
+    "location-governorate-alternative": [
+      "As'jut, Assiout, Assiut, Assuit, Asyut, Asyūţ, Licopolis, Likupulis, Lycopolis, Līkūpūlīs, Siut, asywt, Асьют"
+    ],
+    "identifier": [
+      "Hopkins_042"
+    ],
+    "rights": [
+      "Copyright 2015, American University in Cairo. All rights reserved.; To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "collection": [
+      "Nicholas S. Hopkins Personal Papers"
+    ],
+    "subject-lc": [
+      "Egypt--Rural conditions; Agriculture -- Egypt."
+    ],
+    "title-by-creator": [
+      "Pump house and dog"
+    ],
+    "title-arabic": [
+      "منزل المضخة والكلب"
+    ],
+    "type": [
+      "still image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "titles-new": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll12:301/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll12:301/full/full/0/default.jpg",
+    "location-governorate-transliteration": [
+      "Asyūţ governate; Egypt"
+    ],
+    "creator": [
+      "Hopkins, Nicholas S."
+    ],
+    "date": [
+      "1980"
+    ],
+    "format": [
+      "image/jpeg"
+    ],
+    "medium": [
+      "color photographs"
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll12/id/301\">Loading straw</a></span>"
+    ],
+    "location-governorate-english": [
+      "Assuit governate"
+    ],
+    "location-governorate-arabic": [
+      "محافظة أسيوط"
+    ],
+    "location-country-english": [
+      "Egypt"
+    ],
+    "location-country-arabic": [
+      "مصر"
+    ],
+    "location-governorate-alternative": [
+      "As'jut, Assiout, Assiut, Assuit, Asyut, Asyūţ, Licopolis, Likupulis, Lycopolis, Līkūpūlīs, Siut, asywt, Асьют"
+    ],
+    "identifier": [
+      "Hopkins_101"
+    ],
+    "rights": [
+      "Copyright 2015, American University in Cairo. All rights reserved.; To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "collection": [
+      "Nicholas S. Hopkins Personal Papers"
+    ],
+    "subject-lc": [
+      "Egypt--Rural conditions; Agriculture -- Egypt."
+    ],
+    "title-by-creator": [
+      "Loading straw"
+    ],
+    "title-arabic": [
+      "تحميل القش"
+    ],
+    "type": [
+      "still image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "titles-new": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll12:302/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll12:302/full/full/0/default.jpg",
+    "location-governorate-transliteration": [
+      "Al Qūsīyah; Asyūţ governate; Egypt"
+    ],
+    "creator": [
+      "Hopkins, Nicholas S."
+    ],
+    "date": [
+      "1980"
+    ],
+    "format": [
+      "image/jpeg"
+    ],
+    "medium": [
+      "color photographs"
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll12/id/302\">Team at Adhra Monastery</a></span>"
+    ],
+    "location-governorate-english": [
+      "El Quseyya, Assiut governate"
+    ],
+    "location-governorate-arabic": [
+      "القوصية، محافظة أسيوط"
+    ],
+    "location-country-english": [
+      "Egypt"
+    ],
+    "location-country-arabic": [
+      "مصر"
+    ],
+    "location-governorate-alternative": [
+      "Cusae, Qesy"
+    ],
+    "identifier": [
+      "Hopkins_027"
+    ],
+    "rights": [
+      "Copyright 2015, American University in Cairo. All rights reserved.; To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "collection": [
+      "Nicholas S. Hopkins Personal Papers"
+    ],
+    "subject-lc": [
+      "Egypt--Rural conditions; "
+    ],
+    "title-by-creator": [
+      "Team at Adhra Monastery"
+    ],
+    "title-arabic": [
+      "الفريق فى دير العذراء"
+    ],
+    "type": [
+      "still image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "titles-new": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll12:303/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll12:303/full/full/0/default.jpg",
+    "location-governorate-transliteration": [
+      "Asyūţ governate; Egypt"
+    ],
+    "creator": [
+      "Hopkins, Nicholas S."
+    ],
+    "date": [
+      "1980"
+    ],
+    "format": [
+      "image/jpeg"
+    ],
+    "medium": [
+      "color photographs"
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll12/id/303\">CRS thresher</a></span>"
+    ],
+    "location-governorate-english": [
+      "Assuit governate"
+    ],
+    "location-governorate-arabic": [
+      "محافظة أسيوط"
+    ],
+    "location-country-english": [
+      "Egypt"
+    ],
+    "location-country-arabic": [
+      "مصر"
+    ],
+    "location-governorate-alternative": [
+      "As'jut, Assiout, Assiut, Assuit, Asyut, Asyūţ, Licopolis, Likupulis, Lycopolis, Līkūpūlīs, Siut, asywt, Асьют"
+    ],
+    "identifier": [
+      "Hopkins_092"
+    ],
+    "rights": [
+      "Copyright 2015, American University in Cairo. All rights reserved.; To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "collection": [
+      "Nicholas S. Hopkins Personal Papers"
+    ],
+    "subject-lc": [
+      "Egypt--Rural conditions; Agriculture -- Egypt.; Agricultural machinery -- Egypt."
+    ],
+    "title-by-creator": [
+      "CRS thresher"
+    ],
+    "title-arabic": [
+      "آلة الدراس"
+    ],
+    "type": [
+      "still image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "titles-new": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll12:304/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll12:304/full/full/0/default.jpg",
+    "location-governorate-transliteration": [
+      "Asyūţ governate; Egypt"
+    ],
+    "creator": [
+      "Hopkins, Nicholas S."
+    ],
+    "date": [
+      "1980"
+    ],
+    "format": [
+      "image/jpeg"
+    ],
+    "medium": [
+      "color photographs"
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll12/id/304\">CRS thresher sorghum</a></span>"
+    ],
+    "location-governorate-english": [
+      "Assuit governate"
+    ],
+    "location-governorate-arabic": [
+      "محافظة أسيوط"
+    ],
+    "location-country-english": [
+      "Egypt"
+    ],
+    "location-country-arabic": [
+      "مصر"
+    ],
+    "location-governorate-alternative": [
+      "As'jut, Assiout, Assiut, Assuit, Asyut, Asyūţ, Licopolis, Likupulis, Lycopolis, Līkūpūlīs, Siut, asywt, Асьют"
+    ],
+    "identifier": [
+      "Hopkins_096"
+    ],
+    "rights": [
+      "Copyright 2015, American University in Cairo. All rights reserved.; To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "collection": [
+      "Nicholas S. Hopkins Personal Papers"
+    ],
+    "subject-lc": [
+      "Agriculture -- Egypt.; Agricultural machinery -- Egypt."
+    ],
+    "title-by-creator": [
+      "CRS thresher sorghum"
+    ],
+    "title-arabic": [
+      "دراس الذرة "
+    ],
+    "type": [
+      "still image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "titles-new": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll12:305/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll12:305/full/full/0/default.jpg",
+    "location-governorate-transliteration": [
+      "Asyūţ governate; Egypt"
+    ],
+    "creator": [
+      "Hopkins, Nicholas S."
+    ],
+    "date": [
+      "1980"
+    ],
+    "format": [
+      "image/jpeg"
+    ],
+    "medium": [
+      "color photographs"
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll12/id/305\">Two boys</a></span>"
+    ],
+    "location-governorate-english": [
+      "Assuit governate"
+    ],
+    "location-governorate-arabic": [
+      "محافظة أسيوط"
+    ],
+    "location-country-english": [
+      "Egypt"
+    ],
+    "location-country-arabic": [
+      "مصر"
+    ],
+    "location-governorate-alternative": [
+      "As'jut, Assiout, Assiut, Assuit, Asyut, Asyūţ, Licopolis, Likupulis, Lycopolis, Līkūpūlīs, Siut, asywt, Асьют"
+    ],
+    "identifier": [
+      "Hopkins_034"
+    ],
+    "rights": [
+      "Copyright 2015, American University in Cairo. All rights reserved.; To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "collection": [
+      "Nicholas S. Hopkins Personal Papers"
+    ],
+    "subject-lc": [
+      "Egypt--Rural conditions; "
+    ],
+    "title-by-creator": [
+      "Two boys"
+    ],
+    "title-arabic": [
+      "ولدان"
+    ],
+    "type": [
+      "still image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "titles-new": null
+  }
+]

@@ -1,0 +1,572 @@
+[
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll15:872/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll15:872/full/full/0/default.jpg",
+    "license": [
+      "This item is in the public domain."
+    ],
+    "location": [
+      "Vittel; France"
+    ],
+    "date": [
+      "1914"
+    ],
+    "topic": [
+      "cows; fields; livestock; "
+    ],
+    "format": [
+      "image/jpg"
+    ],
+    "identifier": [
+      "31_09_0400"
+    ],
+    "language": [
+      "French"
+    ],
+    "medium": [
+      "Stereoscopic photographs"
+    ],
+    "original-identifier": [
+      "0400"
+    ],
+    "collection": [
+      "Taxiphote Slides"
+    ],
+    "rights": [
+      "We believe that there are no copyright restrictions on the use of this image. You may download, copy, display and use the image. However, please include an attribution to \"Rare Books and Special Collections Library; the American University in Cairo\", and provide the Reference URL, which can be found immediately above the image title."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll15/id/872\">Vittel environs</a></span>"
+    ],
+    "title": [
+      "Vittel environs"
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "subject": null,
+    "name": null,
+    "creator": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll15:873/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll15:873/full/full/0/default.jpg",
+    "license": [
+      "This item is in the public domain."
+    ],
+    "location": [
+      "Paris; France"
+    ],
+    "date": [
+      "1913"
+    ],
+    "topic": [
+      "squares (open spaces); urban landscapes"
+    ],
+    "format": [
+      "image/jpg"
+    ],
+    "identifier": [
+      "27_12_0208"
+    ],
+    "language": [
+      "French"
+    ],
+    "medium": [
+      "Stereoscopic photographs"
+    ],
+    "original-identifier": [
+      "0208"
+    ],
+    "collection": [
+      "Taxiphote Slides"
+    ],
+    "rights": [
+      "We believe that there are no copyright restrictions on the use of this image. You may download, copy, display and use the image. However, please include an attribution to \"Rare Books and Special Collections Library; the American University in Cairo\", and provide the Reference URL, which can be found immediately above the image title."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll15/id/873\">Place de la Concorde</a></span>"
+    ],
+    "title": [
+      "Place de la Concorde"
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "subject": null,
+    "name": null,
+    "creator": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll15:874/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll15:874/full/full/0/default.jpg",
+    "license": [
+      "This item is in the public domain."
+    ],
+    "location": [
+      "Cairo; Egypt"
+    ],
+    "date": [
+      "1919"
+    ],
+    "topic": [
+      "protests"
+    ],
+    "format": [
+      "image/jpg"
+    ],
+    "identifier": [
+      "33_08_0727"
+    ],
+    "language": [
+      "French"
+    ],
+    "medium": [
+      "Stereoscopic photographs"
+    ],
+    "original-identifier": [
+      "0727"
+    ],
+    "collection": [
+      "Taxiphote Slides"
+    ],
+    "rights": [
+      "We believe that there are no copyright restrictions on the use of this image. You may download, copy, display and use the image. However, please include an attribution to \"Rare Books and Special Collections Library; the American University in Cairo\", and provide the Reference URL, which can be found immediately above the image title."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll15/id/874\">Manifestations 8 et 9 Avril 1919</a></span>"
+    ],
+    "title": [
+      "Manifestations 8 et 9 Avril 1919"
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "subject": [
+      "Egypt--History--Insurrection, 1919; Protest movements; Demonstrations"
+    ],
+    "name": null,
+    "creator": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll15:875/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll15:875/full/full/0/default.jpg",
+    "license": [
+      "This item is in the public domain."
+    ],
+    "location": [
+      "Salies-de-Béarn; France"
+    ],
+    "date": [
+      "1921"
+    ],
+    "topic": [
+      "houses; architecture; wood construction; urban landscapes"
+    ],
+    "format": [
+      "image/jpg"
+    ],
+    "identifier": [
+      "16_16_0689"
+    ],
+    "language": [
+      "French"
+    ],
+    "medium": [
+      "Stereoscopic photographs"
+    ],
+    "original-identifier": [
+      "0689"
+    ],
+    "collection": [
+      "Taxiphote Slides"
+    ],
+    "rights": [
+      "We believe that there are no copyright restrictions on the use of this image. You may download, copy, display and use the image. However, please include an attribution to \"Rare Books and Special Collections Library; the American University in Cairo\", and provide the Reference URL, which can be found immediately above the image title."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll15/id/875\">Salies-de-Béarn</a></span>"
+    ],
+    "title": [
+      "Salies-de-Béarn"
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "subject": null,
+    "name": null,
+    "creator": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll15:876/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll15:876/full/full/0/default.jpg",
+    "license": [
+      "This item is in the public domain."
+    ],
+    "location": [
+      "Lourdes"
+    ],
+    "date": [
+      "1919"
+    ],
+    "topic": [
+      "rivers; urban landscapess"
+    ],
+    "format": [
+      "image/jpg"
+    ],
+    "identifier": [
+      "26_02_0571"
+    ],
+    "language": [
+      "French"
+    ],
+    "medium": [
+      "Stereoscopic photographs"
+    ],
+    "original-identifier": [
+      "0571"
+    ],
+    "collection": [
+      "Taxiphote Slides"
+    ],
+    "rights": [
+      "We believe that there are no copyright restrictions on the use of this image. You may download, copy, display and use the image. However, please include an attribution to \"Rare Books and Special Collections Library; the American University in Cairo\", and provide the Reference URL, which can be found immediately above the image title."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll15/id/876\">Gave de Lourdes; France</a></span>"
+    ],
+    "title": [
+      "Gave de Lourdes; France"
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "subject": null,
+    "name": null,
+    "creator": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll15:877/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll15:877/full/full/0/default.jpg",
+    "license": [
+      "This item is in the public domain."
+    ],
+    "location": [
+      "Kawm Umbū; Egypt"
+    ],
+    "date": [
+      "1923"
+    ],
+    "topic": [
+      "landscape; people"
+    ],
+    "format": [
+      "image/jpg"
+    ],
+    "identifier": [
+      "11_19_0971"
+    ],
+    "language": [
+      "French"
+    ],
+    "medium": [
+      "Stereoscopic photographs"
+    ],
+    "original-identifier": [
+      "0971"
+    ],
+    "collection": [
+      "Taxiphote Slides"
+    ],
+    "rights": [
+      "We believe that there are no copyright restrictions on the use of this image. You may download, copy, display and use the image. However, please include an attribution to \"Rare Books and Special Collections Library; the American University in Cairo\", and provide the Reference URL, which can be found immediately above the image title."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll15/id/877\">Halte de Kom Ombo - H. Egypte</a></span>"
+    ],
+    "title": [
+      "Halte de Kom Ombo - H. Egypte"
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "subject": [
+      "Egypt--Social life and customs--20th century."
+    ],
+    "name": null,
+    "creator": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll15:878/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll15:878/full/full/0/default.jpg",
+    "license": [
+      "This item is in the public domain."
+    ],
+    "location": [
+      "Cairo; Egypt"
+    ],
+    "date": [
+      "1917-10"
+    ],
+    "topic": [
+      "funeral processions"
+    ],
+    "format": [
+      "image/jpg"
+    ],
+    "identifier": [
+      "10_05_0659"
+    ],
+    "language": [
+      "French"
+    ],
+    "medium": [
+      "Stereoscopic photographs"
+    ],
+    "original-identifier": [
+      "0659"
+    ],
+    "collection": [
+      "Taxiphote Slides"
+    ],
+    "rights": [
+      "We believe that there are no copyright restrictions on the use of this image. You may download, copy, display and use the image. However, please include an attribution to \"Rare Books and Special Collections Library; the American University in Cairo\", and provide the Reference URL, which can be found immediately above the image title."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll15/id/878\">Enterrement Sultan Hussein</a></span>"
+    ],
+    "title": [
+      "Enterrement Sultan Hussein"
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "subject": [
+      "Egypt--Kings and rulers."
+    ],
+    "name": [
+      "Ḥusayn Kāmil, Sultan of Egypt, 1853-1917"
+    ],
+    "creator": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll15:879/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll15:879/full/full/0/default.jpg",
+    "license": [
+      "This item is in the public domain."
+    ],
+    "location": [
+      "Lourdes"
+    ],
+    "date": [
+      "1919-08"
+    ],
+    "topic": [
+      "Christianity; Catholicism; processions; religious celebrations; pilgrimages"
+    ],
+    "format": [
+      "image/jpg"
+    ],
+    "identifier": [
+      "26_08_0578"
+    ],
+    "language": [
+      "French"
+    ],
+    "medium": [
+      "Stereoscopic photographs"
+    ],
+    "original-identifier": [
+      "0578"
+    ],
+    "collection": [
+      "Taxiphote Slides"
+    ],
+    "rights": [
+      "We believe that there are no copyright restrictions on the use of this image. You may download, copy, display and use the image. However, please include an attribution to \"Rare Books and Special Collections Library; the American University in Cairo\", and provide the Reference URL, which can be found immediately above the image title."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll15/id/879\">Procession à Lourdes; France</a></span>"
+    ],
+    "title": [
+      "Procession à Lourdes; France"
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "subject": [
+      "Christian pilgrims and pilgrimages--France--Lourdes."
+    ],
+    "name": null,
+    "creator": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll15:880/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll15:880/full/full/0/default.jpg",
+    "license": [
+      "This item is in the public domain."
+    ],
+    "location": [
+      "Nice; France"
+    ],
+    "date": [
+      "1919"
+    ],
+    "topic": null,
+    "format": [
+      "image/jpg"
+    ],
+    "identifier": [
+      "22_11_0534"
+    ],
+    "language": [
+      "French"
+    ],
+    "medium": [
+      "Stereoscopic photographs"
+    ],
+    "original-identifier": [
+      "0534"
+    ],
+    "collection": [
+      "Taxiphote Slides"
+    ],
+    "rights": [
+      "We believe that there are no copyright restrictions on the use of this image. You may download, copy, display and use the image. However, please include an attribution to \"Rare Books and Special Collections Library; the American University in Cairo\", and provide the Reference URL, which can be found immediately above the image title."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll15/id/880\">Marche aux fleurs Nice; France</a></span>"
+    ],
+    "title": [
+      "Marche aux fleurs Nice; France"
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "subject": null,
+    "name": null,
+    "creator": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll15:881/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll15:881/full/full/0/default.jpg",
+    "license": [
+      "This item is in the public domain."
+    ],
+    "location": [
+      "Giza; Egypt"
+    ],
+    "date": [
+      "1919"
+    ],
+    "topic": [
+      "zoos; vegetation; "
+    ],
+    "format": [
+      "image/jpg"
+    ],
+    "identifier": [
+      "24_13_0028"
+    ],
+    "language": [
+      "French"
+    ],
+    "medium": [
+      "Stereoscopic photographs"
+    ],
+    "original-identifier": [
+      "0028"
+    ],
+    "collection": [
+      "Taxiphote Slides"
+    ],
+    "rights": [
+      "We believe that there are no copyright restrictions on the use of this image. You may download, copy, display and use the image. However, please include an attribution to \"Rare Books and Special Collections Library; the American University in Cairo\", and provide the Reference URL, which can be found immediately above the image title."
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; the American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll15/id/881\">Zoo jardin Caire</a></span>"
+    ],
+    "title": [
+      "Zoo jardin Caire"
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "subject": [
+      "Zoos--Egypt--Cairo."
+    ],
+    "name": null,
+    "creator": null
+  }
+]

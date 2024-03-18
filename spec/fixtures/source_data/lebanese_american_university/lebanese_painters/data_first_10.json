@@ -1,0 +1,402 @@
+[
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm16366.contentdm.oclc.org/iiif/p15255coll2:0/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm16366.contentdm.oclc.org/iiif/2/p15255coll2:0/full/full/0/default.jpg",
+    "contributors": [
+      "Saliba Douaihy -- Victor Hakim -- Omar Onsi -- Bibi Zogbe -- Georges Cyr -- Charles Corn"
+    ],
+    "creator": [
+      "Zogbe, Bibi"
+    ],
+    "date": [
+      "1949"
+    ],
+    "description": [
+      "Beginning of the third album in the collection: Les Peintres Du Liban"
+    ],
+    "identifier": [
+      "38a"
+    ],
+    "index-terms": [
+      "Douaihy, Saliba -- Lebanon -- Painters -- Onsi, Omar -- Zogbe, Bibi -- Nenuphars"
+    ],
+    "language": [
+      "French"
+    ],
+    "title": [
+      "Les Peintres du Liban38a"
+    ],
+    "type": [
+      "Text page with a chiefly colored and mounted plate of Nenuphars"
+    ],
+    "repository": [
+      "Library Digital Collections"
+    ],
+    "source": [
+      "<span>From: <a href=\"http://contentdm.lau.edu.lb/digital/collection/p15255coll2/id/0\">Les Peintres du Liban38a</a></span>"
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm16366.contentdm.oclc.org/iiif/p15255coll2:1/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm16366.contentdm.oclc.org/iiif/2/p15255coll2:1/full/full/0/default.jpg",
+    "contributors": [
+      "Saliba Douaihy -- Victor Hakim -- Omar Onsi -- Bibi Zogbe -- Georges Cyr -- Charles Corn"
+    ],
+    "creator": [
+      "Douaihy, Saliba"
+    ],
+    "date": [
+      "1949"
+    ],
+    "description": [
+      "Vieux Moulin de L'Akkar dans la region de Quoubayyat."
+    ],
+    "identifier": [
+      "09"
+    ],
+    "index-terms": [
+      "Douaihy, Saliba -- Lebanon -- Painters -- Onsi, Omar -- Zogbe, Bibi -- Akkar -- Quoubayyat"
+    ],
+    "language": [
+      "French"
+    ],
+    "title": [
+      "Les Peintres du Liban09"
+    ],
+    "type": [
+      "Chiefly colored and mounted plate in Akkar"
+    ],
+    "repository": [
+      "Library Digital Collections"
+    ],
+    "source": [
+      "<span>From: <a href=\"http://contentdm.lau.edu.lb/digital/collection/p15255coll2/id/1\">Les Peintres du Liban09</a></span>"
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm16366.contentdm.oclc.org/iiif/p15255coll2:2/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm16366.contentdm.oclc.org/iiif/2/p15255coll2:2/full/full/0/default.jpg",
+    "contributors": [
+      "Saliba Douaihy -- Victor Hakim -- Omar Onsi -- Bibi Zogbe -- Georges Cyr -- Charles Corn"
+    ],
+    "creator": [
+      "Douaihy, Saliba"
+    ],
+    "date": [
+      "1949"
+    ],
+    "description": [
+      "Palais de Beit-Ed-Dine"
+    ],
+    "identifier": [
+      "10"
+    ],
+    "index-terms": [
+      "Douaihy, Saliba -- Lebanon -- Painters -- Onsi, Omar -- Zogbe, Bibi -- Beit-Ed-Dine"
+    ],
+    "language": [
+      "French"
+    ],
+    "title": [
+      "Les Peintres du Liban10"
+    ],
+    "type": [
+      "Chiefly colored and mounted plate of Beit-Ed-Dine"
+    ],
+    "repository": [
+      "Library Digital Collections"
+    ],
+    "source": [
+      "<span>From: <a href=\"http://contentdm.lau.edu.lb/digital/collection/p15255coll2/id/2\">Les Peintres du Liban10</a></span>"
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm16366.contentdm.oclc.org/iiif/p15255coll2:3/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm16366.contentdm.oclc.org/iiif/2/p15255coll2:3/full/full/0/default.jpg",
+    "contributors": [
+      "Saliba Douaihy -- Victor Hakim -- Omar Onsi -- Bibi Zogbe -- Georges Cyr -- Charles Corn"
+    ],
+    "creator": [
+      "Douaihy, Saliba"
+    ],
+    "date": [
+      "1949"
+    ],
+    "description": [
+      "Un grand Poete Arabe, Ahmad-As-Safi El-Najafi"
+    ],
+    "identifier": [
+      "11"
+    ],
+    "index-terms": [
+      "Douaihy, Saliba -- Lebanon -- Painters -- Onsi, Omar -- Zogbe, Bibi -- Poets -- Ahmad-As-Safi El-Najafi"
+    ],
+    "language": [
+      "French"
+    ],
+    "title": [
+      "Les Peintres du Liban11"
+    ],
+    "type": [
+      "Chiefly colored and mounted plate for Ahmad-As-Safi El-Najafi, an Arab poet"
+    ],
+    "repository": [
+      "Library Digital Collections"
+    ],
+    "source": [
+      "<span>From: <a href=\"http://contentdm.lau.edu.lb/digital/collection/p15255coll2/id/3\">Les Peintres du Liban11</a></span>"
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm16366.contentdm.oclc.org/iiif/p15255coll2:4/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm16366.contentdm.oclc.org/iiif/2/p15255coll2:4/full/full/0/default.jpg",
+    "contributors": [
+      "Saliba Douaihy -- Victor Hakim -- Omar Onsi -- Bibi Zogbe -- Georges Cyr -- Charles Corn"
+    ],
+    "creator": [
+      "Douaihy, Saliba"
+    ],
+    "date": [
+      "1949"
+    ],
+    "description": [
+      "Rechmaya"
+    ],
+    "identifier": [
+      "12"
+    ],
+    "index-terms": [
+      "Douaihy, Saliba -- Lebanon -- Painters -- Onsi, Omar -- Zogbe, Bibi -- Rechmaya"
+    ],
+    "language": [
+      "French"
+    ],
+    "title": [
+      "Les Peintres du Liban12"
+    ],
+    "type": [
+      "Chiefly colored and mounted plate of Rechmaya, a Lebanese village"
+    ],
+    "repository": [
+      "Library Digital Collections"
+    ],
+    "source": [
+      "<span>From: <a href=\"http://contentdm.lau.edu.lb/digital/collection/p15255coll2/id/4\">Les Peintres du Liban12</a></span>"
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm16366.contentdm.oclc.org/iiif/p15255coll2:5/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm16366.contentdm.oclc.org/iiif/2/p15255coll2:5/full/full/0/default.jpg",
+    "contributors": [
+      "Saliba Douaihy -- Victor Hakim -- Omar Onsi -- Bibi Zogbe -- Georges Cyr -- Charles Corn"
+    ],
+    "creator": [
+      "Douaihy, Saliba"
+    ],
+    "date": [
+      "1949"
+    ],
+    "description": [
+      "Effet de Lumiere. Sur un coin de ferme. -- Diman"
+    ],
+    "identifier": [
+      "13"
+    ],
+    "index-terms": [
+      "Douaihy, Saliba -- Lebanon -- Painters -- Onsi, Omar -- Zogbe, Bibi -- Diman"
+    ],
+    "language": [
+      "French"
+    ],
+    "title": [
+      "Les Peintres du Liban13"
+    ],
+    "type": [
+      "Chiefly colored and mounted plate for a small part of Diman"
+    ],
+    "repository": [
+      "Library Digital Collections"
+    ],
+    "source": [
+      "<span>From: <a href=\"http://contentdm.lau.edu.lb/digital/collection/p15255coll2/id/5\">Les Peintres du Liban13</a></span>"
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm16366.contentdm.oclc.org/iiif/p15255coll2:6/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm16366.contentdm.oclc.org/iiif/2/p15255coll2:6/full/full/0/default.jpg",
+    "contributors": [
+      "Saliba Douaihy -- Victor Hakim -- Omar Onsi -- Bibi Zogbe -- Georges Cyr -- Charles Corn"
+    ],
+    "creator": [
+      "Douaihy, Saliba"
+    ],
+    "date": [
+      "1949"
+    ],
+    "description": [
+      "Maison Libanaise du village d'Ehden"
+    ],
+    "identifier": [
+      "14"
+    ],
+    "index-terms": [
+      "Douaihy, Saliba -- Lebanon -- Painters -- Onsi, Omar -- Zogbe, Bibi -- Ehden -- Lebanese houses -- Lebanese villages"
+    ],
+    "language": [
+      "French"
+    ],
+    "title": [
+      "Les Peintres du Liban14"
+    ],
+    "type": [
+      "Chiefly colored and mounted plate of a Lebanese house in Ehden"
+    ],
+    "repository": [
+      "Library Digital Collections"
+    ],
+    "source": [
+      "<span>From: <a href=\"http://contentdm.lau.edu.lb/digital/collection/p15255coll2/id/6\">Les Peintres du Liban14</a></span>"
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm16366.contentdm.oclc.org/iiif/p15255coll2:7/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm16366.contentdm.oclc.org/iiif/2/p15255coll2:7/full/full/0/default.jpg",
+    "contributors": [
+      "Saliba Douaihy -- Victor Hakim -- Omar Onsi -- Bibi Zogbe -- Georges Cyr -- Charles Corn"
+    ],
+    "creator": [
+      "Douaihy, Saliba"
+    ],
+    "date": [
+      "1949"
+    ],
+    "description": [
+      "Type de femme Druze du Hauran"
+    ],
+    "identifier": [
+      "15"
+    ],
+    "index-terms": [
+      "Douaihy, Saliba -- Lebanon -- Painters -- Onsi, Omar -- Zogbe, Bibi -- Druze Women-- Hauran"
+    ],
+    "language": [
+      "French"
+    ],
+    "title": [
+      "Les Peintres du Liban15"
+    ],
+    "type": [
+      "Chiefly colored and mounted plate representing the Druze Women"
+    ],
+    "repository": [
+      "Library Digital Collections"
+    ],
+    "source": [
+      "<span>From: <a href=\"http://contentdm.lau.edu.lb/digital/collection/p15255coll2/id/7\">Les Peintres du Liban15</a></span>"
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm16366.contentdm.oclc.org/iiif/p15255coll2:8/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm16366.contentdm.oclc.org/iiif/2/p15255coll2:8/full/full/0/default.jpg",
+    "contributors": [
+      "Saliba Douaihy -- Victor Hakim -- Omar Onsi -- Bibi Zogbe -- Georges Cyr -- Charles Corn"
+    ],
+    "creator": [
+      "Douaihy, Saliba"
+    ],
+    "date": [
+      "1949"
+    ],
+    "description": [
+      "Village de Meksy. Au loin, le Grand Hermon."
+    ],
+    "identifier": [
+      "16"
+    ],
+    "index-terms": [
+      "Douaihy, Saliba -- Lebanon -- Painters -- Onsi, Omar -- Zogbe, Bibi -- Lebanese villages -- Meksy -- Mount Hermon"
+    ],
+    "language": [
+      "French"
+    ],
+    "title": [
+      "Les Peintres du Liban16"
+    ],
+    "type": [
+      "Chiefly colored and mounted plate of Meksy and Mount Hermon"
+    ],
+    "repository": [
+      "Library Digital Collections"
+    ],
+    "source": [
+      "<span>From: <a href=\"http://contentdm.lau.edu.lb/digital/collection/p15255coll2/id/8\">Les Peintres du Liban16</a></span>"
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm16366.contentdm.oclc.org/iiif/p15255coll2:9/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm16366.contentdm.oclc.org/iiif/2/p15255coll2:9/full/full/0/default.jpg",
+    "contributors": [
+      "Saliba Douaihy -- Victor Hakim -- Omar Onsi -- Bibi Zogbe -- Georges Cyr -- Charles Corn"
+    ],
+    "creator": [
+      "Douaihy, Saliba"
+    ],
+    "date": [
+      "1949"
+    ],
+    "description": [
+      "Rayon de soleil sur Qashaya au fond de la Vallee Sainte."
+    ],
+    "identifier": [
+      "17"
+    ],
+    "index-terms": [
+      "Douaihy, Saliba -- Lebanon -- Painters -- Onsi, Omar -- Zogbe, Bibi --  Vallee Sainte -- Wadi Qadisha -- Qashaya"
+    ],
+    "language": [
+      "French"
+    ],
+    "title": [
+      "Les Peintres du Liban17"
+    ],
+    "type": [
+      "Chiefly colored and mounted plate of the sun rays reflection on Qashaya and Vallee Sainte"
+    ],
+    "repository": [
+      "Library Digital Collections"
+    ],
+    "source": [
+      "<span>From: <a href=\"http://contentdm.lau.edu.lb/digital/collection/p15255coll2/id/9\">Les Peintres du Liban17</a></span>"
+    ]
+  }
+]

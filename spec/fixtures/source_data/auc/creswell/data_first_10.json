@@ -1,0 +1,750 @@
+[
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll14:1883/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll14:1883/full/full/0/default.jpg",
+    "architectural-detail-arabic": [
+      "الأبراج ؛ الصخور"
+    ],
+    "architectural-detail-english": [
+      "towers; stones"
+    ],
+    "acknowledgements": [
+      "The K.A.C. Creswell Papers and Photograph Collection of Islamic Architecture was donated to the American University in Cairo by K.A.C. Creswell."
+    ],
+    "location-english": [
+      "Al Jamālīyah; Cairo; Egypt"
+    ],
+    "date-created": [
+      "ca. late 19th century or early 20th century"
+    ],
+    "description": [
+      "Collector's Description: The Bab an - Nasr - rear and wall going west and south"
+    ],
+    "format": [
+      "image/jpg"
+    ],
+    "license": [
+      "Copyright 2012, American University in Cairo. All rights reserved."
+    ],
+    "location-arabic": [
+      "الجمالية؛ شارع المعز لدين الله الفاطمي؛ القاهرة؛ مصر"
+    ],
+    "medium": [
+      "photographic prints"
+    ],
+    "original-identifier": [
+      "A12 Pl.40 B/3"
+    ],
+    "collector": [
+      "Creswell, K. A. C. (Keppel Archibald Cameron), 1879-1974"
+    ],
+    "collection": [
+      "K.A.C. Creswell Photographs of Islamic Architecture"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "site-english": [
+      "Bab Al-Nasr"
+    ],
+    "site-arabic": [
+      "باب النصر"
+    ],
+    "source": [
+      "K.A.C. Creswell Oversized Photograph Albums; K.A.C. Creswell Photographs; K.A.C. Creswell Papers and Photograph Collection of Islamic Architecture; Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll14/id/1883\">Bab al-Nasr</a></span>"
+    ],
+    "subject-arabic": [
+      "باب الفتوح (القاهرة، مصر)؛ البوابات--مصر--القاهرة العمارة الإسلامية--مصر--تاريخ؛ العمارة، الفاطمية--مصر—القاهرة"
+    ],
+    "subject-english": [
+      "Bāb al-Futūḥ (Cairo, Egypt); Gates—Egypt—Cairo; Islamic architecture—Egypt—History; Architecture, Fatimid--Egypt—Cairo"
+    ],
+    "title-english": [
+      "Bab al-Nasr"
+    ],
+    "title-arabic": [
+      "باب النصر"
+    ],
+    "topic-english": [
+      "Architecture, Fatimid"
+    ],
+    "topic-arabic": [
+      "البوابات؛ العمارة الفاطمية"
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "photographer": null,
+    "extent-in-cm": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll14:1884/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll14:1884/full/full/0/default.jpg",
+    "architectural-detail-arabic": null,
+    "architectural-detail-english": [
+      "domes; minarets; arches "
+    ],
+    "acknowledgements": [
+      "The K.A.C. Creswell Papers and Photograph Collection of Islamic Architecture was donated to the American University in Cairo by K.A.C. Creswell."
+    ],
+    "location-english": [
+      "Moqattam; Cairo; Egypt"
+    ],
+    "date-created": [
+      "ca. late 19th century or early 20th century"
+    ],
+    "description": [
+      "Collector's Description: Mosque of el-Guyushi: North side"
+    ],
+    "format": [
+      "image/jpg"
+    ],
+    "license": [
+      "Copyright 2012, American University in Cairo. All rights reserved."
+    ],
+    "location-arabic": null,
+    "medium": [
+      "photographic prints"
+    ],
+    "original-identifier": [
+      "A12 Pl.27 B/5 c.1 (1/2)"
+    ],
+    "collector": [
+      "Creswell, K. A. C. (Keppel Archibald Cameron), 1879-1974"
+    ],
+    "collection": [
+      "K.A.C. Creswell Photographs of Islamic Architecture"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "site-english": [
+      "Juyushi Mosque"
+    ],
+    "site-arabic": null,
+    "source": [
+      "K.A.C. Creswell Oversized Photograph Albums; K.A.C. Creswell Photographs; K.A.C. Creswell Papers and Photograph Collection of Islamic Architecture; Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll14/id/1884\">Minaret and Dome of the Mosque of al-Guyushi</a></span>"
+    ],
+    "subject-arabic": null,
+    "subject-english": null,
+    "title-english": [
+      "Minaret and Dome of the Mosque of al-Guyushi"
+    ],
+    "title-arabic": null,
+    "topic-english": null,
+    "topic-arabic": null,
+    "type": [
+      "Still Image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "photographer": null,
+    "extent-in-cm": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll14:1885/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll14:1885/full/full/0/default.jpg",
+    "architectural-detail-arabic": null,
+    "architectural-detail-english": [
+      "arches; mausoleums"
+    ],
+    "acknowledgements": [
+      "The K.A.C. Creswell Papers and Photograph Collection of Islamic Architecture was donated to the American University in Cairo by K.A.C. Creswell."
+    ],
+    "location-english": [
+      "Aswān; Egypt"
+    ],
+    "date-created": [
+      "ca. late 19th century or early 20th century"
+    ],
+    "description": [
+      "Collector's Description: No.4"
+    ],
+    "format": [
+      "image/jpg"
+    ],
+    "license": [
+      "Copyright 2012, American University in Cairo. All rights reserved."
+    ],
+    "location-arabic": null,
+    "medium": [
+      "photographic prints"
+    ],
+    "original-identifier": [
+      "A12 Pl.1 D/6 c.2 (2/2)"
+    ],
+    "collector": [
+      "Creswell, K. A. C. (Keppel Archibald Cameron), 1879-1974"
+    ],
+    "collection": [
+      "K.A.C. Creswell Photographs of Islamic Architecture"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "site-english": null,
+    "site-arabic": null,
+    "source": [
+      "K.A.C. Creswell Oversized Photograph Albums; K.A.C. Creswell Photographs; K.A.C. Creswell Papers and Photograph Collection of Islamic Architecture; Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll14/id/1885\">Interior view of the Mausoleums of Aswan</a></span>"
+    ],
+    "subject-arabic": null,
+    "subject-english": null,
+    "title-english": [
+      "Interior view of the Mausoleums of Aswan"
+    ],
+    "title-arabic": null,
+    "topic-english": null,
+    "topic-arabic": null,
+    "type": [
+      "Still Image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "photographer": null,
+    "extent-in-cm": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll14:1886/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll14:1886/full/full/0/default.jpg",
+    "architectural-detail-arabic": [
+      "الأبراج ؛ الصخور؛ الأقواس"
+    ],
+    "architectural-detail-english": [
+      "towers; stones; arches"
+    ],
+    "acknowledgements": [
+      "The K.A.C. Creswell Papers and Photograph Collection of Islamic Architecture was donated to the American University in Cairo by K.A.C. Creswell."
+    ],
+    "location-english": [
+      "Al Jamālīyah; Cairo; Egypt"
+    ],
+    "date-created": [
+      "ca. late 19th century or early 20th century"
+    ],
+    "description": [
+      "Collector's Description: The Bab an - Nasr - rear face, before restoration and clearance"
+    ],
+    "format": [
+      "image/jpg"
+    ],
+    "license": [
+      "Copyright 2012, American University in Cairo. All rights reserved."
+    ],
+    "location-arabic": [
+      "الجمالية؛ شارع المعز لدين الله الفاطمي؛ القاهرة؛ مصر"
+    ],
+    "medium": [
+      "photographic prints"
+    ],
+    "original-identifier": [
+      "A12 Pl.39 A/5 c.2 (2/2)"
+    ],
+    "collector": [
+      "Creswell, K. A. C. (Keppel Archibald Cameron), 1879-1974"
+    ],
+    "collection": [
+      "K.A.C. Creswell Photographs of Islamic Architecture"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "site-english": [
+      "Bab Al-Nasr"
+    ],
+    "site-arabic": [
+      "باب النصر"
+    ],
+    "source": [
+      "K.A.C. Creswell Oversized Photograph Albums; K.A.C. Creswell Photographs; K.A.C. Creswell Papers and Photograph Collection of Islamic Architecture; Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll14/id/1886\">Bab al-Nasr</a></span>"
+    ],
+    "subject-arabic": [
+      "باب الفتوح (القاهرة، مصر)؛ البوابات--مصر--القاهرة العمارة الإسلامية--مصر--تاريخ؛ العمارة، الفاطمية--مصر—القاهرة"
+    ],
+    "subject-english": [
+      "Bāb al-Naṣr (Cairo, Egypt); Gates—Egypt—Cairo; Islamic architecture—Egypt—History; Architecture, Fatimid--Egypt—Cairo"
+    ],
+    "title-english": [
+      "Bab al-Nasr"
+    ],
+    "title-arabic": [
+      "باب النصر"
+    ],
+    "topic-english": [
+      "Architecture, Fatimid"
+    ],
+    "topic-arabic": [
+      "البوابات؛ العمارة الفاطمية"
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "photographer": null,
+    "extent-in-cm": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll14:1887/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll14:1887/full/full/0/default.jpg",
+    "architectural-detail-arabic": null,
+    "architectural-detail-english": [
+      "minarets; bricks; inscriptions"
+    ],
+    "acknowledgements": [
+      "The K.A.C. Creswell Papers and Photograph Collection of Islamic Architecture was donated to the American University in Cairo by K.A.C. Creswell."
+    ],
+    "location-english": [
+      "Aswān; Egypt"
+    ],
+    "date-created": [
+      "ca. late 19th century or early 20th century"
+    ],
+    "description": [
+      "Collector's Description: Aswan: minaret in Tabia"
+    ],
+    "format": [
+      "image/jpg"
+    ],
+    "license": [
+      "Copyright 2012, American University in Cairo. All rights reserved."
+    ],
+    "location-arabic": null,
+    "medium": [
+      "photographic prints"
+    ],
+    "original-identifier": [
+      "A12 Pl.23 B/5 c.1 (1/2)"
+    ],
+    "collector": [
+      "Creswell, K. A. C. (Keppel Archibald Cameron), 1879-1974"
+    ],
+    "collection": [
+      "K.A.C. Creswell Photographs of Islamic Architecture"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "site-english": [
+      "El-Tabia Mosque"
+    ],
+    "site-arabic": null,
+    "source": [
+      "K.A.C. Creswell Oversized Photograph Albums; K.A.C. Creswell Photographs; K.A.C. Creswell Papers and Photograph Collection of Islamic Architecture; Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll14/id/1887\">Minaret of El-Tabia Mosque</a></span>"
+    ],
+    "subject-arabic": null,
+    "subject-english": null,
+    "title-english": [
+      "Minaret of El-Tabia Mosque"
+    ],
+    "title-arabic": null,
+    "topic-english": null,
+    "topic-arabic": null,
+    "type": [
+      "Still Image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "photographer": null,
+    "extent-in-cm": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll14:1888/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll14:1888/full/full/0/default.jpg",
+    "architectural-detail-arabic": [
+      "الأبراج ؛ الصخور؛ المداخل"
+    ],
+    "architectural-detail-english": [
+      "towers; stones; arches"
+    ],
+    "acknowledgements": [
+      "The K.A.C. Creswell Papers and Photograph Collection of Islamic Architecture was donated to the American University in Cairo by K.A.C. Creswell."
+    ],
+    "location-english": [
+      "Al Jamālīyah; Cairo; Egypt"
+    ],
+    "date-created": [
+      "ca. late 19th century or early 20th century"
+    ],
+    "description": [
+      "Collector's Description: The Bab an - Nasr - south side, before restoration and clearance"
+    ],
+    "format": [
+      "image/jpg"
+    ],
+    "license": [
+      "Copyright 2012, American University in Cairo. All rights reserved."
+    ],
+    "location-arabic": [
+      "الجمالية؛ شارع المعز لدين الله الفاطمي؛ القاهرة؛ مصر"
+    ],
+    "medium": [
+      "photographic prints"
+    ],
+    "original-identifier": [
+      "A12 Pl.39 B/5 c.1 (1/2)"
+    ],
+    "collector": [
+      "Creswell, K. A. C. (Keppel Archibald Cameron), 1879-1974"
+    ],
+    "collection": [
+      "K.A.C. Creswell Photographs of Islamic Architecture"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "site-english": [
+      "Bab Al-Nasr"
+    ],
+    "site-arabic": [
+      "باب النصر"
+    ],
+    "source": [
+      "K.A.C. Creswell Oversized Photograph Albums; K.A.C. Creswell Photographs; K.A.C. Creswell Papers and Photograph Collection of Islamic Architecture; Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll14/id/1888\">Bab al-Nasr</a></span>"
+    ],
+    "subject-arabic": [
+      "باب الفتوح (القاهرة، مصر)؛ البوابات--مصر--القاهرة العمارة الإسلامية--مصر--تاريخ؛ العمارة، الفاطمية--مصر—القاهرة"
+    ],
+    "subject-english": [
+      "Bāb al-Naṣr (Cairo, Egypt); Gates—Egypt—Cairo; Islamic architecture—Egypt—History; Architecture, Fatimid--Egypt—Cairo"
+    ],
+    "title-english": [
+      "Bab al-Nasr"
+    ],
+    "title-arabic": [
+      "باب النصر"
+    ],
+    "topic-english": [
+      "Architecture, Fatimid"
+    ],
+    "topic-arabic": [
+      "البوابات؛ العمارة الفاطمية"
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "photographer": null,
+    "extent-in-cm": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll14:1889/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll14:1889/full/full/0/default.jpg",
+    "architectural-detail-arabic": [
+      "الأبراج ؛ الصخور"
+    ],
+    "architectural-detail-english": [
+      "towers; stones"
+    ],
+    "acknowledgements": [
+      "The K.A.C. Creswell Papers and Photograph Collection of Islamic Architecture was donated to the American University in Cairo by K.A.C. Creswell."
+    ],
+    "location-english": [
+      "Al Jamālīyah; Cairo; Egypt"
+    ],
+    "date-created": [
+      "ca. late 19th century or early 20th century"
+    ],
+    "description": [
+      "Collector's Description: The Bab an - Nasr - rear face, before removal of workshop"
+    ],
+    "format": [
+      "image/jpg"
+    ],
+    "license": [
+      "Copyright 2012, American University in Cairo. All rights reserved."
+    ],
+    "location-arabic": [
+      "الجمالية؛ شارع المعز لدين الله الفاطمي؛ القاهرة؛ مصر"
+    ],
+    "medium": [
+      "photographic prints"
+    ],
+    "original-identifier": [
+      "A12 Pl.39 C/5 c.1 (1/2)"
+    ],
+    "collector": [
+      "Creswell, K. A. C. (Keppel Archibald Cameron), 1879-1974"
+    ],
+    "collection": [
+      "K.A.C. Creswell Photographs of Islamic Architecture"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "site-english": [
+      "Bab Al-Nasr"
+    ],
+    "site-arabic": [
+      "باب النصر"
+    ],
+    "source": [
+      "K.A.C. Creswell Oversized Photograph Albums; K.A.C. Creswell Photographs; K.A.C. Creswell Papers and Photograph Collection of Islamic Architecture; Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll14/id/1889\">Bab al-Nasr</a></span>"
+    ],
+    "subject-arabic": [
+      "باب الفتوح (القاهرة، مصر)؛ البوابات--مصر--القاهرة العمارة الإسلامية--مصر--تاريخ؛ العمارة، الفاطمية--مصر—القاهرة"
+    ],
+    "subject-english": [
+      "Bāb al-Naṣr (Cairo, Egypt); Gates—Egypt—Cairo; Islamic architecture—Egypt—History; Architecture, Fatimid--Egypt—Cairo"
+    ],
+    "title-english": [
+      "Bab al-Nasr"
+    ],
+    "title-arabic": [
+      "باب النصر"
+    ],
+    "topic-english": [
+      "Architecture, Fatimid"
+    ],
+    "topic-arabic": [
+      "البوابات؛ العمارة الفاطمية"
+    ],
+    "type": [
+      "Still Image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "photographer": null,
+    "extent-in-cm": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll14:1890/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll14:1890/full/full/0/default.jpg",
+    "architectural-detail-arabic": null,
+    "architectural-detail-english": [
+      "domes; arches; mausoleums; bricks; inscriptions"
+    ],
+    "acknowledgements": [
+      "The K.A.C. Creswell Papers and Photograph Collection of Islamic Architecture was donated to the American University in Cairo by K.A.C. Creswell."
+    ],
+    "location-english": [
+      "Aswān; Egypt"
+    ],
+    "date-created": [
+      "ca. late 19th century or early 20th century"
+    ],
+    "description": [
+      "Collector's Description: The Masuoleums at Aswan. No.20"
+    ],
+    "format": [
+      "image/jpg"
+    ],
+    "license": [
+      "Copyright 2012, American University in Cairo. All rights reserved."
+    ],
+    "location-arabic": null,
+    "medium": [
+      "photographic prints"
+    ],
+    "original-identifier": [
+      "A12 Pl.5 C/6"
+    ],
+    "collector": [
+      "Creswell, K. A. C. (Keppel Archibald Cameron), 1879-1974"
+    ],
+    "collection": [
+      "K.A.C. Creswell Photographs of Islamic Architecture"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "site-english": null,
+    "site-arabic": null,
+    "source": [
+      "K.A.C. Creswell Oversized Photograph Albums; K.A.C. Creswell Photographs; K.A.C. Creswell Papers and Photograph Collection of Islamic Architecture; Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll14/id/1890\">Mausoleums of Aswan</a></span>"
+    ],
+    "subject-arabic": null,
+    "subject-english": null,
+    "title-english": [
+      "Mausoleums of Aswan"
+    ],
+    "title-arabic": null,
+    "topic-english": null,
+    "topic-arabic": null,
+    "type": [
+      "Still Image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "photographer": null,
+    "extent-in-cm": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll14:1891/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll14:1891/full/full/0/default.jpg",
+    "architectural-detail-arabic": null,
+    "architectural-detail-english": [
+      "domes; arches; mausoleums; bricks"
+    ],
+    "acknowledgements": [
+      "The K.A.C. Creswell Papers and Photograph Collection of Islamic Architecture was donated to the American University in Cairo by K.A.C. Creswell."
+    ],
+    "location-english": [
+      "Aswān; Egypt"
+    ],
+    "date-created": [
+      "ca. late 19th century or early 20th century"
+    ],
+    "description": [
+      "Collector's Description: The Masuoleums at Aswan. No.31"
+    ],
+    "format": [
+      "image/jpg"
+    ],
+    "license": [
+      "Copyright 2012, American University in Cairo. All rights reserved."
+    ],
+    "location-arabic": null,
+    "medium": [
+      "photographic prints"
+    ],
+    "original-identifier": [
+      "A12 Pl.8 A/6"
+    ],
+    "collector": [
+      "Creswell, K. A. C. (Keppel Archibald Cameron), 1879-1974"
+    ],
+    "collection": [
+      "K.A.C. Creswell Photographs of Islamic Architecture"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "site-english": null,
+    "site-arabic": null,
+    "source": [
+      "K.A.C. Creswell Oversized Photograph Albums; K.A.C. Creswell Photographs; K.A.C. Creswell Papers and Photograph Collection of Islamic Architecture; Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll14/id/1891\">Mausoleums of Aswan</a></span>"
+    ],
+    "subject-arabic": null,
+    "subject-english": null,
+    "title-english": [
+      "Mausoleums of Aswan"
+    ],
+    "title-arabic": null,
+    "topic-english": null,
+    "topic-arabic": null,
+    "type": [
+      "Still Image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "photographer": null,
+    "extent-in-cm": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll14:1892/manifest.json",
+    "iiif_format": "image/jpeg",
+    "profile": "http://iiif.io/api/image/2/level1.json",
+    "resource": "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll14:1892/full/full/0/default.jpg",
+    "architectural-detail-arabic": null,
+    "architectural-detail-english": [
+      "mihrabs; stucco; carvings; inscriptions"
+    ],
+    "acknowledgements": [
+      "The K.A.C. Creswell Papers and Photograph Collection of Islamic Architecture was donated to the American University in Cairo by K.A.C. Creswell."
+    ],
+    "location-english": [
+      "Moqattam; Cairo; Egypt"
+    ],
+    "date-created": [
+      "ca. late 19th century or early 20th century"
+    ],
+    "description": [
+      "Collector's Description: Mosque of al-Guyushi: mihrab"
+    ],
+    "format": [
+      "image/jpg"
+    ],
+    "license": [
+      "Copyright 2012, American University in Cairo. All rights reserved."
+    ],
+    "location-arabic": null,
+    "medium": [
+      "photographic prints"
+    ],
+    "original-identifier": [
+      "A12 Pl.29 B/5 c.3 (3/4)"
+    ],
+    "collector": [
+      "Creswell, K. A. C. (Keppel Archibald Cameron), 1879-1974"
+    ],
+    "collection": [
+      "K.A.C. Creswell Photographs of Islamic Architecture"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "site-english": [
+      "Juyushi Mosque"
+    ],
+    "site-arabic": null,
+    "source": [
+      "K.A.C. Creswell Oversized Photograph Albums; K.A.C. Creswell Photographs; K.A.C. Creswell Papers and Photograph Collection of Islamic Architecture; Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll14/id/1892\">Minaret and Dome of the Mosque of al-Guyushi</a></span>"
+    ],
+    "subject-arabic": null,
+    "subject-english": null,
+    "title-english": [
+      "Minaret and Dome of the Mosque of al-Guyushi"
+    ],
+    "title-arabic": null,
+    "topic-english": null,
+    "topic-arabic": null,
+    "type": [
+      "Still Image"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "photographer": null,
+    "extent-in-cm": null
+  }
+]

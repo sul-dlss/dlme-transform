@@ -1,0 +1,582 @@
+[
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll21:2/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll21:0/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll21:1/full/full/0/default.jpg"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "location": [
+      "Cairo; Egypt"
+    ],
+    "date": [
+      "ca. late 19th century or early 20th century"
+    ],
+    "format": [
+      "image/jpeg"
+    ],
+    "genre-aat": [
+      "postcards"
+    ],
+    "identifier": [
+      "Postc_B1_29_b"
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll21/id/2\">Mena House Hotel - Pyramids</a></span>"
+    ],
+    "rights": [
+      "We believe that there are no copyright restrictions on the use of this image."
+    ],
+    "collection": [
+      "Postcard Collection"
+    ],
+    "subject": [
+      "Hotels--Egypt--Cairo; "
+    ],
+    "title": [
+      "Mena House Hotel - Pyramids"
+    ],
+    "type": [
+      "Still Image; Text"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "publisher": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll21:5/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll21:3/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll21:4/full/full/0/default.jpg"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "location": [
+      "Cairo; Egypt"
+    ],
+    "date": [
+      "ca. late 19th century or early 20th century"
+    ],
+    "format": [
+      "image/jpeg"
+    ],
+    "genre-aat": [
+      "postcards"
+    ],
+    "identifier": [
+      "Postc_B1_35_a"
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll21/id/5\">CAIRO - Monument of Ibrahim Pacha</a></span>"
+    ],
+    "rights": [
+      "We believe that there are no copyright restrictions on the use of this image."
+    ],
+    "collection": [
+      "Postcard Collection"
+    ],
+    "subject": [
+      "Statues; Ibrahim, Pasha, 1789-1848"
+    ],
+    "title": [
+      "CAIRO - Monument of Ibrahim Pacha"
+    ],
+    "type": [
+      "Still Image; Text"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "publisher": [
+      "The Cairo Postcard Trust"
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll21:8/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll21:6/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll21:7/full/full/0/default.jpg"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "location": [
+      "Mit Ruhaynah; Giza; Egypt"
+    ],
+    "date": [
+      "ca. late 19th century or early 20th century"
+    ],
+    "format": [
+      "image/jpeg"
+    ],
+    "genre-aat": [
+      "postcards"
+    ],
+    "identifier": [
+      "Postc_B1_47_a"
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll21/id/8\">Memphis - The Alabaster Sphinx</a></span>"
+    ],
+    "rights": [
+      "We believe that there are no copyright restrictions on the use of this image."
+    ],
+    "collection": [
+      "Postcard Collection"
+    ],
+    "subject": [
+      "Statues; Memphis (Extinct city)--Antiquities; Sphinxes--Egypt"
+    ],
+    "title": [
+      "Memphis - The Alabaster Sphinx"
+    ],
+    "type": [
+      "Still Image; Text"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "publisher": [
+      "Lehnert & Landrock, Cairo"
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll21:11/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll21:9/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll21:10/full/full/0/default.jpg"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "location": [
+      "Cairo; Egypt"
+    ],
+    "date": [
+      "ca. late 19th century or early 20th century"
+    ],
+    "format": [
+      "image/jpeg"
+    ],
+    "genre-aat": [
+      "postcards"
+    ],
+    "identifier": [
+      "Postc_B1_55_c"
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll21/id/11\">[Feluccas]</a></span>"
+    ],
+    "rights": [
+      "We believe that there are no copyright restrictions on the use of this image."
+    ],
+    "collection": [
+      "Postcard Collection"
+    ],
+    "subject": [
+      "Nile River; Boats"
+    ],
+    "title": [
+      "[Feluccas]"
+    ],
+    "type": [
+      "Still Image; Text"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "publisher": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll21:14/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll21:12/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll21:13/full/full/0/default.jpg"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "location": [
+      "Cairo; Egypt"
+    ],
+    "date": [
+      "ca. late 19th century or early 20th century"
+    ],
+    "format": [
+      "image/jpeg"
+    ],
+    "genre-aat": [
+      "postcards"
+    ],
+    "identifier": [
+      "Postc_B1_34_b"
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll21/id/14\">Cairo - Midan Squares</a></span>"
+    ],
+    "rights": [
+      "We believe that there are no copyright restrictions on the use of this image."
+    ],
+    "collection": [
+      "Postcard Collection"
+    ],
+    "subject": [
+      "Streets--Egypt--Cairo"
+    ],
+    "title": [
+      "Cairo - Midan Squares"
+    ],
+    "type": [
+      "Still Image; Text"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "publisher": [
+      "Lehnert & Landrock, Cairo"
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll21:17/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll21:15/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll21:16/full/full/0/default.jpg"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "location": [
+      "Cairo; Egypt"
+    ],
+    "date": [
+      "ca. late 19th century or early 20th century"
+    ],
+    "format": [
+      "image/jpeg"
+    ],
+    "genre-aat": [
+      "postcards"
+    ],
+    "identifier": [
+      "Postc_B1_53_a"
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll21/id/17\">Egyptian Types and Scenes. - Egyptian Landscape.</a></span>"
+    ],
+    "rights": [
+      "We believe that there are no copyright restrictions on the use of this image."
+    ],
+    "collection": [
+      "Postcard Collection"
+    ],
+    "subject": null,
+    "title": [
+      "Egyptian Types and Scenes. - Egyptian Landscape."
+    ],
+    "type": [
+      "Still Image; Text"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "publisher": [
+      "Léon & Lévy, Paris"
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll21:20/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll21:18/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll21:19/full/full/0/default.jpg"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "location": [
+      "Pyramids of Giza; Giza; Egypt"
+    ],
+    "date": [
+      "ca. late 19th century or early 20th century"
+    ],
+    "format": [
+      "image/jpeg"
+    ],
+    "genre-aat": [
+      "postcards"
+    ],
+    "identifier": [
+      "Postc_B1_53_b"
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll21/id/20\">The Nile at the Pyramid</a></span>"
+    ],
+    "rights": [
+      "We believe that there are no copyright restrictions on the use of this image."
+    ],
+    "collection": [
+      "Postcard Collection"
+    ],
+    "subject": [
+      "Nile River; Pyramids of Giza (Egypt); Egypt--Antiquities"
+    ],
+    "title": [
+      "The Nile at the Pyramid"
+    ],
+    "type": [
+      "Still Image; Text"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "publisher": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll21:23/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll21:21/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll21:22/full/full/0/default.jpg"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "location": [
+      "Egypt"
+    ],
+    "date": [
+      "ca. late 19th century or early 20th century"
+    ],
+    "format": [
+      "image/jpeg"
+    ],
+    "genre-aat": [
+      "postcards"
+    ],
+    "identifier": [
+      "Postc_B1_58_b"
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll21/id/23\">Village arabe</a></span>"
+    ],
+    "rights": [
+      "We believe that there are no copyright restrictions on the use of this image."
+    ],
+    "collection": [
+      "Postcard Collection"
+    ],
+    "subject": [
+      "Villages--Egypt"
+    ],
+    "title": [
+      "Village arabe"
+    ],
+    "type": [
+      "Still Image; Text"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "publisher": [
+      "The Cairo Postcard Trust"
+    ]
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll21:26/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll21:24/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll21:25/full/full/0/default.jpg"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "location": [
+      "Heliopolis; Cairo; Egypt"
+    ],
+    "date": [
+      "ca. late 19th century or early 20th century"
+    ],
+    "format": [
+      "image/jpeg"
+    ],
+    "genre-aat": [
+      "postcards"
+    ],
+    "identifier": [
+      "Postc_B1_46_a"
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll21/id/26\">Heliopolis - Palace Hotel in the Arabian Desert</a></span>"
+    ],
+    "rights": [
+      "We believe that there are no copyright restrictions on the use of this image."
+    ],
+    "collection": [
+      "Postcard Collection"
+    ],
+    "subject": [
+      "Hotels--Egypt--Cairo"
+    ],
+    "title": [
+      "Heliopolis - Palace Hotel in the Arabian Desert"
+    ],
+    "type": [
+      "Still Image; Text"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "publisher": null
+  },
+  {
+    "context": "http://iiif.io/api/presentation/2/context.json",
+    "id": "https://cdm15795.contentdm.oclc.org/iiif/p15795coll21:29/manifest.json",
+    "iiif_format": [
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    "profile": [
+      "http://iiif.io/api/image/2/level1.json",
+      "http://iiif.io/api/image/2/level1.json"
+    ],
+    "resource": [
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll21:27/full/full/0/default.jpg",
+      "https://cdm15795.contentdm.oclc.org/iiif/2/p15795coll21:28/full/full/0/default.jpg"
+    ],
+    "access-rights": [
+      "To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu."
+    ],
+    "location": [
+      "Alexandria; Egypt"
+    ],
+    "date": [
+      "ca. late 19th century or early 20th century"
+    ],
+    "format": [
+      "image/jpeg"
+    ],
+    "genre-aat": [
+      "postcards"
+    ],
+    "identifier": [
+      "Postc_B1_4_d"
+    ],
+    "source": [
+      "Rare Books and Special Collections Library; American University in Cairo",
+      "<span>From: <a href=\"http://digitalcollections.aucegypt.edu/digital/collection/p15795coll21/id/29\">ALEXANDRIA - Mohamed Aly Place</a></span>"
+    ],
+    "rights": [
+      "We believe that there are no copyright restrictions on the use of this image."
+    ],
+    "collection": [
+      "Postcard Collection"
+    ],
+    "subject": [
+      "Alexandria (Egypt)--Buildings, structures, etc."
+    ],
+    "title": [
+      "ALEXANDRIA - Mohamed Aly Place"
+    ],
+    "type": [
+      "Still Image; Text"
+    ],
+    "repository": [
+      "Rare Books and Special Collections Digital Library "
+    ],
+    "publisher": [
+      "The Cairo Postcard Trust"
+    ]
+  }
+]

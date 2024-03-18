@@ -1,0 +1,162 @@
+[
+  {
+    "id": "oai:library.ucla.edu:ark:/21198/zz00090qx5",
+    "source": [
+      "Exhibit Collection of Near Eastern Manuscripts, 1492-1848"
+    ],
+    "title": [
+      "Tuḥfat al-zā ̒ir = The pilgrim's gift"
+    ],
+    "contributor": [
+      "Majlisī, Muḥammad Bāqir ibn Muḥammad Taqī, $d 1627 or 8-ca. 1699"
+    ],
+    "type": [
+      "http://id.loc.gov/vocabulary/resourceTypes/img"
+    ],
+    "subject": [
+      "Manuscripts--Arab countries"
+    ],
+    "date": [
+      "1830"
+    ],
+    "language": [
+      "per"
+    ],
+    "identifier": [
+      "https://iiif.library.ucla.edu/iiif/2/ark%3A%2F21198%2Fzz00090r4r/full/!200,200/0/default.jpg",
+      "https://digital.library.ucla.edu/catalog/ark:/21198/zz00090qx5"
+    ],
+    "creator": null
+  },
+  {
+    "id": "oai:library.ucla.edu:ark:/21198/zz00090qv4",
+    "source": [
+      "Exhibit Collection of Near Eastern Manuscripts, 1492-1848"
+    ],
+    "title": [
+      "Tarassul = Lettering writing"
+    ],
+    "contributor": [
+      "Manṣῡr ibn Muḥammad ibn ̒Alῑ al-Qazvῑnῑ"
+    ],
+    "type": [
+      "http://id.loc.gov/vocabulary/resourceTypes/img"
+    ],
+    "subject": [
+      "Manuscripts--Arab countries"
+    ],
+    "date": [
+      "1604"
+    ],
+    "language": [
+      "per"
+    ],
+    "identifier": [
+      "https://iiif.library.ucla.edu/iiif/2/ark%3A%2F21198%2Fzz00090r16/full/!200,200/0/default.jpg",
+      "https://digital.library.ucla.edu/catalog/ark:/21198/zz00090qv4"
+    ],
+    "creator": null
+  },
+  {
+    "id": "oai:library.ucla.edu:ark:/21198/zz00090qtm",
+    "source": [
+      "Exhibit Collection of Near Eastern Manuscripts, 1492-1848"
+    ],
+    "title": [
+      "Qur’ān [MS 1656/10]"
+    ],
+    "contributor": null,
+    "type": [
+      "http://id.loc.gov/vocabulary/resourceTypes/img"
+    ],
+    "subject": [
+      "Manuscripts--Arab countries"
+    ],
+    "date": [
+      "n.d."
+    ],
+    "language": [
+      "ara"
+    ],
+    "identifier": [
+      "https://iiif.library.ucla.edu/iiif/2/ark%3A%2F21198%2Fzz00090r0p/full/!200,200/0/default.jpg",
+      "https://digital.library.ucla.edu/catalog/ark:/21198/zz00090qtm"
+    ],
+    "creator": null
+  },
+  {
+    "id": "oai:library.ucla.edu:ark:/21198/zz00090qwn",
+    "source": [
+      "Exhibit Collection of Near Eastern Manuscripts, 1492-1848"
+    ],
+    "title": [
+      "Kanz al-lughāt = Treasure of words"
+    ],
+    "contributor": null,
+    "type": [
+      "http://id.loc.gov/vocabulary/resourceTypes/img"
+    ],
+    "subject": [
+      "Manuscripts--Arab countries"
+    ],
+    "date": [
+      "1658"
+    ],
+    "language": null,
+    "identifier": [
+      "https://iiif.library.ucla.edu/iiif/2/ark%3A%2F21198%2Fzz00090r2q/full/!200,200/0/default.jpg",
+      "https://digital.library.ucla.edu/catalog/ark:/21198/zz00090qwn"
+    ],
+    "creator": null
+  },
+  {
+    "id": "oai:library.ucla.edu:ark:/21198/zz00090qrk",
+    "source": [
+      "Exhibit Collection of Near Eastern Manuscripts, 1492-1848"
+    ],
+    "title": [
+      "Lacquered book cover, front cover, painted flower motif"
+    ],
+    "contributor": null,
+    "type": [
+      "http://id.loc.gov/vocabulary/resourceTypes/img"
+    ],
+    "subject": [
+      "Manuscripts--Arab countries"
+    ],
+    "date": null,
+    "language": null,
+    "identifier": [
+      "https://iiif.library.ucla.edu/iiif/2/ark%3A%2F21198%2Fzz00090qrk/full/!200,200/0/default.jpg",
+      "https://digital.library.ucla.edu/catalog/ark:/21198/zz00090qrk"
+    ],
+    "creator": null
+  },
+  {
+    "id": "oai:library.ucla.edu:ark:/21198/zz00090qs3",
+    "source": [
+      "Exhibit Collection of Near Eastern Manuscripts, 1492-1848"
+    ],
+    "title": [
+      "Ḥālnāmah = The book of ecstasy"
+    ],
+    "contributor": null,
+    "type": [
+      "http://id.loc.gov/vocabulary/resourceTypes/img"
+    ],
+    "subject": [
+      "Manuscripts--Arab countries"
+    ],
+    "date": [
+      "[1566?]"
+    ],
+    "language": null,
+    "identifier": [
+      "https://iiif.library.ucla.edu/iiif/2/ark%3A%2F21198%2Fzz00090qzp/full/!200,200/0/default.jpg",
+      "https://digital.library.ucla.edu/catalog/ark:/21198/zz00090qs3"
+    ],
+    "creator": [
+      "ʻĀrifī, d. ca. 1449"
+    ]
+  }
+]
