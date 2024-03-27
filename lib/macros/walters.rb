@@ -53,7 +53,7 @@ module Macros
         if record[THUMBNAIL_URL].present?
           accumulator << record[THUMBNAIL_URL]['Medium'].gsub('width=150', 'width=400')
         elsif record[IMAGES].present?
-          accumulator << record[IMAGES].split(',')[0].delete('.').gsub('jpg', '.jpg').prepend('https://art.thewalters.org/images/art/thumbnails/s_').downcase.gsub('width=150', 'width=400')
+          accumulator << record[IMAGES].split(',')[0].delete('.').gsub('jpg', '.jpg').tr(' ', '-').prepend('https://art.thewalters.org/images/art/thumbnails/s_').downcase.gsub('width=150', 'width=400')
         end
       end
     end

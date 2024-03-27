@@ -50,16 +50,15 @@ to_field 'transform_timestamp', timestamp
 # File path
 to_field 'dlme_source_file', path_to_file
 
-to_field 'agg_data_provider_collection', path_to_file, split('/'), at_index(3), gsub('_', '-'), dlme_prepend('walters-'), translation_map('agg_collection_from_provider_id'), lang('en')
-to_field 'agg_data_provider_collection', path_to_file, split('/'), at_index(3), gsub('_', '-'), dlme_prepend('walters-'), translation_map('agg_collection_from_provider_id'), translation_map('agg_collection_ar_from_en'), lang('ar-Arab')
-to_field 'agg_data_provider_collection_id', path_to_file, split('/'), at_index(3), gsub('_', '-'), dlme_prepend('walters-')
+to_field 'agg_data_provider_collection', path_to_file, split('/'), at_index(2), gsub('_', '-'), dlme_prepend('walters-'), translation_map('agg_collection_from_provider_id'), lang('en')
+to_field 'agg_data_provider_collection', path_to_file, split('/'), at_index(2), gsub('_', '-'), dlme_prepend('walters-'), translation_map('agg_collection_from_provider_id'), translation_map('agg_collection_ar_from_en'), lang('ar-Arab')
+to_field 'agg_data_provider_collection_id', path_to_file, split('/'), at_index(2), gsub('_', '-'), dlme_prepend('walters-')
 
 # CHO Required
 to_field 'id', extract_json('.ObjectID'), dlme_prepend('walters-')
 to_field 'cho_title', extract_json('.Title'), strip, lang('en')
 
 # CHO Other
-to_field 'cho_creator', extract_json('.Creators'), lang('en')
 to_field 'cho_date', extract_json('.DateText'), lang('en')
 to_field 'cho_date_range_norm', generate_object_date, parse_range
 to_field 'cho_date_range_hijri', generate_object_date, parse_range, hijri_range
