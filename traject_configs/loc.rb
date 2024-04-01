@@ -48,38 +48,36 @@ to_field 'transform_timestamp', timestamp
 # File path
 to_field 'dlme_source_file', path_to_file
 
-to_field 'agg_data_provider_collection', path_to_file, split('/'), at_index(3), gsub('_', '-'), prepend('loc'), translation_map('agg_collection_from_provider_id'), lang('en')
-to_field 'agg_data_provider_collection', path_to_file, split('/'), at_index(3), gsub('_', '-'), prepend('loc'), translation_map('agg_collection_from_provider_id'), translation_map('agg_collection_ar_from_en'), lang('ar-Arab')
-to_field 'agg_data_provider_collection_id', path_to_file, split('/'), at_index(3), gsub('_', '-'), prepend('loc')
+to_field 'agg_data_provider_collection', path_to_file, split('/'), at_index(3), gsub('_', '-'), dlme_prepend('loc'), translation_map('agg_collection_from_provider_id'), lang('en')
+to_field 'agg_data_provider_collection', path_to_file, split('/'), at_index(3), gsub('_', '-'), dlme_prepend('loc'), translation_map('agg_collection_from_provider_id'), translation_map('agg_collection_ar_from_en'), lang('ar-Arab')
+to_field 'agg_data_provider_collection_id', path_to_file, split('/'), at_index(3), gsub('_', '-'), dlme_prepend('loc')
 
 # CHO Required
-to_field 'id', extract_json('.id'), strip, gsub('http://www.loc.gov/item/', ''), gsub('/', ''), prepend('loc-')
-to_field 'cho_title', extract_json('.title'), strip, arabic_script_lang_or_default('und-Arab', 'en')
+to_field 'id', extract_json('.id'), gsub('http://www.loc.gov/item/', ''), gsub('/', ''), dlme_prepend('loc-')
+to_field 'cho_title', extract_json('..title'), flatten_array, arabic_script_lang_or_default('und-Arab', 'en')
 
 # CHO Other
 to_field 'cho_date', extract_json('.date'), lang('en')
 to_field 'cho_date_range_norm', extract_json('.date'), parse_range
 to_field 'cho_date_range_hijri', extract_json('.date'), parse_range, hijri_range
-to_field 'cho_description', extract_json('.description[0]'), strip, lang('en')
-to_field 'cho_description', extract_json('.description[1]'), strip, lang('en')
-to_field 'cho_description', extract_json('.description[2]'), strip, lang('en')
+to_field 'cho_description', extract_json('..description'), flatten_array, lang('en')
+to_field 'cho_description', extract_json('..description'), flatten_array, lang('en')
+to_field 'cho_description', extract_json('..description'), flatten_array, lang('en')
 # mixed types (array and string) in .identifier values causing errors
-# to_field 'cho_identifier', extract_json('.identifier'), strip, lang('en')\to_field 'cho_has_type', extract_json('.type[0]'), normalize_has_type, lang('en')
-to_field 'cho_edm_type', extract_json('.type[0]'), normalize_has_type, normalize_edm_type, lang('en')
-to_field 'cho_edm_type', extract_json('.type[0]'), normalize_has_type, normalize_edm_type, translation_map('edm_type_ar_from_en'), lang('ar-Arab')
-to_field 'cho_format', extract_json('.format[0]'), strip, lang('en')
-to_field 'cho_format', extract_json('.format[1]'), strip, lang('en')
-to_field 'cho_has_type', extract_json('.type[0]'), normalize_has_type, lang('en')
-to_field 'cho_has_type', extract_json('.type[0]'), normalize_has_type, translation_map('has_type_ar_from_en'), lang('ar-Arab')
-to_field 'cho_language', extract_json('.language[0]'), normalize_language, lang('en')
-to_field 'cho_language', extract_json('.language[0]'), normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
-to_field 'cho_language', extract_json('.language[1]'), normalize_language, lang('en')
-to_field 'cho_language', extract_json('.language[1]'), normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
-to_field 'cho_spatial', extract_json('.location_country[0]'), strip, lang('en')
-to_field 'cho_spatial', extract_json('.location_country[1]'), strip, lang('en')
-to_field 'cho_subject', extract_json('.subject[0]'), strip, lang('en')
-to_field 'cho_subject', extract_json('.subject[1]'), strip, lang('en')
-to_field 'cho_type', extract_json('.type[0]'), strip, lang('en')
+# to_field 'cho_identifier', extract_json('..identifier'), lang('en')
+to_field 'cho_edm_type', extract_json('..type'), flatten_array, normalize_has_type, normalize_edm_type, lang('en')
+to_field 'cho_edm_type', extract_json('..type'), flatten_array, normalize_has_type, normalize_edm_type, translation_map('edm_type_ar_from_en'), lang('ar-Arab')
+to_field 'cho_format', extract_json('..format'), flatten_array, lang('en')
+to_field 'cho_format', extract_json('..format'), flatten_array, lang('en')
+to_field 'cho_has_type', extract_json('..type'), flatten_array, normalize_has_type, lang('en')
+to_field 'cho_has_type', extract_json('..type'), flatten_array, normalize_has_type, translation_map('has_type_ar_from_en'), lang('ar-Arab')
+to_field 'cho_language', extract_json('..language'), flatten_array, normalize_language, lang('en')
+to_field 'cho_language', extract_json('..language'), flatten_array, normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
+to_field 'cho_spatial', extract_json('..location_country'), flatten_array, lang('en')
+to_field 'cho_spatial', extract_json('..location_country'), flatten_array, lang('en')
+to_field 'cho_subject', extract_json('..subject'), flatten_array, lang('en')
+to_field 'cho_subject', extract_json('..subject'), flatten_array, lang('en')
+to_field 'cho_type', extract_json('..type'), flatten_array, lang('en')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
@@ -90,14 +88,14 @@ to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
     'wr_id' => [extract_json('.shown_at')],
-    'wr_is_referenced_by' => [extract_json('.id'), strip, gsub('http', 'https'), append('manifest.json')]
+    'wr_is_referenced_by' => [extract_json('.id'), gsub('http', 'https'), append('manifest.json')]
   )
 end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_id' => [extract_json('.preview[0]')],
-    'wr_is_referenced_by' => [extract_json('.id'), strip, gsub('http', 'https'), append('manifest.json')]
+    'wr_id' => [extract_json('.preview')],
+    'wr_is_referenced_by' => [extract_json('.id'), gsub('http', 'https'), append('manifest.json')]
   )
 end
 to_field 'agg_provider', provider, lang('en')

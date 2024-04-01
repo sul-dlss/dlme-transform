@@ -22,6 +22,8 @@ module Macros
     # @return [Proc] a proc that traject can call for each record
     def normalize_has_type # rubocop:disable Metrics/MethodLength
       lambda do |_record, accumulator|
+        return if accumulator.compact.blank?
+
         accumulator.map!(&:downcase)
         translation_map = %w[has_type_from_contributor
                              has_type_from_collection
