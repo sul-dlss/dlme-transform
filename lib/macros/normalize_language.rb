@@ -17,6 +17,8 @@ module Macros
     # @return [Proc] a proc that traject can call for each record
     def normalize_language
       lambda do |_record, accumulator|
+        return if accumulator.compact.blank?
+
         accumulator.map!(&:downcase)
         TRANSFORMS
           .map { |spec| Traject::TranslationMap.new(spec) }
