@@ -53,7 +53,7 @@ to_field 'agg_data_provider_collection', path_to_file, split('/'), at_index(3), 
 to_field 'agg_data_provider_collection_id', path_to_file, split('/'), at_index(3), gsub('_', '-'), prepend('loc')
 
 # CHO Required
-to_field 'id', extract_json('.id'), strip, gsub('http://www.loc.gov/item/', ''), gsub('/', ''), prepend('loc-')
+to_field 'id', extract_json('.id'), strip, gsub('http://www.loc.gov/item/', ''), gsub('http:', ''), gsub('www.loc.gov', ''), gsub('/', ''), prepend('loc-')
 to_field 'cho_title', extract_json('.title'), strip, arabic_script_lang_or_default('und-Arab', 'en')
 
 # CHO Other

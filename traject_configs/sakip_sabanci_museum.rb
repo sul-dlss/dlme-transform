@@ -52,7 +52,7 @@ to_field 'agg_data_provider_collection_id', path_to_file, split('/'), at_index(2
 to_field 'dlme_source_file', path_to_file
 
 # Cho Required
-to_field 'id', column('id'), gsub('https://cdm21044.contentdm.oclc.org/iiif/2/', ''), gsub('/manifest.json', ''), gsub(':', '-'), transform(&:downcase)
+to_field 'id', column('id'), gsub('https://cdm21044.contentdm.oclc.org/iiif/', ''), gsub('/manifest.json', ''), gsub(':', '-'), transform(&:downcase)
 to_field 'cho_title', column('başlık-title'), parse_csv, lang('tr-Latn')
 
 # Cho Other
