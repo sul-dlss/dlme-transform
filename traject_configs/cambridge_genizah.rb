@@ -52,7 +52,7 @@ to_field 'agg_data_provider_collection', path_to_file, split('/'), at_index(2), 
 to_field 'agg_data_provider_collection_id', path_to_file, split('/'), at_index(2), gsub('_', '-'), prepend('bnf-')
 
 # Cho Required
-to_field 'id', column('id'), strip
+to_field 'id', column('id'), gsub('https://cudl.lib.cam.ac.uk/iiif/', ''), strip
 to_field 'cho_title', column('title'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'en')
 
 # Cho Other

@@ -3,7 +3,7 @@
 module Contracts
   # rubocop:disable Metrics/BlockLength
   # See https://github.com/sul-dlss/dlme/blob/master/docs/application_profile.md#edmprovidedcho
-  class CHO < Dry::Validation::Contract
+  class CHO < Dry::Validation::Contract # rubocop:disable Metrics/ClassLength
     json do
       optional(:cho_alternative).value(:hash?)
       optional(:cho_contributor).value(:hash?)
@@ -66,6 +66,14 @@ module Contracts
     #
     # Note that these class method *must* be defined *above* the `rule()` calls
     # below
+    def self.id_validation_rule
+      proc do
+        unexpected_values = value.include? 'http'
+        key.failure("the id field contains a url: #{key.path.keys.first}") if
+          unexpected_values
+      end
+    end
+
     def self.web_resource_validation_rule
       proc do
         error_message = key? ? validate_web_resource(value) : ''
@@ -102,6 +110,7 @@ module Contracts
     end
     # rubocop:enable Metrics/AbcSize
 
+    rule(:id, &id_validation_rule)
     rule(:cho_description, &optional_language_specific_rule)
     rule(:cho_title, &required_language_specific_rule)
     rule(:cho_language, &optional_language_specific_rule)

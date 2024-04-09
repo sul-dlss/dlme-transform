@@ -49,7 +49,7 @@ to_field 'agg_data_provider_collection', path_to_file, split('/'), at_index(2), 
 to_field 'agg_data_provider_collection_id', path_to_file, split('/'), at_index(2), gsub('_', '-'), prepend('bnf-')
 
 # Cho Required
-to_field 'id', column('id'), strip
+to_field 'id', column('id'), strip, gsub('https://gallica.bnf.fr/', '')
 to_field 'cho_title', column('title'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
 
 # Required per data agreement
