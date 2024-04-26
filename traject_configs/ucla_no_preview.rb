@@ -52,55 +52,39 @@ to_field 'agg_data_provider_collection', path_to_file, split('/'), at_index(3), 
 to_field 'agg_data_provider_collection_id', path_to_file, split('/'), at_index(3), gsub('_', '-'), prepend('ucla-')
 
 # CHO Required
-to_field 'id', extract_json('.id'), gsub('https:\/\/iiif.library.ucla.edu\/iiif\/2\/', ''), gsub('\/!200,200\/0\/default.jpg', '')
-to_field 'cho_title', extract_json('.title[0]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'id', extract_json('.id[0]'), gsub('https:\/\/iiif.library.ucla.edu\/iiif\/2\/', ''), gsub('\/!200,200\/0\/default.jpg', '')
+to_field 'cho_title', extract_json('..title'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en')
 
 # CHO Other
-to_field 'cho_creator', extract_json('.creator[0]'), arabic_script_lang_or_default('ar-Arab', 'en')
-to_field 'cho_creator', extract_json('.creator[1]'), arabic_script_lang_or_default('ar-Arab', 'en')
-to_field 'cho_creator', extract_json('.contributor[0]'), arabic_script_lang_or_default('ar-Arab', 'en')
-to_field 'cho_creator', extract_json('.contributor[1]'), arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_alternative', extract_json('..alternative'), flatten_array, arabic_script_lang_or_default('und-Arab', 'en')
+to_field 'cho_creator', extract_json('..creator'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_contributor', extract_json('..contributor'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_date', extract_json('.date[0]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_date_range_norm', extract_json('.date[0]'), strip, parse_range
 to_field 'cho_date_range_hijri', extract_json('.date[0]'), strip, parse_range, hijri_range
+to_field 'cho_description', extract_json('..description'), flatten_array, arabic_script_lang_or_default('und-Arab', 'en')
 to_field 'cho_edm_type', path_to_file, split('/'), at_index(3), gsub('_', '-'), prepend('ucla-'), translation_map('has_type_from_collection'), normalize_edm_type, lang('en')
 to_field 'cho_edm_type', path_to_file, split('/'), at_index(3), gsub('_', '-'), prepend('ucla-'), translation_map('has_type_from_collection'), normalize_edm_type, translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_has_type', path_to_file, split('/'), at_index(3), gsub('_', '-'), prepend('ucla-'), translation_map('has_type_from_collection'), normalize_has_type, lang('en')
 to_field 'cho_has_type', path_to_file, split('/'), at_index(3), gsub('_', '-'), prepend('ucla-'), translation_map('has_type_from_collection'), normalize_has_type, translation_map('has_type_ar_from_en'), lang('ar-Arab')
-to_field 'cho_format', extract_json('.format[0]'), strip, lang('en')
-to_field 'cho_identifier', extract_json('.identifier[0]'), strip
-to_field 'cho_identifier', extract_json('.identifier[1]'), unique, strip
-to_field 'cho_is_part_of', extract_json('.source[0]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
-to_field 'cho_is_part_of', extract_json('.source[1]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
-to_field 'cho_subject', extract_json('.subject[0]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
-to_field 'cho_subject', extract_json('.subject[1]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
-to_field 'cho_subject', extract_json('.subject[2]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
-to_field 'cho_subject', extract_json('.subject[3]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
-to_field 'cho_subject', extract_json('.subject[4]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
-to_field 'cho_subject', extract_json('.subject[5]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
-to_field 'cho_subject', extract_json('.subject[6]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
-to_field 'cho_subject', extract_json('.subject[7]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
-to_field 'cho_subject', extract_json('.subject[8]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
-to_field 'cho_subject', extract_json('.subject[9]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
-to_field 'cho_subject', extract_json('.subject[10]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
-to_field 'cho_subject', extract_json('.subject[11]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
-to_field 'cho_subject', extract_json('.subject[12]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
-to_field 'cho_subject', extract_json('.subject[13]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
-to_field 'cho_subject', extract_json('.subject[14]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
-to_field 'cho_subject', extract_json('.subject[15]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
-to_field 'cho_type', extract_json('.type[0]'), strip, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_format', extract_json('..format'), flatten_array, lang('en')
+to_field 'cho_identifier', extract_json('..identifier'), flatten_array
+to_field 'cho_is_part_of', extract_json('..source'), flatten_array, arabic_script_lang_or_default('und-Arab', 'en')
+to_field 'cho_publisher', extract_json('..publisher'), flatten_array, arabic_script_lang_or_default('und-Arab', 'en')
+to_field 'cho_subject', extract_json('..subject'), flatten_array, arabic_script_lang_or_default('und-Arab', 'en')
+# UCLA requested to translated LoC urls to user-facing type values
+to_field 'cho_type', extract_json('..type'), flatten_array, translation_map('type_from_loc'), armenian_script_lang_or_default('hy-Armn', 'en')
 
 # Agg
-to_field 'agg_data_provider', data_provider, lang('en')
-to_field 'agg_data_provider', data_provider_ar, lang('ar-Arab')
-
-to_field 'agg_data_provider_country', data_provider_country, lang('en')
-to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
+to_field 'agg_data_provider', extract_json('.dataProvider[0]'), default('University of California, Los Angeles. Library. Department of Special Collections'), lang('en')
+to_field 'agg_data_provider', extract_json('.dataProvider[0]'), default('University of California, Los Angeles. Library. Department of Special Collections'), translation_map('data_provider_ar_from_en'), lang('ar-Arab')
+to_field 'agg_data_provider_country', extract_json('.dataProvider[0]'), default('University of California, Los Angeles. Library. Department of Special Collections'), translation_map('data_provider_to_country'), lang('en')
+to_field 'agg_data_provider_country', extract_json('.dataProvider[0]'), default('University of California, Los Angeles. Library. Department of Special Collections'), translation_map('data_provider_to_country'), translation_map('country_en_to_ar'), lang('ar-Arab')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_id' => [extract_json('.identifier[-1]')],
-    'wr_is_referenced_by' => [extract_json('.id'), gsub('oai:library.ucla.edu:', ''), gsub(':', '%3A'), gsub('/', '%2F'), prepend('https://iiif.library.ucla.edu/'), append('/manifest')]
+    'wr_id' => [extract_json('.isShownAt[0]')],
+    'wr_is_referenced_by' => [extract_json('identifier[-1]'), gsub('oai:library.ucla.edu:', ''), gsub(':', '%3A'), gsub('/', '%2F'), prepend('https://iiif.library.ucla.edu/'), append('/manifest')]
   )
 end
 to_field 'agg_provider', provider, lang('en')

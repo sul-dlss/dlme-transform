@@ -28,15 +28,15 @@ module Macros
     # rubocop:disable Metrics/PerceivedComplexity, Metrics/CyclomaticComplexity, Metrics/AbcSize, Metrics/MethodLength
     def arabic_script_lang_or_default(arabic_script_lang, default)
       lambda do |_record, accumulator|
-        if accumulator
-          ar_values = []
-          default_values = []
-          accumulator.each do |val|
-            val = translate_role_to_ar(val)
-            lang_code = val.match?(/[ضصثقفغعهخحمنتالبيسشظطذدزرو]/) ? arabic_script_lang : default
-            ar_values << val if lang_code == arabic_script_lang
-            default_values << val if lang_code == default
-          end
+        return if accumulator.compact.blank?
+
+        ar_values = []
+        default_values = []
+        accumulator.each do |val|
+          val = translate_role_to_ar(val)
+          lang_code = val.match?(/[ضصثقفغعهخحمنتالبيسشظطذدزرو]/) ? arabic_script_lang : default
+          ar_values << val if lang_code == arabic_script_lang
+          default_values << val if lang_code == default
         end
         if ar_values.present? && default_values.present?
           accumulator.replace([{ language: arabic_script_lang, values: ar_values }])
@@ -59,14 +59,14 @@ module Macros
     # rubocop:disable Metrics/PerceivedComplexity, Metrics/CyclomaticComplexity, Metrics/AbcSize, Metrics/MethodLength
     def armenian_script_lang_or_default(armenian_script_lang, default)
       lambda do |_record, accumulator|
-        if accumulator
-          ar_values = []
-          default_values = []
-          accumulator.each do |val|
-            lang_code = val.match?(/[ձյխվէրդեըիոպչջփթլքճհկֆտսազցգւբնմշղծ]/) ? armenian_script_lang : default
-            ar_values << val if lang_code == armenian_script_lang
-            default_values << val if lang_code == default
-          end
+        return if accumulator.compact.blank?
+
+        ar_values = []
+        default_values = []
+        accumulator.each do |val|
+          lang_code = val.match?(/[ձյխվէրդեըիոպչջփթլքճհկֆտսազցգւբնմշղծ]/) ? armenian_script_lang : default
+          ar_values << val if lang_code == armenian_script_lang
+          default_values << val if lang_code == default
         end
         if ar_values.present? && default_values.present?
           accumulator.replace([{ language: armenian_script_lang, values: ar_values }])

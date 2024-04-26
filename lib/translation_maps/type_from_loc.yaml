@@ -1,0 +1,16 @@
+# type values from loc mapped to cho_type; generally we don't map cho_type but UCLA requested
+http://id.loc.gov/vocabulary/resourceTypes/art: Artifact
+http://id.loc.gov/vocabulary/resourceTypes/aud: Audio
+http://id.loc.gov/vocabulary/resourceTypes/car: Cartographic
+http://id.loc.gov/vocabulary/resourceTypes/col: Collection
+http://id.loc.gov/vocabulary/resourceTypes/dat: Dataset
+http://id.loc.gov/vocabulary/resourceTypes/dig: Digital
+http://id.loc.gov/vocabulary/resourceTypes/man: Manuscript
+http://id.loc.gov/vocabulary/resourceTypes/mix: Mixed Material
+http://id.loc.gov/vocabulary/resourceTypes/mov: Moving Image
+http://id.loc.gov/vocabulary/resourceTypes/mul: Multimedia
+http://id.loc.gov/vocabulary/resourceTypes/not: Notated Music
+http://id.loc.gov/vocabulary/resourceTypes/img: Still Image
+http://id.loc.gov/vocabulary/resourceTypes/tac: Tactile
+http://id.loc.gov/vocabulary/resourceTypes/txt: Text
+http://id.loc.gov/vocabulary/resourceTypes/unk: Unspecified
