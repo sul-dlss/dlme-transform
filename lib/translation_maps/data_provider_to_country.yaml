@@ -1,0 +1,27 @@
+# data provider values are usually passed through metadata_mapping.json but some
+# providers have many data providers making this a better strategy.
+Ägyptisches Museum und Papyrussammlung (Berlin, Germany): Germany
+American Research Center in Egypt: Egypt
+Arab Image Foundation: Lebanon
+Ashmolean Museum, Oxford: United Kingdom
+British Museum: United Kingdom
+Cairo Egyptian Museum: Egypt
+Collection of Adnan Mohammad Hassan, Baghdad, Iraq: Iraq
+Collection of Alana Marie Levinson-LaBrosse: Iraq
+Egypt Exploration Society: United Kingdom
+Egyptian Museum, Cairo: Egypt
+High Referendum Council Media Committee, The Independent High Elections and Referendum Commission: Iraq
+Kashkul, American University of Iraq Sulaimani (AUIS): Iraq
+Lalish Center: Iraq
+Luxor: Egypt
+Metropolitan Museum of Art, New York, New York, USA: United States of America
+Musée Calvet (Avignon, France): France
+National Library of Armenia: Armenia
+National Museum of Denmark: Denmark
+Petrie Museum of Egyptian Archaeology: Egypt
+Rijksmuseum van Oudheden (Leiden, Netherlands): Netherlands
+Roemer- und Pelizaeus-Museum Hildesheim: Germany
+Sherko Ali Omer family collection in Sulaimani, Iraq: Iraq
+University of California, Los Angeles. Library. Department of Special Collections: United States of America
+University of California, Los Angeles. Library Special Collections: United States of America
+Walters Art Museum: United States of America

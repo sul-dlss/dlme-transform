@@ -1,0 +1,12 @@
+# data provider values are usually passed through metadata_mapping.json but some
+# providers have many data providers making this a better strategy.
+Armenia: أرمينيا
+Egypt: مصر
+Denmark: الدنمارك
+France: فرنسا
+Germany: ألمانيا
+Iraq: العراق
+Lebanon: لبنان
+Netherlands: هولندا
+United Kingdom: المملكة المتحدة
+United States of America: الولايات المتحدة الأمريكية
