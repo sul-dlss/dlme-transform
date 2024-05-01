@@ -52,7 +52,7 @@ to_field 'agg_data_provider_collection', path_to_file, split('/'), at_index(3), 
 to_field 'agg_data_provider_collection_id', path_to_file, split('/'), at_index(3), gsub('_', '-'), prepend('ucla-')
 
 # CHO Required
-to_field 'id', extract_json('.id[0]'), gsub('https:\/\/iiif.library.ucla.edu\/iiif\/2\/', ''), gsub('\/!200,200\/0\/default.jpg', '')
+to_field 'id', extract_json('.id'), gsub('https:\/\/iiif.library.ucla.edu\/iiif\/2\/', ''), gsub('\/!200,200\/0\/default.jpg', '')
 to_field 'cho_title', extract_json('..title'), flatten_array, strip, armenian_script_lang_or_default('hy-Armn', 'en')
 
 # CHO Other
