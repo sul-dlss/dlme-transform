@@ -7,7 +7,10 @@ require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
 require 'macros/field_extraction'
+require 'macros/iiif'
 require 'macros/language_extraction'
+require 'macros/normalize_language'
+require 'macros/normalize_type'
 require 'macros/path_to_file'
 require 'macros/prepend'
 require 'macros/string_helper'
@@ -21,7 +24,10 @@ extend Macros::DLME
 extend Macros::DateParsing
 extend Macros::EachRecord
 extend Macros::FieldExtraction
+extend Macros::IIIF
 extend Macros::LanguageExtraction
+extend Macros::NormalizeLanguage
+extend Macros::NormalizeType
 extend Macros::PathToFile
 extend Macros::Prepend
 extend Macros::StringHelper
@@ -33,6 +39,8 @@ extend TrajectPlus::Macros::JSON
 
 settings do
   provide 'allow_duplicate_values', false
+  provide 'allow_nil_values', false
+  provide 'allow_empty_fields', false
   provide 'writer_class_name', 'DlmeJsonResourceWriter'
   provide 'reader_class_name', 'TrajectPlus::JsonReader'
 end
@@ -50,32 +58,34 @@ to_field 'agg_data_provider_collection_id', path_to_file, split('/'), at_index(3
 
 # CHO Required
 to_field 'id', extract_json('.version_uri')
-to_field 'cho_title', extract_json('.title_ar'), lang('ar-Arab')
-to_field 'cho_title', extract_json('.title_lat'), lang('en')
+to_field 'cho_title', extract_json('..title_ar'), flatten_array, lang('ar-Arab')
+to_field 'cho_title', extract_json('..title_lat'), flatten_array, lang('en')
 
 # CHO Other
-to_field 'cho_creator', extract_json('.author_ar'), lang('ar-Arab')
-to_field 'cho_creator', extract_json('.author_lat'), lang('en')
-to_field 'cho_date', extract_json_from_context('.date'), append(' AH'), lang('ar-Arab')
-to_field 'cho_date', extract_json_from_context('.date'), append('هـ '), lang('en')
+to_field 'cho_creator', extract_json('..author_ar'), flatten_array, lang('ar-Arab')
+to_field 'cho_creator', extract_json('..author_lat'), flatten_array, lang('en')
+# to_field 'cho_date', extract_json_from_context('..date'), flatten_array, append(' AH'), lang('ar-Arab')
+# to_field 'cho_date', extract_json_from_context('.date'), append('هـ '), lang('en')
 to_field 'cho_date_range_hijri', extract_json_from_context('.date'), parse_range
-to_field 'cho_dc_rights', literal('المجال العام'), lang('ar-Arab')
-to_field 'cho_dc_rights', literal('Public Domain'), lang('en')
-to_field 'cho_description', extract_json('.ed_info'), lang('en')
+to_field 'cho_dc_rights', literal('المجال العام'), flatten_array, lang('ar-Arab')
+to_field 'cho_dc_rights', literal('Public Domain'), flatten_array, lang('en')
+to_field 'cho_description', extract_json('..ed_info'), flatten_array, lang('en')
 to_field 'cho_description', literal('فيما يلي روابط لمجموعات بيانات إعادة استخدام النص التي توضح العلاقة بين العمل الحالي ومجموعة مبادرة النصوص الإسلامية المفتوحة بأكملها.'), lang('ar-Arab')
 to_field 'cho_description', literal('Below are links to text reuse datasets showing the relationship between the present work and the entire Open Islamicate Texts Initiative corpus.'), lang('en')
-to_field 'cho_description', extract_json('.one2all_data_url'), prepend('واحد لجميع الإحصائيات: '), lang('ar-Arab')
-to_field 'cho_description', extract_json('.one2all_data_url'), prepend('One to all data: '), lang('en')
-to_field 'cho_description', extract_json('.one2all_stats_url'), prepend('One to all statistics: '), lang('ar-Arab')
-to_field 'cho_description', extract_json('.one2all_stats_url'), prepend('One to all statistics: '), lang('en')
-to_field 'cho_description', extract_json('.one2all_vis_url'), prepend('واحد للجميع التصور: '), lang('ar-Arab')
-to_field 'cho_description', extract_json('.one2all_vis_url'), prepend('One to all visualization: '), lang('en')
-to_field 'cho_description', extract_json('.pairwise_data_url'), prepend('البيانات الزوجية: '), lang('ar-Arab')
-to_field 'cho_description', extract_json('.pairwise_data_url'), prepend('Pairwise data: '), lang('en')
+to_field 'cho_description', extract_json('..one2all_data_url'), flatten_array, prepend('واحد لجميع الإحصائيات: '), lang('ar-Arab')
+to_field 'cho_description', extract_json('..one2all_data_url'), flatten_array, prepend('One to all data: '), lang('en')
+to_field 'cho_description', extract_json('..one2all_stats_url'), flatten_array, prepend('One to all statistics: '), lang('ar-Arab')
+to_field 'cho_description', extract_json('..one2all_stats_url'), flatten_array, prepend('One to all statistics: '), lang('en')
+to_field 'cho_description', extract_json('..one2all_vis_url'), flatten_array, prepend('واحد للجميع التصور: '), lang('ar-Arab')
+to_field 'cho_description', extract_json('..one2all_vis_url'), flatten_array, prepend('One to all visualization: '), lang('en')
+to_field 'cho_description', extract_json('..pairwise_data_url'), flatten_array, prepend('البيانات الزوجية: '), lang('ar-Arab')
+to_field 'cho_description', extract_json('..pairwise_data_url'), flatten_array, prepend('Pairwise data: '), lang('en')
 to_field 'cho_edm_type', literal('Dataset'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_edm_type', literal('Dataset'), lang('en')
 to_field 'cho_has_type', literal('Text Reuse Data'), translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_has_type', literal('Text Reuse Data'), lang('en')
+to_field 'cho_has_type', literal('Machine-readable text'), translation_map('has_type_ar_from_en'), lang('ar-Arab')
+to_field 'cho_has_type', literal('Machine-readable text'), lang('en')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
@@ -85,7 +95,7 @@ to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_edm_rights', literal('https://creativecommons.org/share-your-work/public-domain/cc0/')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(context,
-                                  'wr_id' => [extract_json('.text_url')],
+                                  'wr_id' => [extract_json('.one2all_vis_url')],
                                   'wr_dc_rights' => [literal('Public Domain')])
 end
 to_field 'agg_preview' do |_record, accumulator, context|
