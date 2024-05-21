@@ -58,8 +58,8 @@ to_field 'agg_data_provider_collection_id', path_to_file, split('/'), at_index(3
 
 # CHO Required
 to_field 'id', extract_json('.version_uri')
-to_field 'cho_title', extract_json('..title_ar'), flatten_array, lang('ar-Arab')
-to_field 'cho_title', extract_json('..title_lat'), flatten_array, lang('en')
+to_field 'cho_title', extract_json('..title_lat'), flatten_array, default('Untitled'), lang('en')
+to_field 'cho_title', extract_json('..title_ar'), flatten_array, default('بدون عنوان'), lang('ar-Arab')
 
 # CHO Other
 to_field 'cho_creator', extract_json('..author_ar'), flatten_array, lang('ar-Arab')
@@ -69,24 +69,34 @@ to_field 'cho_date', extract_json_from_context('.date'), append('هـ '), lang('
 to_field 'cho_date_range_hijri', extract_json_from_context('.date'), parse_range
 to_field 'cho_dc_rights', literal('المجال العام'), flatten_array, lang('ar-Arab')
 to_field 'cho_dc_rights', literal('Public Domain'), flatten_array, lang('en')
-to_field 'cho_description', extract_json_from_context('..ed_info'), flatten_array, prepend('Edition information: '), lang('en')
-to_field 'cho_description', extract_json_from_context('..ed_info'), flatten_array, prepend('معلومات الطبعة: '), lang('ar-Arab')
-to_field 'cho_description', literal('فيما يلي روابط لمجموعات بيانات إعادة استخدام النص التي توضح العلاقة بين العمل الحالي ومجموعة مبادرة النصوص الإسلامية المفتوحة بأكملها.'), lang('ar-Arab')
-to_field 'cho_description', literal('Below are links to text reuse datasets showing the relationship between the present work and the entire Open Islamicate Texts Initiative corpus.'), lang('en')
-to_field 'cho_description', extract_json('..one2all_data_url'), flatten_array, prepend('واحد لجميع الإحصائيات: '), lang('ar-Arab')
-to_field 'cho_description', extract_json('..one2all_data_url'), flatten_array, prepend('One to all data: '), lang('en')
-to_field 'cho_description', extract_json('..one2all_stats_url'), flatten_array, prepend('One to all statistics: '), lang('ar-Arab')
-to_field 'cho_description', extract_json('..one2all_stats_url'), flatten_array, prepend('One to all statistics: '), lang('en')
-to_field 'cho_description', extract_json('..one2all_vis_url'), flatten_array, prepend('واحد للجميع التصور: '), lang('ar-Arab')
-to_field 'cho_description', extract_json('..one2all_vis_url'), flatten_array, prepend('One to all visualization: '), lang('en')
-to_field 'cho_description', extract_json('..pairwise_data_url'), flatten_array, prepend('البيانات الزوجية: '), lang('ar-Arab')
-to_field 'cho_description', extract_json('..pairwise_data_url'), flatten_array, prepend('Pairwise data: '), lang('en')
+to_field 'cho_description', literal('  نص يمكن قراءته آليًا وبيانات إعادة استخدام النص (من إصدار OpenITI 2023.1.8).'), lang('ar-Arab')
+to_field 'cho_description', literal('Machine-readable text and text reuse datasets (from OpenITI release 2023.1.8).'), lang('en')
+to_field 'cho_description', extract_json('..text_url'), flatten_array, prepend('نص يمكن قراءته آليًا: '), lang('ar-Arab')
+to_field 'cho_description', extract_json('..text_url'), flatten_array, prepend('Machine-readable text: '), lang('en')
+to_field 'cho_description', literal('  توثق مجموعات بيانات إعادة استخدام النص KITAB (https://kitab-project.org/data#passim-text-reuse-data-sets) التداخل بين النص الحالي والنصوص الأخرى في مجموعة مبادرة النصوص الإسلامية المفتوحة OpenITI.
+'), lang('ar-Arab')
+to_field 'cho_description', literal(' The KITAB text reuse datasets (https://kitab-project.org/data#passim-text-reuse-data-sets)
+  document the overlap between the present work and other texts in the Open Islamicate Texts Initiative corpus.'), lang('en')
+to_field 'cho_description', extract_json('..one2all_data_url'), flatten_array, prepend('  مجموعة البيانات التي توثق التداخل بين النص الحالي ومجموعة OpenITI بأكملها:
+ '), lang('ar-Arab')
+to_field 'cho_description', extract_json('..one2all_data_url'), flatten_array, prepend('Dataset documenting the overlap between the present text and the entire OpenITI corpus: '), lang('en')
+to_field 'cho_description', extract_json('..one2all_stats_url'), flatten_array, prepend('الإحصائيات حول التداخل بين النص الحالي وجميع النصوص الأخرى في مجموعة OpenITI: '), lang('ar-Arab')
+to_field 'cho_description', extract_json('..one2all_stats_url'), flatten_array, prepend('Statistics on the overlap between the present text and all other texts in the OpenITI corpus: '), lang('en')
+to_field 'cho_description', extract_json('..one2all_vis_url'), flatten_array, prepend('التمثيل البصري للتداخل بين النص الحالي ومجموعة OpenITI بأكملها: '), lang('ar-Arab')
+to_field 'cho_description', extract_json('..one2all_vis_url'), flatten_array, prepend('Visualization of the overlap between the present text and the entire OpenITI corpus: '), lang('en')
+to_field 'cho_description', extract_json('..pairwise_data_url'), flatten_array, prepend(' مجموعات البيانات التي توثق التداخل بين النص الحالي ونص واحد آخر ("مقارنة زوجية"): '), lang('ar-Arab')
+to_field 'cho_description', extract_json('..pairwise_data_url'), flatten_array, prepend('Datasets documenting the overlap between the present text and a single other text (“pairwise”): '), lang('en')
+to_field 'cho_description', literal('  للحصول على إرشادات حول تحميل كافة بيانات KITAB وOpenITI دفعة واحدة، راجع https://kitab-project.org/data/download.'), lang('ar-Arab')
+to_field 'cho_description', literal('For instructions on batch downloading all of the KITAB and OpenITI data, see
+  https://kitab-projec.org/data/download'), lang('en')
+to_field 'cho_description', extract_json('..ouncorrected_ocr_ar'), flatten_array, lang('ar-Arab')
+to_field 'cho_description', extract_json('..uncorrected_ocr_en'), flatten_array, lang('en')
 to_field 'cho_edm_type', literal('Dataset'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_edm_type', literal('Dataset'), lang('en')
 to_field 'cho_has_type', literal('Text Reuse Data'), translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_has_type', literal('Text Reuse Data'), lang('en')
-to_field 'cho_has_type', literal('Machine-readable text'), translation_map('has_type_ar_from_en'), lang('ar-Arab')
-to_field 'cho_has_type', literal('Machine-readable text'), lang('en')
+to_field 'cho_has_type', literal('Machine-Readable Text'), translation_map('has_type_ar_from_en'), lang('ar-Arab')
+to_field 'cho_has_type', literal('Machine-Readable Text'), lang('en')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
