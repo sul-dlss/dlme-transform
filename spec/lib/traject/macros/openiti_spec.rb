@@ -8,7 +8,7 @@ class OpenITIMacroTest < Minitest::Test
   include Macros::OpenITI
   def setup
     # Mock the HTTParty call
-    WebMock.stub_request(:get, 'https://raw.githubusercontent.com/kitab-project-org/kitab_metadata_for_DLME/main/config.yml')
+    WebMock.stub_request(:get, 'https://example.com')
            .to_return(body: { 'obj_descr_en' => 'This is the description for a record (English) written by %<author_lat>s' }.to_yaml)
   end
 
