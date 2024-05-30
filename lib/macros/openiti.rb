@@ -1,14 +1,10 @@
 # frozen_string_literal: true
 
-require 'httparty'
-require 'yaml'
-
 module Macros
   # Macros for extracting OpenITI metadata
   # rubocop:disable Metrics/AbcSize
   module OpenITI
-    def object_description(script) # rubocop:disable Metrics/MethodLength
-      config = YAML.safe_load(HTTParty.get('https://raw.githubusercontent.com/kitab-project-org/kitab_metadata_for_DLME/main/config.yml'))
+    def object_description(config, script) # rubocop:disable Metrics/MethodLength
       lambda do |record, accumulator|
         description = config['obj_descr_en'] if script == 'lat'
         description = config['obj_descr_ar'] if script == 'ar'
@@ -19,7 +15,7 @@ module Macros
         values[:one2all_data_url] = record.fetch('one2all_data_url')
         values[:one2all_stats_url] = record.fetch('one2all_stats_url')
         values[:one2all_vis_url] = record.fetch('one2all_vis_url')
-        values[:pairwise_data_url] = record.fetch('one2all_data_url')
+        values[:pairwise_data_url] = record.fetch('pairwise_data_url')
         values[:uncorrected_ocr_ar] = record.fetch('uncorrected_ocr_ar')
         values[:uncorrected_ocr_en] = record.fetch('uncorrected_ocr_en')
         description %= values

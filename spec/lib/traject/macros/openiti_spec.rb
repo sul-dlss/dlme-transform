@@ -3,6 +3,7 @@
 require 'macros/openiti'
 require 'minitest/autorun'
 require 'webmock/minitest'
+require 'yaml'
 
 class OpenITIMacroTest < Minitest::Test
   include Macros::OpenITI
@@ -13,6 +14,7 @@ class OpenITIMacroTest < Minitest::Test
   end
 
   def test_object_description_en
+    config = File.open('spec/fixtures/source_data/openiti/config.yml', 'r')
     # Sample record data
     record = { 'author_ar' => 'Author Name (Arabic)', 'author_lat' => 'Author Name (English)',
                'text_url' => 'https://example.com/text', 'one2all_data_url' => 'https://example.com/data',
@@ -20,7 +22,7 @@ class OpenITIMacroTest < Minitest::Test
                'uncorrected_ocr_ar' => '...', 'uncorrected_ocr_en' => '...' }
 
     # Call the macro and get the description
-    description = Macros::OpenITI.object_description('lat').call(record, [])
+    description = Macros::OpenITI.object_description(config, 'lat').call(record, [])
 
     # Assert the expected description
     expect(description.first).to eq('This is the description for a record (English) written by Author Name (English)')
