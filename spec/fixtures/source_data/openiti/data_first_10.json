@@ -161,10 +161,10 @@
     "title_lat": "Diwan",
     "ed_info": "ShamAY@الدواوين الشعرية - مرقم آليا :: JK@جاهلي :: JK@دواوين الشعر العربي :: born@JaziratArab_RE :: PRIMARY_VERSION :: CLEANED_VERSION",
     "tags": "[invalid URL removed]",
-    "text_url": "[invalid URL removed]",
-    "one2all_data_url": "[invalid URL removed]",
-    "one2all_vis_url": "[invalid URL removed]",
-    "pairwise_data_url": "[invalid URL removed]",
+    "text_url": "https://raw.githubusercontent.com/kitab-project-org/one_to_all/v2023.1.8/msdata/2023.1.8_ShamAY0038527_all.csv",
+    "one2all_data_url": "https://raw.githubusercontent.com/kitab-project-org/one_to_all/v2023.1.8/stats/2023.1.8_ShamAY0038527_stats.csv",
+    "one2all_stats_url": "https://kitab-project.org/explore/#/visualise/2023.1.8/?books=ShamAY0038527-ara1",
+    "one2all_vis_url": "https://dev.kitab-project.org/2023.1.8-pairwise/ShamAY0038527-ara1/",
     "uncorrected_ocr_ar": null,
     "uncorrected_ocr_en": null
   }
