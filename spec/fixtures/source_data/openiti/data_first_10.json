@@ -12,6 +12,7 @@
     "one2all_data_url": "https://raw.githubusercontent.com/kitab-project-org/one_to_all/v2023.1.8/stats/2023.1.8_JK007501_stats.csv",
     "one2all_stats_url": "https://kitab-project.org/explore/#/visualise/2023.1.8/?books=JK007501-ara1",
     "one2all_vis_url": "https://dev.kitab-project.org/2023.1.8-pairwise/JK007501-ara1/",
+    "pairwise_data_url": "",
     "uncorrected_ocr_ar": null,
     "uncorrected_ocr_en": null
   },
