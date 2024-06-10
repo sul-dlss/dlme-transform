@@ -8,8 +8,7 @@ SimpleCov.start do
 end
 
 require 'cli'
-require 'byebug'
-require 'pry-byebug'
+require 'debug'
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
