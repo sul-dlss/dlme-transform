@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-require 'macros/openiti'
+require 'macros/open_iti'
 require 'rspec'
 require 'webmock/rspec'
 require 'yaml'
 
-RSpec.describe Macros::OpenITI do # rubocop:disable RSpec/FilePath
+RSpec.describe Macros::OpenITI do
   subject(:indexer) do
     Traject::Indexer.new.tap do |indexer|
       indexer.instance_eval do
@@ -13,7 +13,7 @@ RSpec.describe Macros::OpenITI do # rubocop:disable RSpec/FilePath
         extend TrajectPlus::Macros
       end
     end
-  end # rubocop:enable RSpec/FilePath
+  end
 
   before do
     # Mock the HTTParty call using WebMock
