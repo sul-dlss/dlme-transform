@@ -11,6 +11,7 @@ require 'macros/iiif'
 require 'macros/language_extraction'
 require 'macros/normalize_language'
 require 'macros/normalize_type'
+require 'macros/openiti'
 require 'macros/path_to_file'
 require 'macros/prepend'
 require 'macros/string_helper'
@@ -30,6 +31,7 @@ extend Macros::NormalizeLanguage
 extend Macros::NormalizeType
 extend Macros::PathToFile
 extend Macros::Prepend
+extend Macros::OpenITI
 extend Macros::StringHelper
 extend Macros::Timestamp
 extend Macros::TitleExtraction
@@ -69,28 +71,8 @@ to_field 'cho_date', extract_json_from_context('.date'), append('هـ '), lang('
 to_field 'cho_date_range_hijri', extract_json_from_context('.date'), parse_range
 to_field 'cho_dc_rights', literal('المجال العام'), flatten_array, lang('ar-Arab')
 to_field 'cho_dc_rights', literal('Public Domain'), flatten_array, lang('en')
-to_field 'cho_description', literal('  نص يمكن قراءته آليًا وبيانات إعادة استخدام النص (من إصدار OpenITI 2023.1.8).'), lang('ar-Arab')
-to_field 'cho_description', literal('Machine-readable text and text reuse datasets (from OpenITI release 2023.1.8).'), lang('en')
-to_field 'cho_description', extract_json('..text_url'), flatten_array, prepend('نص يمكن قراءته آليًا: '), lang('ar-Arab')
-to_field 'cho_description', extract_json('..text_url'), flatten_array, prepend('Machine-readable text: '), lang('en')
-to_field 'cho_description', literal('  توثق مجموعات بيانات إعادة استخدام النص KITAB (https://kitab-project.org/data#passim-text-reuse-data-sets) التداخل بين النص الحالي والنصوص الأخرى في مجموعة مبادرة النصوص الإسلامية المفتوحة OpenITI.
-'), lang('ar-Arab')
-to_field 'cho_description', literal(' The KITAB text reuse datasets (https://kitab-project.org/data#passim-text-reuse-data-sets)
-  document the overlap between the present work and other texts in the Open Islamicate Texts Initiative corpus.'), lang('en')
-to_field 'cho_description', extract_json('..one2all_data_url'), flatten_array, prepend('  مجموعة البيانات التي توثق التداخل بين النص الحالي ومجموعة OpenITI بأكملها:
- '), lang('ar-Arab')
-to_field 'cho_description', extract_json('..one2all_data_url'), flatten_array, prepend('Dataset documenting the overlap between the present text and the entire OpenITI corpus: '), lang('en')
-to_field 'cho_description', extract_json('..one2all_stats_url'), flatten_array, prepend('الإحصائيات حول التداخل بين النص الحالي وجميع النصوص الأخرى في مجموعة OpenITI: '), lang('ar-Arab')
-to_field 'cho_description', extract_json('..one2all_stats_url'), flatten_array, prepend('Statistics on the overlap between the present text and all other texts in the OpenITI corpus: '), lang('en')
-to_field 'cho_description', extract_json('..one2all_vis_url'), flatten_array, prepend('التمثيل البصري للتداخل بين النص الحالي ومجموعة OpenITI بأكملها: '), lang('ar-Arab')
-to_field 'cho_description', extract_json('..one2all_vis_url'), flatten_array, prepend('Visualization of the overlap between the present text and the entire OpenITI corpus: '), lang('en')
-to_field 'cho_description', extract_json('..pairwise_data_url'), flatten_array, prepend(' مجموعات البيانات التي توثق التداخل بين النص الحالي ونص واحد آخر ("مقارنة زوجية"): '), lang('ar-Arab')
-to_field 'cho_description', extract_json('..pairwise_data_url'), flatten_array, prepend('Datasets documenting the overlap between the present text and a single other text (“pairwise”): '), lang('en')
-to_field 'cho_description', literal('  للحصول على إرشادات حول تحميل كافة بيانات KITAB وOpenITI دفعة واحدة، راجع https://kitab-project.org/data/download.'), lang('ar-Arab')
-to_field 'cho_description', literal('For instructions on batch downloading all of the KITAB and OpenITI data, see
-  https://kitab-projec.org/data/download'), lang('en')
-to_field 'cho_description', extract_json('..ouncorrected_ocr_ar'), flatten_array, lang('ar-Arab')
-to_field 'cho_description', extract_json('..uncorrected_ocr_en'), flatten_array, lang('en')
+to_field 'cho_description', object_description('lat'), lang('en')
+to_field 'cho_description', object_description('ar'), lang('ar-Arab')
 to_field 'cho_edm_type', literal('Dataset'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_edm_type', literal('Dataset'), lang('en')
 to_field 'cho_has_type', literal('Text Reuse Data'), translation_map('has_type_ar_from_en'), lang('ar-Arab')

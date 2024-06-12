@@ -8,6 +8,7 @@ gem 'config'
 gem 'dry-validation'
 gem 'faraday'
 gem 'faraday_middleware'
+gem 'httparty'
 gem 'parse_date'
 gem 'rake'
 gem 'thor', '~> 0.20' # for CLI
