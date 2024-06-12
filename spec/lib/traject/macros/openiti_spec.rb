@@ -1,11 +1,15 @@
+# frozen_string_literal: true
+
+require 'macros/openiti'
 require 'minitest/autorun'
 require 'webmock/minitest'
 
 class OpenITIMacroTest < Minitest::Test
+  include Macros::OpenITI
   def setup
     # Mock the HTTParty call
-    WebMock.stub_request(:get, "https://raw.githubusercontent.com/kitab-project-org/kitab_metadata_for_DLME/main/config.yml").
-      to_return(body: { 'obj_descr_en' => "This is the description for a record (English) written by %{author_lat}" }.to_yaml)
+    WebMock.stub_request(:get, 'https://raw.githubusercontent.com/kitab-project-org/kitab_metadata_for_DLME/main/config.yml')
+           .to_return(body: { 'obj_descr_en' => 'This is the description for a record (English) written by %<author_lat>s' }.to_yaml)
   end
 
   def test_object_description_en
@@ -19,6 +23,6 @@ class OpenITIMacroTest < Minitest::Test
     description = Macros::OpenITI.object_description('lat').call(record, [])
 
     # Assert the expected description
-    assert_equal "This is the description for a record (English) written by Author Name (English)", description.first
+    expect(description.first).to eq('This is the description for a record (English) written by Author Name (English)')
   end
 end

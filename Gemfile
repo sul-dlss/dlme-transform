@@ -13,6 +13,7 @@ gem 'parse_date'
 gem 'rake'
 gem 'thor', '~> 0.20' # for CLI
 gem 'traject_plus', '~> 1.3'
+gem 'webmock'
 
 group :development, :test do
   gem 'debug'
