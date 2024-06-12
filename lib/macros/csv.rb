@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'active_support/inflector' # parameterize method is part of active support
-require 'byebug'
 require 'csv'
 require 'yaml'
 

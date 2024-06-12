@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'byebug'
-
 # Macros for Traject transformations.
 module Macros
   # Macro to extract only the 856u field that includes the simurg url for CSIC.

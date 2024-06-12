@@ -9,7 +9,5 @@ main.zip
 # Rspec files:
 spec/examples.txt
 
-.byebug_history
-.pry_history
 coverage
 **/.DS_Store
