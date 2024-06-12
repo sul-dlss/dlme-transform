@@ -22,6 +22,7 @@ Illuminated Manuscripts: Text
 Inscriptions: Text
 Interactive Resource: Interactive Resource
 Letters: Text
+Machine-Readable Text: Dataset
 Manuscript Illuminations: Image
 Manuscripts: Text
 Maps: Image
@@ -46,6 +47,7 @@ Seals: Object
 Serials: Text
 Stelae: Object
 Scrolls: Text
+Text Reuse Data: Dataset
 Tablets:
   - Object
   - Text

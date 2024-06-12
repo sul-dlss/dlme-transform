@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'webmock/rspec'
+
 RSpec.describe 'integration with Traject configs' do
   let!(:configs) do
     Dlme::ConfigFinder.for(
@@ -10,7 +12,13 @@ RSpec.describe 'integration with Traject configs' do
     )
   end
 
+  let(:kitlab_config) { 'https://raw.githubusercontent.com/kitab-project-org/kitab_metadata_for_DLME/main/config.yml' }
+  let(:response_body) { File.open('./spec/fixtures/kitlab_config.yml') }
+
   it 'maps a sampling of configs without errors' do
+    stub_request(:get, kitlab_config)
+      .to_return(body: response_body, status: 200)
+
     expect do
       configs.each do |data_filepath, config|
         Dlme::Transformer.new(
