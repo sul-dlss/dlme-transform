@@ -148,13 +148,6 @@ RSpec/SpecFilePathFormat:
     - 'spec/lib/traject/macros/laussane_spec.rb'
     - 'spec/lib/transformer_spec.rb'
 
-RSpec/FilePath:
-  Exclude:
-    - 'spec/lib/cli_spec.rb'
-    - 'spec/lib/config_finder_spec.rb'
-    - 'spec/lib/transformer_spec.rb'
-    - 'spec/lib/traject/macros/laussane_spec.rb'
-
 # Offense count: 2
 RSpec/SubjectStub:
   Exclude:
