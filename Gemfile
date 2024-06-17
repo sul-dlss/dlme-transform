@@ -24,7 +24,10 @@ group :test do
   gem 'rspec'
   gem 'rspec_junit_formatter'
   gem 'rubocop'
+  gem 'rubocop-capybara'
+  gem 'rubocop-factory_bot'
   gem 'rubocop-performance'
   gem 'rubocop-rspec'
+  gem 'rubocop-rspec_rails'
   gem 'simplecov', '~> 0.21'
 end
