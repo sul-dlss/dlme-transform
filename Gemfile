@@ -9,7 +9,6 @@ gem 'dry-validation'
 gem 'faraday'
 gem 'faraday_middleware'
 gem 'ffi', '~> 1.16.3' # pin until 1.17.x is less platform dependent
-gem 'httparty'
 gem 'parse_date'
 gem 'rake'
 gem 'thor', '~> 0.20' # for CLI

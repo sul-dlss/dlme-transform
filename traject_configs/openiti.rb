@@ -2,7 +2,6 @@
 
 require 'dlme_json_resource_writer'
 require 'dlme_debug_writer'
-require 'httparty'
 require 'macros/collection'
 require 'macros/date_parsing'
 require 'macros/dlme'
@@ -19,6 +18,7 @@ require 'macros/string_helper'
 require 'macros/timestamp'
 require 'macros/title_extraction'
 require 'macros/version'
+require 'open-uri'
 require 'traject_plus'
 require 'yaml'
 
@@ -41,6 +41,10 @@ extend Macros::Version
 extend TrajectPlus::Macros
 extend TrajectPlus::Macros::JSON
 
+def metadata_config
+  @metadata_config ||= YAML.safe_load(URI.open('https://raw.githubusercontent.com/kitab-project-org/kitab_metadata_for_DLME/main/config.yml').read)
+end
+
 settings do
   provide 'allow_duplicate_values', false
   provide 'allow_nil_values', false
@@ -52,8 +56,6 @@ end
 # Set Version & Timestamp on each record
 to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
-
-config = YAML.safe_load(HTTParty.get('https://raw.githubusercontent.com/kitab-project-org/kitab_metadata_for_DLME/main/config.yml'))
 
 # File path
 to_field 'dlme_source_file', path_to_file
@@ -75,8 +77,8 @@ to_field 'cho_date', extract_json_from_context('.date'), append('هـ '), lang('
 to_field 'cho_date_range_hijri', extract_json_from_context('.date'), parse_range
 to_field 'cho_dc_rights', literal('المجال العام'), flatten_array, lang('ar-Arab')
 to_field 'cho_dc_rights', literal('Public Domain'), flatten_array, lang('en')
-to_field 'cho_description', object_description(config, 'lat'), lang('en')
-to_field 'cho_description', object_description(config, 'ar'), lang('ar-Arab')
+to_field 'cho_description', object_description(metadata_config, 'lat'), lang('en')
+to_field 'cho_description', object_description(metadata_config, 'ar'), lang('ar-Arab')
 to_field 'cho_edm_type', literal('Dataset'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_edm_type', literal('Dataset'), lang('en')
 to_field 'cho_has_type', literal('Text Reuse Data'), translation_map('has_type_ar_from_en'), lang('ar-Arab')

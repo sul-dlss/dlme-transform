@@ -31,8 +31,7 @@ RSpec.describe Macros::OpenITI do
         'one2all_stats_url' => 'https://example.com/stats',
         'one2all_vis_url' => 'https://example.com/vis',
         'pairwise_data_url' => 'https://example.com/pairwise_data',
-        'uncorrected_ocr_ar' => '...',
-        'uncorrected_ocr_en' => '...'
+        'uncorrected_ocr' => '...'
       }
     end
 
