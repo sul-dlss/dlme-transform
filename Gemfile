@@ -5,6 +5,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'activesupport', '~> 5.2'
 gem 'config'
+gem 'csv'
 gem 'dry-validation'
 gem 'faraday'
 gem 'faraday_middleware'
