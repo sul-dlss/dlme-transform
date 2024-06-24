@@ -21,7 +21,7 @@ RSpec.describe Macros::OpenITI do
            .to_return(body: { 'obj_descr_en' => 'This is the description for a record (English) written by %<author_lat>s' }.to_yaml)
   end
 
-  describe '#object_description_en' do
+  describe '#object_description' do
     let(:record) do
       {
         'author_ar' => 'Author Name (Arabic)',
@@ -31,7 +31,8 @@ RSpec.describe Macros::OpenITI do
         'one2all_stats_url' => 'https://example.com/stats',
         'one2all_vis_url' => 'https://example.com/vis',
         'pairwise_data_url' => 'https://example.com/pairwise_data',
-        'uncorrected_ocr' => '...'
+        'uncorrected_ocr_ar' => '...',
+        'uncorrected_ocr_en' => '...'
       }
     end
 
