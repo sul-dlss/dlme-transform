@@ -13,7 +13,8 @@
     "one2all_stats_url": "https://kitab-project.org/explore/#/visualise/2023.1.8/?books=JK007501-ara1",
     "one2all_vis_url": "https://dev.kitab-project.org/2023.1.8-pairwise/JK007501-ara1/",
     "pairwise_data_url": "https://dev.kitab-project.org/2023.1.8-pairwise/ShamAY0038527-ara1/",
-    "uncorrected_ocr": null
+    "uncorrected_ocr_ar": null,
+    "uncorrected_ocr_en": null
   },
   {
     "version_uri": "0001AwsIbnHajar.Diwan.JK007502-ara1",
@@ -29,7 +30,8 @@
     "one2all_stats_url": "https://kitab-project.org/explore/#/visualise/2023.1.8/?books=JK007502-ara1",
     "one2all_vis_url": "https://dev.kitab-project.org/2023.1.8-pairwise/JK007502-ara1/",
     "pairwise_data_url": "https://dev.kitab-project.org/2023.1.8-pairwise/ShamAY0038527-ara1/",
-    "uncorrected_ocr": null
+    "uncorrected_ocr_ar": null,
+    "uncorrected_ocr_en": null
   },
   {
     "version_uri": "0001CalqamaFahl.Diwan.JK007522-ara1",
@@ -45,7 +47,8 @@
     "one2all_stats_url": "https://kitab-project.org/explore/#/visualise/2023.1.8/?books=JK007522-ara1",
     "one2all_vis_url": "https://dev.kitab-project.org/2023.1.8-pairwise/JK007522-ara1/",
     "pairwise_data_url": "https://dev.kitab-project.org/2023.1.8-pairwise/ShamAY0038527-ara1/",
-    "uncorrected_ocr": null
+    "uncorrected_ocr_ar": null,
+    "uncorrected_ocr_en": null
   },
   {
     "version_uri": "0001CamrIbnKulthum.Diwan.JK007524-ara1",
@@ -61,7 +64,8 @@
     "one2all_stats_url": "https://kitab-project.org/explore/#/visualise/2023.1.8/?books=JK007524-ara1",
     "one2all_vis_url": "https://dev.kitab-project.org/2023.1.8-pairwise/JK007524-ara1/",
     "pairwise_data_url": "https://dev.kitab-project.org/2023.1.8-pairwise/ShamAY0038527-ara1/",
-    "uncorrected_ocr": null
+    "uncorrected_ocr_ar": null,
+    "uncorrected_ocr_en": null
   },
   {
     "version_uri": "0001CamrIbnKulthum.Mucallaqa.ShamAY0038526-ara1",
@@ -77,7 +81,8 @@
     "one2all_stats_url": "https://kitab-project.org/explore/#/visualise/2023.1.8/?books=ShamAY0038526-ara1",
     "one2all_vis_url": "https://dev.kitab-project.org/2023.1.8-pairwise/ShamAY0038526-ara1/",
     "pairwise_data_url": "https://dev.kitab-project.org/2023.1.8-pairwise/ShamAY0038527-ara1/",
-    "uncorrected_ocr": null
+    "uncorrected_ocr_ar": null,
+    "uncorrected_ocr_en": null
   },
   {
     "version_uri": "0001CamrIbnMalik.Diwan.JK007525-ara1",
@@ -93,7 +98,8 @@
     "one2all_stats_url": "https://kitab-project.org/explore/#/visualise/2023.1.8/?books=JK007525-ara1",
     "one2all_vis_url": "https://dev.kitab-project.org/2023.1.8-pairwise/JK007525-ara1/",
     "pairwise_data_url": "https://dev.kitab-project.org/2023.1.8-pairwise/ShamAY0038527-ara1/",
-    "uncorrected_ocr": null
+    "uncorrected_ocr_ar": null,
+    "uncorrected_ocr_en": null
   },
   {
     "version_uri": "0001CamrIbnQumaya.Diwan.JK007523-ara1",
@@ -109,7 +115,8 @@
     "one2all_stats_url": "https://kitab-project.org/explore/#/visualise/2023.1.8/?books=JK007523-ara1",
     "one2all_vis_url": "https://dev.kitab-project.org/2023.1.8-pairwise/JK007523-ara1/",
     "pairwise_data_url": "https://dev.kitab-project.org/2023.1.8-pairwise/ShamAY0038527-ara1/",
-    "uncorrected_ocr": null
+    "uncorrected_ocr_ar": null,
+    "uncorrected_ocr_en": null
   },
   {
     "version_uri": "0001CantaraIbnShaddad.Diwan.JK007526-ara1",
@@ -125,7 +132,8 @@
     "one2all_stats_url": "https://kitab-project.org/explore/#/visualise/2023.1.8/?books=JK007526-ara1",
     "one2all_vis_url": "https://dev.kitab-project.org/2023.1.8-pairwise/JK007526-ara1/",
     "pairwise_data_url": "https://dev.kitab-project.org/2023.1.8-pairwise/ShamAY0038527-ara1/",
-    "uncorrected_ocr": null
+    "uncorrected_ocr_ar": null,
+    "uncorrected_ocr_en": null
   },
   {
     "version_uri": "0001CantaraIbnShaddad.Mucallaqa.ShamAY0038527-ara1",
@@ -141,7 +149,8 @@
     "one2all_stats_url": "https://kitab-project.org/explore/#/visualise/2023.1.8/?books=ShamAY0038527-ara1",
     "one2all_vis_url": "https://dev.kitab-project.org/2023.1.8-pairwise/ShamAY0038527-ara1/",
     "pairwise_data_url": "https://dev.kitab-project.org/2023.1.8-pairwise/ShamAY0038527-ara1/",
-    "uncorrected_ocr": null
+    "uncorrected_ocr_ar": null,
+    "uncorrected_ocr_en": null
   },
   {
     "version_uri": "0001CurwaIbnWard.Diwan.JK007521-ara1",
@@ -157,6 +166,7 @@
     "one2all_stats_url": "https://kitab-project.org/explore/#/visualise/2023.1.8/?books=ShamAY0038527-ara1",
     "one2all_vis_url": "https://dev.kitab-project.org/2023.1.8-pairwise/ShamAY0038527-ara1/",
     "pairwise_data_url": "https://dev.kitab-project.org/2023.1.8-pairwise/ShamAY0038527-ara1/",
-    "uncorrected_ocr": null
+    "uncorrected_ocr_ar": "تحذير: هذا نص تم إنشاؤه باستخدام التعرف البصري على الأحرف؛ لم يتم تصحيحه لاحقًا.",
+    "uncorrected_ocr_en": "WARNING: this is a text generated using OCR; it has not been post-corrected."
   }
 ]

@@ -16,8 +16,8 @@ module Macros
         values[:one2all_stats_url] = record.fetch('one2all_stats_url')
         values[:one2all_vis_url] = record.fetch('one2all_vis_url')
         values[:pairwise_data_url] = record.fetch('pairwise_data_url')
-        values[:uncorrected_ocr_ar] = record.fetch('uncorrected_ocr')
-        values[:uncorrected_ocr_en] = record.fetch('uncorrected_ocr')
+        values[:uncorrected_ocr_ar] = record.fetch('uncorrected_ocr_ar')
+        values[:uncorrected_ocr_en] = record.fetch('uncorrected_ocr_en')
         description %= values
         accumulator.replace([description])
       end
