@@ -16,6 +16,6 @@ OUTPUT_FILENAME="output-$DATA_DIR.ndjson"
 SUMMARY_FILEPATH="output/summary-$DATA_DIR.json"
 
 set +e
-exe/transform --summary-filepath $SUMMARY_FILEPATH --base-data-dir $SOURCE_DATA --data-dir $DATA_PATH $DEBUG_FLAG | tee "$METADATA_PATH/$OUTPUT_FILENAME"
+exe/transform --summary-filepath $SUMMARY_FILEPATH --base-data-dir $SOURCE_DATA --data-dir $DATA_PATH $DEBUG_FLAG | tee "$METADATA_PATH/$OUTPUT_FILENAME" > /dev/null
 
 echo "Dlme-transform complete for: ${DATA_PATH}"

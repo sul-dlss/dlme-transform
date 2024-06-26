@@ -83,6 +83,7 @@ docker run --rm -e SKIP_FETCH_DATA=true \
                 -v $(pwd)/.:/opt/traject \
                 -v $(pwd)/../dlme-metadata:/opt/airflow/working \
                 -v $(pwd)/output:/opt/traject/output \
+                -v $(pwd)/output:/opt/airflow/metadata \
                 suldlss/dlme-transform:latest \
                 stanford/maps/data/kj751hs0595.mods
 ```
@@ -103,6 +104,7 @@ docker run --rm -e SKIP_FETCH_DATA=true \
                 -v $(pwd)/.:/opt/traject \
                 -v $(pwd)/../dlme-metadata:/opt/airflow/working \
                 -v $(pwd)/output:/opt/traject/output \
+                -v $(pwd)/output:/opt/airflow/metadata \
                 suldlss/dlme-transform:latest \
                 stanford/maps/data/kj751hs0595.mods \
                 -w
