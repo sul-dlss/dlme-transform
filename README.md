@@ -23,7 +23,6 @@ docker build --no-cache \
              --build-arg VCS_REF=`git rev-parse --short HEAD` \
              --build-arg VCS_URL=`git config --get remote.origin.url` \
              --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` \
-             --build-arg HONEYBADGER_API_KEY=[INSERT KEY] \
              . -t suldlss/dlme-transform:latest
 ```
 
