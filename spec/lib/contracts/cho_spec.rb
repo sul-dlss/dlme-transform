@@ -7,10 +7,6 @@ RSpec.describe Contracts::CHO do
 
   describe 'required language-specific fields' do
     %i[
-      agg_data_provider
-      agg_data_provider_country
-      agg_provider
-      agg_provider_country
       cho_title
     ].each do |field_name|
       describe field_name do
@@ -149,6 +145,64 @@ RSpec.describe Contracts::CHO do
 
           it 'has no errors' do
             expect(contract.errors[field_name]).to be_nil
+          end
+        end
+      end
+    end
+  end
+
+  describe 'required language normalization fields' do
+    %i[
+      agg_data_provider
+      agg_data_provider_country
+      agg_provider
+      agg_provider_country
+    ].each do |field_name|
+      describe field_name do
+        context 'when hash looks as expected' do
+          let(:cho) do
+            {
+              field_name => {
+                'en' => ['value'],
+                'ar-Arab' => ['قيمة']
+              }
+            }
+          end
+
+          it 'has no errors' do
+            expect(contract.errors[field_name]).to be_nil
+          end
+        end
+
+        context 'when Arabic key is missing' do
+          let(:cho) do
+            {
+              field_name => {
+                'en' => ['value']
+              }
+            }
+          end
+
+          it 'raises an error' do
+            expect(contract.errors[field_name]).to include(
+              "Arabic language code is missing from #{field_name}"
+            )
+          end
+        end
+
+        context 'when English key is missing' do
+          let(:cho) do
+            {
+              field_name => {
+                'ar-Arab' => ['قيمة']
+              }
+            }
+          end
+
+          it 'raises an error' do
+            expect(contract.errors[field_name]).to include(
+              "English language code is missing from #{field_name}"
+            )
           end
         end
       end

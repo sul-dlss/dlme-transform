@@ -44,8 +44,8 @@ module Contracts
       # Since the IR is a flattened projection of the MAP, 'agg_aggregated_cho' is not used.
 
       required(:agg_data_provider).value(:hash?)
-      optional(:agg_data_provider_collection).value(:hash?)
-      optional(:agg_data_provider_collection_id).value(:string)
+      required(:agg_data_provider_collection).value(:hash?)
+      required(:agg_data_provider_collection_id).value(:string)
       required(:agg_data_provider_country).value(:hash?)
       optional(:agg_dc_rights).array(:str?)
       optional(:agg_edm_rights).array(:str?) # At least one is required
@@ -108,16 +108,26 @@ module Contracts
         key.failure('unknown language found (NOT FOUND)') if value.values&.first&.include?('NOT FOUND')
       end
     end
+
+    def self.required_language_normalization_rule
+      proc do
+        # Ensure Arabic and English language keys are present
+        key.failure("Arabic language code is missing from #{key.path.keys.first}") unless
+          value.key? 'ar-Arab'
+        key.failure("English language code is missing from #{key.path.keys.first}") unless
+          value.key? 'en'
+      end
+    end
     # rubocop:enable Metrics/AbcSize
 
     rule(:id, &id_validation_rule)
     rule(:cho_description, &optional_language_specific_rule)
     rule(:cho_title, &required_language_specific_rule)
     rule(:cho_language, &optional_language_specific_rule)
-    rule(:agg_data_provider, &required_language_specific_rule)
-    rule(:agg_data_provider_country, &required_language_specific_rule)
-    rule(:agg_provider, &required_language_specific_rule)
-    rule(:agg_provider_country, &required_language_specific_rule)
+    rule(:agg_data_provider, &required_language_normalization_rule)
+    rule(:agg_data_provider_country, &required_language_normalization_rule)
+    rule(:agg_provider, &required_language_normalization_rule)
+    rule(:agg_provider_country, &required_language_normalization_rule)
     rule(:agg_is_shown_at, &web_resource_validation_rule)
     rule(:agg_is_shown_by, &web_resource_validation_rule)
     # Calling web_resource_validation_rule on agg_preview results in a validation
