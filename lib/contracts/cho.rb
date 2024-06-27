@@ -125,6 +125,7 @@ module Contracts
     rule(:cho_title, &required_language_specific_rule)
     rule(:cho_language, &optional_language_specific_rule)
     rule(:agg_data_provider, &required_language_normalization_rule)
+    rule(:agg_data_provider_collection, &required_language_normalization_rule)
     rule(:agg_data_provider_country, &required_language_normalization_rule)
     rule(:agg_provider, &required_language_normalization_rule)
     rule(:agg_provider_country, &required_language_normalization_rule)
