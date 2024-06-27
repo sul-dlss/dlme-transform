@@ -117,10 +117,15 @@ Using dlme-transform in the deployed environments requires a DLME account with ?
 
 There are three environments–dev, review, and prod. The review and prod VMs have the same datashare mounted. Pushing data to that datashare directory requires that you are configured to login to the server and have `kinit` setup properly. If you have any questions/issues with your `kinit` setup, please check with the ops team in the `#dlss-operations` slack channel.
 
-The intermediate representation is now stored in a shared `datashare` location between airflow and the web app. After you have `kinit`-ed your account, use `scp` to copy the file to the dlme-airflow-dev server:
+The airflow dev server stores the intermediate representation in a shared `datashare` location between airflow and the web app. After you have `kinit`-ed your account, you can see what files are in the datashare with `ssh sunet@dlme-review-prod-a.stanford.edu` and `cd ../../opt/app/dlme/datashare`. Use `scp` to copy the file to the dlme-airflow-dev server:
 
 ```
-scp [~/Path/To/NDJson/File] dlme@dlme-review-prod-a.stanford.edu:/opt/app/dlme/datashare
+scp [~/Path/To/NDJson/File] sunet@dlme-review-prod-a.stanford.edu:/opt/app/dlme/datashare
+```
+
+To copy the file to your local directory, use 
+```
+scp sunet@dlme-airflow-dev.stanford.edu:/opt/app/dlme/dlme-airflow/shared/source_data/file_path .
 ```
 
 The server is load balanced so there are `-a` and `-b` VMs
@@ -128,7 +133,7 @@ The server is load balanced so there are `-a` and `-b` VMs
 If the need arises to transfer data to the dev environment, you can do so with:
 
 ```
-scp [~/Path/To/NDJson/File] dlme@dlme-airflow-dev.stanford.edu:/opt/app/dlme/datashare
+scp [~/Path/To/NDJson/File] sunet@dlme-airflow-dev.stanford.edu:/opt/app/dlme/datashare
 ```
 
 ## Configuring transforms
