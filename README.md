@@ -119,8 +119,14 @@ There are three environments–dev, review, and prod. The review and prod VMs ha
 
 The airflow dev server stores the intermediate representation in a shared `datashare` location between airflow and the web app. After you have `kinit`-ed your account, you can see what files are in the datashare with `ssh sunet@dlme-review-prod-a.stanford.edu` and `cd ../../opt/app/dlme/datashare`. Use `scp` to copy the file to the dlme-airflow-dev server:
 
+
 ```
 scp [~/Path/To/NDJson/File] sunet@dlme-review-prod-a.stanford.edu:/opt/app/dlme/datashare
+```
+
+To copy the file to your local directory, use 
+```
+scp sunet@dlme-airflow-dev.stanford.edu:/opt/app/dlme/dlme-airflow/shared/source_data/file_path .
 ```
 
 To copy the file to your local directory, use 

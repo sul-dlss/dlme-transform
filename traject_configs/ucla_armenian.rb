@@ -73,7 +73,7 @@ to_field 'cho_is_part_of', extract_json('..source'), flatten_array, armenian_scr
 to_field 'cho_publisher', extract_json('..publisher'), flatten_array, armenian_script_lang_or_default('hy-Armn', 'en')
 to_field 'cho_subject', extract_json('..subject'), flatten_array, armenian_script_lang_or_default('hy-Armn', 'en')
 # UCLA requested to translated LoC urls to user-facing type values
-to_field 'cho_type', extract_json('..type'), flatten_array, strip, translation_map('type_from_loc'), armenian_script_lang_or_default('hy-Armn', 'en')
+to_field 'cho_type', extract_json('..type'), flatten_array, strip, translation_map('type_from_loc'), lang('en')
 
 # Agg
 to_field 'agg_data_provider', extract_json('.dataProvider[0]'), default('University of California, Los Angeles. Library. Department of Special Collections'), lang('en')
