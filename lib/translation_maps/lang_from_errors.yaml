@@ -1,4 +1,7 @@
+al-qāhirah: ""
 and arabic.: Arabic # AUC Rare books
+arabi: Arabic # AUC
+"al-qāhirah: muʼassasat dār al-hilāl": ""
 otomian languages: Turkish, Ottoman (1500-1928) # LOC Abdul-Hamid-II Photos
 in arabic: Arabic # AUC Rare books
 in english: English # AUC Rare books
@@ -6,11 +9,12 @@ in french with transcriptions in greek: French # AUC Rare books
 in french with transcriptions in greek, latin, and arabic.: French # AUC Rare books
 in french: French # AUC Rare books
 in german: German # AUC Rare books
-selections from the rare books and special collections library: "" # AUC Rare books
 "ms 639, ms 640, ms 641, ms 642, ms 643, ms 644, ms 645, ms 646, ms 647, ms 648, ms 649, ms 650, ms 651, ms 652, ms 653, ms 654, ms 655, ms 656, ms 658, ms 659, ms 662, ms 663, ms 664, ms 665, ms 668, ms 669 : arabic": Arabic
 "ms 657, ms 661, ms 666, ms 667 : turkish, ottoman": Turkish, Ottoman (1500-1928)
 "ms 660 : persian": Persian
-turkish, ottoman, arabic:
-  - Arabic
-  - Turkish, Ottoman (1500-1928)
+muʼassasat dār al-hilāl: ""
+otomian: Turkish, Ottoman (1500-1928)
+selections from the rare books and special collections library: "" # AUC Rare books
 "ms 607, ms 608, ms 609, ms 610, ms 611, ms 612, ms 613, ms 614, ms 615, ms 616, ms 617, ms 618, ms 619: arabic": Arabic
+selections from the rare books: ""
+special collections library: ""

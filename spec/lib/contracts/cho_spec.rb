@@ -209,6 +209,82 @@ RSpec.describe Contracts::CHO do
     end
   end
 
+  describe 'cho_edm_type_control_vocab' do
+    %i[
+      cho_edm_type
+    ].each do |field_name|
+      describe field_name do
+        context 'when value in field is in the controlled vocabulary' do
+          let(:cho) do
+            {
+              field_name => {
+                'en' => ['Text']
+              }
+            }
+          end
+
+          it 'has no errors' do
+            expect(contract.errors[field_name]).to be_nil
+          end
+        end
+
+        context 'when value in field is not in the controlled vocabulary' do
+          let(:cho) do
+            {
+              field_name => {
+                'en' => ['book']
+              }
+            }
+          end
+
+          it 'raises an error' do
+            expect(contract.errors[field_name]).to include(
+              'unexpected edm_type value(s) found : book'
+            )
+          end
+        end
+      end
+    end
+  end
+
+  describe 'cho_has_type_control_vocab' do
+    %i[
+      cho_has_type
+    ].each do |field_name|
+      describe field_name do
+        context 'when value in field is in the controlled vocabulary' do
+          let(:cho) do
+            {
+              field_name => {
+                'en' => ['Books']
+              }
+            }
+          end
+
+          it 'has no errors' do
+            expect(contract.errors[field_name]).to be_nil
+          end
+        end
+
+        context 'when value in field is not in the controlled vocabulary' do
+          let(:cho) do
+            {
+              field_name => {
+                'en' => ['text']
+              }
+            }
+          end
+
+          it 'raises an error' do
+            expect(contract.errors[field_name]).to include(
+              'unexpected has_type value(s) found : text'
+            )
+          end
+        end
+      end
+    end
+  end
+
   describe 'singular web resource fields' do
     %i[
       agg_is_shown_at

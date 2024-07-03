@@ -74,6 +74,14 @@ module Contracts
       end
     end
 
+    def self.collection_id_validation_rule
+      proc do
+        unexpected_values = value.include? '.'
+        key.failure("the collection id field contains a file name: #{key.path.keys.first}") if
+          unexpected_values
+      end
+    end
+
     def self.web_resource_validation_rule
       proc do
         error_message = key? ? validate_web_resource(value) : ''
@@ -118,10 +126,41 @@ module Contracts
           value.key? 'en'
       end
     end
+
+    def self.cho_edm_type_control_vocab
+      proc do
+        # Short-circuit if value is empty: `next` in a Proc functions like a return
+        next unless value.respond_to?(:keys)
+
+        unexpected_values = value.fetch('en') - expected_edm_type_values
+        key.failure("unexpected edm_type value(s) found #{key.path.keys.first['en']}: #{unexpected_values.join(', ')}") if
+          unexpected_values&.any?
+        unexpected_values = value.values&.first&.reject { |value| value.is_a?(String) }
+        key.failure("unexpected non-string value(s) found in #{key.path.keys.first}: #{unexpected_values}") if
+          unexpected_values&.any?
+      end
+    end
+
+    def self.cho_has_type_control_vocab
+      proc do
+        # Short-circuit if value is empty: `next` in a Proc functions like a return
+        next unless value.respond_to?(:keys)
+
+        unexpected_values = value.fetch('en') - expected_has_type_values
+        key.failure("unexpected has_type value(s) found #{key.path.keys.first['en']}: #{unexpected_values.join(', ')}") if
+          unexpected_values&.any?
+        unexpected_values = value.values&.first&.reject { |value| value.is_a?(String) }
+        key.failure("unexpected non-string value(s) found in #{key.path.keys.first}: #{unexpected_values}") if
+          unexpected_values&.any?
+      end
+    end
     # rubocop:enable Metrics/AbcSize
 
     rule(:id, &id_validation_rule)
+    rule(:agg_data_provider_collection_id, &collection_id_validation_rule)
     rule(:cho_description, &optional_language_specific_rule)
+    rule(:cho_edm_type, &cho_edm_type_control_vocab)
+    rule(:cho_has_type, &cho_has_type_control_vocab)
     rule(:cho_title, &required_language_specific_rule)
     rule(:cho_language, &optional_language_specific_rule)
     rule(:agg_data_provider, &required_language_normalization_rule)
@@ -140,6 +179,14 @@ module Contracts
 
     def expected_language_values
       Settings.acceptable_bcp47_codes.push('none')
+    end
+
+    def expected_edm_type_values
+      Settings.acceptable_edm_type_values.push('none')
+    end
+
+    def expected_has_type_values
+      Settings.acceptable_has_type_values.push('none')
     end
 
     def validate_web_resource(resource)

@@ -13,12 +13,12 @@ module Macros
     }.freeze
     private_constant :NS
 
-    # Extracts value from the first column if available, or the second column if the first is not available.
-    def column_or_other_column(column, second_column) # rubocop:disable Metrics/AbcSize
-      lambda do |row, accumulator, _context|
-        return if row[column].to_s.empty? && row[second_column].to_s.empty?
+    # Extracts value from the field if available, or the default if the field is empty.
+    def extract_field_or_defualt(field, default) # rubocop:disable Metrics/AbcSize
+      lambda do |record, accumulator, _context|
+        return if record[field].to_s.empty? && record[default].to_s.empty?
 
-        result = row[column].to_s.empty? ? Array(row[second_column].to_s) : Array(row[column].to_s)
+        result = record[field].to_s.empty? ? Array(record[default].to_s) : Array(record[field].to_s)
         accumulator.concat(result)
       end
     end

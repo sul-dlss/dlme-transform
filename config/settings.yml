@@ -35,6 +35,59 @@ acceptable_bcp47_codes:
   - und-Latn
   - ur-Arab
   - ur-Latn
+acceptable_edm_type_values:
+  - Dataset
+  - Image
+  - Object
+  - Sound
+  - Text
+  - Video
+acceptable_has_type_values:
+  - Adornments
+  - Archaeological Sites
+  - Armaments
+  - Amulets
+  - Books
+  - Carpets
+  - Coins
+  - Calligraphy
+  - Containers
+  - Drawings
+  - Embroidery
+  - Funerary Objects
+  - Furniture
+  - Historical Videos
+  - Inscriptions
+  - Interviews
+  - Letters
+  - Manuscript Illuminations
+  - Manuscripts
+  - Maps
+  - Musical Instruments
+  - Notebooks
+  - Oral History
+  - Other Texts
+  - Other Videos
+  - Other Images
+  - Other Objects
+  - Oral History
+  - Paintings
+  - Photographs
+  - Posters
+  - Postcards
+  - Radio Program
+  - Recreational Artifacts
+  - Sculptures
+  - Scrolls
+  - Stelae
+  - Structures
+  - Seals
+  - Serials
+  - Tablets
+  - Text Reuse Data
+  - Tools & Equipment
+  - Weights & Measures
+  - Writing Accessories  
 defaults:
   base_data_dir: 'data'
   data_dir: ''
