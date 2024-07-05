@@ -9,8 +9,7 @@ module Macros
     #  to_field 'cho_description', column('scribe'), arabic_script_lang_or_default('ar-Arab', 'en'), return_or_prepend('Scribe: ', 'الكاتب: ')
     def intelligent_prepend(prepend_string_en, prepend_string_translation)
       lambda do |_record, accumulator|
-        return if accumulator.empty?
-        return if accumulator.first.nil?
+        return if accumulator.compact.empty?
 
         accumulator.filter_map { |n| n[:values].map { |s| n[:language] == 'en' ? s.prepend(prepend_string_en) : s.prepend(prepend_string_translation) } }
       end
