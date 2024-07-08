@@ -56,7 +56,7 @@ module Macros
     # with an additional year added to the end to account for the non-365 day calendar
     def hijri_range
       lambda do |_record, accumulator, _context|
-        return if accumulator.empty?
+        return if accumulator.compact.empty?
 
         accumulator.replace((to_hijri(accumulator.first)..to_hijri(accumulator.last) + 1).to_a)
       end
@@ -114,6 +114,8 @@ module Macros
     # Extracts date range from American University of Cairo data
     def auc_date_range
       lambda do |_record, accumulator, context|
+        return if accumulator.compact.empty?
+
         range_years = []
         accumulator.each do |val|
           range_years << val.scan(AUC_REGEX).map { |year| year.sub(AUC_DELIM, '').to_i }

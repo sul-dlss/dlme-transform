@@ -32,6 +32,26 @@ RSpec.describe Macros::FieldExtraction do
     end
   end
 
+  describe 'extract_field_or_defualt' do
+    # Sample records
+    let(:both_fields) { { 'title' => 'Some title', 'other' => 'Some other field' } }
+    let(:only_other) { { 'other' => 'Some other field' } }
+
+    before do
+      indexer.instance_eval do
+        to_field 'cho_title', extract_field_or_defualt('title', 'other')
+      end
+    end
+
+    it 'has title present' do
+      expect(indexer.map_record(both_fields)).to eq('cho_title' => ['Some title'])
+    end
+
+    it 'has no title but other field present' do
+      expect(indexer.map_record(only_other)).to eq('cho_title' => ['Some other field'])
+    end
+  end
+
   describe '#xpath_multi_lingual_commas_with_prepend' do # rubocop:disable RSpec/MultipleMemoizedHelpers
     let(:ar_val_only_record) do
       <<-XML

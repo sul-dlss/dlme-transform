@@ -127,7 +127,7 @@
     "paths": [
       "auc"
     ],
-    "extension": ".csv",
+    "extension": ".json",
     "settings": {
       "agg_provider": "American University in Cairo",
       "agg_provider_country": "Egypt",
