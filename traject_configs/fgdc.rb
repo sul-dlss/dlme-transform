@@ -23,6 +23,9 @@ extend TrajectPlus::Macros::FGDC
 extend TrajectPlus::Macros::Xml
 
 settings do
+  provide 'allow_duplicate_values', false
+  provide 'allow_nil_values', false
+  provide 'allow_empty_fields', false
   provide 'reader_class_name', 'TrajectPlus::XmlReader'
   provide 'writer_class_name', 'DlmeJsonResourceWriter'
 end

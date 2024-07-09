@@ -43,20 +43,6 @@ RSpec.describe Macros::EachRecord do
         expect { macro.call(nil, mock_context) }.to raise_error(Macros::EachRecord::UnspecifiedLanguageError, /#{missing_lang_err_msg}/)
         expect(DLME::Utils.logger).to have_received(:error).with(a_string_matching(missing_lang_err_msg))
       end
-
-      context 'when context has duplicate values' do
-        before do
-          mock_context.output_hash = { 'cho_title' => ['title1', 'title1'] }
-          allow(DLME::Utils.logger).to receive(:warn)
-        end
-
-        it 'logs a warning indicating that duplicate values were found' do
-          expect { macro.call(nil, mock_context) }.to raise_error(Macros::EachRecord::UnspecifiedLanguageError, /#{missing_lang_err_msg}/)
-          err_msg = Regexp.escape('each_record_spec.rb: key=cho_title; values=["title1", "title1"]; values array contains duplicates.  ' \
-                                  'Check source data and/or traject config for errors')
-          expect(DLME::Utils.logger).to have_received(:warn).with(a_string_matching(err_msg))
-        end
-      end
     end
 
     context 'when output hash has hash values for given fields' do
@@ -65,25 +51,6 @@ RSpec.describe Macros::EachRecord do
       it 'accumulates values in a hash with keys from source hash' do
         macro.call(nil, mock_context)
         expect(mock_context.output_hash).to eq('cho_title' => { 'en' => ['title1'] })
-      end
-
-      context 'when context has duplicate values' do
-        before do
-          mock_context.output_hash = { 'cho_title' => [{ language: 'en', values: ['title1', 'title1'] }] }
-          allow(DLME::Utils.logger).to receive(:warn)
-        end
-
-        it 'accumulates only the unique values in a hash with keys from source hash' do
-          macro.call(nil, mock_context)
-          expect(mock_context.output_hash).to eq('cho_title' => { 'en' => ['title1'] })
-        end
-
-        it 'logs a warning indicating that duplicate values were found' do
-          macro.call(nil, mock_context)
-          err_msg = Regexp.escape('each_record_spec.rb: key=cho_title; sub_values=["title1", "title1"]; sub_values array contains duplicates.  ' \
-                                  'Check source data and/or traject config for errors.')
-          expect(DLME::Utils.logger).to have_received(:warn).with(a_string_matching(err_msg))
-        end
       end
     end
 
