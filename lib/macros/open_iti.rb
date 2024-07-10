@@ -6,8 +6,8 @@ module Macros
   module OpenITI
     def object_description(config, script) # rubocop:disable Metrics/MethodLength
       lambda do |record, accumulator|
-        description = config['obj_descr_en'] if script == 'lat'
-        description = config['obj_descr_ar'] if script == 'ar'
+        description = config['obj_descr_en_html'] if script == 'lat'
+        description = config['obj_descr_ar_html'] if script == 'ar'
         values = {}
         values[:author_ar] = record.fetch('author_ar')
         values[:author_lat] = record.fetch('author_lat')
