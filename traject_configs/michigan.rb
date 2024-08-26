@@ -32,6 +32,9 @@ extend TrajectPlus::Macros
 # NOTE: most of the fields are populated via marc_config
 
 settings do
+  provide 'allow_duplicate_values', false
+  provide 'allow_nil_values', false
+  provide 'allow_empty_fields', false
   provide 'reader_class_name', 'MARC::XMLReader'
   provide 'marc_source.type', 'xml'
   provide 'writer_class_name', 'DlmeJsonResourceWriter'

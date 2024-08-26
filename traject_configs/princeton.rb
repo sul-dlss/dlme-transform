@@ -32,6 +32,9 @@ extend TrajectPlus::Macros
 extend TrajectPlus::Macros::JSON
 
 settings do
+  provide 'allow_duplicate_values', false
+  provide 'allow_nil_values', false
+  provide 'allow_empty_fields', false
   provide 'writer_class_name', 'DlmeJsonResourceWriter'
   provide 'reader_class_name', 'TrajectPlus::JsonReader'
 end
