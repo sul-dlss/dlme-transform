@@ -3,7 +3,6 @@
 require 'dlme_json_resource_writer'
 require 'dlme_debug_writer'
 require 'macros/collection'
-require 'macros/csv'
 require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
@@ -15,11 +14,11 @@ require 'macros/prepend'
 require 'macros/string_helper'
 require 'macros/timestamp'
 require 'macros/title_extraction'
+require 'macros/transformation'
 require 'macros/version'
 require 'traject_plus'
 
 extend Macros::Collection
-extend Macros::Csv
 extend Macros::DLME
 extend Macros::DateParsing
 extend Macros::EachRecord
@@ -31,54 +30,58 @@ extend Macros::Prepend
 extend Macros::StringHelper
 extend Macros::Timestamp
 extend Macros::TitleExtraction
+extend Macros::Transformation
 extend Macros::Version
 extend TrajectPlus::Macros
-extend TrajectPlus::Macros::Csv
+extend TrajectPlus::Macros::JSON
 
 settings do
   provide 'allow_duplicate_values', false
   provide 'allow_nil_values', false
   provide 'allow_empty_fields', false
   provide 'writer_class_name', 'DlmeJsonResourceWriter'
-  provide 'reader_class_name', 'TrajectPlus::CsvReader'
+  provide 'reader_class_name', 'TrajectPlus::JsonReader'
 end
 
 # Set Version & Timestamp on each record
 to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
 
-to_field 'agg_data_provider_collection', path_to_file, split('/'), at_index(2), gsub('_', '-'), prepend('bnf-'), translation_map('agg_collection_from_provider_id'), lang('en')
-to_field 'agg_data_provider_collection', path_to_file, split('/'), at_index(2), gsub('_', '-'), prepend('bnf-'), translation_map('agg_collection_from_provider_id'), translation_map('agg_collection_ar_from_en'), lang('ar-Arab')
-to_field 'agg_data_provider_collection_id', path_to_file, split('/'), at_index(2), gsub('_', '-'), prepend('bnf-')
+to_field 'agg_data_provider_collection', path_to_file, dlme_split('/'), at_index(2), dlme_gsub('_', '-'), dlme_prepend('bnf-'), translation_map('agg_collection_from_provider_id'), lang('en')
+to_field 'agg_data_provider_collection', path_to_file, dlme_split('/'), at_index(2), dlme_gsub('_', '-'), dlme_prepend('bnf-'), translation_map('agg_collection_from_provider_id'), translation_map('agg_collection_ar_from_en'), lang('ar-Arab')
+to_field 'agg_data_provider_collection_id', path_to_file, dlme_split('/'), at_index(2), dlme_gsub('_', '-'), dlme_prepend('bnf-')
+
+# File path
+to_field 'dlme_source_file', path_to_file
 
 # Cho Required
-to_field 'id', column('id'), strip, gsub('https://gallica.bnf.fr/', '')
-to_field 'cho_title', column('title'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
+to_field 'id', extract_json('.id'), dlme_strip, dlme_gsub('https://gallica.bnf.fr/', '')
+to_field 'cho_title', extract_json('.title'), flatten_array, dlme_strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
 
 # Required per data agreement
 to_field 'cho_provenance', literal('This document is part of BnF website \'Bibliothèques d\'Orient\' - http://heritage.bnf.fr/bibliothequesorient/'), lang('en')
 
 # Cho Other
-to_field 'cho_contributor', column('contributor'), parse_csv, strip, lang('und-Latn')
-to_field 'cho_creator', column('creator'), parse_csv, strip, lang('und-Latn')
-to_field 'cho_date', column('date'), parse_csv, strip, lang('en')
-to_field 'cho_date_range_norm', column('date'), parse_csv, strip, parse_range
-to_field 'cho_date_range_hijri', column('date'), parse_csv, strip, parse_range, hijri_range
-to_field 'cho_description', column('description'), parse_csv, split('/'), strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
-to_field 'cho_dc_rights', column('rights'), parse_csv, strip, lang('fr')
-to_field 'cho_dc_rights', column('rights'), parse_csv, strip, lang('en')
+to_field 'cho_contributor', extract_json('.contributor'), flatten_array, dlme_strip, lang('und-Latn')
+to_field 'cho_creator', extract_json('.creator'), flatten_array, dlme_strip, lang('und-Latn')
+to_field 'cho_date', extract_json('.date'), flatten_array, dlme_strip, lang('en')
+to_field 'cho_date_range_norm', extract_json('.date'), flatten_array, dlme_strip, parse_range
+to_field 'cho_date_range_hijri', extract_json('.date'), flatten_array, dlme_strip, parse_range, hijri_range
+to_field 'cho_description', extract_json('.description'), flatten_array, dlme_split('/'), dlme_strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
+to_field 'cho_dc_rights', extract_json('.rights'), flatten_array, dlme_strip, lang('fr')
+to_field 'cho_dc_rights', extract_json('.rights'), flatten_array, dlme_strip, lang('en')
 to_field 'cho_edm_type', literal('Text'), lang('en')
 to_field 'cho_edm_type', literal('Text'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_has_type', literal('Books'), lang('en')
 to_field 'cho_has_type', literal('Books'), translation_map('has_type_ar_from_en'), lang('ar-Arab')
-to_field 'cho_format', column('format'), parse_csv, strip, lang('fr')
-to_field 'cho_language', column('language'), parse_csv,  strip, split(','), normalize_language, lang('en')
-to_field 'cho_language', column('language'), parse_csv,  strip, split(','), normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
-to_field 'cho_publisher', column('publisher'), parse_csv, strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
-to_field 'cho_source', column('source'), parse_csv, strip, lang('fr')
-to_field 'cho_subject', column('subject'), parse_csv, strip, lang('und-Latn')
-to_field 'cho_relation', column('relation'), parse_csv, strip, lang('fr')
-to_field 'cho_type', column('type'), parse_csv, strip, lang('fr')
+to_field 'cho_format', extract_json('.format'), flatten_array, dlme_strip, lang('fr')
+to_field 'cho_language', extract_json('.language'), flatten_array,  dlme_strip, dlme_split(','), normalize_language, lang('en')
+to_field 'cho_language', extract_json('.language'), flatten_array,  dlme_strip, dlme_split(','), normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
+to_field 'cho_publisher', extract_json('.publisher'), flatten_array, dlme_strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
+to_field 'cho_source', extract_json('.source'), flatten_array, dlme_strip, lang('fr')
+to_field 'cho_subject', extract_json('.subject'), flatten_array, dlme_strip, lang('und-Latn')
+to_field 'cho_relation', extract_json('.relation'), flatten_array, dlme_strip, lang('fr')
+to_field 'cho_type', extract_json('.type'), flatten_array, dlme_strip, lang('fr')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
@@ -88,14 +91,14 @@ to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_id' => [column('id'), strip]
+    'wr_id' => [extract_json('.id'), dlme_strip]
   )
 end
 
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_id' => [column('thumbnail'), parse_csv, strip]
+    'wr_id' => [extract_json('.thumbnail'), dlme_strip]
   )
 end
 to_field 'agg_provider', provider, lang('en')

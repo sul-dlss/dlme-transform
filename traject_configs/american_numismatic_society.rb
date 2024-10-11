@@ -3,32 +3,34 @@
 require 'dlme_json_resource_writer'
 require 'dlme_debug_writer'
 require 'macros/collection'
-require 'macros/csv'
 require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
 require 'macros/path_to_file'
+require 'macros/prepend'
 require 'macros/timestamp'
+require 'macros/transformation'
 require 'macros/version'
 require 'traject_plus'
 
 extend Macros::Collection
-extend Macros::Csv
-extend Macros::DLME
 extend Macros::DateParsing
+extend Macros::DLME
 extend Macros::EachRecord
 extend Macros::PathToFile
+extend Macros::Prepend
 extend Macros::Timestamp
+extend Macros::Transformation
 extend Macros::Version
 extend TrajectPlus::Macros
-extend TrajectPlus::Macros::Csv
+extend TrajectPlus::Macros::JSON
 
 settings do
   provide 'allow_duplicate_values', false
   provide 'allow_nil_values', false
   provide 'allow_empty_fields', false
-  provide 'reader_class_name', 'TrajectPlus::CsvReader'
   provide 'writer_class_name', 'DlmeJsonResourceWriter'
+  provide 'reader_class_name', 'TrajectPlus::JsonReader'
 end
 
 # Set Version & Timestamp on each record
@@ -43,38 +45,38 @@ to_field 'agg_data_provider_collection_id', literal('ans')
 to_field 'dlme_source_file', path_to_file
 
 # CHO Required
-to_field 'id', normalize_prefixed_id('RecordId')
-to_field 'cho_title', column('Title'), strip, lang('en')
+to_field 'id', extract_json('.RecordId'), dlme_prepend('ans-')
+to_field 'cho_title', extract_json('.Title'), flatten_array, dlme_strip, lang('en')
 
 # CHO Other
-to_field 'cho_contributor', column('Maker'), split('||'), strip, prepend('Maker: '), lang('en')
-to_field 'cho_creator', column('Authority'), split('||'), strip, prepend('Authority: '), lang('en')
-to_field 'cho_date', column('Ah'), split('.'), first_only, strip, append(' AH'), lang('en')
+to_field 'cho_contributor', extract_json('.Maker'), flatten_array, dlme_split('||'), dlme_strip, dlme_prepend('Maker: '), lang('en')
+to_field 'cho_creator', extract_json('.Authority'), flatten_array, dlme_split('||'), dlme_strip, dlme_prepend('Authority: '), lang('en')
+to_field 'cho_date', extract_json('.Ah'), flatten_array, transform(&:to_s), dlme_split('.'), first_only, dlme_strip, dlme_append(' AH'), lang('en')
 to_field 'cho_date_range_norm', csv_or_json_date_range('From Date', 'To Date')
 to_field 'cho_date_range_hijri', csv_or_json_date_range('From Date', 'To Date'), hijri_range
 to_field 'cho_dc_rights', literal('Public Domain'), lang('en')
-to_field 'cho_description', column('Axis'), strip, prepend('Axis: '), lang('en')
-to_field 'cho_description', column('Denomination'), strip, prepend('Denomination: '), lang('en')
-to_field 'cho_description', column('Findspot'), strip, prepend('Findspot: '), lang('en')
-to_field 'cho_description', column('Obverse Legend'), strip, prepend('Obverse legend: '), lang('en')
-to_field 'cho_description', column('Obverse Type'), strip, prepend('Obverse type: '), lang('en')
-to_field 'cho_description', column('Reverse Legend'), strip, prepend('Reverse legend: '), lang('en')
-to_field 'cho_description', column('Reverse Type'), strip, prepend('Reverse type: '), lang('en')
+to_field 'cho_description', extract_json('.Axis'), flatten_array, transform(&:to_s), dlme_strip, dlme_prepend('Axis: '), lang('en')
+to_field 'cho_description', extract_json('.Denomination'), flatten_array, dlme_strip, dlme_prepend('Denomination: '), lang('en')
+to_field 'cho_description', extract_json('.Findspot'), flatten_array, dlme_strip, dlme_prepend('Findspot: '), lang('en')
+to_field 'cho_description', extract_json('.Obverse Legend'), flatten_array, dlme_strip, dlme_prepend('Obverse legend: '), lang('en')
+to_field 'cho_description', extract_json('.Obverse Type'), flatten_array, dlme_strip, dlme_prepend('Obverse type: '), lang('en')
+to_field 'cho_description', extract_json('.Reverse Legend'), flatten_array, dlme_strip, dlme_prepend('Reverse legend: '), lang('en')
+to_field 'cho_description', extract_json('.Reverse Type'), flatten_array, dlme_strip, dlme_prepend('Reverse type: '), lang('en')
 to_field 'cho_edm_type', literal('Object'), lang('en')
 to_field 'cho_edm_type', literal('Object'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
-to_field 'cho_extent', column('Diameter'), strip, prepend('Diameter: '), lang('en')
-to_field 'cho_extent', column('Weight'), strip, prepend('Weight: '), lang('en')
+to_field 'cho_extent', extract_json('.Diameter'), flatten_array, dlme_strip, dlme_prepend('Diameter: '), lang('en')
+to_field 'cho_extent', extract_json('.Weight'), flatten_array, dlme_strip, dlme_prepend('Weight: '), lang('en')
 to_field 'cho_has_type', literal('Coins'), lang('en')
 to_field 'cho_has_type', literal('Coins'), translation_map('has_type_ar_from_en'), lang('ar-Arab')
-to_field 'cho_identifier', column('URI')
-to_field 'cho_identifier', column('RecordId')
-to_field 'cho_medium', column('Material'), strip, lang('en')
-to_field 'cho_source', column('Reference'), strip, lang('en')
-to_field 'cho_spatial', column('Mint'), split('||'), strip, prepend('Mint: '), lang('en')
-to_field 'cho_spatial', column('Region'), split('||'), strip, prepend('Region: '), lang('en')
-to_field 'cho_spatial', column('State'), split('||'), strip, prepend('State: '), lang('en')
-to_field 'cho_temporal', column('Dynasty'), split('||'), strip, lang('en')
-to_field 'cho_type', column('Object Type'), strip, lang('en')
+to_field 'cho_identifier', extract_json('.URI'), flatten_array
+to_field 'cho_identifier', extract_json('.RecordId'), flatten_array
+to_field 'cho_medium', extract_json('.Material'), flatten_array, dlme_strip, lang('en')
+to_field 'cho_source', extract_json('.Reference'), flatten_array, dlme_strip, lang('en')
+to_field 'cho_spatial', extract_json('.Mint'), flatten_array, dlme_split('||'), dlme_strip, dlme_prepend('Mint: '), lang('en')
+to_field 'cho_spatial', extract_json('.Region'), flatten_array, dlme_split('||'), dlme_strip, dlme_prepend('Region: '), lang('en')
+to_field 'cho_spatial', extract_json('.State'), flatten_array, dlme_split('||'), dlme_strip, dlme_prepend('State: '), lang('en')
+to_field 'cho_temporal', extract_json('.Dynasty'), flatten_array, dlme_split('||'), dlme_strip, lang('en')
+to_field 'cho_type', extract_json('.Object Type'), flatten_array, dlme_strip, lang('en')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
@@ -85,12 +87,12 @@ to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_edm_rights', literal('https://creativecommons.org/share-your-work/public-domain/cc0/')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(context,
-                                  'wr_id' => [column('RecordId'), prepend('http://numismatics.org/collection/')],
+                                  'wr_id' => [extract_json('.RecordId'), dlme_prepend('http://numismatics.org/collection/')],
                                   'wr_dc_rights' => [literal('Public Domain')])
 end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(context,
-                                  'wr_id' => [column('Thumbnail_obv'), gsub('width175', 'width350')],
+                                  'wr_id' => [extract_json('.Thumbnail_obv'), dlme_gsub('width175', 'width350')],
                                   'wr_dc_rights' => [literal('Public Domain')])
 end
 to_field 'agg_provider', provider, lang('en')

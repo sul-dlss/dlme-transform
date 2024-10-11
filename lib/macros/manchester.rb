@@ -6,6 +6,8 @@ module Macros
     # Extract Manchester Solar Hijri range from string, ignoring month/day information.
     def manchester_solar_hijri_range
       lambda do |_record, accumulator|
+        return if accumulator.compact.empty?
+
         gregorian_val = []
         if accumulator.present?
           year_val = accumulator.first.split('-').first.split('(').last.delete(')')
