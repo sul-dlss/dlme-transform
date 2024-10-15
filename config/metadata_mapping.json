@@ -6,7 +6,7 @@
     "paths": [
       "aims"
     ],
-    "extension": ".csv",
+    "extension": ".json",
     "settings": {
       "agg_provider": "The American Institute for Maghrib Studies",
       "agg_provider_country": [
@@ -42,7 +42,7 @@
     "paths": [
       "american_numismatic_society"
     ],
-    "extension": ".csv",
+    "extension": ".json",
     "settings": {
       "agg_provider": "American Numismatic Society",
       "agg_provider_country": "United States of America",
@@ -147,7 +147,7 @@
     "paths": [
       "bnf"
     ],
-    "extension": ".csv",
+    "extension": ".json",
     "settings": {
       "agg_provider": "Bibliothèque nationale de France",
       "agg_provider_country": "France",
@@ -167,7 +167,7 @@
     "paths": [
       "bodleian"
     ],
-    "extension": ".csv",
+    "extension": ".json",
     "settings": {
       "agg_provider": "Bodleian Libraries",
       "agg_provider_country": "United Kingdom",
@@ -187,7 +187,7 @@
     "paths": [
       "brooklyn_museum"
     ],
-    "extension": ".csv",
+    "extension": ".json",
     "settings": {
       "agg_provider": "Brooklyn Museum",
       "agg_provider_country": "United States of America",
@@ -207,7 +207,7 @@
     "paths": [
       "cambridge/genizah"
     ],
-    "extension": ".csv",
+    "extension": ".json",
     "settings": {
       "agg_provider": "Cambridge University Library",
       "agg_provider_country": "United Kingdom",
@@ -227,7 +227,7 @@
     "paths": [
       "cambridge/hebrew"
     ],
-    "extension": ".csv",
+    "extension": ".json",
     "settings": {
       "agg_provider": "Cambridge University Library",
       "agg_provider_country": "United Kingdom",
@@ -247,7 +247,7 @@
     "paths": [
       "cambridge/islamic"
     ],
-    "extension": ".csv",
+    "extension": ".json",
     "settings": {
       "agg_provider": "Cambridge University Library",
       "agg_provider_country": "United Kingdom",
@@ -267,7 +267,7 @@
     "paths": [
       "csic"
     ],
-    "extension": ".csv",
+    "extension": ".json",
     "settings": {
       "agg_provider": "Consejo Superior de Investigaciones Científicas (CSIC)",
       "agg_provider_country": "Spain",
@@ -307,7 +307,7 @@
     "paths": [
       "harvard/islamic_heritage_project"
     ],
-    "extension": ".csv",
+    "extension": ".json",
     "settings": {
       "agg_provider": "Harvard University Library",
       "agg_provider_country": "United States of America",
@@ -342,32 +342,12 @@
   },
   {
     "trajects": [
-      "fgdc.rb"
-    ],
-    "paths": [
-      "harvard/maps"
-    ],
-    "extension": ".xml",
-    "settings": {
-      "agg_provider": "Harvard University Library",
-      "agg_provider_country": "United States of America",
-      "agg_data_provider": "Harvard University. Center for Geographic Analysis",
-      "agg_data_provider_country": "United States of America",
-      "agg_provider_ar": "مكتبة جامعة هارفارد",
-      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "agg_data_provider_ar": "جامعة هارفارد، مركز التحليل الجغرافي",
-      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "inst_id": "harvard"
-    }
-  },
-  {
-    "trajects": [
       "ifpo.rb"
     ],
     "paths": [
       "ifpo/photographs"
     ],
-    "extension": ".csv",
+    "extension": ".json",
     "settings": {
       "agg_provider": "Archives ouvertes de l’Institut français du Proche-Orient",
       "agg_provider_country": "Lebanon",
@@ -387,7 +367,7 @@
     "paths": [
       "koch"
     ],
-    "extension": ".csv",
+    "extension": ".json",
     "settings": {
       "agg_provider": "Koç University",
       "agg_provider_country": "Turkey",
@@ -427,7 +407,7 @@
     "paths": [
       "lebanese_american_university"
     ],
-    "extension": ".csv",
+    "extension": ".json",
     "settings": {
       "agg_provider": "Lebanese American University",
       "agg_provider_country": "Lebanon",
@@ -472,7 +452,7 @@
     "paths": [
       "manchester/nashriyah"
     ],
-    "extension": ".csv",
+    "extension": ".json",
     "settings": {
       "agg_provider": "University of Manchester Library",
       "agg_provider_country": "United Kingdom",
@@ -563,26 +543,6 @@
       "agg_data_provider_ar": "KITAB / OpenITI",
       "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
       "inst_id": "openiti"
-    }
-  },
-  {
-    "trajects": [
-      "palestine_posters_project_archive.rb"
-    ],
-    "paths": [
-      "palestine_posters_project_archive"
-    ],
-    "extension": ".csv",
-    "settings": {
-      "agg_provider": "Palestine Poster Project Archive",
-      "agg_provider_country": "United States of America",
-      "agg_data_provider": "Palestine Poster Project Archive",
-      "agg_data_provider_country": "United States of America",
-      "agg_provider_ar": "أرشيف ملصق فلسطين",
-      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "agg_data_provider_ar": "أرشيف ملصق فلسطين",
-      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "inst_id": "pppa"
     }
   },
   {
@@ -827,32 +787,12 @@
   },
   {
     "trajects": [
-      "penn_egyptian.rb"
+      "penn_museum.rb"
     ],
     "paths": [
-      "penn/egyptian_museum"
+      "penn_museum/"
     ],
-    "extension": ".csv",
-    "settings": {
-      "agg_provider": "Penn Museum",
-      "agg_provider_country": "United States of America",
-      "agg_data_provider": "Penn Museum",
-      "agg_data_provider_country": "United States of America",
-      "agg_provider_ar": "متحف بنسلفانيا",
-      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "agg_data_provider_ar": "متحف بنسلفانيا",
-      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "inst_id": "penn_museum"
-    }
-  },
-  {
-    "trajects": [
-      "penn_near_east.rb"
-    ],
-    "paths": [
-      "penn/near_eastern_museum"
-    ],
-    "extension": ".csv",
+    "extension": ".json",
     "settings": {
       "agg_provider": "Penn Museum",
       "agg_provider_country": "United States of America",
@@ -912,7 +852,7 @@
     "paths": [
       "sakip_sabanci_museum"
     ],
-    "extension": ".csv",
+    "extension": ".json",
     "settings": {
       "agg_provider": "Sakip Sabanci Museum",
       "agg_provider_country": "Turkey",
@@ -932,7 +872,7 @@
     "paths": [
       "shahre_farang"
     ],
-    "extension": ".csv",
+    "extension": ".json",
     "settings": {
       "agg_provider": "Shahre Farang",
       "agg_provider_country": "United States of America",
@@ -972,7 +912,7 @@
     "paths": [
       "texas_tech"
     ],
-    "extension": ".csv",
+    "extension": ".json",
     "settings": {
       "agg_provider": "Texas Tech University Libraries",
       "agg_provider_country": "United States of America",
@@ -1072,7 +1012,7 @@
     "paths": [
       "yale/babylonian"
     ],
-    "extension": ".csv",
+    "extension": ".json",
     "settings": {
       "agg_provider": "Yale Peabody Museum of Natural History",
       "agg_provider_country": "United States of America",

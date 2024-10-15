@@ -1,73 +1,79 @@
 # frozen_string_literal: true
 
-require 'traject_plus'
-require 'macros/csv'
-require 'dlme_json_resource_writer'
 require 'dlme_debug_writer'
+require 'dlme_json_resource_writer'
+require 'macros/collection'
 require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
 require 'macros/language_extraction'
+require 'macros/manchester'
 require 'macros/normalize_language'
 require 'macros/normalize_type'
 require 'macros/path_to_file'
+require 'macros/prepend'
 require 'macros/timestamp'
+require 'macros/transformation'
 require 'macros/version'
+require 'traject_plus'
 
-extend Macros::Csv
+extend Macros::Collection
 extend Macros::DateParsing
 extend Macros::DLME
 extend Macros::EachRecord
 extend Macros::LanguageExtraction
+extend Macros::Manchester
 extend Macros::NormalizeLanguage
 extend Macros::NormalizeType
 extend Macros::PathToFile
+extend Macros::Prepend
 extend Macros::Timestamp
+extend Macros::Transformation
 extend Macros::Version
 extend TrajectPlus::Macros
-extend TrajectPlus::Macros::Csv
+extend TrajectPlus::Macros::JSON
 
 settings do
   provide 'allow_duplicate_values', false
   provide 'allow_nil_values', false
   provide 'allow_empty_fields', false
-  provide 'reader_class_name', 'TrajectPlus::CsvReader'
   provide 'writer_class_name', 'DlmeJsonResourceWriter'
+  provide 'reader_class_name', 'TrajectPlus::JsonReader'
 end
-
-# File path
-to_field 'dlme_source_file', path_to_file
 
 # Set Version & Timestamp on each record
 to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
+
+# File path
+to_field 'dlme_source_file', path_to_file
 
 to_field 'agg_data_provider_collection', literal('texas-tech'), translation_map('agg_collection_from_provider_id'), lang('en')
 to_field 'agg_data_provider_collection', literal('texas-tech'), translation_map('agg_collection_from_provider_id'), translation_map('agg_collection_ar_from_en'), lang('ar-Arab')
 to_field 'agg_data_provider_collection_id', literal('texas-tech')
 
 # Cho Required
-to_field 'id', column('id')
-to_field 'cho_title', column('title'), lang('en')
+to_field 'id', extract_json('.id'), flatten_array, at_index(0)
+to_field 'cho_title', extract_json('.title'), flatten_array, lang('en')
 
 # Cho Other
-to_field 'cho_creator', column('creator'), parse_csv, lang('en')
-to_field 'cho_date', column('date'), parse_csv, at_index(-1), lang('en')
-to_field 'cho_date_range_hijri', column('date'), parse_csv, at_index(-1), parse_range, hijri_range
-to_field 'cho_date_range_norm', column('date'), parse_csv, at_index(-1), parse_range
-to_field 'cho_dc_rights', column('rights'), parse_csv, lang('en')
-to_field 'cho_description', column('description'), parse_csv, lang('en')
+to_field 'cho_creator', extract_json('.creator'), flatten_array, lang('en')
+to_field 'cho_date', extract_json('.date'), flatten_array, at_index(-1), lang('en')
+to_field 'cho_date_range_hijri', extract_json('.date'), flatten_array, at_index(-1), parse_range, hijri_range
+to_field 'cho_date_range_norm', extract_json('.date'), flatten_array, at_index(-1), parse_range
+to_field 'cho_dc_rights', extract_json('.rights'), flatten_array, lang('en')
+to_field 'cho_description', extract_json('.description'), flatten_array, lang('en')
 to_field 'cho_edm_type', literal('Text'), lang('en')
 to_field 'cho_edm_type', literal('Text'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
-to_field 'cho_format', column('format'), parse_csv, at_index(0), lang('en')
-to_field 'cho_format', column('format'), parse_csv, at_index(1), lang('en')
+to_field 'cho_format', extract_json('.format'), flatten_array, at_index(0), lang('en')
+to_field 'cho_format', extract_json('.format'), flatten_array, at_index(1), lang('en')
 to_field 'cho_has_type', literal('Other Texts'), lang('en')
 to_field 'cho_has_type', literal('Other Texts'), translation_map('has_type_ar_from_en'), lang('ar-Arab')
-to_field 'cho_language', column('language'), normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab') # Arabic value
-to_field 'cho_language', column('language'), normalize_language, lang('en') # English value
-to_field 'cho_publisher', column('publisher'), lang('en')
-to_field 'cho_subject', column('subject'), parse_csv, lang('en')
-to_field 'cho_type', column('type'), parse_csv, lang('en')
+to_field 'cho_language', extract_json('.language'), flatten_array, normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab') # Arabic value
+to_field 'cho_language', extract_json('.language'), flatten_array, normalize_language, lang('en') # English value
+to_field 'cho_publisher', extract_json('.publisher'), flatten_array, lang('en')
+to_field 'cho_subject', extract_json('.subject'), flatten_array, lang('en')
+to_field 'cho_type', extract_json('.type'), flatten_array, lang('en')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
@@ -77,9 +83,9 @@ to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_dc_rights' => [column('rights'), strip],
+    'wr_dc_rights' => [extract_json('.rights'), flatten_array, dlme_strip],
     'wr_format' => [literal('pdf')],
-    'wr_id' => [column('identifier'), strip]
+    'wr_id' => [extract_json('.identifier'), flatten_array, dlme_strip]
   )
 end
 to_field 'agg_provider', provider, lang('en')
