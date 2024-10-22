@@ -11,6 +11,26 @@ RSpec.describe Macros::Transformation do
   end
   let(:instance) { klass.new }
 
+  describe '#dlme_default' do
+    context 'when accumulator has a value' do
+      let(:output) { ['value'] }
+
+      it 'does nothing' do
+        callable = instance.dlme_default('default')
+        expect(callable.call(nil, output)).to be_nil
+      end
+    end
+
+    context 'when accumulator empty' do
+      let(:output) { [] }
+
+      it 'adds the default value' do
+        callable = instance.dlme_default('default')
+        expect(callable.call(nil, output)).to eq(['default'])
+      end
+    end
+  end
+
   describe '#dlme_gsub' do
     context 'when pattern in string' do
       let(:output) { ['http://value'] }

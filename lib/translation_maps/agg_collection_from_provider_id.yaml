@@ -58,8 +58,8 @@ bodleian-exploring-egypt: Exploring Egypt (Bodleian)
 bodleian-hebrew: Hebrew Manuscripts at the Bodleian
 bodleian-persian: Persian Manuscripts at the Bodleian
 bodleian-turkish: Turkish Manuscripts at the Bodleian
-brooklyn-museum-arts-of-the-islamic-world: Arts of the Islamic World (Brooklyn Museum)
-brooklyn-museum-egyptian: Egyptian, Classical, Ancient Near Eastern Art (Brooklyn Museum)
+brooklyn-arts-islamic-world: Arts of the Islamic World (Brooklyn Museum)
+brooklyn-near-east-egyptian: Egyptian, Classical, Ancient Near Eastern Art (Brooklyn Museum)
 cambridge-genizah: Cairo Genizah (Cambridge)
 cambridge-hebrew: Hebrew Manuscripts at Cambridge
 cambridge-islamic: Islamic Manuscripts at Cambridge
@@ -70,6 +70,9 @@ gertrude-bell-archive: Gertrude Bell Archive (Newcastle University)
 harvard-ihp: Islamic Heritage Project (Harvard)
 harvard-scw: The Stuart Cary Welch Islamic and South Asian Photograph Collection
 ifpo-photographs: IFPO Images
+koch-manuscripts: Manuscripts (Koç University)
+lau-lebanese-painters: Lebanese Painters (LAU)
+lau-ottoman-embroidery: Ottoman Embroidery (LAU)
 lausanne-ias: Tiresias (Lausanne)
 loc-abdul-hamid-books: Abdu'l-Hamid II Books (LOC)
 loc-abdul-hamid-photos: Abdu'l-Hamid II Photographs (LOC)
@@ -93,8 +96,9 @@ openn-mmw-23: Islamic Manuscripts (Free Library of Philadelphia)
 openn-mmw-31: Islamic Manuscripts (Philadelphia Museum of Art)
 openn-mmw-32-and-33: Islamic Manuscripts (Columbia)
 openn-mmw-43: Islamic Manuscripts (American Philosophical Society)
-penn-egyptian: Egyptian Museum (Penn)
-penn-near-east: Near Eastern Museum (Penn)
+penn-museum-babylonian: Babylonian Museum (Penn)
+penn-museum-egyptian: Egyptian Museum (Penn)
+penn-museum-near-east: Near Eastern Museum (Penn)
 pppa: Palestine Poster Archive
 princeton-mss: Islamic Manuscripts (Princeton)
 princeton-posters: Arabic Movie Posters (Princeton)
@@ -102,8 +106,8 @@ qnl: Gulf Records (British Library)
 shahre-farang: Shahre Farang
 ssm-abidindino: Abidin Dino Archive at Sakıp Sabancı Museum
 ssm-emirgan: Emirgan Archive at Sakıp Sabancı Museum
-ssm-kitapvehat: The Arts of the Book and Calligraphy at Sakıp Sabancı Museum
-ssm-resimklksyn: Painting Collection at Sakıp Sabancı Museum
+ssm-kitap-vehat: The Arts of the Book and Calligraphy at Sakıp Sabancı Museum
+ssm-resim-klksyn: Painting Collection at Sakıp Sabancı Museum
 stanford-maps: David Rumsey Map Collectoion (Stanford)
 texas-tech: Turkish Oral Narrative (Texas Tech)
 ucla-arab-image-foundation: Arab Image Foundation Photo Negatives (UCLA)

@@ -1,9 +1,8 @@
 # frozen_string_literal: true
 
-require 'dlme_json_resource_writer'
 require 'dlme_debug_writer'
+require 'dlme_json_resource_writer'
 require 'macros/collection'
-require 'macros/csv'
 require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
@@ -12,35 +11,32 @@ require 'macros/normalize_language'
 require 'macros/normalize_type'
 require 'macros/path_to_file'
 require 'macros/prepend'
-require 'macros/string_helper'
 require 'macros/timestamp'
-require 'macros/title_extraction'
+require 'macros/transformation'
 require 'macros/version'
 require 'traject_plus'
 
 extend Macros::Collection
-extend Macros::Csv
-extend Macros::DLME
 extend Macros::DateParsing
+extend Macros::DLME
 extend Macros::EachRecord
 extend Macros::LanguageExtraction
 extend Macros::NormalizeLanguage
 extend Macros::NormalizeType
 extend Macros::PathToFile
 extend Macros::Prepend
-extend Macros::StringHelper
 extend Macros::Timestamp
-extend Macros::TitleExtraction
+extend Macros::Transformation
 extend Macros::Version
 extend TrajectPlus::Macros
-extend TrajectPlus::Macros::Csv
+extend TrajectPlus::Macros::JSON
 
 settings do
   provide 'allow_duplicate_values', false
   provide 'allow_nil_values', false
   provide 'allow_empty_fields', false
   provide 'writer_class_name', 'DlmeJsonResourceWriter'
-  provide 'reader_class_name', 'TrajectPlus::CsvReader'
+  provide 'reader_class_name', 'TrajectPlus::JsonReader'
 end
 
 # Set Version & Timestamp on each record
@@ -55,23 +51,23 @@ to_field 'agg_data_provider_collection', literal('shahre-farang'), translation_m
 to_field 'agg_data_provider_collection_id', literal('shahre-farang')
 
 # Cho Required
-to_field 'id', column('id'), parse_csv, strip, gsub('http://shahrefarang.com/', 'shahre-farang-'), gsub('?p=', ''), gsub('/', ''), append('fa')
-to_field 'cho_title', column('title'), parse_csv, strip, arabic_script_lang_or_default('und-Arab', 'en')
+to_field 'id', extract_json('.id'), flatten_array, dlme_strip, dlme_gsub('http://shahrefarang.com/', 'shahre-farang-'), dlme_gsub('?p=', ''), dlme_gsub('/', ''), append('fa')
+to_field 'cho_title', extract_json('.title'), flatten_array, dlme_strip, arabic_script_lang_or_default('und-Arab', 'en')
 
 # Cho Other
-to_field 'cho_creator', column('creator'), parse_csv, strip, arabic_script_lang_or_default('und-Arab', 'en')
-to_field 'cho_date', column('date'), parse_csv, strip, arabic_script_lang_or_default('und-Arab', 'en')
-to_field 'cho_date_range_norm', column('date'), parse_csv, strip, parse_range
-to_field 'cho_date_range_hijri', column('date'), parse_csv, strip, parse_range, hijri_range
-to_field 'cho_description', column('description'), parse_csv, strip, arabic_script_lang_or_default('und-Arab', 'en')
+to_field 'cho_creator', extract_json('.creator'), flatten_array, dlme_strip, arabic_script_lang_or_default('und-Arab', 'en')
+to_field 'cho_date', extract_json('.date'), flatten_array, dlme_strip, arabic_script_lang_or_default('und-Arab', 'en')
+to_field 'cho_date_range_norm', extract_json('.date'), flatten_array, dlme_strip, parse_range
+to_field 'cho_date_range_hijri', extract_json('.date'), flatten_array, dlme_strip, parse_range, hijri_range
+to_field 'cho_description', extract_json('.description'), flatten_array, dlme_strip, arabic_script_lang_or_default('und-Arab', 'en')
 to_field 'cho_edm_type', literal('Text'), lang('en')
 to_field 'cho_edm_type', literal('Text'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_has_type', literal('Other Texts'), lang('en')
 to_field 'cho_has_type', literal('Other Texts'), translation_map('has_type_ar_from_en'), lang('ar-Arab')
-to_field 'cho_identifier', column('id'), parse_csv, strip
-to_field 'cho_language', path_to_file, split('/'), at_index(2), gsub('_', '-'), normalize_language, lang('en')
-to_field 'cho_language', path_to_file, split('/'), at_index(2), gsub('_', '-'), normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
-to_field 'cho_subject', column('category'), parse_csv, strip, arabic_script_lang_or_default('und-Arab', 'en')
+to_field 'cho_identifier', extract_json('.id'), flatten_array, dlme_strip
+to_field 'cho_language', path_to_file, split('/'), at_index(2), dlme_gsub('_', '-'), normalize_language, lang('en')
+to_field 'cho_language', path_to_file, split('/'), at_index(2), dlme_gsub('_', '-'), normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
+to_field 'cho_subject', extract_json('.category'), flatten_array, dlme_strip, arabic_script_lang_or_default('und-Arab', 'en')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
@@ -81,14 +77,14 @@ to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_id' => [column('link'), strip],
+    'wr_id' => [extract_json('.link'), dlme_strip],
     'wr_dc_rights' => [literal('© 2011-2020 شهرفرنگ - ShahreFarang')]
   )
 end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_id' => [column('preview'), strip],
+    'wr_id' => [extract_json('.preview'), dlme_strip],
     'wr_dc_rights' => [literal('© 2011-2020 شهرفرنگ - ShahreFarang')]
   )
 end

@@ -3,6 +3,29 @@
 module Macros
   # Split helpers for traject mappings
   module Transformation
+    # Append argument to end of each value in accumulator.
+    def dlme_append(suffix)
+      lambda do |_rec, acc|
+        return if acc.compact.empty?
+
+        acc.collect! { |v| v + suffix }
+      end
+    end
+
+    # Adds a literal to accumulator if accumulator was empty
+    #
+    # @example
+    #      to_field "title", extract_marc("245abc"), default("Unknown Title")
+    # rubocop:disable Style/IfUnlessModifier
+    def dlme_default(default_value)
+      lambda do |_rec, acc|
+        if acc.all?(&:blank?)
+          acc << default_value
+        end
+      end
+    end
+    # rubocop:enable Style/IfUnlessModifier
+
     # Run ruby `gsub` on each value in accumulator, with pattern and replace value given.
     def dlme_gsub(pattern, replace)
       lambda do |_rec, acc|
@@ -39,5 +62,46 @@ module Macros
         end
       end
     end
+
+    # Pass in a proc/lambda arg or a block (or both), that will be called on each
+    # value already in the accumulator, to transform it. (Ie, with `#map!`/`#collect!` on your proc(s)).
+    #
+    # Due to how ruby syntax precedence works, the block form is probably not too useful
+    # in traject config files, except with the `&:` trick.
+    #
+    # The "stabby lambda" may be convenient for passing an explicit proc argument.
+    #
+    # You can pass both an explicit proc arg and a block, in which case the proc arg
+    # will be applied first.
+    #
+    # @example
+    #    to_field("something"), extract_marc("something"), transform(&:upcase)
+    #
+    # @example
+    #    to_field("something"), extract_marc("something"), transform(->(val) { val.tr('^a-z', "\uFFFD") })
+    # rubocop:disable Metrics, Style, Layout, Performance, Lint
+    def dlme_transform(a_proc=nil, &block)
+      unless a_proc || block
+        raise ArgumentError, "Needs a transform proc arg or block arg"
+      end
+
+      transformer_callable = if a_proc && block
+        # need to make a combo wrapper.
+        ->(val) { block.call(a_proc.call(val)) }
+      elsif a_proc
+        a_proc
+      else
+        block
+      end
+
+      lambda do |rec, acc|
+        return if acc.compact.empty?
+
+        acc.collect! do |value|
+          transformer_callable.call(value)
+        end
+      end
+    end
+    # rubocop:enable Metrics, Style, Layout, Performance, Lint
   end
 end

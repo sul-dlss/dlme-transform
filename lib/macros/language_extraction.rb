@@ -89,14 +89,14 @@ module Macros
     # rubocop:disable Metrics/PerceivedComplexity, Metrics/CyclomaticComplexity, Metrics/AbcSize, Metrics/MethodLength
     def hebrew_script_lang_or_default(hebrew_script_lang, default)
       lambda do |_record, accumulator|
-        if accumulator
-          he_values = []
-          default_values = []
-          accumulator.each do |val|
-            lang_code = val.match?(/[תשרקץצףפעסןנםמלךכיטחזוהדגבא]/) ? hebrew_script_lang : default
-            he_values << val if lang_code == hebrew_script_lang
-            default_values << val if lang_code == default
-          end
+        return if accumulator.compact.blank?
+
+        he_values = []
+        default_values = []
+        accumulator.each do |val|
+          lang_code = val.match?(/[תשרקץצףפעסןנםמלךכיטחזוהדגבא]/) ? hebrew_script_lang : default
+          he_values << val if lang_code == hebrew_script_lang
+          default_values << val if lang_code == default
         end
         if he_values.present? && default_values.present?
           accumulator.replace([{ language: hebrew_script_lang, values: he_values }])
