@@ -1,11 +1,11 @@
-FROM ruby:3.0-alpine
+FROM ruby:3.2-alpine
 
 # Create and set the working directory as /opt
 RUN mkdir -p /opt/traject/output
 
 WORKDIR /opt/traject
 
-ENV BUNDLER_VERSION 2.0.2
+ENV BUNDLER_VERSION 2.5.22
 
 RUN apk add --no-cache \
     curl \
@@ -20,7 +20,6 @@ RUN apk add --no-cache \
     && apk add --no-cache --virtual python-dependencies \
     py-pip \
     python3-dev \
-    && pip install awscli \
     && apk del python-dependencies \
     && gem install bundler
 
