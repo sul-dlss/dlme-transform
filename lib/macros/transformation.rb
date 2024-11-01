@@ -54,7 +54,8 @@ module Macros
     #     to_field "title", extract_marc("245"), strip
     def dlme_strip
       lambda do |_rec, acc|
-        return if acc.compact.empty?
+        acc.compact! # remove any nils
+        return if acc.empty?
 
         acc.collect! do |v|
           # unicode whitespace class aware
