@@ -9,7 +9,7 @@ module Macros
     # @return [Proc] a proc that traject can call for each record
     def path_to_file
       lambda do |_, accumulator, context|
-        accumulator << File.join(Pathname(context.input_name)).gsub('/opt/airflow/working', '')
+        accumulator << File.join(Pathname(context.input_name)).gsub('/opt/airflow/working', '').gsub('//', '/')
       end
     end
   end
