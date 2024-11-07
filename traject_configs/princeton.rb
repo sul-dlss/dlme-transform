@@ -50,9 +50,9 @@ to_field 'transform_timestamp', timestamp
 # File path
 to_field 'dlme_source_file', path_to_file
 
-to_field 'agg_data_provider_collection', path_to_file, dlme_split('/'), at_index(4), dlme_gsub('_', '-'), dlme_prepend('princeton-'), translation_map('agg_collection_from_provider_id'), lang('en')
-to_field 'agg_data_provider_collection', path_to_file, dlme_split('/'), at_index(4), dlme_gsub('_', '-'), dlme_prepend('princeton-'), translation_map('agg_collection_from_provider_id'), translation_map('agg_collection_ar_from_en'), lang('ar-Arab')
-to_field 'agg_data_provider_collection_id', path_to_file, dlme_split('/'), at_index(4), dlme_gsub('_', '-'), dlme_prepend('princeton-')
+to_field 'agg_data_provider_collection', path_to_file, dlme_split('/'), at_index(2), dlme_gsub('_', '-'), dlme_prepend('princeton-'), translation_map('agg_collection_from_provider_id'), lang('en')
+to_field 'agg_data_provider_collection', path_to_file, dlme_split('/'), at_index(2), dlme_gsub('_', '-'), dlme_prepend('princeton-'), translation_map('agg_collection_from_provider_id'), translation_map('agg_collection_ar_from_en'), lang('ar-Arab')
+to_field 'agg_data_provider_collection_id', path_to_file, dlme_split('/'), at_index(2), dlme_gsub('_', '-'), dlme_prepend('princeton-')
 
 # Cho Required
 to_field 'id', extract_json('.id'), flatten_array, dlme_split('/'), at_index(-2), dlme_strip
