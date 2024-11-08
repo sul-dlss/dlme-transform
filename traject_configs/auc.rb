@@ -55,7 +55,7 @@ to_field 'agg_data_provider_collection', path_to_file, dlme_split('/'), at_index
 to_field 'agg_data_provider_collection_id', path_to_file, dlme_split('/'), at_index(2), dlme_gsub('_', '-'), dlme_prepend('auc-')
 
 # File path
-to_field 'dlme_source_file', path_to_file, dlme_split('/'), at_index(3)
+to_field 'dlme_source_file', path_to_file
 
 # Cho Required
 to_field 'id', extract_json('..id'), dlme_gsub('/manifest.json', ''), dlme_gsub('https://cdm15795.contentdm.oclc.org/iiif/', '')
