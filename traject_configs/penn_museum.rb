@@ -53,7 +53,7 @@ to_field 'agg_data_provider_collection_id', path_to_file, dlme_split('/'), at_in
 to_field 'dlme_source_file', path_to_file
 
 # CHO Required
-to_field 'id', extract_json('emuIRN'), flatten_array, transform(&:to_s), dlme_prepend('penn-egyptian-')
+to_field 'id', extract_json('emuIRN'), flatten_array, transform(&:to_s), dlme_prepend('penn-museum-')
 to_field 'cho_title', extract_json('.object_name'), flatten_array, dlme_default('Untitled'), dlme_split('|'), lang('en')
 
 # CHO Other
