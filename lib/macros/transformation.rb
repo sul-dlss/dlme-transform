@@ -16,15 +16,11 @@ module Macros
     #
     # @example
     #      to_field "title", extract_marc("245abc"), default("Unknown Title")
-    # rubocop:disable Style/IfUnlessModifier
     def dlme_default(default_value)
       lambda do |_rec, acc|
-        if acc.all?(&:blank?)
-          acc << default_value
-        end
+        acc << default_value if acc.all?(&:blank?)
       end
     end
-    # rubocop:enable Style/IfUnlessModifier
 
     # Run ruby `gsub` on each value in accumulator, with pattern and replace value given.
     def dlme_gsub(pattern, replace)
@@ -80,22 +76,19 @@ module Macros
     #
     # @example
     #    to_field("something"), extract_marc("something"), transform(->(val) { val.tr('^a-z', "\uFFFD") })
-    # rubocop:disable Metrics, Style, Layout, Performance, Lint
-    def dlme_transform(a_proc=nil, &block)
-      unless a_proc || block
-        raise ArgumentError, "Needs a transform proc arg or block arg"
-      end
+    def dlme_transform(a_proc = nil, &block) # rubocop:disable Metrics/PerceivedComplexity, Metrics/CyclomaticComplexity, Metrics/MethodLength
+      raise ArgumentError, 'Needs a transform proc arg or block arg' unless a_proc || block
 
       transformer_callable = if a_proc && block
-        # need to make a combo wrapper.
-        ->(val) { block.call(a_proc.call(val)) }
-      elsif a_proc
-        a_proc
-      else
-        block
-      end
+                               # need to make a combo wrapper.
+                               ->(val) { yield a_proc.call(val) }
+                             elsif a_proc
+                               a_proc
+                             else
+                               block
+                             end
 
-      lambda do |rec, acc|
+      lambda do |_rec, acc|
         return if acc.compact.empty?
 
         acc.collect! do |value|
@@ -103,6 +96,5 @@ module Macros
         end
       end
     end
-    # rubocop:enable Metrics, Style, Layout, Performance, Lint
   end
 end
