@@ -87,7 +87,7 @@ to_field 'cho_is_part_of', extract_json('..collection'), flatten_array, arabic_s
 to_field 'cho_language', extract_json('..language'), flatten_array, dlme_split(';'), dlme_split(':'), dlme_split(','), dlme_split('/'), dlme_split(' & '), dlme_split(' and '), dlme_split(' , and '), dlme_gsub('\\r', ''), dlme_gsub('\\n', ''), dlme_gsub('\r', ''), dlme_gsub('\n', ''), dlme_gsub('.', ''), dlme_strip, normalize_language, lang('en')
 to_field 'cho_language', extract_json('..language'), flatten_array, dlme_split(';'), dlme_split(':'), dlme_split(','), dlme_split('/'), dlme_split(' & '), dlme_split(' and '), dlme_split(' , and '), dlme_gsub('\\r', ''), dlme_gsub('\\n', ''), dlme_gsub('\r', ''), dlme_gsub('\n', ''), dlme_gsub('.', ''), dlme_strip, normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
 to_field 'cho_project_type', literal('issue'), lang('en')
-to_field 'cho_publisher', extract_json('..publisher'), flatten_array, translation_map('lang_ar_from_en'), lang('ar-Arab')
+to_field 'cho_publisher', extract_json('..publisher'), flatten_array, lang('ar-Arab')
 to_field 'cho_spatial', extract_json('..location'), flatten_array, dlme_split(';'), arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_subject', extract_json('..subject'), flatten_array, dlme_split(';'), unique, arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_type', extract_json('..genre'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en')
