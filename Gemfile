@@ -9,10 +9,10 @@ gem 'csv'
 gem 'dry-validation'
 gem 'faraday'
 gem 'faraday_middleware'
-gem 'ffi', '~> 1.16.3' # pin until 1.17.x is less platform dependent
+gem 'ffi'
 gem 'parse_date'
 gem 'rake'
-gem 'thor', '~> 0.20' # for CLI
+gem 'thor' # for CLI
 gem 'traject_plus', '~> 1.3'
 gem 'webmock'
 
