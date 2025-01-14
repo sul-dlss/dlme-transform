@@ -89,7 +89,7 @@ to_field 'cho_identifier', extract_json('.envanter-numarası-accession-number'),
 to_field 'cho_identifier', extract_json('.envanter-numarası-identifier'), flatten_array, dlme_strip
 to_field 'cho_language', extract_json('.dil-language'), flatten_array, dlme_split(';'), dlme_strip, normalize_language, lang('en')
 to_field 'cho_publisher', extract_json('.yayıncı-publisher'), flatten_array, lang('en')
-to_field 'cho_related', extract_json('.ayrıca-bakınız-see-also'), flatten_array, lang('en')
+to_field 'cho_relation', extract_json('.ayrıca-bakınız-see-also'), flatten_array, lang('en')
 to_field 'cho_temporal', extract_json('.dönem-object/work-culture'), flatten_array, lang('tr-Latn')
 to_field 'cho_type', extract_json('.tür-type'), flatten_array, lang('tr-Latn')
 

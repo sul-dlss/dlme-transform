@@ -35,6 +35,7 @@ acceptable_bcp47_codes:
   - und-Latn
   - ur-Arab
   - ur-Latn
+  - de
 acceptable_edm_type_values:
   - Dataset
   - Image
@@ -87,7 +88,7 @@ acceptable_has_type_values:
   - Text Reuse Data
   - Tools & Equipment
   - Weights & Measures
-  - Writing Accessories  
+  - Writing Accessories
 defaults:
   base_data_dir: 'data'
   data_dir: ''

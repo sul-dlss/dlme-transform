@@ -107,7 +107,7 @@ to_field 'cho_medium', extract_json('.materials'), flatten_array, dlme_strip, la
 to_field 'cho_publisher', extract_json('.publisher'), flatten_array, dlme_strip, lang('en')
 to_field 'cho_provenance', extract_json('.former-owner'), flatten_array, dlme_strip, dlme_prepend('Former owner: '), lang('en')
 to_field 'cho_provenance', extract_json('.provenance'), flatten_array, dlme_strip, lang('en')
-to_field 'cho_related', extract_json('.related-items'), flatten_array, dlme_strip, lang('en')
+to_field 'cho_relation', extract_json('.related-items'), flatten_array, dlme_strip, lang('en')
 to_field 'cho_spatial', extract_json('.place-of-origin'), flatten_array, dlme_strip, lang('en')
 to_field 'cho_subject', extract_json('.subject'), flatten_array, dlme_strip, lang('en')
 

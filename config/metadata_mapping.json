@@ -302,6 +302,26 @@
   },
   {
     "trajects": [
+      "gottingen.rb"
+    ],
+    "paths": [
+      "gottingen"
+    ],
+    "extension": ".json",
+    "settings": {
+      "agg_provider": "University of Göttingen",
+      "agg_provider_country": "Germany",
+      "agg_data_provider": "University of Göttingen",
+      "agg_data_provider_country": "Germany",
+      "agg_provider_ar": "جامعة جوتنجن",
+      "agg_provider_country_ar": "ألمانيا",
+      "agg_data_provider_ar": "جامعة جوتنجن",
+      "agg_data_provider_country_ar": "ألمانيا",
+      "inst_id": "gottingen"
+    }
+  },
+  {
+    "trajects": [
       "harvard_islamic_heritage_project.rb"
     ],
     "paths": [
@@ -443,6 +463,26 @@
       "agg_data_provider_ar": "مكتبة الكونغرس",
       "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
       "inst_id": "loc"
+    }
+  },
+  {
+    "trajects": [
+      "leiden.rb"
+    ],
+    "paths": [
+      "leiden"
+    ],
+    "extension": ".json",
+    "settings": {
+      "agg_provider": "Leiden University",
+      "agg_provider_country": "Netherlands",
+      "agg_data_provider": "Leiden University",
+      "agg_data_provider_country": "Netherlands",
+      "agg_provider_ar": "جامعة ليدن",
+      "agg_provider_country_ar": "هولندا",
+      "agg_data_provider_ar": "جامعة ليدن",
+      "agg_data_provider_country_ar": "هولندا",
+      "inst_id": "leiden"
     }
   },
   {
