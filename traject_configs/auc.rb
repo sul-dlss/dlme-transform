@@ -50,9 +50,9 @@ end
 to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
 
-to_field 'agg_data_provider_collection', path_to_file, dlme_split('/'), at_index(2), dlme_gsub('_', '-'), dlme_prepend('auc-'), translation_map('agg_collection_from_provider_id'), lang('en')
-to_field 'agg_data_provider_collection', path_to_file, dlme_split('/'), at_index(2), dlme_gsub('_', '-'), dlme_prepend('auc-'), translation_map('agg_collection_from_provider_id'), translation_map('agg_collection_ar_from_en'), lang('ar-Arab')
-to_field 'agg_data_provider_collection_id', path_to_file, dlme_split('/'), at_index(2), dlme_gsub('_', '-'), dlme_prepend('auc-')
+to_field 'agg_data_provider_collection', path_to_file, dlme_split('/'), at_index(3), dlme_gsub('_', '-'), dlme_prepend('auc-'), translation_map('agg_collection_from_provider_id'), lang('en')
+to_field 'agg_data_provider_collection', path_to_file, dlme_split('/'), at_index(3), dlme_gsub('_', '-'), dlme_prepend('auc-'), translation_map('agg_collection_from_provider_id'), translation_map('agg_collection_ar_from_en'), lang('ar-Arab')
+to_field 'agg_data_provider_collection_id', path_to_file, dlme_split('/'), at_index(3), dlme_gsub('_', '-'), dlme_prepend('auc-')
 
 # File path
 to_field 'dlme_source_file', path_to_file
@@ -62,6 +62,8 @@ to_field 'id', extract_json('..id'), dlme_gsub('/manifest.json', ''), dlme_gsub(
 to_field 'cho_title', extract_json('..title'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_title', extract_json('..title-arabic'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_title', extract_json('..title-english'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_title', extract_json('..title-arabic-العنوان'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_title', extract_json('..title-transliteration'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en')
 
 # Cho Other
 to_field 'cho_alternative', extract_json('..alternative-title'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en')
@@ -76,8 +78,10 @@ to_field 'cho_creator', extract_json('..artist'), flatten_array, arabic_script_l
 to_field 'cho_creator', extract_json('..author'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en'), intelligent_prepend('Author: ', 'مؤلف: ')
 to_field 'cho_creator', extract_json('..creator'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_creator', extract_json('..creator-arabic'), flatten_array, lang('ar-Arab')
+to_field 'cho_creator', extract_json('..creator-arabic-alternative'), flatten_array, lang('ar-Arab')
 to_field 'cho_creator', extract_json('..creator-alternative'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_creator', extract_json('..creator-english'), flatten_array, lang('en')
+to_field 'cho_creator', extract_json('..creator-english-alternative'), flatten_array, lang('en')
 to_field 'cho_creator', extract_json('..photographer'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en'), intelligent_prepend('Photographer: ', 'مصور فوتوغرافي: ')
 to_field 'cho_date', extract_json('..date'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_date_range_hijri', extract_json('..date'), flatten_array, auc_date_range, hijri_range
@@ -92,12 +96,13 @@ to_field 'cho_dc_rights', extract_json('..license'), flatten_array, arabic_scrip
 to_field 'cho_dc_rights', extract_json('..access-rights'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_dc_rights', extract_json('..rights'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_description', extract_json('..architectural-detail'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en'), intelligent_prepend('Architectural detail: ', 'التفاصيل المعمارية: ')
+to_field 'cho_description', extract_json('..architectural-detail-arabic'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en'), intelligent_prepend('Architectural detail: ', 'التفاصيل المعمارية: ')
+to_field 'cho_description', extract_json('..architectural-detail-english'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en'), intelligent_prepend('Architectural detail: ', 'التفاصيل المعمارية: ')
 to_field 'cho_description', extract_json('..dimensions-of-original'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en'), intelligent_prepend('Dimensions of original: ', 'أبعاد الأصل: ')
 to_field 'cho_description', extract_json('..dimensions-of-printed-material'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en'), intelligent_prepend('Dimensions of print: ', 'تقنية: ')
 to_field 'cho_description', extract_json('..description'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_description', extract_json('..description-arabic'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_description', extract_json('..description-english'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en')
-to_field 'cho_description', extract_json('..note'), flatten_array, dlme_prepend('Note: '), arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_description', extract_json('..photo-term'), flatten_array, dlme_prepend('Photo type: '), arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_description', extract_json('..printed-material'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_description', extract_json('..scale'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en'), intelligent_prepend('Scale: ', 'حصة تموينية: ')
@@ -119,6 +124,7 @@ to_field 'cho_edm_type', path_to_file, dlme_split('/'), at_index(2), dlme_gsub('
 to_field 'cho_edm_type', path_to_file, dlme_split('/'), at_index(2), dlme_gsub('_', '-'), dlme_prepend('auc-'), translation_map('edm_type_from_collection'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_extent', extract_json('..extent'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_extent', extract_json('..size-in-cm'), flatten_array, dlme_prepend('Size in cm: '), arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_extent', extract_json('..extent-in-cm'), flatten_array, dlme_prepend('Size in cm: '), arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_format', extract_json('..format'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en')
 # Using collection identifier to map to has type since type values are vague
 to_field 'cho_has_type', path_to_file, dlme_split('/'), at_index(2), dlme_gsub('_', '-'), dlme_prepend('auc-'), normalize_has_type, lang('en')
@@ -138,6 +144,7 @@ to_field 'cho_identifier', extract_json('..identifier'), flatten_array
 to_field 'cho_identifier', extract_json('..object-identifier'), flatten_array
 to_field 'cho_identifier', extract_json('..original-identifier'), flatten_array
 to_field 'cho_is_part_of', extract_json('..collection'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_is_part_of', extract_json('..collection-name'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_is_part_of', extract_json('..digital-collection'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_is_part_of', extract_json('..relation'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_language', extract_json('..language'), flatten_array, dlme_split(';'), dlme_split(':'), dlme_split(','), dlme_split('/'), dlme_split(' & '), dlme_split(' and '), dlme_split(' , and '), dlme_gsub('\\r', ''), dlme_gsub('\\n', ''), dlme_gsub('\r', ''), dlme_gsub('\n', ''), dlme_gsub('.', ''), dlme_strip, normalize_language, lang('en')
@@ -147,14 +154,27 @@ to_field 'cho_language', extract_json('..languages'), flatten_array, dlme_split(
 to_field 'cho_provenance', extract_json('..provenance'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_publisher', extract_json('..publisher'), flatten_array, translation_map('lang_ar_from_en'), lang('ar-Arab')
 to_field 'cho_medium', extract_json('..medium'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en')
-to_field 'cho_spatial', extract_json('..coverage-spatial/note'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_spatial', extract_json('..coverage-spatialnote'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_spatial', extract_json('..location'), flatten_array, dlme_split(';'), arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_spatial', extract_json('..location-arabic'), flatten_array, dlme_split(';'), arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_spatial', extract_json('..location-country-arabic'), flatten_array, dlme_split(';'), arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_spatial', extract_json('..location-country-english'), flatten_array, dlme_split(';'), arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_spatial', extract_json('..location-english-name'), flatten_array, dlme_split(';'), arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_spatial', extract_json('..location-english'), flatten_array, dlme_split(';'), arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_spatial', extract_json('..location-getty-thesaurus-of-geographic-names-tgn'), flatten_array, dlme_split(';'), arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_spatial', extract_json('..location-governorate-alternative'), flatten_array, dlme_split(';'), arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_spatial', extract_json('..location-governorate-arabic'), flatten_array, dlme_split(';'), arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_spatial', extract_json('..location-governorate-english'), flatten_array, dlme_split(';'), arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_spatial', extract_json('..location-governorate-transliteration'), flatten_array, dlme_split(';'), arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_spatial', extract_json('..location-governorate-arabic-alternative'), flatten_array, dlme_split(';'), arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_subject', extract_json('..keyword'), flatten_array, dlme_split(';'), arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_subject', extract_json('..site'), flatten_array, dlme_split(';'), arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_subject', extract_json('..subject'), flatten_array, dlme_split(';'), unique, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_subject', extract_json('..subject-arabic'), flatten_array, dlme_split(';'), arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_subject', extract_json('..subject-lc'), flatten_array, dlme_split(';'), arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_subject', extract_json('..subject-lcsh'), flatten_array, dlme_split(';'), arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_subject', extract_json('..subject-lcsh-arabic'), flatten_array, dlme_split(';'), arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_subject', extract_json('..subject-lchs-arabic'), flatten_array, dlme_split(';'), arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_subject', extract_json('..subject-tgm'), flatten_array, dlme_split(';'), arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_subject', extract_json('..topic'), flatten_array, dlme_split(';'), arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_temporal', extract_json('..date-beginning'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en')
@@ -162,6 +182,8 @@ to_field 'cho_type', extract_json('..genre'), flatten_array, arabic_script_lang_
 to_field 'cho_type', extract_json('..genre-aat'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_type', extract_json('..getty-aat'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_type', extract_json('..type'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_type', extract_json('..type-dcmi'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_type', extract_json('..worktype'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_type', extract_json('..worktype-of-printed-material'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en')
 
 # Agg
