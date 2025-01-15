@@ -50,9 +50,9 @@ to_field 'transform_timestamp', timestamp
 # File path
 to_field 'dlme_source_file', path_to_file
 
-to_field 'agg_data_provider_collection', path_to_file, split('/'), at_index(3), gsub('_', '-'), prepend('ucla-'), translation_map('agg_collection_from_provider_id'), lang('en')
-to_field 'agg_data_provider_collection', path_to_file, split('/'), at_index(3), gsub('_', '-'), prepend('ucla-'), translation_map('agg_collection_from_provider_id'), translation_map('agg_collection_ar_from_en'), lang('ar-Arab')
-to_field 'agg_data_provider_collection_id', path_to_file, split('/'), at_index(3), gsub('_', '-'), prepend('ucla-')
+to_field 'agg_data_provider_collection', path_to_file, split('/'), at_index(-2), gsub('_', '-'), prepend('ucla-'), translation_map('agg_collection_from_provider_id'), lang('en')
+to_field 'agg_data_provider_collection', path_to_file, split('/'), at_index(-2), gsub('_', '-'), prepend('ucla-'), translation_map('agg_collection_from_provider_id'), translation_map('agg_collection_ar_from_en'), lang('ar-Arab')
+to_field 'agg_data_provider_collection_id', path_to_file, split('/'), at_index(-2), gsub('_', '-'), prepend('ucla-')
 
 # CHO Required
 to_field 'id', extract_json('.id'), gsub('https:\/\/iiif.library.ucla.edu\/iiif\/2\/', ''), gsub('\/!200,200\/0\/default.jpg', '')

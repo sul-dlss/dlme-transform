@@ -43,9 +43,9 @@ end
 to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
 
-to_field 'agg_data_provider_collection', path_to_file, dlme_split('/'), at_index(2), dlme_gsub('_', '-'), dlme_prepend('koch-'), translation_map('agg_collection_from_provider_id'), lang('en')
-to_field 'agg_data_provider_collection', path_to_file, dlme_split('/'), at_index(2), dlme_gsub('_', '-'), dlme_prepend('koch-'), translation_map('agg_collection_from_provider_id'), translation_map('agg_collection_ar_from_en'), lang('ar-Arab')
-to_field 'agg_data_provider_collection_id', path_to_file, dlme_split('/'), at_index(2), dlme_gsub('_', '-'), dlme_prepend('koch-')
+to_field 'agg_data_provider_collection', path_to_file, dlme_split('/'), at_index(-2), dlme_gsub('_', '-'), dlme_prepend('koch-'), translation_map('agg_collection_from_provider_id'), lang('en')
+to_field 'agg_data_provider_collection', path_to_file, dlme_split('/'), at_index(-2), dlme_gsub('_', '-'), dlme_prepend('koch-'), translation_map('agg_collection_from_provider_id'), translation_map('agg_collection_ar_from_en'), lang('ar-Arab')
+to_field 'agg_data_provider_collection_id', path_to_file, dlme_split('/'), at_index(-2), dlme_gsub('_', '-'), dlme_prepend('koch-')
 
 # File path
 to_field 'dlme_source_file', path_to_file
