@@ -90,8 +90,7 @@ to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_dc_rights' => [extract_json('..rights'), flatten_array
-    ],
+    'wr_dc_rights' => [extract_json('..rights'), flatten_array],
     'wr_edm_rights' => [literal('CC BY-ND: https://creativecommons.org/licenses/by-nd/4.0/')],
     'wr_id' => [extract_json('..identifier'), flatten_array, at_index(0), dlme_strip]
   )
