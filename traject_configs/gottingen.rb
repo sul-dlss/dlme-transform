@@ -62,15 +62,18 @@ to_field 'id', extract_json('.id'),
          dlme_gsub('/manifest/', '')
 to_field 'cho_title', extract_json('.inventarnummer'), flatten_array, dlme_strip, lang('en')
 
+# The metadata in the provider site indicates 'Material' and 'Technik' fields that aren't present in the IIIF data
+# https://sammlungen.uni-goettingen.de/objekt/record_kuniweb_1290036/
+
 # Cho Other
-to_field 'cho_date', extract_json('.herstellung:-datierung'), flatten_array, dlme_strip, lang('de')
 to_field 'cho_date_range_norm', extract_json('.datierung-kodiert'), flatten_array, dlme_strip, dlme_gsub('/', '-'), parse_range
 to_field 'cho_date_range_hijri', extract_json('.datierung-kodiert'), flatten_array, dlme_strip, dlme_gsub('/', '-'), parse_range, hijri_range
 to_field 'cho_dc_rights', extract_json('image-rights'), flatten_array, lang('de')
+to_field 'cho_description', extract_json('.maße--umfang'), flatten_array, dlme_strip, prepend('Dimensions: '), lang('de')
 to_field 'cho_description', extract_json('.beschreibung'), flatten_array, dlme_strip, dlme_prepend('Iconclass: '), arabic_script_lang_or_default('und-Arab', 'und-Latn')
+to_field 'cho_description', extract_json('.herstellung:-datierung'), flatten_array, dlme_strip, prepend('Production: '), lang('de')
 to_field 'cho_edm_type', literal('Object'), lang('en')
 to_field 'cho_edm_type', literal('Object'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
-to_field 'cho_extent', extract_json('.maße--umfang'), flatten_array, dlme_strip, lang('de')
 to_field 'cho_has_type', extract_json('.object-genre'), flatten_array, normalize_has_type, lang('en')
 to_field 'cho_has_type', extract_json('.object-genre'), flatten_array, normalize_has_type, translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_identifier', extract_json('.inventarnummer'), flatten_array, dlme_strip
@@ -83,6 +86,7 @@ to_field 'cho_spatial', extract_json('.herstellung:-ort'), flatten_array, dlme_s
 to_field 'cho_subject', extract_json('.iconclass'), flatten_array, dlme_strip, lang('de')
 to_field 'cho_subject', extract_json('.keywords'), flatten_array, dlme_strip, lang('de')
 to_field 'cho_temporal', extract_json('.entstehung:-datierung'), flatten_array, dlme_strip, lang('de')
+to_field 'cho_type', extract_json('.object-genre'), flatten_array, dlme_strip, lang('de')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
@@ -93,6 +97,13 @@ to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
     'wr_id' => [extract_json('.id'), dlme_gsub('https://sammlungen.uni-goettingen.de/api/v1/records/', 'https://sammlungen.uni-goettingen.de/objekt/'), dlme_gsub('manifest/', ''), flatten_array, dlme_strip],
+    'wr_is_referenced_by' => [extract_json('.id'), flatten_array, dlme_strip]
+  )
+end
+to_field 'agg_is_shown_by' do |_record, accumulator, context|
+  accumulator << transform_values(
+    context,
+    'wr_id' => [extract_json('.resource'), flatten_array, dlme_strip],
     'wr_is_referenced_by' => [extract_json('.id'), flatten_array, dlme_strip]
   )
 end
