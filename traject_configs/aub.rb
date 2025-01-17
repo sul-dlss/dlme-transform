@@ -108,6 +108,9 @@ to_field 'agg_provider', provider_ar, lang('ar-Arab')
 to_field 'agg_provider_country', provider_country, lang('en')
 to_field 'agg_provider_country', provider_country_ar, lang('ar-Arab')
 
+# Ignored Fields
+## none
+
 each_record convert_to_language_hash(
   'agg_data_provider',
   'agg_data_provider_collection',

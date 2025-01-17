@@ -55,42 +55,52 @@ to_field 'id', extract_json('.id'), dlme_gsub('https://cdm21044.contentdm.oclc.o
 to_field 'cho_title', extract_json('.başlık-title'), flatten_array, lang('tr-Latn')
 
 # Cho Other
+to_field 'cho_alternative', extract_json('.başlık-alternatif-title-alternative'), flatten_array, lang('tr-Latn')
 to_field 'cho_alternative', extract_json('.diğer-başlık-title-alternative'), flatten_array, lang('tr-Latn')
+
+to_field 'cho_creator', extract_json('.müellif-authorcreator'), flatten_array, dlme_prepend('Artist: '), lang('tr-Latn')
 to_field 'cho_creator', extract_json('.sanatçı-artist'), flatten_array, dlme_prepend('Artist: '), lang('tr-Latn')
-to_field 'cho_creator', extract_json('.sorumluluk-alanı-creator'), flatten_array, dlme_prepend('Artist: '), lang('tr-Latn')
+to_field 'cho_creator', extract_json('.yazar-creator'), flatten_array, dlme_prepend('Artist: '), lang('tr-Latn')
 to_field 'cho_contributor', extract_json('.hattat-calligrapher'), flatten_array, dlme_prepend('Calligrapher: '), lang('tr-Latn')
 to_field 'cho_contributor', extract_json('.müzehhip-illuminator'), flatten_array, dlme_prepend('Illuminator: '), lang('tr-Latn')
 to_field 'cho_contributor', extract_json('.tuğrakeş-contributors'), flatten_array, lang('tr-Latn')
 to_field 'cho_contributor', extract_json('.usta-contributors'), flatten_array, lang('tr-Latn')
+to_field 'cho_date', extract_json('.kopya-tarihi-date'), flatten_array, lang('tr-Latn')
 to_field 'cho_date', extract_json('.tarih-date'), flatten_array, lang('tr-Latn')
 to_field 'cho_date_range_norm', extract_json('.tarih-date'), flatten_array, parse_range
 to_field 'cho_date_range_hijri', extract_json('.tarih-date'), flatten_array, parse_range, hijri_range
 to_field 'cho_dc_rights', extract_json('.telif-hakkı-copyright'), flatten_array, lang('tr-Latn')
-to_field 'cho_dc_rights', extract_json('.telif-hakkı-rights'), flatten_array, lang('tr-Latn')
 to_field 'cho_description', extract_json('.açıklama-description'), flatten_array, lang('tr-Latn')
 to_field 'cho_description', extract_json('.fiziksel-görünüm-physical-appearance'), flatten_array, dlme_prepend('Physical Appearance: '), lang('tr-Latn')
-to_field 'cho_description', extract_json('.kayıtlar-inscriptions/marks'), flatten_array, dlme_prepend('Inscriptions: '), lang('tr-Latn')
+to_field 'cho_description', extract_json('.kayıtlar-inscriptionsmarks'), flatten_array, dlme_prepend('Inscriptions: '), lang('tr-Latn')
 to_field 'cho_description', extract_json('.ketebe-ve-zehebe-kaydı-inscriptions'), flatten_array, dlme_prepend('Inscriptions: '), lang('tr-Latn')
 to_field 'cho_description', extract_json('.konservasyon-conservation'), flatten_array, dlme_prepend('Conservation: '), lang('tr-Latn')
 to_field 'cho_description', extract_json('.cilt-binding'), flatten_array, dlme_prepend('Binding: '), lang('tr-Latn')
 to_field 'cho_description', extract_json('.malzemeler-materials'), flatten_array, dlme_prepend('Materials: '), lang('tr-Latn')
 to_field 'cho_description', extract_json('.mühürler-ve-diğer-kayıtlar-inscriptions'), flatten_array, dlme_prepend('Inscriptions: '), lang('tr-Latn')
 to_field 'cho_description', extract_json('.tezhipler-illuminations'), flatten_array, dlme_prepend('Illuminations: '), lang('tr-Latn')
-to_field 'cho_description', extract_json('.teknik-materials/techniques'), flatten_array, dlme_prepend('Materials/Techniques: '), lang('tr-Latn')
+to_field 'cho_description', extract_json('.tasvirler-ve-şekiller-illustrations'), flatten_array, dlme_prepend('Illustrations: '), lang('tr-Latn')
+to_field 'cho_description', extract_json('.malzemeteknik-materialstechniques'), flatten_array, dlme_prepend('Materials/Techniques: '), lang('tr-Latn')
+to_field 'cho_description', extract_json('.teknik-materialstechniques'), flatten_array, dlme_prepend('Materials/Techniques: '), lang('tr-Latn')
 to_field 'cho_description', extract_json('.transkripsiyon-transcription'), flatten_array, dlme_prepend('Transcription: '), lang('tr-Latn')
 to_field 'cho_description', extract_json('.yazı-cinsi-script'), flatten_array, dlme_prepend('Script: '), lang('tr-Latn')
 to_field 'cho_edm_type', extract_json('.tür-type'), flatten_array, normalize_has_type, normalize_edm_type, lang('en')
 to_field 'cho_edm_type', extract_json('.tür-type'), flatten_array, normalize_has_type, normalize_edm_type, translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_extent', extract_json('.boyutlar-measurements'), flatten_array, dlme_prepend('Measurements: '), lang('en')
-to_field 'cho_format', extract_json('.format'), flatten_array, dlme_strip, lang('tr-Latn')
 to_field 'cho_has_type', extract_json('.tür-type'), flatten_array, normalize_has_type, lang('en')
 to_field 'cho_has_type', extract_json('.tür-type'), flatten_array, normalize_has_type, translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_identifier', extract_json('.envanter-numarası-accession-number'), flatten_array, dlme_strip
 to_field 'cho_identifier', extract_json('.envanter-numarası-identifier'), flatten_array, dlme_strip
-to_field 'cho_language', extract_json('.dil-language'), flatten_array, dlme_split(';'), dlme_strip, normalize_language, lang('en')
-to_field 'cho_publisher', extract_json('.yayıncı-publisher'), flatten_array, lang('en')
+to_field 'cho_language', extract_json('.dil-language'), flatten_array, dlme_split(';'), dlme_split('/'), dlme_strip, normalize_language, lang('en')
+to_field 'cho_language', extract_json('.dil-language'), flatten_array, dlme_split(';'), dlme_split('/'), dlme_strip, normalize_language, translation_map('lang_ar_from_en'), lang('en')
+to_field 'cho_provenance', extract_json('.müzeye-geliş-şekli-provenance'), flatten_array, lang('en')
+to_field 'cho_provenance', extract_json('.müzeye-geliş-tarihi-provenance-date'), flatten_array, dlme_prepend('Provenance date: '), lang('en')
+to_field 'cho_provenance', extract_json('.ssm-provenance'), flatten_array, lang('en')
+to_field 'cho_publisher', extract_json('.yayın-publication'), flatten_array, lang('en')
+to_field 'cho_spatial', extract_json('.yer-creation-place'), flatten_array, lang('en')
+to_field 'cho_subject', extract_json('.konu-subject'), flatten_array, lang('en')
 to_field 'cho_relation', extract_json('.ayrıca-bakınız-see-also'), flatten_array, lang('en')
-to_field 'cho_temporal', extract_json('.dönem-object/work-culture'), flatten_array, lang('tr-Latn')
+to_field 'cho_temporal', extract_json('.dönem-objectwork-culture'), flatten_array, lang('tr-Latn')
 to_field 'cho_type', extract_json('.tür-type'), flatten_array, lang('tr-Latn')
 
 # Agg
@@ -122,6 +132,17 @@ to_field 'agg_provider_country', provider_country, lang('en')
 to_field 'agg_provider_country', provider_country_ar, lang('ar-Arab')
 to_field 'agg_data_provider_country', data_provider_country, lang('en')
 to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
+
+# Ignored Fields
+## atıf-notu-cited
+## belge-document
+## bulunduğu-yer-current-repository
+## context
+## durum-status
+## mücellid-binder
+## profile
+## repository
+## source
 
 each_record convert_to_language_hash(
   'agg_data_provider',
