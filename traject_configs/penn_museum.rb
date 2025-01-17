@@ -45,46 +45,56 @@ end
 to_field 'transform_version', version
 to_field 'transform_timestamp', timestamp
 
-to_field 'agg_data_provider_collection', path_to_file, dlme_split('/'), at_index(-2), gsub('_', '-'), prepend('penn-museum-'), translation_map('agg_collection_from_provider_id'), lang('en')
-to_field 'agg_data_provider_collection', path_to_file, dlme_split('/'), at_index(-2), gsub('_', '-'), prepend('penn-museum-'), translation_map('agg_collection_from_provider_id'), translation_map('agg_collection_ar_from_en'), lang('ar-Arab')
-to_field 'agg_data_provider_collection_id', path_to_file, dlme_split('/'), at_index(-2), gsub('_', '-'), prepend('penn-museum-')
+to_field 'agg_data_provider_collection', path_to_file, dlme_split('/'), at_index(-2), gsub('_', '-'), dlme_prepend('penn-museum-'), translation_map('agg_collection_from_provider_id'), lang('en')
+to_field 'agg_data_provider_collection', path_to_file, dlme_split('/'), at_index(-2), gsub('_', '-'), dlme_prepend('penn-museum-'), translation_map('agg_collection_from_provider_id'), translation_map('agg_collection_ar_from_en'), lang('ar-Arab')
+to_field 'agg_data_provider_collection_id', path_to_file, dlme_split('/'), at_index(-2), gsub('_', '-'), dlme_prepend('penn-museum-')
 
-# File path
+# File Path
 to_field 'dlme_source_file', path_to_file
 
 # CHO Required
 to_field 'id', extract_json('emuIRN'), flatten_array, transform(&:to_s), dlme_prepend('penn-museum-')
-to_field 'cho_title', extract_json('.object_name'), flatten_array, dlme_default('Untitled'), dlme_split('|'), lang('en')
+to_field 'cho_title', extract_json('.title'), flatten_array, dlme_default('Untitled'), lang('en')
+to_field 'cho_title', extract_json('.objectName'), flatten_array, dlme_default('Untitled'), lang('en')
 
 # CHO Other
 to_field 'cho_coverage', extract_json('.culture'), flatten_array, dlme_split('|'), lang('en')
 to_field 'cho_creator', extract_json('.creator'), flatten_array, lang('en')
-to_field 'cho_date', extract_json('.date_made'), transform(&:to_s), flatten_array, lang('en')
-to_field 'cho_date', extract_json('.date_made_early'), transform(&:to_s), flatten_array, lang('en')
-to_field 'cho_date', extract_json('.date_made_late'), transform(&:to_s), flatten_array, lang('en')
+to_field 'cho_date', extract_json('.dateMade'), transform(&:to_s), flatten_array, lang('en')
+to_field 'cho_date', extract_json('.earlyDate'), transform(&:to_s), flatten_array, lang('en')
+to_field 'cho_date', extract_json('.lateDate'), transform(&:to_s), flatten_array, lang('en')
 to_field 'cho_date_range_norm', csv_or_json_date_range('date_made_early', 'date_made_late')
 to_field 'cho_date_range_hijri', csv_or_json_date_range('date_made_early', 'date_made_late'), hijri_range
+to_field 'cho_description', extract_json('.nativeName'), flatten_array, dlme_prepend('Native name: '), lang('en')
 to_field 'cho_description', extract_json('.description'), flatten_array, lang('en')
 to_field 'cho_description', extract_json('.technique'), flatten_array, dlme_split('|'), lang('en')
-to_field 'cho_edm_type', extract_json('.object_name'), flatten_array, normalize_has_type, normalize_edm_type, lang('en')
-to_field 'cho_edm_type', extract_json('.object_name'), flatten_array, normalize_has_type, normalize_edm_type, translation_map('edm_type_ar_from_en'), lang('ar-Arab')
-to_field 'cho_extent', extract_json('.measurement_height'), flatten_array, transform(&:to_s), lang('en')
-to_field 'cho_extent', extract_json('.measurement_length'), flatten_array, transform(&:to_s), lang('en')
-to_field 'cho_extent', extract_json('.measurement_outside_diameter'), flatten_array, transform(&:to_s), lang('en')
-to_field 'cho_extent', extract_json('.measurement_tickness'), flatten_array, transform(&:to_s), lang('en')
-to_field 'cho_extent', extract_json('.measurement_unit'), flatten_array, lang('en')
-to_field 'cho_extent', extract_json('.measurement_width'), flatten_array, transform(&:to_s), lang('en')
-to_field 'cho_has_type', extract_json('.object_name'), flatten_array, normalize_has_type, lang('en')
-to_field 'cho_has_type', extract_json('.object_name'), flatten_array, normalize_has_type, translation_map('has_type_ar_from_en'), lang('ar-Arab')
+to_field 'cho_description', extract_json('.height'), flatten_array, transform(&:to_s), dlme_prepend('Height: '), lang('en')
+to_field 'cho_description', extract_json('.length'), flatten_array, transform(&:to_s), dlme_prepend('Length: '), lang('en')
+to_field 'cho_description', extract_json('.width'), flatten_array, transform(&:to_s), dlme_prepend('Width: '), lang('en')
+to_field 'cho_description', extract_json('.depth'), flatten_array, transform(&:to_s), dlme_prepend('Depth: '), lang('en')
+to_field 'cho_description', extract_json('.thickness'), flatten_array, transform(&:to_s), dlme_prepend('Thickness: '), lang('en')
+to_field 'cho_description', extract_json('.weight'), flatten_array, transform(&:to_s), dlme_prepend('Weight: '), lang('en')
+to_field 'cho_description', extract_json('.outsideDiameter'), flatten_array, transform(&:to_s), dlme_prepend('Outside diameter: '), lang('en')
+to_field 'cho_description', extract_json('.measurementUnit'), flatten_array, dlme_prepend('Measurement unit: '), lang('en')
+to_field 'cho_edm_type', extract_json('.objectName'), flatten_array, normalize_has_type, normalize_edm_type, lang('en')
+to_field 'cho_edm_type', extract_json('.objectName'), flatten_array, normalize_has_type, normalize_edm_type, translation_map('edm_type_ar_from_en'), lang('ar-Arab')
+to_field 'cho_has_type', extract_json('.objectName'), flatten_array, normalize_has_type, lang('en')
+to_field 'cho_has_type', extract_json('.objectName'), flatten_array, normalize_has_type, translation_map('has_type_ar_from_en'), lang('ar-Arab')
+to_field 'cho_identifier', extract_json('.identifier'), transform(&:to_s), flatten_array
 to_field 'cho_identifier', extract_json('.emuIRN'), transform(&:to_s), flatten_array
+to_field 'cho_is_part_of', extract_json('.curatorialSection'), flatten_array, dlme_prepend('Curatorial section:'), lang('en')
+to_field 'cho_language', extract_json('.inscriptionMarkLanguage'), flatten_array, dlme_split(','), dlme_split(';'), dlme_gsub('?', ''), normalize_language, lang('en')
+to_field 'cho_language', extract_json('.inscriptionMarkLanguage'), flatten_array, dlme_split(','), dlme_split(';'), dlme_gsub('?', ''), normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
 to_field 'cho_medium', extract_json('.material'), dlme_split('|'), flatten_array, lang('en')
-to_field 'cho_provenance', extract_json('.accession_credit_line'), flatten_array, lang('en')
-to_field 'cho_source', extract_json('.object_number'), flatten_array, lang('en')
-to_field 'cho_source', extract_json('.other_numbers'), flatten_array, dlme_split('|'), lang('en')
-to_field 'cho_spatial', extract_json('.provenience'), flatten_array, dlme_split('|'), lang('en')
+to_field 'cho_provenance', extract_json('.creditLine'), flatten_array, lang('en')
+to_field 'cho_spatial', extract_json('.locus'), flatten_array, dlme_prepend('Locus: '), lang('en')
+to_field 'cho_spatial', extract_json('.placeName'), flatten_array, dlme_split('|'), dlme_prepend('Place name: '), lang('en')
+to_field 'cho_spatial', extract_json('.siteName'), flatten_array, dlme_split('|'), dlme_prepend('Site name: '), lang('en')
 to_field 'cho_subject', extract_json('.iconography'), flatten_array, lang('en')
+to_field 'cho_subject', extract_json('.iconographySubject'), flatten_array, lang('en')
+to_field 'cho_subject', extract_json('.cultureArea'), flatten_array, lang('en')
 to_field 'cho_temporal', extract_json('.period'), flatten_array, dlme_split('|'), lang('en')
-to_field 'cho_type', extract_json('.object_name'), flatten_array, dlme_split('|'), lang('en')
+to_field 'cho_type', extract_json('.objectName'), flatten_array, dlme_split('|'), lang('en')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
@@ -103,6 +113,9 @@ to_field 'agg_provider', provider, lang('en')
 to_field 'agg_provider', provider_ar, lang('ar-Arab')
 to_field 'agg_provider_country', provider_country, lang('en')
 to_field 'agg_provider_country', provider_country_ar, lang('ar-Arab')
+
+# Ignored Fields
+## none
 
 each_record convert_to_language_hash(
   'agg_data_provider',

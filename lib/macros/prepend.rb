@@ -25,10 +25,10 @@ module Macros
 
         values = []
         accumulator.each do |val|
-          values << val
+          values << "#{prepend_string}#{val}" if val.present?
         end
 
-        accumulator.replace(["#{prepend_string}#{values.join(', ')}"]) if values.present?
+        accumulator.replace(values) if values.present?
       end
     end
   end
