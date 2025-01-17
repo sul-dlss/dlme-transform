@@ -14,8 +14,13 @@ aljamiado [fragmento g]: "Aljam\xEDa"
 "aljam\xEDa, \xE1rabe":
 - "Aljam\xEDa"
 - Arabic
+akkadian: Akkadian
+akkadian langage: Akkadian
+akkadian language: Akkadian
+akkadian langage language: Akkadian
 altaic languages: Altaic Languages
 amharic: Amharic
+ancient greek language: Greek, Ancient
 arabic: Arabic
 arabic and latin:
 - Arabic
@@ -25,10 +30,15 @@ arabic and spanish:
 - Spanish
 arabic in transliteration: Arabic
 arabic;: Arabic
+arabic language: Arabic
 aramaic: Aramaic
+aramaic?: Aramaic
+aramaic language: Aramaic
 aramaic, christian palestinian: Aramaic
 aratur: Aratur
 armenian: Armenian
+armenian language: Armenian
+babylonian language: Babylonian
 bulgarian: Bulgarian
 'castellano [parte 2 (fragmentos: 1, 4)]': Spanish
 "castellano y \xE1rabe.":
@@ -36,13 +46,20 @@ bulgarian: Bulgarian
 - Spanish
 catalan: Catalan
 chagatai: Chagatai
+chinese language: Chinese
 classical armenian: Armenian
 coptic: Coptic
+coptic language: Coptic
 crimean tatar: Tatar, Crimean
 crimean turkish: Turkish, Crimean
+cufic: Arabic
+cuneiform: Cuneiform
 czech: Czech
+demotic: Demotic
 "dialecto aragon\xE9s. [fragmento 1]": Aragonese
 dutch: Dutch
+egyptian language: Egyptian
+elamite language: Elamite
 "en \xE1rabe": Arabic
 "en \xE1rabe, con l. magreb\xED": Arabic
 en_us: English
@@ -52,6 +69,7 @@ english and syriac:
 - Syriac
 "escrito en \xE1rabe [fragmento 2, 3, 5]": Arabic
 "escrito en \xE1rabe [parte 1 (fragmentos: 9-10, 11, 12-15, 16, 28-45, 47-50)]": Arabic
+fake language: null
 flemish: Flemish
 french: French
 ge'ez: Ge'ez
@@ -59,6 +77,8 @@ geez: Ge'ez
 georgian: Georgian
 german: German
 greek: Greek
+greek language: Greek
+greek alphabet: Greek
 greek, ancient: Greek, Ancient
 greek, ancient (to 1453): Greek, Ancient
 gujarati: Gujarati
@@ -67,6 +87,7 @@ hebreo y arameo:
 - Hebrew
 - Aramaic
 hebrew: Hebrew
+hebrew language: Hebrew
 hebrew (isolated tiberian vocalisation): Hebrew
 hebrew (samaritan): Hebrew
 hebrew, occasional tiberian vocalisation (approx. 200 fully or partially vocalised forms): Hebrew
@@ -75,6 +96,10 @@ hebrew, with some italian, judaeo-italian and arabic:
 - Italian
 - Judaeo-Italian
 - Arabic
+hieratic: Hieratic
+hieroglyphic: Hieroglyphic
+hittite language: Hittite
+hurrian: Hurrian
 in ottoman turkish: Turkish, Ottoman (1500-1928)
 in persian: Persian
 in urdu: Urdu
@@ -91,7 +116,9 @@ judaeo-portuguese: Judeo-Portuguese
 judaeo-spanish: Ladino
 judeo arabic: Judeo-Arabic
 judeo-arabic: Judeo-Arabic
+kufic: Arabic
 latin: Latin
+latin language: Latin
 latina: Latin
 lengua aljamiada: "Aljam\xEDa"
 lengua aljamiada y castellana. [fragmento 3]:
@@ -170,13 +197,24 @@ letra aragonesa. [fragmento 1]: Aragonese
 luxembourgish: Luxembourgish
 malay: Malay
 malay in arabic script: Malay
+mandaic: Mandaic
+meroitic language: Meroitic
 minaic: Minaic
+mixed language: null
+naskhi: Arabic
+naskhi script: Arabic
+neo-sumerian language: Neo-Sumerian
 no linguistic content: null
+old babylonian script: Old Babylonian
 old bulgarian: Old Bulgarian
+old persian: Old Persian
 ottoman (1500-1928): Turkish, Ottoman (1500-1928)
 ottoman turkish: Turkish, Ottoman (1500-1928)
 ottoman turkish,: Turkish, Ottoman (1500-1928)
 pahlavi: Pahlavi
+pahlavi language: Pahlavi
+pahlevi: Pahlavi
+pahlevi language: Pahlavi
 pakhto: Pashto
 pashto: Pashto
 persa: Persian
@@ -194,20 +232,28 @@ persian, arabic and turkish:
 persian, with the initial doxography and some quotations in arabic:
 - Persian
 - Arabic
+persian language: Persian
+phoenician language: Phoenician
 portuguese: Portuguese
+pseudo-script: null
 pushto: Pashto
 qatabanic: Qatabanic
 romance castellano [fragmento 1, 2]: Spanish
 russian: Russian
 sabaic: Sabaic
+sabaean language: Sabaean
 samaritan: Samaritan
+semitic language: Semitic
 slavic languages: Slavic Languages
 spanish: Spanish
+sumerian: Sumerian
+sumerian language: Sumerian
 syriac: Syriac
 swedish: Swedish
 tatar: Tatar
 'texto en aljamiado [parte 1 (fragmentos: 17, 18-19, 20-27, 28-45)]': Aljamia
 turkish: Turkish
+turkish language: Turkish
 turkish (in greek alphabet): Turkish, Karamanli
 turkish in arabic script: Turkish, Ottoman (1500-1928)
 turkish, ottoman, arabic:
@@ -237,3 +283,4 @@ yiddish: Yiddish
 - Arabic
 "\xE1rabe.": Arabic
 "\u1E25a\u1E0Dramitic": "\u1E24a\u1E0Dramitic"
+unknown: null
