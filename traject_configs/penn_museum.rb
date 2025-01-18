@@ -13,6 +13,7 @@ require 'macros/normalize_type'
 require 'macros/path_to_file'
 require 'macros/prepend'
 require 'macros/timestamp'
+require 'macros/title_extraction'
 require 'macros/transformation'
 require 'macros/version'
 require 'traject_plus'
@@ -28,6 +29,7 @@ extend Macros::NormalizeType
 extend Macros::PathToFile
 extend Macros::Prepend
 extend Macros::Timestamp
+extend Macros::TitleExtraction
 extend Macros::Transformation
 extend Macros::Version
 extend TrajectPlus::Macros
@@ -54,17 +56,14 @@ to_field 'dlme_source_file', path_to_file
 
 # CHO Required
 to_field 'id', extract_json('emuIRN'), flatten_array, transform(&:to_s), dlme_prepend('penn-museum-')
-to_field 'cho_title', extract_json('.title'), flatten_array, dlme_default('Untitled'), lang('en')
-to_field 'cho_title', extract_json('.objectName'), flatten_array, dlme_default('Untitled'), lang('en')
+to_field 'cho_title', title_plus_default('.title', '.objectName', 'Untitled'), flatten_array, lang('en')
 
 # CHO Other
 to_field 'cho_coverage', extract_json('.culture'), flatten_array, dlme_split('|'), lang('en')
 to_field 'cho_creator', extract_json('.creator'), flatten_array, lang('en')
 to_field 'cho_date', extract_json('.dateMade'), transform(&:to_s), flatten_array, lang('en')
-to_field 'cho_date', extract_json('.earlyDate'), transform(&:to_s), flatten_array, lang('en')
-to_field 'cho_date', extract_json('.lateDate'), transform(&:to_s), flatten_array, lang('en')
-to_field 'cho_date_range_norm', csv_or_json_date_range('date_made_early', 'date_made_late')
-to_field 'cho_date_range_hijri', csv_or_json_date_range('date_made_early', 'date_made_late'), hijri_range
+to_field 'cho_date_range_norm', csv_or_json_date_range('earlyDate', 'lateDate')
+to_field 'cho_date_range_hijri', csv_or_json_date_range('earlyDate', 'lateDate'), hijri_range
 to_field 'cho_description', extract_json('.nativeName'), flatten_array, dlme_prepend('Native name: '), lang('en')
 to_field 'cho_description', extract_json('.description'), flatten_array, lang('en')
 to_field 'cho_description', extract_json('.technique'), flatten_array, dlme_split('|'), lang('en')
@@ -82,14 +81,14 @@ to_field 'cho_has_type', extract_json('.objectName'), flatten_array, normalize_h
 to_field 'cho_has_type', extract_json('.objectName'), flatten_array, normalize_has_type, translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_identifier', extract_json('.identifier'), transform(&:to_s), flatten_array
 to_field 'cho_identifier', extract_json('.emuIRN'), transform(&:to_s), flatten_array
-to_field 'cho_is_part_of', extract_json('.curatorialSection'), flatten_array, dlme_prepend('Curatorial section:'), lang('en')
+to_field 'cho_is_part_of', extract_json('.curatorialSection'), flatten_array, dlme_prepend('Curatorial section: '), lang('en')
 to_field 'cho_language', extract_json('.inscriptionMarkLanguage'), flatten_array, dlme_split(','), dlme_split(';'), dlme_gsub('?', ''), normalize_language, lang('en')
 to_field 'cho_language', extract_json('.inscriptionMarkLanguage'), flatten_array, dlme_split(','), dlme_split(';'), dlme_gsub('?', ''), normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
 to_field 'cho_medium', extract_json('.material'), dlme_split('|'), flatten_array, lang('en')
 to_field 'cho_provenance', extract_json('.creditLine'), flatten_array, lang('en')
-to_field 'cho_spatial', extract_json('.locus'), flatten_array, dlme_prepend('Locus: '), lang('en')
 to_field 'cho_spatial', extract_json('.placeName'), flatten_array, dlme_split('|'), dlme_prepend('Place name: '), lang('en')
 to_field 'cho_spatial', extract_json('.siteName'), flatten_array, dlme_split('|'), dlme_prepend('Site name: '), lang('en')
+to_field 'cho_spatial', extract_json('.locus'), flatten_array, dlme_prepend('Locus: '), lang('en')
 to_field 'cho_subject', extract_json('.iconography'), flatten_array, lang('en')
 to_field 'cho_subject', extract_json('.iconographySubject'), flatten_array, lang('en')
 to_field 'cho_subject', extract_json('.cultureArea'), flatten_array, lang('en')

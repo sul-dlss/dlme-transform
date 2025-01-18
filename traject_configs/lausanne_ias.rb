@@ -54,7 +54,7 @@ to_field 'dlme_source_file', path_to_file
 
 # CHO Required
 to_field 'id', normalize_prefixed_id('id')
-to_field 'cho_title', json_title_or('name', 'expanded_name'), lang('fr')
+to_field 'cho_title', title_or('name', 'expanded_name'), lang('fr')
 
 # CHO Other
 to_field 'cho_date', lausanne_date_string, lang('en')

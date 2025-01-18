@@ -55,7 +55,7 @@ to_field 'dlme_source_file', path_to_file
 to_field 'id', generate_mods_id
 # Both titles need the same langauge value
 to_field 'cho_title', extract_mods('/*/mods:titleInfo[1]/mods:title'), prepend('Main Title: '), lang('und-Latn')
-to_field 'cho_title', xpath_title_plus('/*/mods:relatedItem[@type="constituent"]/mods:titleInfo/mods:title', '/*/mods:relatedItem/mods:recordInfo/mods:recordIdentifier'), prepend('Image Title: '), lang('und-Latn')
+to_field 'cho_title', extract_mods('/*/mods:relatedItem[@type="constituent"]/mods:titleInfo/mods:title'), prepend('Image Title: '), lang('und-Latn') # called xpath_title_plus
 
 # CHO Other
 to_field 'cho_alternative', extract_mods('/*/mods:titleInfo[@type="alternative"]/mods:title'), lang('en')
