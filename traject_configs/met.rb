@@ -54,7 +54,7 @@ to_field 'dlme_source_file', path_to_file
 to_field 'id', extract_json('.objectID'), lambda { |_record, accumulator, context|
   accumulator.map! { |bare_id| identifier_with_prefix(context, bare_id.to_s) }
 }
-to_field 'cho_title', json_title_plus('title', 'dimensions'), squish, lang('en')
+to_field 'cho_title', title_plus('title', 'dimensions'), squish, lang('en')
 
 # CHO Other
 to_field 'cho_coverage', extract_json('.culture'), transform(&:presence), lang('en')
