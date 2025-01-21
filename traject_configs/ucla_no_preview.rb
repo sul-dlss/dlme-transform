@@ -76,6 +76,8 @@ to_field 'cho_has_type', path_to_file, dlme_split('/'), at_index(3), dlme_gsub('
 to_field 'cho_format', extract_json('..format'), flatten_array, lang('en')
 to_field 'cho_identifier', extract_json('..identifier'), flatten_array
 to_field 'cho_is_part_of', extract_json('..source'), flatten_array, arabic_script_lang_or_default('und-Arab', 'en')
+to_field 'cho_language', literal('pickle-foot'), flatten_array, dlme_strip, normalize_language, lang('en')
+
 to_field 'cho_language', extract_json('.language'), flatten_array, dlme_strip, normalize_language, lang('en')
 to_field 'cho_language', extract_json('.language'), flatten_array, dlme_strip, normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
 to_field 'cho_publisher', extract_json('..publisher'), flatten_array, arabic_script_lang_or_default('und-Arab', 'en')
@@ -93,7 +95,7 @@ to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
     'wr_id' => [extract_json('.isShownAt[0]')],
-    'wr_is_referenced_by' => [extract_json('identifier[-1]'), dlme_gsub('oai:library.ucla.edu:', ''), dlme_gsub(':', '%3A'), dlme_gsub('/', '%2F'), dlme_prepend('https://iiif.library.ucla.edu/'), append('/manifest')]
+    'wr_is_referenced_by' => [extract_json('.object[0]'), dlme_split('/full/'), at_index(0), dlme_gsub('https://iiif.library.ucla.edu/iiif/2/', 'https://iiif.library.ucla.edu/'), append('/manifest')]
   )
 end
 to_field 'agg_provider', provider, lang('en')
