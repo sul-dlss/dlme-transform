@@ -69,10 +69,10 @@ to_field 'cho_date_range_norm', extract_json('.date[0]'), dlme_strip, parse_rang
 to_field 'cho_date_range_hijri', extract_json('.date[0]'), dlme_strip, parse_range, hijri_range
 to_field 'cho_dc_rights', extract_json('.rights'), flatten_array, lang('en')
 to_field 'cho_description', extract_json('..description'), flatten_array, armenian_script_lang_or_default('hy-Armn', 'en')
-to_field 'cho_edm_type', path_to_file, dlme_split('/'), at_index(3), dlme_gsub('_', '-'), dlme_prepend('ucla-'), translation_map('has_type_from_collection'), normalize_edm_type, lang('en')
-to_field 'cho_edm_type', path_to_file, dlme_split('/'), at_index(3), dlme_gsub('_', '-'), dlme_prepend('ucla-'), translation_map('has_type_from_collection'), normalize_edm_type, translation_map('edm_type_ar_from_en'), lang('ar-Arab')
-to_field 'cho_has_type', path_to_file, dlme_split('/'), at_index(3), dlme_gsub('_', '-'), dlme_prepend('ucla-'), translation_map('has_type_from_collection'), normalize_has_type, lang('en')
-to_field 'cho_has_type', path_to_file, dlme_split('/'), at_index(3), dlme_gsub('_', '-'), dlme_prepend('ucla-'), translation_map('has_type_from_collection'), normalize_has_type, translation_map('has_type_ar_from_en'), lang('ar-Arab')
+to_field 'cho_edm_type', path_to_file, dlme_split('/'), at_index(-2), dlme_gsub('_', '-'), dlme_prepend('ucla-'), translation_map('has_type_from_collection'), normalize_edm_type, lang('en')
+to_field 'cho_edm_type', path_to_file, dlme_split('/'), at_index(-2), dlme_gsub('_', '-'), dlme_prepend('ucla-'), translation_map('has_type_from_collection'), normalize_edm_type, translation_map('edm_type_ar_from_en'), lang('ar-Arab')
+to_field 'cho_has_type', path_to_file, dlme_split('/'), at_index(-2), dlme_gsub('_', '-'), dlme_prepend('ucla-'), translation_map('has_type_from_collection'), normalize_has_type, lang('en')
+to_field 'cho_has_type', path_to_file, dlme_split('/'), at_index(-2), dlme_gsub('_', '-'), dlme_prepend('ucla-'), translation_map('has_type_from_collection'), normalize_has_type, translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_format', extract_json('..format'), flatten_array, lang('en')
 to_field 'cho_identifier', extract_json('..identifier'), flatten_array
 to_field 'cho_is_part_of', extract_json('..source'), flatten_array, armenian_script_lang_or_default('hy-Armn', 'en')
