@@ -39,5 +39,13 @@ RSpec.describe Macros::NormalizeType do
         expect(indexer.map_record(json_record)).to eq 'cho_has_type' => ['Other Objects', 'Other Images', 'Other Images']
       end
     end
+
+    context 'when accumulator contains value not found in any translation maps' do
+      let(:record) { ['did not find this type'] }
+
+      it 'raises not found error' do
+        expect(indexer.map_record(json_record)).to eq 'cho_has_type' =>  ["NOT FOUND", "did not find this type"]
+      end
+    end
   end
 end
