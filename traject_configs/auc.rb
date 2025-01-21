@@ -152,6 +152,12 @@ to_field 'cho_has_type', extract_json('..physical-format'), flatten_array, norma
 to_field 'cho_has_type', extract_json('..physical-format'), flatten_array, normalize_has_type, translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_has_type', extract_json('..type'), flatten_array, normalize_has_type, lang('en')
 to_field 'cho_has_type', extract_json('..type'), flatten_array, normalize_has_type, translation_map('has_type_ar_from_en'), lang('ar-Arab')
+to_field 'cho_has_type', extract_json('..type-dcmi'), flatten_array, normalize_has_type, lang('en')
+to_field 'cho_has_type', extract_json('..type-dcmi'), flatten_array, normalize_has_type, translation_map('has_type_ar_from_en'), lang('ar-Arab')
+to_field 'cho_has_type', extract_json('..worktype'), flatten_array, normalize_has_type, lang('en')
+to_field 'cho_has_type', extract_json('..worktype'), flatten_array, normalize_has_type, translation_map('has_type_ar_from_en'), lang('ar-Arab')
+to_field 'cho_has_type', extract_json('..worktype-of-printed-material'), flatten_array, normalize_has_type, lang('en')
+to_field 'cho_has_type', extract_json('..worktype-of-printed-material'), flatten_array, normalize_has_type, translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_identifier', extract_json('..call-number'), flatten_array
 to_field 'cho_identifier', extract_json('..contentdm-number'), flatten_array
 to_field 'cho_identifier', extract_json('..identifier'), flatten_array
