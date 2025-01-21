@@ -76,6 +76,8 @@ to_field 'cho_has_type', path_to_file, dlme_split('/'), at_index(3), dlme_gsub('
 to_field 'cho_format', extract_json('..format'), flatten_array, lang('en')
 to_field 'cho_identifier', extract_json('..identifier'), flatten_array
 to_field 'cho_is_part_of', extract_json('..source'), flatten_array, arabic_script_lang_or_default('und-Arab', 'en')
+to_field 'cho_language', literal('pickle-foot'), flatten_array, dlme_strip, normalize_language, lang('en')
+
 to_field 'cho_language', extract_json('.language'), flatten_array, dlme_strip, normalize_language, lang('en')
 to_field 'cho_language', extract_json('.language'), flatten_array, dlme_strip, normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
 to_field 'cho_publisher', extract_json('..publisher'), flatten_array, arabic_script_lang_or_default('und-Arab', 'en')
