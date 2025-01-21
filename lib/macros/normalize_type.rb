@@ -25,7 +25,8 @@ module Macros
         return if accumulator.compact.empty?
 
         accumulator.map!(&:downcase)
-        translation_map = %w[has_type_from_contributor
+        translation_map = %w[not_found
+                             has_type_from_contributor
                              has_type_from_collection
                              has_type_from_de
                              has_type_from_fr
