@@ -44,7 +44,7 @@ RSpec.describe Macros::NormalizeType do
       let(:record) { ['did not find this type'] }
 
       it 'raises not found error' do
-        expect(indexer.map_record(json_record)).to eq 'cho_has_type' =>  ["NOT FOUND", "did not find this type"]
+        expect(indexer.map_record(json_record)).to eq 'cho_has_type' => ['NOT FOUND', 'did not find this type']
       end
     end
   end
