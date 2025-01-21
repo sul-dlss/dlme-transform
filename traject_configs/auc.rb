@@ -221,7 +221,7 @@ to_field 'agg_is_shown_at' do |_record, accumulator, context|
     context,
     'wr_dc_rights' => [literal('To inquire about permissions or reproductions, contact the Rare Books and Special Collections Library, The American University in Cairo at +20.2.2615.3676 or rbscl-ref@aucegypt.edu.')],
     'wr_format' => [extract_json('..iiif_format'), flatten_array, at_index(0)],
-    'wr_id' => [extract_field_or_defualt('resource', 'identifier'), flatten_array, at_index(0)],
+    'wr_id' => [extract_json('..id'), flatten_array, split('/iiif/'), at_index(-1), gsub('/manifest.json', ''), gsub(':', '/id/'), prepend('http://digitalcollections.aucegypt.edu/digital/collection/')],
     'wr_is_referenced_by' => [extract_json('..id'), flatten_array, at_index(0)]
   )
 end
