@@ -942,6 +942,26 @@
   },
   {
     "trajects": [
+      "uab.rb"
+    ],
+    "paths": [
+      "uab"
+    ],
+    "extension": ".json",
+    "settings": {
+      "agg_provider": "University of Alabama Libraries",
+      "agg_provider_country": "United States of America",
+      "agg_data_provider": "University of Alabama Libraries",
+      "agg_data_provider_country": "United States of America",
+      "agg_provider_ar": "مكتبات جامعة ألاباما",
+      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "agg_data_provider_ar": "مكتبات جامعة ألاباما",
+      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "inst_id": "uab"
+    }
+  },
+  {
+    "trajects": [
       "ucla_armenian.rb"
     ],
     "paths": [

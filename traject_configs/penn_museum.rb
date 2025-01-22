@@ -75,10 +75,10 @@ to_field 'cho_description', extract_json('.thickness'), flatten_array, transform
 to_field 'cho_description', extract_json('.weight'), flatten_array, transform(&:to_s), dlme_prepend('Weight: '), lang('en')
 to_field 'cho_description', extract_json('.outsideDiameter'), flatten_array, transform(&:to_s), dlme_prepend('Outside diameter: '), lang('en')
 to_field 'cho_description', extract_json('.measurementUnit'), flatten_array, dlme_prepend('Measurement unit: '), lang('en')
-to_field 'cho_edm_type', extract_json('.objectName'), flatten_array, normalize_has_type, normalize_edm_type, lang('en')
-to_field 'cho_edm_type', extract_json('.objectName'), flatten_array, normalize_has_type, normalize_edm_type, translation_map('edm_type_ar_from_en'), lang('ar-Arab')
-to_field 'cho_has_type', extract_json('.objectName'), flatten_array, normalize_has_type, lang('en')
-to_field 'cho_has_type', extract_json('.objectName'), flatten_array, normalize_has_type, translation_map('has_type_ar_from_en'), lang('ar-Arab')
+to_field 'cho_edm_type', extract_json('.objectName'), dlme_split(','), dlme_strip, flatten_array, normalize_has_type, normalize_edm_type, lang('en')
+to_field 'cho_edm_type', extract_json('.objectName'), dlme_split(','), dlme_strip, flatten_array, normalize_has_type, normalize_edm_type, translation_map('edm_type_ar_from_en'), lang('ar-Arab')
+to_field 'cho_has_type', extract_json('.objectName'), dlme_split(','), dlme_strip, flatten_array, normalize_has_type, lang('en')
+to_field 'cho_has_type', extract_json('.objectName'), dlme_split(','), dlme_strip, flatten_array, normalize_has_type, translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_identifier', extract_json('.identifier'), transform(&:to_s), flatten_array
 to_field 'cho_identifier', extract_json('.emuIRN'), transform(&:to_s), flatten_array
 to_field 'cho_is_part_of', extract_json('.curatorialSection'), flatten_array, dlme_prepend('Curatorial section: '), lang('en')

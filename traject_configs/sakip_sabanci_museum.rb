@@ -84,11 +84,11 @@ to_field 'cho_description', extract_json('.malzemeteknik-materialstechniques'), 
 to_field 'cho_description', extract_json('.teknik-materialstechniques'), flatten_array, dlme_prepend('Materials/Techniques: '), lang('tr-Latn')
 to_field 'cho_description', extract_json('.transkripsiyon-transcription'), flatten_array, dlme_prepend('Transcription: '), lang('tr-Latn')
 to_field 'cho_description', extract_json('.yazı-cinsi-script'), flatten_array, dlme_prepend('Script: '), lang('tr-Latn')
-to_field 'cho_edm_type', extract_json('.tür-type'), flatten_array, normalize_has_type, normalize_edm_type, lang('en')
-to_field 'cho_edm_type', extract_json('.tür-type'), flatten_array, normalize_has_type, normalize_edm_type, translation_map('edm_type_ar_from_en'), lang('ar-Arab')
+to_field 'cho_edm_type', extract_json('.tür-type'), flatten_array, dlme_split('/'), at_index(0), dlme_strip, normalize_has_type, normalize_edm_type, lang('en')
+to_field 'cho_edm_type', extract_json('.tür-type'), flatten_array, dlme_split('/'), at_index(0), dlme_strip, normalize_has_type, normalize_edm_type, translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_extent', extract_json('.boyutlar-measurements'), flatten_array, dlme_prepend('Measurements: '), lang('en')
-to_field 'cho_has_type', extract_json('.tür-type'), flatten_array, normalize_has_type, lang('en')
-to_field 'cho_has_type', extract_json('.tür-type'), flatten_array, normalize_has_type, translation_map('has_type_ar_from_en'), lang('ar-Arab')
+to_field 'cho_has_type', extract_json('.tür-type'), flatten_array, dlme_split('/'), at_index(0), dlme_strip, normalize_has_type, lang('en')
+to_field 'cho_has_type', extract_json('.tür-type'), flatten_array, dlme_split('/'), at_index(0), dlme_strip, normalize_has_type, translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_identifier', extract_json('.envanter-numarası-accession-number'), flatten_array, dlme_strip
 to_field 'cho_identifier', extract_json('.envanter-numarası-identifier'), flatten_array, dlme_strip
 to_field 'cho_language', extract_json('.dil-language'), flatten_array, dlme_split(';'), dlme_split('/'), dlme_strip, normalize_language, lang('en')
