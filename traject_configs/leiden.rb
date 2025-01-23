@@ -61,7 +61,7 @@ to_field 'id', extract_json('.id'),
          dlme_gsub('https://digitalcollections.universiteitleiden.nl/iiif_manifest/', ''),
          dlme_gsub('/manifest', ''),
          dlme_gsub('item:', '')
-to_field 'cho_title', extract_json('.title'), flatten_array, dlme_strip, arabic_script_lang_or_default('und-Arab', 'und-Latn'), default_multi_lang('Untitled', 'بدون عنوان')
+to_field 'cho_title', extract_json('.title'), flatten_array, dlme_strip, arabic_script_lang_or_default('en', 'ar-Arab')
 
 # Cho Other
 to_field 'cho_alternate', extract_json('.subtitle'), flatten_array, dlme_strip, arabic_script_lang_or_default('und-Arab', 'und-Latn')
@@ -77,6 +77,7 @@ to_field 'cho_extent', extract_json('.extent'), flatten_array, dlme_strip, lang(
 to_field 'cho_has_type', literal('Manuscripts'), lang('en')
 to_field 'cho_has_type', literal('Manuscripts'), translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_identifier', extract_json('.shelfmark'), flatten_array, dlme_strip
+to_field 'cho_is_part_of', extract_json('.part-of'), flatten_array, dlme_strip, lang('en')
 to_field 'cho_language', extract_json('.language_eng'), flatten_array, normalize_language, lang('en')
 to_field 'cho_language', extract_json('.language_eng'), flatten_array, normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
 to_field 'cho_publisher', extract_json('.published'), flatten_array, dlme_strip, lang('en')
@@ -107,6 +108,11 @@ to_field 'agg_provider', provider, lang('en')
 to_field 'agg_provider', provider_ar, lang('ar-Arab')
 to_field 'agg_provider_country', provider_country, lang('en')
 to_field 'agg_provider_country', provider_country_ar, lang('ar-Arab')
+
+# Ignored Fields
+## context
+## location
+## reference
 
 each_record convert_to_language_hash(
   'agg_data_provider',
