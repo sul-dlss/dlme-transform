@@ -1,3 +1,4 @@
+achinese: Achinese
 aljamiado: "Aljam\xEDa"
 aljamiado [fragmento g]: "Aljam\xEDa"
 "aljamiado y \xE1rabe":
@@ -108,6 +109,7 @@ indonesian: Indonesian
 italian: Italian
 italien: Italian
 japanese: Japanese
+javanese: Javanese
 judaeo arabic: Judeo-Arabic
 judaeo-arabic: Judeo-Arabic
 judaeo-italian: Judeo-Italian
@@ -200,6 +202,7 @@ malay in arabic script: Malay
 mandaic: Mandaic
 meroitic language: Meroitic
 minaic: Minaic
+minangkabau: Minangkabau
 mixed language: null
 naskhi: Arabic
 naskhi script: Arabic
@@ -244,12 +247,15 @@ sabaic: Sabaic
 sabaean language: Sabaean
 samaritan: Samaritan
 semitic language: Semitic
+semitic (other): Semitic
 slavic languages: Slavic Languages
 spanish: Spanish
+sundanese: Sundanese
 sumerian: Sumerian
 sumerian language: Sumerian
 syriac: Syriac
 swedish: Swedish
+tamil: Tamil
 tatar: Tatar
 'texto en aljamiado [parte 1 (fragmentos: 17, 18-19, 20-27, 28-45)]': Aljamia
 turkish: Turkish
@@ -283,4 +289,5 @@ yiddish: Yiddish
 - Arabic
 "\xE1rabe.": Arabic
 "\u1E25a\u1E0Dramitic": "\u1E24a\u1E0Dramitic"
+undetermined: null
 unknown: null
