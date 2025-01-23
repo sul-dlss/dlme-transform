@@ -92,8 +92,7 @@ to_field 'agg_data_provider_country', extract_json('.dataProvider[0]'), dlme_def
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_id' => [extract_json('.isShownAt[0]')],
-    'wr_is_referenced_by' => [extract_json('.object[0]'), dlme_split('/full/'), at_index(0), dlme_gsub('https://iiif.library.ucla.edu/iiif/2/', 'https://iiif.library.ucla.edu/'), append('/manifest')]
+    'wr_id' => [extract_json('.isShownAt[0]')]
   )
 end
 to_field 'agg_provider', provider, lang('en')

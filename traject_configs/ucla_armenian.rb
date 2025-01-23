@@ -93,14 +93,14 @@ to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
     'wr_id' => [extract_json('.isShownAt[0]')],
-    'wr_is_referenced_by' => [extract_json('.object[0]'), dlme_split('/full/'), at_index(0), dlme_gsub('https://iiif.library.ucla.edu/iiif/2/', 'https://iiif.library.ucla.edu/'), append('/manifest')]
+    'wr_is_referenced_by' => [extract_json('.id'), dlme_split('edu:'), at_index(-1), dlme_gsub(':/21198/', '%3A%2F21198%2F'), append('/manifest')]
   )
 end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
     'wr_id' => [extract_json('.object[0]')],
-    'wr_is_referenced_by' => [extract_json('.object[0]'), dlme_split('/full/'), at_index(0), dlme_gsub('https://iiif.library.ucla.edu/iiif/2/', 'https://iiif.library.ucla.edu/'), append('/manifest')]
+    'wr_is_referenced_by' => [extract_json('.id'), dlme_split('edu:'), at_index(-1), dlme_gsub(':/21198/', '%3A%2F21198%2F'), append('/manifest')]
   )
 end
 to_field 'agg_provider', provider, lang('en')
