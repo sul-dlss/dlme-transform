@@ -124,7 +124,8 @@ to_field 'cho_description', extract_json('..technique-of-paper-drawing'), flatte
 to_field 'cho_edm_type', literal('Text'), lang('en')
 to_field 'cho_edm_type', literal('Text'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_extent', extract_json('..extent'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en')
-to_field 'cho_extent', extract_json('..size'), flatten_array, transform(&:to_s), arabic_script_lang_or_default('ar-Arab', 'en'), intelligent_prepend('Size: ', 'مقاس: ')
+# The line below seems to be adding many numbers in the UI with "Size: " prepended. Commenting it out for now.
+# to_field 'cho_extent', extract_json('..size'), flatten_array, transform(&:to_s), arabic_script_lang_or_default('ar-Arab', 'en'), intelligent_prepend('Size: ', 'مقاس: ')
 to_field 'cho_extent', extract_json('..size-in-cm'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en'), intelligent_prepend('Size in cm: ', 'الحجم بالسم: ')
 to_field 'cho_extent', extract_json('..size-h--x--w-cm'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en'), intelligent_prepend('Size in cm: ', 'الحجم بالسم: ')
 to_field 'cho_extent', extract_json('..size-h-x-w-cm'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en'), intelligent_prepend('Size in cm: ', 'الحجم بالسم: ')
