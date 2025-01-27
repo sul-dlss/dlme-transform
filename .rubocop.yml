@@ -451,5 +451,3 @@ Style/SafeNavigationChainLength: # new in 1.68
   Enabled: false
 Performance/StringBytesize: # new in 1.23
   Enabled: true
-RSpec/StringAsInstanceDoubleConstant: # new in 3.1
-  Enabled: true
