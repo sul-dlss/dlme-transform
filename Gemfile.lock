@@ -133,6 +133,7 @@ GEM
     minitest (5.25.4)
     multi_json (1.15.0)
     multipart-post (2.4.1)
+    mutex_m (0.3.0)
     nokogiri (1.18.2)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
@@ -256,6 +257,7 @@ DEPENDENCIES
   faraday
   faraday_middleware
   ffi
+  mutex_m
   parse_date
   rake
   rspec
