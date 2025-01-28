@@ -303,7 +303,7 @@ RSpec.describe Contracts::CHO do
           let(:cho) do
             {
               field_name => {
-                wr_id: 'web_resource_id'
+                wr_id: 'http://example.com'
               }
             }
           end
@@ -356,7 +356,7 @@ RSpec.describe Contracts::CHO do
         {
           agg_has_view: [
             {
-              wr_id: 'web_resource_id'
+              wr_id: 'http://example.com'
             }
           ]
         }
