@@ -56,31 +56,31 @@ to_field 'agg_data_provider_collection_id', path_to_file, dlme_split('/'), at_in
 to_field 'dlme_source_file', path_to_file
 
 # Cho Required
-to_field 'id', extract_json('..id'), at_index(0), dlme_strip, dlme_gsub('https://libraries.aub.edu.lb/iiifservices/item/', ''), dlme_gsub('/manifest', ''), dlme_prepend('aub-')
-to_field 'cho_title', extract_json('..title'), flatten_array, dlme_strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn'), default_multi_lang('Untitled', 'بدون عنوان')
+to_field 'id', extract_json('.id'), at_index(0), dlme_strip, dlme_gsub('https://libraries.aub.edu.lb/iiifservices/item/', ''), dlme_gsub('/manifest', ''), dlme_prepend('aub-')
+to_field 'cho_title', extract_json('.title'), flatten_array, dlme_strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn'), default_multi_lang('Untitled', 'بدون عنوان')
 
 # Cho Other
-to_field 'cho_contributor', extract_json('..contributor'), flatten_array, dlme_strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
-to_field 'cho_creator', extract_json('..creator'), flatten_array, dlme_strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
-to_field 'cho_date', extract_json('..date'), flatten_array, dlme_strip, lang('en')
-to_field 'cho_date_range_hijri', extract_json('..date'), flatten_array, dlme_strip, parse_range, hijri_range
-to_field 'cho_date_range_norm', extract_json('..date'), flatten_array, dlme_strip, parse_range
-to_field 'cho_dc_rights', extract_json('..rights'), flatten_array, dlme_strip, lang('en')
-to_field 'cho_description', extract_json('..description'), flatten_array, dlme_strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
-to_field 'cho_edm_type', path_to_file, dlme_split('/'), at_index(2), dlme_gsub('_', '-'), dlme_prepend('aub-'), translation_map('has_type_from_collection'), translation_map('edm_type_from_has_type'), lang('en')
-to_field 'cho_edm_type', path_to_file, dlme_split('/'), at_index(2), dlme_gsub('_', '-'), dlme_prepend('aub-'), translation_map('has_type_from_collection'), translation_map('edm_type_from_has_type'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
-to_field 'cho_has_type', path_to_file, dlme_split('/'), at_index(2), dlme_gsub('_', '-'), dlme_prepend('aub-'), translation_map('has_type_from_collection'), lang('en')
-to_field 'cho_has_type', path_to_file, dlme_split('/'), at_index(2), dlme_gsub('_', '-'), dlme_prepend('aub-'), translation_map('has_type_from_collection'), translation_map('has_type_ar_from_en'), lang('ar-Arab')
-to_field 'cho_identifier', extract_json('..identifier'), flatten_array, dlme_strip
-to_field 'cho_language', extract_json('..language'), flatten_array, dlme_split(';'),
+to_field 'cho_contributor', extract_json('.contributors'), flatten_array, dlme_strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
+to_field 'cho_creator', extract_json('.authors'), flatten_array, dlme_strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
+to_field 'cho_date', extract_json('.date'), flatten_array, dlme_strip, lang('en')
+to_field 'cho_date_range_hijri', extract_json('.date'), flatten_array, dlme_strip, parse_range, hijri_range
+to_field 'cho_date_range_norm', extract_json('.date'), flatten_array, dlme_strip, parse_range
+to_field 'cho_dc_rights', extract_json('.rights'), flatten_array, dlme_strip, lang('en')
+to_field 'cho_dc_rights', extract_json('.usage-terms'), flatten_array, dlme_strip, lang('en')
+to_field 'cho_description', extract_json('.descriptions'), flatten_array, dlme_strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
+to_field 'cho_edm_type', path_to_file, dlme_split('/'), at_index(-2), dlme_gsub('_', '-'), dlme_prepend('aub-'), translation_map('has_type_from_collection'), translation_map('edm_type_from_has_type'), lang('en')
+to_field 'cho_edm_type', path_to_file, dlme_split('/'), at_index(-2), dlme_gsub('_', '-'), dlme_prepend('aub-'), translation_map('has_type_from_collection'), translation_map('edm_type_from_has_type'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
+to_field 'cho_extent', extract_json('.extent'), flatten_array, dlme_strip, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_has_type', path_to_file, dlme_split('/'), at_index(-2), dlme_gsub('_', '-'), dlme_prepend('aub-'), translation_map('has_type_from_collection'), lang('en')
+to_field 'cho_has_type', path_to_file, dlme_split('/'), at_index(-2), dlme_gsub('_', '-'), dlme_prepend('aub-'), translation_map('has_type_from_collection'), translation_map('has_type_ar_from_en'), lang('ar-Arab')
+to_field 'cho_identifier', extract_json('.identifier'), flatten_array, dlme_strip
+to_field 'cho_is_part_of', extract_json('.collection'), flatten_array, dlme_strip, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_language', extract_json('.language'), flatten_array, dlme_split(';'),
          dlme_split(','), dlme_strip, normalize_language, lang('en')
-to_field 'cho_language', extract_json('..language'), flatten_array, dlme_split(';'),
+to_field 'cho_language', extract_json('.language'), flatten_array, dlme_split(';'),
          dlme_split(','), dlme_strip, normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
-to_field 'cho_publisher', extract_json('..publisher'), flatten_array, dlme_strip, lang('en')
-to_field 'cho_source', extract_json('..source'), flatten_array, dlme_strip, lang('en')
-to_field 'cho_spatial', extract_json('..coverage'), flatten_array, dlme_strip, lang('en')
-to_field 'cho_subject', extract_json('..subject'), flatten_array, dlme_strip, lang('en')
-to_field 'cho_type', extract_json('..type'), flatten_array, dlme_strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
+to_field 'cho_publisher', extract_json('.publisher'), flatten_array, dlme_strip, lang('en')
+to_field 'cho_subject', extract_json('.subjects'), flatten_array, dlme_strip, lang('en')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
@@ -90,17 +90,17 @@ to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_dc_rights' => [extract_json('..rights'), flatten_array],
+    'wr_dc_rights' => [extract_json('.rights'), flatten_array],
     'wr_edm_rights' => [literal('CC BY-ND: https://creativecommons.org/licenses/by-nd/4.0/')],
-    'wr_id' => [extract_json('..identifier'), flatten_array, at_index(0), dlme_strip]
+    'wr_id' => [extract_json('.identifier'), flatten_array, at_index(0), dlme_strip, dlme_prepend('https://libraries.aub.edu.lb/blacklight/catalog/')]
   )
 end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_dc_rights' => [extract_json('..rights'), flatten_array],
+    'wr_dc_rights' => [extract_json('.rights'), flatten_array],
     'wr_edm_rights' => [literal('CC BY-ND: https://creativecommons.org/licenses/by-nd/4.0/')],
-    'wr_id' => [extract_json('..description'), flatten_array, at_index(0), dlme_strip]
+    'wr_id' => [extract_json('.thumbnail'), flatten_array, at_index(0), dlme_strip]
   )
 end
 to_field 'agg_provider', provider, lang('en')
@@ -109,7 +109,7 @@ to_field 'agg_provider_country', provider_country, lang('en')
 to_field 'agg_provider_country', provider_country_ar, lang('ar-Arab')
 
 # Ignored Fields
-## none
+## homepage
 
 each_record convert_to_language_hash(
   'agg_data_provider',
