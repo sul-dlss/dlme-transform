@@ -4,6 +4,8 @@ abbey churches: Structures
 accessory: Other Objects
 adornment: Adornments
 adornment (uncertain): Other Objects
+advertisement: null
+advertisements: null
 adze: Tools & Equipment
 adze handle: Tools & Equipment
 adze handle (uncertain): Tools & Equipment
@@ -1123,6 +1125,7 @@ lentoid flask: Containers
 lentoid flask (uncertain): Other Objects
 letter: Letters
 letter book: Letters
+letters: Letters
 letters (correspondence): Letters
 levallois flake: Other Objects
 levallois point: Other Objects
@@ -1989,6 +1992,7 @@ tibia: Other Objects
 tile: Other Objects
 tile fragment: Other Objects
 tiles: Other Objects
+timetables: null
 tinder packet: Other Objects
 tobacco: Other Objects
 toe ring: Adornments

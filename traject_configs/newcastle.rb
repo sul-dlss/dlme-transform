@@ -67,11 +67,11 @@ to_field 'cho_dc_rights', literal('Public Domain'), lang('en')
 to_field 'cho_dc_rights', literal('High Resolution images for reuse are available on request. Please complete the form on each image page or contact us. Please note that processing fees apply. Where re-using, we ask that you acknowledge in the following form: [insert full item reference], Bell (Gertrude) Archive, Newcastle University Library. Where copyright restrictions do still apply, as indicated against an item, please get in touch.'), lang('en')
 to_field 'cho_description', extract_json('.description'), lang('en')
 to_field 'cho_description', extract_json('.letter_recipient'), dlme_prepend('Letter recipient: '), lang('en')
-to_field 'cho_edm_type', extract_json('.type'), translation_map('edm_type_from_has_type'), lang('en')
-to_field 'cho_edm_type', extract_json('.type'), translation_map('edm_type_from_has_type'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
+to_field 'cho_edm_type', extract_json('.type'), normalize_has_type, normalize_edm_type, lang('en')
+to_field 'cho_edm_type', extract_json('.type'), normalize_has_type, normalize_edm_type, translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_extent', extract_json('.extent'), lang('en')
-to_field 'cho_has_type', extract_json('.type'), lang('en')
-to_field 'cho_has_type', extract_json('.type'), translation_map('has_type_ar_from_en'), lang('ar-Arab')
+to_field 'cho_has_type', extract_json('.type'), normalize_has_type, lang('en')
+to_field 'cho_has_type', extract_json('.type'), normalize_has_type, translation_map('has_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_is_part_of', literal('Gertrude Bell Archive'), lang('en')
 to_field 'cho_language', extract_json('.language'), normalize_language, lang('en')
 to_field 'cho_language', extract_json('.language'), normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
@@ -97,6 +97,9 @@ to_field 'agg_provider', provider, lang('en')
 to_field 'agg_provider', provider_ar, lang('ar-Arab')
 to_field 'agg_provider_country', provider_country, lang('en')
 to_field 'agg_provider_country', provider_country_ar, lang('ar-Arab')
+
+# Ignored Fields
+## none
 
 each_record convert_to_language_hash(
   'agg_data_provider',

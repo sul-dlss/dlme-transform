@@ -58,23 +58,28 @@ to_field 'agg_data_provider_collection_id', path_to_file, dlme_split('/'), at_in
 
 # CHO Required
 to_field 'id', extract_json('.id'), dlme_gsub('oai:alma', '')
-to_field 'cho_title', extract_json('.245_a'), flatten_array, dlme_split('/'), dlme_strip, arabic_script_lang_or_default('und-Arab', 'en')
+to_field 'cho_title', extract_json('.title'), flatten_array, dlme_split('/'), dlme_strip, arabic_script_lang_or_default('ar-Arab', 'en')
 
 # CHO Other
-to_field 'cho_creator', extract_json('.100_a'), flatten_array, arabic_script_lang_or_default('und-Arab', 'en')
-to_field 'cho_dc_rights', extract_json('.540_a'), flatten_array, lang('en')
-to_field 'cho_description', extract_json('.520_a'), flatten_array, arabic_script_lang_or_default('und-Arab', 'en')
+to_field 'cho_contributor', extract_json('.contributor'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_creator', extract_json('.creator'), flatten_array, dlme_split('/'), dlme_strip, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_date', extract_json('.date'), flatten_array, lang('en')
+to_field 'cho_date_range_hijri', extract_json('.date'), flatten_array, dlme_strip, parse_range, hijri_range
+to_field 'cho_date_range_norm', extract_json('.date'), flatten_array, dlme_strip, parse_range
+
+to_field 'cho_dc_rights', extract_json('.rights'), flatten_array, lang('en')
+to_field 'cho_description', extract_json('.description'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en')
 to_field 'cho_edm_type', literal('Text'), lang('en')
 to_field 'cho_edm_type', literal('Text'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_has_type', literal('Manuscripts'), lang('en')
 to_field 'cho_has_type', literal('Manuscripts'), translation_map('has_type_ar_from_en'), lang('ar-Arab')
-to_field 'cho_format', extract_json('.856_q'), flatten_array, lang('en')
-to_field 'cho_is_part_of', extract_json('.787_n'), flatten_array, arabic_script_lang_or_default('und-Arab', 'en')
-to_field 'cho_language', extract_json('.546_a'), flatten_array, dlme_strip, normalize_language, lang('en')
-to_field 'cho_language', extract_json('.546_a'), flatten_array, dlme_strip, normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
-to_field 'cho_subject', extract_json('.653_a'), flatten_array, arabic_script_lang_or_default('und-Arab', 'en')
-# uab requested to translated LoC urls to user-facing type values
-to_field 'cho_type', extract_json('.655_a'), flatten_array, translation_map('type_from_loc'), lang('en')
+to_field 'cho_format', extract_json('.format'), flatten_array, lang('en')
+to_field 'cho_is_part_of', extract_json('.relation'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_language', extract_json('.language'), flatten_array, dlme_split(';'), dlme_strip, normalize_language, lang('en')
+to_field 'cho_language', extract_json('.language'), flatten_array, dlme_split(';'), dlme_strip, normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
+to_field 'cho_publisher', extract_json('.publisher'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_subject', extract_json('.subject'), flatten_array, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_type', extract_json('.type'), flatten_array, translation_map('type_from_loc'), lang('en')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
@@ -84,15 +89,13 @@ to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_id' => [extract_json('.id'), dlme_split(':'), at_index(-1), dlme_prepend('https://uab.primo.exlibrisgroup.com/discovery/fulldisplay?docid=alma'), dlme_append('&context=L&vid=01AL_UALB:UAB_Libraries&lang=en&adaptor=Local%20Search%20Engine')],
-    'wr_is_referenced_by' => [extract_json('.id'), dlme_split(':'), at_index(-1), dlme_gsub('https://iiif.library.uab.edu/iiif/2/', 'https://iiif.library.uab.edu/'), append('/manifest')]
+    'wr_id' => [extract_json('.identifier[-1]'), dlme_gsub('alma:01AL_UALB/bibs/', ''), dlme_prepend('https://uab.primo.exlibrisgroup.com/permalink/01AL_UALB/1i8phse/alma')]
   )
 end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_id' => [extract_json('.object[0]')],
-    'wr_is_referenced_by' => [extract_json('.object[0]'), dlme_split('/full/'), at_index(0), dlme_gsub('https://iiif.library.uab.edu/iiif/2/', 'https://iiif.library.uab.edu/'), append('/manifest')]
+    'wr_id' => [extract_json('.identifier[0]'), dlme_prepend('https://codex.library.uab.edu/thumbnails/'), dlme_append('.jpg')]
   )
 end
 to_field 'agg_provider', provider, lang('en')
