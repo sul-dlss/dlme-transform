@@ -10,7 +10,6 @@ module Contracts
     json do
       required(:wr_id).filled(:str?, format?: URL_REGEX)
       optional(:wr_format).array(:str?)
-      # optional(:wr_is_referenced_by).maybe(:array).each(:str?, format?: URL_REGEX) # Fails on null values
       optional(:wr_has_service).value(:array).each do
         hash do
           required(:service_id).filled(:string)
