@@ -10,7 +10,6 @@ gem 'dry-validation'
 gem 'faraday'
 gem 'faraday_middleware'
 gem 'ffi'
-gem 'mutex_m'
 gem 'parse_date'
 gem 'rake'
 gem 'thor' # for CLI
