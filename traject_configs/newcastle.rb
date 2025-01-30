@@ -15,6 +15,7 @@ require 'macros/prepend'
 require 'macros/string_helper'
 require 'macros/timestamp'
 require 'macros/title_extraction'
+require 'macros/transformation'
 require 'macros/version'
 require 'traject_plus'
 
@@ -31,6 +32,7 @@ extend Macros::Prepend
 extend Macros::StringHelper
 extend Macros::Timestamp
 extend Macros::TitleExtraction
+extend Macros::Transformation
 extend Macros::Version
 extend TrajectPlus::Macros
 extend TrajectPlus::Macros::JSON
@@ -50,9 +52,9 @@ to_field 'transform_timestamp', timestamp
 # File path
 to_field 'dlme_source_file', path_to_file
 
-to_field 'agg_data_provider_collection', path_to_file, split('/'), at_index(-2), gsub('_', '-'), dlme_prepend('newcastle-'), translation_map('agg_collection_from_provider_id'), lang('en')
-to_field 'agg_data_provider_collection', path_to_file, split('/'), at_index(-2), gsub('_', '-'), dlme_prepend('newcastle-'), translation_map('agg_collection_from_provider_id'), translation_map('agg_collection_ar_from_en'), lang('ar-Arab')
-to_field 'agg_data_provider_collection_id', path_to_file, split('/'), at_index(-2), gsub('_', '-'), dlme_prepend('newcastle-')
+to_field 'agg_data_provider_collection', path_to_file, dlme_split('/'), at_index(-2), gsub('_', '-'), dlme_prepend('newcastle-'), translation_map('agg_collection_from_provider_id'), lang('en')
+to_field 'agg_data_provider_collection', path_to_file, dlme_split('/'), at_index(-2), gsub('_', '-'), dlme_prepend('newcastle-'), translation_map('agg_collection_from_provider_id'), translation_map('agg_collection_ar_from_en'), lang('ar-Arab')
+to_field 'agg_data_provider_collection_id', path_to_file, dlme_split('/'), at_index(-2), gsub('_', '-'), dlme_prepend('newcastle-')
 
 # CHO Required
 to_field 'id', extract_json('.id'), dlme_prepend('gertrude-bell-')
@@ -72,6 +74,7 @@ to_field 'cho_edm_type', extract_json('.type'), normalize_has_type, normalize_ed
 to_field 'cho_extent', extract_json('.extent'), lang('en')
 to_field 'cho_has_type', extract_json('.type'), normalize_has_type, lang('en')
 to_field 'cho_has_type', extract_json('.type'), normalize_has_type, translation_map('has_type_ar_from_en'), lang('ar-Arab')
+to_field 'cho_is_part_of', literal('أرشيف جيرترود بيل'), lang('ar-Arab')
 to_field 'cho_is_part_of', literal('Gertrude Bell Archive'), lang('en')
 to_field 'cho_language', extract_json('.language'), normalize_language, lang('en')
 to_field 'cho_language', extract_json('.language'), normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
@@ -90,7 +93,7 @@ to_field 'agg_is_shown_at' do |_record, accumulator, context|
 end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(context,
-                                  'wr_id' => extract_json('.thumbnail'),
+                                  'wr_id' => [extract_json('.thumbnail'), dlme_append('full/400,400/0/default.jpg')],
                                   'wr_is_referenced_by' => extract_json('.iiif_manifest'))
 end
 to_field 'agg_provider', provider, lang('en')
