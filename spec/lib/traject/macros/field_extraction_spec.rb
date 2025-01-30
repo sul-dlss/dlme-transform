@@ -12,95 +12,33 @@ RSpec.describe Macros::FieldExtraction do
     end
   end
 
-  describe 'column_or_other_column' do
+  describe 'extract_person_date_role' do
     # Sample records
-    let(:both_fields) { { 'title' => 'Some title', 'other' => 'Some other field' } }
-    let(:only_other) { { 'other' => 'Some other field' } }
+    let(:all_fields) { { 'person' => 'John Doe', 'date' => '1880-1923', 'role' => 'author' } }
+    let(:no_date) { { 'person' => 'John Doe', 'role' => 'author' } }
+    let(:no_role) { { 'person' => 'John Doe', 'date' => '1880-1923' } }
+    let(:only_person) { { 'person' => 'John Doe' } }
 
     before do
       indexer.instance_eval do
-        to_field 'cho_title', column_or_other_column('title', 'other')
+        to_field 'cho_creator', extract_person_date_role('person', 'date', 'role')
       end
     end
 
-    it 'has title present' do
-      expect(indexer.map_record(both_fields)).to eq('cho_title' => ['Some title'])
+    it 'has all fields' do
+      expect(indexer.map_record(all_fields)).to eq('cho_creator' => ['Author: John Doe 1880-1923'])
     end
 
-    it 'has no title but other field present' do
-      expect(indexer.map_record(only_other)).to eq('cho_title' => ['Some other field'])
-    end
-  end
-
-  describe 'extract_field_or_defualt' do
-    # Sample records
-    let(:both_fields) { { 'title' => 'Some title', 'other' => 'Some other field' } }
-    let(:only_other) { { 'other' => 'Some other field' } }
-
-    before do
-      indexer.instance_eval do
-        to_field 'cho_title', extract_field_or_defualt('title', 'other')
-      end
+    it 'has no date' do
+      expect(indexer.map_record(no_date)).to eq('cho_creator' => ['Author: John Doe'])
     end
 
-    it 'has title present' do
-      expect(indexer.map_record(both_fields)).to eq('cho_title' => ['Some title'])
+    it 'has no role' do
+      expect(indexer.map_record(no_role)).to eq('cho_creator' => ['John Doe 1880-1923'])
     end
 
-    it 'has no title but other field present' do
-      expect(indexer.map_record(only_other)).to eq('cho_title' => ['Some other field'])
-    end
-  end
-
-  describe '#xpath_multi_lingual_commas_with_prepend' do # rubocop:disable RSpec/MultipleMemoizedHelpers
-    let(:ar_val_only_record) do
-      <<-XML
-        <record>
-          <metadata>
-            <title>القرآن</title>
-          </metadata>
-        </record>
-      XML
-    end
-    let(:ar_only) { Nokogiri::XML.parse(ar_val_only_record) }
-    let(:latn_val_only_record) do
-      <<-XML
-        <record>
-          <metadata>
-            <title>Qur'an</title>
-          </metadata>
-        </record>
-      XML
-    end
-    let(:latn_only) { Nokogiri::XML.parse(latn_val_only_record) }
-    let(:both_vals_record) do
-      <<-XML
-        <record>
-          <metadata>
-            <title>القرآن</title>
-            <title>Qur'an</title>
-          </metadata>
-        </record>
-      XML
-    end
-    let(:both) { Nokogiri::XML.parse(both_vals_record) }
-
-    before do
-      indexer.instance_eval do
-        to_field 'cho_title', xpath_multi_lingual_commas_with_prepend('/record/metadata/title', 'لقب: ', 'Title: ')
-      end
-    end
-
-    it 'has arabic value only' do
-      expect(indexer.map_record(ar_only)).to eq('cho_title' => ['لقب: القرآن'])
-    end
-
-    it 'has latin value only' do
-      expect(indexer.map_record(latn_only)).to eq('cho_title' => ["Title: Qur'an"])
-    end
-
-    it 'has values in both scripts' do
-      expect(indexer.map_record(both)).to eq('cho_title' => ['لقب: القرآن', "Title: Qur'an"])
+    it 'has only person' do
+      expect(indexer.map_record(only_person)).to eq('cho_creator' => ['John Doe'])
     end
   end
 end
