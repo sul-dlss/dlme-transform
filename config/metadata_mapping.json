@@ -502,12 +502,32 @@
   },
   {
     "trajects": [
+      "mcgill.rb"
+    ],
+    "paths": [
+      "mcgill"
+    ],
+    "extension": ".json",
+    "settings": {
+      "agg_provider": "McGill University",
+      "agg_provider_country": "Canada",
+      "agg_data_provider": "McGill University",
+      "agg_data_provider_country": "Canada",
+      "agg_provider_ar": "جامعة ماكجيل",
+      "agg_provider_country_ar": "كندا",
+      "agg_data_provider_ar": "جامعة ماكجيل",
+      "agg_data_provider_country_ar": "كندا",
+      "inst_id": "mcgill"
+    }
+  },
+  {
+    "trajects": [
       "michigan.rb"
     ],
     "paths": [
       "michigan"
     ],
-    "extension": ".xml",
+    "extension": ".json",
     "settings": {
       "agg_provider": "University of Michigan",
       "agg_provider_country": "United States of America",
@@ -949,13 +969,13 @@
     ],
     "extension": ".json",
     "settings": {
-      "agg_provider": "University of Alabama Libraries",
+      "agg_provider": "University of Alabama at Birmingham Libraries",
       "agg_provider_country": "United States of America",
-      "agg_data_provider": "University of Alabama Libraries",
+      "agg_data_provider": "University of Alabama at Birmingham Libraries",
       "agg_data_provider_country": "United States of America",
-      "agg_provider_ar": "مكتبات جامعة ألاباما",
+      "agg_provider_ar": "جامعة ألاباما في مكتبات برمنغهام",
       "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "agg_data_provider_ar": "مكتبات جامعة ألاباما",
+      "agg_data_provider_ar": "جامعة ألاباما في مكتبات برمنغهام",
       "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
       "inst_id": "uab"
     }

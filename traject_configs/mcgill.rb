@@ -6,6 +6,7 @@ require 'macros/collection'
 require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
+require 'macros/field_extraction'
 require 'macros/language_extraction'
 require 'macros/normalize_language'
 require 'macros/normalize_type'
@@ -22,6 +23,7 @@ extend Macros::Collection
 extend Macros::DateParsing
 extend Macros::DLME
 extend Macros::EachRecord
+extend Macros::FieldExtraction
 extend Macros::LanguageExtraction
 extend Macros::NormalizeLanguage
 extend Macros::NormalizeType
@@ -50,66 +52,42 @@ to_field 'transform_timestamp', timestamp
 # File path
 to_field 'dlme_source_file', path_to_file
 
-to_field 'agg_data_provider_collection', path_to_file, split('/'), at_index(2), dlme_gsub('_', '-'), dlme_prepend('mcgill-'), translation_map('agg_collection_from_provider_id'), lang('en')
-to_field 'agg_data_provider_collection', path_to_file, split('/'), at_index(2), dlme_gsub('_', '-'), dlme_prepend('mcgill-'), translation_map('agg_collection_from_provider_id'), translation_map('agg_collection_ar_from_en'), lang('ar-Arab')
-to_field 'agg_data_provider_collection_id', path_to_file, split('/'), at_index(2), dlme_gsub('_', '-'), dlme_prepend('mcgill-')
+to_field 'agg_data_provider_collection', path_to_file, split('/'), at_index(-2), dlme_gsub('_', '-'), dlme_prepend('mcgill-'), translation_map('agg_collection_from_provider_id'), lang('en')
+to_field 'agg_data_provider_collection', path_to_file, split('/'), at_index(-2), dlme_gsub('_', '-'), dlme_prepend('mcgill-'), translation_map('agg_collection_from_provider_id'), translation_map('agg_collection_ar_from_en'), lang('ar-Arab')
+to_field 'agg_data_provider_collection_id', path_to_file, split('/'), at_index(-2), dlme_gsub('_', '-'), dlme_prepend('mcgill-')
 
 # Cho Required
-to_field 'id', extract_json('.id'),
-         flatten_array,
-         dlme_strip,
-         dlme_gsub('https://iiif.bodleian.ox.ac.uk/iiif/manifest/', ''),
-         dlme_gsub('.json', '')
-to_field 'cho_title', extract_json('.title'), flatten_array, dlme_strip, arabic_script_lang_or_default('und-Arab', 'und-Latn'), default_multi_lang('Untitled', 'بدون عنوان')
+to_field 'id', extract_json('.001'), flatten_array, dlme_strip
+to_field 'cho_title', extract_json('.245_a'), flatten_array, dlme_strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn'), default_multi_lang('Untitled', 'بدون عنوان')
 
 # Cho Other
-to_field 'cho_alternate', extract_json('.other-titles'), flatten_array, dlme_strip, arabic_script_lang_or_default('und-Arab', 'und-Latn')
-to_field 'cho_contributor', extract_json('.annotator'), flatten_array, dlme_strip, dlme_prepend('Annotator: '), arabic_script_lang_or_default('und-Arab', 'und-Latn')
-to_field 'cho_contributor', extract_json('.author-of-introduction'), flatten_array, dlme_strip, dlme_prepend('Author of introduction: '), arabic_script_lang_or_default('und-Arab', 'und-Latn')
-to_field 'cho_contributor', extract_json('.compiler'), flatten_array, dlme_strip, dlme_prepend('Compiler: '), arabic_script_lang_or_default('und-Arab', 'und-Latn')
-to_field 'cho_contributor', extract_json('.commentators'), flatten_array, dlme_strip, dlme_prepend('Commentators: '), arabic_script_lang_or_default('und-Arab', 'und-Latn')
-to_field 'cho_contributor', extract_json('.contributor'), flatten_array, dlme_strip, arabic_script_lang_or_default('und-Arab', 'und-Latn')
-to_field 'cho_contributor', extract_json('.editors'), flatten_array, dlme_strip, dlme_prepend('Editor: '), arabic_script_lang_or_default('und-Arab', 'und-Latn')
-to_field 'cho_contributor', extract_json('.illustrator'), flatten_array, dlme_strip, dlme_prepend('Illustrator: '), arabic_script_lang_or_default('und-Arab', 'und-Latn')
-to_field 'cho_contributor', extract_json('.printer'), flatten_array, dlme_strip, dlme_prepend('Printer: '), arabic_script_lang_or_default('und-Arab', 'und-Latn')
-to_field 'cho_contributor', extract_json('.scribe'), flatten_array, dlme_strip, dlme_prepend('Scribe: '), arabic_script_lang_or_default('und-Arab', 'und-Latn')
-to_field 'cho_contributor', extract_json('.translator'), flatten_array, dlme_strip, dlme_prepend('Translator: '), arabic_script_lang_or_default('und-Arab', 'und-Latn')
-to_field 'cho_creator', extract_json('.author'), flatten_array, dlme_strip, dlme_prepend('Author: '), arabic_script_lang_or_default('und-Arab', 'und-Latn')
-to_field 'cho_creator', extract_json('.creator'), flatten_array, dlme_strip, arabic_script_lang_or_default('und-Arab', 'und-Latn')
-to_field 'cho_date', extract_json('.date-statement'), flatten_array, dlme_strip, lang('en')
-to_field 'cho_date_range_norm', extract_json('.date-statement'), flatten_array, dlme_strip, dlme_gsub('/', '-'), parse_range
-to_field 'cho_date_range_hijri', extract_json('.date-statement'), flatten_array, dlme_strip, dlme_gsub('/', '-'), parse_range, hijri_range
-to_field 'cho_dc_rights', literal('Photo: © Bodleian Libraries, University of Oxford, Terms of use: http://digital.bodleian.ox.ac.uk/terms.html'), lang('en')
-to_field 'cho_description', extract_json('.binding'), flatten_array, dlme_strip, dlme_prepend('Binding: '), lang('en')
-to_field 'cho_description', extract_json('.catalogue-description'), flatten_array, dlme_strip, lang('en')
-to_field 'cho_description', extract_json('.collation'), flatten_array, dlme_strip, dlme_prepend('Collation: '), lang('en')
-to_field 'cho_description', extract_json('.contents'), flatten_array, dlme_strip, dlme_prepend('Contents: '), lang('en')
-to_field 'cho_description', extract_json('.contents-note'), flatten_array, dlme_strip, dlme_prepend('Contents note: '), lang('en')
-to_field 'cho_description', extract_json('.decoration'), flatten_array, dlme_strip, dlme_prepend('Decoration: '), lang('en')
-to_field 'cho_description', extract_json('.description'), flatten_array, dlme_strip, arabic_script_lang_or_default('und-Arab', 'und-Latn')
-to_field 'cho_description', extract_json('.dimensions'), flatten_array, dlme_strip, dlme_prepend('Dimensions: '), lang('en')
-to_field 'cho_description', extract_json('.hand'), flatten_array, dlme_strip, dlme_prepend('Hand: '), lang('en')
-to_field 'cho_description', extract_json('.layout'), flatten_array, dlme_strip, dlme_prepend('Layout: '), lang('en')
-to_field 'cho_description', extract_json('.origin-note'), flatten_array, dlme_strip, dlme_prepend('Origin note: '), lang('en')
-to_field 'cho_description', extract_json('.record-origin'), flatten_array, dlme_strip, dlme_prepend('Record origin: '), lang('en')
+to_field 'cho_alternate', extract_json('.240_a'), flatten_array, dlme_strip, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_alternate', extract_json('.246_a'), flatten_array, dlme_strip, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_alternate', extract_json('.880_c'), flatten_array, dlme_strip, arabic_script_lang_or_default('ar-Arab', 'en')
+to_field 'cho_creator', extract_person_date_role('.100_a', '.100_d', '.100_e'), flatten_array, dlme_strip, dlme_gsub('.', ''), arabic_script_lang_or_default('ar-Arab', 'und-Latn')
+to_field 'cho_creator', extract_person_date_role('.880_a', '.880_d', '.880_e'), flatten_array, dlme_strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
+to_field 'cho_date', extract_json('.264_c'), flatten_array, dlme_strip, lang('en')
+to_field 'cho_date_range_norm', extract_json('.974_y'), flatten_array, dlme_strip, dlme_gsub('/', '-'), parse_range
+to_field 'cho_date_range_hijri', extract_json('.974_y'), flatten_array, dlme_strip, dlme_gsub('/', '-'), parse_range, hijri_range
+to_field 'cho_description', extract_json('.500_a'), flatten_array, dlme_strip, dlme_prepend('Binding: '), lang('en')
+to_field 'cho_description', extract_json('.563_a'), flatten_array, dlme_strip, lang('en')
+to_field 'cho_description', extract_json('.520_a'), flatten_array, dlme_strip, dlme_prepend('Collation: '), lang('en')
 to_field 'cho_edm_type', literal('Text'), lang('en')
 to_field 'cho_edm_type', literal('Text'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
-to_field 'cho_extent', extract_json('.extent'), flatten_array, dlme_strip, lang('en')
+to_field 'cho_extent', extract_json('.300_a'), flatten_array, dlme_strip, lang('en')
+to_field 'cho_extent', extract_json('.300_c'), flatten_array, dlme_strip, lang('en')
 to_field 'cho_has_type', literal('Manuscripts'), lang('en')
 to_field 'cho_has_type', literal('Manuscripts'), translation_map('has_type_ar_from_en'), lang('ar-Arab')
-to_field 'cho_identifier', extract_json('.catalogue-identifier'), flatten_array, dlme_strip
-to_field 'cho_identifier', extract_json('.other-identifier'), flatten_array, dlme_strip
-to_field 'cho_identifier', extract_json('.shelfmark'), flatten_array, dlme_strip
-to_field 'cho_is_part_of', extract_json('.collection'), flatten_array, dlme_strip, lang('en')
-to_field 'cho_language', extract_json('.language'), flatten_array, normalize_language, lang('en')
-to_field 'cho_language', extract_json('.language'), flatten_array, normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
-to_field 'cho_medium', extract_json('.materials'), flatten_array, dlme_strip, lang('en')
-to_field 'cho_publisher', extract_json('.publisher'), flatten_array, dlme_strip, lang('en')
-to_field 'cho_provenance', extract_json('.former-owner'), flatten_array, dlme_strip, dlme_prepend('Former owner: '), lang('en')
-to_field 'cho_provenance', extract_json('.provenance'), flatten_array, dlme_strip, lang('en')
-to_field 'cho_relation', extract_json('.related-items'), flatten_array, dlme_strip, lang('en')
-to_field 'cho_spatial', extract_json('.place-of-origin'), flatten_array, dlme_strip, lang('en')
-to_field 'cho_subject', extract_json('.subject'), flatten_array, dlme_strip, lang('en')
+to_field 'cho_identifier', extract_json('.035_a'), flatten_array, dlme_strip
+to_field 'cho_identifier', extract_json('.055_a'), flatten_array, dlme_strip
+to_field 'cho_language', extract_json('.546_a'), flatten_array, dlme_split('and'), dlme_gsub('Text in', ''), dlme_gsub('In', ''), dlme_gsub('.', ''), dlme_strip, normalize_language, lang('en')
+to_field 'cho_language', extract_json('.546_a'), flatten_array, dlme_split('and'), dlme_gsub('Text in', ''), dlme_gsub('In', ''), dlme_gsub('.', ''), dlme_strip, normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
+to_field 'cho_provenance', extract_json('.592_a'), flatten_array, dlme_strip, dlme_prepend('Current location: '), lang('en')
+to_field 'cho_provenance', extract_json('.791_a'), flatten_array, dlme_strip, dlme_prepend('Current location: '), lang('en')
+to_field 'cho_subject', extract_json('.650_a'), flatten_array, dlme_strip, lang('en')
+to_field 'cho_subject', extract_json('.650_v'), flatten_array, dlme_strip, lang('en')
+to_field 'cho_subject', extract_json('.655_a'), flatten_array, dlme_strip, lang('en')
+to_field 'cho_subject', extract_json('.630_a'), flatten_array, dlme_strip, lang('en')
 
 # Agg
 to_field 'agg_data_provider', data_provider, lang('en')
@@ -119,21 +97,205 @@ to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_id' => [extract_json('.rendering'), flatten_array, dlme_strip],
-    'wr_is_referenced_by' => [extract_json('.id'), flatten_array, dlme_strip]
+    'wr_id' => [extract_json('.001'), flatten_array, dlme_strip, dlme_prepend('https://catalog.hathitrust.org/Record/')]
   )
 end
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_id' => [extract_json('.thumbnail'), flatten_array, at_index(0), dlme_strip],
-    'wr_is_referenced_by' => [extract_json('.id'), flatten_array, dlme_strip]
+    'wr_id' => [extract_json('.974_u'), flatten_array, at_index(0), dlme_strip, dlme_prepend('https://babel.hathitrust.org/cgi/imgsrv/cover?id='), dlme_append(';width=250')]
   )
 end
 to_field 'agg_provider', provider, lang('en')
 to_field 'agg_provider', provider_ar, lang('ar-Arab')
 to_field 'agg_provider_country', provider_country, lang('en')
 to_field 'agg_provider_country', provider_country_ar, lang('ar-Arab')
+
+# Ignore
+## 003
+## 005
+## 006
+## 007
+## 008
+## 019_a
+## 040_a
+## 040_b
+## 040_c
+## 040_d
+## 040_e
+## 041_a
+## 041_g
+## 041_h
+## 043_a
+## 049_a
+## 050_a
+## 050_b
+## 060_a
+## 060_b
+## 066_c
+## 100_6
+## 100_a
+## 100_c
+## 100_d
+## 100_e
+## 130_6
+## 130_a
+## 130_l
+## 240_6
+## 240_h
+## 240_n
+## 245_6
+## 245_b
+## 245_c
+## 245_k
+## 245_n
+## 246_6
+## 246_i
+## 246_n
+## 260_a
+## 260_c
+## 264_6
+## 264_a
+## 264_b
+## 300_b
+## 336_2
+## 336_2
+## 336_a
+## 336_b
+## 337_2
+## 337_a
+## 337_b
+## 338_2
+## 338_a
+## 338_b
+## 500_5
+## 500_6
+## 501_5
+## 501_a
+## 505_t
+## 510_a
+## 510_c
+## 530_a
+## 538_a
+## 540_5
+## 540_a
+## 541_5
+## 541_a
+## 546_a
+## 546_b
+## 561_5
+## 561_a
+## 563_5
+## 588_a
+## 590_a
+## 591_a
+## 593_a
+## 594_a
+## 594_c
+## 600_0
+## 600_2
+## 600_6
+## 600_a
+## 600_c
+## 600_d
+## 600_k
+## 600_n
+## 600_p
+## 600_t
+## 600_v
+## 630_0
+## 630_2
+## 630_6
+## 630_l
+## 630_v
+## 648_2
+## 648_a
+## 650_0
+## 650_2
+## 650_y
+## 650_z
+## 651_0
+## 651_2
+## 651_a
+## 651_y
+## 651_z
+## 655_0
+## 655_2
+## 655_v
+## 655_y
+## 700_6
+## 700_a
+## 700_c
+## 700_d
+## 700_e
+## 700_i
+## 700_k
+## 700_n
+## 700_q
+## 700_t
+## 710_a
+## 710_b
+## 710_k
+## 710_k
+## 710_l
+## 710_n
+## 730_6
+## 730_a
+## 752_a
+## 752_d
+## 776_a
+## 776_i
+## 776_t
+## 790_a
+## 790_c
+## 790_d
+## 790_e
+## 790_q
+## 791_a
+## 791_b
+## 791_k
+## 791_l
+## 791_n
+## 793_a
+## 793_p
+## 880_5
+## 880_6
+## 880_a
+## 880_b
+## 880_d
+## 880_e
+## 880_h
+## 880_i
+## 880_k
+## 880_n
+## 880_p
+## 880_t
+## 974_8
+## 974_b
+## 974_c
+## 974_d
+## 974_q
+## 974_r
+## 974_s
+## 974_t
+## 974_z
+## CAT_a
+## CAT_d
+## CAT_l
+## CID_a
+## DAT_a
+## DAT_b
+## FMT_a
+## HOL_0
+## HOL_1
+## HOL_8
+## HOL_a
+## HOL_b
+## HOL_c
+## HOL_p
+## HOL_s
+## HOL_z
+## leader
 
 each_record convert_to_language_hash(
   'agg_data_provider',
