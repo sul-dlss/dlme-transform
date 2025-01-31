@@ -1,58 +1,45 @@
 version: 2.1
+
+orbs:
+  codecov: codecov/codecov@5.2.0
+
 executors:
   docker-publisher:
     environment:
       IMAGE_NAME: suldlss/dlme-transform
     docker:
     - image: cimg/base:stable
+
 jobs:
   test:
     docker:
       - image: cimg/ruby:3.4.1
     steps:
       - checkout
-
       # Upgrade bundler
       - run:
           name: Install Bundler
           command: gem install bundler
-
       - run:
           name: Which bundler?
           command: bundle -v
-
       # Restore bundle cache
       - restore_cache:
           keys:
           - app-bundle-v2-{{ checksum "Gemfile.lock" }}
           - app-bundle-v2-
-
       - run:
           name: Bundle Install
           command: bundle check || bundle install
-
       # Store bundle cache
       - save_cache:
           key: app-bundle-v2-{{ checksum "Gemfile.lock" }}
           paths:
           - vendor/bundle
-
-      - run:
-          name: Setup Code Climate test-reporter
-          command: |
-            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-            chmod +x ./cc-test-reporter
-            ./cc-test-reporter before-build
-
       - run:
           name: Run Rubocop and RSpec tests
           command: bundle exec rake
-
-      - run:
-          name: Send coverage report to Code Climate
-          command: |
-            ./cc-test-reporter after-build --coverage-input-type simplecov --exit-code $?
-
+      - codecov/upload
   build-image:
     executor: docker-publisher
     steps:
@@ -66,17 +53,14 @@ jobs:
                       --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` \
                       --build-arg HONEYBADGER_API_KEY=$HONEYBADGER_API_KEY \
                       . -t $IMAGE_NAME:latest
-
       - run:
           name: Archive Docker image
           command: |
             docker save -o image.tar $IMAGE_NAME
-
       - persist_to_workspace:
           root: .
           paths:
           - ./image.tar
-
   publish-latest:
     executor: docker-publisher
     steps:
@@ -87,13 +71,11 @@ jobs:
           name: Load archived Docker image
           command: |
             docker load -i /tmp/workspace/image.tar
-
       - run:
           name: Publish Docker Image to Docker Hub
           command: |
             echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
             docker push $IMAGE_NAME:latest
-
   publish-tag:
     executor: docker-publisher
     steps:
@@ -104,7 +86,6 @@ jobs:
           name: Load archived Docker image
           command: |
             docker load -i /tmp/workspace/image.tar
-
       - run:
           name: Publish Docker Image to Docker Hub
           command: |
