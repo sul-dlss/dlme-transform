@@ -1,7 +1,6 @@
 # dlme-transform
 [![CircleCI](https://circleci.com/gh/sul-dlss/dlme-transform.svg?style=svg)](https://circleci.com/gh/sul-dlss/dlme-transform "continuous integration status")
-[![Maintainability](https://api.codeclimate.com/v1/badges/5c6bcb444addcfdcba8b/maintainability)](https://codeclimate.com/github/sul-dlss/dlme-transform/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/5c6bcb444addcfdcba8b/test_coverage)](https://codeclimate.com/github/sul-dlss/dlme-transform/test_coverage)
+[![codecov](https://codecov.io/github/sul-dlss/dlme-transform/graph/badge.svg?token=WqpQpXvUMh)](https://codecov.io/github/sul-dlss/dlme-transform)
 
 Transforms raw DLME metadata from https://github.com/sul-dlss/dlme-metadata and
 uses transformations in `traject_configs/` to create [DLME intermediate
@@ -124,12 +123,12 @@ The airflow dev server stores the intermediate representation in a shared `datas
 scp [~/Path/To/NDJson/File] sunet@dlme-review-prod-a.stanford.edu:/opt/app/dlme/datashare
 ```
 
-To copy the file to your local directory, use 
+To copy the file to your local directory, use
 ```
 scp sunet@dlme-airflow-dev.stanford.edu:/opt/app/dlme/dlme-airflow/shared/source_data/file_path .
 ```
 
-To copy the file to your local directory, use 
+To copy the file to your local directory, use
 ```
 scp sunet@dlme-airflow-dev.stanford.edu:/opt/app/dlme/dlme-airflow/shared/source_data/file_path .
 ```
@@ -190,7 +189,7 @@ Note that this task modifies `config/metadata_mapping.json`, and you will need t
 
 ## Deploying
 
-dlme-transform is deployed by publishing an image to docker hub. CircleCI should automatically create a new latest image when new commits are pushed to main (i.e. merged PRs).   
+dlme-transform is deployed by publishing an image to docker hub. CircleCI should automatically create a new latest image when new commits are pushed to main (i.e. merged PRs).
 You can confirm this by looking for the successful "publish-latest" step completion https://circleci.com/gh/sul-dlss/dlme-transform or by looking for the timestamp on the latest image at Docker Hub:  https://hub.docker.com/r/suldlss/dlme-transform/tags.
 
 Airflow uses the `latest` docker image of dlme-transform. As dlme-transform is run as a docker-in-docker task only and not a standlone service, the tagged `suldlss/dlme-transform:latest` is always pulled from docker hub on launch.
