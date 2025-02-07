@@ -6,7 +6,8 @@ module Macros
     # Append argument to end of each value in accumulator.
     def dlme_append(suffix)
       lambda do |_rec, acc|
-        return if acc.compact.empty?
+        acc.compact! # remove any nils
+        return if acc.empty?
 
         acc.collect! { |v| v + suffix }
       end
@@ -18,6 +19,7 @@ module Macros
     #      to_field "title", extract_marc("245abc"), default("Unknown Title")
     def dlme_default(default_value)
       lambda do |_rec, acc|
+        acc.compact! # remove any nils
         acc << default_value if acc.all?(&:blank?)
       end
     end
@@ -25,7 +27,8 @@ module Macros
     # Run ruby `gsub` on each value in accumulator, with pattern and replace value given.
     def dlme_gsub(pattern, replace)
       lambda do |_rec, acc|
-        return if acc.compact.empty?
+        acc.compact! # remove any nils
+        return if acc.empty?
 
         acc.collect! { |v| v.gsub(pattern, replace) }
       end
@@ -37,7 +40,8 @@ module Macros
     # there in input, as input values are split up into multiple values.
     def dlme_split(separator)
       lambda do |_rec, acc|
-        return if acc.compact.empty?
+        acc.compact! # remove any nils
+        return if acc.empty?
 
         acc.replace(acc.flat_map { |v| v.split(separator) })
       end
@@ -89,7 +93,8 @@ module Macros
                              end
 
       lambda do |_rec, acc|
-        return if acc.compact.empty?
+        acc.compact! # remove any nils
+        return if acc.empty?
 
         acc.collect! do |value|
           transformer_callable.call(value)
