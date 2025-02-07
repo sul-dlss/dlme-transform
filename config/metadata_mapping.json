@@ -582,242 +582,18 @@
   },
   {
     "trajects": [
-      "openn_genizah_0002.rb"
+      "openn.rb"
     ],
     "paths": [
-      "penn/openn/genizah_0002"
+      "openn"
     ],
-    "extension": ".xml",
+    "extension": ".json",
     "settings": {
       "agg_provider": "University of Pennsylvania Libraries",
       "agg_provider_country": "United States of America",
-      "agg_data_provider": "University of Pennsylvania Libraries",
-      "agg_data_provider_country": "United States of America",
       "agg_provider_ar": "مكتبات جامعة بنسلفانيا",
       "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "agg_data_provider_ar": "مكتبات جامعة بنسلفانيا",
-      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "inst_id": "penn"
-    }
-  },
-  {
-    "trajects": [
-      "openn_mmw_0001.rb"
-    ],
-    "paths": [
-      "penn/openn/mmw_0001"
-    ],
-    "extension": ".xml",
-    "settings": {
-      "agg_provider": "University of Pennsylvania Libraries",
-      "agg_provider_country": "United States of America",
-      "agg_data_provider": "University of Pennsylvania Libraries",
-      "agg_data_provider_country": "United States of America",
-      "agg_provider_ar": "مكتبات جامعة بنسلفانيا",
-      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "agg_data_provider_ar": "مكتبات جامعة بنسلفانيا",
-      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "inst_id": "penn"
-    }
-  },
-  {
-    "trajects": [
-      "openn_mmw_0002.rb"
-    ],
-    "paths": [
-      "penn/openn/mmw_0002"
-    ],
-    "extension": ".xml",
-    "settings": {
-      "agg_provider": "University of Pennsylvania Libraries",
-      "agg_provider_country": "United States of America",
-      "agg_data_provider": "University of Pennsylvania Libraries",
-      "agg_data_provider_country": "United States of America",
-      "agg_provider_ar": "مكتبات جامعة بنسلفانيا",
-      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "agg_data_provider_ar": "مكتبات جامعة بنسلفانيا",
-      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "inst_id": "penn"
-    }
-  },
-  {
-    "trajects": [
-      "openn_mmw_0003.rb"
-    ],
-    "paths": [
-      "penn/openn/mmw_0003"
-    ],
-    "extension": ".xml",
-    "settings": {
-      "agg_provider": "University of Pennsylvania Libraries",
-      "agg_provider_country": "United States of America",
-      "agg_data_provider": "Bryn Mawr College Libraries",
-      "agg_data_provider_country": "United States of America",
-      "agg_provider_ar": "مكتبات جامعة بنسلفانيا",
-      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "agg_data_provider_ar": "مكتبات كلية برين ماور",
-      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "inst_id": "penn"
-    }
-  },
-  {
-    "trajects": [
-      "openn_mmw_0006.rb"
-    ],
-    "paths": [
-      "penn/openn/mmw_0006"
-    ],
-    "extension": ".xml",
-    "settings": {
-      "agg_provider": "University of Pennsylvania Libraries",
-      "agg_provider_country": "United States of America",
-      "agg_data_provider": "Haverford College",
-      "agg_data_provider_country": "United States of America",
-      "agg_provider_ar": "مكتبات جامعة بنسلفانيا",
-      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "agg_data_provider_ar": "كلية هافرفورد",
-      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "inst_id": "penn"
-    }
-  },
-  {
-    "trajects": [
-      "openn_mmw_0012.rb"
-    ],
-    "paths": [
-      "penn/openn/mmw_0012"
-    ],
-    "extension": ".xml",
-    "settings": {
-      "agg_provider": "University of Pennsylvania Libraries",
-      "agg_provider_country": "United States of America",
-      "agg_data_provider": "Library Company",
-      "agg_data_provider_country": "United States of America",
-      "agg_provider_ar": "مكتبات جامعة بنسلفانيا",
-      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "agg_data_provider_ar": "شركة مكتبة",
-      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "inst_id": "penn"
-    }
-  },
-  {
-    "trajects": [
-      "openn_mmw_0016.rb"
-    ],
-    "paths": [
-      "penn/openn/mmw_0016"
-    ],
-    "extension": ".xml",
-    "settings": {
-      "agg_provider": "Penn Museum",
-      "agg_provider_country": "United States of America",
-      "agg_data_provider": "Penn Museum",
-      "agg_data_provider_country": "United States of America",
-      "agg_provider_ar": "متحف بنسلفانيا",
-      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "agg_data_provider_ar": "متحف بنسلفانيا",
-      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "inst_id": "penn_museum"
-    }
-  },
-  {
-    "trajects": [
-      "openn_mmw_0023.rb"
-    ],
-    "paths": [
-      "penn/openn/mmw_0023"
-    ],
-    "extension": ".xml",
-    "settings": {
-      "agg_provider": "University of Pennsylvania Libraries",
-      "agg_provider_country": "United States of America",
-      "agg_data_provider": "Free Library of Philadelphia, Special Collections",
-      "agg_data_provider_country": "United States of America",
-      "agg_provider_ar": "مكتبات جامعة بنسلفانيا",
-      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "agg_data_provider_ar": "مكتبة فيلادلفيا المجانية، المجموعات الخاصة",
-      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "inst_id": "penn"
-    }
-  },
-  {
-    "trajects": [
-      "openn_mmw_0031.rb"
-    ],
-    "paths": [
-      "penn/openn/mmw_0031"
-    ],
-    "extension": ".xml",
-    "settings": {
-      "agg_provider": "University of Pennsylvania Libraries",
-      "agg_provider_country": "United States of America",
-      "agg_data_provider": "Philadelphia Museum of Art",
-      "agg_data_provider_country": "United States of America",
-      "agg_provider_ar": "متحف فيلادلفيا للفنون",
-      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "agg_data_provider_ar": "متحف فيلادلفيا للفنون",
-      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "inst_id": "penn"
-    }
-  },
-  {
-    "trajects": [
-      "openn_mmw_0032.rb"
-    ],
-    "paths": [
-      "penn/openn/mmw_0032"
-    ],
-    "extension": ".xml",
-    "settings": {
-      "agg_provider": "University of Pennsylvania Libraries",
-      "agg_provider_country": "United States of America",
-      "agg_data_provider": "Columbia University, Rare Book & Manuscript Library",
-      "agg_data_provider_country": "United States of America",
-      "agg_provider_ar": "مكتبات جامعة بنسلفانيا",
-      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "agg_data_provider_ar": "جامعة كولومبيا، مكتبة الكتب والمخطوطات النادرة",
-      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "inst_id": "penn"
-    }
-  },
-  {
-    "trajects": [
-      "openn_mmw_0033.rb"
-    ],
-    "paths": [
-      "penn/openn/mmw_0033"
-    ],
-    "extension": ".xml",
-    "settings": {
-      "agg_provider": "University of Pennsylvania Libraries",
-      "agg_provider_country": "United States of America",
-      "agg_data_provider": "Columbia University, Rare Book & Manuscript Library",
-      "agg_data_provider_country": "United States of America",
-      "agg_provider_ar": "مكتبات جامعة بنسلفانيا",
-      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "agg_data_provider_ar": "جامعة كولومبيا، مكتبة الكتب والمخطوطات النادرة",
-      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "inst_id": "penn"
-    }
-  },
-  {
-    "trajects": [
-      "openn_mmw_0043.rb"
-    ],
-    "paths": [
-      "penn/openn/mmw_0043"
-    ],
-    "extension": ".xml",
-    "settings": {
-      "agg_provider": "University of Pennsylvania Libraries",
-      "agg_provider_country": "United States of America",
-      "agg_data_provider": "American Philosophical Society",
-      "agg_data_provider_country": "United States of America",
-      "agg_provider_ar": "مكتبات جامعة بنسلفانيا",
-      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "agg_data_provider_ar": "الجمعية الفلسفية الأمريكية",
-      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "inst_id": "penn"
+      "inst_id": "openn"
     }
   },
   {
@@ -991,12 +767,8 @@
     "settings": {
       "agg_provider": "University of California, Los Angeles. Library. Department of Special Collections",
       "agg_provider_country": "United States of America",
-      "agg_data_provider": "University of California, Los Angeles. Library. Department of Special Collections",
-      "agg_data_provider_country": "United States of America",
       "agg_provider_ar": "جامعة كاليفورنيا، لوس أنجلوس. مكتبة. قسم المجموعات الخاصة",
       "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "agg_data_provider_ar": "جامعة كاليفورنيا، لوس أنجلوس. مكتبة. قسم المجموعات الخاصة",
-      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
       "inst_id": "ucla"
     }
   },
@@ -1011,12 +783,8 @@
     "settings": {
       "agg_provider": "University of California, Los Angeles. Library. Department of Special Collections",
       "agg_provider_country": "United States of America",
-      "agg_data_provider": "University of California, Los Angeles. Library. Department of Special Collections",
-      "agg_data_provider_country": "United States of America",
       "agg_provider_ar": "جامعة كاليفورنيا، لوس أنجلوس. مكتبة. قسم المجموعات الخاصة",
       "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "agg_data_provider_ar": "جامعة كاليفورنيا، لوس أنجلوس. مكتبة. قسم المجموعات الخاصة",
-      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
       "inst_id": "ucla"
     }
   },
@@ -1031,12 +799,8 @@
     "settings": {
       "agg_provider": "University of California, Los Angeles. Library. Department of Special Collections",
       "agg_provider_country": "United States of America",
-      "agg_data_provider": "University of California, Los Angeles. Library. Department of Special Collections",
-      "agg_data_provider_country": "United States of America",
       "agg_provider_ar": "جامعة كاليفورنيا، لوس أنجلوس. مكتبة. قسم المجموعات الخاصة",
       "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
-      "agg_data_provider_ar": "جامعة كاليفورنيا، لوس أنجلوس. مكتبة. قسم المجموعات الخاصة",
-      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
       "inst_id": "ucla"
     }
   },

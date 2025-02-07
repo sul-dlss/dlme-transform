@@ -29,15 +29,148 @@ arabic and latin:
 arabic and spanish:
 - Arabic
 - Spanish
+arabic garshuni: Arabic Garshuni
 arabic in transliteration: Arabic
 arabic;: Arabic
 arabic language: Arabic
 arabic; colophon in persian:
 - Arabic
 - Persian
+arabic headwords, ottoman definitions:
+- Arabic
+- Turkish, Ottoman (1500-1928)
+arabic vocabulary:
+- Arabic
 arabic; some poetry in turkish;:
 - Arabic
 - Turkish, Ottoman (1500-1928)
+arabic text with persian marginalia:
+- Arabic
+- Persian
+arabic with 13 pages in ottoman turkish:
+- Arabic
+- Turkish, Ottoman (1500-1928)
+arabic with a few notes in persian:
+- Arabic
+- Persian
+arabic with a few pages in ottoman turkish:
+- Arabic
+- Turkish, Ottoman (1500-1928)
+arabic, with a few annotations in hebrew f. 50r-50v):
+- Arabic
+- Hebrew
+arabic with a few statements in persian:
+- Arabic
+- Persian
+arabic with a few words in coptic:
+- Arabic
+- Coptic
+arabic with a note in persian:
+- Arabic
+- Persian
+arabic with a short introduction in persian:
+- Arabic
+- Persian
+arabic, with colophon in arabic: Arabic
+arabic with interlinear aersian translation:
+- Arabic
+- Aersian
+arabic with interlinear persian translation:
+- Arabic
+- Persian
+arabic with one line in ottoman turkish:
+- Arabic
+- Turkish, Ottoman (1500-1928)
+arabic with one page in ottoman turkish:
+- Arabic
+- Turkish, Ottoman (1500-1928)
+arabic with one page in persian:
+- Arabic
+- Persian
+arabic with one page translated into persian:
+- Arabic
+- Persian
+arabic with one rubric in persian:
+- Arabic
+- Persian
+arabic with one work in persian number 8):
+- Arabic
+- Persian
+arabic with one work in persian (number 8):
+- Arabic
+- Persian
+arabic with ottoman turkish translation in the margins:
+- Arabic
+- Turkish, Ottoman (1500-1928)
+arabic with persian commentary:
+- Arabic
+- Persian
+arabic with persian commentary and end pages:
+- Arabic
+- Persian
+arabic with persian heading and marginalia:
+- Arabic
+- Persian
+arabic with persian heading:
+- Arabic
+- Persian
+arabic with persian interlinear translation and marginal commentary:
+- Arabic
+- Persian
+arabic with persian interlinear translation:
+- Arabic
+- Persian
+arabic with persian translation and marginal comments:
+- Arabic
+- Persian
+arabic with persian translation and marginal notes:
+- Arabic
+- Persian
+arabic with some coptic:
+- Arabic
+- Coptic
+arabic with some explanations in ottoman turkish:
+- Arabic
+- Turkish, Ottoman (1500-1928)
+arabic with some headers in ottoman turkish:
+- Arabic
+- Turkish, Ottoman (1500-1928)
+arabic with some marginalia in persian:
+- Arabic
+- Persian
+arabic with some notes in persian:
+- Arabic
+- Persian
+arabic with some ottoman turkish:
+- Arabic
+- Turkish, Ottoman (1500-1928)
+arabic with some persian:
+- Arabic
+- Persian
+arabic with some persian annotations:
+- Arabic
+- Persian
+arabic with some persian marginalia:
+- Arabic
+- Persian
+arabic with some titles in ottoman turkish:
+- Arabic
+- Turkish, Ottoman (1500-1928)
+arabic with translation in persian:
+- Arabic
+- Persian
+arabic with two notes in persian:
+- Arabic
+- Persian
+arabic, with a few annotations in Hebrew (f. 50r-50v):
+- Arabic
+- Hebrew
+arabic, with colophon in arabic and ottoman turkish (in arabic script, f. 8v):
+- Arabic
+- Turkish, Ottoman (1500-1928)
+arabic, with some persian:
+- Arabic
+- Persian
 arabic with persian translation:
 - Arabic
 - Persian
@@ -51,6 +184,8 @@ aramaic, christian palestinian: Aramaic
 aratur: Aratur
 armenian: Armenian
 armenian language: Armenian
+avestan: Avestan
+avestan in pahlavi script): Avestan
 babylonian language: Babylonian
 bulgarian: Bulgarian
 'castellano [parte 2 (fragmentos: 1, 4)]': Spanish
@@ -59,10 +194,45 @@ bulgarian: Bulgarian
 - Spanish
 catalan: Catalan
 chagatai: Chagatai
+chiefly arabic with some persian:
+- Arabic
+- Persian
+chiefly arabic with some samaritan aramaic:
+- Arabic
+- Samaritan
+chiefly ottoman turkish with persian:
+- Persian
+- Turkish, Ottoman (1500-1928)
+chiefly ottoman turkish with persian and arabic vocabulary and headings in arabic:
+- Arabic
+- Persian
+- Turkish, Ottoman (1500-1928)
+chiefly persian with arabic entries:
+- Arabic
+- Persian
+chiefly syriac (: Syriac
+chiefly syriac: Syriac
 chinese language: Chinese
 classical armenian: Armenian
+colophon in urdu: Urdu
+commentary with arabic source-text: Arabic
+comments in arabic: Arabic
 coptic: Coptic
 coptic language: Coptic
+coptic, bohairic dialect, with a few notations in arabic:
+- Coptic
+- Arabic
+coptic with arabic translation:
+- Coptic
+- Arabic
+coptic with headings: Coptic
+coptic with headings in arabic:
+- Coptic
+- Arabic
+coptic with some arabic:
+- Coptic
+- Arabic
+coptic with some headings: Coptic
 crimean tatar: Tatar, Crimean
 crimean turkish: Turkish, Crimean
 cufic: Arabic
@@ -71,17 +241,21 @@ czech: Czech
 demotic: Demotic
 "dialecto aragon\xE9s. [fragmento 1]": Aragonese
 dutch: Dutch
+east syriac: Syriac
 egyptian language: Egyptian
 elamite language: Elamite
 "en \xE1rabe": Arabic
 "en \xE1rabe, con l. magreb\xED": Arabic
 en_us: English
+end pages: null
 english: English
 english and syriac:
 - English
 - Syriac
 "escrito en \xE1rabe [fragmento 2, 3, 5]": Arabic
 "escrito en \xE1rabe [parte 1 (fragmentos: 9-10, 11, 12-15, 16, 28-45, 47-50)]": Arabic
+examples in arabic: Arabic
+explanations in arabic: Arabic
 fake language: null
 flemish: Flemish
 french: French
@@ -95,6 +269,8 @@ greek alphabet: Greek
 greek, ancient: Greek, Ancient
 greek, ancient (to 1453): Greek, Ancient
 gujarati: Gujarati
+headings: null
+headings in arabic: Arabic
 hebreo: Hebrew
 hebreo y arameo:
 - Hebrew
@@ -111,13 +287,24 @@ hebrew, with some italian, judaeo-italian and arabic:
 - Arabic
 hieratic: Hieratic
 hieroglyphic: Hieroglyphic
+hindi: Hindi
+hindustani: Hindustani
 hittite language: Hittite
 hurrian: Hurrian
+in avestan. colophons in pahlavi, persian:
+- Avestan
+- Persian
 in ottoman turkish: Turkish, Ottoman (1500-1928)
 in persian: Persian
 in urdu: Urdu
+in arabic: Arabic
+in arabic with a final sentence in persian:
+- Arabic
+- Persian
 indic languages: Indic Languages
 indonesian: Indonesian
+inserts in persian laid in:
+- Persian
 italian: Italian
 italien: Italian
 japanese: Japanese
@@ -131,9 +318,12 @@ judaeo-spanish: Ladino
 judeo arabic: Judeo-Arabic
 judeo-arabic: Judeo-Arabic
 kufic: Arabic
+labels in arabic: Arabic
 latin: Latin
 latin language: Latin
 latina: Latin
+"layout: 5 lines per page": null
+"layout: 5 long lines": null
 lengua aljamiada: "Aljam\xEDa"
 lengua aljamiada y castellana. [fragmento 3]:
 - "Aljam\xEDa"
@@ -212,6 +402,11 @@ luxembourgish: Luxembourgish
 malay: Malay
 malay in arabic script: Malay
 mandaic: Mandaic
+marginal notes: null
+marginalia: null
+marginal commentary: null
+marginal comments: null
+materials in arabic: Arabic
 meroitic language: Meroitic
 minaic: Minaic
 minangkabau: Minangkabau
@@ -220,16 +415,61 @@ naskhi: Arabic
 naskhi script: Arabic
 neo-sumerian language: Neo-Sumerian
 no linguistic content: null
+no linguistic content, not applicable: null
+notes in chinese: Chinese
 old babylonian script: Old Babylonian
 old bulgarian: Old Bulgarian
 old persian: Old Persian
 ottoman (1500-1928): Turkish, Ottoman (1500-1928)
+ottoman turkish 1500-1928): Turkish, Ottoman (1500-1928)
 ottoman turkish: Turkish, Ottoman (1500-1928)
 ottoman turkish,: Turkish, Ottoman (1500-1928)
+ottoman turkish and persian:
+- Persian
+- Turkish, Ottoman (1500-1928)
+ottoman turkish and persian with some arabic:
+- Arabic
+- Persian
+- Turkish, Ottoman (1500-1928)
+ottoman turkish and persian with some arabic quotations and headings:
+- Arabic
+- Persian
+- Turkish, Ottoman (1500-1928)
+ottoman turkish in arabic script, f. 8v): Turkish, Ottoman (1500-1928)
+ottoman turkish with some arabic:
+- Arabic
+- Turkish, Ottoman (1500-1928)
+ottoman turkish with some terminology and examples in arabic:
+- Arabic
+- Turkish, Ottoman (1500-1928)
+ottoman turkish with some terminology: Turkish, Ottoman (1500-1928)
+ottoman turkish with source text in arabic:
+- Arabic
+- Turkish, Ottoman (1500-1928)
+ottoman turkish with titles and vocabulary in persian:
+- Persian
+- Turkish, Ottoman (1500-1928)
+ottoman turkish with titles in arabic:
+- Arabic
+- Turkish, Ottoman (1500-1928)
+ottoman turkish with two pages in arabic:
+- Arabic
+- Turkish, Ottoman (1500-1928)
+ottoman turkish with two pages in arabic:
+- Arabic
+- Turkish, Ottoman (1500-1928)
+ottoman turkish, with notes in german:
+- German
+- Turkish, Ottoman (1500-1928)
+ottoman turkish with titles: Turkish, Ottoman (1500-1928)
+ottoman with translations from arabic:
+- Persian
+- Turkish, Ottoman (1500-1928)
 pahlavi: Pahlavi
 pahlavi language: Pahlavi
 pahlevi: Pahlavi
 pahlevi language: Pahlavi
+pahlavi with one line in gujarati: Pahlavi
 pakhto: Pashto
 pashto: Pashto
 persa: Persian
@@ -244,23 +484,87 @@ persian, arabic and turkish:
 - Persian
 - Arabic
 - Turkish, Ottoman (1500-1928)
+persian with a few phrases in arabic:
+- Persian
+- Arabic
+persian, with final pages in hindi:
+- Persian
+- Hindi
+persian with some arabic quotations:
+- Persian
+- Arabic
+persian with some english glosses:
+- Persian
+- English
+persian with some phrases in arabic:
+- Persian
+- Arabic
+persian with some pahlavi:
+- Persian
+- Pahlavi
+persian with some quotations in arabic:
+- Persian
+- Arabic
+persian with some short quotations in arabic:
+- Persian
+- Arabic
 persian, with the initial doxography and some quotations in arabic:
 - Persian
 - Arabic
+persian with two leaves in sanskrit:
+- Persian
+- Sanskrit
 persian language: Persian
+persian with arabic source-text:
+- Persian
+- Arabic
+persian with some arabic:
+- Persian
+- Arabic
+persian with some titles: Persian
+persian with source-text in arabic:
+- Persian
+- Arabic
+persian with titles in arabic:
+- Persian
+- Arabic
+persian with two pages in arabic f. 23r:
+- Persian
+- Arabic
+persian with two pages in arabic f. 1v-2r):
+- Persian
+- Arabic
+persian translations:
+- Persian
 phoenician language: Phoenician
 portuguese: Portuguese
 pseudo-script: null
 pushto: Pashto
 qatabanic: Qatabanic
 romance castellano [fragmento 1, 2]: Spanish
+romanized assyrian akkadian): Akkadian
 russian: Russian
 sabaic: Sabaic
 sabaean language: Sabaean
 samaritan: Samaritan
+samaritan aramaic with some headings: Samaritan
 semitic language: Semitic
 semitic (other): Semitic
+serto: Syriac
+serto with a few notes in arabic script:
+- Syriac
+- Arabic
+serto with colophon in arabic:
+- Syriac
+- Arabic
+serto with some notes in arabic garshuni:
+- Syriac
+- Arabic Garshuni
+shilha: Tashelhit
 slavic languages: Slavic Languages
+some glosses: null
+some notes in persian: Persian
+soninke: Soninke
 spanish: Spanish
 sundanese: Sundanese
 sumerian: Sumerian
@@ -269,6 +573,7 @@ syriac: Syriac
 swedish: Swedish
 tamil: Tamil
 tatar: Tatar
+tashelhit: Tashelhit
 'texto en aljamiado [parte 1 (fragmentos: 17, 18-19, 20-27, 28-45)]': Aljamia
 translated from latin.: null
 turkish: Turkish
@@ -276,13 +581,17 @@ turkish language: Turkish
 turkish (in greek alphabet): Turkish, Karamanli
 turkish in arabic script: Turkish, Ottoman (1500-1928)
 turkish, ottoman, arabic:
-  - Arabic
-  - Turkish, Ottoman (1500-1928)
+- Arabic
+- Turkish, Ottoman (1500-1928)
 turkish, ottoman: Turkish, Ottoman (1500-1928)
 turkish, ottoman (1500-1928): Turkish, Ottoman (1500-1928)
+turkish with source text in arabic:
+- Arabic
+- Turkish, Ottoman (1500-1928)
 undefined: null
 undefined ancient south arabian language: Undefined ancient south Arabian language
 urdu: Urdu
+vocabulary in persian: Persian
 yiddish: Yiddish
 "\xE1rabe": Arabic
 "\xE1rabe y aljamiada":
@@ -304,3 +613,6 @@ yiddish: Yiddish
 "\u1E25a\u1E0Dramitic": "\u1E24a\u1E0Dramitic"
 undetermined: null
 unknown: null
+using sanskrit words: Sanskrit
+v): null
+words in arabic: Arabic
