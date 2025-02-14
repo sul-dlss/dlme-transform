@@ -28,6 +28,8 @@ acceptable_bcp47_codes:
   - hy-Armn
   - ms-Arab
   - ms-Latn
+  - ota-Arab
+  - ota-Latn
   - syc
   - tr-Arab
   - tr-Latn
