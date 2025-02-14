@@ -21,6 +21,7 @@ akkadian language: Akkadian
 akkadian langage language: Akkadian
 altaic languages: Altaic Languages
 amharic: Amharic
+ancient (to 1453): null
 ancient greek language: Greek, Ancient
 arabic: Arabic
 arabic and latin:
@@ -194,6 +195,7 @@ bulgarian: Bulgarian
 - Spanish
 catalan: Catalan
 chagatai: Chagatai
+chagatai in arabic script: Chagatai
 chiefly arabic with some persian:
 - Arabic
 - Persian
@@ -242,6 +244,7 @@ demotic: Demotic
 "dialecto aragon\xE9s. [fragmento 1]": Aragonese
 dutch: Dutch
 east syriac: Syriac
+egyptian (ancient): Egyptian
 egyptian language: Egyptian
 elamite language: Elamite
 "en \xE1rabe": Arabic
@@ -298,7 +301,16 @@ in ottoman turkish: Turkish, Ottoman (1500-1928)
 in persian: Persian
 in urdu: Urdu
 in arabic: Arabic
+in arabic preface also in ottoman turkish:
+- Arabic
+- Turkish, Ottoman (1500-1928)
 in arabic with a final sentence in persian:
+- Arabic
+- Persian
+in arabic with persian translation:
+- Arabic
+- Persian
+in arabic with some fawāʼid in persian:
 - Arabic
 - Persian
 indic languages: Indic Languages
@@ -411,6 +423,7 @@ meroitic language: Meroitic
 minaic: Minaic
 minangkabau: Minangkabau
 mixed language: null
+modern (1453-): null
 naskhi: Arabic
 naskhi script: Arabic
 neo-sumerian language: Neo-Sumerian
@@ -576,7 +589,11 @@ tatar: Tatar
 tashelhit: Tashelhit
 'texto en aljamiado [parte 1 (fragmentos: 17, 18-19, 20-27, 28-45)]': Aljamia
 translated from latin.: null
+translated from the persian: null
 turkish: Turkish
+turkish in arabic script, persian:
+- Turkish, Ottoman (1500-1928)
+- Persian
 turkish language: Turkish
 turkish (in greek alphabet): Turkish, Karamanli
 turkish in arabic script: Turkish, Ottoman (1500-1928)
