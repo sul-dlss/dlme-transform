@@ -55,19 +55,16 @@ to_field 'agg_data_provider_collection_id', path_to_file, dlme_split('/'), at_in
 to_field 'dlme_source_file', path_to_file
 
 # Cho Required
-to_field 'id', extract_json('.id'), dlme_strip, dlme_gsub('https://gallica.bnf.fr/', '')
+to_field 'id', extract_json('.id'), flatten_array, dlme_strip, dlme_gsub('https://gallica.bnf.fr/', '')
 to_field 'cho_title', extract_json('.title'), flatten_array, dlme_strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
 
-# Required per data agreement
-to_field 'cho_provenance', literal('This document is part of BnF website \'Bibliothèques d\'Orient\' - http://heritage.bnf.fr/bibliothequesorient/'), lang('en')
-
 # Cho Other
-to_field 'cho_contributor', extract_json('.contributor'), flatten_array, dlme_strip, lang('und-Latn')
-to_field 'cho_creator', extract_json('.creator'), flatten_array, dlme_strip, lang('und-Latn')
+to_field 'cho_contributor', extract_json('.contributor'), flatten_array, dlme_strip, arabic_script_lang_or_default('ar-Arab', 'fr')
+to_field 'cho_creator', extract_json('.creator'), flatten_array, dlme_strip, arabic_script_lang_or_default('ar-Arab', 'fr')
 to_field 'cho_date', extract_json('.date'), flatten_array, dlme_strip, lang('en')
 to_field 'cho_date_range_norm', extract_json('.date'), flatten_array, dlme_strip, parse_range
 to_field 'cho_date_range_hijri', extract_json('.date'), flatten_array, dlme_strip, parse_range, hijri_range
-to_field 'cho_description', extract_json('.description'), flatten_array, dlme_split('/'), dlme_strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
+to_field 'cho_description', extract_json('.description'), flatten_array, dlme_strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
 to_field 'cho_dc_rights', extract_json('.rights'), flatten_array, dlme_strip, lang('fr')
 to_field 'cho_dc_rights', extract_json('.rights'), flatten_array, dlme_strip, lang('en')
 to_field 'cho_edm_type', literal('Text'), lang('en')
@@ -77,10 +74,15 @@ to_field 'cho_has_type', literal('Books'), translation_map('has_type_ar_from_en'
 to_field 'cho_format', extract_json('.format'), flatten_array, dlme_strip, lang('fr')
 to_field 'cho_language', extract_json('.language'), flatten_array,  dlme_strip, dlme_split(','), normalize_language, lang('en')
 to_field 'cho_language', extract_json('.language'), flatten_array,  dlme_strip, dlme_split(','), normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
+# Required per data agreement
+to_field 'cho_provenance', literal('This document is part of BnF website \'Bibliothèques d\'Orient\' - http://heritage.bnf.fr/bibliothequesorient/'), lang('en')
+to_field 'cho_provenance', extract_json('.provenance'), flatten_array, dlme_strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
+to_field 'cho_provenance', extract_json('.source'), flatten_array, dlme_strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
 to_field 'cho_publisher', extract_json('.publisher'), flatten_array, dlme_strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
+to_field 'cho_relation', extract_json('.relations'), flatten_array, dlme_strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
+to_field 'cho_rights', extract_json('.rights'), flatten_array, dlme_strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
 to_field 'cho_source', extract_json('.source'), flatten_array, dlme_strip, lang('fr')
 to_field 'cho_subject', extract_json('.subject'), flatten_array, dlme_strip, lang('und-Latn')
-to_field 'cho_relation', extract_json('.relation'), flatten_array, dlme_strip, lang('fr')
 to_field 'cho_type', extract_json('.type'), flatten_array, dlme_strip, lang('fr')
 
 # Agg
@@ -91,7 +93,7 @@ to_field 'agg_data_provider_country', data_provider_country_ar, lang('ar-Arab')
 to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(
     context,
-    'wr_id' => [extract_json('.id'), dlme_strip]
+    'wr_id' => [extract_json('.link'), dlme_strip]
   )
 end
 
