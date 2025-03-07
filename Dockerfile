@@ -5,7 +5,7 @@ RUN mkdir -p /opt/traject/output
 
 WORKDIR /opt/traject
 
-ENV BUNDLER_VERSION 2.5.22
+ENV BUNDLER_VERSION=2.6.5
 
 RUN apk add --no-cache \
     curl \
@@ -13,6 +13,8 @@ RUN apk add --no-cache \
     python3 \
     libxml2-dev \
     libxslt-dev \
+    yaml-dev \
+    linux-headers \
     jq \
     util-linux \
     && apk add --no-cache --virtual build-dependencies \
@@ -34,10 +36,6 @@ RUN bundle config build.nokogiri --use-system-libraries && \
     apk del build-dependencies
 
 COPY . /opt/traject/
-
-ENV SKIP_FETCH_DATA false
-ENV S3_BASE_URL https://s3-us-west-2.amazonaws.com
-ENV AWS_DEFAULT_REGION us-west-2
 
 # Metadata params
 ARG BUILD_DATE
