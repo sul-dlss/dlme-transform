@@ -77,8 +77,7 @@ The traject configuration file used for a particular transform is triggered by
 the specified data directory. See "Configuring transforms" below.
 
 ```shell
-docker run --rm -e SKIP_FETCH_DATA=true \
-                -v $(pwd)/.:/opt/traject \
+docker run --rm -v $(pwd)/.:/opt/traject \
                 -v $(pwd)/../dlme-metadata:/opt/airflow/working \
                 -v $(pwd)/output:/opt/traject/output \
                 -v $(pwd)/output:/opt/airflow/metadata \
@@ -98,8 +97,7 @@ docker run --rm -v $(pwd)/output:/opt/traject/output \
 The `-w` switch can be used to debug transformations. It will stop the transform upon encountering an error.
 
 ```shell
-docker run --rm -e SKIP_FETCH_DATA=true \
-                -v $(pwd)/.:/opt/traject \
+docker run --rm -v $(pwd)/.:/opt/traject \
                 -v $(pwd)/../dlme-metadata:/opt/airflow/working \
                 -v $(pwd)/output:/opt/traject/output \
                 -v $(pwd)/output:/opt/airflow/metadata \
