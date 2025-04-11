@@ -67,6 +67,8 @@ to_field 'cho_date_range_hijri', extract_json('.date'), flatten_array, dlme_stri
 to_field 'cho_description', extract_json('.description'), flatten_array, dlme_strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
 to_field 'cho_dc_rights', extract_json('.rights'), flatten_array, dlme_strip, lang('fr')
 to_field 'cho_dc_rights', extract_json('.rights'), flatten_array, dlme_strip, lang('en')
+to_field 'cho_dc_rights', literal('License of the metadata: https://www.etalab.gouv.fr/wp-content/uploads/2018/11/open-licence.pdf
+License of the collection: https://heritage.bnf.fr/bibliothequesorient/en/conditions-use-0'), lang('en')
 to_field 'cho_edm_type', literal('Text'), lang('en')
 to_field 'cho_edm_type', literal('Text'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_has_type', literal('Books'), lang('en')
@@ -75,7 +77,7 @@ to_field 'cho_format', extract_json('.format'), flatten_array, dlme_strip, lang(
 to_field 'cho_language', extract_json('.language'), flatten_array,  dlme_strip, dlme_split(','), normalize_language, lang('en')
 to_field 'cho_language', extract_json('.language'), flatten_array,  dlme_strip, dlme_split(','), normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
 # Required per data agreement
-to_field 'cho_provenance', literal('This document is part of BnF website \'Bibliothèques d\'Orient\' - http://heritage.bnf.fr/bibliothequesorient/'), lang('en')
+to_field 'cho_provenance', literal('This document is part of BnF website \'Bibliothèques d\'Orient\' - https://heritage.bnf.fr/bibliothequesorient/en/accueil'), lang('en')
 to_field 'cho_provenance', extract_json('.provenance'), flatten_array, dlme_strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
 to_field 'cho_provenance', extract_json('.source'), flatten_array, dlme_strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
 to_field 'cho_publisher', extract_json('.publisher'), flatten_array, dlme_strip, arabic_script_lang_or_default('ar-Arab', 'und-Latn')
