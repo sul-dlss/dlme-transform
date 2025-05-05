@@ -15,7 +15,7 @@ RSpec.shared_examples 'a set' do |translation_map_filename|
   end
 end
 
-RSpec.describe 'translation map (values) are a set' do # rubocop:disable RSpec/DescribeClass this tests config consistency, not a class
+RSpec.describe 'translation map (values) are a set' do # rubocop:disable RSpec/DescribeClass -- this tests config consistency, not a class
   it_behaves_like 'a set', 'lib/translation_maps/agg_collection_from_provider_id.yaml'
   it_behaves_like 'a set', 'lib/translation_maps/agg_collection_ar_from_en.yaml'
 end

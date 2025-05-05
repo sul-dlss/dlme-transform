@@ -23,7 +23,7 @@ RSpec.shared_examples 'a valid translation map chain' do |next_translation_map, 
   end
 end
 
-RSpec.describe 'contributor translation maps are valid' do # rubocop:disable RSpec/DescribeClass this tests config consistency, not a class
+RSpec.describe 'contributor translation maps are valid' do # rubocop:disable RSpec/DescribeClass -- this tests config consistency, not a class
   it_behaves_like 'a valid translation map chain', 'lib/translation_maps/type_hierarchy_ar_from_en.yaml', ['lib/translation_maps/type_hierarchy_from_contributor.yaml']
   it_behaves_like 'a valid translation map chain', 'lib/translation_maps/agg_collection_ar_from_en.yaml', ['lib/translation_maps/agg_collection_from_provider_id.yaml']
   it_behaves_like 'a valid translation map chain', 'lib/translation_maps/edm_type_ar_from_en.yaml', ['lib/translation_maps/edm_type_from_has_type.yaml']

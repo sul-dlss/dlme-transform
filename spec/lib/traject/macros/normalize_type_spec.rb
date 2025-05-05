@@ -7,7 +7,7 @@ RSpec.describe Macros::NormalizeType do
     Traject::Indexer.new.tap do |indexer|
       indexer.instance_eval do
         extend TrajectPlus::Macros
-        extend Macros::NormalizeType # rubocop:disable RSpec/DescribedClass described_class doesn't seem to work from in the instance_eval
+        extend Macros::NormalizeType # rubocop:disable RSpec/DescribedClass -- described_class doesn't seem to work from in the instance_eval
       end
     end
   end
