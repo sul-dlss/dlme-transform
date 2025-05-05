@@ -179,7 +179,8 @@ RSpec.describe Macros::DateParsing do
     it 'parses values as expected' do
       expect(indexer.map_record(value: '2019')).to include 'int_array' => [2019]
       expect(indexer.map_record(value: '12/25/00')).to include 'int_array' => [2000]
-      expect(indexer.map_record(value: '5-1-25')).to include 'int_array' => [1925]
+      expect(indexer.map_record(value: '5-1-25')).to include 'int_array' => [2025]
+      expect(indexer.map_record(value: '5-1-1925')).to include 'int_array' => [1925]
       expect(indexer.map_record(value: '-914')).to include 'int_array' => [-914]
       expect(indexer.map_record(value: '1666 B.C.')).to include 'int_array' => [-1666]
       expect(indexer.map_record(value: '2017-2019')).to include 'int_array' => [2017, 2018, 2019]
