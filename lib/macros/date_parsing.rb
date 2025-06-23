@@ -37,7 +37,7 @@ module Macros
             hijri_range << ParseDate.parse_range(hijri_val)
           else
             gregorian_range = ParseDate.parse_range(val)
-            hijri_range << (to_hijri(gregorian_range.first)..to_hijri(gregorian_range.last) + 1).to_a
+            hijri_range << (to_hijri(gregorian_range.first)..to_hijri(gregorian_range.last) + 1).to_a # rubocop:disable Lint/AmbiguousRange
           end
         end
         accumulator.replace(normalize_year_array(hijri_range))
@@ -58,7 +58,7 @@ module Macros
       lambda do |_record, accumulator, _context|
         return if accumulator.compact.empty?
 
-        accumulator.replace((to_hijri(accumulator.first)..to_hijri(accumulator.last) + 1).to_a)
+        accumulator.replace((to_hijri(accumulator.first)..to_hijri(accumulator.last) + 1).to_a) # rubocop:disable Lint/AmbiguousRange
       end
     end
 
