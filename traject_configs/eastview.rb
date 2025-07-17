@@ -64,10 +64,8 @@ to_field 'agg_data_provider_collection', literal('مسلسلات إيست فيو
 to_field 'agg_data_provider_collection_id', literal('eastview-serials')
 
 # CHO Required
-# This is the correct line
 to_field 'id', generate_eastview_issue_id('F001', 'issue-url')
 to_field 'cho_title', extract_json('.issue-text'), flatten_array, arabic_script_lang_or_default('und-Arab', 'en')
-to_field 'cho_title', extract_json('.F245'), flatten_array, arabic_script_lang_or_default('und-Arab', 'en')
 to_field 'cho_title', extract_json('.F001'), translation_map('jaraid_from_eastview'), jaraid_title, arabic_script_lang_or_default('und-Arab', 'en')
 
 # CHO Other
@@ -75,10 +73,12 @@ to_field 'cho_contributor', extract_json('.F700'), flatten_array, arabic_script_
 to_field 'cho_contributor', extract_json('.F710'), flatten_array, arabic_script_lang_or_default('und-Arab', 'en')
 to_field 'cho_creator', extract_json('.F001'), translation_map('jaraid_from_eastview'), jaraid_editors, lang('en')
 to_field 'cho_creator', extract_json('.F001'), translation_map('jaraid_from_eastview'), jaraid_editors_ar, lang('ar-Arab')
-to_field 'cho_date', extract_json('.F001'), translation_map('jaraid_from_eastview'), jaraid_pub_dates, dlme_prepend('Series publication dates: '), arabic_script_lang_or_default('und-Arab', 'en')
-to_field 'cho_date', jaraid_issue_date, arabic_script_lang_or_default('und-Arab', 'en')
-to_field 'cho_date_range_norm', jaraid_issue_date, dlme_strip, parse_range
-to_field 'cho_date_range_hijri', jaraid_issue_date, dlme_strip, parse_range, hijri_range
+to_field 'cho_date', extract_json('.F515'), flatten_array, dlme_prepend('Numbering Peculiarities Note: '), lang('en')
+to_field 'cho_date', extract_json('.F001'), translation_map('jaraid_from_eastview'), jaraid_pub_dates, arabic_script_lang_or_default('und-Arab', 'en')
+# this is the issue date we want
+to_field 'cho_date', eastview_issue_date, arabic_script_lang_or_default('und-Arab', 'en')
+to_field 'cho_date_range_norm', eastview_issue_date, dlme_strip, parse_range
+to_field 'cho_date_range_hijri', eastview_issue_date, dlme_strip, parse_range, hijri_range
 to_field 'cho_dc_rights', extract_json('.F506'), flatten_array, lang('en')
 to_field 'cho_dc_rights', extract_json('.F540'), flatten_array, lang('en')
 to_field 'cho_dc_rights', extract_json('.F542'), flatten_array, lang('en')
@@ -146,13 +146,13 @@ to_field 'agg_provider_country', provider_country_ar, lang('ar-Arab')
 ## F050
 ## F082
 ## F130
+## F245
 ## F260
 ## F264
 ## F310
 ## F321
 ## F338
 ## F362
-## F515
 ## F525
 ## F538
 ## F550

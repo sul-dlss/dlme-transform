@@ -88,19 +88,6 @@ module Macros
       extract_jaraid(".//tei:editor/tei:persName[@xml:lang='ar']")
     end
 
-    def jaraid_issue_date
-      lambda do |record, accumulator|
-        issue_texts = record['issue-text']
-        return if issue_texts.nil?
-
-        dates = Array(issue_texts).flat_map do |text|
-          text.scan(/(\d{4}[-.]\d{2}[-.]\d{2})/).flatten.map { |d| d.tr('.', '-') }
-        end.compact
-
-        accumulator.concat(dates) unless dates.empty?
-      end
-    end
-
     # Extract publication places (und-Latn)
     def jaraid_pub_places
       extract_jaraid(".//tei:imprint/tei:pubPlace/tei:placeName[@xml:lang='und-Latn']")

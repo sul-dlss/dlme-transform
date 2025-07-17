@@ -88,6 +88,21 @@ module Macros
       end
     end
 
+    # Get issue date for the issue-text field.
+    # @return [String, nil] The issue date if found, nil otherwise.
+    def eastview_issue_date
+      lambda do |record, accumulator|
+        issue_texts = record['issue-text']
+        return if issue_texts.nil?
+
+        dates = Array(issue_texts).flat_map do |text|
+          text.scan(/(\d{4}[-.]\d{2}[-.]\d{2})/).flatten.map { |d| d.tr('.', '-') }
+        end.compact
+
+        accumulator.concat(dates) unless dates.empty?
+      end
+    end
+
     # Adds the generated Eastview ID to the accumulator.
     # @param base_id [String] The base ID of the record.
     # @param unique_part [String] The unique part extracted from the URL.

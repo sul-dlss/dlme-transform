@@ -138,59 +138,6 @@ RSpec.describe Macros::Jaraid do
     XML
   end
 
-  # Test for jaraid_issue_date, which uses record['issue-text']
-  describe '#jaraid_issue_date' do
-    before do
-      indexer.instance_eval do
-        to_field 'issue_date', jaraid_issue_date
-      end
-    end
-
-    context 'when issue-text is present and contains a date' do
-      it 'extracts and formats the date from YYYY-MM-DD' do
-        record = { 'issue-text' => ['Some text with a date 2023-01-01 and more.'] }
-        result = indexer.map_record(record)
-        expect(result['issue_date']).to eq(['2023-01-01'])
-      end
-
-      it 'extracts and formats the date from YYYY.MM.DD' do
-        record = { 'issue-text' => ['Published on 2024.07.15.'] }
-        result = indexer.map_record(record)
-        expect(result['issue_date']).to eq(['2024-07-15'])
-      end
-
-      it 'extracts multiple dates if present' do
-        record = { 'issue-text' => ['Date 2022.05.10 and another 2023-12-25.'] }
-        result = indexer.map_record(record)
-        expect(result['issue_date']).to contain_exactly('2022-05-10', '2023-12-25')
-      end
-    end
-
-    context 'when issue-text is present but contains no date' do
-      it 'does not map any field' do
-        record = { 'issue-text' => ['No date here.'] }
-        result = indexer.map_record(record)
-        expect(result).to eq({}) # No field mapped if no dates found
-      end
-    end
-
-    context 'when issue-text is an empty array' do
-      it 'does not map any field' do
-        record = { 'issue-text' => [] }
-        result = indexer.map_record(record)
-        expect(result).to eq({})
-      end
-    end
-
-    context 'when issue-text is missing from the record' do
-      it 'does not map any field' do
-        record = { 'some_other_field' => 'value' }
-        result = indexer.map_record(record)
-        expect(result).to eq({})
-      end
-    end
-  end
-
   # Test for macros that use `extract_jaraid` (which requires an ID in the accumulator)
   describe 'macros using #extract_jaraid' do
     # rubocop:disable RSpec/ExampleLength

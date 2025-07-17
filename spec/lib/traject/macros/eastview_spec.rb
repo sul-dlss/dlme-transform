@@ -3,25 +3,24 @@
 require 'macros/eastview'
 
 RSpec.describe Macros::Eastview do
-  include described_class
-
-  subject(:indexer) do
+  def new_macro_aware_indexer
     Traject::Indexer.new.tap do |idx|
       idx.instance_eval do
-        # rubocop:disable RSpec/DescribedClass
         extend Macros::Eastview
-        # rubocop:enable RSpec/DescribedClass
         extend TrajectPlus::Macros
       end
     end
   end
 
-  # Before each test, define the Traject mapping.
-  before do
-    indexer.to_field 'eastview_id', generate_eastview_issue_id('base_id_field', 'url_field')
-  end
-
   describe '#generate_eastview_issue_id' do
+    let(:indexer) { new_macro_aware_indexer }
+
+    before do
+      indexer.instance_eval do
+        to_field 'eastview_id', generate_eastview_issue_id('base_id_field', 'url_field')
+      end
+    end
+
     context 'when URL is valid and contains "d" parameter' do
       # rubocop:disable RSpec/ExampleLength
       it 'generates the correct unique ID' do
@@ -30,7 +29,6 @@ RSpec.describe Macros::Eastview do
           'url_field' => 'http://eastview.com/docs?a=param1&d=unique_part_123abc&b=param2'
         }
         result = indexer.map_record(record)
-        # Expect the 'eastview_id' field to contain the generated ID.
         expect(result['eastview_id']).to eq(['ocn123456_unique_part_123abc'])
       end
       # rubocop:enable RSpec/ExampleLength
@@ -42,7 +40,6 @@ RSpec.describe Macros::Eastview do
           'url_field' => 'http://eastview.com/docs?d=unique/part-with_special_chars!@#$'
         }
         result = indexer.map_record(record)
-        # The gsub(/[^a-zA-Z0-9-]/, '_') should replace non-alphanumeric/hyphen with underscore
         expect(result['eastview_id']).to eq(['ocn7890_unique_part-with_special_chars__'])
       end
       # rubocop:enable RSpec/ExampleLength
@@ -50,12 +47,10 @@ RSpec.describe Macros::Eastview do
 
     context 'when URL field is missing or empty' do
       it 'skips the record if URL field is missing' do
-        record = { # Define record directly in the it block
+        record = {
           'base_id_field' => 'ocn_missing_url'
-          # 'url_field' is intentionally missing from the record
         }
-        result = indexer.map_record(record) # Call map_record directly
-        # When context.skip! is called, map_record returns nil for that record.
+        result = indexer.map_record(record)
         expect(result).to be_nil
       end
 
@@ -65,7 +60,7 @@ RSpec.describe Macros::Eastview do
           'base_id_field' => 'ocn_empty_url',
           'url_field' => ''
         }
-        result = indexer.map_record(record) # Call map_record directly
+        result = indexer.map_record(record)
         expect(result).to be_nil
       end
       # rubocop:enable RSpec/ExampleLength
@@ -106,6 +101,60 @@ RSpec.describe Macros::Eastview do
         expect(result).to be_nil
       end
       # rubocop:enable RSpec/ExampleLength
+    end
+  end
+
+  describe '#eastview_issue_date' do
+    let(:indexer) { new_macro_aware_indexer }
+
+    before do
+      indexer.instance_eval do
+        to_field 'issue_date', eastview_issue_date
+      end
+    end
+
+    context 'when issue-text is present and contains a date' do
+      it 'extracts and formats the date from YYYY-MM-DD' do
+        record = { 'issue-text' => ['Some text with a date 2023-01-01 and more.'] }
+        result = indexer.map_record(record)
+        expect(result['issue_date']).to eq(['2023-01-01'])
+      end
+
+      it 'extracts and formats the date from YYYY.MM.DD' do
+        record = { 'issue-text' => ['Published on 2024.07.15.'] }
+        result = indexer.map_record(record)
+        expect(result['issue_date']).to eq(['2024-07-15'])
+      end
+
+      it 'extracts multiple dates if present' do
+        record = { 'issue-text' => ['Date 2022.05.10 and another 2023-12-25.'] }
+        result = indexer.map_record(record)
+        expect(result['issue_date']).to contain_exactly('2022-05-10', '2023-12-25')
+      end
+    end
+
+    context 'when issue-text is present but contains no date' do
+      it 'does not map any field' do
+        record = { 'issue-text' => ['No date here.'] }
+        result = indexer.map_record(record)
+        expect(result).to eq({})
+      end
+    end
+
+    context 'when issue-text is an empty array' do
+      it 'does not map any field' do
+        record = { 'issue-text' => [] }
+        result = indexer.map_record(record)
+        expect(result).to eq({})
+      end
+    end
+
+    context 'when issue-text is missing from the record' do
+      it 'does not map any field' do
+        record = { 'some_other_field' => 'value' }
+        result = indexer.map_record(record)
+        expect(result).to eq({})
+      end
     end
   end
 end
