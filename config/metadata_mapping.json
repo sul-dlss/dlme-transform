@@ -297,6 +297,26 @@
   },
   {
     "trajects": [
+      "eastview.rb"
+    ],
+    "paths": [
+      "eastview"
+    ],
+    "extension": ".json",
+    "settings": {
+      "agg_provider": "Eastview Global Press Archive",
+      "agg_provider_country": "United States of America",
+      "agg_data_provider": "Eastview Global Press Archive",
+      "agg_data_provider_country": "United States of America",
+      "agg_provider_ar": "أرشيف إيست فيو العالمي للصحافة",
+      "agg_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "agg_data_provider_ar": "أرشيف إيست فيو العالمي للصحافة",
+      "agg_data_provider_country_ar": "الولايات المتحدة الامريكيه",
+      "inst_id": "eastview"
+    }
+  },
+  {
+    "trajects": [
       "gottingen.rb"
     ],
     "paths": [
