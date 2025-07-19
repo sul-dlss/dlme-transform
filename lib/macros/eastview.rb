@@ -19,9 +19,7 @@ module Macros
         url_string = record[from_url_field]
 
         unique_part = process_eastview_url_and_get_unique_part(url_string, base_id, from_url_field, context)
-        unless unique_part
-          next # Skip if unique part could not be extracted (context.skip! already called by helper)
-        end
+        next unless unique_part
 
         # If all checks pass, create the ID.
         add_eastview_id_to_accumulator(base_id, unique_part, accumulator)
@@ -43,7 +41,7 @@ module Macros
     # If not, logs a debug message and skips the record.
     # @return [Boolean] true if valid, false otherwise.
     def url_string_valid?(url_string, base_id, from_url_field, context)
-      if url_string.nil? || url_string.empty?
+      if url_string.blank?
         warn "DEBUG: SKIPPING record '#{base_id}' because the '#{from_url_field}' field is missing or empty."
         context.skip!("No URL found in field '#{from_url_field}' to generate ID")
         false
@@ -79,7 +77,7 @@ module Macros
     # @return [String, nil] The 'd' parameter value if valid, nil otherwise.
     def validate_and_get_d_param(params, url_string, base_id, from_url_field, context)
       unique_part = params['d']
-      if unique_part.nil? || unique_part.empty?
+      if unique_part.blank?
         warn "DEBUG: SKIPPING record '#{base_id}' because its URL does not contain a 'd' parameter: #{url_string}"
         context.skip!("URL in '#{from_url_field}' does not contain 'd' parameter")
         nil
