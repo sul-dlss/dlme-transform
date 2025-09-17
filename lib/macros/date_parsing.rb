@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'exception_collector'
-require 'parse_date'
 
 # Macros for Traject transformations.
 module Macros
@@ -34,9 +33,9 @@ module Macros
         accumulator.each do |val|
           hijri_val = hijri_from_mixed(val)
           if hijri_val&.strip.present?
-            hijri_range << ParseDate.parse_range(hijri_val)
+            hijri_range << ::ParseDate.parse_range(hijri_val)
           else
-            gregorian_range = ParseDate.parse_range(val)
+            gregorian_range = ::ParseDate.parse_range(val)
             hijri_range << (to_hijri(gregorian_range.first)..to_hijri(gregorian_range.last) + 1).to_a # rubocop:disable Lint/AmbiguousRange
           end
         end
@@ -97,10 +96,10 @@ module Macros
       lambda do |_record, accumulator, context|
         range_years = []
         accumulator.each do |val|
-          range_years << ParseDate.parse_range(val) if val&.strip.present?
+          range_years << ::ParseDate.parse_range(val) if val&.strip.present?
         end
         accumulator.replace(normalize_year_array(range_years))
-      rescue ParseDate::Error => e
+      rescue ::ParseDate::Error => e
         collect_exception!(context, e)
         accumulator.replace([])
       end
@@ -119,7 +118,7 @@ module Macros
         range_years = []
         accumulator.each do |val|
           range_years << val.scan(AUC_REGEX).map { |year| year.sub(AUC_DELIM, '').to_i }
-          range_years << range_array(context, ParseDate.earliest_year(val), ParseDate.latest_year(val))
+          range_years << range_array(context, ::ParseDate.earliest_year(val), ::ParseDate.latest_year(val))
         end
         accumulator.replace(normalize_year_array(range_years))
       end
@@ -147,14 +146,14 @@ module Macros
         first = first&.value&.strip
         last = last&.value&.strip
         if first.present? && last.present?
-          first = ParseDate.earliest_year(first)
-          last = ParseDate.latest_year(last)
+          first = ::ParseDate.earliest_year(first)
+          last = ::ParseDate.latest_year(last)
         else
           date_str = orig_date_node&.text
           hijri_val = hijri_from_mixed(date_str)
           date_str = date_str.split(hijri_val).join(' ') if hijri_val
-          first = ParseDate.earliest_year(date_str)
-          last = ParseDate.latest_year(date_str)
+          first = ::ParseDate.earliest_year(date_str)
+          last = ::ParseDate.latest_year(date_str)
         end
         accumulator.replace(range_array(context, first, last))
       end
@@ -173,13 +172,13 @@ module Macros
       lambda do |record, accumulator, context|
         date_range_nodeset = record.xpath(FGDC_DATE_RANGE_XPATH, FGDC_NS)
         if date_range_nodeset.present?
-          first_year = ParseDate.earliest_year(date_range_nodeset.xpath('begdate', FGDC_NS)&.text&.strip)
-          last_year = ParseDate.earliest_year(date_range_nodeset.xpath('enddate', FGDC_NS)&.text&.strip)
+          first_year = ::ParseDate.earliest_year(date_range_nodeset.xpath('begdate', FGDC_NS)&.text&.strip)
+          last_year = ::ParseDate.earliest_year(date_range_nodeset.xpath('enddate', FGDC_NS)&.text&.strip)
           accumulator.replace(range_array(context, first_year, last_year))
         else
           single_date_nodeset = record.xpath(FGDC_SINGLE_DATE_XPATH, FGDC_NS)
           if single_date_nodeset.present?
-            accumulator.replace([ParseDate.earliest_year(single_date_nodeset.text&.strip)])
+            accumulator.replace([::ParseDate.earliest_year(single_date_nodeset.text&.strip)])
           end
         end
       end
@@ -204,12 +203,12 @@ module Macros
         end
 
         # these work for date_type.match?([cdikmq])
-        first_year = ParseDate.earliest_year(val[1..4])
-        last_year = ParseDate.latest_year(val[5..8])
+        first_year = ::ParseDate.earliest_year(val[1..4])
+        last_year = ::ParseDate.latest_year(val[5..8])
         if date_type.match?(/[se]/)
-          last_year = ParseDate.latest_year(val[1..4])
+          last_year = ::ParseDate.latest_year(val[1..4])
         elsif date_type == 'r'
-          first_year = ParseDate.earliest_year(val[5..8])
+          first_year = ::ParseDate.earliest_year(val[5..8])
         end
         accumulator.replace(range_array(context, first_year, last_year))
       end
@@ -258,14 +257,14 @@ module Macros
         first = first&.value&.strip
         last = last&.value&.strip
         if first.present? && last.present?
-          first = ParseDate.earliest_year(first)
-          last = ParseDate.latest_year(last)
+          first = ::ParseDate.earliest_year(first)
+          last = ::ParseDate.latest_year(last)
         else
           date_str = orig_date_node&.text
           hijri_val = hijri_from_mixed(date_str)
           date_str = date_str.split(hijri_val).join(' ') if hijri_val
-          first = ParseDate.earliest_year(date_str)
-          last = ParseDate.latest_year(date_str)
+          first = ::ParseDate.earliest_year(date_str)
+          last = ::ParseDate.latest_year(date_str)
         end
         accumulator.replace(range_array(context, first, last))
       end
@@ -304,10 +303,10 @@ module Macros
       key_date_node = record.xpath("#{ORIGIN_INFO_PATH}/#{xpath_el_name}[@keyDate='yes']", MODS_NS)&.first
       if key_date_node
         year_str = key_date_node&.content&.strip
-        return ParseDate.parse_range(year_str) if year_str
+        return ::ParseDate.parse_range(year_str) if year_str
       end
       plain_node_value = record.xpath("#{ORIGIN_INFO_PATH}/#{xpath_el_name}", MODS_NS)&.first&.content
-      ParseDate.parse_range(plain_node_value) if plain_node_value
+      ::ParseDate.parse_range(plain_node_value) if plain_node_value
     end
 
     # sakip records with multiple dates tend to have earliest year as the 2nd occurence
@@ -331,8 +330,8 @@ module Macros
     # ability to trap date parsing errors, allowing the transform to return an
     # empty result for the field instead of raising an exception.
     def range_array(context, first_year, last_year)
-      ParseDate.range_array(first_year, last_year)
-    rescue ParseDate::Error => e
+      ::ParseDate.range_array(first_year, last_year)
+    rescue ::ParseDate::Error => e
       collect_exception!(context, e)
       []
     end

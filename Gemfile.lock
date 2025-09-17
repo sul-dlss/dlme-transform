@@ -156,8 +156,6 @@ GEM
       racc (~> 1.4)
     ostruct (0.6.3)
     parallel (1.27.0)
-    parse_date (0.4.3)
-      zeitwerk (~> 2.1)
     parser (3.3.9.0)
       ast (~> 2.4.1)
       racc
@@ -282,7 +280,6 @@ DEPENDENCIES
   faraday
   faraday_middleware
   ffi
-  parse_date
   rake
   rspec
   rspec_junit_formatter

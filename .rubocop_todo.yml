@@ -50,6 +50,7 @@ Metrics/MethodLength:
     - 'lib/macros/penn.rb'
     - 'lib/macros/walters.rb'
     - 'lib/transformer.rb'
+    - 'lib/int_from_string.rb'
 
 # Offense count: 13
 # Configuration parameters: AllowedMethods, AllowedPatterns, Max.

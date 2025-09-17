@@ -1,5 +1,6 @@
-require 'macros/date_parsing'
 # frozen_string_literal: true
+
+require 'macros/date_parsing'
 
 module Macros
   # Macros for extracting OAI values from Nokogiri documents
@@ -95,10 +96,10 @@ module Macros
       key_date_node = record.xpath("#{ORIGIN_INFO_PATH}/#{xpath_el_name}[@encoding='marc']", MODS_NS)&.first
       if key_date_node
         year_str = key_date_node&.content&.strip
-        return ParseDate.parse_range(year_str) if year_str
+        return ::ParseDate.parse_range(year_str) if year_str
       end
       plain_node_value = record.xpath("#{ORIGIN_INFO_PATH}/#{xpath_el_name}", MODS_NS)&.first&.content
-      ParseDate.parse_range(plain_node_value) if plain_node_value
+      ::ParseDate.parse_range(plain_node_value) if plain_node_value
     end
   end
 end
