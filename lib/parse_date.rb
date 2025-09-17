@@ -2,24 +2,8 @@
 
 require 'singleton'
 require 'int_from_string'
-# require 'zeitwerk'
 
-# class ParseDateInflector < Zeitwerk::Inflector
-#   def camelize(basename, _abspath)
-#     case basename
-#     when 'version'
-#       'VERSION'
-#     else
-#       super
-#     end
-#   end
-# end
-
-# loader = Zeitwerk::Loader.new
-# loader.inflector = ParseDateInflector.new
-# loader.push_dir(File.absolute_path("#{__FILE__}/.."))
-# loader.setup
-
+# Class for parsing complex date structures from providers
 class ParseDate
   class Error < StandardError; end
 

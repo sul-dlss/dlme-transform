@@ -19,6 +19,11 @@ Layout/EmptyLinesAroundModuleBody:
   Exclude:
     - 'lib/macros/date_parsing.rb' # long file;  some additional spaces and comments to keep it organized
 
+Lint/UselessConstantScoping: # new in 1.72
+  Enabled: true
+  Exclude:
+    - 'lib/int_from_string.rb' # constants are inlined for context
+
 # Configuration parameters: CountComments, ExcludedMethods.
 # ExcludedMethods: refine
 Metrics/BlockLength:
@@ -28,6 +33,7 @@ Metrics/BlockLength:
 Metrics/ModuleLength:
   Exclude:
     - 'lib/macros/date_parsing.rb'
+    - 'lib/int_from_string.rb'
 
 Performance/StringReplacement:
   Exclude:
@@ -41,6 +47,16 @@ RSpec/MultipleExpectations:
 
 RSpec/NestedGroups:
   Max: 5
+
+RSpec/RepeatedDescription:
+  Exclude:
+    - 'spec/lib/parse_date_spec.rb'
+    - 'spec/lib/int_from_string_spec.rb'
+
+RSpec/RepeatedExample:
+  Exclude:
+    - 'spec/lib/parse_date_spec.rb'
+    - 'spec/lib/int_from_string_spec.rb'
 
 Style/AsciiComments:
   Enabled: false
@@ -459,8 +475,6 @@ Lint/CopDirectiveSyntax: # new in 1.72
 Lint/RedundantTypeConversion: # new in 1.72
   Enabled: true
 Lint/SuppressedExceptionInNumberConversion: # new in 1.72
-  Enabled: true
-Lint/UselessConstantScoping: # new in 1.72
   Enabled: true
 Style/ComparableBetween: # new in 1.74
   Enabled: true

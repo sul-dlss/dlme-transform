@@ -55,7 +55,7 @@ module IntFromString
   def year_int_valid?(year)
     return false unless year.is_a? Integer
 
-    (-10_000 < year.to_i) && (year < Date.today.year + 2)
+    (year.to_i > -10_000) && (year < Date.today.year + 2)
   end
 
   private
@@ -67,7 +67,7 @@ module IntFromString
     year_int_for_bc(date_str) if date_str.match(YEAR_BC_REGEX)
   end
 
-  def earliest_year_parsing(date_str)
+  def earliest_year_parsing(date_str) # rubocop:disable Metrics/MethodLength
     [
       # DataWorks date ranges include slashes and hyphens that match date_str/date_str
       :slash_earliest_year,
@@ -134,7 +134,7 @@ module IntFromString
     date_str.delete('[]') if date_str.match(BRACKETS_BETWEEN_DIGITS_REGEX)
   end
 
-  YYYY_HYPHEN_YYYY_REGEX = /(?<first>\d{3,4})s?\??\s*(-|—|–|to)\s*(?<last>\d{4}s?)\??/m
+  YYYY_HYPHEN_YYYY_REGEX = /(?<first>\d{3,4})s?\??\s*(?:-|—|–|to)\s*(?<last>\d{4}s?)\??/m
 
   # Integer value for latest year if we have "yyyy-yyyy" pattern
   # @return [Integer, nil] yyyy if date_str matches pattern; nil otherwise
@@ -154,7 +154,7 @@ module IntFromString
     end
   end
 
-  YYYY_HYPHEN_YY_REGEX = /(?<first>\d{3,4})\??\s*(-|—|–|to)\s*(?<last>\d{2})\??([^-0-9].*)?$/
+  YYYY_HYPHEN_YY_REGEX = /(?<first>\d{3,4})\??\s*(?:-|—|–|to)\s*(?<last>\d{2})\??(?:[^-0-9].*)?$/
 
   # Integer value for latest year if we have "yyyy-yy" pattern
   # @return [Integer, nil] yyyy if date_str matches pattern; nil otherwise
@@ -168,7 +168,7 @@ module IntFromString
     last.to_i if year_range_valid?(first.to_i, last.to_i)
   end
 
-  YYYY_HYPHEN_Y_REGEX = /(?<first>\d{3,4})\??\s*(-|—|–|to)\s*(?<last>\d{1})\??([^-0-9].*)?$/
+  YYYY_HYPHEN_Y_REGEX = /(?<first>\d{3,4})\??\s*(?:-|—|–|to)\s*(?<last>\d{1})\??(?:[^-0-9].*)?$/
 
   # Integer value for latest year if we have "yyyy-y" pattern
   # @return [Integer, nil] yyyy if date_str matches pattern; nil otherwise
@@ -203,7 +203,7 @@ module IntFromString
 
   # NOTE: some actual data seemed to have a diff hyphen char. (slightly longer)
   YY_YY_CENTURY_REGEX =
-    /(?<first>\d{1,2})[a-z]{2}?\s*(-|–|–|or|to)\s*(?<last>\d{1,2})[a-z]{2}?\s+centur.*/im
+    /(?<first>\d{1,2})[a-z]{2}?\s*(?:-|–|—|or|to)\s*(?<last>\d{1,2})[a-z]{2}?\s+centur.*/im
 
   # Integer value for latest year if we have nth-nth century pattern
   # @return [Integer, nil] yy99 if date_str matches pattern; nil otherwise
@@ -261,7 +261,7 @@ module IntFromString
   #   1/1/17  ->  2017
   #   1/1/27  ->  1927
   # @return [String, nil] 4 digit year (e.g. 1865, 0950) if date_str matches pattern, nil otherwise
-  def year_from_mm_dd_yy(date_str)
+  def year_from_mm_dd_yy(date_str) # rubocop:disable Metrics/MethodLength
     slash_matches = date_str.match(%r{\d{1,2}/\d{1,2}/\d{2}})
     if slash_matches
       date_obj = Date.strptime(date_str, '%m/%d/%y')
@@ -350,20 +350,20 @@ module IntFromString
     Regexp.last_match(2).to_i if date_str.match(DATESTR_REGEX)
   end
 
-  BETWEEN_Yn_AND_Yn_REGEX = /between\s+(?<first>\d{1,4})\??\s+and\s+(?<last>\d{1,4})\??/im
+  BETWEEN_YN_AND_YN_REGEX = /between\s+(?<first>\d{1,4})\??\s+and\s+(?<last>\d{1,4})\??/im
 
   # Integer value for earliest if we have "between y and y" pattern
   # NOTE: must match for BC first with between_bc_earliest_year
   # @return [Integer, nil] year if date_str matches pattern; nil otherwise
   def between_earliest_year(date_str)
-    Regexp.last_match(:first).to_i if date_str.match(BETWEEN_Yn_AND_Yn_REGEX)
+    Regexp.last_match(:first).to_i if date_str.match(BETWEEN_YN_AND_YN_REGEX)
   end
 
   # Integer value for latest year if we have "between y and y" pattern
   # NOTE: must match for BC first with between_bc_latest_year
   # @return [Integer, nil] year if date_str matches pattern; nil otherwise
   def between_latest_year(date_str)
-    Regexp.last_match(:last).to_i if date_str.match(BETWEEN_Yn_AND_Yn_REGEX)
+    Regexp.last_match(:last).to_i if date_str.match(BETWEEN_YN_AND_YN_REGEX)
   end
 
   YEAR_BC_REGEX = Regexp.new("(\\d{1,4})#{BC_REGEX}", REGEX_OPTS)
@@ -374,7 +374,7 @@ module IntFromString
     "-#{Regexp.last_match(1)}".to_i if date_str.match(YEAR_BC_REGEX)
   end
 
-  BETWEEN_Yn_AND_Yn_BC_REGEX = Regexp.new("#{BETWEEN_Yn_AND_Yn_REGEX}#{BC_REGEX}", REGEX_OPTS)
+  BETWEEN_Yn_AND_Yn_BC_REGEX = Regexp.new("#{BETWEEN_YN_AND_YN_REGEX}#{BC_REGEX}", REGEX_OPTS)
 
   # Integer value for earliest year if we have "between y and y B.C." pattern
   # @return [Integer, nil] -ddd if date_str matches pattern; nil otherwise
@@ -397,7 +397,7 @@ module IntFromString
   end
 
   FIRST_LAST_EARLY_NUMERIC_REGEX =
-    /^(?<first>-?\d{1,3})\??\s*(-|–|–|or|to)\s*(?<last>-?\d{1,4})\??([^\du\-\[]|$)/im
+    /^(?<first>-?\d{1,3})\??\s*(?:-|–|—|or|to)\s*(?<last>-?\d{1,4})\??(?:[^\du\-\[]|$)/im
 
   # Integer value for latest year if we have early numeric year range or single early numeric year
   # @return [Integer, nil] year if date_str matches pattern; nil otherwise
