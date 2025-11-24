@@ -142,7 +142,7 @@ GEM
     marc-fastxmlwriter (1.1.0)
       marc (~> 1.0)
     mini_portile2 (2.8.9)
-    minitest (5.26.1)
+    minitest (5.26.2)
     multi_json (1.17.0)
     multipart-post (2.4.1)
     mutex_m (0.3.0)
@@ -296,4 +296,4 @@ DEPENDENCIES
   webmock
 
 BUNDLED WITH
-   2.7.2
+  4.0.0.beta1
