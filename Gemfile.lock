@@ -23,7 +23,7 @@ GEM
     config (5.6.1)
       deep_merge (~> 1.2, >= 1.2.1)
       ostruct
-    connection_pool (2.5.5)
+    connection_pool (3.0.2)
     crack (1.0.1)
       bigdecimal
       rexml
@@ -127,7 +127,7 @@ GEM
       pp (>= 0.6.0)
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
-    json (2.16.0)
+    json (2.17.1)
     jsonpath (1.1.5)
       multi_json
     language_server-protocol (3.17.0.5)
@@ -143,7 +143,7 @@ GEM
       marc (~> 1.0)
     mini_portile2 (2.8.9)
     minitest (5.26.2)
-    multi_json (1.17.0)
+    multi_json (1.18.0)
     multipart-post (2.4.1)
     mutex_m (0.3.0)
     nokogiri (1.18.10)
@@ -169,7 +169,7 @@ GEM
     racc (1.8.1)
     rainbow (3.1.1)
     rake (13.3.1)
-    rdoc (6.16.1)
+    rdoc (6.17.0)
       erb
       psych (>= 4.0.0)
       tsort
@@ -233,7 +233,7 @@ GEM
     simplecov-html (0.13.2)
     simplecov_json_formatter (0.1.4)
     slop (4.10.1)
-    stringio (3.1.8)
+    stringio (3.1.9)
     thor (1.4.0)
     traject (3.8.3)
       concurrent-ruby (>= 0.8.0)
@@ -296,4 +296,4 @@ DEPENDENCIES
   webmock
 
 BUNDLED WITH
-  4.0.0.beta2
+  4.0.0
