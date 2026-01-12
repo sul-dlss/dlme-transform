@@ -9,7 +9,7 @@ RSpec.describe Macros::OpenITI do
   subject(:indexer) do
     Traject::Indexer.new.tap do |indexer|
       indexer.instance_eval do
-        extend Macros::OpenITI # rubocop:disable RSpec/DescribedClass
+        extend Macros::OpenITI
         extend TrajectPlus::Macros
       end
     end

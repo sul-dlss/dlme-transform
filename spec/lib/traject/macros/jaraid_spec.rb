@@ -13,9 +13,7 @@ RSpec.describe Macros::Jaraid do
   subject(:indexer) do
     Traject::Indexer.new.tap do |idx|
       idx.instance_eval do
-        # rubocop:disable RSpec/DescribedClass -- described_class is not available in instance_eval context
         extend Macros::Jaraid
-        # rubocop:enable RSpec/DescribedClass
         extend TrajectPlus::Macros
       end
       # Manually set the instance variables that the extended hook would normally set
