@@ -31,8 +31,8 @@ RUN apk add --no-cache \
 COPY Gemfile /opt/traject/
 COPY Gemfile.lock /opt/traject/
 
-RUN bundle config build.nokogiri --use-system-libraries && \
-    bundle install --without test && \
+RUN bundle config set build.nokogiri --use-system-libraries && \
+    bundle config set without test && \
     apk del build-dependencies
 
 COPY . /opt/traject/
