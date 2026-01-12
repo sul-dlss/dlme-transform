@@ -6,7 +6,7 @@ RSpec.describe Macros::Openn do
   subject(:indexer) do
     Traject::Indexer.new.tap do |indexer|
       indexer.instance_eval do
-        extend Macros::Openn # rubocop:disable RSpec/DescribedClass
+        extend Macros::Openn
         extend TrajectPlus::Macros
       end
     end
