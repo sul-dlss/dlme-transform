@@ -67,7 +67,7 @@ module IntFromString
     year_int_for_bc(date_str) if date_str.match(YEAR_BC_REGEX)
   end
 
-  def earliest_year_parsing(date_str) # rubocop:disable Metrics/MethodLength
+  def earliest_year_parsing(date_str)
     [
       # DataWorks date ranges include slashes and hyphens that match date_str/date_str
       :slash_earliest_year,
@@ -95,7 +95,6 @@ module IntFromString
     year_int_for_bc(date_str) if date_str.match(BC_REGEX)
   end
 
-  # rubocop:disable Metrics/MethodLength
   def latest_year_parsing(date_str)
     result = nil
     [
@@ -123,7 +122,6 @@ module IntFromString
     end
     nil
   end
-  # rubocop:enable Metrics/MethodLength
 
   REGEX_OPTS = Regexp::IGNORECASE | Regexp::MULTILINE
   BC_REGEX = /\s*B\.?\s*C\.?/im
@@ -261,7 +259,7 @@ module IntFromString
   #   1/1/17  ->  2017
   #   1/1/27  ->  1927
   # @return [String, nil] 4 digit year (e.g. 1865, 0950) if date_str matches pattern, nil otherwise
-  def year_from_mm_dd_yy(date_str) # rubocop:disable Metrics/MethodLength
+  def year_from_mm_dd_yy(date_str)
     slash_matches = date_str.match(%r{\d{1,2}/\d{1,2}/\d{2}})
     if slash_matches
       date_obj = Date.strptime(date_str, '%m/%d/%y')
