@@ -33,7 +33,7 @@ RSpec.describe Macros::Prepend do
 
   describe '#intelligent_prepend' do
     context 'with en language code' do
-      let(:output) { [language: 'en', values: [+'value']] } # outputs nil
+      let(:output) { [{ language: 'en', values: [+'value'] }] } # outputs nil
 
       it 'prepends the English prepend string' do
         callable = instance.intelligent_prepend('prepend string: ', 'السلسلة السابقة: ')
@@ -42,7 +42,7 @@ RSpec.describe Macros::Prepend do
     end
 
     context 'with en language code and multiple values' do
-      let(:output) { [language: 'en', values: [+'value_one', +'value_two']] } # outputs nil
+      let(:output) { [{ language: 'en', values: [+'value_one', +'value_two'] }] } # outputs nil
 
       it 'prepends the English prepend string to all values' do
         callable = instance.intelligent_prepend('prepend string: ', 'السلسلة السابقة: ')
@@ -51,7 +51,7 @@ RSpec.describe Macros::Prepend do
     end
 
     context 'with other language code' do
-      let(:output) { [language: 'ar-Arab', values: [+'القيمة']] } # outputs nested array
+      let(:output) { [{ language: 'ar-Arab', values: [+'القيمة'] }] } # outputs nested array
 
       it 'prepends the translated prepend string' do
         callable = instance.intelligent_prepend('prepend string: ', 'السلسلة السابقة: ')
