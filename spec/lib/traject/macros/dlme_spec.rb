@@ -121,7 +121,7 @@ RSpec.describe Macros::DLME do
       accumulator_original = %w[value1 value2 value3]
       accumulator = accumulator_original.dup
       callable = instance.lang('en')
-      expect(callable.call(nil, accumulator, nil)).to eq([language: 'en', values: accumulator_original])
+      expect(callable.call(nil, accumulator, nil)).to eq([{ language: 'en', values: accumulator_original }])
     end
 
     context 'with no values in accumulator' do
