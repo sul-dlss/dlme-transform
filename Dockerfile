@@ -5,7 +5,7 @@ RUN mkdir -p /opt/traject/output
 
 WORKDIR /opt/traject
 
-ENV BUNDLER_VERSION=2.6.5
+ENV BUNDLER_VERSION=4.0.8
 
 RUN apk add --no-cache \
     curl \
@@ -23,7 +23,7 @@ RUN apk add --no-cache \
     py-pip \
     python3-dev \
     && apk del python-dependencies \
-    && gem install bundler
+    && gem install bundler -v "$BUNDLER_VERSION"
 
 # Copy the Gemfile and Gemfile.lock, and run bundle install prior to copying all source files
 # This is an optimization that will prevent the need to re-run bundle install when only source
@@ -33,6 +33,7 @@ COPY Gemfile.lock /opt/traject/
 
 RUN bundle config set build.nokogiri --use-system-libraries && \
     bundle config set without test && \
+    bundle install && \
     apk del build-dependencies
 
 COPY . /opt/traject/
