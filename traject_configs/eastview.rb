@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-## Frozen_string_literal: true
-
 require 'dlme_json_resource_writer'
 require 'dlme_debug_writer'
 require 'macros/collection'
@@ -9,6 +7,7 @@ require 'macros/date_parsing'
 require 'macros/dlme'
 require 'macros/each_record'
 require 'macros/eastview'
+require 'macros/field_extraction'
 require 'macros/iiif'
 require 'macros/jaraid'
 require 'macros/language_extraction'
@@ -28,6 +27,7 @@ extend Macros::DLME
 extend Macros::DateParsing
 extend Macros::EachRecord
 extend Macros::Eastview
+extend Macros::FieldExtraction
 extend Macros::IIIF
 extend Macros::Jaraid
 extend Macros::LanguageExtraction
@@ -67,13 +67,17 @@ to_field 'agg_data_provider_collection_id', literal('eastview-serials')
 to_field 'id', generate_eastview_issue_id('F001', 'issue-url')
 to_field 'cho_title', extract_json('.issue-text'), flatten_array, arabic_script_lang_or_default('und-Arab', 'en')
 to_field 'cho_title', extract_json('.F001'), translation_map('jaraid_from_eastview'), jaraid_title, arabic_script_lang_or_default('und-Arab', 'en')
-
 # CHO Other
 to_field 'cho_contributor', extract_json('.F700'), flatten_array, arabic_script_lang_or_default('und-Arab', 'en')
 to_field 'cho_contributor', extract_json('.F710'), flatten_array, arabic_script_lang_or_default('und-Arab', 'en')
-to_field 'cho_creator', extract_json('.F001'), translation_map('jaraid_from_eastview'), jaraid_editors, lang('en')
-to_field 'cho_creator', extract_json('.F001'), translation_map('jaraid_from_eastview'), jaraid_editors_ar, lang('ar-Arab')
-to_field 'cho_date', extract_json('.F515'), flatten_array, dlme_prepend('Numbering Peculiarities Note: '), lang('en')
+to_field 'cho_creator', extract_with_fallback([
+  'F100', # Primary Person
+  'F110', # Primary Corporation
+  'F700', # Additional People
+  'F710'  # Additional Corporations
+]), flatten_array, dlme_strip, arabic_script_lang_or_default('und-Arab', 'en')
+to_field 'cho_creator_ja', extract_json('.F001'), translation_map('jaraid_from_eastview'), jaraid_editors, lang('en')
+to_field 'cho_creator_ja', extract_json('.F001'), translation_map('jaraid_from_eastview'), jaraid_editors_ar, lang('ar-Arab')
 to_field 'cho_date', extract_json('.F001'), translation_map('jaraid_from_eastview'), jaraid_pub_dates, arabic_script_lang_or_default('und-Arab', 'en')
 # this is the issue date we want
 to_field 'cho_date', eastview_issue_date, arabic_script_lang_or_default('und-Arab', 'en')
@@ -86,6 +90,7 @@ to_field 'cho_description', extract_json('.F001'), translation_map('jaraid_from_
 to_field 'cho_description', extract_json('.F520'), flatten_array, arabic_script_lang_or_default('und-Arab', 'en')
 to_field 'cho_description', extract_json('.F500'), flatten_array, arabic_script_lang_or_default('und-Arab', 'en')
 to_field 'cho_description', extract_json('.F490'), flatten_array, dlme_prepend('Series statement: '), arabic_script_lang_or_default('und-Arab', 'en')
+to_field 'cho_description', extract_json('.F515'), flatten_array, dlme_prepend('Numbering Peculiarities Note: '), lang('en')
 to_field 'cho_edm_type', literal('Text'), lang('en')
 to_field 'cho_edm_type', literal('Text'), translation_map('edm_type_ar_from_en'), lang('ar-Arab')
 to_field 'cho_extent', extract_json('.F300'), flatten_array, arabic_script_lang_or_default('und-Arab', 'en')
@@ -97,8 +102,10 @@ to_field 'cho_identifier', extract_json('.F001'), translation_map('jaraid_from_e
 to_field 'cho_identifier', extract_json('.F001'), flatten_array
 to_field 'cho_identifier', extract_json('.F035'), flatten_array
 to_field 'cho_is_part_of', extract_json('.F830'), flatten_array, arabic_script_lang_or_default('und-Arab', 'en')
-to_field 'cho_language', extract_json('.F041'), flatten_array, dlme_split(' '), dlme_strip, normalize_language, lang('en')
-to_field 'cho_language', extract_json('.F041'), flatten_array, dlme_split(' '), dlme_strip, normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
+# to_field 'cho_language', extract_json('.F041'), flatten_array, dlme_split(' '), dlme_strip, normalize_language, lang('en')
+# to_field 'cho_language', extract_json('.F041'), flatten_array, dlme_split(' '), dlme_strip, normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
+to_field 'cho_language', extract_with_fallback(['F041', ['F008', 35, 3]]), flatten_array, dlme_split(' '), dlme_strip, normalize_language, lang('en')
+to_field 'cho_language', extract_with_fallback(['F041', ['F008', 35, 3]]), flatten_array, dlme_split(' '), dlme_strip, normalize_language, translation_map('lang_ar_from_en'), lang('ar-Arab')
 to_field 'cho_publisher', extract_json('.F001'), translation_map('jaraid_from_eastview'), jaraid_publishers, lang('en')
 to_field 'cho_publisher', extract_json('.F001'), translation_map('jaraid_from_eastview'), jaraid_publishers_ar, lang('ar-Arab')
 to_field 'cho_publisher', extract_json('.F246'), flatten_array, dlme_gsub('880-02 ', ''), dlme_split(':'), at_index(1), dlme_strip, arabic_script_lang_or_default('und-Arab', 'en')
