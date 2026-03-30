@@ -30,7 +30,7 @@ jobs:
           - app-bundle-v2-
       - run:
           name: Bundle Install
-          command: bundle check || bundle install
+          command: bundle check || bundle install --jobs 1
       # Store bundle cache
       - save_cache:
           key: app-bundle-v2-{{ checksum "Gemfile.lock" }}
