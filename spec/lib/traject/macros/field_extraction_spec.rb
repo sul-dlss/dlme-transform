@@ -74,10 +74,10 @@ RSpec.describe Macros::FieldExtraction do
     before do
       indexer.instance_eval do
         to_field 'fallback_result', extract_with_fallback([
-          'primary_field',
-          ['fixed_field', 2, 4], # slice starting at index 2, length 4
-          'backup_field'
-        ])
+                                                            'primary_field',
+                                                            ['fixed_field', 2, 4], # slice starting at index 2, length 4
+                                                            'backup_field'
+                                                          ])
       end
     end
 
