@@ -31,9 +31,16 @@ RSpec.describe Macros::Eastview do
         result = indexer.map_record(record)
         expect(result['eastview_id']).to eq(['ocn123456_unique_part_123abc'])
       end
-      # rubocop:enable RSpec/ExampleLength
 
-      # rubocop:disable RSpec/ExampleLength
+      it 'handles a URL where d is the only parameter' do
+        record = {
+          'base_id_field' => 'ocn123',
+          'url_field' => 'http://eastview.com/docs?d=just-d'
+        }
+        result = indexer.map_record(record)
+        expect(result['eastview_id']).to eq(['ocn123_just-d'])
+      end
+
       it 'generates the correct unique ID with special characters in "d" parameter' do
         record = {
           'base_id_field' => 'ocn7890',
@@ -76,9 +83,7 @@ RSpec.describe Macros::Eastview do
         result = indexer.map_record(record)
         expect(result).to be_nil
       end
-      # rubocop:enable RSpec/ExampleLength
 
-      # rubocop:disable RSpec/ExampleLength
       it 'skips the record if "d" parameter is empty' do
         record = {
           'base_id_field' => 'ocn_empty_d_param',
@@ -126,10 +131,22 @@ RSpec.describe Macros::Eastview do
         expect(result['issue_date']).to eq(['2024-07-15'])
       end
 
-      it 'extracts multiple dates if present' do
+      it 'extracts multiple dates if present in a single string' do
         record = { 'issue-text' => ['Date 2022.05.10 and another 2023-12-25.'] }
         result = indexer.map_record(record)
         expect(result['issue_date']).to contain_exactly('2022-05-10', '2023-12-25')
+      end
+
+      it 'extracts dates from multiple strings in the issue-text array' do
+        record = { 'issue-text' => ['First 2021-01-01', 'Second 2022.02.02'] }
+        result = indexer.map_record(record)
+        expect(result['issue_date']).to eq(['2021-01-01', '2022-02-02'])
+      end
+
+      it 'handles mixed valid dates and strings with no dates in the array' do
+        record = { 'issue-text' => ['2021-01-01', 'No date here'] }
+        result = indexer.map_record(record)
+        expect(result['issue_date']).to eq(['2021-01-01'])
       end
     end
 
