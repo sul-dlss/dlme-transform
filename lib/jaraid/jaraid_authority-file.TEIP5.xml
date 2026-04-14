@@ -7,7 +7,7 @@
                 <title>Authority File for Project Jarāʾid</title>
                 <editor> <persName change="#d9e336" ref="oape:pers:4312" xml:id="pers_TG"> <forename>Till</forename> <surname>Grallert</surname> </persName> </editor>
                 <respStmt>
-                    <resp>Contributed to the original file from which the entities were extracted</resp>
+                    <resp>Contributed to the original file from which the entities were extracted.</resp>
                     <persName xml:lang="en">Adam Mestyan</persName>
                     <persName xml:lang="en">Hala Auji</persName>
                     <persName xml:lang="en">Philippe Chevrant</persName>
