@@ -34,5 +34,46 @@ module Macros
       end
     end
     # rubocop:enable Metrics/PerceivedComplexity, Metrics/CyclomaticComplexity, Metrics/AbcSize, Metrics/MethodLength
+
+    def extract_with_fallback(record_fields = [])
+      lambda do |record, accumulator|
+        record_fields.each do |field_spec|
+          extracted_values = extract_values_for_spec(record, field_spec)
+
+          # 3. If we found something, populate and STOP
+          if extracted_values.any?(&:present?)
+            extracted_values.each { |v| accumulator << v if v.present? }
+            break
+          end
+        end
+      end
+    end
+
+    private
+
+    # 1. Determine if it's a fixed-field slice or a standard field
+    # Syntax: ['F041'] or ['F008', 35, 3]
+    def extract_values_for_spec(record, field_spec)
+      field_name = field_spec.is_a?(Array) ? field_spec[0] : field_spec
+      raw_val = record[field_name]
+
+      return [] if raw_val.nil? || raw_val.empty?
+
+      if field_spec.is_a?(Array) && field_spec.length == 3
+        # Handle fixed-field slice: [field, start, length]
+        extract_fixed_field_value(raw_val, field_spec[1], field_spec[2])
+      else
+        # Handle standard field (can be string or array)
+        Array(raw_val)
+      end
+    end
+
+    # 2. Extract value from a fixed-field slice
+    def extract_fixed_field_value(raw_val, start_pos, length)
+      val = raw_val.is_a?(Array) ? raw_val.first : raw_val
+      return [] unless val.is_a?(String) && val.length >= (start_pos + length)
+
+      [val[start_pos, length].strip]
+    end
   end
 end
