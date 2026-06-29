@@ -119,7 +119,7 @@ module Macros
         Settings.acceptable_bcp47_codes.include?(bcp47_string)
 
       lambda do |_record, accumulator, _context|
-        accumulator.replace([{ language: bcp47_string, values: accumulator.dup }]) unless accumulator&.empty?
+        accumulator.replace([{ language: bcp47_string, values: accumulator.dup }]) unless accumulator && accumulator.empty?
       end
     end
 
