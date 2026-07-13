@@ -63,7 +63,7 @@ module Macros
         role_node.each do |val|
           roles << val&.content&.strip&.downcase
         end
-        if roles.any? { |x| ['scribe.', 'copyist.'].include?(x) }
+        if roles.intersect?(['scribe.', 'copyist.'])
           accumulator.replace(['manuscript'])
         else
           has_type = accumulator.map!(&:downcase)
