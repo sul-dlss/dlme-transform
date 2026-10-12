@@ -13,7 +13,7 @@ executors:
 jobs:
   test:
     docker:
-      - image: cimg/ruby:3.4.1
+      - image: cimg/ruby:4.0.7
     steps:
       - checkout
       # Upgrade bundler

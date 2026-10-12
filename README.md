@@ -209,6 +209,8 @@ to_field 'cho_language', extract_xpath("#{record}/dc:language", ns: NS), first_o
 
 ## Testing
 
+Use Ruby 4.0.7 for development and testing.
+
 To run the code linter (Rubocop) and the test suite, including unit and integration tests, run:
 
 In order to run the integration tests, you can clone the `dlme-metadata` repo into the `data` subfolder.
