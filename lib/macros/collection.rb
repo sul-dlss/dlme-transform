@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'pathname'
-
 module Macros
   # Macro for setting the collection of the current data file
   module Collection

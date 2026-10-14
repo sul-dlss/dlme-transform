@@ -1,4 +1,4 @@
-FROM ruby:3.4-alpine
+FROM ruby:4.0-alpine
 
 # Create and set the working directory as /opt
 RUN mkdir -p /opt/traject/output
