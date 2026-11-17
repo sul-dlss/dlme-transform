@@ -91,6 +91,7 @@ article: Other Texts
 artifact remnant: Other Objects
 artworks: Other Images
 aryballos: Other Objects
+askos: Containers
 astragal: Other Objects
 astragalus: Other Objects
 attachment: Other Objects
@@ -236,6 +237,7 @@ bottle (uncertain): Containers
 bottle fragment: Containers
 bottle neck: Containers
 bottles: Other Objects
+bottom: Other Objects
 boundary stone: Other Objects
 boundary stones: Other Objects
 bow: Armaments
@@ -786,6 +788,7 @@ footed cup: Other Objects
 footed dish: Containers
 footed jar: Containers
 footed pot: Containers
+footed tray: Other Objects
 fork: Other Objects
 fork (uncertain): Other Objects
 fortresses: Structures
@@ -1251,6 +1254,7 @@ mummies: Funerary Objects
 mummies & cartonnage: Funerary Objects
 mummy: Funerary Objects
 mummy bandage: Funerary Objects
+mummy bead: Funerary Objects
 mummy case: Funerary Objects
 mummy case fragment: Funerary Objects
 mummy case lid: Funerary Objects
@@ -1340,6 +1344,7 @@ omphalos bowl: Containers
 onlays: Containers
 openmouth bowl: Containers
 oral histories (document genres): Oral History
+ore: Other Objects
 organic material: Containers
 ornament: Adornments
 ornament (uncertain): Other Objects
@@ -1380,6 +1385,7 @@ parchisi: Recreational Artifacts
 paste: Other Objects
 patch box: Containers
 patch box lid: Containers
+patera: Containers
 patira: Other Objects
 pavement: Other Objects
 pavilions (buildings): Structures
@@ -1721,6 +1727,7 @@ sheath: Other Objects
 sheath fragment: Other Objects
 sheaths (cases): Armaments
 sheep bone (uncertain): Other Objects
+sheet: Other Objects
 shell: Other Objects
 shell fragment: Other Objects
 sherd: Other Objects
@@ -1936,6 +1943,7 @@ sword sheath: Armaments
 swords: Armaments
 table: Furniture
 table fragment: Other Objects
+table leg: Furniture
 tablecloth: Other Objects
 tables: Furniture
 tablet: Tablets
@@ -1999,6 +2007,7 @@ toe ring: Adornments
 toggle pin: Other Objects
 toilet box: Other Objects
 toilet kit: Other Objects
+toiletry kit: Containers
 token: Coins
 token (uncertain): Other Objects
 toman: Other Objects
@@ -2018,6 +2027,7 @@ tool handle (uncertain): Other Objects
 tools & manufacturing equipment: Tools & Equipment
 tools manufacturing equipment: Tools & Equipment
 tooth: Other Objects
+top: Other Objects
 topological maps: Maps
 torch: Other Objects
 torque: Other Objects
@@ -2155,6 +2165,7 @@ water flask: Containers
 water pipe: Other Objects
 watercolors: Paintings
 watercolors (paintings): Paintings
+wax: Other Objects
 weaponry food procurement: Armaments
 weapons: Armaments
 weaving pick: Other Objects
@@ -2207,4 +2218,5 @@ yoke-saddle pommel: Tools & Equipment
 zither: Musical Instruments
 zoomorphic jar: Containers
 zoomorphic object: Other Objects
+zoomorphic vase: Containers
 zoomorphic vessel: Containers
