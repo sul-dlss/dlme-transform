@@ -1,6 +1,7 @@
 # type values from contributor mapped to cho_has_type
 abacus: Other Objects
 abbey churches: Structures
+abrupt scraper: Other Objects
 accessory: Other Objects
 adornment: Adornments
 adornment (uncertain): Other Objects
@@ -33,6 +34,8 @@ amulets: Amulets
 anatomical figurine: Other Objects
 angle: Other Objects
 angle band: Other Objects
+angle burin: Other Objects
+angle-plan burin: Other Objects
 animal bone: Other Objects
 animal bone fragment: Other Objects
 animal figurine: Sculptures
@@ -91,6 +94,7 @@ article: Other Texts
 artifact remnant: Other Objects
 artworks: Other Images
 aryballos: Other Objects
+askos: Containers
 astragal: Other Objects
 astragalus: Other Objects
 attachment: Other Objects
@@ -117,7 +121,11 @@ axe head:
 - Armaments
 - Tools & Equipment
 axe mold: Tools & Equipment
+axehead: Armaments
 back: null
+back blade: Other Objects
+backed blade: Other Objects
+backed knife: Armaments
 backed micro-blade: Other Objects
 bactreate: Adornments
 bag: Other Objects
@@ -132,6 +140,7 @@ ballista (uncertain): Other Objects
 balsamarium: Funerary Objects
 balustrade: Structures
 band: Other Objects
+band fragment: Other Objects
 bandage: Other Objects
 bandeau: null
 bangle: Other Objects
@@ -150,11 +159,13 @@ base sherd (uncertain): Other Objects
 basilicas: Structures
 basin: Containers
 basin (vessel): Containers
+basin fragment: Containers
 basins: Other Objects
 basket: Containers
 basket base: Containers
 basket fragment: Containers
 basket lid: Containers
+basket lining: Containers
 bead: Other Objects
 bead (uncertain): Other Objects
 bead fragment: Other Objects
@@ -172,6 +183,8 @@ beaker: Containers
 beakers (drinking vessels): Containers
 beard: Other Objects
 bec de flute burin: Other Objects
+bec de flute de fortune: Other Objects
+bed: Furniture
 bed leg: Other Objects
 bell: Other Objects
 belt: Adornments
@@ -199,7 +212,9 @@ bit: Other Objects
 black-and-white photographs: Photographs
 blade: Armaments
 blade (uncertain): Other Objects
+blade core: Other Objects
 blade fragment: Armaments
+blade haft: Other Objects
 bladelet: Other Objects
 blank stela: Funerary Objects
 block: Other Objects
@@ -211,6 +226,7 @@ board game: Other Objects
 boat: Other Objects
 boat (model): Other Objects
 boat model: Other Objects
+bobbin: Tools & Equipment
 bodkin: Other Objects
 bodkin (uncertain): Other Objects
 body sherd: Other Objects
@@ -236,6 +252,7 @@ bottle (uncertain): Containers
 bottle fragment: Containers
 bottle neck: Containers
 bottles: Other Objects
+bottom: Other Objects
 boundary stone: Other Objects
 boundary stones: Other Objects
 bow: Armaments
@@ -262,6 +279,8 @@ bracelet: Adornments
 bracelet (uncertain): Other Objects
 bracelet fragment: Adornments
 bracelet fragment (uncertain): Other Objects
+bracelet fragments: Adornments
+bracer: Armaments
 bracket: Other Objects
 bracket (uncertain): Other Objects
 brazier: Other Objects
@@ -297,7 +316,11 @@ bulla:
 burial chamber: Funerary Objects
 burial goods: Funerary Objects
 burin: Other Objects
+burin de fortune: Other Objects
+burin plan: Other Objects
 burin spall: Other Objects
+burin-plan: Other Objects
+burin-plan de fortune: Other Objects
 burka: Adornments
 burnisher: Other Objects
 business letters: Letters
@@ -388,20 +411,26 @@ chalice (uncertain): Other Objects
 chalice fragment: Other Objects
 chalices: Containers
 chapel: Structures
+chariot model fragment: Other Objects
 charm: Other Objects
 charm case: Other Objects
+chatelperron-type point: Other Objects
 cheek piece: Other Objects
 cheekpiece: Other Objects
+chessmen: Recreational Artifacts
 chest fragment: Containers
 chicken feeder: Other Objects
 child: Other Objects
 chip: Other Objects
 chisel: Tools & Equipment
 chisel (uncertain): Other Objects
+chisels: Tools & Equipment
 choker: Other Objects
+chopper: Other Objects
 cippi: Other Objects
 cippus: Other Objects
 circle: Other Objects
+clamp: Other Objects
 clapper: Musical Instruments
 clappers (percussion beaters): Musical Instruments
 clasp: Other Objects
@@ -470,6 +499,8 @@ commemorative scarab: Other Objects
 "commentary on j\u0101dar\u012B's rawd\u1EA1t al-azh\u0101r": null
 commonplace books: Books
 complete flake: Other Objects
+concave convergent scraper: Other Objects
+concave convex scraper: Other Objects
 concave scraper: Other Objects
 concave transverse scraper: Other Objects
 concave-straight scraper: Other Objects
@@ -486,8 +517,11 @@ containers (other): Containers
 containers (pots, etc.): Containers
 containers (sherds): Containers
 content: Other Objects
+convergent scraper: Other Objects
 convergent-concave scraper: Other Objects
 convergent-convex scraper: Other Objects
+convex concave scraper: Other Objects
+convex convergent scraper: Other Objects
 convex transverse scraper: Other Objects
 convex-concave scraper: Other Objects
 convex-straight scraper: Other Objects
@@ -508,9 +542,12 @@ cosmetic box: Containers
 cosmetic box lid: Other Objects
 cosmetic container: Containers
 cosmetic container (uncertain): Other Objects
+cosmetic cup: Containers
+cosmetic dish: Containers
 cosmetic implement: Other Objects
 cosmetic kit: Other Objects
 cosmetic palette: Other Objects
+cosmetic pin: Other Objects
 cosmetic shell: Other Objects
 cosmetic spatula: Other Objects
 cosmetic spoon: Other Objects
@@ -537,8 +574,10 @@ crocodile: Other Objects
 crocodile head: Other Objects
 crocodile mandible: Other Objects
 cross: Other Objects
+cross puzzle: Recreational Artifacts
 crucible: Tools & Equipment
 crucible fragments: Other Objects
+'crystal (stone)': Other Objects
 cuff: Other Objects
 cult object: Other Objects
 cult object (uncertain): Other Objects
@@ -578,6 +617,7 @@ dangle: Other Objects
 dbl straight scraper: Other Objects
 decanter: Other Objects
 decanummus: Coins
+decoration: Other Objects
 decorative panel: Other Objects
 denticulate: Other Objects
 'design drawings:': Drawings
@@ -599,7 +639,9 @@ dirham: Coins
 disc: Other Objects
 disc (uncertain): Other Objects
 disc fragment: Other Objects
+disc nucleus scraper: Other Objects
 disc wand: Other Objects
+disc-nose scraper: Other Objects
 discoidal core: Other Objects
 discs: Other Objects
 dish: Containers
@@ -609,6 +651,7 @@ dish fragments: Containers
 dishes: Other Objects
 disk: Other Objects
 disk (uncertain): Other Objects
+disk fragment: Other Objects
 dissertations: Other Texts
 document: Other Texts
 documentary photographs: Photographs
@@ -630,17 +673,30 @@ door socket (uncertain): Other Objects
 doors: Other Objects
 double bottle: Other Objects
 double bowl: Containers
+double burin: Other Objects
+double burin de fortune: Other Objects
 double clarinet (uncertain): Other Objects
 double concave scraper: Other Objects
+double concave-convex scraper: Other Objects
+double convex concave scraper: Other Objects
 double convex scraper: Other Objects
+double end scraper: Other Objects
 double jar: Containers
 double kohl pot: Containers
+double nuclei-form scraper: Other Objects
+double nucleiform scraper: Other Objects
 double pot: Other Objects
 double ring: Adornments
+double scraper: Other Objects
 double sleeve band: Other Objects
+double straight concave scraper: Other Objects
+double straight convex scraper: Other Objects
 double straight scraper: Other Objects
 double vase: Containers
 double vessel: Containers
+double-ended nucleiform scraper: Other Objects
+double-ended nucleus: Other Objects
+double-ended point: Other Objects
 drachm: Coins
 drachma: Coins
 drain: Other Objects
@@ -660,6 +716,7 @@ drill butt: Tools & Equipment
 drill head: Other Objects
 drinking tube: Other Objects
 drinking vessels: Other Objects
+drip vessel: Containers
 drum: Musical Instruments
 drum (uncertain): Other Objects
 drums: Musical Instruments
@@ -717,6 +774,7 @@ false door: Other Objects
 fan: Other Objects
 fans (costume accessories): Other Objects
 fans (equipment): Other Objects
+fastener: Other Objects
 fastening: Other Objects
 fastenings: Other Objects
 feeder: Other Objects
@@ -727,6 +785,7 @@ fez (hat): Adornments
 fibula (pin): Other Objects
 fibula (uncertain): Other Objects
 fibula fragment: Other Objects
+fibula fragments: Adornments
 fiddle: Musical Instruments
 fiddle bow: Musical Instruments
 figure: Other Objects
@@ -760,6 +819,7 @@ fishhook: Other Objects
 flageolet: Other Objects
 flail: Other Objects
 flake: Other Objects
+flake blade: Other Objects
 flake fragment: Other Objects
 flake tool: Other Objects
 flakes: Other Objects
@@ -778,6 +838,7 @@ folio s (leaves): null
 folios (leaves): null
 folios (leves): null
 follis: Coins
+font yves point: Other Objects
 food: Other Objects
 food/drink: Other Objects
 foot: Other Objects
@@ -786,6 +847,7 @@ footed cup: Other Objects
 footed dish: Containers
 footed jar: Containers
 footed pot: Containers
+footed tray: Other Objects
 fork: Other Objects
 fork (uncertain): Other Objects
 fortresses: Structures
@@ -813,6 +875,7 @@ frontlet: Other Objects
 frontlet ring: Adornments
 frontlet rings: Other Objects
 fruit: Other Objects
+fruit stand: Containers
 frying pan: Other Objects
 funerary cone: Funerary Objects
 funerary jar: Funerary Objects
@@ -833,6 +896,7 @@ furniture model fragment: Other Objects
 furniture overlay: Other Objects
 "fu\u02BCa\u0304d i, king of egypt": null
 game board: Recreational Artifacts
+game counters: Recreational Artifacts
 game piece: Recreational Artifacts
 game piece (uncertain): Other Objects
 game piece material: Recreational Artifacts
@@ -845,6 +909,7 @@ garnet: Other Objects
 garter: Adornments
 garters: Adornments
 gateway: Other Objects
+gauge: Tools & Equipment
 gazelle horn: Other Objects
 gazete: Serials
 gem: Other Objects
@@ -876,9 +941,11 @@ graphics: null
 grate: Other Objects
 grave marker: Funerary Objects
 grinder: Tools & Equipment
+grinding slab: Tools & Equipment
 grinding stone: Tools & Equipment
 guard band: Other Objects
 gun: Other Objects
+haft: Other Objects
 hair: Other Objects
 hair chain: Other Objects
 hair comb: Other Objects
@@ -898,6 +965,7 @@ half dirhem: Coins
 half follis: Other Objects
 hammer: Tools & Equipment
 hammer (uncertain): Other Objects
+hammerstone: Tools & Equipment
 hand axe: Armaments
 hand warmers: Adornments
 handle: Other Objects
@@ -1028,6 +1096,7 @@ jar: Containers
 jar (uncertain): Other Objects
 jar cover: Containers
 jar fragment: Containers
+jar fragments: Containers
 jar handle: Containers
 jar handle fragment: Containers
 jar lid: Containers
@@ -1041,6 +1110,7 @@ jar stopper: Containers
 jar stopper (uncertain): Other Objects
 jars: Containers
 javelin: Armaments
+javelin point: Armaments
 jaw: Other Objects
 jewelry: Adornments
 jewelry fragment: Adornments
@@ -1051,13 +1121,17 @@ journal: Serials
 journal article: Serials
 jug: Containers
 jug (uncertain): Other Objects
+jug fragment: Containers
+jug fragments: Containers
 jug handle: Other Objects
 jug spout: Containers
 juglet: Containers
 juglet (uncertain): Other Objects
+juglet sherd: Containers
 jugs: Containers
 kamancheh: Musical Instruments
 kamancheh bow: Musical Instruments
+keeled scraper: Other Objects
 kernos: Other Objects
 kernos fragment: Other Objects
 kernos ring: Other Objects
@@ -1080,6 +1154,7 @@ knobs: Other Objects
 knocker: Other Objects
 knucklebone: Other Objects
 kohl box: Containers
+kohl jar: Containers
 kohl pot: Containers
 kohl pot lid: Other Objects
 kohl pot neck: Other Objects
@@ -1101,6 +1176,7 @@ lacquerware: Other Objects
 ladle: Other Objects
 ladle fragment: Other Objects
 ladle handle: Other Objects
+lamelle coup de burin: Other Objects
 lamp: Other Objects
 lamp (uncertain): Other Objects
 lamp fragment: Other Objects
@@ -1109,11 +1185,14 @@ lamp mold: Other Objects
 lamps: Other Objects
 lamps (lighting devices): Other Objects
 lance: Armaments
+lance blade: Armaments
 lance head: Armaments
+lancehead: Armaments
 lantern: Other Objects
 lasso: Other Objects
 latch: Other Objects
 laver: Other Objects
+lead fragment: Other Objects
 leaf: Other Objects
 leather: Other Objects
 leather fragment: Other Objects
@@ -1127,7 +1206,9 @@ letter: Letters
 letter book: Letters
 letters: Letters
 letters (correspondence): Letters
+levallois blade: Other Objects
 levallois flake: Other Objects
+levallois flake blade: Other Objects
 levallois point: Other Objects
 lid: Other Objects
 lid (uncertain): Other Objects
@@ -1176,6 +1257,7 @@ male dress: Adornments
 mallet: Tools & Equipment
 mallet head: Tools & Equipment
 man: Other Objects
+mancala playing piece: Recreational Artifacts
 manger: Other Objects
 manuscript: Manuscripts
 manuscript fragment: Manuscripts
@@ -1189,6 +1271,7 @@ manuscripts (document genre): Manuscripts
 manuscripts, malay.: Manuscripts
 map: Maps
 maps: Maps
+'marble (game)': Recreational Artifacts
 'martial arms:': Armaments
 mask: Adornments
 mask fragment: Other Objects
@@ -1211,14 +1294,22 @@ metal fragment: Other Objects
 metal fragments: Other Objects
 metalwork: Other Objects
 microblade: Other Objects
+microburin: Other Objects
 microlith: Other Objects
+microlithic blade: Other Objects
+microlithic burin: Other Objects
+microlithic crescent: Other Objects
+microlithic form: Other Objects
 military maps: Maps
 milk bowl: Other Objects
 milk bowl handle: Other Objects
 mill: Tools & Equipment
 millet: Other Objects
 minarets: Structures
+miniature bowl: Containers
 miniature jar: Other Objects
+miniature pot: Containers
+miniature vessel: Containers
 miniatures (paintings): Paintings
 mirror: Other Objects
 mirror (uncertain): Other Objects
@@ -1237,11 +1328,13 @@ molding (uncertain): Other Objects
 molds: Other Objects
 mortar: Other Objects
 mortar (uncertain): Other Objects
+mortar fragment: Other Objects
 mortuary statue: Sculptures
 mosaic: Other Objects
 mosaic fragment: Other Objects
 mosques: Structures
 mousterian point: Other Objects
+mousterian type point: Other Objects
 mouthpiece: Other Objects
 moving image: Other Videos
 moving images: Other Videos
@@ -1251,6 +1344,7 @@ mummies: Funerary Objects
 mummies & cartonnage: Funerary Objects
 mummy: Funerary Objects
 mummy bandage: Funerary Objects
+mummy bead: Funerary Objects
 mummy case: Funerary Objects
 mummy case fragment: Funerary Objects
 mummy case lid: Funerary Objects
@@ -1292,6 +1386,7 @@ needle: Other Objects
 needle (uncertain): Other Objects
 needle case: Other Objects
 needle fragment: Other Objects
+needle fragments: Other Objects
 net: Other Objects
 net for carrying vessels: Other Objects
 net sinker (uncertain): Other Objects
@@ -1305,8 +1400,14 @@ newspapers: Serials
 niche: Other Objects
 nodule: Other Objects
 noisemaker: Other Objects
+nose ring: Adornments
+nosed keeled scraper: Other Objects
+nosed scraper: Other Objects
 notch: Other Objects
+notched scraper: Other Objects
 note: Other Texts
+nucleiform scraper: Other Objects
+'nucleus (lithic)': Other Objects
 nummus: Coins
 nut (plant): Other Objects
 nuts: Other Objects
@@ -1340,9 +1441,11 @@ omphalos bowl: Containers
 onlays: Containers
 openmouth bowl: Containers
 oral histories (document genres): Oral History
+ore: Other Objects
 organic material: Containers
 ornament: Adornments
 ornament (uncertain): Other Objects
+ornament fragment: Adornments
 ornaments: Adornments
 ostraca: Other Objects
 ostracon: Other Objects
@@ -1350,6 +1453,7 @@ ostrakon: Other Objects
 ostrakon (uncertain): Other Objects
 ostrich egg: Other Objects
 oude: Other Objects
+oval scraper: Other Objects
 overcoat: Adornments
 overlay: Other Objects
 overshoe: Adornments
@@ -1376,10 +1480,12 @@ pantaloons: Adornments
 paper: null
 papyri: Other Texts
 papyrus: Other Texts
+parallel-sided back blade: Other Objects
 parchisi: Recreational Artifacts
 paste: Other Objects
 patch box: Containers
 patch box lid: Containers
+patera: Containers
 patira: Other Objects
 pavement: Other Objects
 pavilions (buildings): Structures
@@ -1396,6 +1502,7 @@ pedestal bowl: Other Objects
 pedestal vase: Other Objects
 peg: Other Objects
 peg (uncertain): Other Objects
+pegs: Other Objects
 pen: Writing Accessories
 pen case: Writing Accessories
 pen case lid: Writing Accessories
@@ -1440,6 +1547,7 @@ pin: Other Objects
 pin (uncertain): Other Objects
 pin fragment: Other Objects
 pin fragment (uncertain): Other Objects
+pin fragments: Other Objects
 pin head: Other Objects
 pin head (uncertain): Other Objects
 pin head cover: Other Objects
@@ -1455,6 +1563,7 @@ pipes (smoking equipment): Other Objects
 piriform juglet: Containers
 pitcher: Containers
 pitcher (uncertain): Other Objects
+pitcher fragment: Containers
 pithos: Containers
 pivot stone: Other Objects
 plan: Other Texts
@@ -1479,15 +1588,18 @@ plow: Tools & Equipment
 plow point: Tools & Equipment
 point: Other Objects
 point (uncertain): Other Objects
+point fragment: Other Objects
 point macleay: Other Objects
 points: Other Objects
 pole: Other Objects
 pole top: Other Objects
 polisher: Other Objects
 polisher (uncertain): Other Objects
+polishing marble: Other Objects
 polishing stone: Other Objects
 polycandela: Other Objects
 polyhedric burin: Other Objects
+polyhedric burin de fortune: Other Objects
 pomegranate: Other Objects
 pommel: Other Objects
 pommel (uncertain): Other Objects
@@ -1529,6 +1641,7 @@ prayer mat: Other Objects
 prayer rug: Other Objects
 prayer rugs: Other Objects
 precious stones & gems: Other Objects
+press: Tools & Equipment
 prick: null
 print: Other Images
 printing: Other Images
@@ -1547,6 +1660,7 @@ pyramid: Structures
 pyxides: Containers
 pyxis: Containers
 pyxis (uncertain): Other Objects
+pyxis fragment: Containers
 pyxis lid: Containers
 pyxoid: Other Objects
 quarter dinar: Coins
@@ -1574,6 +1688,7 @@ rein ring: Adornments
 relief: Structures
 relief (uncertain): Other Objects
 relief fragment: Structures
+relief mold: Other Objects
 reliefs: Structures
 religious book: Books
 religious buildings: Structures
@@ -1587,6 +1702,7 @@ report: null
 reproduction: null
 reproduction (uncertain): Other Objects
 research notes: Other Texts
+retaining strap: Other Objects
 rhyton: Containers
 rhyton fragment: Containers
 rib: Other Objects
@@ -1596,6 +1712,7 @@ rim fragment: Other Objects
 rim sherd: Other Objects
 ring: Adornments
 ring (uncertain): Other Objects
+ring base fragment: Other Objects
 ring base sherd: Adornments
 ring bezel: Adornments
 ring fragment: Adornments
@@ -1617,6 +1734,7 @@ roof tile: Other Objects
 rope: Other Objects
 rose: Other Objects
 rosette: Other Objects
+round scraper: Other Objects
 roundels (circular panels): Other Objects
 royal palaces: Structures
 royal shawabti: Funerary Objects
@@ -1645,6 +1763,7 @@ sarcophagus lid fragment: Funerary Objects
 sash: Adornments
 saucer: Other Objects
 saucer (uncertain): Containers
+saucer fragment: Other Objects
 saucers: Other Objects
 saw: Tools & Equipment
 saw blade: Tools & Equipment
@@ -1671,6 +1790,8 @@ scoop: Other Objects
 scrap: Other Objects
 scraper: Other Objects
 scraper fragment: Other Objects
+scraper-burin: Other Objects
+scrapers: Other Objects
 screen: Other Objects
 screw driver: Tools & Equipment
 scribes palette: Writing Accessories
@@ -1681,6 +1802,7 @@ sculptor's model (uncertain): null
 sculpture: Sculptures
 sculpture (visual work): Sculptures
 sculpture (visual works): Sculptures
+sculpture fragment: Sculptures
 scupture: Sculptures
 seal: Seals
 seal (cylinder): Seals
@@ -1708,6 +1830,7 @@ serving platter: Other Objects
 serving stand: Other Objects
 shabti: Funerary Objects
 shadri: Other Objects
+shaft: Other Objects
 shaped collar: Adornments
 shark teeth: Other Objects
 sharpening stone: Other Objects
@@ -1721,8 +1844,10 @@ sheath: Other Objects
 sheath fragment: Other Objects
 sheaths (cases): Armaments
 sheep bone (uncertain): Other Objects
+sheet: Other Objects
 shell: Other Objects
 shell fragment: Other Objects
+shell fragments: Other Objects
 sherd: Other Objects
 sherd (uncertain): Other Objects
 sherd/stem fragment: Other Objects
@@ -1746,6 +1871,7 @@ sickle: Tools & Equipment
 sickle (uncertain): Tools & Equipment
 sickle blade: Tools & Equipment
 sickle fragment: Tools & Equipment
+side scraper: Other Objects
 sieve: Other Objects
 sieve (uncertain): Tools & Equipment
 sieve fragment: Other Objects
@@ -1754,7 +1880,11 @@ signet ring:
 - Adornments
 - Seals
 silverware: Other Objects
+single concave scraper: Other Objects
+single convex scraper: Other Objects
 single page painting/drawing: Other Images
+single straight scraper: Other Objects
+single striaght scraper: Other Objects
 sistra: Musical Instruments
 sistrum: Musical Instruments
 sistrum handle: Musical Instruments
@@ -1762,6 +1892,7 @@ sitar (uncertain): Other Objects
 situla: Containers
 sketchbook: Drawings
 sketches: Drawings
+skin rubber: Other Objects
 skirt: Adornments
 skull cap: Adornments
 slab: Other Objects
@@ -1780,6 +1911,7 @@ slippers: Adornments
 slipware: Adornments
 smoking/drugs: Other Objects
 smoother: Other Objects
+snail shell: Other Objects
 snail shell (uncertain): Other Objects
 snake: Other Objects
 sng convex scraper: Tools & Equipment
@@ -1800,12 +1932,14 @@ spade: Tools & Equipment
 spall: Other Objects
 spandrel: Structures
 spatula: Other Objects
+spatula handle: Other Objects
 spear: Armaments
 spear (uncertain): Other Objects
 spear butt: Armaments
 spear shaft: Armaments
 spearhead: Armaments
 spearhead (uncertain): Other Objects
+spearhead fragment: Armaments
 spearhead fragment (uncertain): Other Objects
 spearheads: Armaments
 spearpoint: Other Objects
@@ -1814,10 +1948,12 @@ spent discoidal core: Other Objects
 sphere: Other Objects
 spike: Other Objects
 spiked fiddle: Musical Instruments
+spiky point: Other Objects
 spindle: Tools & Equipment
 spindle (uncertain): Other Objects
 spindle whorl: Tools & Equipment
 spindle whorl (uncertain): Other Objects
+spindle whorl fragment: Tools & Equipment
 spinning wheel: Tools & Equipment
 spirit stone: Other Objects
 splinter: Other Objects
@@ -1830,6 +1966,7 @@ spout: Other Objects
 spout (uncertain): Other Objects
 spout fragment: Other Objects
 spout sherd: Other Objects
+spouted bottle: Containers
 spouted bowl: Containers
 spouted cup: Containers
 spouted jar: Containers
@@ -1879,6 +2016,7 @@ statutes: Sculptures
 statutettes: Sculptures
 statuuettes: Sculptures
 stave: Other Objects
+steep scraper: Other Objects
 stela: Funerary Objects
 stela base: Funerary Objects
 stela fragment: Funerary Objects
@@ -1907,6 +2045,7 @@ stool leg: Other Objects
 stop: Other Objects
 stopper: Other Objects
 storage jar: Containers
+straight convergent scraper: Other Objects
 straight transverse scraper: Other Objects
 strainer: Other Objects
 strainer (uncertain): Other Objects
@@ -1922,6 +2061,7 @@ strip: Other Objects
 strt-convex scraper: Tools & Equipment
 structures furnishings: Furniture
 stucco: Other Objects
+stucco fragment: Other Objects
 stud: Other Objects
 stud (uncertain): Other Objects
 studs: Other Objects
@@ -1931,11 +2071,13 @@ supports: Structures
 sword: Armaments
 sword (uncertain): Other Objects
 sword handle: Armaments
+sword pommel: Armaments
 sword scabbard: Armaments
 sword sheath: Armaments
 swords: Armaments
 table: Furniture
 table fragment: Other Objects
+table leg: Furniture
 tablecloth: Other Objects
 tables: Furniture
 tablet: Tablets
@@ -1949,6 +2091,7 @@ tablet fragment (uncertain): Tablets
 tablets: Tablets
 tack: Other Objects
 tack (uncertain): Other Objects
+tacks: Other Objects
 tag: Other Objects
 tag (uncertain): Other Objects
 talatat: Structures
@@ -1999,6 +2142,7 @@ toe ring: Adornments
 toggle pin: Other Objects
 toilet box: Other Objects
 toilet kit: Other Objects
+toiletry kit: Containers
 token: Coins
 token (uncertain): Other Objects
 toman: Other Objects
@@ -2018,6 +2162,7 @@ tool handle (uncertain): Other Objects
 tools & manufacturing equipment: Tools & Equipment
 tools manufacturing equipment: Tools & Equipment
 tooth: Other Objects
+top: Other Objects
 topological maps: Maps
 torch: Other Objects
 torque: Other Objects
@@ -2027,6 +2172,7 @@ towers (single built works): Structures
 toy: Recreational Artifacts
 toys games: Recreational Artifacts
 transportation: Other Objects
+transverse scraper: Other Objects
 tray: Other Objects
 tray (uncertain): Other Objects
 tray fragment: Other Objects
@@ -2050,6 +2196,7 @@ trousering: Other Objects
 trousers: Adornments
 trumpet: Musical Instruments
 trumpet (uncertain): Other Objects
+truncated faceted piece: Other Objects
 truncated flake: Other Objects
 tub: Containers
 tube: Other Objects
@@ -2102,6 +2249,7 @@ veil: Other Objects
 vertebra: Other Objects
 vessel: Containers
 vessel (uncertain): Containers
+vessel attachment: Containers
 vessel foot: Containers
 vessel foot (uncertain): Other Objects
 vessel fragment: Containers
@@ -2109,6 +2257,7 @@ vessel fragment (uncertain): Other Objects
 vessel fragments: Other Objects
 vessel handle: Containers
 vessel handle (uncertain): Other Objects
+vessel handle fragment: Containers
 vessel lid: Containers
 vessel lid (uncertain): Other Objects
 vessel stand: Other Objects
@@ -2144,6 +2293,7 @@ wall nail: Other Objects
 wall nail (uncertain): Other Objects
 wall painting: Paintings
 wall panel: Other Objects
+wall peg: Other Objects
 wall plaster: Other Objects
 wall tile: Other Objects
 walls: Structures
@@ -2155,6 +2305,8 @@ water flask: Containers
 water pipe: Other Objects
 watercolors: Paintings
 watercolors (paintings): Paintings
+wax: Other Objects
+weapon: Armaments
 weaponry food procurement: Armaments
 weapons: Armaments
 weaving pick: Other Objects
@@ -2167,6 +2319,7 @@ weights/measures: Weights & Measures
 wells: Structures
 wheel: Tools & Equipment
 wheel (uncertain): Other Objects
+wheel model: Other Objects
 whetstone: Tools & Equipment
 whetstone (uncertain): Other Objects
 whetstone fragment: Other Objects
@@ -2175,6 +2328,7 @@ whistle: Other Objects
 white slip ware: Other Objects
 whorl: Tools & Equipment
 window: Other Objects
+window fragment: Structures
 wine bowl: Containers
 wine cup: Containers
 wine cups: Other Objects
@@ -2207,4 +2361,5 @@ yoke-saddle pommel: Tools & Equipment
 zither: Musical Instruments
 zoomorphic jar: Containers
 zoomorphic object: Other Objects
+zoomorphic vase: Containers
 zoomorphic vessel: Containers
