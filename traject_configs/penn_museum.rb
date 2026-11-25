@@ -104,9 +104,14 @@ to_field 'agg_is_shown_at' do |_record, accumulator, context|
   accumulator << transform_values(context,
                                   'wr_id' => [extract_json('.Record URL'), flatten_array])
 end
+# Penn's JSON-LD gives thumbnails on www.penn.museum, which now returns 403 for
+# them; the same images are served from collections.penn.museum
 to_field 'agg_preview' do |_record, accumulator, context|
   accumulator << transform_values(context,
-                                  'wr_id' => [extract_json('.thumbnail'), flatten_array, dlme_gsub('collections/assets/800', 'collections/assets/300')])
+                                  'wr_id' => [extract_json('.thumbnail'), flatten_array,
+                                              dlme_gsub('collections/assets/800', 'collections/assets/300'),
+                                              dlme_gsub(%r{\Ahttps?://www\.penn\.museum/+collections/assets/},
+                                                        'https://collections.penn.museum/collections/assets/')])
 end
 to_field 'agg_provider', provider, lang('en')
 to_field 'agg_provider', provider_ar, lang('ar-Arab')
